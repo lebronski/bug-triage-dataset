@@ -1,0 +1,451 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=webanno.custom.BugEntity|affected|kb_uri|kind|label|normalized|polarity|source
+#T_SP=webanno.custom.BugReport|category|component|confidence|report_id|severity|ticket_type
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=HTML message content rendering affected/hidden by messageBody.css styles: Rename our .main-header class to .moz-main-header, use custom attribute, or encapsulate
+1-1	0-4	HTML	NNP	PROPN	HTML	*	http://dbpedia.org/resource/HTML	language	TECHNOLOGY	HTML	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-2	5-12	message	NN	NOUN	message	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-3	13-20	content	NN	NOUN	content	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-4	21-30	rendering	VBG	VERB	render	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-5	31-39	affected	JJ	ADJ	affected	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-6	39-40	/	SYM	SYM	/	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-7	40-46	hidden	NN	NOUN	hidden	*	*	visual\_defect	SYMPTOM	*	observed	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-8	47-49	by	IN	ADP	by	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-9	50-65	messageBody.css	NNP	X	messageBody.css	*	*	file	CODE\_LOCATION	*	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	CAUSED\_BY	1-7	
+1-10	66-72	styles	NNS	NOUN	style	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-11	72-73	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-12	74-80	Rename	VB	VERB	rename	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-13	81-84	our	PRP$	PRON	our	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-14	85-86	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-15	86-97	main-header	NN	NOUN	main-header	*	*	class	CODE\_LOCATION	.main-header	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-16	98-103	class	NN	NOUN	class	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-17	104-106	to	TO	PART	to	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-18	107-108	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-19	108-123	moz-main-header	NN	NOUN	moz-main-header	*	*	class	CODE\_LOCATION	.moz-main-header	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-20	123-124	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-21	125-128	use	NN	NOUN	use	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-22	129-135	custom	NN	NOUN	custom	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-23	136-145	attribute	NN	NOUN	attribute	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-24	145-146	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-25	147-149	or	CC	CCONJ	or	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+1-26	150-161	encapsulate	VB	VERB	encapsulate	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	TITLE[14]	_	_	
+
+#Text=User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0
+2-1	163-167	User	NNP	PROPN	User	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-2	168-173	Agent	NNP	PROPN	Agent	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-3	173-174	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-4	175-186	Mozilla/5.0	NNP	PROPN	Mozilla/5.0	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-5	187-188	(	(	PUNCT	(	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-6	188-195	Windows	NNP	PROPN	Windows	unknown[1]	http://dbpedia.org/resource/Microsoft\_Windows[1]	os[1]	ENV[1]	Windows 10[1]	*[1]	user\_agent[1]	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-7	196-198	NT	NNP	PROPN	NT	unknown[1]	http://dbpedia.org/resource/Microsoft\_Windows[1]	os[1]	ENV[1]	Windows 10[1]	*[1]	user\_agent[1]	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-8	199-203	10.0	CD	NUM	10.0	unknown[1]	http://dbpedia.org/resource/Microsoft\_Windows[1]	os[1]	ENV[1]	Windows 10[1]	*[1]	user\_agent[1]	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-9	203-204	;	:	PUNCT	\;	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-10	205-210	Win64	NNP	PROPN	Win64	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-11	210-211	;	:	PUNCT	\;	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-12	212-215	x64	NNP	PROPN	x64	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-13	215-216	;	:	PUNCT	\;	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-14	217-219	rv	NN	NOUN	rv	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-15	219-220	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-16	220-224	93.0	CD	NUM	93.0	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-17	224-225	)	)	PUNCT	)	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-18	226-240	Gecko/20100101	NNP	PROPN	Gecko/20100101	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+2-19	241-253	Firefox/93.0	NNP	PROPN	Firefox/93.0	unknown	*	browser	ENV	Firefox/93.0	*	user\_agent	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ENVIRONMENT[15]	_	_	
+
+#Text=Steps to reproduce:
+3-1	255-260	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[16]	_	_	
+3-2	261-263	to	TO	PART	to	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[16]	_	_	
+3-3	264-273	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[16]	_	_	
+3-4	273-274	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[16]	_	_	
+
+#Text=I receive a newsletter as an HTML-formatted message with inline CSS styles, particularly some elements have the `.main-header` CSS class.
+4-1	276-277	I	PRP	PRON	i	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-2	278-285	receive	VBP	VERB	receive	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-3	286-287	a	DT	DET	a	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-4	288-298	newsletter	NN	NOUN	newsletter	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-5	299-301	as	IN	ADP	as	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-6	302-304	an	DT	DET	an	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-7	305-319	HTML-formatted	JJ	ADJ	html-formatted	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-8	320-327	message	NN	NOUN	message	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-9	328-332	with	IN	ADP	with	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-10	333-339	inline	JJ	ADJ	inline	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-11	340-343	CSS	NNP	PROPN	CSS	*	http://dbpedia.org/resource/CSS	language	TECHNOLOGY	CSS	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-12	344-350	styles	NNS	NOUN	style	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-13	350-351	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-14	352-364	particularly	RB	ADV	particularly	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-15	365-369	some	DT	DET	some	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-16	370-378	elements	NNS	NOUN	element	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-17	379-383	have	VBP	VERB	have	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-18	384-387	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-19	388-389	`	``	PUNCT	`	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-20	389-390	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-21	390-401	main-header	NN	NOUN	main-header	*	*	class	CODE\_LOCATION	.main-header	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-22	401-402	`	``	PUNCT	`	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-23	403-406	CSS	NNP	PROPN	CSS	*	http://dbpedia.org/resource/CSS	language	TECHNOLOGY	CSS	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-24	407-412	class	NN	NOUN	class	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+4-25	412-413	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	STEPS[17]	_	_	
+
+#Text=Actual results:
+5-1	415-421	Actual	JJ	ADJ	actual	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[18]	_	_	
+5-2	422-429	results	NNS	NOUN	result	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[18]	_	_	
+5-3	429-430	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[18]	_	_	
+
+#Text=All HMTL elements bearing the CSS class `.main-header` are not rendered because Thunderbird's messageBody.css stylesheet sets `display: none;` for this class (it uses this class for hiding the message header).
+6-1	432-435	All	DT	DET	all	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-2	436-440	HMTL	NNP	PROPN	HMTL	*	http://dbpedia.org/resource/HTML	language	TECHNOLOGY	HTML	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-3	441-449	elements	NNS	NOUN	element	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-4	450-457	bearing	VBG	VERB	bear	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-5	458-461	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-6	462-465	CSS	NNP	PROPN	CSS	*	http://dbpedia.org/resource/CSS	language	TECHNOLOGY	CSS	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-7	466-471	class	NN	NOUN	class	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-8	472-473	`	``	PUNCT	`	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-9	473-474	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-10	474-485	main-header	NN	NOUN	main-header	*	*	class	CODE\_LOCATION	.main-header	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-11	485-486	`	``	PUNCT	`	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-12	487-490	are	VBP	AUX	be	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-13	491-494	not	RB	PART	not	*[2]	*[2]	visual\_defect[2]	SYMPTOM[2]	*[2]	observed[2]	*[2]	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-14	495-503	rendered	VBN	VERB	render	*[2]	*[2]	visual\_defect[2]	SYMPTOM[2]	*[2]	observed[2]	*[2]	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-15	504-511	because	IN	SCONJ	because	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-16	512-523	Thunderbird	NNP	PROPN	Thunderbird	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	SYMPTOM\_OF	6-13[2_0]	
+6-17	523-525	's	POS	PART	's	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-18	526-541	messageBody.css	JJ	X	messageBody.css	*	*	file	CODE\_LOCATION	*	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	CAUSED\_BY	6-13[2_0]	
+6-19	542-552	stylesheet	NN	NOUN	stylesheet	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-20	553-557	sets	NNS	NOUN	set	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-21	558-559	`	``	PUNCT	`	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-22	559-566	display	NNS	NOUN	display	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-23	566-567	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-24	568-572	none	NN	NOUN	none	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-25	572-573	;	:	PUNCT	\;	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-26	573-574	`	``	PUNCT	`	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-27	575-578	for	IN	ADP	for	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-28	579-583	this	DT	DET	this	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-29	584-589	class	NN	NOUN	class	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-30	590-591	(	(	PUNCT	(	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-31	591-593	it	PRP	PRON	it	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-32	594-598	uses	VBZ	VERB	use	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-33	599-603	this	DT	DET	this	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-34	604-609	class	NN	NOUN	class	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-35	610-613	for	IN	ADP	for	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-36	614-620	hiding	VBG	VERB	hide	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-37	621-624	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-38	625-632	message	NN	NOUN	message	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-39	633-639	header	NN	NOUN	header	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-40	639-640	)	)	PUNCT	)	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+6-41	640-641	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	ACTUAL[19]	_	_	
+
+#Text=Expected results:
+7-1	643-651	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[20]	_	_	
+7-2	652-659	results	NNS	NOUN	result	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[20]	_	_	
+7-3	659-660	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[20]	_	_	
+
+#Text=All HTML content inside a message should be rendered according to the stylesheets defined in that message, not subject to Thunderbird's UI stylesheets.
+8-1	662-665	All	DT	DET	all	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-2	666-670	HTML	NNP	PROPN	HTML	*	http://dbpedia.org/resource/HTML	language	TECHNOLOGY	HTML	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-3	671-678	content	NN	NOUN	content	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-4	679-685	inside	IN	ADP	inside	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-5	686-687	a	DT	DET	a	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-6	688-695	message	NN	NOUN	message	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-7	696-702	should	MD	AUX	should	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-8	703-705	be	VB	AUX	be	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-9	706-714	rendered	VBN	VERB	render	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-10	715-724	according	VBG	VERB	accord	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-11	725-727	to	TO	ADP	to	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-12	728-731	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-13	732-743	stylesheets	NNS	NOUN	stylesheets	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-14	744-751	defined	VBN	VERB	define	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-15	752-754	in	IN	ADP	in	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-16	755-759	that	DT	DET	that	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-17	760-767	message	NN	NOUN	message	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-18	767-768	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-19	769-772	not	RB	PART	not	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-20	773-780	subject	JJ	ADJ	subject	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-21	781-783	to	TO	ADP	to	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-22	784-795	Thunderbird	NNP	PROPN	Thunderbird	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-23	795-797	's	POS	PART	's	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-24	798-800	UI	NNP	PROPN	UI	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-25	801-812	stylesheets	NNS	NOUN	stylesheets	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+8-26	812-813	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	EXPECTED[21]	_	_	
+
+#Text=This was not a problem until a recent update.
+9-1	815-819	This	DT	DET	this	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-2	820-823	was	VBD	AUX	be	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-3	824-827	not	RB	PART	not	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-4	828-829	a	DT	DET	a	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-5	830-837	problem	NN	NOUN	problem	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-6	838-843	until	IN	ADP	until	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-7	844-845	a	DT	DET	a	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-8	846-852	recent	JJ	ADJ	recent	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-9	853-859	update	NN	NOUN	update	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+9-10	859-860	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[12]	Frontend[12]	low[12]	thunderbird-1736244[12]	Major[12]	bug[12]	NOTES[22]	_	_	
+
+#Text=Buttons inside the Network Settings panel are misplaced with the scrollbar on display
+10-1	862-869	Buttons	NNS	NOUN	button	*	*	button	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	SYMPTOM\_OF	10-8	
+10-2	870-876	inside	IN	ADP	inside	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-3	877-880	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-4	881-888	Network	NNP	PROPN	Network	*[3]	*[3]	dialog[3]	UI\_ELEMENT[3]	*[3]	*[3]	*[3]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-5	889-897	Settings	NNP	PROPN	Settings	*[3]	*[3]	dialog[3]	UI\_ELEMENT[3]	*[3]	*[3]	*[3]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-6	898-903	panel	NN	NOUN	panel	*[3]	*[3]	dialog[3]	UI\_ELEMENT[3]	*[3]	*[3]	*[3]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-7	904-907	are	VBP	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-8	908-917	misplaced	VBN	VERB	misplace	*	*	visual\_defect	SYMPTOM	*	observed	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-9	918-922	with	IN	ADP	with	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-10	923-926	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-11	927-936	scrollbar	NN	NOUN	scrollbar	*	*	other	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	CAUSED\_BY	10-8	
+10-12	937-939	on	IN	ADP	on	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+10-13	940-947	display	NN	NOUN	display	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	TITLE[23]	_	_	
+
+#Text=**Affected versions**
+11-1	949-951	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+11-2	951-959	Affected	NNP	PROPN	Affected	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+11-3	960-968	versions	NNS	NOUN	version	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+11-4	968-970	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+
+#Text=- 94.0.1
+12-1	971-972	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+12-2	973-979	94.0.1	CD	NUM	94.0.1	yes	*	app\_version	ENV	Firefox 94.0.1	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+
+#Text=- 95.0b7
+13-1	980-981	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+13-2	982-988	95.0b7	CD	NUM	95.0b7	yes	*	app\_version	ENV	Firefox 95.0b7	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+
+#Text=- 96.0a1
+14-1	989-990	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+14-2	991-997	96.0a1	CD	NUM	96.0a1	yes	*	app\_version	ENV	Firefox 96.0a1	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[24]	_	_	
+
+#Text=**Affected platforms**
+15-1	999-1001	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	_	_	
+15-2	1001-1009	Affected	JJ	ADJ	affected	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	_	_	
+15-3	1010-1019	platforms	NNS	NOUN	platform	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	_	_	
+15-4	1019-1021	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	_	_	
+
+#Text=- Windows 10
+16-1	1022-1023	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	_	_	
+16-2	1024-1031	Windows	NNP	PROPN	Windows	yes[4]	http://dbpedia.org/resource/Microsoft\_Windows[4]	os[4]	ENV[4]	Windows 10[4]	*[4]	*[4]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	OBSERVED\_IN	10-8[0_4]	
+16-3	1032-1034	10	CD	NUM	10	yes[4]	http://dbpedia.org/resource/Microsoft\_Windows[4]	os[4]	ENV[4]	Windows 10[4]	*[4]	*[4]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ENVIRONMENT[25]	_	_	
+
+#Text=**Steps to reproduce**
+17-1	1036-1038	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+17-2	1038-1043	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+17-3	1044-1046	to	TO	PART	to	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+17-4	1047-1056	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+17-5	1056-1058	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+
+#Text=1. Open about:preferences#general
+18-1	1059-1060	1	CD	NUM	1	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+18-2	1060-1061	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+18-3	1062-1066	Open	VB	VERB	open	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+18-4	1067-1092	about:preferences#general	ADD	X	about:preferences#general	*	*	page	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+
+#Text=2. Click the Settings button from the Network Settings section
+19-1	1093-1094	2	CD	NUM	2	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-2	1094-1095	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-3	1096-1101	Click	VB	VERB	click	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-4	1102-1105	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-5	1106-1114	Settings	NNP	PROPN	Settings	*[5]	*[5]	button[5]	UI\_ELEMENT[5]	*[5]	*[5]	*[5]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-6	1115-1121	button	NN	NOUN	button	*[5]	*[5]	button[5]	UI\_ELEMENT[5]	*[5]	*[5]	*[5]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-7	1122-1126	from	IN	ADP	from	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-8	1127-1130	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-9	1131-1138	Network	NNP	PROPN	Network	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-10	1139-1147	Settings	NNP	PROPN	Settings	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+19-11	1148-1155	section	NN	NOUN	section	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+
+#Text=3. Observe the buttons at the bottom of the panel (reduce the width of the browser in order to trigger the scrollbar presence)
+20-1	1156-1157	3	LS	NUM	3	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-2	1157-1158	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-3	1159-1166	Observe	VB	VERB	observe	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-4	1167-1170	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-5	1171-1178	buttons	NNS	NOUN	button	*	*	button	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-6	1179-1181	at	IN	ADP	at	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-7	1182-1185	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-8	1186-1192	bottom	NN	NOUN	bottom	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-9	1193-1195	of	IN	ADP	of	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-10	1196-1199	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-11	1200-1205	panel	NN	NOUN	panel	*	*	dialog	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-12	1206-1207	(	(	PUNCT	(	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-13	1207-1213	reduce	VB	VERB	reduce	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-14	1214-1217	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-15	1218-1223	width	NN	NOUN	width	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-16	1224-1226	of	IN	ADP	of	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-17	1227-1230	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-18	1231-1238	browser	NN	NOUN	browser	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-19	1239-1241	in	IN	ADP	in	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-20	1242-1247	order	NN	NOUN	order	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-21	1248-1250	to	TO	PART	to	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-22	1251-1258	trigger	VB	VERB	trigger	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-23	1259-1262	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-24	1263-1272	scrollbar	NN	NOUN	scrollbar	*	*	other	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-25	1273-1281	presence	NN	NOUN	presence	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+20-26	1281-1282	)	)	PUNCT	)	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	STEPS[26]	_	_	
+
+#Text=**Expected result**
+21-1	1284-1286	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+21-2	1286-1294	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+21-3	1295-1301	result	NN	NOUN	result	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+21-4	1301-1303	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+
+#Text=- “OK”, “Cancel” and “Help” buttons are properly aligned in relation to the rest of the page elements
+22-1	1304-1305	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-2	1306-1307	“	.	PUNCT	“	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-3	1307-1309	OK	JJ	ADJ	ok	*	*	button	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-4	1309-1310	”	.	PUNCT	”	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-5	1310-1311	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-6	1312-1313	“	.	PUNCT	“	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-7	1313-1319	Cancel	NNP	PROPN	Cancel	*	*	button	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-8	1319-1320	”	.	PUNCT	”	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-9	1321-1324	and	CC	CCONJ	and	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-10	1325-1326	“	.	PUNCT	“	*[6]	*[6]	button[6]	UI\_ELEMENT[6]	*[6]	*[6]	*[6]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-11	1326-1330	Help	NNP	PROPN	Help	*[6]	*[6]	button[6]	UI\_ELEMENT[6]	*[6]	*[6]	*[6]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-12	1330-1331	”	.	PUNCT	”	*[6]	*[6]	button[6]	UI\_ELEMENT[6]	*[6]	*[6]	*[6]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-13	1332-1339	buttons	NNS	NOUN	button	*[6]	*[6]	button[6]	UI\_ELEMENT[6]	*[6]	*[6]	*[6]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-14	1340-1343	are	VBP	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-15	1344-1352	properly	RB	ADV	properly	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-16	1353-1360	aligned	VBN	VERB	align	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-17	1361-1363	in	IN	ADP	in	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-18	1364-1372	relation	NN	NOUN	relation	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-19	1373-1375	to	TO	ADP	to	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-20	1376-1379	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-21	1380-1384	rest	NN	NOUN	rest	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-22	1385-1387	of	IN	ADP	of	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-23	1388-1391	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-24	1392-1396	page	NN	NOUN	page	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+22-25	1397-1405	elements	NNS	NOUN	element	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	EXPECTED[27]	_	_	
+
+#Text=**Actual result**
+23-1	1408-1410	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+23-2	1410-1416	Actual	NNP	PROPN	Actual	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+23-3	1417-1423	result	NN	NOUN	result	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+23-4	1423-1425	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+
+#Text=- The scrollbar is too close to the "Help" button
+24-1	1426-1427	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-2	1428-1431	The	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-3	1432-1441	scrollbar	NN	NOUN	scrollbar	*	*	other	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	SYMPTOM\_OF	24-5[7_0]	
+24-4	1442-1444	is	VBZ	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-5	1445-1448	too	RB	ADV	too	*[7]	*[7]	visual\_defect[7]	SYMPTOM[7]	*[7]	observed[7]	*[7]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-6	1449-1454	close	JJ	ADJ	close	*[7]	*[7]	visual\_defect[7]	SYMPTOM[7]	*[7]	observed[7]	*[7]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-7	1455-1457	to	TO	ADP	to	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-8	1458-1461	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-9	1462-1463	"	.	PUNCT	"	*[8]	*[8]	button[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-10	1463-1467	Help	NNP	PROPN	Help	*[8]	*[8]	button[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-11	1467-1468	"	.	PUNCT	"	*[8]	*[8]	button[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+24-12	1469-1475	button	NN	NOUN	button	*[8]	*[8]	button[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+
+#Text=- The "Help" button is not aligned with the scrollbar right margin
+25-1	1476-1477	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-2	1478-1481	The	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-3	1482-1483	"	.	PUNCT	"	*[9]	*[9]	button[9]	UI\_ELEMENT[9]	*[9]	*[9]	*[9]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	SYMPTOM\_OF	25-8[10_9]	
+25-4	1483-1487	Help	NNP	PROPN	Help	*[9]	*[9]	button[9]	UI\_ELEMENT[9]	*[9]	*[9]	*[9]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-5	1487-1488	"	.	PUNCT	"	*[9]	*[9]	button[9]	UI\_ELEMENT[9]	*[9]	*[9]	*[9]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-6	1489-1495	button	NN	NOUN	button	*[9]	*[9]	button[9]	UI\_ELEMENT[9]	*[9]	*[9]	*[9]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-7	1496-1498	is	VBZ	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-8	1499-1502	not	RB	PART	not	*[10]	*[10]	visual\_defect[10]	SYMPTOM[10]	*[10]	observed[10]	*[10]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-9	1503-1510	aligned	VBN	VERB	align	*[10]	*[10]	visual\_defect[10]	SYMPTOM[10]	*[10]	observed[10]	*[10]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-10	1511-1515	with	IN	ADP	with	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-11	1516-1519	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-12	1520-1529	scrollbar	NN	NOUN	scrollbar	*	*	other	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-13	1530-1535	right	RB	ADV	right	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+25-14	1536-1542	margin	NN	NOUN	margin	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	ACTUAL[28]	_	_	
+
+#Text=**Regression range**
+26-1	1544-1546	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+26-2	1546-1556	Regression	NNP	PROPN	Regression	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+26-3	1557-1562	range	NN	NOUN	range	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+26-4	1562-1564	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+
+#Text=- Last good revision: 8aa1b80a8c6b66cccc2e37080fbf6197eee8d801
+27-1	1565-1566	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+27-2	1567-1571	Last	JJ	ADJ	last	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+27-3	1572-1576	good	JJ	ADJ	good	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+27-4	1577-1585	revision	NN	NOUN	revision	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+27-5	1585-1586	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+27-6	1587-1627	8aa1b80a8c6b66cccc2e37080fbf6197eee8d801	CD	NUM	8aa1b80a8c6b66cccc2e37080fbf6197eee8d801	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+
+#Text=- First bad revision: 1716229005d8b97f305bd663b8bc8d3fec4a4f3a
+28-1	1628-1629	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+28-2	1630-1635	First	RB	ADV	first	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+28-3	1636-1639	bad	JJ	ADJ	bad	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+28-4	1640-1648	revision	NN	NOUN	revision	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+28-5	1648-1649	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+28-6	1650-1690	1716229005d8b97f305bd663b8bc8d3fec4a4f3a	CD	NUM	1716229005d8b97f305bd663b8bc8d3fec4a4f3a	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+
+#Text=- Pushlog:
+29-1	1691-1692	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+29-2	1693-1700	Pushlog	NN	NOUN	pushlog	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+29-3	1700-1701	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+
+#Text=https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a
+#Text=Regresor: [1700109](https://bugzilla.mozilla.org/show_bug.cgi?id=1700109) (Proton implementation)
+30-1	1702-1859	https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a	ADD	X	https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-2	1860-1868	Regresor	NNP	PROPN	Regresor	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-3	1868-1869	:	:	PUNCT	:	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-4	1870-1871	[	.	PUNCT	\[	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-5	1871-1878	1700109	CD	NUM	1700109	*	*	*	ISSUE\_REF	bug 1700109	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-6	1878-1879	]	.	PUNCT	\]	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-7	1879-1880	(	(	PUNCT	(	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-8	1880-1932	https://bugzilla.mozilla.org/show_bug.cgi?id=1700109	ADD	X	https://bugzilla.mozilla.org/show\_bug.cgi?id=1700109	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-9	1932-1933	)	)	PUNCT	)	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-10	1934-1935	(	(	PUNCT	(	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-11	1935-1941	Proton	NNP	PROPN	Proton	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-12	1942-1956	implementation	NN	NOUN	implementation	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+30-13	1956-1957	)	)	PUNCT	)	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[29]	_	_	
+
+#Text=**Other notes**
+31-1	1959-1961	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+31-2	1961-1966	Other	JJ	ADJ	other	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+31-3	1967-1972	notes	NNS	NOUN	note	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+31-4	1972-1974	**	.	PUNCT	\*\*	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+
+#Text=- On Mac and Ubuntu the visual image is not unpleasant, due to the fact that the "Help" button is placed to the left side of the panel and the scrollbar specific style, but the padding between the buttons and the scrollbar could be improved.
+32-1	1975-1976	-	:	PUNCT	-	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-2	1977-1979	On	IN	ADP	on	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-3	1980-1983	Mac	NNP	PROPN	Mac	no	http://dbpedia.org/resource/MacOS	os	ENV	macOS	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-4	1984-1987	and	CC	CCONJ	and	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-5	1988-1994	Ubuntu	NNP	PROPN	Ubuntu	no	http://dbpedia.org/resource/Ubuntu	os	ENV	Ubuntu	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-6	1995-1998	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-7	1999-2005	visual	JJ	ADJ	visual	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-8	2006-2011	image	NN	NOUN	image	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-9	2012-2014	is	VBZ	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-10	2015-2018	not	RB	PART	not	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-11	2019-2029	unpleasant	JJ	ADJ	unpleasant	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-12	2029-2030	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-13	2031-2034	due	JJ	ADJ	due	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-14	2035-2037	to	TO	ADP	to	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-15	2038-2041	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-16	2042-2046	fact	NN	NOUN	fact	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-17	2047-2051	that	IN	SCONJ	that	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-18	2052-2055	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-19	2056-2057	"	.	PUNCT	"	*[11]	*[11]	button[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-20	2057-2061	Help	NNP	PROPN	Help	*[11]	*[11]	button[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-21	2061-2062	"	.	PUNCT	"	*[11]	*[11]	button[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-22	2063-2069	button	NN	NOUN	button	*[11]	*[11]	button[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-23	2070-2072	is	VBZ	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-24	2073-2079	placed	VBN	VERB	place	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-25	2080-2082	to	TO	ADP	to	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-26	2083-2086	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-27	2087-2091	left	JJ	ADJ	left	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-28	2092-2096	side	NN	NOUN	side	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-29	2097-2099	of	IN	ADP	of	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-30	2100-2103	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-31	2104-2109	panel	NN	NOUN	panel	*	*	dialog	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-32	2110-2113	and	CC	CCONJ	and	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-33	2114-2117	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-34	2118-2127	scrollbar	NN	NOUN	scrollbar	*	*	other	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-35	2128-2136	specific	JJ	ADJ	specific	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-36	2137-2142	style	NN	NOUN	style	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-37	2142-2143	,	,	PUNCT	,	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-38	2144-2147	but	CC	CCONJ	but	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-39	2148-2151	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-40	2152-2159	padding	NN	NOUN	padding	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-41	2160-2167	between	IN	ADP	between	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-42	2168-2171	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-43	2172-2179	buttons	NNS	NOUN	button	*	*	button	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-44	2180-2183	and	CC	CCONJ	and	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-45	2184-2187	the	DT	DET	the	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-46	2188-2197	scrollbar	NN	NOUN	scrollbar	*	*	other	UI\_ELEMENT	*	*	*	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-47	2198-2203	could	MD	AUX	could	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-48	2204-2206	be	VB	AUX	be	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-49	2207-2215	improved	VBN	VERB	improve	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	
+32-50	2215-2216	.	.	PUNCT	.	_	_	_	_	_	_	_	ui\_layout[13]	Frontend[13]	high[13]	firefox-1741198[13]	Minor[13]	bug[13]	NOTES[30]	_	_	

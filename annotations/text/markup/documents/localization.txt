@@ -1,0 +1,42 @@
+Poor translation quality with new lines in the text
+
+When translating the first paragraph of this website https://www.freebsd.org/ from English to Russian it produces nonsense. When I copy the text to about:translations it's perfect. I edited the HTML to remove new lines from the text and the quality of translation became good. 
+
+Does it make sense to remove new lines inside paragraphs before translating to prevent such cases?
+
+> FreeBSD is an operating system used to power modern servers,
+desktops, and embedded <a href="https://www.freebsd.org/platforms/">platforms.</a> A large
+<a href="https://docs.FreeBSD.org/en/articles/contributors/#staff-committers">
+community</a> has continually developed it for more than thirty
+years. Its advanced networking, security, and storage features have
+made FreeBSD the platform of choice for many of the <a href="https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users">
+busiest web sites</a> and most pervasive embedded networking and
+storage devices.
+
+TB 102 LTS - GUI not fully translated
+
+Hello!
+
+Many parts of the GUI of the release aren't translated in the Portuguese (pt-PT) version.
+
+For example, the menu option “OpenPGP Key Manager” is in English.
+
+And the radio buttons in the import/export are also untranslated.
+
+RTL - shopping sidebar container flickers on the right side when opening/closing the sidebar
+
+STR:
+1. Enable bidi mode in Browser Toolbox (alternatively: load Firefox in RTL language)
+2. Make sure sidebar feature is enabled and profile is opted in
+2. View product page ([example](https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/)) and ensure shopping sidebar is visible
+3. Close sidebar with urlbar shopping icon or the close button on the sidebar
+
+Expected:
+- there should be no sudden flicker on the right side of the page when closing/opening the sidebar in RTL mode
+
+Actual:
+- there is a slight flicker on the right side of the page, which is very distracting visually
+
+Notes:
+- this issue probably existed for a while, but I believe that it will be way more obvious once [we show sidebar animations](bugzilla.mozilla.org/show_bug.cgi?id=1858762).
+- I tested this on MacOS and can't recall at the moment if it also occurs on other platforms

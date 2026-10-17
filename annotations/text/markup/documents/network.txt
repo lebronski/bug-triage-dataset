@@ -1,0 +1,36 @@
+Insiders 1.10.0 Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.
+
+Getting `Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.` after most recent insiders update.  Worked on Friday when I last opened it.  Didn't change any settings.  Not using a proxy.  I'm assuming latest update broke it somehow since it started happening right after I updated this morning.
+
+- VSCode Version: 1.10.0-insider 422d7ff1b78fcac514498921551c33a988c4ad34 2017-02-13T07:02:30.785Z
+- OS Version: OSX 10.10.5 (14F2109)
+
+Steps to Reproduce:
+
+1. Download above vscode-insiders build
+2. Restart vscode
+3. Open extensions
+4. See "Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting."
+
+Need any more info?
+
+Make SocketAuthServer socket timeout configurable
+
+In SPARK-21551 the socket timeout for the Pyspark applications has been increased from 3 to 15 seconds. However it is still hardcoded.
+In certain situations even the 15 seconds is not enough, so it should be made configurable. 
+This is requested after seeing it in real-life workload failures.
+Also it has been suggested and requested in an earlier comment in [SPARK-18649|https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498]
+
+In 
+Spark 2.4 it is under
+[PythonRDD.scala|https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899]
+in Spark 3.x the code has been moved to
+[SocketAuthServer.scala|https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51]
+{code}
+serverSocket.setSoTimeout(15000)
+{code}
+Please include this in both 2.4 and 3.x branches.
+
+List of DNS over HTTPS Providers is Blank
+
+No STR but noticed after a fresh install of 98.0b2/b3 (with a new profile) that the list of DNS over HTTPS providers is blank. This setting displays https://mozilla.cloudflare-dns.com/dns-query as a provider in 91.11.0.

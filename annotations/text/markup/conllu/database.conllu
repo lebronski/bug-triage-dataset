@@ -1,0 +1,585 @@
+# newdoc id = database
+# object = database
+# newpar report = firefox-1842613 | ticket_type=bug category=database component=Database severity=Major confidence=low
+# paragraph = p1 section=TITLE
+# sent_id = database-s1
+# text = Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors when opening the migration window for the first time, or after a Firefox restart
+1	Multiple	multiple	ADJ	JJ	_	_	_	_	NER=O
+2	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+3	Error	error	NOUN	NN	_	_	_	_	NER=O|MSG=B|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+5	Error	error	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+6	(	(	PUNCT	(	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+7	s	s	PRON	PRP	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	)	)	PUNCT	)	_	_	_	_	NER=O|MSG=I
+9	encountered	encounter	VERB	VBD	_	_	_	_	NER=O|MSG=I
+10	during	during	ADP	IN	_	_	_	_	NER=O|MSG=I
+11	statement	statement	NOUN	NN	_	_	_	_	NER=O|MSG=I
+12	execution	execution	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+13	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+14	database	database	NOUN	NN	_	_	_	_	NER=O|MSG=I
+15	disk	disk	NOUN	NN	_	_	_	_	NER=O|MSG=I
+16	image	image	NOUN	NN	_	_	_	_	NER=O|MSG=I
+17	is	be	AUX	VBZ	_	_	_	_	NER=O|MSG=I
+18	malformed	malformed	VERB	VBN	_	_	_	_	NER=B-SYMPTOM|MSG=I|SpaceAfter=No
+19	`	`	PUNCT	``	_	_	_	_	NER=O
+20	errors	error	NOUN	NNS	_	_	_	_	NER=O
+21	when	when	ADV	WRB	_	_	_	_	NER=O
+22	opening	open	VERB	VBG	_	_	_	_	NER=O
+23	the	the	DET	DT	_	_	_	_	NER=O
+24	migration	migration	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+25	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+26	for	for	ADP	IN	_	_	_	_	NER=O
+27	the	the	DET	DT	_	_	_	_	NER=O
+28	first	first	ADJ	JJ	_	_	_	_	NER=O
+29	time	time	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+30	,	,	PUNCT	,	_	_	_	_	NER=O
+31	or	or	CCONJ	CC	_	_	_	_	NER=O
+32	after	after	ADP	IN	_	_	_	_	NER=O
+33	a	a	DET	DT	_	_	_	_	NER=O
+34	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+35	restart	restart	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p2 section=DESCRIPTION
+# sent_id = database-s2
+# text = Filled on request [1840792#c12](https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12)
+1	Filled	fill	VERB	VBN	_	_	_	_	NER=O
+2	on	on	ADP	IN	_	_	_	_	NER=O
+3	request	request	NOUN	NN	_	_	_	_	NER=O
+4	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+5	1840792	1840792	NUM	CD	_	_	_	_	NER=B-ISSUE_REF|SpaceAfter=No
+6	#	#	SYM	#	_	_	_	_	NER=I-ISSUE_REF|SpaceAfter=No
+7	c12	c12	NOUN	NN	_	_	_	_	NER=I-ISSUE_REF|SpaceAfter=No
+8	]	]	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+9	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+10	https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12	https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+11	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p3 section=ENVIRONMENT
+# sent_id = database-s3
+# text = **Found in**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Found	Found	PROPN	NNP	_	_	_	_	NER=O
+3	in	in	ADP	IN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s4
+# text = * 117.0a1 (2023-07-10)
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	117.0a1	117.0a1	NUM	CD	_	_	_	_	NER=B-ENV
+3	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+4	2023-07-10	2023-07-10	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+5	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p4 section=ENVIRONMENT
+# sent_id = database-s5
+# text = **Affected versions**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Affected	Affected	PROPN	NNP	_	_	_	_	NER=O
+3	versions	version	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s6
+# text = * 117.0a1 (2023-07-10)
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	117.0a1	117.0a1	NUM	CD	_	_	_	_	NER=B-ENV
+3	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+4	2023-07-10	2023-07-10	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+5	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p5 section=ENVIRONMENT
+# sent_id = database-s7
+# text = **Tested platforms**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Tested	test	VERB	VBN	_	_	_	_	NER=O
+3	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s8
+# text = * Affected platforms: Windows 10x64 (only on one station)
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	Affected	affected	ADJ	JJ	_	_	_	_	NER=O
+3	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+5	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+6	10x64	10x64	NUM	CD	_	_	_	_	NER=I-ENV
+7	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+8	only	only	ADV	RB	_	_	_	_	NER=O
+9	on	on	ADP	IN	_	_	_	_	NER=O
+10	one	one	NUM	CD	_	_	_	_	NER=O
+11	station	station	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+12	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = database-s9
+# text = * Unaffected platforms: Windows 11x64,Ubuntu 22.04, macOS 12
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	Unaffected	unaffected	VERB	VBN	_	_	_	_	NER=O
+3	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+5	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+6	11x64	11x64	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+7	,	,	PUNCT	,	_	_	_	_	NER=O|SpaceAfter=No
+8	Ubuntu	Ubuntu	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Ubuntu
+9	22.04	22.04	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	macOS	macOS	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+12	12	12	NUM	CD	_	_	_	_	NER=I-ENV
+
+# paragraph = p6 section=STEPS
+# sent_id = database-s10
+# text = **Steps to reproduce**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+3	to	to	PART	TO	_	_	_	_	NER=O
+4	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+5	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s11
+# text = 1. Open the migration window and observe the browser console.
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	migration	migration	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+6	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+7	and	and	CCONJ	CC	_	_	_	_	NER=O
+8	observe	observe	VERB	VB	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	browser	browser	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+11	console	console	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+12	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p7 section=EXPECTED
+# sent_id = database-s12
+# text = **Expected result**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+3	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s13
+# text = * No errors are displayed and the migration window is opened almost instantly.
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	No	no	DET	DT	_	_	_	_	NER=O
+3	errors	error	NOUN	NNS	_	_	_	_	NER=O
+4	are	be	AUX	VBP	_	_	_	_	NER=O
+5	displayed	display	VERB	VBN	_	_	_	_	NER=O
+6	and	and	CCONJ	CC	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	migration	migration	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+9	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+10	is	be	AUX	VBZ	_	_	_	_	NER=O
+11	opened	open	VERB	VBN	_	_	_	_	NER=O
+12	almost	almost	ADV	RB	_	_	_	_	NER=O
+13	instantly	instantly	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p8 section=ACTUAL
+# sent_id = database-s14
+# text = **Actual result**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Actual	Actual	PROPN	NNP	_	_	_	_	NER=O
+3	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s15
+# text = * Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors and migration window takes some time to open.
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	Multiple	Multiple	PROPN	NNP	_	_	_	_	NER=O
+3	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+4	Error	error	NOUN	NN	_	_	_	_	NER=O|MSG=B|SpaceAfter=No
+5	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+6	Error	error	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+7	(	(	PUNCT	(	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	s	s	PRON	PRP	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+9	)	)	PUNCT	)	_	_	_	_	NER=O|MSG=I
+10	encountered	encounter	VERB	VBD	_	_	_	_	NER=O|MSG=I
+11	during	during	ADP	IN	_	_	_	_	NER=O|MSG=I
+12	statement	statement	NOUN	NN	_	_	_	_	NER=O|MSG=I
+13	execution	execution	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+14	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+15	database	database	NOUN	NN	_	_	_	_	NER=O|MSG=I
+16	disk	disk	NOUN	NN	_	_	_	_	NER=O|MSG=I
+17	image	image	NOUN	NN	_	_	_	_	NER=O|MSG=I
+18	is	be	AUX	VBZ	_	_	_	_	NER=O|MSG=I
+19	malformed	malformed	VERB	VBN	_	_	_	_	NER=B-SYMPTOM|MSG=I|SpaceAfter=No
+20	`	`	PUNCT	``	_	_	_	_	NER=O
+21	errors	error	NOUN	NNS	_	_	_	_	NER=O
+22	and	and	CCONJ	CC	_	_	_	_	NER=O
+23	migration	migration	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+24	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+25	takes	take	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+26	some	some	DET	DT	_	_	_	_	NER=I-SYMPTOM
+27	time	time	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+28	to	to	PART	TO	_	_	_	_	NER=I-SYMPTOM
+29	open	open	VERB	VB	_	_	_	_	NER=I-SYMPTOM|SpaceAfter=No
+30	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p9 section=NOTES
+# sent_id = database-s16
+# text = **Regression range**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Regression	Regression	PROPN	NNP	_	_	_	_	NER=O
+3	range	range	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s17
+# text = * Not a regression.
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	Not	not	PART	RB	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	regression	regression	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p10 section=NOTES
+# sent_id = database-s18
+# text = **Additional notes**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Additional	Additional	PROPN	NNP	_	_	_	_	NER=O
+3	notes	note	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s19
+# text = * Attached a screen recording.
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	Attached	Attached	PROPN	NNP	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	screen	screen	NOUN	NN	_	_	_	_	NER=O
+5	recording	record	VERB	VBG	_	_	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s20
+# text = * The errors are displayed only for the first time after the migration window is opened.
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	The	the	DET	DT	_	_	_	_	NER=O
+3	errors	error	NOUN	NNS	_	_	_	_	NER=O
+4	are	be	AUX	VBP	_	_	_	_	NER=O
+5	displayed	display	VERB	VBN	_	_	_	_	NER=O
+6	only	only	ADV	RB	_	_	_	_	NER=O
+7	for	for	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	first	first	ADJ	JJ	_	_	_	_	NER=O
+10	time	time	NOUN	NN	_	_	_	_	NER=O
+11	after	after	ADP	IN	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	migration	migration	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+14	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+15	is	be	AUX	VBZ	_	_	_	_	NER=O
+16	opened	open	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s21
+# text = Opening the migration window again in the same session will no longer display the errors.
+1	Opening	open	VERB	VBG	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	migration	migration	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+4	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+5	again	again	ADV	RB	_	_	_	_	NER=O
+6	in	in	ADP	IN	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	same	same	ADJ	JJ	_	_	_	_	NER=O
+9	session	session	NOUN	NN	_	_	_	_	NER=O
+10	will	will	AUX	MD	_	_	_	_	NER=O
+11	no	no	ADV	RB	_	_	_	_	NER=O
+12	longer	longer	ADV	RBR	_	_	_	_	NER=O
+13	display	display	VERB	VB	_	_	_	_	NER=O
+14	the	the	DET	DT	_	_	_	_	NER=O
+15	errors	error	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s22
+# text = However, restarting Firefox will display the errors again but only for the first time.
+1	However	however	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	,	_	_	_	_	NER=O
+3	restarting	restart	VERB	VBG	_	_	_	_	NER=O
+4	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+5	will	will	AUX	MD	_	_	_	_	NER=O
+6	display	display	VERB	VB	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	errors	error	NOUN	NNS	_	_	_	_	NER=O
+9	again	again	ADV	RB	_	_	_	_	NER=O
+10	but	but	CCONJ	CC	_	_	_	_	NER=O
+11	only	only	ADV	RB	_	_	_	_	NER=O
+12	for	for	ADP	IN	_	_	_	_	NER=O
+13	the	the	DET	DT	_	_	_	_	NER=O
+14	first	first	ADJ	JJ	_	_	_	_	NER=O
+15	time	time	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s23
+# text = * Note this happens on only one Windows 10 machine.
+1	*	*	SYM	SYM	_	_	_	_	NER=O
+2	Note	note	NOUN	NN	_	_	_	_	NER=O
+3	this	this	DET	DT	_	_	_	_	NER=O
+4	happens	happen	VERB	VBZ	_	_	_	_	NER=O
+5	on	on	ADP	IN	_	_	_	_	NER=O
+6	only	only	ADV	RB	_	_	_	_	NER=O
+7	one	one	NUM	CD	_	_	_	_	NER=O
+8	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+9	10	10	NUM	CD	_	_	_	_	NER=I-ENV
+10	machine	machine	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = spark-13553213 | ticket_type=bug category=database component=Database severity=Major confidence=high
+# paragraph = p11 section=TITLE
+# sent_id = database-s24
+# text = Cache Invalidation Issue with JDBC Table
+1	Cache	Cache	PROPN	NNP	_	_	_	_	NER=O
+2	Invalidation	Invalidation	PROPN	NNP	_	_	_	_	NER=O
+3	Issue	Issue	PROPN	NNP	_	_	_	_	NER=O
+4	with	with	ADP	IN	_	_	_	_	NER=O
+5	JDBC	JDBC	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Java_Database_Connectivity
+6	Table	Table	PROPN	NNP	_	_	_	_	NER=O
+
+# paragraph = p12 section=DESCRIPTION
+# sent_id = database-s25
+# text = We have identified a cache invalidation issue when caching JDBC tables in Spark SQL.
+1	We	we	PRON	PRP	_	_	_	_	NER=O
+2	have	have	AUX	VBP	_	_	_	_	NER=O
+3	identified	identify	VERB	VBN	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	cache	cache	NOUN	NN	_	_	_	_	NER=O
+6	invalidation	invalidation	NOUN	NN	_	_	_	_	NER=O
+7	issue	issue	NOUN	NN	_	_	_	_	NER=O
+8	when	when	ADV	WRB	_	_	_	_	NER=O
+9	caching	cache	VERB	VBG	_	_	_	_	NER=O
+10	JDBC	JDBC	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Java_Database_Connectivity
+11	tables	table	NOUN	NNS	_	_	_	_	NER=O
+12	in	in	ADP	IN	_	_	_	_	NER=O
+13	Spark	Spark	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Spark
+14	SQL	SQL	PROPN	NNP	_	_	_	_	NER=I-PRODUCT|SpaceAfter=No
+15	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s26
+# text = The cached table is unexpectedly invalidated when queried, leading to a re-read from the JDBC table instead of retrieving data from the cache.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	cached	cached	ADJ	JJ	_	_	_	_	NER=O
+3	table	table	NOUN	NN	_	_	_	_	NER=O
+4	is	be	AUX	VBZ	_	_	_	_	NER=O
+5	unexpectedly	unexpectedly	ADV	RB	_	_	_	_	NER=O
+6	invalidated	invalidate	VERB	VBN	_	_	_	_	NER=B-SYMPTOM
+7	when	when	ADV	WRB	_	_	_	_	NER=O
+8	queried	query	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+9	,	,	PUNCT	,	_	_	_	_	NER=O
+10	leading	lead	VERB	VBG	_	_	_	_	NER=O
+11	to	to	ADP	TO	_	_	_	_	NER=O
+12	a	a	DET	DT	_	_	_	_	NER=O
+13	re-read	re-read	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+14	from	from	ADP	IN	_	_	_	_	NER=O
+15	the	the	DET	DT	_	_	_	_	NER=O
+16	JDBC	JDBC	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Java_Database_Connectivity
+17	table	table	ADJ	JJ	_	_	_	_	NER=O
+18	instead	instead	ADV	RB	_	_	_	_	NER=O
+19	of	of	ADP	IN	_	_	_	_	NER=O
+20	retrieving	retrieve	VERB	VBG	_	_	_	_	NER=O
+21	data	data	NOUN	NNS	_	_	_	_	NER=O
+22	from	from	ADP	IN	_	_	_	_	NER=O
+23	the	the	DET	DT	_	_	_	_	NER=O
+24	cache	cache	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+25	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s27
+# text = Example SQL:
+1	Example	example	ADJ	JJ	_	_	_	_	NER=O
+2	SQL	SQL	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:SQL|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p13 section=CODE
+# sent_id = database-s28
+# text = {code:java}
+1	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+4	java	java	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	}	}	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = database-s29
+# text = CACHE TABLE cache_t SELECT * FROM mysql.test.test1;
+1	CACHE	CACHE	PROPN	NNP	_	_	_	_	NER=O
+2	TABLE	TABLE	PROPN	NNP	_	_	_	_	NER=O
+3	cache_t	cache_t	NOUN	NN	_	_	_	_	NER=O
+4	SELECT	SELECT	PROPN	NNP	_	_	_	_	NER=O
+5	*	*	SYM	SYM	_	_	_	_	NER=O
+6	FROM	FROM	PROPN	NNP	_	_	_	_	NER=O
+7	mysql.test.test1	mysql.test.test1	X	NNP	_	_	_	_	NER=O|SpaceAfter=No
+8	;	;	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = database-s30
+# text = SELECT * FROM cache_t;
+1	SELECT	SELECT	PROPN	NNP	_	_	_	_	NER=O
+2	*	*	SYM	SYM	_	_	_	_	NER=O
+3	FROM	FROM	PROPN	NNP	_	_	_	_	NER=O
+4	cache_t	cache_t	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	;	;	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = database-s31
+# text = {code}
+1	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	}	}	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p14 section=EXPECTED
+# sent_id = database-s32
+# text = Expected Behavior:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	Behavior	behavior	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = database-s33
+# text = The expectation is that querying the cached table (cache_t) should retrieve the result from the cache without re-evaluating the execution plan.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	expectation	expectation	NOUN	NN	_	_	_	_	NER=O
+3	is	be	AUX	VBZ	_	_	_	_	NER=O
+4	that	that	SCONJ	IN	_	_	_	_	NER=O
+5	querying	query	VERB	VBG	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	cached	cache	VERB	VBN	_	_	_	_	NER=O
+8	table	table	NOUN	NN	_	_	_	_	NER=O
+9	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+10	cache_t	cache_t	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+11	)	)	PUNCT	)	_	_	_	_	NER=O
+12	should	should	AUX	MD	_	_	_	_	NER=O
+13	retrieve	retrieve	VERB	VB	_	_	_	_	NER=O
+14	the	the	DET	DT	_	_	_	_	NER=O
+15	result	result	NOUN	NN	_	_	_	_	NER=O
+16	from	from	ADP	IN	_	_	_	_	NER=O
+17	the	the	DET	DT	_	_	_	_	NER=O
+18	cache	cache	NOUN	NN	_	_	_	_	NER=O
+19	without	without	ADP	IN	_	_	_	_	NER=O
+20	re-evaluating	re-evaluating	VERB	VBG	_	_	_	_	NER=O
+21	the	the	DET	DT	_	_	_	_	NER=O
+22	execution	execution	NOUN	NN	_	_	_	_	NER=O
+23	plan	plan	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p15 section=ACTUAL
+# sent_id = database-s34
+# text = Actual Behavior:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	Behavior	Behavior	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = database-s35
+# text = However, the cache is invalidated, and the content is re-read from the JDBC table.
+1	However	however	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+2	,	,	PUNCT	,	_	_	_	_	NER=O
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	cache	cache	NOUN	NN	_	_	_	_	NER=O
+5	is	be	AUX	VBZ	_	_	_	_	NER=O
+6	invalidated	invalidate	VERB	VBN	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+7	,	,	PUNCT	,	_	_	_	_	NER=O
+8	and	and	CCONJ	CC	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	content	content	NOUN	NN	_	_	_	_	NER=O
+11	is	be	AUX	VBZ	_	_	_	_	NER=O
+12	re-read	re-read	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM
+13	from	from	ADP	IN	_	_	_	_	NER=O
+14	the	the	DET	DT	_	_	_	_	NER=O
+15	JDBC	JDBC	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Java_Database_Connectivity
+16	table	table	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p16 section=NOTES
+# sent_id = database-s36
+# text = Root Cause:
+1	Root	root	NOUN	NN	_	_	_	_	NER=O
+2	Cause	cause	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = database-s37
+# text = The issue lies in the 'CacheData' class, where the comparison involves 'JDBCTable.'
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	issue	issue	NOUN	NN	_	_	_	_	NER=O
+3	lies	lie	VERB	VBZ	_	_	_	_	NER=O
+4	in	in	ADP	IN	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+7	CacheData	CacheData	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+8	'	'	PUNCT	.	_	_	_	_	NER=O
+9	class	class	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	where	where	ADV	WRB	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	comparison	comparison	NOUN	NN	_	_	_	_	NER=O
+14	involves	involve	VERB	VBZ	_	_	_	_	NER=O
+15	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+16	JDBCTable	JDBCTable	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+17	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+18	'	'	PUNCT	''	_	_	_	_	NER=O
+
+# sent_id = database-s38
+# text = The 'JDBCTable' is a case class:
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+3	JDBCTable	JDBCTable	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+4	'	'	PUNCT	.	_	_	_	_	NER=O
+5	is	be	AUX	VBZ	_	_	_	_	NER=O
+6	a	a	DET	DT	_	_	_	_	NER=O
+7	case	case	NOUN	NN	_	_	_	_	NER=O
+8	class	class	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+9	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = database-s39
+# text = {code:java}
+1	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+4	java	java	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	}	}	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = database-s40
+# text = case class JDBCTable(ident: Identifier, schema: StructType, jdbcOptions: JDBCOptions)
+1	case	case	NOUN	NN	_	_	_	_	NER=O
+2	class	class	NOUN	NN	_	_	_	_	NER=O
+3	JDBCTable	JDBCTable	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+4	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+5	ident	ident	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+6	:	:	PUNCT	:	_	_	_	_	NER=O
+7	Identifier	Identifier	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+8	,	,	PUNCT	,	_	_	_	_	NER=O
+9	schema	schema	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+10	:	:	PUNCT	:	_	_	_	_	NER=O
+11	StructType	structtype	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+12	,	,	PUNCT	,	_	_	_	_	NER=O
+13	jdbcOptions	jdbcoptions	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+14	:	:	PUNCT	:	_	_	_	_	NER=O
+15	JDBCOptions	jdbcoptions	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+16	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = database-s41
+# text = {code}
+1	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	}	}	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p17 section=NOTES
+# sent_id = database-s42
+# text = The comparison of non-case class components, such as 'jdbcOptions,' involves pointer comparison.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	comparison	comparison	NOUN	NN	_	_	_	_	NER=O
+3	of	of	ADP	IN	_	_	_	_	NER=O
+4	non-case	non-case	ADJ	JJ	_	_	_	_	NER=O
+5	class	class	NOUN	NN	_	_	_	_	NER=O
+6	components	component	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	,	_	_	_	_	NER=O
+8	such	such	ADJ	JJ	_	_	_	_	NER=O
+9	as	as	ADP	IN	_	_	_	_	NER=O
+10	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+11	jdbcOptions	jdbcOptions	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+12	,	,	PUNCT	,	_	_	_	_	NER=O|SpaceAfter=No
+13	'	'	PUNCT	''	_	_	_	_	NER=O
+14	involves	involve	VERB	VBZ	_	_	_	_	NER=O
+15	pointer	pointer	NOUN	NN	_	_	_	_	NER=O
+16	comparison	comparison	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+17	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = database-s43
+# text = This leads to unnecessary cache invalidation.
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	leads	lead	VERB	VBZ	_	_	_	_	NER=O
+3	to	to	ADP	TO	_	_	_	_	NER=O
+4	unnecessary	unnecessary	ADJ	JJ	_	_	_	_	NER=O
+5	cache	cache	NOUN	NN	_	_	_	_	NER=O
+6	invalidation	invalidation	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+7	.	.	PUNCT	.	_	_	_	_	NER=O
+

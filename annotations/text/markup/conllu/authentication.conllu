@@ -1,0 +1,461 @@
+# newdoc id = authentication
+# object = authentication
+# newpar report = thunderbird-1825223 | ticket_type=bug category=authentication component=Auth-service severity=Major confidence=high
+# paragraph = p1 section=TITLE
+# sent_id = authentication-s1
+# text = CardDAV does not fetch address book from Google Workspace and fails to use existing OAuth2 credentials
+1	CardDAV	CardDAV	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:CardDAV
+2	does	do	AUX	VBZ	_	_	_	_	NER=B-SYMPTOM
+3	not	not	PART	RB	_	_	_	_	NER=I-SYMPTOM
+4	fetch	fetch	VERB	VB	_	_	_	_	NER=I-SYMPTOM
+5	address	address	NOUN	NN	_	_	_	_	NER=O
+6	book	book	NOUN	NN	_	_	_	_	NER=O
+7	from	from	ADP	IN	_	_	_	_	NER=O
+8	Google	Google	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Google_Workspace
+9	Workspace	Workspace	PROPN	NNP	_	_	_	_	NER=I-PRODUCT
+10	and	and	CCONJ	CC	_	_	_	_	NER=O
+11	fails	fail	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+12	to	to	PART	TO	_	_	_	_	NER=O
+13	use	use	VERB	VB	_	_	_	_	NER=O
+14	existing	exist	VERB	VBG	_	_	_	_	NER=O
+15	OAuth2	OAuth2	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:OAuth
+16	credentials	credential	NOUN	NNS	_	_	_	_	NER=O
+
+# paragraph = p2 section=ENVIRONMENT
+# sent_id = authentication-s2
+# text = User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	X11	X11	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:X_Window_System|SpaceAfter=No
+7	;	;	PUNCT	:	_	_	_	_	NER=O
+8	Linux	Linux	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Linux
+9	x86_64	x86_64	PROPN	NNP	_	_	_	_	NER=I-ENV|SpaceAfter=No
+10	;	;	PUNCT	:	_	_	_	_	NER=O
+11	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+12	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+13	109.0	109.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+14	)	)	PUNCT	)	_	_	_	_	NER=O
+15	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+16	Firefox/112.0	Firefox/112.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p3 section=STEPS
+# sent_id = authentication-s3
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p4 section=STEPS
+# sent_id = authentication-s4
+# text = 1. Setup a new Google Workspace account using OAuth2.
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Setup	setup	VERB	VB	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	new	new	ADJ	JJ	_	_	_	_	NER=O
+6	Google	Google	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Google_Workspace
+7	Workspace	Workspace	PROPN	NNP	_	_	_	_	NER=I-PRODUCT
+8	account	account	NOUN	NN	_	_	_	_	NER=O
+9	using	use	VERB	VBG	_	_	_	_	NER=O
+10	OAuth2	OAuth2	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:OAuth|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = authentication-s5
+# text = - Calendar and Addressbook permissions are sought by Thunderbird and granted by user
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	Calendar	calendar	VERB	VB	_	_	_	_	NER=O
+3	and	and	CCONJ	CC	_	_	_	_	NER=O
+4	Addressbook	Addressbook	PROPN	NNP	_	_	_	_	NER=O
+5	permissions	permission	NOUN	NNS	_	_	_	_	NER=O
+6	are	be	AUX	VBP	_	_	_	_	NER=O
+7	sought	seek	VERB	VBN	_	_	_	_	NER=O
+8	by	by	ADP	IN	_	_	_	_	NER=O
+9	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+10	and	and	CCONJ	CC	_	_	_	_	NER=O
+11	granted	grant	VERB	VBN	_	_	_	_	NER=O
+12	by	by	ADP	IN	_	_	_	_	NER=O
+13	user	user	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = authentication-s6
+# text = - Address book is not auto discovered
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	Address	address	VERB	VB	_	_	_	_	NER=B-FEATURE
+3	book	book	NOUN	NN	_	_	_	_	NER=I-FEATURE
+4	is	be	AUX	VBZ	_	_	_	_	NER=B-SYMPTOM
+5	not	not	PART	RB	_	_	_	_	NER=I-SYMPTOM
+6	auto	auto	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+7	discovered	discover	VERB	VBD	_	_	_	_	NER=I-SYMPTOM
+
+# sent_id = authentication-s7
+# text = 2. Add a CardDav address book manually using the Location format specified in [Google Developer docs](https://developers.google.com/people/carddav)  `https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default`
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Add	add	VERB	VB	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	CardDav	CardDav	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:CardDAV
+6	address	address	NOUN	NN	_	_	_	_	NER=O
+7	book	book	NOUN	NN	_	_	_	_	NER=O
+8	manually	manually	ADV	RB	_	_	_	_	NER=O
+9	using	use	VERB	VBG	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	Location	Location	PROPN	NNP	_	_	_	_	NER=O
+12	format	format	NOUN	NN	_	_	_	_	NER=O
+13	specified	specify	VERB	VBN	_	_	_	_	NER=O
+14	in	in	ADP	IN	_	_	_	_	NER=O
+15	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+16	Google	Google	PROPN	NNP	_	_	_	_	NER=O
+17	Developer	Developer	PROPN	NNP	_	_	_	_	NER=O
+18	docs	doc	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+19	]	]	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+20	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+21	https://developers.google.com/people/carddav	https://developers.google.com/people/carddav	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+22	)	)	PUNCT	)	_	_	_	_	NER=O
+23	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+24	https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default	https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+25	`	`	PUNCT	``	_	_	_	_	NER=O
+
+# sent_id = authentication-s8
+# text = 3. OAuth2 Addressbook permissions sought again and approved
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	OAuth2	OAuth2	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:OAuth
+4	Addressbook	Addressbook	PROPN	NNP	_	_	_	_	NER=O
+5	permissions	permission	NOUN	NNS	_	_	_	_	NER=O
+6	sought	seek	VERB	VBD	_	_	_	_	NER=O
+7	again	again	ADV	RB	_	_	_	_	NER=O
+8	and	and	CCONJ	CC	_	_	_	_	NER=O
+9	approved	approve	VERB	VBD	_	_	_	_	NER=O
+
+# sent_id = authentication-s9
+# text = 4. Address book seemingly added
+1	4	4	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Address	address	VERB	VB	_	_	_	_	NER=B-FEATURE
+4	book	book	NOUN	NN	_	_	_	_	NER=I-FEATURE
+5	seemingly	seemingly	ADV	RB	_	_	_	_	NER=O
+6	added	add	VERB	VBD	_	_	_	_	NER=O
+
+# paragraph = p5 section=ACTUAL
+# sent_id = authentication-s10
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p6 section=ACTUAL
+# sent_id = authentication-s11
+# text = 1. Address book does not use existing OAuth2 credentials (and there's no way to choose credentials from a drop down in case multiple OAuth2 accounts exist) that were fetched during email setup
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Address	address	ADJ	JJ	_	_	_	_	NER=B-FEATURE
+4	book	book	NOUN	NN	_	_	_	_	NER=I-FEATURE
+5	does	do	AUX	VBZ	_	_	_	_	NER=O
+6	not	not	PART	RB	_	_	_	_	NER=O
+7	use	use	VERB	VB	_	_	_	_	NER=O
+8	existing	exist	VERB	VBG	_	_	_	_	NER=O
+9	OAuth2	OAuth2	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:OAuth
+10	credentials	credential	NOUN	NNS	_	_	_	_	NER=O
+11	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+12	and	and	CCONJ	CC	_	_	_	_	NER=O
+13	there	there	PRON	EX	_	_	_	_	NER=O|SpaceAfter=No
+14	's	be	AUX	VBZ	_	_	_	_	NER=O
+15	no	no	DET	DT	_	_	_	_	NER=O
+16	way	way	NOUN	NN	_	_	_	_	NER=O
+17	to	to	PART	TO	_	_	_	_	NER=O
+18	choose	choose	VERB	VB	_	_	_	_	NER=O
+19	credentials	credential	NOUN	NNS	_	_	_	_	NER=O
+20	from	from	ADP	IN	_	_	_	_	NER=O
+21	a	a	DET	DT	_	_	_	_	NER=O
+22	drop	drop	NOUN	NN	_	_	_	_	NER=O
+23	down	down	ADP	RP	_	_	_	_	NER=O
+24	in	in	ADP	IN	_	_	_	_	NER=O
+25	case	case	NOUN	NN	_	_	_	_	NER=O
+26	multiple	multiple	ADJ	JJ	_	_	_	_	NER=O
+27	OAuth2	OAuth2	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:OAuth
+28	accounts	account	NOUN	NNS	_	_	_	_	NER=O
+29	exist	exist	VERB	VBP	_	_	_	_	NER=O|SpaceAfter=No
+30	)	)	PUNCT	)	_	_	_	_	NER=O
+31	that	that	PRON	WDT	_	_	_	_	NER=O
+32	were	be	AUX	VBD	_	_	_	_	NER=O
+33	fetched	fetch	VERB	VBN	_	_	_	_	NER=O
+34	during	during	ADP	IN	_	_	_	_	NER=O
+35	email	email	ADJ	JJ	_	_	_	_	NER=O
+36	setup	setup	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = authentication-s12
+# text = 2. Address book does not display any contact information in the compose window.
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Address	address	ADJ	JJ	_	_	_	_	NER=O
+4	book	book	NOUN	NN	_	_	_	_	NER=O
+5	does	do	AUX	VBZ	_	_	_	_	NER=B-SYMPTOM
+6	not	not	PART	RB	_	_	_	_	NER=I-SYMPTOM
+7	display	display	VERB	VB	_	_	_	_	NER=I-SYMPTOM
+8	any	any	DET	DT	_	_	_	_	NER=I-SYMPTOM
+9	contact	contact	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+10	information	information	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+11	in	in	ADP	IN	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	compose	compose	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+14	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+15	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = authentication-s13
+# text = Searching in the compose window address book pane yields nothing
+1	Searching	search	VERB	VBG	_	_	_	_	NER=O
+2	in	in	ADP	IN	_	_	_	_	NER=O
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	compose	compose	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+5	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+6	address	address	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+7	book	book	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+8	pane	pane	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+9	yields	yield	NOUN	NNS	_	_	_	_	NER=B-SYMPTOM
+10	nothing	nothing	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+
+# sent_id = authentication-s14
+# text = 3. Cannot download the address book in the Address Book tab either
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Cannot	Cannot	PROPN	NNP	_	_	_	_	NER=B-SYMPTOM
+4	download	download	VERB	VBZ	_	_	_	_	NER=I-SYMPTOM
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	address	address	NOUN	NN	_	_	_	_	NER=O
+7	book	book	NOUN	NN	_	_	_	_	NER=O
+8	in	in	ADP	IN	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	Address	Address	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+11	Book	Book	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+12	tab	tab	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+13	either	either	ADV	RB	_	_	_	_	NER=O
+
+# paragraph = p7 section=EXPECTED
+# sent_id = authentication-s15
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p8 section=EXPECTED
+# sent_id = authentication-s16
+# text = I should be able to search for and fill in addresses from the compose window
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	should	should	AUX	MD	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	able	able	ADJ	JJ	_	_	_	_	NER=O
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	search	search	VERB	VB	_	_	_	_	NER=O
+7	for	for	ADP	IN	_	_	_	_	NER=O
+8	and	and	CCONJ	CC	_	_	_	_	NER=O
+9	fill	fill	VERB	VB	_	_	_	_	NER=O
+10	in	in	ADP	IN	_	_	_	_	NER=O
+11	addresses	address	NOUN	NNS	_	_	_	_	NER=O
+12	from	from	ADP	IN	_	_	_	_	NER=O
+13	the	the	DET	DT	_	_	_	_	NER=O
+14	compose	compose	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+15	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+
+# paragraph = p9 section=EXPECTED
+# sent_id = authentication-s17
+# text = I should be able to download all addresses for use offline and synchronise changes between Thunderbird and Google.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	should	should	AUX	MD	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	able	able	ADJ	JJ	_	_	_	_	NER=O
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	download	download	VERB	VB	_	_	_	_	NER=O
+7	all	all	DET	DT	_	_	_	_	NER=O
+8	addresses	address	NOUN	NNS	_	_	_	_	NER=O
+9	for	for	ADP	IN	_	_	_	_	NER=O
+10	use	use	NOUN	NN	_	_	_	_	NER=O
+11	offline	offline	NOUN	NN	_	_	_	_	NER=O
+12	and	and	CCONJ	CC	_	_	_	_	NER=O
+13	synchronise	synchronise	NOUN	NN	_	_	_	_	NER=O
+14	changes	change	NOUN	NNS	_	_	_	_	NER=O
+15	between	between	ADP	IN	_	_	_	_	NER=O
+16	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+17	and	and	CCONJ	CC	_	_	_	_	NER=O
+18	Google	Google	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = hadoop-13513595 | ticket_type=feature_request category=authentication component=Auth-service severity=None confidence=low
+# paragraph = p10 section=TITLE
+# sent_id = authentication-s18
+# text = Improve error reporting on non-standard kerberos names
+1	Improve	Improve	PROPN	NNP	_	_	_	_	NER=O
+2	error	error	NOUN	NN	_	_	_	_	NER=O
+3	reporting	report	VERB	VBG	_	_	_	_	NER=O
+4	on	on	ADP	IN	_	_	_	_	NER=O
+5	non-standard	non-standard	ADJ	JJ	_	_	_	_	NER=O
+6	kerberos	kerberos	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Kerberos_(protocol)
+7	names	name	NOUN	NNS	_	_	_	_	NER=O
+
+# paragraph = p11 section=DESCRIPTION
+# sent_id = authentication-s19
+# text = The kerberos RFC does not declare any restriction on characters used in kerberos names, though implementations MAY be more restrictive.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	kerberos	kerberos	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Kerberos_(protocol)
+3	RFC	RFC	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Request_for_Comments
+4	does	do	AUX	VBZ	_	_	_	_	NER=O
+5	not	not	PART	RB	_	_	_	_	NER=O
+6	declare	declare	VERB	VB	_	_	_	_	NER=O
+7	any	any	DET	DT	_	_	_	_	NER=O
+8	restriction	restriction	NOUN	NN	_	_	_	_	NER=O
+9	on	on	ADP	IN	_	_	_	_	NER=O
+10	characters	character	NOUN	NNS	_	_	_	_	NER=O
+11	used	use	VERB	VBN	_	_	_	_	NER=O
+12	in	in	ADP	IN	_	_	_	_	NER=O
+13	kerberos	kerberos	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Kerberos_(protocol)
+14	names	name	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+15	,	,	PUNCT	,	_	_	_	_	NER=O
+16	though	though	SCONJ	IN	_	_	_	_	NER=O
+17	implementations	implementation	NOUN	NNS	_	_	_	_	NER=O
+18	MAY	MAY	PROPN	NNP	_	_	_	_	NER=O
+19	be	be	AUX	VB	_	_	_	_	NER=O
+20	more	more	ADV	RBR	_	_	_	_	NER=O
+21	restrictive	restrictive	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+22	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p12 section=DESCRIPTION
+# sent_id = authentication-s20
+# text = If the kerberos controller supports use non-conventional user names *and the kerberos admin chooses to use them* this can confuse some of the parsing.
+1	If	if	SCONJ	IN	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	kerberos	kerberos	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Kerberos_(protocol)
+4	controller	controller	NOUN	NN	_	_	_	_	NER=O
+5	supports	support	NOUN	NNS	_	_	_	_	NER=O
+6	use	use	VERB	VBP	_	_	_	_	NER=O
+7	non-conventional	non-conventional	ADJ	JJ	_	_	_	_	NER=O
+8	user	user	NOUN	NN	_	_	_	_	NER=O
+9	names	name	NOUN	NNS	_	_	_	_	NER=O
+10	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+11	and	and	CCONJ	CC	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	kerberos	kerberos	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Kerberos_(protocol)
+14	admin	admin	VERB	VBP	_	_	_	_	NER=O
+15	chooses	chooses	NOUN	NNS	_	_	_	_	NER=O
+16	to	to	PART	TO	_	_	_	_	NER=O
+17	use	use	VERB	VB	_	_	_	_	NER=O
+18	them	them	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+19	*	*	SYM	SYM	_	_	_	_	NER=O
+20	this	this	DET	DT	_	_	_	_	NER=O
+21	can	can	AUX	MD	_	_	_	_	NER=O
+22	confuse	confuse	VERB	VB	_	_	_	_	NER=O
+23	some	some	DET	DT	_	_	_	_	NER=O
+24	of	of	ADP	IN	_	_	_	_	NER=O
+25	the	the	DET	DT	_	_	_	_	NER=O
+26	parsing	parsing	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+27	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p13 section=DESCRIPTION
+# sent_id = authentication-s21
+# text = The obvious solution is for the enterprise admins to "not do that" as a lot of things break, bits of hadoop included.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	obvious	obvious	ADJ	JJ	_	_	_	_	NER=O
+3	solution	solution	NOUN	NN	_	_	_	_	NER=O
+4	is	be	AUX	VBZ	_	_	_	_	NER=O
+5	for	for	ADP	IN	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	enterprise	enterprise	NOUN	NN	_	_	_	_	NER=O
+8	admins	admins	VERB	VBZ	_	_	_	_	NER=O
+9	to	to	PART	TO	_	_	_	_	NER=O
+10	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+11	not	not	PART	RB	_	_	_	_	NER=O
+12	do	do	VERB	VB	_	_	_	_	NER=O
+13	that	that	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+14	"	"	PUNCT	.	_	_	_	_	NER=O
+15	as	as	ADP	IN	_	_	_	_	NER=O
+16	a	a	DET	DT	_	_	_	_	NER=O
+17	lot	lot	NOUN	NN	_	_	_	_	NER=O
+18	of	of	ADP	IN	_	_	_	_	NER=O
+19	things	thing	NOUN	NNS	_	_	_	_	NER=O
+20	break	break	NOUN	NN	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+21	,	,	PUNCT	,	_	_	_	_	NER=O
+22	bits	bit	NOUN	NNS	_	_	_	_	NER=O
+23	of	of	ADP	IN	_	_	_	_	NER=O
+24	hadoop	hadoop	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Hadoop
+25	included	include	VERB	VBD	_	_	_	_	NER=O|SpaceAfter=No
+26	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p14 section=DESCRIPTION
+# sent_id = authentication-s22
+# text = Harden the hadoop code slightly so at least we fail more gracefully, so people can then get in touch with their sysadmin and tell them to stop it.
+1	Harden	Harden	PROPN	NNP	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	hadoop	hadoop	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Hadoop
+4	code	code	NOUN	NN	_	_	_	_	NER=O
+5	slightly	slightly	ADV	RB	_	_	_	_	NER=O
+6	so	so	ADV	RB	_	_	_	_	NER=O
+7	at	at	ADP	IN	_	_	_	_	NER=O
+8	least	least	ADJ	JJS	_	_	_	_	NER=O
+9	we	we	PRON	PRP	_	_	_	_	NER=O
+10	fail	fail	VERB	VBP	_	_	_	_	NER=B-SYMPTOM
+11	more	more	ADV	RBR	_	_	_	_	NER=O
+12	gracefully	gracefully	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+13	,	,	PUNCT	,	_	_	_	_	NER=O
+14	so	so	ADP	IN	_	_	_	_	NER=O
+15	people	people	NOUN	NNS	_	_	_	_	NER=O
+16	can	can	AUX	MD	_	_	_	_	NER=O
+17	then	then	ADV	RB	_	_	_	_	NER=O
+18	get	get	VERB	VB	_	_	_	_	NER=O
+19	in	in	ADP	IN	_	_	_	_	NER=O
+20	touch	touch	NOUN	NN	_	_	_	_	NER=O
+21	with	with	ADP	IN	_	_	_	_	NER=O
+22	their	their	PRON	PRP$	_	_	_	_	NER=O
+23	sysadmin	sysadmin	NOUN	NN	_	_	_	_	NER=O
+24	and	and	CCONJ	CC	_	_	_	_	NER=O
+25	tell	tell	VERB	VB	_	_	_	_	NER=O
+26	them	them	PRON	PRP	_	_	_	_	NER=O
+27	to	to	PART	TO	_	_	_	_	NER=O
+28	stop	stop	VERB	VB	_	_	_	_	NER=O
+29	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+30	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p15 section=NOTES
+# sent_id = authentication-s23
+# text = Note: given the kerberos admin is implicitly a superuser, being able to create malformed principal names.
+1	Note	note	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+3	given	give	VERB	VBN	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	kerberos	kerberos	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Kerberos_(protocol)
+6	admin	admin	NOUN	NN	_	_	_	_	NER=O
+7	is	be	AUX	VBZ	_	_	_	_	NER=O
+8	implicitly	implicitly	ADV	RB	_	_	_	_	NER=O
+9	a	a	DET	DT	_	_	_	_	NER=O
+10	superuser	superuser	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+11	,	,	PUNCT	,	_	_	_	_	NER=O
+12	being	be	AUX	VBG	_	_	_	_	NER=O
+13	able	able	ADJ	JJ	_	_	_	_	NER=O
+14	to	to	PART	TO	_	_	_	_	NER=O
+15	create	create	VERB	VB	_	_	_	_	NER=O
+16	malformed	malformed	ADJ	JJ	_	_	_	_	NER=O
+17	principal	principal	ADJ	JJ	_	_	_	_	NER=O
+18	names	name	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = authentication-s24
+# text = doesn't give them any privileges, just offers a different way to stop the cluster working.
+1	does	do	AUX	VBZ	_	_	_	_	NER=O|SpaceAfter=No
+2	n't	not	PART	RB	_	_	_	_	NER=O
+3	give	give	VERB	VB	_	_	_	_	NER=O
+4	them	them	PRON	PRP	_	_	_	_	NER=O
+5	any	any	DET	DT	_	_	_	_	NER=O
+6	privileges	privilege	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+7	,	,	PUNCT	,	_	_	_	_	NER=O
+8	just	just	ADV	RB	_	_	_	_	NER=O
+9	offers	offer	VERB	VBZ	_	_	_	_	NER=O
+10	a	a	DET	DT	_	_	_	_	NER=O
+11	different	different	ADJ	JJ	_	_	_	_	NER=O
+12	way	way	NOUN	NN	_	_	_	_	NER=O
+13	to	to	PART	TO	_	_	_	_	NER=O
+14	stop	stop	VERB	VB	_	_	_	_	NER=O
+15	the	the	DET	DT	_	_	_	_	NER=O
+16	cluster	cluster	NOUN	NN	_	_	_	_	NER=O
+17	working	work	VERB	VBG	_	_	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	.	_	_	_	_	NER=O
+

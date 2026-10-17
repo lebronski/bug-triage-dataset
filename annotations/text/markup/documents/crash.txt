@@ -1,0 +1,57 @@
+LdapGroupsMapping crashes with NullPointerException while going up the group hierarchy
+
+h2. What happened:
+
+When set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to a value larger than 0, {{goUpGroupHierarchy}} in {{org/apache/hadoop/security/LdapGroupsMapping.java}} may return a null {{{}groupResults{}}}and use it without checking null.
+h2. Buggy code:
+{noformat}
+  void goUpGroupHierarchy(Set<String> groupDNs, int goUpHierarchy, Set<String> groups) throws NamingException {
+    if (goUpHierarchy <= 0 || groups.isEmpty()) {
+      return;
+    }
+    ...
+    NamingEnumeration<SearchResult> groupResults = context.search(groupbaseDN, filter.toString(), SEARCH_CONTROLS);
+    while (groupResults.hasMoreElements()) {          // <--- Here groupResults may be null
+    ...
+    }
+    ...
+  }{noformat}
+h2. How to reproduce:
+
+(1) Set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to 1
+(2) Run test {{org.apache.hadoop.security.TestLdapGroupsMapping#testGetGroupsWithConnectionClosed}}
+h2. Stack trace:
+{noformat}
+java.lang.NullPointerException
+        at org.apache.hadoop.security.LdapGroupsMapping.goUpGroupHierarchy(LdapGroupsMapping.java:612)
+        at org.apache.hadoop.security.LdapGroupsMapping.lookupGroup(LdapGroupsMapping.java:489)
+        at org.apache.hadoop.security.LdapGroupsMapping.doGetGroups(LdapGroupsMapping.java:552)
+        at org.apache.hadoop.security.LdapGroupsMapping.getGroups(LdapGroupsMapping.java:365){noformat}
+For an easy reproduction, run the reproduce.sh in the attachment.
+
+We also create a PR provides a fix by checking the groupResults is not Null before it is accessed, similar to what's done in `org.apache.hadoop.security.LdapGroupsMapping#lookupGroup`
+
+JSON Sort Document crashes in certain cases
+
+Type: <b>Bug</b>
+
+1. Open a new view and paste
+```jsonc
+{
+    "foo": {"a": "b",}
+}
+```
+2. Trigger `JSON: Sort Document` from the Command Pallette
+
+Triggers an error dialog with `Request json/sort failed with message: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]`
+
+The trailing comma seems to be causing this issue. But it doesn't have issues with trailing commas outside of this object like:
+
+```jsonc
+{
+    "foo": {"a": "b"},
+}
+```
+
+VS Code version: Code 1.84.2 (Universal) (1a5daa3a0231a0fbba4f14db7ec463cf99d7768e, 2023-11-09T10:52:33.687Z)
+OS version: Darwin arm64 23.1.0

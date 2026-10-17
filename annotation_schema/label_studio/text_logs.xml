@@ -33,7 +33,13 @@
     <Label value="ENV" background="#911eb4" hint="окружение: ОС, браузер, устройство, среда выполнения, версия приложения, библиотека, СУБД"/>
     <Label value="UI_ELEMENT" background="#46a0b0" hint="элемент интерфейса, с которым связан дефект"/>
     <Label value="METRIC" background="#f032e6" hint="числовое значение с единицей: время, память, нагрузка, количество"/>
-    <Label value="PII" background="#9a6324" hint="персональные и чувствительные данные — подлежат маскированию перед публикацией"/>
+    <Label value="PRODUCT" background="#9a6324" hint="программный продукт, сервис или библиотека, о которых идёт речь (Firefox, Thunderbird, Apache Spark, PayPal, Guava). Название с версией в окружении — ENV app_version"/>
+    <Label value="TECHNOLOGY" background="#808000" hint="протокол, стандарт, формат, язык или механизм: OAuth2, Kerberos, JDBC, DNS, TLS, CORS, CSS, JSON"/>
+    <Label value="SYMPTOM" background="#000075" hint="проявление дефекта словами автора: crashes, freezes, memory leak, flickers, not translated, nothing happens"/>
+    <Label value="FEATURE" background="#a9a9a9" hint="функция или подсистема продукта, в которой проявляется дефект: Address Book, Payment methods, Firefox Translations, startup"/>
+    <Label value="LOCALE" background="#e6194b" hint="язык или локаль интерфейса/контента: English, Russian, Portuguese (pt-PT)"/>
+    <Label value="ISSUE_REF" background="#3cb44b" hint="ссылка на другой тикет: bug 1826149, SPARK-21551, CASSANDRA-17352 (для связывания тикетов в графе знаний, ЛР6)"/>
+    <Label value="PII" background="#4363d8" hint="персональные и чувствительные данные — подлежат маскированию перед публикацией"/>
   </Labels>
   <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="CODE_LOCATION">
     <Header value="CODE_LOCATION: code_location_kind" size="6"/>
@@ -44,6 +50,7 @@
     <Choice value="module" hint="module"/>
     <Choice value="frame" hint="frame"/>
     <Choice value="variable" hint="variable"/>
+    <Choice value="config" hint="config"/>
   </Choices>
   </View>
   <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="ERROR_CODE">
@@ -77,6 +84,13 @@
     <Choice value="unknown" hint="unknown"/>
   </Choices>
   </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="ENV">
+    <Header value="ENV: env_source" size="6"/>
+  <Choices name="env_source" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="text" hint="text"/>
+    <Choice value="user_agent" hint="user_agent"/>
+  </Choices>
+  </View>
   <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="UI_ELEMENT">
     <Header value="UI_ELEMENT: ui_element_kind" size="6"/>
   <Choices name="ui_element_kind" toName="line" choice="single" showInline="true" perRegion="true">
@@ -98,6 +112,56 @@
     <Choice value="cpu" hint="cpu"/>
     <Choice value="count" hint="count"/>
     <Choice value="size" hint="size"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="PRODUCT">
+    <Header value="PRODUCT: product_kind" size="6"/>
+  <Choices name="product_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="application" hint="application"/>
+    <Choice value="service" hint="service"/>
+    <Choice value="framework" hint="framework"/>
+    <Choice value="library" hint="library"/>
+    <Choice value="tool" hint="tool"/>
+    <Choice value="release" hint="release"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="TECHNOLOGY">
+    <Header value="TECHNOLOGY: technology_kind" size="6"/>
+  <Choices name="technology_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="protocol" hint="protocol"/>
+    <Choice value="standard" hint="standard"/>
+    <Choice value="format" hint="format"/>
+    <Choice value="language" hint="language"/>
+    <Choice value="mechanism" hint="mechanism"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="SYMPTOM">
+    <Header value="SYMPTOM: symptom_kind" size="6"/>
+  <Choices name="symptom_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="crash" hint="crash"/>
+    <Choice value="hang" hint="hang"/>
+    <Choice value="slowness" hint="slowness"/>
+    <Choice value="resource_leak" hint="resource_leak"/>
+    <Choice value="visual_defect" hint="visual_defect"/>
+    <Choice value="wrong_output" hint="wrong_output"/>
+    <Choice value="data_corruption" hint="data_corruption"/>
+    <Choice value="failure" hint="failure"/>
+    <Choice value="vulnerability" hint="vulnerability"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="SYMPTOM">
+    <Header value="SYMPTOM: symptom_polarity" size="6"/>
+  <Choices name="symptom_polarity" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="observed" hint="observed"/>
+    <Choice value="negated" hint="negated"/>
+    <Choice value="hypothetical" hint="hypothetical"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="LOCALE">
+    <Header value="LOCALE: locale_kind" size="6"/>
+  <Choices name="locale_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="language" hint="language"/>
+    <Choice value="locale" hint="locale"/>
   </Choices>
   </View>
   <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="PII">

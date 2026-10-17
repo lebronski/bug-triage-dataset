@@ -1,0 +1,50 @@
+Huge memory leak even while sleeping
+
+User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:75.0) Gecko/20100101 Firefox/75.0
+
+Steps to reproduce:
+
+Since Firefox 74, it's consuming a large about of memory and never release it on MacOS. With my usual browsing experience, before 74, I never had to restart Firefox because of its memory impact, but now I need to.
+As usual, with memory based report, there are so many factor that could cause this, it's hard to reproduce, so I simplified the test to the most simple case I could do, that is: 
+
+1. Started as safe mode without any extension
+2. Loaded a bunch of tabs (my previous browsing session)
+3. Saved a memory report
+4. Set the computer to sleep during the night by closing lid
+5. Wake up the computer
+6. Saved memory report, memory increased by a lot
+
+Actual results:
+
+The memory increased by at least 300MB from the process manager.
+
+Expected results:
+
+The memory should more or less stay the same while time goes on. Please notice that I've tried to minimize the memory usage (in about:memory) but it's useless ?
+
+Memory leak from thrift server hashMap
+
+I found when the scanner does not closed successfully, it remains forever in the hashMap that stores the state of the scanner.
+
+To resolve this problem, I make scannerMap to Guava Cache so that can be expired on set time.
+
+Thunderbird Freezing/Crashing due to memory leak
+
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+
+Steps to reproduce:
+
+1. Open Thunderbird
+2. Check email
+3. Freezes due to a huge memory leak
+4. Crashes
+
+I use version 94.0b4 (64-bit) on Windows 11
+
+Actual results:
+
+When I click on emails the whole client will freeze and then crash.
+
+Expected results:
+
+I should be able to check my emails without having to reopen Thunderbird multiple times just to get through the emails. I have resorted to checking email on the web due to this issue.

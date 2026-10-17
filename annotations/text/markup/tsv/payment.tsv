@@ -1,0 +1,492 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=webanno.custom.BugEntity|label|kind|normalized|affected|polarity|source|kb_uri
+#T_SP=webanno.custom.BugReport|report_id|ticket_type|category|component|severity|confidence
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=Incorrect message appears after importing an invalid credit card number
+1-1	0-9	Incorrect	incorrect	JJ	ADJ	SYMPTOM[37]	wrong\_output[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-2	10-17	message	message	NN	NOUN	SYMPTOM[37]	wrong\_output[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-3	18-25	appears	appear	VBZ	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-4	26-31	after	after	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-5	32-41	importing	import	VBG	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-6	42-44	an	an	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-7	45-52	invalid	invalid	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-8	53-59	credit	credit	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-9	60-64	card	card	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+1-10	65-71	number	number	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	TITLE[4]	_	_
+
+#Text=*Found in*
+2-1	73-74	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[5]	_	_
+2-2	74-79	Found	Found	NNP	PROPN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[5]	_	_
+2-3	80-82	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[5]	_	_
+2-4	82-83	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[5]	_	_
+
+#Text=118.0b5
+3-1	85-92	118.0b5	118.0b5	CD	NUM	ENV[38]	app\_version[38]	Firefox 118.0b5[38]	yes[38]	*[38]	*[38]	*[38]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[6]	_	_
+
+#Text=*Affected versions*
+4-1	94-95	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[7]	_	_
+4-2	95-103	Affected	Affected	NNP	PROPN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[7]	_	_
+4-3	104-112	versions	version	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[7]	_	_
+4-4	112-113	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[7]	_	_
+
+#Text=118.0b5
+5-1	115-122	118.0b5	118.0b5	CD	NUM	ENV[39]	app\_version[39]	Firefox 118.0b5[39]	yes[39]	*[39]	*[39]	*[39]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[8]	_	_
+
+#Text=*Tested platforms*
+6-1	124-125	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[9]	_	_
+6-2	125-131	Tested	test	VBN	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[9]	_	_
+6-3	132-141	platforms	platform	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[9]	_	_
+6-4	141-142	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[9]	_	_
+
+#Text=Affected platforms: macOS 13
+#Text=Unaffected platforms:
+7-1	144-152	Affected	affected	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-2	153-162	platforms	platform	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-3	162-163	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-4	164-169	macOS	macOS	NNP	PROPN	ENV[40]	os[40]	macOS 13[40]	yes[40]	*[40]	*[40]	http://dbpedia.org/resource/MacOS[40]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-5	170-172	13	13	CD	NUM	ENV[40]	os[40]	macOS 13[40]	yes[40]	*[40]	*[40]	http://dbpedia.org/resource/MacOS[40]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-6	173-183	Unaffected	unaffected	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-7	184-193	platforms	platform	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+7-8	193-194	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ENVIRONMENT[10]	_	_
+
+#Text=*Preconditions*
+8-1	196-197	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[11]	_	_
+8-2	197-210	Preconditions	precondition	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[11]	_	_
+8-3	210-211	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[11]	_	_
+
+#Text=1 valid credit card and 1 invalid credit card saved in Chrome
+9-1	213-214	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-2	215-220	valid	valid	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-3	221-227	credit	credit	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-4	228-232	card	card	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-5	233-236	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-6	237-238	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-7	239-246	invalid	invalid	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-8	247-253	credit	credit	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-9	254-258	card	card	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-10	259-264	saved	save	VBD	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-11	265-267	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+9-12	268-274	Chrome	Chrome	NNP	PROPN	PRODUCT[41]	application[41]	*[41]	*[41]	*[41]	*[41]	*[41]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[12]	_	_
+
+#Text=*Steps to reproduce*
+10-1	276-277	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[13]	_	_
+10-2	277-282	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[13]	_	_
+10-3	283-285	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[13]	_	_
+10-4	286-295	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[13]	_	_
+10-5	295-296	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[13]	_	_
+
+#Text=1. Open Fx
+11-1	298-299	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+11-2	299-300	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+11-3	301-305	Open	open	VB	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+11-4	306-308	Fx	Fx	NNP	PROPN	PRODUCT[42]	application[42]	Firefox[42]	*[42]	*[42]	*[42]	http://dbpedia.org/resource/Firefox[42]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+
+#Text=2. Click on  Import data button from about:preferences
+12-1	310-311	2	2	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-2	311-312	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-3	313-318	Click	click	VB	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-4	319-321	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-5	323-329	Import	Import	NNP	PROPN	UI\_ELEMENT[43]	button[43]	*[43]	*[43]	*[43]	*[43]	*[43]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-6	330-334	data	data	NNS	NOUN	UI\_ELEMENT[43]	button[43]	*[43]	*[43]	*[43]	*[43]	*[43]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-7	335-341	button	button	NN	NOUN	UI\_ELEMENT[43]	button[43]	*[43]	*[43]	*[43]	*[43]	*[43]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-8	342-346	from	from	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+12-9	347-364	about:preferences	about:preferences	ADD	X	UI\_ELEMENT[44]	page[44]	*[44]	*[44]	*[44]	*[44]	*[44]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	STEPS[14]	_	_
+
+#Text=*Expected result*
+#Text=Only 1 credit card(the valid one) is imported, so after the import is done the message should appear for 1 credit card not two.
+13-1	366-367	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-2	367-375	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-3	376-382	result	result	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-4	382-383	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-5	384-388	Only	only	RB	ADV	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-6	389-390	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-7	391-397	credit	credit	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-8	398-402	card	card	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-9	402-403	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-10	403-406	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-11	407-412	valid	valid	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-12	413-416	one	one	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-13	416-417	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-14	418-420	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-15	421-429	imported	import	VBN	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-16	429-430	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-17	431-433	so	so	RB	ADV	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-18	434-439	after	after	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-19	440-443	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-20	444-450	import	import	NN	NOUN	FEATURE[45]	*[45]	Firefox data import from Chrome[45]	*[45]	*[45]	*[45]	*[45]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	SYMPTOM\_OF	1-1[37_45]
+13-21	451-453	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-22	454-458	done	do	VBN	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-23	459-462	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-24	463-470	message	message	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-25	471-477	should	should	MD	AUX	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-26	478-484	appear	appear	VB	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-27	485-488	for	for	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-28	489-490	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-29	491-497	credit	credit	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-30	498-502	card	card	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-31	503-506	not	not	RB	PART	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-32	507-510	two	two	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+13-33	510-511	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	EXPECTED[15]	_	_
+
+#Text=*Actual result*
+#Text=After the import is done the message should appear for 1 credit card not two.
+14-1	513-514	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-2	514-520	Actual	Actual	NNP	PROPN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-3	521-527	result	result	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-4	527-528	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-5	529-534	After	after	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-6	535-538	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-7	539-545	import	import	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-8	546-548	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-9	549-553	done	do	VBN	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-10	554-557	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-11	558-565	message	message	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-12	566-572	should	should	MD	AUX	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-13	573-579	appear	appear	VB	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-14	580-583	for	for	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-15	584-585	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-16	586-592	credit	credit	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-17	593-597	card	card	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-18	598-601	not	not	RB	PART	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-19	602-605	two	two	CD	NUM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+14-20	605-606	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	ACTUAL[16]	_	_
+
+#Text=*Regression range*
+15-1	608-609	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[17]	_	_
+15-2	609-619	Regression	Regression	NNP	PROPN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[17]	_	_
+15-3	620-625	range	range	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[17]	_	_
+15-4	625-626	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[17]	_	_
+
+#Text=Not a regression.
+16-1	628-631	Not	not	RB	PART	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+16-2	632-633	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+16-3	634-644	regression	regression	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+16-4	644-645	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+
+#Text=Reproducible with bug 1826149 after Payment methods were implemented.
+17-1	646-658	Reproducible	reproducible	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-2	659-663	with	with	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-3	664-667	bug	bug	NN	NOUN	ISSUE\_REF[46]	*[46]	bug 1826149[46]	*[46]	*[46]	*[46]	*[46]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-4	668-675	1826149	1826149	CD	NUM	ISSUE\_REF[46]	*[46]	bug 1826149[46]	*[46]	*[46]	*[46]	*[46]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-5	676-681	after	after	IN	ADP	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-6	682-689	Payment	payment	JJ	ADJ	FEATURE[47]	*[47]	Firefox Payment methods (credit card autofill)[47]	*[47]	*[47]	*[47]	*[47]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-7	690-697	methods	method	NNS	NOUN	FEATURE[47]	*[47]	Firefox Payment methods (credit card autofill)[47]	*[47]	*[47]	*[47]	*[47]	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-8	698-702	were	be	VBD	AUX	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-9	703-714	implemented	implement	VBN	VERB	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+17-10	714-715	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+
+#Text=Additional notes
+18-1	716-726	Additional	additional	JJ	ADJ	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+18-2	727-732	notes	note	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[18]	_	_
+
+#Text=Attached browser console errors.
+19-1	734-742	Attached	Attached	NNP	PROPN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[19]	_	_
+19-2	743-750	browser	browser	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[19]	_	_
+19-3	751-758	console	console	NN	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[19]	_	_
+19-4	759-765	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[19]	_	_
+19-5	765-766	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1851799[1]	bug[1]	payment[1]	Billing[1]	Minor[1]	high[1]	NOTES[19]	_	_
+
+#Text=PayPal sandbox Something went wrong.
+20-1	768-774	PayPal	PayPal	NNP	PROPN	PRODUCT[48]	service[48]	PayPal[48]	*[48]	*[48]	*[48]	http://dbpedia.org/resource/PayPal[48]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+20-2	775-782	sandbox	sandbox	NN	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+20-3	783-792	Something	Something	NNP	PROPN	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+20-4	793-797	went	go	VBD	VERB	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+20-5	798-803	wrong	wrong	JJ	ADJ	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+20-6	803-804	.	.	.	PUNCT	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+
+#Text=Contact the seller for help
+21-1	805-812	Contact	contact	VB	VERB	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+21-2	813-816	the	the	DT	DET	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+21-3	817-823	seller	seller	NN	NOUN	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+21-4	824-827	for	for	IN	ADP	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+21-5	828-832	help	help	NN	NOUN	ERROR\_MESSAGE[49]	*[49]	*[49]	*[49]	*[49]	*[49]	*[49]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	TITLE[20]	_	_
+
+#Text=User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+22-1	834-838	User	User	NNP	PROPN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-2	839-844	Agent	Agent	NNP	PROPN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-3	844-845	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-4	846-857	Mozilla/5.0	Mozilla/5.0	NNP	PROPN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-5	858-859	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-6	859-866	Windows	Windows	NNP	PROPN	ENV[50]	os[50]	Windows 10[50]	yes[50]	*[50]	user\_agent[50]	http://dbpedia.org/resource/Microsoft\_Windows[50]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-7	867-869	NT	NT	NNP	PROPN	ENV[50]	os[50]	Windows 10[50]	yes[50]	*[50]	user\_agent[50]	http://dbpedia.org/resource/Microsoft\_Windows[50]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-8	870-874	10.0	10.0	CD	NUM	ENV[50]	os[50]	Windows 10[50]	yes[50]	*[50]	user\_agent[50]	http://dbpedia.org/resource/Microsoft\_Windows[50]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-9	874-875	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-10	876-881	Win64	Win64	NNP	PROPN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-11	881-882	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-12	883-886	x64	x64	NNP	PROPN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-13	886-887	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-14	888-890	rv	rv	NN	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-15	890-891	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-16	891-896	128.0	128.0	CD	NUM	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-17	896-897	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-18	898-912	Gecko/20100101	Gecko/20100101	NNP	PROPN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	_	_
+22-19	913-926	Firefox/128.0	Firefox/128.0	NNP	PROPN	ENV[51]	browser[51]	Firefox/128.0[51]	yes[51]	*[51]	user\_agent[51]	*[51]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ENVIRONMENT[21]	OBSERVED\_IN	26-1[54_51]
+
+#Text=Steps to reproduce:
+23-1	928-933	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[22]	_	_
+23-2	934-936	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[22]	_	_
+23-3	937-946	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[22]	_	_
+23-4	946-947	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[22]	_	_
+
+#Text=Clicked on a PayPal 'Buy Now' link
+24-1	949-956	Clicked	click	VBN	VERB	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-2	957-959	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-3	960-961	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-4	962-968	PayPal	PayPal	NNP	PROPN	PRODUCT[52]	service[52]	PayPal[52]	*[52]	*[52]	*[52]	http://dbpedia.org/resource/PayPal[52]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-5	969-970	'	'	.	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-6	970-973	Buy	Buy	NNP	PROPN	UI\_ELEMENT[53]	link[53]	*[53]	*[53]	*[53]	*[53]	*[53]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-7	974-977	Now	now	RB	ADV	UI\_ELEMENT[53]	link[53]	*[53]	*[53]	*[53]	*[53]	*[53]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-8	977-978	'	'	.	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+24-9	979-983	link	link	NN	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	STEPS[23]	_	_
+
+#Text=Actual results:
+25-1	985-991	Actual	actual	JJ	ADJ	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[24]	_	_
+25-2	992-999	results	result	NNS	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[24]	_	_
+25-3	999-1000	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[24]	_	_
+
+#Text=Something went wrong.
+26-1	1002-1011	Something	something	VBG	VERB	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+26-2	1012-1016	went	go	VBD	VERB	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+26-3	1017-1022	wrong	wrong	JJ	ADJ	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+26-4	1022-1023	.	.	.	PUNCT	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+
+#Text=Contact the seller for help message displayed
+27-1	1024-1031	Contact	contact	VB	VERB	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+27-2	1032-1035	the	the	DT	DET	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+27-3	1036-1042	seller	seller	NN	NOUN	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+27-4	1043-1046	for	for	IN	ADP	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+27-5	1047-1051	help	help	NN	NOUN	ERROR\_MESSAGE[54]	*[54]	*[54]	*[54]	*[54]	*[54]	*[54]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+27-6	1052-1059	message	message	NN	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+27-7	1060-1069	displayed	display	VBD	VERB	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	ACTUAL[25]	_	_
+
+#Text=Expected results:
+28-1	1071-1079	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[26]	_	_
+28-2	1080-1087	results	result	NNS	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[26]	_	_
+28-3	1087-1088	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[26]	_	_
+
+#Text=Gone to PayPal to purchase goods
+29-1	1090-1094	Gone	gone	NN	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[27]	_	_
+29-2	1095-1097	to	to	TO	ADP	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[27]	_	_
+29-3	1098-1104	PayPal	PayPal	NNP	PROPN	PRODUCT[55]	service[55]	PayPal[55]	*[55]	*[55]	*[55]	http://dbpedia.org/resource/PayPal[55]	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[27]	_	_
+29-4	1105-1107	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[27]	_	_
+29-5	1108-1116	purchase	purchase	VB	VERB	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[27]	_	_
+29-6	1117-1122	goods	good	NNS	NOUN	_	_	_	_	_	_	_	firefox-1910229[2]	bug[2]	payment[2]	Billing[2]	Major[2]	low[2]	EXPECTED[27]	_	_
+
+#Text=can't donate to thunderbird using the paypal link, cross site error using firefox.
+30-1	1124-1126	ca	can	MD	AUX	SYMPTOM[56]	failure[56]	*[56]	*[56]	observed[56]	*[56]	*[56]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-2	1126-1129	n't	not	RB	PART	SYMPTOM[56]	failure[56]	*[56]	*[56]	observed[56]	*[56]	*[56]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-3	1130-1136	donate	donate	VB	VERB	SYMPTOM[56]	failure[56]	*[56]	*[56]	observed[56]	*[56]	*[56]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-4	1137-1139	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-5	1140-1151	thunderbird	thunderbird	VB	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-6	1152-1157	using	use	VBG	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-7	1158-1161	the	the	DT	DET	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-8	1162-1168	paypal	paypal	NNP	PROPN	PRODUCT[57]	service[57]	PayPal[57]	*[57]	*[57]	*[57]	http://dbpedia.org/resource/PayPal[57]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	SYMPTOM\_OF	30-1[56_57]
+30-9	1169-1173	link	link	NN	NOUN	UI\_ELEMENT[58]	link[58]	*[58]	*[58]	*[58]	*[58]	*[58]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-10	1173-1174	,	,	,	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-11	1175-1180	cross	cross	NN	NOUN	SYMPTOM[59]	failure[59]	*[59]	*[59]	observed[59]	*[59]	*[59]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-12	1181-1185	site	site	NN	NOUN	SYMPTOM[59]	failure[59]	*[59]	*[59]	observed[59]	*[59]	*[59]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-13	1186-1191	error	error	NN	NOUN	SYMPTOM[59]	failure[59]	*[59]	*[59]	observed[59]	*[59]	*[59]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-14	1192-1197	using	use	VBG	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-15	1198-1205	firefox	firefox	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+30-16	1205-1206	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	TITLE[28]	_	_
+
+#Text=User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0
+31-1	1208-1212	User	User	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-2	1213-1218	Agent	Agent	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-3	1218-1219	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-4	1220-1231	Mozilla/5.0	Mozilla/5.0	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-5	1232-1233	(	(	(	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-6	1233-1240	Windows	Windows	NNP	PROPN	ENV[60]	os[60]	Windows 10[60]	yes[60]	*[60]	user\_agent[60]	http://dbpedia.org/resource/Microsoft\_Windows[60]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-7	1241-1243	NT	NT	NNP	PROPN	ENV[60]	os[60]	Windows 10[60]	yes[60]	*[60]	user\_agent[60]	http://dbpedia.org/resource/Microsoft\_Windows[60]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-8	1244-1248	10.0	10.0	CD	NUM	ENV[60]	os[60]	Windows 10[60]	yes[60]	*[60]	user\_agent[60]	http://dbpedia.org/resource/Microsoft\_Windows[60]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-9	1248-1249	;	\;	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-10	1250-1255	Win64	Win64	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-11	1255-1256	;	\;	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-12	1257-1260	x64	x64	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-13	1260-1261	;	\;	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-14	1262-1264	rv	rv	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-15	1264-1265	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-16	1265-1270	107.0	107.0	CD	NUM	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-17	1270-1271	)	)	)	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-18	1272-1286	Gecko/20100101	Gecko/20100101	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+31-19	1287-1300	Firefox/107.0	Firefox/107.0	NNP	PROPN	ENV[61]	browser[61]	Firefox/107.0[61]	yes[61]	*[61]	user\_agent[61]	*[61]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[29]	_	_
+
+#Text=Steps to reproduce:
+32-1	1302-1307	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[30]	_	_
+32-2	1308-1310	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[30]	_	_
+32-3	1311-1320	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[30]	_	_
+32-4	1320-1321	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[30]	_	_
+
+#Text=- from here:
+33-1	1323-1324	-	-	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+33-2	1325-1329	from	from	IN	ADP	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+33-3	1330-1334	here	here	RB	ADV	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+33-4	1334-1335	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/
+34-1	1336-1392	https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/	https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/	ADD	X	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=- I click donate.
+35-1	1393-1394	-	-	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+35-2	1395-1396	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+35-3	1397-1402	click	click	VBP	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+35-4	1403-1409	donate	donate	NN	NOUN	FEATURE[62]	*[62]	Thunderbird donation page[62]	*[62]	*[62]	*[62]	*[62]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+35-5	1409-1410	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=Then from here:
+36-1	1411-1415	Then	then	RB	ADV	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+36-2	1416-1420	from	from	IN	ADP	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+36-3	1421-1425	here	here	RB	ADV	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+36-4	1425-1426	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=https://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog
+37-1	1427-1537	https://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog	https://give.thunderbird.net/en-US/?utm\_source=thunderbird-client&utm\_medium=referral&utm\_content=about-dialog	ADD	X	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=- After the Paypal button appears I click it.
+38-1	1538-1539	-	-	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-2	1540-1545	After	after	IN	ADP	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-3	1546-1549	the	the	DT	DET	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-4	1550-1556	Paypal	Paypal	NNP	PROPN	UI\_ELEMENT[63]	button[63]	*[63]	*[63]	*[63]	*[63]	*[63]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	SYMPTOM\_OF	39-1[64_63]
+38-5	1557-1563	button	button	NN	NOUN	UI\_ELEMENT[63]	button[63]	*[63]	*[63]	*[63]	*[63]	*[63]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-6	1564-1571	appears	appear	VBZ	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-7	1572-1573	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-8	1574-1579	click	click	VBP	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-9	1580-1582	it	it	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+38-10	1582-1583	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=Nothing happens.
+39-1	1584-1591	Nothing	nothing	NN	NOUN	SYMPTOM[64]	failure[64]	*[64]	*[64]	observed[64]	*[64]	*[64]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+39-2	1592-1599	happens	happens	NNS	NOUN	SYMPTOM[64]	failure[64]	*[64]	*[64]	observed[64]	*[64]	*[64]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+39-3	1599-1600	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=In the console is an error cross site error.
+40-1	1601-1603	In	in	IN	ADP	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-2	1604-1607	the	the	DT	DET	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-3	1608-1615	console	console	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-4	1616-1618	is	be	VBZ	AUX	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-5	1619-1621	an	an	DT	DET	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-6	1622-1627	error	error	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-7	1628-1633	cross	cross	NN	NOUN	SYMPTOM[65]	failure[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-8	1634-1638	site	site	NN	NOUN	SYMPTOM[65]	failure[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-9	1639-1644	error	error	NN	NOUN	SYMPTOM[65]	failure[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+40-10	1644-1645	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	STEPS[31]	_	_
+
+#Text=Actual results:
+41-1	1647-1653	Actual	actual	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[32]	_	_
+41-2	1654-1661	results	result	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[32]	_	_
+41-3	1661-1662	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[32]	_	_
+
+#Text=Content Security Policy: The page’s settings blocked the loading of a resource at https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd (“connect-src”).
+42-1	1664-1671	Content	Content	NNP	PROPN	ERROR\_MESSAGE[66]|TECHNOLOGY[67]	*[66]|mechanism[67]	*[66]|Content Security Policy[67]	*[66]|*[67]	*[66]|*[67]	*[66]|*[67]	*[66]|http://dbpedia.org/resource/Content\_Security\_Policy[67]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-2	1672-1680	Security	Security	NNP	PROPN	ERROR\_MESSAGE[66]|TECHNOLOGY[67]	*[66]|mechanism[67]	*[66]|Content Security Policy[67]	*[66]|*[67]	*[66]|*[67]	*[66]|*[67]	*[66]|http://dbpedia.org/resource/Content\_Security\_Policy[67]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-3	1681-1687	Policy	Policy	NNP	PROPN	ERROR\_MESSAGE[66]|TECHNOLOGY[67]	*[66]|mechanism[67]	*[66]|Content Security Policy[67]	*[66]|*[67]	*[66]|*[67]	*[66]|*[67]	*[66]|http://dbpedia.org/resource/Content\_Security\_Policy[67]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-4	1687-1688	:	:	:	PUNCT	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-5	1689-1692	The	the	DT	DET	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-6	1693-1697	page	page	NN	NOUN	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-7	1697-1698	’	’	.	PUNCT	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-8	1698-1699	s	s	NN	NOUN	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-9	1700-1708	settings	setting	NNS	NOUN	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-10	1709-1716	blocked	block	VBD	VERB	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-11	1717-1720	the	the	DT	DET	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-12	1721-1728	loading	loading	NN	NOUN	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-13	1729-1731	of	of	IN	ADP	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-14	1732-1733	a	a	DT	DET	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-15	1734-1742	resource	resource	NN	NOUN	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-16	1743-1745	at	at	IN	ADP	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-17	1746-1819	https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd	https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd	ADD	X	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-18	1820-1821	(	(	(	PUNCT	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-19	1821-1822	“	“	.	PUNCT	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-20	1822-1833	connect-src	connect-src	NN	NOUN	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-21	1833-1834	”	”	.	PUNCT	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-22	1834-1835	)	)	)	PUNCT	ERROR\_MESSAGE[66]	*[66]	*[66]	*[66]	*[66]	*[66]	*[66]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+42-23	1835-1836	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+
+#Text=Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://www.paypal.com/xoplatform/logger/api/logger.
+43-1	1837-1849	Cross-Origin	Cross-Origin	NNP	PROPN	ERROR\_MESSAGE[68]|TECHNOLOGY[69]	*[68]|mechanism[69]	*[68]|CORS / Same-origin policy[69]	*[68]|*[69]	*[68]|*[69]	*[68]|*[69]	*[68]|http://dbpedia.org/resource/Cross-origin\_resource\_sharing[69]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	CAUSED\_BY	30-11[59_69]
+43-2	1850-1857	Request	Request	NNP	PROPN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-3	1858-1865	Blocked	Blocked	NNPS	PROPN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-4	1865-1866	:	:	:	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-5	1867-1870	The	the	DT	DET	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-6	1871-1875	Same	Same	NNP	PROPN	ERROR\_MESSAGE[68]|TECHNOLOGY[70]	*[68]|mechanism[70]	*[68]|CORS / Same-origin policy[70]	*[68]|*[70]	*[68]|*[70]	*[68]|*[70]	*[68]|http://dbpedia.org/resource/Cross-origin\_resource\_sharing[70]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-7	1876-1882	Origin	Origin	NNP	PROPN	ERROR\_MESSAGE[68]|TECHNOLOGY[70]	*[68]|mechanism[70]	*[68]|CORS / Same-origin policy[70]	*[68]|*[70]	*[68]|*[70]	*[68]|*[70]	*[68]|http://dbpedia.org/resource/Cross-origin\_resource\_sharing[70]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-8	1883-1889	Policy	Policy	NNP	PROPN	ERROR\_MESSAGE[68]|TECHNOLOGY[70]	*[68]|mechanism[70]	*[68]|CORS / Same-origin policy[70]	*[68]|*[70]	*[68]|*[70]	*[68]|*[70]	*[68]|http://dbpedia.org/resource/Cross-origin\_resource\_sharing[70]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-9	1890-1899	disallows	disallow	VBZ	VERB	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-10	1900-1907	reading	read	VBG	VERB	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-11	1908-1911	the	the	DT	DET	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-12	1912-1918	remote	remote	JJ	ADJ	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-13	1919-1927	resource	resource	NN	NOUN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-14	1928-1930	at	at	IN	ADP	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-15	1931-1982	https://www.paypal.com/xoplatform/logger/api/logger	https://www.paypal.com/xoplatform/logger/api/logger	ADD	X	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+43-16	1982-1983	.	.	.	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+
+#Text=(Reason: CORS request did not succeed).
+44-1	1984-1985	(	(	(	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-2	1985-1991	Reason	reason	NN	NOUN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-3	1991-1992	:	:	:	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-4	1993-1997	CORS	CORS	NNP	PROPN	ERROR\_MESSAGE[68]|TECHNOLOGY[71]	*[68]|mechanism[71]	*[68]|CORS / Same-origin policy[71]	*[68]|*[71]	*[68]|*[71]	*[68]|*[71]	*[68]|http://dbpedia.org/resource/Cross-origin\_resource\_sharing[71]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-5	1998-2005	request	request	VBP	VERB	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-6	2006-2009	did	do	VBD	AUX	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-7	2010-2013	not	not	RB	PART	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-8	2014-2021	succeed	succeed	VB	VERB	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-9	2021-2022	)	)	)	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+44-10	2022-2023	.	.	.	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+
+#Text=Status code: (null).
+45-1	2024-2030	Status	Status	NNP	PROPN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+45-2	2031-2035	code	code	NN	NOUN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+45-3	2035-2036	:	:	:	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+45-4	2037-2038	(	(	(	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+45-5	2038-2042	null	null	NN	NOUN	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+45-6	2042-2043	)	)	)	PUNCT	ERROR\_MESSAGE[68]	*[68]	*[68]	*[68]	*[68]	*[68]	*[68]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+45-7	2043-2044	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ACTUAL[33]	_	_
+
+#Text=Expected results:
+46-1	2046-2054	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[34]	_	_
+46-2	2055-2062	results	result	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[34]	_	_
+46-3	2062-2063	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[34]	_	_
+
+#Text=I think a window or new paypal page should appear so I can give you my money.
+47-1	2065-2066	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-2	2067-2072	think	think	VBP	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-3	2073-2074	a	a	DT	DET	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-4	2075-2081	window	window	NN	NOUN	UI\_ELEMENT[72]	dialog[72]	*[72]	*[72]	*[72]	*[72]	*[72]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-5	2082-2084	or	or	CC	CCONJ	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-6	2085-2088	new	new	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-7	2089-2095	paypal	paypal	NNP	PROPN	PRODUCT[73]	service[73]	PayPal[73]	*[73]	*[73]	*[73]	http://dbpedia.org/resource/PayPal[73]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-8	2096-2100	page	page	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-9	2101-2107	should	should	MD	AUX	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-10	2108-2114	appear	appear	VB	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-11	2115-2117	so	so	IN	ADP	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-12	2118-2119	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-13	2120-2123	can	can	MD	AUX	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-14	2124-2128	give	give	VB	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-15	2129-2132	you	you	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-16	2133-2135	my	my	PRP$	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-17	2136-2141	money	money	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+47-18	2141-2142	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	EXPECTED[35]	_	_
+
+#Text=Using FireFox version 107.0 (64-bit) Windows 10.
+48-1	2144-2149	Using	use	VBG	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-2	2150-2157	FireFox	FireFox	NNP	PROPN	PRODUCT[74]	application[74]	Firefox[74]	*[74]	*[74]	*[74]	http://dbpedia.org/resource/Firefox[74]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	VERSION\_OF	48-4[75_74]
+48-3	2158-2165	version	version	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-4	2166-2171	107.0	107.0	CD	NUM	ENV[75]	app\_version[75]	Firefox 107.0 (64-bit)[75]	yes[75]	*[75]	*[75]	*[75]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-5	2172-2173	(	(	(	PUNCT	ENV[75]	app\_version[75]	Firefox 107.0 (64-bit)[75]	yes[75]	*[75]	*[75]	*[75]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-6	2173-2179	64-bit	64-bit	CD	NUM	ENV[75]	app\_version[75]	Firefox 107.0 (64-bit)[75]	yes[75]	*[75]	*[75]	*[75]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-7	2179-2180	)	)	)	PUNCT	ENV[75]	app\_version[75]	Firefox 107.0 (64-bit)[75]	yes[75]	*[75]	*[75]	*[75]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-8	2181-2188	Windows	Windows	NNP	PROPN	ENV[76]	os[76]	Windows 10[76]	yes[76]	*[76]	*[76]	http://dbpedia.org/resource/Microsoft\_Windows[76]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-9	2189-2191	10	10	CD	NUM	ENV[76]	os[76]	Windows 10[76]	yes[76]	*[76]	*[76]	http://dbpedia.org/resource/Microsoft\_Windows[76]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+48-10	2191-2192	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+
+#Text=I also tried IE and Chrome.
+49-1	2194-2195	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+49-2	2196-2200	also	also	RB	ADV	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+49-3	2201-2206	tried	try	VBD	VERB	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+49-4	2207-2209	IE	IE	NNP	PROPN	PRODUCT[77]	application[77]	*[77]	*[77]	*[77]	*[77]	*[77]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+49-5	2210-2213	and	and	CC	CCONJ	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+49-6	2214-2220	Chrome	Chrome	NNP	PROPN	PRODUCT[78]	application[78]	*[78]	*[78]	*[78]	*[78]	*[78]	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_
+49-7	2220-2221	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1803720[3]	bug[3]	payment[3]	Billing[3]	Major[3]	low[3]	ENVIRONMENT[36]	_	_

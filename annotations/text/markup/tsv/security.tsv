@@ -1,0 +1,451 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=webanno.custom.BugEntity|label|kind|normalized|affected|polarity|source|kb_uri
+#T_SP=webanno.custom.BugReport|report_id|ticket_type|category|component|severity|confidence
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=CVE-2021-44521: Apache Cassandra: Remote code execution for scripted UDFs
+1-1	0-14	CVE-2021-44521	CVE-2021-44521	NNP	PROPN	ERROR\_CODE[28]	cve[28]	CVE-2021-44521[28]	*[28]	*[28]	*[28]	*[28]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-2	14-15	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-3	16-22	Apache	Apache	NNP	PROPN	PRODUCT[29]	application[29]	Apache Cassandra[29]	*[29]	*[29]	*[29]	http://dbpedia.org/resource/Apache\_Cassandra[29]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	SYMPTOM\_OF	1-6[30_29]
+1-4	23-32	Cassandra	Cassandra	NNP	PROPN	PRODUCT[29]	application[29]	Apache Cassandra[29]	*[29]	*[29]	*[29]	http://dbpedia.org/resource/Apache\_Cassandra[29]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-5	32-33	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-6	34-40	Remote	remote	JJ	ADJ	SYMPTOM[30]	vulnerability[30]	*[30]	*[30]	observed[30]	*[30]	*[30]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-7	41-45	code	code	NN	NOUN	SYMPTOM[30]	vulnerability[30]	*[30]	*[30]	observed[30]	*[30]	*[30]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-8	46-55	execution	execution	NN	NOUN	SYMPTOM[30]	vulnerability[30]	*[30]	*[30]	observed[30]	*[30]	*[30]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-9	56-59	for	for	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-10	60-68	scripted	scripted	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+1-11	69-73	UDFs	UDFs	NNP	PROPN	TECHNOLOGY[31]	mechanism[31]	User-defined function[31]	*[31]	*[31]	*[31]	http://dbpedia.org/resource/User-defined\_function[31]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	TITLE[5]	_	_
+
+#Text=When running Apache Cassandra with the following configuration:
+2-1	75-79	When	when	WRB	ADV	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-2	80-87	running	run	VBG	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-3	88-94	Apache	Apache	NNP	PROPN	PRODUCT[32]	application[32]	Apache Cassandra[32]	*[32]	*[32]	*[32]	http://dbpedia.org/resource/Apache\_Cassandra[32]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-4	95-104	Cassandra	Cassandra	NNP	PROPN	PRODUCT[32]	application[32]	Apache Cassandra[32]	*[32]	*[32]	*[32]	http://dbpedia.org/resource/Apache\_Cassandra[32]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-5	105-109	with	with	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-6	110-113	the	the	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-7	114-123	following	following	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-8	124-137	configuration	configuration	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+2-9	137-138	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[6]	_	_
+
+#Text=enable_user_defined_functions: true
+3-1	140-169	enable_user_defined_functions	enable\_user\_defined\_functions	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+3-2	169-170	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+3-3	171-175	true	true	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+
+#Text=enable_scripted_user_defined_functions: true
+4-1	176-214	enable_scripted_user_defined_functions	enable\_scripted\_user\_defined\_functions	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+4-2	214-215	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+4-3	216-220	true	true	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+
+#Text=enable_user_defined_functions_threads: false
+5-1	221-258	enable_user_defined_functions_threads	enable\_user\_defined\_functions\_threads	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+5-2	258-259	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+5-3	260-265	false	false	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	CODE[7]	_	_
+
+#Text=it is possible for an attacker to execute arbitrary code on the host.
+6-1	268-270	it	it	PRP	PRON	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-2	271-273	is	be	VBZ	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-3	274-282	possible	possible	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-4	283-286	for	for	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-5	287-289	an	an	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-6	290-298	attacker	attacker	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-7	299-301	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-8	302-309	execute	execute	VB	VERB	SYMPTOM[33]	vulnerability[33]	*[33]	*[33]	hypothetical[33]	*[33]	*[33]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-9	310-319	arbitrary	arbitrary	JJ	ADJ	SYMPTOM[33]	vulnerability[33]	*[33]	*[33]	hypothetical[33]	*[33]	*[33]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-10	320-324	code	code	NN	NOUN	SYMPTOM[33]	vulnerability[33]	*[33]	*[33]	hypothetical[33]	*[33]	*[33]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-11	325-327	on	on	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-12	328-331	the	the	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-13	332-336	host	host	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+6-14	336-337	.	.	.	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+
+#Text=The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this.
+7-1	338-341	The	the	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-2	342-350	attacker	attacker	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-3	351-356	would	would	MD	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-4	357-361	need	need	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-5	362-364	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-6	365-369	have	have	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-7	370-376	enough	enough	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-8	377-388	permissions	permission	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-9	389-391	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-10	392-398	create	create	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-11	399-403	user	user	NN	NOUN	TECHNOLOGY[34]	mechanism[34]	User-defined function[34]	*[34]	*[34]	*[34]	http://dbpedia.org/resource/User-defined\_function[34]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	CAUSED\_BY	6-8[33_34]
+7-12	404-411	defined	defined	JJ	ADJ	TECHNOLOGY[34]	mechanism[34]	User-defined function[34]	*[34]	*[34]	*[34]	http://dbpedia.org/resource/User-defined\_function[34]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-13	412-421	functions	function	NNS	NOUN	TECHNOLOGY[34]	mechanism[34]	User-defined function[34]	*[34]	*[34]	*[34]	http://dbpedia.org/resource/User-defined\_function[34]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-14	422-424	in	in	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-15	425-428	the	the	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-16	429-436	cluster	cluster	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-17	437-439	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-18	440-442	be	be	VB	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-19	443-447	able	able	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-20	448-450	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-21	451-458	exploit	exploit	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-22	459-463	this	this	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+7-23	463-464	.	.	.	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+
+#Text=Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.
+8-1	465-469	Note	note	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-2	470-474	that	that	IN	SCONJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-3	475-479	this	this	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-4	480-493	configuration	configuration	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-5	494-496	is	be	VBZ	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-6	497-507	documented	document	VBN	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-7	508-510	as	as	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-8	511-517	unsafe	unsafe	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-9	517-518	,	,	,	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-10	519-522	and	and	CC	CCONJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-11	523-527	will	will	MD	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-12	528-536	continue	continue	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-13	537-539	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-14	540-542	be	be	VB	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-15	543-553	considered	consider	VBN	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-16	554-560	unsafe	unsafe	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-17	561-566	after	after	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-18	567-571	this	this	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-19	572-575	CVE	CVE	NNP	PROPN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+8-20	575-576	.	.	.	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[8]	_	_
+
+#Text=This issue is being tracked as CASSANDRA-17352
+9-1	578-582	This	this	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+9-2	583-588	issue	issue	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+9-3	589-591	is	be	VBZ	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+9-4	592-597	being	be	VBG	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+9-5	598-605	tracked	track	VBN	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+9-6	606-608	as	as	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+9-7	609-624	CASSANDRA-17352	CASSANDRA-17352	NNP	PROPN	ISSUE\_REF[35]	*[35]	CASSANDRA-17352[35]	*[35]	*[35]	*[35]	*[35]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	DESCRIPTION[9]	_	_
+
+#Text=Mitigation:
+10-1	626-636	Mitigation	mitigation	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[10]	_	_
+10-2	636-637	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[10]	_	_
+
+#Text=Set `enable_user_defined_functions_threads: true` (this is default)
+#Text=or
+11-1	639-642	Set	Set	NNP	PROPN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-2	643-644	`	`	``	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-3	644-681	enable_user_defined_functions_threads	enable\_user\_defined\_functions\_threads	NNS	NOUN	CODE\_LOCATION[36]	config[36]	*[36]	*[36]	*[36]	*[36]	*[36]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-4	681-682	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-5	683-687	true	true	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-6	687-688	`	`	``	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-7	689-690	(	(	(	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-8	690-694	this	this	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-9	695-697	is	be	VBZ	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-10	698-705	default	default	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-11	705-706	)	)	)	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+11-12	707-709	or	or	CC	CCONJ	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+
+#Text=3.0 users should upgrade to 3.0.26
+12-1	710-713	3.0	3.0	CD	NUM	ENV[37]	app\_version[37]	Apache Cassandra 3.0[37]	yes[37]	*[37]	*[37]	*[37]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	OBSERVED\_IN	1-1[28_37]
+12-2	714-719	users	user	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+12-3	720-726	should	should	MD	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+12-4	727-734	upgrade	upgrade	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+12-5	735-737	to	to	TO	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+12-6	738-744	3.0.26	3.0.26	CD	NUM	ENV[38]	app\_version[38]	Apache Cassandra 3.0.26[38]	no[38]	*[38]	*[38]	*[38]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+
+#Text=3.11 users should upgrade to 3.11.12
+13-1	745-749	3.11	3.11	CD	NUM	ENV[39]	app\_version[39]	Apache Cassandra 3.11[39]	yes[39]	*[39]	*[39]	*[39]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	OBSERVED\_IN	1-1[28_39]
+13-2	750-755	users	user	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+13-3	756-762	should	should	MD	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+13-4	763-770	upgrade	upgrade	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+13-5	771-773	to	to	TO	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+13-6	774-781	3.11.12	3.11.12	CD	NUM	ENV[40]	app\_version[40]	Apache Cassandra 3.11.12[40]	no[40]	*[40]	*[40]	*[40]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+
+#Text=4.0 users should upgrade to 4.0.2
+14-1	782-785	4.0	4.0	CD	NUM	ENV[41]	app\_version[41]	Apache Cassandra 4.0[41]	yes[41]	*[41]	*[41]	*[41]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	OBSERVED\_IN	1-1[28_41]
+14-2	786-791	users	user	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+14-3	792-798	should	should	MD	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+14-4	799-806	upgrade	upgrade	VB	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+14-5	807-809	to	to	TO	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+14-6	810-815	4.0.2	4.0.2	CD	NUM	ENV[42]	app\_version[42]	Apache Cassandra 4.0.2[42]	no[42]	*[42]	*[42]	*[42]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[11]	_	_
+
+#Text=Credit:
+15-1	817-823	Credit	credit	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[12]	_	_
+15-2	823-824	:	:	:	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[12]	_	_
+
+#Text=This issue was discovered by Omer Kaspi of the JFrog Security vulnerability research team.
+16-1	826-830	This	this	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-2	831-836	issue	issue	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-3	837-840	was	be	VBD	AUX	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-4	841-851	discovered	discover	VBN	VERB	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-5	852-854	by	by	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-6	855-859	Omer	Omer	NNP	PROPN	PII[43]	person\_name[43]	*[43]	*[43]	*[43]	*[43]	*[43]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-7	860-865	Kaspi	Kaspi	NNP	PROPN	PII[43]	person\_name[43]	*[43]	*[43]	*[43]	*[43]	*[43]	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-8	866-868	of	of	IN	ADP	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-9	869-872	the	the	DT	DET	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-10	873-878	JFrog	JFrog	NNP	PROPN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-11	879-887	Security	Security	NNP	PROPN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-12	888-901	vulnerability	vulnerability	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-13	902-910	research	research	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-14	911-915	team	team	NN	NOUN	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+16-15	915-916	.	.	.	PUNCT	_	_	_	_	_	_	_	cassandra-13426900[1]	bug[1]	security[1]	Database[1]	Blocker[1]	high[1]	NOTES[13]	_	_
+
+#Text=update NodeJS dependencies by handle security issues.
+17-1	918-924	update	update	JJ	ADJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+17-2	925-931	NodeJS	NodeJS	NNP	PROPN	PRODUCT[44]	tool[44]	Node.js[44]	*[44]	*[44]	*[44]	http://dbpedia.org/resource/Node.js[44]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	SYMPTOM\_OF	17-6[45_44]
+17-3	932-944	dependencies	dependency	NNS	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+17-4	945-947	by	by	IN	ADP	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+17-5	948-954	handle	handle	JJ	ADJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+17-6	955-963	security	security	NN	NOUN	SYMPTOM[45]	vulnerability[45]	*[45]	*[45]	observed[45]	*[45]	*[45]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+17-7	964-970	issues	issue	NNS	NOUN	SYMPTOM[45]	vulnerability[45]	*[45]	*[45]	observed[45]	*[45]	*[45]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+17-8	970-971	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	TITLE[14]	_	_
+
+#Text=npm audit shows issues with browser/components/newtab.
+18-1	973-976	npm	npm	NNP	PROPN	PRODUCT[46]	tool[46]	npm[46]	*[46]	*[46]	*[46]	http://dbpedia.org/resource/Npm[46]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-2	977-982	audit	audit	NN	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-3	983-988	shows	show	NNS	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-4	989-995	issues	issue	NNS	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-5	996-1000	with	with	IN	ADP	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-6	1001-1008	browser	browser	NN	NOUN	CODE\_LOCATION[47]	module[47]	*[47]	*[47]	*[47]	*[47]	*[47]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-7	1008-1009	/	/	SYM	SYM	CODE\_LOCATION[47]	module[47]	*[47]	*[47]	*[47]	*[47]	*[47]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-8	1009-1019	components	component	NNS	NOUN	CODE\_LOCATION[47]	module[47]	*[47]	*[47]	*[47]	*[47]	*[47]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-9	1019-1020	/	/	SYM	SYM	CODE\_LOCATION[47]	module[47]	*[47]	*[47]	*[47]	*[47]	*[47]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-10	1020-1026	newtab	newtab	NNS	NOUN	CODE\_LOCATION[47]	module[47]	*[47]	*[47]	*[47]	*[47]	*[47]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+18-11	1026-1027	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+
+#Text=Those need fixing.
+19-1	1029-1034	Those	those	DT	DET	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+19-2	1035-1039	need	need	JJ	ADJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+19-3	1040-1046	fixing	fixing	NN	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+19-4	1046-1047	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+
+#Text=Many will be simple enough to fix using 'npm audit fix'.
+20-1	1049-1053	Many	many	JJ	ADJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-2	1054-1058	will	will	MD	AUX	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-3	1059-1061	be	be	VB	AUX	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-4	1062-1068	simple	simple	JJ	ADJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-5	1069-1075	enough	enough	RB	ADV	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-6	1076-1078	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-7	1079-1082	fix	fix	VB	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-8	1083-1088	using	use	VBG	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-9	1089-1090	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-10	1090-1093	npm	npm	NNP	PROPN	PRODUCT[48]	tool[48]	npm[48]	*[48]	*[48]	*[48]	http://dbpedia.org/resource/Npm[48]	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-11	1094-1099	audit	audit	NN	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-12	1100-1103	fix	fix	NN	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-13	1103-1104	'	'	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+20-14	1104-1105	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+
+#Text=That should be landed first and done here.
+21-1	1106-1110	That	that	DT	DET	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-2	1111-1117	should	should	MD	AUX	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-3	1118-1120	be	be	VB	AUX	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-4	1121-1127	landed	land	VBN	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-5	1128-1133	first	first	RB	ADV	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-6	1134-1137	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-7	1138-1142	done	do	VBN	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-8	1143-1147	here	here	RB	ADV	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+21-9	1147-1148	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[15]	_	_
+
+#Text=The others can be done here or spun off to separate bugs depending on amount of work.
+22-1	1150-1153	The	the	DT	DET	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-2	1154-1160	others	others	NNS	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-3	1161-1164	can	can	MD	AUX	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-4	1165-1167	be	be	VB	AUX	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-5	1168-1172	done	do	VBN	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-6	1173-1177	here	here	RB	ADV	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-7	1178-1180	or	or	CC	CCONJ	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-8	1181-1185	spun	spin	VB	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-9	1186-1189	off	off	RP	ADP	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-10	1190-1192	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-11	1193-1201	separate	separate	VB	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-12	1202-1206	bugs	bug	NNS	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-13	1207-1216	depending	depend	VBG	VERB	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-14	1217-1219	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-15	1220-1226	amount	amount	NN	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-16	1227-1229	of	of	IN	ADP	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-17	1230-1234	work	work	NN	NOUN	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+22-18	1234-1235	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1668045[2]	bug[2]	security[2]	Frontend[2]	Major[2]	low[2]	DESCRIPTION[16]	_	_
+
+#Text=Improve nodetool enable{audit,fullquery}log, CVE-2023-30601
+23-1	1237-1244	Improve	Improve	NNP	PROPN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-2	1245-1253	nodetool	nodetool	NN	NOUN	PRODUCT[49]	tool[49]	Cassandra nodetool[49]	*[49]	*[49]	*[49]	*[49]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-3	1254-1260	enable	enable	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-4	1260-1261	{	{	(	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-5	1261-1266	audit	audit	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-6	1266-1267	,	,	,	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-7	1267-1276	fullquery	fullquery	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-8	1276-1277	}	}	)	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-9	1277-1280	log	log	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-10	1280-1281	,	,	,	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+23-11	1282-1296	CVE-2023-30601	CVE-2023-30601	NNP	PROPN	ERROR\_CODE[50]	cve[50]	CVE-2023-30601[50]	*[50]	*[50]	*[50]	*[50]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	TITLE[17]	_	_
+
+#Text=The {{--archive-command}} parameter to {code}nodetool enable{audit,fullquery}log{code} allows an attacker to execute arbitrary commands as the user running cassandra.
+24-1	1298-1301	The	the	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-2	1302-1303	{	{	(	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-3	1303-1304	{	{	(	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-4	1304-1305	-	-	:	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-5	1305-1306	-	-	:	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-6	1306-1321	archive-command	archive-command	NN	NOUN	CODE\_LOCATION[51]	config[51]	--archive-command[51]	*[51]	*[51]	*[51]	*[51]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	CAUSED\_BY	24-29[52_51]
+24-7	1321-1322	}	}	)	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-8	1322-1323	}	}	)	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-9	1324-1333	parameter	parameter	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-10	1334-1336	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-11	1337-1338	{	{	(	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-12	1338-1342	code	code	VB	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-13	1342-1343	}	}	)	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-14	1343-1351	nodetool	nodetool	RB	ADV	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-15	1352-1358	enable	enable	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-16	1358-1359	{	{	(	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-17	1359-1364	audit	audit	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-18	1364-1365	,	,	,	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-19	1365-1374	fullquery	fullquery	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-20	1374-1375	}	}	)	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-21	1375-1378	log	log	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-22	1378-1379	{	{	(	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-23	1379-1383	code	code	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-24	1383-1384	}	}	)	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-25	1385-1391	allows	allow	VBZ	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-26	1392-1394	an	an	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-27	1395-1403	attacker	attacker	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-28	1404-1406	to	to	TO	PART	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-29	1407-1414	execute	execute	VB	VERB	SYMPTOM[52]	vulnerability[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-30	1415-1424	arbitrary	arbitrary	JJ	ADJ	SYMPTOM[52]	vulnerability[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-31	1425-1433	commands	command	NNS	NOUN	SYMPTOM[52]	vulnerability[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-32	1434-1436	as	as	IN	ADP	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-33	1437-1440	the	the	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-34	1441-1445	user	user	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-35	1446-1453	running	run	VBG	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+24-36	1454-1463	cassandra	cassandra	NNP	PROPN	PRODUCT[53]	application[53]	Apache Cassandra[53]	*[53]	*[53]	*[53]	http://dbpedia.org/resource/Apache\_Cassandra[53]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	SYMPTOM\_OF	24-29[52_53]
+24-37	1463-1464	.	.	.	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[18]	_	_
+
+#Text=Patch adds a configuration option which disallows using this parameter - for any existing users of --archive-command this can be re-enabled
+25-1	1466-1471	Patch	Patch	NNP	PROPN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-2	1472-1476	adds	add	VBZ	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-3	1477-1478	a	a	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-4	1479-1492	configuration	configuration	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-5	1493-1499	option	option	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-6	1500-1505	which	which	WDT	PRON	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-7	1506-1515	disallows	disallow	VBZ	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-8	1516-1521	using	use	VBG	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-9	1522-1526	this	this	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-10	1527-1536	parameter	parameter	NN	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-11	1537-1538	-	-	:	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-12	1539-1542	for	for	IN	ADP	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-13	1543-1546	any	any	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-14	1547-1555	existing	exist	VBG	VERB	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-15	1556-1561	users	user	NNS	NOUN	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-16	1562-1564	of	of	IN	ADP	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-17	1565-1566	-	-	:	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-18	1566-1567	-	-	:	PUNCT	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-19	1567-1582	archive-command	archive-command	NN	NOUN	CODE\_LOCATION[54]	config[54]	--archive-command[54]	*[54]	*[54]	*[54]	*[54]	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-20	1583-1587	this	this	DT	DET	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-21	1588-1591	can	can	MD	AUX	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-22	1592-1594	be	be	VB	AUX	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+25-23	1595-1605	re-enabled	re-enabled	JJ	ADJ	_	_	_	_	_	_	_	cassandra-13537599[3]	bug[3]	security[3]	Database[3]	Blocker[3]	high[3]	DESCRIPTION[19]	_	_
+
+#Text='about:certificate' should not display internal "distrust" certs
+26-1	1607-1608	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-2	1608-1625	about:certificate	about:certificate	ADD	X	UI\_ELEMENT[55]	page[55]	*[55]	*[55]	*[55]	*[55]	*[55]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-3	1625-1626	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-4	1627-1633	should	should	MD	AUX	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-5	1634-1637	not	not	RB	PART	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-6	1638-1645	display	display	VB	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-7	1646-1654	internal	internal	JJ	ADJ	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-8	1655-1656	"	"	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-9	1656-1664	distrust	distrust	NN	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-10	1664-1665	"	"	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+26-11	1666-1671	certs	certs	NNP	PROPN	TECHNOLOGY[56]	mechanism[56]	Public key certificate[56]	*[56]	*[56]	*[56]	http://dbpedia.org/resource/Public\_key\_certificate[56]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	TITLE[20]	_	_
+
+#Text=User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0
+27-1	1673-1677	User	User	NNP	PROPN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-2	1678-1683	Agent	Agent	NNP	PROPN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-3	1683-1684	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-4	1685-1696	Mozilla/5.0	Mozilla/5.0	NNP	PROPN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-5	1697-1698	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-6	1698-1701	X11	X11	NNP	PROPN	ENV[57]	os[57]	X11[57]	yes[57]	*[57]	user\_agent[57]	http://dbpedia.org/resource/X\_Window\_System[57]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-7	1701-1702	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-8	1703-1709	Fedora	Fedora	NNP	PROPN	ENV[58]	os[58]	Fedora Linux[58]	yes[58]	*[58]	user\_agent[58]	http://dbpedia.org/resource/Fedora\_Linux[58]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-9	1709-1710	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-10	1711-1716	Linux	Linux	NNP	PROPN	ENV[59]	os[59]	Linux x86\_64[59]	yes[59]	*[59]	user\_agent[59]	http://dbpedia.org/resource/Linux[59]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-11	1717-1723	x86_64	x86\_64	NNP	PROPN	ENV[59]	os[59]	Linux x86\_64[59]	yes[59]	*[59]	user\_agent[59]	http://dbpedia.org/resource/Linux[59]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-12	1723-1724	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-13	1725-1727	rv	rv	NN	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-14	1727-1728	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-15	1728-1732	93.0	93.0	CD	NUM	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-16	1732-1733	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-17	1734-1748	Gecko/20100101	Gecko/20100101	NNP	PROPN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+27-18	1749-1761	Firefox/93.0	Firefox/93.0	NNP	PROPN	ENV[60]	browser[60]	Firefox/93.0[60]	yes[60]	*[60]	user\_agent[60]	*[60]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ENVIRONMENT[21]	_	_
+
+#Text=Steps to reproduce:
+28-1	1763-1768	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[22]	_	_
+28-2	1769-1771	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[22]	_	_
+28-3	1772-1781	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[22]	_	_
+28-4	1781-1782	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[22]	_	_
+
+#Text=Visit the pages associated to 'about:certificate' and 'about:preferences#privacy', then inspect their Servers tab in each.
+29-1	1784-1789	Visit	visit	VB	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-2	1790-1793	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-3	1794-1799	pages	page	NNS	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-4	1800-1810	associated	associate	VBN	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-5	1811-1813	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-6	1814-1815	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-7	1815-1832	about:certificate	about:certificate	ADD	X	UI\_ELEMENT[61]	page[61]	*[61]	*[61]	*[61]	*[61]	*[61]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-8	1832-1833	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-9	1834-1837	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-10	1838-1839	'	'	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-11	1839-1864	about:preferences#privacy	about:preferences#privacy	ADD	X	UI\_ELEMENT[62]	page[62]	*[62]	*[62]	*[62]	*[62]	*[62]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-12	1864-1865	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-13	1865-1866	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-14	1867-1871	then	then	RB	ADV	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-15	1872-1879	inspect	inspect	VB	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-16	1880-1885	their	their	PRP$	PRON	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-17	1886-1893	Servers	server	NNS	NOUN	UI\_ELEMENT[63]	page[63]	*[63]	*[63]	*[63]	*[63]	*[63]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-18	1894-1897	tab	tab	VBP	VERB	UI\_ELEMENT[63]	page[63]	*[63]	*[63]	*[63]	*[63]	*[63]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-19	1898-1900	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-20	1901-1905	each	each	DT	DET	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+29-21	1905-1906	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	STEPS[23]	_	_
+
+#Text=Actual results:
+30-1	1908-1914	Actual	actual	JJ	ADJ	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[24]	_	_
+30-2	1915-1922	results	result	NNS	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[24]	_	_
+30-3	1922-1923	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[24]	_	_
+
+#Text=The names present in the list that is reported In page associated to 'about:certificate', are missing from the list reported in page associated to 'about:preferences#privacy'.
+31-1	1925-1928	The	the	DT	DET	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-2	1929-1934	names	name	NNS	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-3	1935-1942	present	present	JJ	ADJ	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-4	1943-1945	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-5	1946-1949	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-6	1950-1954	list	list	NN	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-7	1955-1959	that	that	WDT	PRON	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-8	1960-1962	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-9	1963-1971	reported	report	VBN	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-10	1972-1974	In	in	IN	ADP	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-11	1975-1979	page	page	NN	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-12	1980-1990	associated	associate	VBN	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-13	1991-1993	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-14	1994-1995	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-15	1995-2012	about:certificate	about:certificate	ADD	X	UI\_ELEMENT[64]	page[64]	*[64]	*[64]	*[64]	*[64]	*[64]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-16	2012-2013	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-17	2013-2014	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-18	2015-2018	are	be	VBP	AUX	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-19	2019-2026	missing	miss	VBG	VERB	SYMPTOM[65]	wrong\_output[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-20	2027-2031	from	from	IN	ADP	SYMPTOM[65]	wrong\_output[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-21	2032-2035	the	the	DT	DET	SYMPTOM[65]	wrong\_output[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-22	2036-2040	list	list	NN	NOUN	SYMPTOM[65]	wrong\_output[65]	*[65]	*[65]	observed[65]	*[65]	*[65]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-23	2041-2049	reported	report	VBD	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-24	2050-2052	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-25	2053-2057	page	page	NN	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-26	2058-2068	associated	associate	VBN	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-27	2069-2071	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-28	2072-2073	'	'	''	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-29	2073-2098	about:preferences#privacy	about:preferences#privacy	ADD	X	UI\_ELEMENT[66]	page[66]	*[66]	*[66]	*[66]	*[66]	*[66]	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	SYMPTOM\_OF	31-19[65_66]
+31-30	2098-2099	'	'	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+31-31	2099-2100	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	ACTUAL[25]	_	_
+
+#Text=Expected results:
+32-1	2102-2110	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[26]	_	_
+32-2	2111-2118	results	result	NNS	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[26]	_	_
+32-3	2118-2119	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[26]	_	_
+
+#Text=Lists to be synchronized and therefore identical.
+33-1	2121-2126	Lists	list	NNS	NOUN	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-2	2127-2129	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-3	2130-2132	be	be	VB	AUX	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-4	2133-2145	synchronized	synchronize	VBN	VERB	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-5	2146-2149	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-6	2150-2159	therefore	therefore	RB	ADV	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-7	2160-2169	identical	identical	JJ	ADJ	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_
+33-8	2169-2170	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1737574[4]	bug[4]	security[4]	Frontend[4]	Minor[4]	high[4]	EXPECTED[27]	_	_

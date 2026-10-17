@@ -1,0 +1,435 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=webanno.custom.BugEntity|affected|kb_uri|kind|label|normalized|polarity|source
+#T_SP=webanno.custom.BugReport|category|component|confidence|report_id|severity|ticket_type
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=CardDAV does not fetch address book from Google Workspace and fails to use existing OAuth2 credentials
+1-1	0-7	CardDAV	NNP	PROPN	CardDAV	*	http://dbpedia.org/resource/CardDAV	protocol	TECHNOLOGY	CardDAV	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	SYMPTOM\_OF|SYMPTOM\_OF	1-2[1_0]|1-11	
+1-2	8-12	does	VBZ	AUX	do	*[1]	*[1]	failure[1]	SYMPTOM[1]	*[1]	observed[1]	*[1]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-3	13-16	not	RB	PART	not	*[1]	*[1]	failure[1]	SYMPTOM[1]	*[1]	observed[1]	*[1]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-4	17-22	fetch	VB	VERB	fetch	*[1]	*[1]	failure[1]	SYMPTOM[1]	*[1]	observed[1]	*[1]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-5	23-30	address	NN	NOUN	address	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-6	31-35	book	NN	NOUN	book	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-7	36-40	from	IN	ADP	from	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-8	41-47	Google	NNP	PROPN	Google	*[2]	http://dbpedia.org/resource/Google\_Workspace[2]	service[2]	PRODUCT[2]	Google Workspace[2]	*[2]	*[2]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-9	48-57	Workspace	NNP	PROPN	Workspace	*[2]	http://dbpedia.org/resource/Google\_Workspace[2]	service[2]	PRODUCT[2]	Google Workspace[2]	*[2]	*[2]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-10	58-61	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-11	62-67	fails	VBZ	VERB	fail	*	*	failure	SYMPTOM	*	observed	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-12	68-70	to	TO	PART	to	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-13	71-74	use	VB	VERB	use	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-14	75-83	existing	VBG	VERB	exist	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+1-15	84-90	OAuth2	NNP	PROPN	OAuth2	*	http://dbpedia.org/resource/OAuth	protocol	TECHNOLOGY	OAuth 2.0	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	CAUSED\_BY	1-11	
+1-16	91-102	credentials	NNS	NOUN	credential	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	TITLE[19]	_	_	
+
+#Text=User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0
+2-1	104-108	User	NNP	PROPN	User	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-2	109-114	Agent	NNP	PROPN	Agent	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-3	114-115	:	:	PUNCT	:	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-4	116-127	Mozilla/5.0	NNP	PROPN	Mozilla/5.0	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-5	128-129	(	(	PUNCT	(	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-6	129-132	X11	NNP	PROPN	X11	yes	http://dbpedia.org/resource/X\_Window\_System	os	ENV	X11	*	user\_agent	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-7	132-133	;	:	PUNCT	\;	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-8	134-139	Linux	NNP	PROPN	Linux	yes[3]	http://dbpedia.org/resource/Linux[3]	os[3]	ENV[3]	Linux x86\_64[3]	*[3]	user\_agent[3]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-9	140-146	x86_64	NNP	PROPN	x86\_64	yes[3]	http://dbpedia.org/resource/Linux[3]	os[3]	ENV[3]	Linux x86\_64[3]	*[3]	user\_agent[3]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-10	146-147	;	:	PUNCT	\;	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-11	148-150	rv	NN	NOUN	rv	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-12	150-151	:	:	PUNCT	:	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-13	151-156	109.0	CD	NUM	109.0	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-14	156-157	)	)	PUNCT	)	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-15	158-172	Gecko/20100101	NNP	PROPN	Gecko/20100101	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+2-16	173-186	Firefox/112.0	NNP	PROPN	Firefox/112.0	unknown	*	browser	ENV	Firefox/112.0	*	user\_agent	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ENVIRONMENT[20]	_	_	
+
+#Text=Steps to reproduce:
+3-1	188-193	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[21]	_	_	
+3-2	194-196	to	TO	PART	to	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[21]	_	_	
+3-3	197-206	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[21]	_	_	
+3-4	206-207	:	:	PUNCT	:	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[21]	_	_	
+
+#Text=1. Setup a new Google Workspace account using OAuth2.
+4-1	209-210	1	CD	NUM	1	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-2	210-211	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-3	212-217	Setup	VB	VERB	setup	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-4	218-219	a	DT	DET	a	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-5	220-223	new	JJ	ADJ	new	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-6	224-230	Google	NNP	PROPN	Google	*[4]	http://dbpedia.org/resource/Google\_Workspace[4]	service[4]	PRODUCT[4]	Google Workspace[4]	*[4]	*[4]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-7	231-240	Workspace	NNP	PROPN	Workspace	*[4]	http://dbpedia.org/resource/Google\_Workspace[4]	service[4]	PRODUCT[4]	Google Workspace[4]	*[4]	*[4]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-8	241-248	account	NN	NOUN	account	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-9	249-254	using	VBG	VERB	use	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-10	255-261	OAuth2	NNP	PROPN	OAuth2	*	http://dbpedia.org/resource/OAuth	protocol	TECHNOLOGY	OAuth 2.0	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+4-11	261-262	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+
+#Text=- Calendar and Addressbook permissions are sought by Thunderbird and granted by user
+5-1	267-268	-	:	PUNCT	-	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-2	269-277	Calendar	VB	VERB	calendar	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-3	278-281	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-4	282-293	Addressbook	NNP	PROPN	Addressbook	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-5	294-305	permissions	NNS	NOUN	permission	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-6	306-309	are	VBP	AUX	be	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-7	310-316	sought	VBN	VERB	seek	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-8	317-319	by	IN	ADP	by	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-9	320-331	Thunderbird	NNP	PROPN	Thunderbird	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-10	332-335	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-11	336-343	granted	VBN	VERB	grant	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-12	344-346	by	IN	ADP	by	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+5-13	347-351	user	NN	NOUN	user	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+
+#Text=- Address book is not auto discovered
+6-1	355-356	-	:	PUNCT	-	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+6-2	357-364	Address	VB	VERB	address	*[5]	*[5]	*[5]	FEATURE[5]	Thunderbird Address Book[5]	*[5]	*[5]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+6-3	365-369	book	NN	NOUN	book	*[5]	*[5]	*[5]	FEATURE[5]	Thunderbird Address Book[5]	*[5]	*[5]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+6-4	370-372	is	VBZ	AUX	be	*[6]	*[6]	failure[6]	SYMPTOM[6]	*[6]	observed[6]	*[6]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+6-5	373-376	not	RB	PART	not	*[6]	*[6]	failure[6]	SYMPTOM[6]	*[6]	observed[6]	*[6]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+6-6	377-381	auto	NN	NOUN	auto	*[6]	*[6]	failure[6]	SYMPTOM[6]	*[6]	observed[6]	*[6]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+6-7	382-392	discovered	VBD	VERB	discover	*[6]	*[6]	failure[6]	SYMPTOM[6]	*[6]	observed[6]	*[6]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+
+#Text=2. Add a CardDav address book manually using the Location format specified in [Google Developer docs](https://developers.google.com/people/carddav)  `https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default`
+7-1	393-394	2	CD	NUM	2	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-2	394-395	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-3	396-399	Add	VB	VERB	add	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-4	400-401	a	DT	DET	a	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-5	402-409	CardDav	NNP	PROPN	CardDav	*	http://dbpedia.org/resource/CardDAV	protocol	TECHNOLOGY	CardDAV	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-6	410-417	address	NN	NOUN	address	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-7	418-422	book	NN	NOUN	book	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-8	423-431	manually	RB	ADV	manually	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-9	432-437	using	VBG	VERB	use	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-10	438-441	the	DT	DET	the	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-11	442-450	Location	NNP	PROPN	Location	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-12	451-457	format	NN	NOUN	format	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-13	458-467	specified	VBN	VERB	specify	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-14	468-470	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-15	471-472	[	.	PUNCT	\[	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-16	472-478	Google	NNP	PROPN	Google	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-17	479-488	Developer	NNP	PROPN	Developer	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-18	489-493	docs	NN	NOUN	doc	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-19	493-494	]	.	PUNCT	\]	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-20	494-495	(	(	PUNCT	(	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-21	495-539	https://developers.google.com/people/carddav	ADD	X	https://developers.google.com/people/carddav	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-22	539-540	)	)	PUNCT	)	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-23	542-543	`	``	PUNCT	`	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-24	543-636	https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default	ADD	X	https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+7-25	636-637	`	``	PUNCT	`	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+
+#Text=3. OAuth2 Addressbook permissions sought again and approved
+8-1	639-640	3	LS	NUM	3	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-2	640-641	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-3	642-648	OAuth2	NNP	PROPN	OAuth2	*	http://dbpedia.org/resource/OAuth	protocol	TECHNOLOGY	OAuth 2.0	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-4	649-660	Addressbook	NNP	PROPN	Addressbook	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-5	661-672	permissions	NNS	NOUN	permission	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-6	673-679	sought	VBD	VERB	seek	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-7	680-685	again	RB	ADV	again	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-8	686-689	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+8-9	690-698	approved	VBD	VERB	approve	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+
+#Text=4. Address book seemingly added
+9-1	700-701	4	CD	NUM	4	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+9-2	701-702	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+9-3	703-710	Address	VB	VERB	address	*[7]	*[7]	*[7]	FEATURE[7]	Thunderbird Address Book[7]	*[7]	*[7]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	SYMPTOM\_OF	12-5[9_7]	
+9-4	711-715	book	NN	NOUN	book	*[7]	*[7]	*[7]	FEATURE[7]	Thunderbird Address Book[7]	*[7]	*[7]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+9-5	716-725	seemingly	RB	ADV	seemingly	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+9-6	726-731	added	VBD	VERB	add	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	STEPS[22]	_	_	
+
+#Text=Actual results:
+10-1	733-739	Actual	JJ	ADJ	actual	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[23]	_	_	
+10-2	740-747	results	NNS	NOUN	result	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[23]	_	_	
+10-3	747-748	:	:	PUNCT	:	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[23]	_	_	
+
+#Text=1. Address book does not use existing OAuth2 credentials (and there's no way to choose credentials from a drop down in case multiple OAuth2 accounts exist) that were fetched during email setup
+11-1	750-751	1	CD	NUM	1	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-2	751-752	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-3	753-760	Address	JJ	ADJ	address	*[8]	*[8]	*[8]	FEATURE[8]	Thunderbird Address Book[8]	*[8]	*[8]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-4	761-765	book	NN	NOUN	book	*[8]	*[8]	*[8]	FEATURE[8]	Thunderbird Address Book[8]	*[8]	*[8]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-5	766-770	does	VBZ	AUX	do	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-6	771-774	not	RB	PART	not	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-7	775-778	use	VB	VERB	use	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-8	779-787	existing	VBG	VERB	exist	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-9	788-794	OAuth2	NNP	PROPN	OAuth2	*	http://dbpedia.org/resource/OAuth	protocol	TECHNOLOGY	OAuth 2.0	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-10	795-806	credentials	NNS	NOUN	credential	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-11	807-808	(	(	PUNCT	(	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-12	808-811	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-13	812-817	there	EX	PRON	there	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-14	817-819	's	VBZ	AUX	be	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-15	820-822	no	DT	DET	no	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-16	823-826	way	NN	NOUN	way	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-17	827-829	to	TO	PART	to	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-18	830-836	choose	VB	VERB	choose	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-19	837-848	credentials	NNS	NOUN	credential	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-20	849-853	from	IN	ADP	from	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-21	854-855	a	DT	DET	a	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-22	856-860	drop	NN	NOUN	drop	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-23	861-865	down	RP	ADP	down	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-24	866-868	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-25	869-873	case	NN	NOUN	case	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-26	874-882	multiple	JJ	ADJ	multiple	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-27	883-889	OAuth2	NNP	PROPN	OAuth2	*	http://dbpedia.org/resource/OAuth	protocol	TECHNOLOGY	OAuth 2.0	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-28	890-898	accounts	NNS	NOUN	account	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-29	899-904	exist	VBP	VERB	exist	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-30	904-905	)	)	PUNCT	)	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-31	906-910	that	WDT	PRON	that	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-32	911-915	were	VBD	AUX	be	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-33	916-923	fetched	VBN	VERB	fetch	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-34	924-930	during	IN	ADP	during	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-35	931-936	email	JJ	ADJ	email	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+11-36	937-942	setup	NN	NOUN	setup	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+
+#Text=2. Address book does not display any contact information in the compose window.
+12-1	943-944	2	CD	NUM	2	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-2	944-945	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-3	946-953	Address	JJ	ADJ	address	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-4	954-958	book	NN	NOUN	book	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-5	959-963	does	VBZ	AUX	do	*[9]	*[9]	wrong\_output[9]	SYMPTOM[9]	*[9]	observed[9]	*[9]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-6	964-967	not	RB	PART	not	*[9]	*[9]	wrong\_output[9]	SYMPTOM[9]	*[9]	observed[9]	*[9]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-7	968-975	display	VB	VERB	display	*[9]	*[9]	wrong\_output[9]	SYMPTOM[9]	*[9]	observed[9]	*[9]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-8	976-979	any	DT	DET	any	*[9]	*[9]	wrong\_output[9]	SYMPTOM[9]	*[9]	observed[9]	*[9]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-9	980-987	contact	JJ	ADJ	contact	*[9]	*[9]	wrong\_output[9]	SYMPTOM[9]	*[9]	observed[9]	*[9]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-10	988-999	information	NN	NOUN	information	*[9]	*[9]	wrong\_output[9]	SYMPTOM[9]	*[9]	observed[9]	*[9]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-11	1000-1002	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-12	1003-1006	the	DT	DET	the	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-13	1007-1014	compose	NN	NOUN	compose	*[10]	*[10]	dialog[10]	UI\_ELEMENT[10]	*[10]	*[10]	*[10]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-14	1015-1021	window	NN	NOUN	window	*[10]	*[10]	dialog[10]	UI\_ELEMENT[10]	*[10]	*[10]	*[10]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+12-15	1021-1022	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+
+#Text=Searching in the compose window address book pane yields nothing
+13-1	1023-1032	Searching	VBG	VERB	search	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-2	1033-1035	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-3	1036-1039	the	DT	DET	the	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-4	1040-1047	compose	NN	NOUN	compose	*[11]	*[11]	dialog[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-5	1048-1054	window	NN	NOUN	window	*[11]	*[11]	dialog[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-6	1055-1062	address	NN	NOUN	address	*[12]	*[12]	other[12]	UI\_ELEMENT[12]	*[12]	*[12]	*[12]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	SYMPTOM\_OF	13-9[13_12]	
+13-7	1063-1067	book	NN	NOUN	book	*[12]	*[12]	other[12]	UI\_ELEMENT[12]	*[12]	*[12]	*[12]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-8	1068-1072	pane	NN	NOUN	pane	*[12]	*[12]	other[12]	UI\_ELEMENT[12]	*[12]	*[12]	*[12]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-9	1073-1079	yields	NNS	NOUN	yield	*[13]	*[13]	wrong\_output[13]	SYMPTOM[13]	*[13]	observed[13]	*[13]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+13-10	1080-1087	nothing	NN	NOUN	nothing	*[13]	*[13]	wrong\_output[13]	SYMPTOM[13]	*[13]	observed[13]	*[13]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+
+#Text=3. Cannot download the address book in the Address Book tab either
+14-1	1088-1089	3	LS	NUM	3	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-2	1089-1090	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-3	1091-1097	Cannot	NNP	PROPN	Cannot	*[14]	*[14]	failure[14]	SYMPTOM[14]	*[14]	observed[14]	*[14]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-4	1098-1106	download	VBZ	VERB	download	*[14]	*[14]	failure[14]	SYMPTOM[14]	*[14]	observed[14]	*[14]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-5	1107-1110	the	DT	DET	the	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-6	1111-1118	address	NN	NOUN	address	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-7	1119-1123	book	NN	NOUN	book	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-8	1124-1126	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-9	1127-1130	the	DT	DET	the	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-10	1131-1138	Address	NNP	PROPN	Address	*[15]	*[15]	page[15]	UI\_ELEMENT[15]	*[15]	*[15]	*[15]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	SYMPTOM\_OF	14-3[14_15]	
+14-11	1139-1143	Book	NNP	PROPN	Book	*[15]	*[15]	page[15]	UI\_ELEMENT[15]	*[15]	*[15]	*[15]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-12	1144-1147	tab	NN	NOUN	tab	*[15]	*[15]	page[15]	UI\_ELEMENT[15]	*[15]	*[15]	*[15]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+14-13	1148-1154	either	RB	ADV	either	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	ACTUAL[24]	_	_	
+
+#Text=Expected results:
+15-1	1156-1164	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[25]	_	_	
+15-2	1165-1172	results	NNS	NOUN	result	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[25]	_	_	
+15-3	1172-1173	:	:	PUNCT	:	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[25]	_	_	
+
+#Text=I should be able to search for and fill in addresses from the compose window
+16-1	1175-1176	I	PRP	PRON	i	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-2	1177-1183	should	MD	AUX	should	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-3	1184-1186	be	VB	AUX	be	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-4	1187-1191	able	JJ	ADJ	able	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-5	1192-1194	to	TO	PART	to	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-6	1195-1201	search	VB	VERB	search	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-7	1202-1205	for	IN	ADP	for	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-8	1206-1209	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-9	1210-1214	fill	VB	VERB	fill	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-10	1215-1217	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-11	1218-1227	addresses	NNS	NOUN	address	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-12	1228-1232	from	IN	ADP	from	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-13	1233-1236	the	DT	DET	the	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-14	1237-1244	compose	NN	NOUN	compose	*[16]	*[16]	dialog[16]	UI\_ELEMENT[16]	*[16]	*[16]	*[16]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+16-15	1245-1251	window	NN	NOUN	window	*[16]	*[16]	dialog[16]	UI\_ELEMENT[16]	*[16]	*[16]	*[16]	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[26]	_	_	
+
+#Text=I should be able to download all addresses for use offline and synchronise changes between Thunderbird and Google.
+17-1	1253-1254	I	PRP	PRON	i	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-2	1255-1261	should	MD	AUX	should	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-3	1262-1264	be	VB	AUX	be	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-4	1265-1269	able	JJ	ADJ	able	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-5	1270-1272	to	TO	PART	to	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-6	1273-1281	download	VB	VERB	download	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-7	1282-1285	all	DT	DET	all	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-8	1286-1295	addresses	NNS	NOUN	address	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-9	1296-1299	for	IN	ADP	for	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-10	1300-1303	use	NN	NOUN	use	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-11	1304-1311	offline	NN	NOUN	offline	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-12	1312-1315	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-13	1316-1327	synchronise	NN	NOUN	synchronise	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-14	1328-1335	changes	NNS	NOUN	change	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-15	1336-1343	between	IN	ADP	between	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-16	1344-1355	Thunderbird	NNP	PROPN	Thunderbird	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-17	1356-1359	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-18	1360-1366	Google	NNP	PROPN	Google	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+17-19	1366-1367	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[17]	Auth-service[17]	high[17]	thunderbird-1825223[17]	Major[17]	bug[17]	EXPECTED[27]	_	_	
+
+#Text=Improve error reporting on non-standard kerberos names
+18-1	1369-1376	Improve	NNP	PROPN	Improve	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+18-2	1377-1382	error	NN	NOUN	error	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+18-3	1383-1392	reporting	VBG	VERB	report	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+18-4	1393-1395	on	IN	ADP	on	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+18-5	1396-1408	non-standard	JJ	ADJ	non-standard	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+18-6	1409-1417	kerberos	NNP	PROPN	kerberos	*	http://dbpedia.org/resource/Kerberos\_(protocol)	protocol	TECHNOLOGY	Kerberos	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+18-7	1418-1423	names	NNS	NOUN	name	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	TITLE[28]	_	_	
+
+#Text=The kerberos RFC does not declare any restriction on
+#Text=characters used in kerberos names, though
+#Text=implementations MAY be more restrictive.
+19-1	1425-1428	The	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-2	1429-1437	kerberos	NNP	PROPN	kerberos	*	http://dbpedia.org/resource/Kerberos\_(protocol)	protocol	TECHNOLOGY	Kerberos	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-3	1438-1441	RFC	NNP	PROPN	RFC	*	http://dbpedia.org/resource/Request\_for\_Comments	standard	TECHNOLOGY	RFC	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-4	1442-1446	does	VBZ	AUX	do	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-5	1447-1450	not	RB	PART	not	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-6	1451-1458	declare	VB	VERB	declare	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-7	1459-1462	any	DT	DET	any	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-8	1463-1474	restriction	NN	NOUN	restriction	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-9	1475-1477	on	IN	ADP	on	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-10	1478-1488	characters	NNS	NOUN	character	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-11	1489-1493	used	VBN	VERB	use	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-12	1494-1496	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-13	1497-1505	kerberos	NNP	PROPN	kerberos	*	http://dbpedia.org/resource/Kerberos\_(protocol)	protocol	TECHNOLOGY	Kerberos	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-14	1506-1511	names	NNS	NOUN	name	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-15	1511-1512	,	,	PUNCT	,	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-16	1513-1519	though	IN	SCONJ	though	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-17	1520-1535	implementations	NNS	NOUN	implementation	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-18	1536-1539	MAY	NNP	PROPN	MAY	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-19	1540-1542	be	VB	AUX	be	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-20	1543-1547	more	RBR	ADV	more	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-21	1548-1559	restrictive	JJ	ADJ	restrictive	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+19-22	1559-1560	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[29]	_	_	
+
+#Text=If the kerberos controller supports use non-conventional
+#Text=user names *and the kerberos admin chooses to use them*
+#Text=this can confuse some of the parsing.
+20-1	1562-1564	If	IN	SCONJ	if	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-2	1565-1568	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-3	1569-1577	kerberos	NNP	PROPN	kerberos	*	http://dbpedia.org/resource/Kerberos\_(protocol)	protocol	TECHNOLOGY	Kerberos	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-4	1578-1588	controller	NN	NOUN	controller	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-5	1589-1597	supports	NNS	NOUN	support	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-6	1598-1601	use	VBP	VERB	use	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-7	1602-1618	non-conventional	JJ	ADJ	non-conventional	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-8	1619-1623	user	NN	NOUN	user	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-9	1624-1629	names	NNS	NOUN	name	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-10	1630-1631	*	SYM	SYM	\*	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-11	1631-1634	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-12	1635-1638	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-13	1639-1647	kerberos	NNP	PROPN	kerberos	*	http://dbpedia.org/resource/Kerberos\_(protocol)	protocol	TECHNOLOGY	Kerberos	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-14	1648-1653	admin	VBP	VERB	admin	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-15	1654-1661	chooses	NNS	NOUN	chooses	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-16	1662-1664	to	TO	PART	to	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-17	1665-1668	use	VB	VERB	use	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-18	1669-1673	them	PRP	PRON	them	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-19	1673-1674	*	SYM	SYM	\*	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-20	1675-1679	this	DT	DET	this	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-21	1680-1683	can	MD	AUX	can	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-22	1684-1691	confuse	VB	VERB	confuse	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-23	1692-1696	some	DT	DET	some	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-24	1697-1699	of	IN	ADP	of	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-25	1700-1703	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-26	1704-1711	parsing	NN	NOUN	parsing	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+20-27	1711-1712	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[30]	_	_	
+
+#Text=The obvious solution is for the enterprise admins to "not do that"
+#Text=as a lot of things break, bits of hadoop included.
+21-1	1714-1717	The	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-2	1718-1725	obvious	JJ	ADJ	obvious	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-3	1726-1734	solution	NN	NOUN	solution	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-4	1735-1737	is	VBZ	AUX	be	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-5	1738-1741	for	IN	ADP	for	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-6	1742-1745	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-7	1746-1756	enterprise	NN	NOUN	enterprise	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-8	1757-1763	admins	VBZ	VERB	admins	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-9	1764-1766	to	TO	PART	to	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-10	1767-1768	"	.	PUNCT	"	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-11	1768-1771	not	RB	PART	not	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-12	1772-1774	do	VB	VERB	do	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-13	1775-1779	that	DT	DET	that	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-14	1779-1780	"	.	PUNCT	"	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-15	1781-1783	as	IN	ADP	as	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-16	1784-1785	a	DT	DET	a	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-17	1786-1789	lot	NN	NOUN	lot	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-18	1790-1792	of	IN	ADP	of	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-19	1793-1799	things	NNS	NOUN	thing	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-20	1800-1805	break	NN	NOUN	break	*	*	failure	SYMPTOM	*	observed	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-21	1805-1806	,	,	PUNCT	,	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-22	1807-1811	bits	NNS	NOUN	bit	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-23	1812-1814	of	IN	ADP	of	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-24	1815-1821	hadoop	NNP	PROPN	hadoop	*	http://dbpedia.org/resource/Apache\_Hadoop	framework	PRODUCT	Apache Hadoop	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	SYMPTOM\_OF	21-20	
+21-25	1822-1830	included	VBD	VERB	include	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+21-26	1830-1831	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[31]	_	_	
+
+#Text=Harden the hadoop code slightly so at least we fail more gracefully,
+#Text=so people can then get in touch with their sysadmin and tell them
+#Text=to stop it.
+22-1	1833-1839	Harden	NNP	PROPN	Harden	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-2	1840-1843	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-3	1844-1850	hadoop	NNP	PROPN	hadoop	*	http://dbpedia.org/resource/Apache\_Hadoop	framework	PRODUCT	Apache Hadoop	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	SYMPTOM\_OF	22-10	
+22-4	1851-1855	code	NN	NOUN	code	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-5	1856-1864	slightly	RB	ADV	slightly	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-6	1865-1867	so	RB	ADV	so	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-7	1868-1870	at	IN	ADP	at	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-8	1871-1876	least	JJS	ADJ	least	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-9	1877-1879	we	PRP	PRON	we	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-10	1880-1884	fail	VBP	VERB	fail	*	*	failure	SYMPTOM	*	observed	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-11	1885-1889	more	RBR	ADV	more	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-12	1890-1900	gracefully	RB	ADV	gracefully	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-13	1900-1901	,	,	PUNCT	,	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-14	1902-1904	so	IN	ADP	so	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-15	1905-1911	people	NNS	NOUN	people	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-16	1912-1915	can	MD	AUX	can	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-17	1916-1920	then	RB	ADV	then	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-18	1921-1924	get	VB	VERB	get	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-19	1925-1927	in	IN	ADP	in	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-20	1928-1933	touch	NN	NOUN	touch	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-21	1934-1938	with	IN	ADP	with	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-22	1939-1944	their	PRP$	PRON	their	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-23	1945-1953	sysadmin	NN	NOUN	sysadmin	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-24	1954-1957	and	CC	CCONJ	and	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-25	1958-1962	tell	VB	VERB	tell	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-26	1963-1967	them	PRP	PRON	them	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-27	1968-1970	to	TO	PART	to	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-28	1971-1975	stop	VB	VERB	stop	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-29	1976-1978	it	PRP	PRON	it	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+22-30	1978-1979	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	DESCRIPTION[32]	_	_	
+
+#Text=Note: given the kerberos admin is implicitly a superuser, being
+#Text=able to create malformed principal names.
+23-1	1981-1985	Note	NN	NOUN	note	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-2	1985-1986	:	:	PUNCT	:	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-3	1987-1992	given	VBN	VERB	give	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-4	1993-1996	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-5	1997-2005	kerberos	NNP	PROPN	kerberos	*	http://dbpedia.org/resource/Kerberos\_(protocol)	protocol	TECHNOLOGY	Kerberos	*	*	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-6	2006-2011	admin	NN	NOUN	admin	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-7	2012-2014	is	VBZ	AUX	be	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-8	2015-2025	implicitly	RB	ADV	implicitly	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-9	2026-2027	a	DT	DET	a	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-10	2028-2037	superuser	NN	NOUN	superuser	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-11	2037-2038	,	,	PUNCT	,	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-12	2039-2044	being	VBG	AUX	be	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-13	2045-2049	able	JJ	ADJ	able	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-14	2050-2052	to	TO	PART	to	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-15	2053-2059	create	VB	VERB	create	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-16	2060-2069	malformed	JJ	ADJ	malformed	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-17	2070-2079	principal	JJ	ADJ	principal	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-18	2080-2085	names	NNS	NOUN	name	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+23-19	2085-2086	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+
+#Text=doesn't give them any privileges, just offers a different way
+#Text=to stop the cluster working.
+24-1	2087-2091	does	VBZ	AUX	do	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-2	2091-2094	n't	RB	PART	not	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-3	2095-2099	give	VB	VERB	give	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-4	2100-2104	them	PRP	PRON	them	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-5	2105-2108	any	DT	DET	any	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-6	2109-2119	privileges	NNS	NOUN	privilege	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-7	2119-2120	,	,	PUNCT	,	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-8	2121-2125	just	RB	ADV	just	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-9	2126-2132	offers	VBZ	VERB	offer	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-10	2133-2134	a	DT	DET	a	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-11	2135-2144	different	JJ	ADJ	different	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-12	2145-2148	way	NN	NOUN	way	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-13	2149-2151	to	TO	PART	to	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-14	2152-2156	stop	VB	VERB	stop	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-15	2157-2160	the	DT	DET	the	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-16	2161-2168	cluster	NN	NOUN	cluster	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-17	2169-2176	working	VBG	VERB	work	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	
+24-18	2176-2177	.	.	PUNCT	.	_	_	_	_	_	_	_	authentication[18]	Auth-service[18]	low[18]	hadoop-13513595[18]	*[18]	feature\_request[18]	NOTES[33]	_	_	

@@ -1,0 +1,512 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=webanno.custom.BugEntity|affected|kb_uri|kind|label|normalized|polarity|source
+#T_SP=webanno.custom.BugReport|category|component|confidence|report_id|severity|ticket_type
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=LdapGroupsMapping crashes with NullPointerException while going up the group hierarchy
+1-1	0-17	LdapGroupsMapping	NNP	PROPN	LdapGroupsMapping	*	*	class	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	SYMPTOM\_OF	1-2	
+1-2	18-25	crashes	VBZ	VERB	crash	*	*	crash	SYMPTOM	*	observed	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-3	26-30	with	IN	ADP	with	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-4	31-51	NullPointerException	NNP	PROPN	NullPointerException	*	*	*	EXCEPTION	NullPointerException	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	CAUSED\_BY	1-2	
+1-5	52-57	while	IN	SCONJ	while	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-6	58-63	going	VBG	VERB	go	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-7	64-66	up	RP	ADP	up	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-8	67-70	the	DT	DET	the	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-9	71-76	group	NN	NOUN	group	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+1-10	77-86	hierarchy	NN	NOUN	hierarchy	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	TITLE[14]	_	_	
+
+#Text=h2.
+2-1	88-90	h2	NN	NOUN	h2	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[15]	_	_	
+2-2	90-91	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[15]	_	_	
+
+#Text=What happened:
+3-1	92-96	What	WP	PRON	what	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[15]	_	_	
+3-2	97-105	happened	VBD	VERB	happen	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[15]	_	_	
+3-3	105-106	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[15]	_	_	
+
+#Text=When set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to a value larger than 0, {{goUpGroupHierarchy}} in {{org/apache/hadoop/security/LdapGroupsMapping.java}} may return a null {{{}groupResults{}}}and use it without checking null.
+4-1	108-112	When	WRB	ADV	when	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-2	113-116	set	VBN	VERB	set	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-3	117-118	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-4	118-119	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-5	119-183	hadoop.security.group.mapping.ldap.search.group.hierarchy.levels	NNP	X	hadoop.security.group.mapping.ldap.search.group.hierarchy.levels	*	*	config	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-6	183-184	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-7	184-185	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-8	186-188	to	TO	ADP	to	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-9	189-190	a	DT	DET	a	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-10	191-196	value	NN	NOUN	value	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-11	197-203	larger	JJR	ADJ	large	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-12	204-208	than	IN	ADP	than	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-13	209-210	0	CD	NUM	0	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-14	210-211	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-15	212-213	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-16	213-214	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-17	214-232	goUpGroupHierarchy	NNP	PROPN	goUpGroupHierarchy	*	*	method	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-18	232-233	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-19	233-234	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-20	235-237	in	IN	ADP	in	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-21	238-239	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-22	239-240	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-23	240-289	org/apache/hadoop/security/LdapGroupsMapping.java	VB	X	org/apache/hadoop/security/LdapGroupsMapping.java	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-24	289-290	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-25	290-291	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-26	292-295	may	MD	AUX	may	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-27	296-302	return	VB	VERB	return	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-28	303-304	a	DT	DET	a	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-29	305-309	null	JJ	ADJ	null	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-30	310-311	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-31	311-312	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-32	312-313	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-33	313-314	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-34	314-326	groupResults	NNP	PROPN	groupResults	*	*	variable	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-35	326-327	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-36	327-328	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-37	328-329	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-38	329-330	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-39	330-333	and	CC	CCONJ	and	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-40	334-337	use	VB	VERB	use	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-41	338-340	it	PRP	PRON	it	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-42	341-348	without	IN	ADP	without	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-43	349-357	checking	VBG	VERB	check	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-44	358-362	null	NN	NOUN	null	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+4-45	362-363	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	DESCRIPTION[16]	_	_	
+
+#Text=h2.
+5-1	364-366	h2	NN	NOUN	h2	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+5-2	366-367	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=Buggy code:
+6-1	368-373	Buggy	NNP	PROPN	Buggy	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+6-2	374-378	code	NN	NOUN	code	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+6-3	378-379	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text={noformat}
+7-1	380-381	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+7-2	381-389	noformat	NN	NOUN	noformat	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+7-3	389-390	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=void goUpGroupHierarchy(Set<String> groupDNs, int goUpHierarchy, Set<String> groups) throws NamingException {
+8-1	393-397	void	JJ	ADJ	void	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-2	398-416	goUpGroupHierarchy	NN	NOUN	goupgrouphierarchy	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-3	416-417	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-4	417-420	Set	NNP	PROPN	Set	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-5	420-421	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-6	421-427	String	NNP	PROPN	String	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-7	427-428	>	SYM	SYM	>	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-8	429-437	groupDNs	NN	NOUN	groupdns	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-9	437-438	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-10	439-442	int	NN	NOUN	int	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-11	443-456	goUpHierarchy	NN	NOUN	gouphierarchy	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-12	456-457	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-13	458-461	Set	NNP	PROPN	Set	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-14	461-462	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-15	462-468	String	NNP	PROPN	String	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-16	468-469	>	SYM	SYM	>	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-17	470-476	groups	NNS	NOUN	group	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-18	476-477	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-19	478-484	throws	VBZ	VERB	throw	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-20	485-500	NamingException	NNP	PROPN	NamingException	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+8-21	501-502	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=if (goUpHierarchy <= 0 || groups.isEmpty()) {
+9-1	507-509	if	IN	SCONJ	if	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-2	510-511	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-3	511-524	goUpHierarchy	JJ	ADJ	gouphierarchy	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-4	525-526	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-5	526-527	=	SYM	SYM	=	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-6	528-529	0	CD	NUM	0	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-7	530-531	|	SYM	SYM	\|	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-8	531-532	|	SYM	SYM	\|	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-9	533-549	groups.isEmpty()	NNP	X	groups.isEmpty()	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-10	549-550	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+9-11	551-552	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=return;
+10-1	559-565	return	NN	NOUN	return	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+10-2	565-566	;	:	PUNCT	\;	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=}
+11-1	571-572	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=...
+12-1	577-580	...	:	PUNCT	...	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=NamingEnumeration<SearchResult> groupResults = context.search(groupbaseDN, filter.toString(), SEARCH_CONTROLS);
+13-1	585-602	NamingEnumeration	NNP	PROPN	NamingEnumeration	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-2	602-603	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-3	603-615	SearchResult	NNP	PROPN	SearchResult	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-4	615-616	>	SYM	SYM	>	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-5	617-629	groupResults	NNS	NOUN	groupresults	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-6	630-631	=	SYM	SYM	=	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-7	632-646	context.search	NNP	X	context.search	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-8	646-647	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-9	647-658	groupbaseDN	NN	NOUN	groupbasedn	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-10	658-659	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-11	660-677	filter.toString()	NNP	X	filter.toString()	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-12	677-678	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-13	679-694	SEARCH_CONTROLS	NNP	PROPN	SEARCH\_CONTROLS	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-14	694-695	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+13-15	695-696	;	:	PUNCT	\;	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=while (groupResults.hasMoreElements()) {          // <--- Here groupResults may be null
+#Text=    ...
+14-1	701-706	while	IN	SCONJ	while	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-2	707-708	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-3	708-738	groupResults.hasMoreElements()	NNP	X	groupResults.hasMoreElements()	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-4	738-739	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-5	740-741	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-6	751-752	/	SYM	SYM	/	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-7	752-753	/	SYM	SYM	/	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-8	754-755	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-9	755-756	-	:	PUNCT	-	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-10	756-757	-	:	PUNCT	-	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-11	757-758	-	:	PUNCT	-	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-12	759-763	Here	RB	ADV	here	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-13	764-776	groupResults	NNS	NOUN	groupresults	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-14	777-780	may	MD	AUX	may	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-15	781-783	be	VB	AUX	be	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-16	784-788	null	JJ	ADJ	null	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+14-17	793-796	...	:	PUNCT	...	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=}
+15-1	801-802	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=...
+16-1	807-810	...	:	PUNCT	...	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=}{noformat}
+17-1	813-814	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+17-2	814-815	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+17-3	815-823	noformat	JJ	ADJ	noformat	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+17-4	823-824	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	CODE[17]	_	_	
+
+#Text=h2.
+18-1	825-827	h2	NN	NOUN	h2	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[18]	_	_	
+18-2	827-828	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[18]	_	_	
+
+#Text=How to reproduce:
+19-1	829-832	How	WRB	ADV	how	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[18]	_	_	
+19-2	833-835	to	TO	PART	to	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[18]	_	_	
+19-3	836-845	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[18]	_	_	
+19-4	845-846	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[18]	_	_	
+
+#Text=(1) Set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to 1
+20-1	848-849	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-2	849-850	1	CD	NUM	1	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-3	850-851	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-4	852-855	Set	VB	VERB	set	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-5	856-857	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-6	857-858	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-7	858-922	hadoop.security.group.mapping.ldap.search.group.hierarchy.levels	NNP	X	hadoop.security.group.mapping.ldap.search.group.hierarchy.levels	*	*	config	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-8	922-923	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-9	923-924	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-10	925-927	to	TO	ADP	to	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+20-11	928-929	1	CD	NUM	1	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+
+#Text=(2) Run test {{org.apache.hadoop.security.TestLdapGroupsMapping#testGetGroupsWithConnectionClosed}}
+21-1	930-931	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-2	931-932	2	CD	NUM	2	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-3	932-933	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-4	934-937	Run	VB	VERB	run	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-5	938-942	test	RB	ADV	test	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-6	943-944	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-7	944-945	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-8	945-1027	org.apache.hadoop.security.TestLdapGroupsMapping#testGetGroupsWithConnectionClosed	VBN	X	org.apache.hadoop.security.TestLdapGroupsMapping#testGetGroupsWithConnectionClosed	*	*	class	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-9	1027-1028	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+21-10	1028-1029	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STEPS[19]	_	_	
+
+#Text=h2.
+22-1	1030-1032	h2	NN	NOUN	h2	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+22-2	1032-1033	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=Stack trace:
+23-1	1034-1039	Stack	JJ	ADJ	stack	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+23-2	1040-1045	trace	NN	NOUN	trace	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+23-3	1045-1046	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text={noformat}
+24-1	1047-1048	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+24-2	1048-1056	noformat	NN	NOUN	noformat	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+24-3	1056-1057	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=java.lang.NullPointerException
+25-1	1058-1088	java.lang.NullPointerException	NNP	X	java.lang.NullPointerException	*	*	*	EXCEPTION	NullPointerException	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=at org.apache.hadoop.security.LdapGroupsMapping.goUpGroupHierarchy(LdapGroupsMapping.java:612)
+26-1	1097-1099	at	IN	ADP	at	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+26-2	1100-1163	org.apache.hadoop.security.LdapGroupsMapping.goUpGroupHierarchy	NNP	X	org.apache.hadoop.security.LdapGroupsMapping.goUpGroupHierarchy	*[1]	*[1]	frame[1]	CODE\_LOCATION[1]	LdapGroupsMapping.java:612[1]	*[1]	*[1]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	THROWN\_AT	25-1[0_1]	
+26-3	1163-1164	(	(	PUNCT	(	*[1]	*[1]	frame[1]	CODE\_LOCATION[1]	LdapGroupsMapping.java:612[1]	*[1]	*[1]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+26-4	1164-1190	LdapGroupsMapping.java:612	NNP	X	LdapGroupsMapping.java:612	*[1]	*[1]	frame[1]	CODE\_LOCATION[1]	LdapGroupsMapping.java:612[1]	*[1]	*[1]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+26-5	1190-1191	)	)	PUNCT	)	*[1]	*[1]	frame[1]	CODE\_LOCATION[1]	LdapGroupsMapping.java:612[1]	*[1]	*[1]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=at org.apache.hadoop.security.LdapGroupsMapping.lookupGroup(LdapGroupsMapping.java:489)
+27-1	1200-1202	at	IN	ADP	at	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+27-2	1203-1259	org.apache.hadoop.security.LdapGroupsMapping.lookupGroup	NNP	X	org.apache.hadoop.security.LdapGroupsMapping.lookupGroup	*[2]	*[2]	frame[2]	CODE\_LOCATION[2]	LdapGroupsMapping.java:489[2]	*[2]	*[2]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+27-3	1259-1260	(	(	PUNCT	(	*[2]	*[2]	frame[2]	CODE\_LOCATION[2]	LdapGroupsMapping.java:489[2]	*[2]	*[2]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+27-4	1260-1286	LdapGroupsMapping.java:489	NNP	X	LdapGroupsMapping.java:489	*[2]	*[2]	frame[2]	CODE\_LOCATION[2]	LdapGroupsMapping.java:489[2]	*[2]	*[2]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+27-5	1286-1287	)	)	PUNCT	)	*[2]	*[2]	frame[2]	CODE\_LOCATION[2]	LdapGroupsMapping.java:489[2]	*[2]	*[2]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=at org.apache.hadoop.security.LdapGroupsMapping.doGetGroups(LdapGroupsMapping.java:552)
+28-1	1296-1298	at	IN	ADP	at	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+28-2	1299-1355	org.apache.hadoop.security.LdapGroupsMapping.doGetGroups	NNP	X	org.apache.hadoop.security.LdapGroupsMapping.doGetGroups	*[3]	*[3]	frame[3]	CODE\_LOCATION[3]	LdapGroupsMapping.java:552[3]	*[3]	*[3]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+28-3	1355-1356	(	(	PUNCT	(	*[3]	*[3]	frame[3]	CODE\_LOCATION[3]	LdapGroupsMapping.java:552[3]	*[3]	*[3]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+28-4	1356-1382	LdapGroupsMapping.java:552	NNP	X	LdapGroupsMapping.java:552	*[3]	*[3]	frame[3]	CODE\_LOCATION[3]	LdapGroupsMapping.java:552[3]	*[3]	*[3]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+28-5	1382-1383	)	)	PUNCT	)	*[3]	*[3]	frame[3]	CODE\_LOCATION[3]	LdapGroupsMapping.java:552[3]	*[3]	*[3]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=at org.apache.hadoop.security.LdapGroupsMapping.getGroups(LdapGroupsMapping.java:365){noformat}
+29-1	1392-1394	at	IN	ADP	at	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-2	1395-1449	org.apache.hadoop.security.LdapGroupsMapping.getGroups	NNP	X	org.apache.hadoop.security.LdapGroupsMapping.getGroups	*[4]	*[4]	frame[4]	CODE\_LOCATION[4]	LdapGroupsMapping.java:365[4]	*[4]	*[4]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-3	1449-1450	(	(	PUNCT	(	*[4]	*[4]	frame[4]	CODE\_LOCATION[4]	LdapGroupsMapping.java:365[4]	*[4]	*[4]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-4	1450-1476	LdapGroupsMapping.java:365	NNP	X	LdapGroupsMapping.java:365	*[4]	*[4]	frame[4]	CODE\_LOCATION[4]	LdapGroupsMapping.java:365[4]	*[4]	*[4]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-5	1476-1477	)	)	PUNCT	)	*[4]	*[4]	frame[4]	CODE\_LOCATION[4]	LdapGroupsMapping.java:365[4]	*[4]	*[4]	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-6	1477-1478	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-7	1478-1486	noformat	JJ	ADJ	noformat	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+29-8	1486-1487	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=For an easy reproduction, run the reproduce.sh in the attachment.
+30-1	1488-1491	For	IN	ADP	for	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-2	1492-1494	an	DT	DET	an	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-3	1495-1499	easy	JJ	ADJ	easy	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-4	1500-1512	reproduction	NN	NOUN	reproduction	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-5	1512-1513	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-6	1514-1517	run	VB	VERB	run	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-7	1518-1521	the	DT	DET	the	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-8	1522-1534	reproduce.sh	NNP	X	reproduce.sh	*	*	file	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-9	1535-1537	in	IN	ADP	in	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-10	1538-1541	the	DT	DET	the	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-11	1542-1552	attachment	NN	NOUN	attachment	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+30-12	1552-1553	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	STACK\_TRACE[20]	_	_	
+
+#Text=We also create a PR provides a fix by checking the groupResults is not Null before it is accessed, similar to what's done in `org.apache.hadoop.security.LdapGroupsMapping#lookupGroup`
+31-1	1555-1557	We	PRP	PRON	we	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-2	1558-1562	also	RB	ADV	also	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-3	1563-1569	create	VBP	VERB	create	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-4	1570-1571	a	DT	DET	a	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-5	1572-1574	PR	NNP	PROPN	PR	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-6	1575-1583	provides	VBZ	VERB	provide	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-7	1584-1585	a	DT	DET	a	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-8	1586-1589	fix	NN	NOUN	fix	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-9	1590-1592	by	IN	ADP	by	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-10	1593-1601	checking	VBG	VERB	check	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-11	1602-1605	the	DT	DET	the	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-12	1606-1618	groupResults	NNP	PROPN	groupResults	*	*	variable	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-13	1619-1621	is	VBZ	AUX	be	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-14	1622-1625	not	RB	PART	not	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-15	1626-1630	Null	NNP	PROPN	Null	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-16	1631-1637	before	IN	ADP	before	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-17	1638-1640	it	PRP	PRON	it	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-18	1641-1643	is	VBZ	AUX	be	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-19	1644-1652	accessed	VBN	VERB	access	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-20	1652-1653	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-21	1654-1661	similar	JJ	ADJ	similar	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-22	1662-1664	to	TO	ADP	to	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-23	1665-1669	what	WP	PRON	what	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-24	1669-1671	's	VBZ	AUX	be	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-25	1672-1676	done	VBN	VERB	do	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-26	1677-1679	in	IN	ADP	in	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-27	1680-1681	`	``	PUNCT	`	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-28	1681-1737	org.apache.hadoop.security.LdapGroupsMapping#lookupGroup	NNP	X	org.apache.hadoop.security.LdapGroupsMapping#lookupGroup	*	*	class	CODE\_LOCATION	*	*	*	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+31-29	1737-1738	`	``	PUNCT	`	_	_	_	_	_	_	_	crash[12]	Auth-service[12]	high[12]	hadoop-13544320[12]	Critical[12]	bug[12]	NOTES[21]	_	_	
+
+#Text=JSON Sort Document crashes in certain cases
+32-1	1740-1744	JSON	NNP	PROPN	JSON	*[5]	*[5]	*[5]	FEATURE[5]	JSON: Sort Document[5]	*[5]	*[5]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	SYMPTOM\_OF	32-4[0_5]	
+32-2	1745-1749	Sort	NNP	PROPN	Sort	*[5]	*[5]	*[5]	FEATURE[5]	JSON: Sort Document[5]	*[5]	*[5]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	_	_	
+32-3	1750-1758	Document	NNP	PROPN	Document	*[5]	*[5]	*[5]	FEATURE[5]	JSON: Sort Document[5]	*[5]	*[5]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	_	_	
+32-4	1759-1766	crashes	VBZ	VERB	crash	*	*	crash	SYMPTOM	*	observed	*	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	_	_	
+32-5	1767-1769	in	IN	ADP	in	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	_	_	
+32-6	1770-1777	certain	JJ	ADJ	certain	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	_	_	
+32-7	1778-1783	cases	NNS	NOUN	case	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	TITLE[22]	_	_	
+
+#Text=Type: <b>Bug</b>
+33-1	1785-1789	Type	NN	NOUN	type	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-2	1789-1790	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-3	1791-1792	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-4	1792-1793	b	NN	NOUN	b	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-5	1793-1794	>	SYM	SYM	>	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-6	1794-1797	Bug	NNP	PROPN	Bug	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-7	1797-1798	<	SYM	SYM	<	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-8	1798-1799	/	SYM	SYM	/	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-9	1799-1800	b	NN	NOUN	b	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+33-10	1800-1801	>	SYM	SYM	>	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[23]	_	_	
+
+#Text=1. Open a new view and paste
+34-1	1803-1804	1	CD	NUM	1	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-2	1804-1805	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-3	1806-1810	Open	VB	VERB	open	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-4	1811-1812	a	DT	DET	a	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-5	1813-1816	new	JJ	ADJ	new	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-6	1817-1821	view	NN	NOUN	view	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-7	1822-1825	and	CC	CCONJ	and	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+34-8	1826-1831	paste	NN	NOUN	paste	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text=```jsonc
+35-1	1832-1835	```	.	PUNCT	```	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+35-2	1835-1840	jsonc	NN	NOUN	jsonc	*	http://dbpedia.org/resource/JSON	format	TECHNOLOGY	JSON with comments	*	*	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text={
+36-1	1841-1842	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text="foo": {"a": "b",}
+37-1	1847-1848	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-2	1848-1851	foo	NN	NOUN	foo	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-3	1851-1852	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-4	1852-1853	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-5	1854-1855	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-6	1855-1856	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-7	1856-1857	a	DT	DET	a	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-8	1857-1858	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-9	1858-1859	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-10	1860-1861	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-11	1861-1862	b	NN	NOUN	b	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-12	1862-1863	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-13	1863-1864	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+37-14	1864-1865	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text=}
+38-1	1866-1867	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text=```
+39-1	1868-1871	```	.	PUNCT	```	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text=2. Trigger `JSON: Sort Document` from the Command Pallette
+40-1	1872-1873	2	CD	NUM	2	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-2	1873-1874	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-3	1875-1882	Trigger	VB	VERB	trigger	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-4	1883-1884	`	``	PUNCT	`	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-5	1884-1888	JSON	NNP	PROPN	JSON	*[6]	*[6]	*[6]	FEATURE[6]	JSON: Sort Document[6]	*[6]	*[6]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-6	1888-1889	:	:	PUNCT	:	*[6]	*[6]	*[6]	FEATURE[6]	JSON: Sort Document[6]	*[6]	*[6]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-7	1890-1894	Sort	NNP	PROPN	Sort	*[6]	*[6]	*[6]	FEATURE[6]	JSON: Sort Document[6]	*[6]	*[6]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-8	1895-1903	Document	NNP	PROPN	Document	*[6]	*[6]	*[6]	FEATURE[6]	JSON: Sort Document[6]	*[6]	*[6]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-9	1903-1904	`	``	PUNCT	`	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-10	1905-1909	from	IN	ADP	from	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-11	1910-1913	the	DT	DET	the	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-12	1914-1921	Command	NNP	PROPN	Command	*[7]	*[7]	dialog[7]	UI\_ELEMENT[7]	*[7]	*[7]	*[7]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+40-13	1922-1930	Pallette	NNP	PROPN	Pallette	*[7]	*[7]	dialog[7]	UI\_ELEMENT[7]	*[7]	*[7]	*[7]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	STEPS[24]	_	_	
+
+#Text=Triggers an error dialog with `Request json/sort failed with message: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]`
+41-1	1932-1940	Triggers	NNS	NOUN	trigger	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-2	1941-1943	an	DT	DET	an	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-3	1944-1949	error	NN	NOUN	error	*[8]	*[8]	dialog[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-4	1950-1956	dialog	NN	NOUN	dialog	*[8]	*[8]	dialog[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-5	1957-1961	with	IN	ADP	with	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-6	1962-1963	`	``	PUNCT	`	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-7	1963-1970	Request	JJS	ADJ	request	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-8	1971-1975	json	NN	NOUN	json	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-9	1975-1976	/	SYM	SYM	/	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-10	1976-1980	sort	NN	NOUN	sort	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-11	1981-1987	failed	VBD	VERB	fail	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-12	1988-1992	with	IN	ADP	with	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-13	1993-2000	message	NN	NOUN	message	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-14	2000-2001	:	:	PUNCT	:	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-15	2002-2014	Range#create	NNP	X	Range#create	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-16	2015-2021	called	VBD	VERB	call	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-17	2022-2026	with	IN	ADP	with	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-18	2027-2034	invalid	JJ	ADJ	invalid	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-19	2035-2044	arguments	NNS	NOUN	argument	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-20	2044-2045	[	.	PUNCT	\[	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-21	2045-2046	[	.	PUNCT	\[	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-22	2046-2052	object	JJ	ADJ	object	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-23	2053-2059	Object	NNP	PROPN	Object	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-24	2059-2060	]	.	PUNCT	\]	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-25	2060-2061	,	,	PUNCT	,	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-26	2062-2063	[	.	PUNCT	\[	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-27	2063-2069	object	VBP	VERB	object	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-28	2070-2076	Object	NNP	PROPN	Object	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-29	2076-2077	]	.	PUNCT	\]	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-30	2077-2078	,	,	PUNCT	,	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-31	2079-2088	undefined	VBD	VERB	undefined	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-32	2088-2089	,	,	PUNCT	,	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-33	2090-2099	undefined	JJ	ADJ	undefined	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-34	2099-2100	]	.	PUNCT	\]	*[9]	*[9]	*[9]	ERROR\_MESSAGE[9]	*[9]	*[9]	*[9]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+41-35	2100-2101	`	``	PUNCT	`	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ACTUAL[25]	_	_	
+
+#Text=The trailing comma seems to be causing this issue.
+42-1	2103-2106	The	DT	DET	the	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-2	2107-2115	trailing	NN	NOUN	trailing	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-3	2116-2121	comma	NN	NOUN	comma	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-4	2122-2127	seems	VBZ	VERB	seem	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-5	2128-2130	to	TO	PART	to	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-6	2131-2133	be	VB	AUX	be	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-7	2134-2141	causing	VBG	VERB	cause	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-8	2142-2146	this	DT	DET	this	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-9	2147-2152	issue	NN	NOUN	issue	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+42-10	2152-2153	.	.	PUNCT	.	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+
+#Text=But it doesn't have issues with trailing commas outside of this object like:
+43-1	2154-2157	But	CC	CCONJ	but	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-2	2158-2160	it	PRP	PRON	it	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-3	2161-2165	does	VBZ	AUX	do	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-4	2165-2168	n't	RB	PART	not	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-5	2169-2173	have	VB	VERB	have	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-6	2174-2180	issues	NNS	NOUN	issue	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-7	2181-2185	with	IN	ADP	with	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-8	2186-2194	trailing	VBG	VERB	trail	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-9	2195-2201	commas	JJ	ADJ	commas	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-10	2202-2209	outside	IN	ADP	outside	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-11	2210-2212	of	IN	ADP	of	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-12	2213-2217	this	DT	DET	this	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-13	2218-2224	object	NN	NOUN	object	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-14	2225-2229	like	IN	ADP	like	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+43-15	2229-2230	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	NOTES[26]	_	_	
+
+#Text=```jsonc
+44-1	2232-2235	```	.	PUNCT	```	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+44-2	2235-2240	jsonc	NN	NOUN	jsonc	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+
+#Text={
+45-1	2241-2242	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+
+#Text="foo": {"a": "b"},
+46-1	2247-2248	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-2	2248-2251	foo	NN	NOUN	foo	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-3	2251-2252	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-4	2252-2253	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-5	2254-2255	{	(	PUNCT	{	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-6	2255-2256	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-7	2256-2257	a	DT	DET	a	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-8	2257-2258	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-9	2258-2259	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-10	2260-2261	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-11	2261-2262	b	NN	NOUN	b	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-12	2262-2263	"	.	PUNCT	"	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-13	2263-2264	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+46-14	2264-2265	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+
+#Text=}
+47-1	2266-2267	}	)	PUNCT	}	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+
+#Text=```
+48-1	2268-2271	```	.	PUNCT	```	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	CODE[27]	_	_	
+
+#Text=VS Code version: Code 1.84.2 (Universal) (1a5daa3a0231a0fbba4f14db7ec463cf99d7768e, 2023-11-09T10:52:33.687Z)
+49-1	2273-2275	VS	NNP	PROPN	VS	*[10]	http://dbpedia.org/resource/Visual\_Studio\_Code[10]	application[10]	PRODUCT[10]	Visual Studio Code[10]	*[10]	*[10]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	VERSION\_OF	49-6[0_10]	
+49-2	2276-2280	Code	NNP	PROPN	Code	*[10]	http://dbpedia.org/resource/Visual\_Studio\_Code[10]	application[10]	PRODUCT[10]	Visual Studio Code[10]	*[10]	*[10]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-3	2281-2288	version	NN	NOUN	version	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-4	2288-2289	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-5	2290-2294	Code	NN	NOUN	code	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-6	2295-2301	1.84.2	CD	NUM	1.84.2	yes	*	app\_version	ENV	VS Code 1.84.2	*	*	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-7	2302-2303	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-8	2303-2312	Universal	NNP	PROPN	Universal	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-9	2312-2313	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-10	2314-2315	(	(	PUNCT	(	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-11	2315-2355	1a5daa3a0231a0fbba4f14db7ec463cf99d7768e	CD	NUM	1a5daa3a0231a0fbba4f14db7ec463cf99d7768e	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-12	2355-2356	,	,	PUNCT	,	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-13	2357-2370	2023-11-09T10	JJ	ADJ	2023-11-09t10	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-14	2370-2371	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-15	2371-2373	52	CD	NUM	52	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-16	2373-2374	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-17	2374-2380	33.687	CD	NUM	33.687	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-18	2380-2381	Z	NNP	PROPN	Z	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+49-19	2381-2382	)	)	PUNCT	)	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+
+#Text=OS version: Darwin arm64 23.1.0
+50-1	2383-2385	OS	JJ	ADJ	os	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+50-2	2386-2393	version	NN	NOUN	version	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+50-3	2393-2394	:	:	PUNCT	:	_	_	_	_	_	_	_	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+50-4	2395-2401	Darwin	NNP	PROPN	Darwin	yes[11]	http://dbpedia.org/resource/Darwin\_(operating\_system)[11]	os[11]	ENV[11]	Darwin arm64 23.1.0[11]	*[11]	*[11]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	OBSERVED\_IN	41-7[9_11]	
+50-5	2402-2407	arm64	VBZ	VERB	arm64	yes[11]	http://dbpedia.org/resource/Darwin\_(operating\_system)[11]	os[11]	ENV[11]	Darwin arm64 23.1.0[11]	*[11]	*[11]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	
+50-6	2408-2414	23.1.0	CD	NUM	23.1.0	yes[11]	http://dbpedia.org/resource/Darwin\_(operating\_system)[11]	os[11]	ENV[11]	Darwin arm64 23.1.0[11]	*[11]	*[11]	crash[13]	Frontend[13]	high[13]	vscode-198363[13]	Minor[13]	bug[13]	ENVIRONMENT[28]	_	_	

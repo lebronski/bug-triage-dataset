@@ -1,0 +1,623 @@
+# newdoc id = performance
+# object = performance
+# newpar report = thunderbird-1857818 | ticket_type=bug category=performance component=Frontend severity=Major confidence=high
+# paragraph = p1 section=TITLE
+# sent_id = performance-s1
+# text = Quick filter working much slower after Supernova redesign
+1	Quick	Quick	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+2	filter	filter	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+3	working	work	VERB	VBG	_	_	_	_	NER=O
+4	much	much	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM
+5	slower	slow	ADJ	JJR	_	_	_	_	NER=I-SYMPTOM
+6	after	after	ADP	IN	_	_	_	_	NER=O
+7	Supernova	Supernova	PROPN	NNP	_	_	_	_	NER=B-PRODUCT
+8	redesign	redesign	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p2 section=ENVIRONMENT
+# sent_id = performance-s2
+# text = User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	X11	X11	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:X_Window_System|SpaceAfter=No
+7	;	;	PUNCT	:	_	_	_	_	NER=O
+8	Ubuntu	Ubuntu	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Ubuntu|SpaceAfter=No
+9	;	;	PUNCT	:	_	_	_	_	NER=O
+10	Linux	Linux	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Linux
+11	x86_64	x86_64	PROPN	NNP	_	_	_	_	NER=I-ENV|SpaceAfter=No
+12	;	;	PUNCT	:	_	_	_	_	NER=O
+13	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+14	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+15	109.0	109.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+16	)	)	PUNCT	)	_	_	_	_	NER=O
+17	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+18	Firefox/118.0	Firefox/118.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p3 section=STEPS
+# sent_id = performance-s3
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p4 section=STEPS
+# sent_id = performance-s4
+# text = Typing anything in Quick Filter
+1	Typing	type	VERB	VBG	_	_	_	_	NER=O
+2	anything	anything	NOUN	NN	_	_	_	_	NER=O
+3	in	in	ADP	IN	_	_	_	_	NER=O
+4	Quick	Quick	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+5	Filter	Filter	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+
+# paragraph = p5 section=ACTUAL
+# sent_id = performance-s5
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p6 section=ACTUAL
+# sent_id = performance-s6
+# text = Nothing.
+1	Nothing	nothing	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s7
+# text = For 5-10 seconds, nothing happens.
+1	For	for	ADP	IN	_	_	_	_	NER=O
+2	5-10	5-10	ADJ	JJ	_	_	_	_	NER=B-METRIC
+3	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC|SpaceAfter=No
+4	,	,	PUNCT	,	_	_	_	_	NER=O
+5	nothing	nothing	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+6	happens	happens	NOUN	NNS	_	_	_	_	NER=I-SYMPTOM|SpaceAfter=No
+7	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s8
+# text = Only after that, the results are listed.
+1	Only	only	ADV	RB	_	_	_	_	NER=O
+2	after	after	ADP	IN	_	_	_	_	NER=O
+3	that	that	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	,	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	results	result	NOUN	NNS	_	_	_	_	NER=O
+7	are	be	AUX	VBP	_	_	_	_	NER=O
+8	listed	list	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p7 section=EXPECTED
+# sent_id = performance-s9
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p8 section=EXPECTED
+# sent_id = performance-s10
+# text = Before Supernova redesign, the result were in less than 1 second.
+1	Before	before	ADP	IN	_	_	_	_	NER=O
+2	Supernova	Supernova	PROPN	NNP	_	_	_	_	NER=B-PRODUCT
+3	redesign	redesign	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	,	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	result	result	NOUN	NN	_	_	_	_	NER=O
+7	were	be	AUX	VBD	_	_	_	_	NER=O
+8	in	in	ADP	IN	_	_	_	_	NER=O
+9	less	less	ADJ	JJR	_	_	_	_	NER=O
+10	than	than	ADP	IN	_	_	_	_	NER=O
+11	1	1	NUM	CD	_	_	_	_	NER=B-METRIC
+12	second	second	ADJ	JJ	_	_	_	_	NER=I-METRIC|SpaceAfter=No
+13	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s11
+# text = And if I remember correctly, they updated gradually (some of then quickly, some later).
+1	And	and	CCONJ	CC	_	_	_	_	NER=O
+2	if	if	SCONJ	IN	_	_	_	_	NER=O
+3	I	i	PRON	PRP	_	_	_	_	NER=O
+4	remember	remember	VERB	VBP	_	_	_	_	NER=O
+5	correctly	correctly	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	they	they	PRON	PRP	_	_	_	_	NER=O
+8	updated	update	VERB	VBD	_	_	_	_	NER=O
+9	gradually	gradually	ADV	RB	_	_	_	_	NER=O
+10	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+11	some	some	DET	DT	_	_	_	_	NER=O
+12	of	of	ADP	IN	_	_	_	_	NER=O
+13	then	then	ADV	RB	_	_	_	_	NER=O
+14	quickly	quickly	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+15	,	,	PUNCT	,	_	_	_	_	NER=O
+16	some	some	DET	DT	_	_	_	_	NER=O
+17	later	later	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+18	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s12
+# text = It should work like before.
+1	It	it	PRON	PRP	_	_	_	_	NER=O
+2	should	should	AUX	MD	_	_	_	_	NER=O
+3	work	work	VERB	VB	_	_	_	_	NER=O
+4	like	like	ADP	IN	_	_	_	_	NER=O
+5	before	before	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s13
+# text = With the 5+ seconds wait it's unbearable.
+1	With	with	ADP	IN	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	5	5	NUM	CD	_	_	_	_	NER=B-METRIC|SpaceAfter=No
+4	+	+	SYM	SYM	_	_	_	_	NER=I-METRIC
+5	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC
+6	wait	wait	VERB	VBP	_	_	_	_	NER=O
+7	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+8	's	be	AUX	VBZ	_	_	_	_	NER=O
+9	unbearable	unbearable	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s14
+# text = I use quick filters all the time...
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	use	use	VERB	VBP	_	_	_	_	NER=O
+3	quick	quick	ADJ	JJ	_	_	_	_	NER=O
+4	filters	filter	NOUN	NNS	_	_	_	_	NER=O
+5	all	all	DET	PDT	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	time	time	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+8	...	...	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p9 section=EXPECTED
+# sent_id = performance-s15
+# text = (visually, I like the redesign)
+1	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	visually	visually	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	,	_	_	_	_	NER=O
+4	I	i	PRON	PRP	_	_	_	_	NER=O
+5	like	like	VERB	VBP	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	redesign	redesign	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+8	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# newpar report = firefox-1715640 | ticket_type=bug category=performance component=Frontend severity=Critical confidence=high
+# paragraph = p10 section=TITLE
+# sent_id = performance-s16
+# text = FIrefox freezes while opening finder to upload files
+1	FIrefox	FIrefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+2	freezes	freeze	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+3	while	while	SCONJ	IN	_	_	_	_	NER=O
+4	opening	open	VERB	VBG	_	_	_	_	NER=O
+5	finder	finder	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+6	to	to	PART	TO	_	_	_	_	NER=O
+7	upload	upload	VERB	VB	_	_	_	_	NER=O
+8	files	file	NOUN	NNS	_	_	_	_	NER=O
+
+# paragraph = p11 section=ENVIRONMENT
+# sent_id = performance-s17
+# text = User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	Macintosh	Macintosh	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+7	;	;	PUNCT	:	_	_	_	_	NER=O
+8	Intel	Intel	PROPN	NNP	_	_	_	_	NER=O
+9	Mac	Mac	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+10	OS	OS	PROPN	NNP	_	_	_	_	NER=I-ENV
+11	X	X	PROPN	NNP	_	_	_	_	NER=I-ENV
+12	10.15	10.15	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+13	;	;	PUNCT	:	_	_	_	_	NER=O
+14	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+15	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+16	89.0	89.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+18	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+19	Firefox/89.0	Firefox/89.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p12 section=STEPS
+# sent_id = performance-s18
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p13 section=STEPS
+# sent_id = performance-s19
+# text = Two ways:
+1	Two	Two	NUM	CD	_	_	_	_	NER=O
+2	ways	way	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = performance-s20
+# text = 1. Open Google Drive, click upload file, Firefox freezes
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	Google	Google	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Google_Drive
+5	Drive	Drive	PROPN	NNP	_	_	_	_	NER=I-PRODUCT|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	click	click	ADJ	JJ	_	_	_	_	NER=O
+8	upload	upload	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+9	file	file	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+12	freezes	freeze	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+
+# sent_id = performance-s21
+# text = 2. Open new tab, click open file, Firefox freezes
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	new	new	ADJ	JJ	_	_	_	_	NER=O
+5	tab	tab	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	click	click	ADJ	JJ	_	_	_	_	NER=O
+8	open	open	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+9	file	file	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+12	freezes	freeze	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+
+# paragraph = p14 section=ACTUAL
+# sent_id = performance-s22
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p15 section=ACTUAL
+# sent_id = performance-s23
+# text = Two ways:
+1	Two	Two	NUM	CD	_	_	_	_	NER=O
+2	ways	way	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = performance-s24
+# text = 1. Open Google Drive, click upload file, Firefox freezes
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	ADJ	JJ	_	_	_	_	NER=O
+4	Google	Google	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Google_Drive
+5	Drive	Drive	PROPN	NNP	_	_	_	_	NER=I-PRODUCT|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	click	click	ADJ	JJ	_	_	_	_	NER=O
+8	upload	upload	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+9	file	file	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+12	freezes	freeze	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+
+# sent_id = performance-s25
+# text = 2. Open new tab, click open file, Firefox freezes
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	new	new	ADJ	JJ	_	_	_	_	NER=O
+5	tab	tab	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	click	click	ADJ	JJ	_	_	_	_	NER=O
+8	open	open	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+9	file	file	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+12	freezes	freeze	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+
+# paragraph = p16 section=EXPECTED
+# sent_id = performance-s26
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p17 section=EXPECTED
+# sent_id = performance-s27
+# text = Two ways:
+1	Two	Two	NUM	CD	_	_	_	_	NER=O
+2	ways	way	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = performance-s28
+# text = 1. Open Google Drive, click upload file, Firefox does not freeze
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	ADJ	JJ	_	_	_	_	NER=O
+4	Google	Google	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Google_Drive
+5	Drive	Drive	PROPN	NNP	_	_	_	_	NER=I-PRODUCT|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	click	click	ADJ	JJ	_	_	_	_	NER=O
+8	upload	upload	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+9	file	file	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+12	does	do	AUX	VBZ	_	_	_	_	NER=O
+13	not	not	PART	RB	_	_	_	_	NER=O
+14	freeze	freeze	VERB	VB	_	_	_	_	NER=B-SYMPTOM
+
+# sent_id = performance-s29
+# text = 2. Open new tab, click open file, Firefox does not freeze
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	new	new	ADJ	JJ	_	_	_	_	NER=O
+5	tab	tab	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	click	click	ADJ	JJ	_	_	_	_	NER=O
+8	open	open	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+9	file	file	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+12	does	do	AUX	VBZ	_	_	_	_	NER=O
+13	not	not	PART	RB	_	_	_	_	NER=O
+14	freeze	freeze	VERB	VB	_	_	_	_	NER=B-SYMPTOM
+
+# newpar report = thunderbird-1859093 | ticket_type=bug category=performance component=Frontend severity=Major confidence=high
+# paragraph = p18 section=TITLE
+# sent_id = performance-s30
+# text = slow start
+1	slow	slow	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM
+2	start	start	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+
+# paragraph = p19 section=STEPS
+# sent_id = performance-s31
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p20 section=STEPS
+# sent_id = performance-s32
+# text = Starting Thunderbird is extremely slow!
+1	Starting	start	VERB	VBG	_	_	_	_	NER=O
+2	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+3	is	be	AUX	VBZ	_	_	_	_	NER=O
+4	extremely	extremely	ADV	RB	_	_	_	_	NER=B-SYMPTOM
+5	slow	slow	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM|SpaceAfter=No
+6	!	!	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s33
+# text = I think the problem started with v119 Beta 3, before that, it worked relatively fast.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	think	think	VERB	VBP	_	_	_	_	NER=O
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	problem	problem	NOUN	NN	_	_	_	_	NER=O
+5	started	start	VERB	VBD	_	_	_	_	NER=O
+6	with	with	ADP	IN	_	_	_	_	NER=O
+7	v119	v119	NUM	CD	_	_	_	_	NER=B-ENV
+8	Beta	Beta	PROPN	NNP	_	_	_	_	NER=I-ENV
+9	3	3	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	before	before	ADP	IN	_	_	_	_	NER=O
+12	that	that	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+13	,	,	PUNCT	,	_	_	_	_	NER=O
+14	it	it	PRON	PRP	_	_	_	_	NER=O
+15	worked	work	VERB	VBD	_	_	_	_	NER=O
+16	relatively	relatively	ADV	RB	_	_	_	_	NER=O
+17	fast	fast	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s34
+# text = It takes up to 20 seconds until the program is usable (message selection is possible, displaying messages, etc.)
+1	It	it	PRON	PRP	_	_	_	_	NER=O
+2	takes	take	VERB	VBZ	_	_	_	_	NER=O
+3	up	up	ADP	IN	_	_	_	_	NER=O
+4	to	to	ADP	TO	_	_	_	_	NER=O
+5	20	20	NUM	CD	_	_	_	_	NER=B-METRIC
+6	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC
+7	until	until	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	program	program	NOUN	NN	_	_	_	_	NER=O
+10	is	be	AUX	VBZ	_	_	_	_	NER=O
+11	usable	usable	ADJ	JJ	_	_	_	_	NER=O
+12	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+13	message	message	ADJ	JJ	_	_	_	_	NER=O
+14	selection	selection	NOUN	NN	_	_	_	_	NER=O
+15	is	be	AUX	VBZ	_	_	_	_	NER=O
+16	possible	possible	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+17	,	,	PUNCT	,	_	_	_	_	NER=O
+18	displaying	display	VERB	VBG	_	_	_	_	NER=O
+19	messages	message	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+20	,	,	PUNCT	,	_	_	_	_	NER=O
+21	etc	etc	X	FW	_	_	_	_	NER=O|SpaceAfter=No
+22	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+23	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = performance-s35
+# text = I tried creating a new profile - same result.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	tried	try	VERB	VBD	_	_	_	_	NER=O
+3	creating	create	VERB	VBG	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	new	new	ADJ	JJ	_	_	_	_	NER=O
+6	profile	profile	NOUN	NN	_	_	_	_	NER=O
+7	-	-	PUNCT	:	_	_	_	_	NER=O
+8	same	same	ADJ	JJ	_	_	_	_	NER=O
+9	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s36
+# text = I don't have any add-ons or extensions.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	do	do	AUX	VBP	_	_	_	_	NER=O|SpaceAfter=No
+3	n't	not	PART	RB	_	_	_	_	NER=O
+4	have	have	VERB	VB	_	_	_	_	NER=O
+5	any	any	DET	DT	_	_	_	_	NER=O
+6	add-ons	add-on	NOUN	NNS	_	_	_	_	NER=O
+7	or	or	CCONJ	CC	_	_	_	_	NER=O
+8	extensions	extension	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s37
+# text = It's simply painfully slow to start!
+1	It	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+2	's	be	AUX	VBZ	_	_	_	_	NER=O
+3	simply	simply	ADV	RB	_	_	_	_	NER=O
+4	painfully	painfully	ADV	RB	_	_	_	_	NER=B-SYMPTOM
+5	slow	slow	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+6	to	to	PART	TO	_	_	_	_	NER=O
+7	start	start	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+8	!	!	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s38
+# text = Prior versions were much faster on the same system (Windows 11).
+1	Prior	prior	ADJ	JJ	_	_	_	_	NER=O
+2	versions	version	NOUN	NNS	_	_	_	_	NER=O
+3	were	be	AUX	VBD	_	_	_	_	NER=O
+4	much	much	ADJ	JJ	_	_	_	_	NER=O
+5	faster	faster	ADV	RBR	_	_	_	_	NER=O
+6	on	on	ADP	IN	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	same	same	ADJ	JJ	_	_	_	_	NER=O
+9	system	system	NOUN	NN	_	_	_	_	NER=O
+10	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+11	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+12	11	11	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+13	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p21 section=STEPS
+# sent_id = performance-s39
+# text = Please fix this or at least add an option "Minimize on close" !
+1	Please	please	INTJ	VB	_	_	_	_	NER=O
+2	fix	fix	VERB	VB	_	_	_	_	NER=O
+3	this	this	DET	DT	_	_	_	_	NER=O
+4	or	or	CCONJ	CC	_	_	_	_	NER=O
+5	at	at	ADP	IN	_	_	_	_	NER=O
+6	least	least	ADJ	JJS	_	_	_	_	NER=O
+7	add	add	VERB	VB	_	_	_	_	NER=O
+8	an	an	DET	DT	_	_	_	_	NER=O
+9	option	option	NOUN	NN	_	_	_	_	NER=O
+10	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+11	Minimize	Minimize	PROPN	NNP	_	_	_	_	NER=B-FEATURE
+12	on	on	ADP	IN	_	_	_	_	NER=I-FEATURE
+13	close	close	ADJ	JJ	_	_	_	_	NER=I-FEATURE|SpaceAfter=No
+14	"	"	PUNCT	.	_	_	_	_	NER=O
+15	!	!	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s40
+# text = !!!
+1	!	!	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	!	!	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+3	!	!	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s41
+# text = This would be so extremely helpful together with "Minimize to tray".
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	would	would	AUX	MD	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	so	so	ADV	RB	_	_	_	_	NER=O
+5	extremely	extremely	ADV	RB	_	_	_	_	NER=O
+6	helpful	helpful	ADJ	JJ	_	_	_	_	NER=O
+7	together	together	ADV	RB	_	_	_	_	NER=O
+8	with	with	ADP	IN	_	_	_	_	NER=O
+9	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+10	Minimize	Minimize	PROPN	NNP	_	_	_	_	NER=B-FEATURE
+11	to	to	PART	TO	_	_	_	_	NER=I-FEATURE
+12	tray	tray	VERB	VB	_	_	_	_	NER=I-FEATURE|SpaceAfter=No
+13	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s42
+# text = This way, I simply keep TB running in the background and it would be accessible instantly when restarting or restoring the main window.
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	way	way	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	,	_	_	_	_	NER=O
+4	I	i	PRON	PRP	_	_	_	_	NER=O
+5	simply	simply	ADV	RB	_	_	_	_	NER=O
+6	keep	keep	VERB	VB	_	_	_	_	NER=O
+7	TB	TB	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+8	running	run	VERB	VBG	_	_	_	_	NER=O
+9	in	in	ADP	IN	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	background	background	NOUN	NN	_	_	_	_	NER=O
+12	and	and	CCONJ	CC	_	_	_	_	NER=O
+13	it	it	PRON	PRP	_	_	_	_	NER=O
+14	would	would	AUX	MD	_	_	_	_	NER=O
+15	be	be	AUX	VB	_	_	_	_	NER=O
+16	accessible	accessible	ADJ	JJ	_	_	_	_	NER=O
+17	instantly	instantly	ADV	RB	_	_	_	_	NER=O
+18	when	when	ADV	WRB	_	_	_	_	NER=O
+19	restarting	restart	VERB	VBG	_	_	_	_	NER=O
+20	or	or	CCONJ	CC	_	_	_	_	NER=O
+21	restoring	restore	VERB	VBG	_	_	_	_	NER=O
+22	the	the	DET	DT	_	_	_	_	NER=O
+23	main	main	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+24	window	window	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+25	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p22 section=ACTUAL
+# sent_id = performance-s43
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p23 section=ACTUAL
+# sent_id = performance-s44
+# text = TB starts extremely slowly (10 seconds or more).
+1	TB	TB	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+2	starts	start	VERB	VBZ	_	_	_	_	NER=O
+3	extremely	extremely	ADV	RB	_	_	_	_	NER=B-SYMPTOM
+4	slowly	slowly	ADV	RB	_	_	_	_	NER=I-SYMPTOM
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	10	10	NUM	CD	_	_	_	_	NER=B-METRIC
+7	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC
+8	or	or	CCONJ	CC	_	_	_	_	NER=I-METRIC
+9	more	more	ADJ	JJR	_	_	_	_	NER=I-METRIC|SpaceAfter=No
+10	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s45
+# text = UI is visible, but unusable, no messages are displayed, etc.
+1	UI	UI	PROPN	NNP	_	_	_	_	NER=O
+2	is	be	AUX	VBZ	_	_	_	_	NER=O
+3	visible	visible	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	,	_	_	_	_	NER=O
+5	but	but	CCONJ	CC	_	_	_	_	NER=O
+6	unusable	unusable	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+7	,	,	PUNCT	,	_	_	_	_	NER=O
+8	no	no	DET	DT	_	_	_	_	NER=O
+9	messages	message	NOUN	NNS	_	_	_	_	NER=O
+10	are	be	AUX	VBP	_	_	_	_	NER=O
+11	displayed	display	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+12	,	,	PUNCT	,	_	_	_	_	NER=O
+13	etc	etc	X	FW	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = performance-s46
+# text = After 10 to 20 seconds, everything works as intended.
+1	After	after	ADP	IN	_	_	_	_	NER=O
+2	10	10	NUM	CD	_	_	_	_	NER=B-METRIC
+3	to	to	ADP	TO	_	_	_	_	NER=I-METRIC
+4	20	20	NUM	CD	_	_	_	_	NER=I-METRIC
+5	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	everything	everything	NOUN	NN	_	_	_	_	NER=O
+8	works	work	NOUN	NNS	_	_	_	_	NER=O
+9	as	as	ADP	IN	_	_	_	_	NER=O
+10	intended	intend	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p24 section=EXPECTED
+# sent_id = performance-s47
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p25 section=EXPECTED
+# sent_id = performance-s48
+# text = Reasonably fast startup time (1-2 seconds at most).
+1	Reasonably	reasonably	ADV	RB	_	_	_	_	NER=O
+2	fast	fast	ADV	RB	_	_	_	_	NER=O
+3	startup	startup	ADJ	JJ	_	_	_	_	NER=B-FEATURE
+4	time	time	NOUN	NN	_	_	_	_	NER=I-FEATURE
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	1-2	1-2	ADJ	JJ	_	_	_	_	NER=B-METRIC
+7	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC
+8	at	at	ADP	IN	_	_	_	_	NER=I-METRIC
+9	most	most	ADJ	JJS	_	_	_	_	NER=I-METRIC|SpaceAfter=No
+10	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+

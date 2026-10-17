@@ -1,0 +1,430 @@
+# newdoc id = network
+# object = network
+# newpar report = vscode-20567 | ticket_type=bug category=network component=Backend severity=Critical confidence=low
+# paragraph = p1 section=TITLE
+# sent_id = network-s1
+# text = Insiders 1.10.0 Marketplace returned 'ECONNREFUSED'.
+1	Insiders	Insiders	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Visual_Studio_Code
+2	1.10.0	1.10.0	NUM	CD	_	_	_	_	NER=B-ENV
+3	Marketplace	Marketplace	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|MSG=B
+4	returned	return	VERB	VBD	_	_	_	_	NER=O|MSG=I
+5	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+6	ECONNREFUSED	ECONNREFUSED	PROPN	NNP	_	_	_	_	NER=B-ERROR_CODE|MSG=I|SpaceAfter=No
+7	'	'	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = network-s2
+# text = Please check the 'http.proxy' setting.
+1	Please	Please	INTJ	NNP	_	_	_	_	NER=O|MSG=I
+2	check	check	VERB	VB	_	_	_	_	NER=O|MSG=I
+3	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+4	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+5	http.proxy	http.proxy	X	NNP	_	_	_	_	NER=B-CODE_LOCATION|MSG=I|SpaceAfter=No
+6	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I
+7	setting	setting	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# paragraph = p2 section=DESCRIPTION
+# sent_id = network-s3
+# text = Getting `Marketplace returned 'ECONNREFUSED'.
+1	Getting	get	VERB	VBG	_	_	_	_	NER=O
+2	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+3	Marketplace	marketplace	NOUN	NN	_	_	_	_	NER=B-PRODUCT|MSG=B
+4	returned	return	VERB	VBD	_	_	_	_	NER=O|MSG=I
+5	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+6	ECONNREFUSED	ECONNREFUSED	PROPN	NNP	_	_	_	_	NER=B-ERROR_CODE|MSG=I|SpaceAfter=No
+7	'	'	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = network-s4
+# text = Please check the 'http.proxy' setting.` after most recent insiders update.
+1	Please	Please	INTJ	NNP	_	_	_	_	NER=O|MSG=I
+2	check	check	VERB	VB	_	_	_	_	NER=O|MSG=I
+3	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+4	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+5	http.proxy	http.proxy	X	NNP	_	_	_	_	NER=B-CODE_LOCATION|MSG=I|SpaceAfter=No
+6	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I
+7	setting	set	VERB	VBG	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+9	`	`	PUNCT	``	_	_	_	_	NER=O
+10	after	after	ADP	IN	_	_	_	_	NER=O
+11	most	most	ADJ	JJS	_	_	_	_	NER=O
+12	recent	recent	ADJ	JJ	_	_	_	_	NER=O
+13	insiders	insider	NOUN	NNS	_	_	_	_	NER=O
+14	update	update	VERB	VBP	_	_	_	_	NER=O|SpaceAfter=No
+15	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s5
+# text = Worked on Friday when I last opened it.
+1	Worked	work	VERB	VBN	_	_	_	_	NER=O
+2	on	on	ADP	IN	_	_	_	_	NER=O
+3	Friday	Friday	PROPN	NNP	_	_	_	_	NER=O
+4	when	when	ADV	WRB	_	_	_	_	NER=O
+5	I	i	PRON	PRP	_	_	_	_	NER=O
+6	last	last	ADJ	JJ	_	_	_	_	NER=O
+7	opened	open	VERB	VBD	_	_	_	_	NER=O
+8	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s6
+# text = Didn't change any settings.
+1	Did	Did	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+2	n't	not	PART	RB	_	_	_	_	NER=O
+3	change	change	VERB	VB	_	_	_	_	NER=O
+4	any	any	DET	DT	_	_	_	_	NER=O
+5	settings	setting	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s7
+# text = Not using a proxy.
+1	Not	not	PART	RB	_	_	_	_	NER=O
+2	using	use	VERB	VBG	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	proxy	proxy	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Proxy_server|SpaceAfter=No
+5	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s8
+# text = I'm assuming latest update broke it somehow since it started happening right after I updated this morning.
+1	I	i	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+2	'm	be	AUX	VBP	_	_	_	_	NER=O
+3	assuming	assume	VERB	VBG	_	_	_	_	NER=O
+4	latest	late	ADJ	JJS	_	_	_	_	NER=O
+5	update	update	ADJ	JJ	_	_	_	_	NER=O
+6	broke	break	VERB	VBD	_	_	_	_	NER=B-SYMPTOM
+7	it	it	PRON	PRP	_	_	_	_	NER=O
+8	somehow	somehow	ADV	RB	_	_	_	_	NER=O
+9	since	since	ADP	IN	_	_	_	_	NER=O
+10	it	it	PRON	PRP	_	_	_	_	NER=O
+11	started	start	VERB	VBD	_	_	_	_	NER=O
+12	happening	happen	VERB	VBG	_	_	_	_	NER=O
+13	right	right	ADV	RB	_	_	_	_	NER=O
+14	after	after	ADP	IN	_	_	_	_	NER=O
+15	I	i	PRON	PRP	_	_	_	_	NER=O
+16	updated	update	VERB	VBD	_	_	_	_	NER=O
+17	this	this	DET	DT	_	_	_	_	NER=O
+18	morning	morning	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p3 section=ENVIRONMENT
+# sent_id = network-s9
+# text = - VSCode Version: 1.10.0-insider 422d7ff1b78fcac514498921551c33a988c4ad34 2017-02-13T07:02:30.785Z
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	VSCode	VSCode	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Visual_Studio_Code
+3	Version	version	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+5	1.10.0-insider	1.10.0-insider	NUM	CD	_	_	_	_	NER=B-ENV
+6	422d7ff1b78fcac514498921551c33a988c4ad34	422d7ff1b78fcac514498921551c33a988c4ad34	NUM	CD	_	_	_	_	NER=O
+7	2017-02-13T07	2017-02-13t07	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+8	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+9	02	02	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+10	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+11	30.785	30.785	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+12	Z	z	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = network-s10
+# text = - OS Version: OSX 10.10.5 (14F2109)
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	OS	o	NOUN	NN	_	_	_	_	NER=O
+3	Version	version	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+5	OSX	osx	CCONJ	CC	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+6	10.10.5	10.10.5	NUM	CD	_	_	_	_	NER=I-ENV
+7	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+8	14F2109	14F2109	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+9	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p4 section=STEPS
+# sent_id = network-s11
+# text = Steps to Reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	Reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p5 section=STEPS
+# sent_id = network-s12
+# text = 1. Download above vscode-insiders build
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Download	download	VERB	VB	_	_	_	_	NER=O
+4	above	above	ADP	IN	_	_	_	_	NER=O
+5	vscode-insiders	vscode-insiders	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Visual_Studio_Code
+6	build	build	VERB	VBP	_	_	_	_	NER=O
+
+# sent_id = network-s13
+# text = 2. Restart vscode
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Restart	restart	VERB	VB	_	_	_	_	NER=O
+4	vscode	vscode	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Visual_Studio_Code
+
+# sent_id = network-s14
+# text = 3. Open extensions
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	extensions	extension	NOUN	NNS	_	_	_	_	NER=O
+
+# sent_id = network-s15
+# text = 4. See "Marketplace returned 'ECONNREFUSED'.
+1	4	4	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	See	see	VERB	VB	_	_	_	_	NER=O
+4	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+5	Marketplace	Marketplace	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|MSG=B
+6	returned	return	VERB	VBD	_	_	_	_	NER=O|MSG=I
+7	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	ECONNREFUSED	ECONNREFUSED	PROPN	NNP	_	_	_	_	NER=B-ERROR_CODE|MSG=I|SpaceAfter=No
+9	'	'	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = network-s16
+# text = Please check the 'http.proxy' setting."
+1	Please	Please	INTJ	NNP	_	_	_	_	NER=O|MSG=I
+2	check	check	VERB	VB	_	_	_	_	NER=O|MSG=I
+3	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+4	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+5	http.proxy	http.proxy	X	NNP	_	_	_	_	NER=B-CODE_LOCATION|MSG=I|SpaceAfter=No
+6	'	'	PUNCT	''	_	_	_	_	NER=O|MSG=I
+7	setting	set	VERB	VBG	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+9	"	"	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p6 section=STEPS
+# sent_id = network-s17
+# text = Need any more info?
+1	Need	need	VERB	VB	_	_	_	_	NER=O
+2	any	any	DET	DT	_	_	_	_	NER=O
+3	more	more	ADJ	JJR	_	_	_	_	NER=O
+4	info	info	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+5	?	?	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = spark-13335362 | ticket_type=feature_request category=network component=Backend severity=None confidence=high
+# paragraph = p7 section=TITLE
+# sent_id = network-s18
+# text = Make SocketAuthServer socket timeout configurable
+1	Make	Make	PROPN	NNP	_	_	_	_	NER=O
+2	SocketAuthServer	SocketAuthServer	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION
+3	socket	socket	NOUN	NN	_	_	_	_	NER=O
+4	timeout	timeout	NOUN	NN	_	_	_	_	NER=O
+5	configurable	configurable	ADJ	JJ	_	_	_	_	NER=O
+
+# paragraph = p8 section=DESCRIPTION
+# sent_id = network-s19
+# text = In SPARK-21551 the socket timeout for the Pyspark applications has been increased from 3 to 15 seconds.
+1	In	in	ADP	IN	_	_	_	_	NER=O
+2	SPARK-21551	SPARK-21551	PROPN	NNP	_	_	_	_	NER=B-ISSUE_REF
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	socket	socket	NOUN	NN	_	_	_	_	NER=O
+5	timeout	timeout	NOUN	NN	_	_	_	_	NER=O
+6	for	for	ADP	IN	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	Pyspark	Pyspark	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Spark
+9	applications	application	NOUN	NNS	_	_	_	_	NER=O
+10	has	have	AUX	VBZ	_	_	_	_	NER=O
+11	been	be	AUX	VBN	_	_	_	_	NER=O
+12	increased	increase	VERB	VBN	_	_	_	_	NER=O
+13	from	from	ADP	IN	_	_	_	_	NER=O
+14	3	3	NUM	CD	_	_	_	_	NER=B-METRIC
+15	to	to	ADP	TO	_	_	_	_	NER=I-METRIC
+16	15	15	NUM	CD	_	_	_	_	NER=I-METRIC
+17	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC|SpaceAfter=No
+18	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s20
+# text = However it is still hardcoded.
+1	However	however	ADV	RB	_	_	_	_	NER=O
+2	it	it	PRON	PRP	_	_	_	_	NER=O
+3	is	be	AUX	VBZ	_	_	_	_	NER=O
+4	still	still	ADV	RB	_	_	_	_	NER=O
+5	hardcoded	hardcoded	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+6	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s21
+# text = In certain situations even the 15 seconds is not enough, so it should be made configurable.
+1	In	in	ADP	IN	_	_	_	_	NER=O
+2	certain	certain	ADJ	JJ	_	_	_	_	NER=O
+3	situations	situation	NOUN	NNS	_	_	_	_	NER=O
+4	even	even	ADV	RB	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	15	15	NUM	CD	_	_	_	_	NER=B-METRIC
+7	seconds	second	NOUN	NNS	_	_	_	_	NER=I-METRIC
+8	is	be	AUX	VBZ	_	_	_	_	NER=O
+9	not	not	PART	RB	_	_	_	_	NER=O
+10	enough	enough	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+11	,	,	PUNCT	,	_	_	_	_	NER=O
+12	so	so	ADP	IN	_	_	_	_	NER=O
+13	it	it	PRON	PRP	_	_	_	_	NER=O
+14	should	should	AUX	MD	_	_	_	_	NER=O
+15	be	be	AUX	VB	_	_	_	_	NER=O
+16	made	make	VERB	VBN	_	_	_	_	NER=O
+17	configurable	configurable	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s22
+# text = This is requested after seeing it in real-life workload failures.
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	is	be	AUX	VBZ	_	_	_	_	NER=O
+3	requested	request	VERB	VBN	_	_	_	_	NER=O
+4	after	after	ADP	IN	_	_	_	_	NER=O
+5	seeing	see	VERB	VBG	_	_	_	_	NER=O
+6	it	it	PRON	PRP	_	_	_	_	NER=O
+7	in	in	ADP	IN	_	_	_	_	NER=O
+8	real-life	real-life	ADJ	JJ	_	_	_	_	NER=O
+9	workload	workload	NOUN	NN	_	_	_	_	NER=O
+10	failures	failure	NOUN	NNS	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s23
+# text = Also it has been suggested and requested in an earlier comment in [SPARK-18649|https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498]
+1	Also	also	ADV	RB	_	_	_	_	NER=O
+2	it	it	PRON	PRP	_	_	_	_	NER=O
+3	has	have	AUX	VBZ	_	_	_	_	NER=O
+4	been	be	AUX	VBN	_	_	_	_	NER=O
+5	suggested	suggest	VERB	VBN	_	_	_	_	NER=O
+6	and	and	CCONJ	CC	_	_	_	_	NER=O
+7	requested	request	VERB	VBN	_	_	_	_	NER=O
+8	in	in	ADP	IN	_	_	_	_	NER=O
+9	an	an	DET	DT	_	_	_	_	NER=O
+10	earlier	early	ADJ	JJR	_	_	_	_	NER=O
+11	comment	comment	NOUN	NN	_	_	_	_	NER=O
+12	in	in	ADP	IN	_	_	_	_	NER=O
+13	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+14	SPARK-18649	SPARK-18649	PROPN	NNP	_	_	_	_	NER=B-ISSUE_REF|SpaceAfter=No
+15	|	|	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+16	https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498	https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+17	]	]	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p9 section=DESCRIPTION
+# sent_id = network-s24
+# text = In  Spark 2.4 it is under
+1	In	in	ADP	IN	_	_	_	_	NER=O
+2	Spark	Spark	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Spark
+3	2.4	2.4	NUM	CD	_	_	_	_	NER=B-ENV
+4	it	it	PRON	PRP	_	_	_	_	NER=O
+5	is	be	AUX	VBZ	_	_	_	_	NER=O
+6	under	under	ADP	IN	_	_	_	_	NER=O
+
+# sent_id = network-s25
+# text = [PythonRDD.scala|https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899]
+1	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	PythonRDD.scala	PythonRDD.scala	X	NNP	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+3	|	|	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+4	https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899	https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+5	]	]	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s26
+# text = in Spark 3.x the code has been moved to
+1	in	in	ADP	IN	_	_	_	_	NER=O
+2	Spark	Spark	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Spark
+3	3	3	NUM	CD	_	_	_	_	NER=B-ENV|SpaceAfter=No
+4	.	.	PUNCT	.	_	_	_	_	NER=I-ENV|SpaceAfter=No
+5	x	x	VERB	VB	_	_	_	_	NER=I-ENV
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	code	code	NOUN	NN	_	_	_	_	NER=O
+8	has	have	AUX	VBZ	_	_	_	_	NER=O
+9	been	be	AUX	VBN	_	_	_	_	NER=O
+10	moved	move	VERB	VBN	_	_	_	_	NER=O
+11	to	to	PART	TO	_	_	_	_	NER=O
+
+# sent_id = network-s27
+# text = [SocketAuthServer.scala|https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51]
+1	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	SocketAuthServer.scala	SocketAuthServer.scala	X	NNP	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+3	|	|	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+4	https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51	https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+5	]	]	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s28
+# text = {code}
+1	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	}	}	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = network-s29
+# text = serverSocket.setSoTimeout(15000)
+1	serverSocket.setSoTimeout	serverSocket.setSoTimeout	X	NNP	_	_	_	_	NER=O|SpaceAfter=No
+2	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+3	15000	15000	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+4	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = network-s30
+# text = {code}
+1	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+2	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	}	}	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = network-s31
+# text = Please include this in both 2.4 and 3.x branches.
+1	Please	Please	INTJ	NNP	_	_	_	_	NER=O
+2	include	include	VERB	VBP	_	_	_	_	NER=O
+3	this	this	DET	DT	_	_	_	_	NER=O
+4	in	in	ADP	IN	_	_	_	_	NER=O
+5	both	both	DET	DT	_	_	_	_	NER=O
+6	2.4	2.4	NUM	CD	_	_	_	_	NER=B-ENV
+7	and	and	CCONJ	CC	_	_	_	_	NER=O
+8	3	3	NUM	CD	_	_	_	_	NER=B-ENV|SpaceAfter=No
+9	.	.	PUNCT	.	_	_	_	_	NER=I-ENV|SpaceAfter=No
+10	x	x	ADJ	JJ	_	_	_	_	NER=I-ENV
+11	branches	branch	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = thunderbird-1757761 | ticket_type=bug category=network component=Frontend severity=Minor confidence=high
+# paragraph = p10 section=TITLE
+# sent_id = network-s32
+# text = List of DNS over HTTPS Providers is Blank
+1	List	list	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+2	of	of	ADP	IN	_	_	_	_	NER=I-UI_ELEMENT
+3	DNS	DNS	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+4	over	over	ADP	IN	_	_	_	_	NER=I-UI_ELEMENT
+5	HTTPS	HTTPS	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+6	Providers	Providers	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+7	is	be	AUX	VBZ	_	_	_	_	NER=O
+8	Blank	blank	VERB	VB	_	_	_	_	NER=B-SYMPTOM
+
+# paragraph = p11 section=DESCRIPTION
+# sent_id = network-s33
+# text = No STR but noticed after a fresh install of 98.0b2/b3 (with a new profile) that the list of DNS over HTTPS providers is blank.
+1	No	no	DET	DT	_	_	_	_	NER=O
+2	STR	STR	PROPN	NNP	_	_	_	_	NER=O
+3	but	but	CCONJ	CC	_	_	_	_	NER=O
+4	noticed	notice	VERB	VBD	_	_	_	_	NER=O
+5	after	after	ADP	IN	_	_	_	_	NER=O
+6	a	a	DET	DT	_	_	_	_	NER=O
+7	fresh	fresh	ADJ	JJ	_	_	_	_	NER=O
+8	install	install	NOUN	NN	_	_	_	_	NER=O
+9	of	of	ADP	IN	_	_	_	_	NER=O
+10	98.0b2	98.0b2	NUM	CD	_	_	_	_	NER=B-ENV|SpaceAfter=No
+11	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+12	b3	b3	NOUN	NN	_	_	_	_	NER=B-ENV
+13	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+14	with	with	ADP	IN	_	_	_	_	NER=O
+15	a	a	DET	DT	_	_	_	_	NER=O
+16	new	new	ADJ	JJ	_	_	_	_	NER=O
+17	profile	profile	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+18	)	)	PUNCT	)	_	_	_	_	NER=O
+19	that	that	SCONJ	IN	_	_	_	_	NER=O
+20	the	the	DET	DT	_	_	_	_	NER=O
+21	list	list	NOUN	NN	_	_	_	_	NER=O
+22	of	of	ADP	IN	_	_	_	_	NER=O
+23	DNS	DNS	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:DNS_over_HTTPS
+24	over	over	ADP	IN	_	_	_	_	NER=I-TECHNOLOGY
+25	HTTPS	HTTPS	PROPN	NNP	_	_	_	_	NER=I-TECHNOLOGY
+26	providers	provider	NOUN	NNS	_	_	_	_	NER=O
+27	is	be	AUX	VBZ	_	_	_	_	NER=O
+28	blank	blank	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+29	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = network-s34
+# text = This setting displays https://mozilla.cloudflare-dns.com/dns-query as a provider in 91.11.0.
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	setting	setting	NOUN	NN	_	_	_	_	NER=O
+3	displays	display	VERB	VBZ	_	_	_	_	NER=O
+4	https://mozilla.cloudflare-dns.com/dns-query	https://mozilla.cloudflare-dns.com/dns-query	X	ADD	_	_	_	_	NER=O
+5	as	as	ADP	IN	_	_	_	_	NER=O
+6	a	a	DET	DT	_	_	_	_	NER=O
+7	provider	provider	NOUN	NN	_	_	_	_	NER=O
+8	in	in	ADP	IN	_	_	_	_	NER=O
+9	91.11.0	91.11.0	NUM	CD	_	_	_	_	NER=B-ENV|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+

@@ -14,7 +14,12 @@
 * **ЛР №2 «Проектирование аннотационной схемы»** — аннотационная схема, её
   документация, конфигурации разметки и эталонные аннотации
   (`annotation_schema/`, `annotations/`, `docs/annotation_schema.md`) —
-  см. раздел [Аннотационная схема и аннотации](#аннотационная-схема-и-аннотации).
+  см. раздел [Аннотационная схема и аннотации](#аннотационная-схема-и-аннотации);
+* **ЛР №3 «Разметка текстовых данных»** — многоуровневая разметка 10 текстовых
+  документов (по одному на объект) в INCEpTION: баг-репорт → абзац/раздел →
+  предложение → токен → часть речи и лемма → сущности со ссылками DBpedia → связи;
+  анализ разметки и схема 1.1 (`annotations/text/markup/`, `scripts/text_markup.py`,
+  `docs/text_markup_analysis.md`) — см. раздел [Разметка текстовых данных](#разметка-текстовых-данных-лр3).
 
 Данные собраны в **трёх модальностях** для **10 объектов** — категорий
 программных дефектов:
@@ -70,6 +75,11 @@ bug-triage-dataset/
 │   ├── text/reports/<категория>/<report_id>.json  ← баг-репорты: классы, разделы, сущности, связи
 │   ├── text/conllu/<report_id>.conllu             ← те же репорты в CoNLL-U (BIO)
 │   ├── text/logs/<категория>/<лог>.jsonl          ← логи: событие на каждую строку
+│   ├── text/markup/                               ← ЛР3: многоуровневая разметка текстовых документов
+│   │   ├── corpus.json, documents/<объект>.txt    ← отбор текстов (по документу на объект)
+│   │   ├── auto/ → manual_edits.json → json/      ← предразметка, ручные правки, итоговая разметка
+│   │   ├── tsv/, conllu/                          ← WebAnno TSV 3.3 (INCEpTION) и CoNLL-U
+│   │   └── inception/                             ← проект INCEpTION, слои, экспорт XMI
 │   ├── images/screenshots_coco.json               ← скриншоты: области в формате COCO
 │   └── audio/<категория>/<имя>.TextGrid + .json   ← аудио: сегменты, расшифровка, сущности
 ├── scripts/                      ← КОД сбора и проверки данных
@@ -79,12 +89,14 @@ bug-triage-dataset/
 │   ├── make_screenshots.py       ← тестовый стенд + съёмка скриншотов дефектов
 │   ├── synth_audio.py            ← синтез голосовых обращений
 │   ├── validate_dataset.py       ← проверка корректности загрузки (шаг 4.3)
-│   └── annotation_tools.py       ← конфигурации разметки, проверка аннотаций, CoNLL-U, согласованность
+│   ├── annotation_tools.py       ← конфигурации разметки, проверка аннотаций, CoNLL-U, согласованность
+│   └── text_markup.py            ← ЛР3: отбор текстов, предразметка, правки, экспорт, INCEpTION, анализ
 └── docs/                         ← ДОКУМЕНТАЦИЯ
     ├── data_card.md              ← описание полей и особенностей данных
     ├── validation_report.md      ← результат последней проверки данных
     ├── annotation_schema.md      ← аннотационная схема: требования, уровни, форматы, верификация
     ├── annotation_validation_report.md ← результат последней проверки аннотаций
+    ├── text_markup_analysis.md   ← ЛР3: анализ разметки текста, зависимости между уровнями
     ├── img/                      ← иллюстрации разметки
     └── presentation/             ← презентации к лабораторным (PPTX)
 ```
@@ -139,6 +151,7 @@ bug-triage-dataset/
 | `scripts/make_screenshots.py` | поднимает локальные HTTP/HTTPS-серверы стенда, запускает ошибочный код, открывает страницы в Chromium и сохраняет 30 скриншотов + `images.csv` |
 | `scripts/synth_audio.py` | синтезирует 20 обращений (5 голосов, разный темп), приводит к WAV 16 кГц моно с полосой телефонного канала (200–3800 Гц), пишет `audio.csv` |
 | `scripts/validate_dataset.py` | проверяет корректность данных (см. ниже) и пишет `docs/validation_report.md` |
+| `scripts/text_markup.py` | ЛР3: собирает документы объектов (`corpus`), предразмечает все уровни (`auto`), применяет ручные правки (`final`), выгружает TSV 3.3 и CoNLL-U (`export`), создаёт проект INCEpTION и загружает разметку (`inception`), сверяет выгрузку INCEpTION с исходной (`roundtrip`), проверяет по схеме (`validate`), строит анализ (`analyze`) |
 | `scripts/annotation_tools.py` | ЛР2: генерирует конфигурации Label Studio из схемы (`configs`), задачи с предразметкой (`tasks`), проверяет аннотации (`validate`), выгружает CoNLL-U (`conllu`), считает согласованность разметчиков (`agree`) |
 
 ### Установка и запуск
@@ -167,6 +180,17 @@ python scripts/annotation_tools.py configs    # конфигурации Label S
 python scripts/annotation_tools.py tasks      # задачи Label Studio с предразметкой
 python scripts/annotation_tools.py validate   # проверка аннотаций -> docs/annotation_validation_report.md
 python scripts/annotation_tools.py conllu     # annotations/text/conllu/
+
+# 6. Разметка текстовых данных (ЛР3; нужны nltk с данными punkt_tab,
+#    averaged_perceptron_tagger_eng, wordnet и matplotlib)
+python scripts/text_markup.py corpus      # документы объектов
+python scripts/text_markup.py auto        # предразметка всех уровней
+python scripts/text_markup.py final       # + ручные правки -> annotations/text/markup/json/
+python scripts/text_markup.py validate && python scripts/text_markup.py export
+java -jar inception-app-webapp-38.4-standalone.jar   # INCEpTION на http://localhost:8080
+python scripts/text_markup.py inception --password <пароль admin>   # проект + документы
+python scripts/text_markup.py roundtrip --password <пароль admin>   # сверка выгрузки
+python scripts/text_markup.py analyze     # docs/text_markup_analysis.md + графики
 ```
 
 Скрипты проверялись на Python 3.13, Playwright 1.56 (Chromium 141), Node.js 22,
@@ -297,6 +321,51 @@ WER расшифровки ≤ 10 %), выборочная проверка ка
 
 ---
 
+## Разметка текстовых данных (ЛР3)
+
+**Тексты (шаг 1).** Для каждого из 10 объектов собран один документ из 2–4 баг-репортов этой категории
+объёмом 1956–2414 символов (≈0,5–1 страница). Каждый репорт прочитан вручную: в документ попадают только
+репорты, которые действительно описывают объект. Из 36 прочитанных кандидатов у 7 категория, выставленная
+по ключевым словам, оказалась ошибочной или спорной (`annotations/text/markup/corpus.json`).
+
+**Инструмент (шаг 2).** INCEpTION 38.4. Проект `lr3-bug-triage-text` со своими слоями создаётся из схемы
+(`text_markup.py inception`), документы загружаются через Remote API в формате WebAnno TSV 3.3. Выгрузка
+из INCEpTION совпадает с исходной разметкой без потерь.
+
+**Уровни и теги (шаги 3–5):**
+
+| Уровень | Что | Объём |
+|---|---|---|
+| 1. Документ | документ объекта и баг-репорты с классами (тип, категория, компонент, критичность) | 10 документов, 27 репортов |
+| 2. Абзац | абзац и тип раздела (TITLE, STEPS, ACTUAL, EXPECTED, ENVIRONMENT…) | 191 абзац |
+| 3. Токены и части речи | предложения, токены, UPOS + XPOS (Penn), леммы | 371 предложение, 3915 токенов |
+| 4. Сущности | 14 типов, в том числе новые PRODUCT, TECHNOLOGY, SYMPTOM, FEATURE, LOCALE, ISSUE_REF; 72 % названий связаны с DBpedia | 407 сущностей |
+| 5. Связи | SYMPTOM_OF, CAUSED_BY, OBSERVED_IN, VERSION_OF, HAS_MESSAGE, THROWN_AT | 87 связей |
+
+Разметка полуавтоматическая. Предразметка (NLTK + правила + словарь DBpedia) даёт для сущностей
+F1 = 0,88 относительно итоговой разметки. Разметчик проверил все документы и внёс 249 правок
+(`annotations/text/markup/manual_edits.json`). DBpedia Spotlight из рабочей среды был недоступен
+(robots.txt запрещает автоматические запросы), поэтому ссылки DBpedia проставлены по словарю ресурсов.
+
+| Разметка в INCEpTION (`performance`) | Части речи и разделы (`memory`) |
+|---|---|
+| ![](docs/img/lr3_inception_performance.png) | ![](docs/img/lr3_inception_pos.png) |
+
+**Анализ и обновление схемы (шаг 6)** — [docs/text_markup_analysis.md](docs/text_markup_analysis.md). Найденные
+зависимости между уровнями:
+
+* тип раздела предсказывает тип сущности: ENV почти только в ENVIRONMENT, UI_ELEMENT — в STEPS, симптомы — в TITLE и ACTUAL;
+* симптомы в EXPECTED отрицаются («Firefox does not freeze») → атрибут `SYMPTOM.polarity`;
+* ОС и браузер из User-Agent в отчётах Thunderbird — окружение автора, а не продукта → `ENV.source`;
+* раздел и сущность исправляют ошибки теггера: повелительные глаголы в STEPS, глаголы-симптомы →
+  точность UPOS с 88,9 % до 97,7 %;
+* авторы называют причины симптомов → связь `CAUSED_BY`; для локализации нужна сущность `LOCALE`.
+
+Аннотационная схема обновлена до версии 1.1 (обратно совместима, эталоны ЛР2 проходят проверку):
+[раздел 8 описания схемы](docs/annotation_schema.md#8-многоуровневая-разметка-текста-лр3).
+
+---
+
 ## Проверка корректности данных
 
 `scripts/validate_dataset.py` проверяет, что для каждой категории есть данные
@@ -331,4 +400,6 @@ SHA-256 всех 166 файлов данных совпадают с `data/check
 * ЛР2 «Проектирование аннотационной схемы» (шаг 8) — слайды о процессе
   проектирования схемы, требованиях, уровнях, форматах и верификации:
   [docs/presentation/LR2_annotation_schema.pptx](docs/presentation/LR2_annotation_schema.pptx).
-
+* ЛР3 «Разметка текстовых данных» (шаг 8) — презентация ЛР2, дополненная слайдами о процессе
+  разметки текста, анализе результатов и изменениях схемы:
+  [docs/presentation/LR3_text_markup.pptx](docs/presentation/LR3_text_markup.pptx).

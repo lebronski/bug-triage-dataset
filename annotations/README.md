@@ -1,6 +1,6 @@
 # Аннотации
 
-Разметка данных из `data/` по аннотационной схеме v1.0
+Разметка данных из `data/` по аннотационной схеме v1.1 (эталоны ЛР2 размечены по v1.0, она совместима с v1.1)
 ([описание](../docs/annotation_schema.md), [schema.json](../annotation_schema/schema.json)).
 Для каждой модальности — своя папка; внутри папки повторяется деление на категории, как в `data/`.
 
@@ -11,6 +11,7 @@
 | `text/logs/<category>/` | логи | JSON Lines, строка = событие | 1 эталон (40 строк) |
 | `images/` | скриншоты | COCO JSON (`screenshots_coco.json`) | 2 эталона, 9 областей |
 | `audio/<category>/` | голосовые обращения | Praat TextGrid + JSON | 2 эталона |
+| `text/markup/` | текстовые документы объектов (ЛР3) | JSON со смещениями, WebAnno TSV 3.3, UIMA CAS XMI, CoNLL-U | 10 документов: 27 репортов, 3915 токенов, 407 сущностей, 87 связей (`draft`) |
 
 Файл аннотации называется так же, как файл данных: `data/text/bug_reports/memory/hbase-13375331.json`
 → `annotations/text/reports/memory/hbase-13375331.json` (папка — по **размеченной** категории, она может

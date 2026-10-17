@@ -1,0 +1,507 @@
+# newdoc id = localization
+# object = localization
+# newpar report = firefox-1946605 | ticket_type=bug category=localization component=Frontend severity=Minor confidence=high
+# paragraph = p1 section=TITLE
+# sent_id = localization-s1
+# text = Poor translation quality with new lines in the text
+1	Poor	Poor	PROPN	NNP	_	_	_	_	NER=B-SYMPTOM
+2	translation	translation	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+3	quality	quality	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+4	with	with	ADP	IN	_	_	_	_	NER=O
+5	new	new	ADJ	JJ	_	_	_	_	NER=O
+6	lines	line	NOUN	NNS	_	_	_	_	NER=O
+7	in	in	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	text	text	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p2 section=DESCRIPTION
+# sent_id = localization-s2
+# text = When translating the first paragraph of this website https://www.freebsd.org/ from English to Russian it produces nonsense.
+1	When	when	ADV	WRB	_	_	_	_	NER=O
+2	translating	translate	VERB	VBG	_	_	_	_	NER=B-FEATURE
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	first	first	ADJ	JJ	_	_	_	_	NER=O
+5	paragraph	paragraph	NOUN	NN	_	_	_	_	NER=O
+6	of	of	ADP	IN	_	_	_	_	NER=O
+7	this	this	DET	DT	_	_	_	_	NER=O
+8	website	website	ADJ	JJ	_	_	_	_	NER=O
+9	https://www.freebsd.org/	https://www.freebsd.org/	X	ADD	_	_	_	_	NER=O
+10	from	from	ADP	IN	_	_	_	_	NER=O
+11	English	English	PROPN	NNP	_	_	_	_	NER=B-LOCALE|KB=dbr:English_language
+12	to	to	PART	TO	_	_	_	_	NER=O
+13	Russian	Russian	PROPN	NNP	_	_	_	_	NER=B-LOCALE|KB=dbr:Russian_language
+14	it	it	PRON	PRP	_	_	_	_	NER=O
+15	produces	produce	VERB	VBZ	_	_	_	_	NER=O
+16	nonsense	nonsense	NOUN	NN	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+17	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = localization-s3
+# text = When I copy the text to about:translations it's perfect.
+1	When	when	ADV	WRB	_	_	_	_	NER=O
+2	I	i	PRON	PRP	_	_	_	_	NER=O
+3	copy	copy	VERB	VBP	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	text	text	NOUN	NN	_	_	_	_	NER=O
+6	to	to	PART	TO	_	_	_	_	NER=O
+7	about:translations	about:translations	X	ADD	_	_	_	_	NER=B-UI_ELEMENT
+8	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+9	's	be	AUX	VBZ	_	_	_	_	NER=O
+10	perfect	perfect	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = localization-s4
+# text = I edited the HTML to remove new lines from the text and the quality of translation became good.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	edited	edit	VERB	VBD	_	_	_	_	NER=O
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	HTML	HTML	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:HTML
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	remove	remove	VERB	VB	_	_	_	_	NER=O
+7	new	new	ADJ	JJ	_	_	_	_	NER=O
+8	lines	line	NOUN	NNS	_	_	_	_	NER=O
+9	from	from	ADP	IN	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	text	text	NOUN	NN	_	_	_	_	NER=O
+12	and	and	CCONJ	CC	_	_	_	_	NER=O
+13	the	the	DET	DT	_	_	_	_	NER=O
+14	quality	quality	NOUN	NN	_	_	_	_	NER=O
+15	of	of	ADP	IN	_	_	_	_	NER=O
+16	translation	translation	NOUN	NN	_	_	_	_	NER=O
+17	became	become	VERB	VBD	_	_	_	_	NER=O
+18	good	good	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p3 section=DESCRIPTION
+# sent_id = localization-s5
+# text = Does it make sense to remove new lines inside paragraphs before translating to prevent such cases?
+1	Does	do	VERB	VBZ	_	_	_	_	NER=O
+2	it	it	PRON	PRP	_	_	_	_	NER=O
+3	make	make	VERB	VB	_	_	_	_	NER=O
+4	sense	sense	NOUN	NN	_	_	_	_	NER=O
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	remove	remove	VERB	VB	_	_	_	_	NER=O
+7	new	new	ADJ	JJ	_	_	_	_	NER=O
+8	lines	line	NOUN	NNS	_	_	_	_	NER=O
+9	inside	inside	ADP	IN	_	_	_	_	NER=O
+10	paragraphs	paragraph	NOUN	NN	_	_	_	_	NER=O
+11	before	before	ADP	IN	_	_	_	_	NER=O
+12	translating	translate	VERB	VBG	_	_	_	_	NER=B-FEATURE
+13	to	to	PART	TO	_	_	_	_	NER=O
+14	prevent	prevent	VERB	VB	_	_	_	_	NER=O
+15	such	such	ADJ	JJ	_	_	_	_	NER=O
+16	cases	case	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+17	?	?	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p4 section=NOTES
+# sent_id = localization-s6
+# text = > FreeBSD is an operating system used to power modern servers, desktops, and embedded <a href="https://www.freebsd.org/platforms/">platforms.</a> A large <a href="https://docs.FreeBSD.org/en/articles/contributors/#staff-committers"> community</a> has continually developed it for more than thirty years.
+1	>	>	SYM	SYM	_	_	_	_	NER=O
+2	FreeBSD	FreeBSD	PROPN	NNP	_	_	_	_	NER=O
+3	is	be	AUX	VBZ	_	_	_	_	NER=O
+4	an	an	DET	DT	_	_	_	_	NER=O
+5	operating	operating	NOUN	NN	_	_	_	_	NER=O
+6	system	system	NOUN	NN	_	_	_	_	NER=O
+7	used	use	VERB	VBN	_	_	_	_	NER=O
+8	to	to	ADP	TO	_	_	_	_	NER=O
+9	power	power	NOUN	NN	_	_	_	_	NER=O
+10	modern	modern	ADJ	JJ	_	_	_	_	NER=O
+11	servers	server	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+12	,	,	PUNCT	,	_	_	_	_	NER=O
+13	desktops	desktop	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+14	,	,	PUNCT	,	_	_	_	_	NER=O
+15	and	and	CCONJ	CC	_	_	_	_	NER=O
+16	embedded	embed	VERB	VBD	_	_	_	_	NER=O
+17	<	<	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+18	a	a	DET	DT	_	_	_	_	NER=O
+19	href	href	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+20	=	=	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+21	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+22	https://www.freebsd.org/platforms/	https://www.freebsd.org/platforms/	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+23	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+24	>	>	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+25	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+26	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+27	<	<	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+28	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+29	a	a	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+30	>	>	SYM	SYM	_	_	_	_	NER=O
+31	A	A	PROPN	NNP	_	_	_	_	NER=O
+32	large	large	ADJ	JJ	_	_	_	_	NER=O
+33	<	<	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+34	a	a	DET	DT	_	_	_	_	NER=O
+35	href	href	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+36	=	=	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+37	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+38	https://docs.FreeBSD.org/en/articles/contributors/#staff-committers	https://docs.FreeBSD.org/en/articles/contributors/#staff-committers	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+39	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+40	>	>	SYM	SYM	_	_	_	_	NER=O
+41	community	community	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+42	<	<	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+43	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+44	a	a	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+45	>	>	SYM	SYM	_	_	_	_	NER=O
+46	has	have	AUX	VBZ	_	_	_	_	NER=O
+47	continually	continually	ADV	RB	_	_	_	_	NER=O
+48	developed	develop	VERB	VBN	_	_	_	_	NER=O
+49	it	it	PRON	PRP	_	_	_	_	NER=O
+50	for	for	ADP	IN	_	_	_	_	NER=O
+51	more	more	ADJ	JJR	_	_	_	_	NER=O
+52	than	than	ADP	IN	_	_	_	_	NER=O
+53	thirty	thirty	NUM	CD	_	_	_	_	NER=O
+54	years	year	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+55	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = localization-s7
+# text = Its advanced networking, security, and storage features have made FreeBSD the platform of choice for many of the <a href="https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users"> busiest web sites</a> and most pervasive embedded networking and storage devices.
+1	Its	its	PRON	PRP$	_	_	_	_	NER=O
+2	advanced	advanced	ADJ	JJ	_	_	_	_	NER=O
+3	networking	networking	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	,	,	PUNCT	,	_	_	_	_	NER=O
+5	security	security	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	and	and	CCONJ	CC	_	_	_	_	NER=O
+8	storage	storage	NOUN	NN	_	_	_	_	NER=O
+9	features	feature	NOUN	NNS	_	_	_	_	NER=O
+10	have	have	AUX	VBP	_	_	_	_	NER=O
+11	made	make	VERB	VBN	_	_	_	_	NER=O
+12	FreeBSD	FreeBSD	PROPN	NNP	_	_	_	_	NER=O
+13	the	the	DET	DT	_	_	_	_	NER=O
+14	platform	platform	NOUN	NN	_	_	_	_	NER=O
+15	of	of	ADP	IN	_	_	_	_	NER=O
+16	choice	choice	NOUN	NN	_	_	_	_	NER=O
+17	for	for	ADP	IN	_	_	_	_	NER=O
+18	many	many	ADJ	JJ	_	_	_	_	NER=O
+19	of	of	ADP	IN	_	_	_	_	NER=O
+20	the	the	DET	DT	_	_	_	_	NER=O
+21	<	<	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+22	a	a	DET	DT	_	_	_	_	NER=O
+23	href	href	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+24	=	=	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+25	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+26	https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users	https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+27	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+28	>	>	SYM	SYM	_	_	_	_	NER=O
+29	busiest	busy	ADJ	JJS	_	_	_	_	NER=O
+30	web	web	NOUN	NN	_	_	_	_	NER=O
+31	sites	site	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+32	<	<	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+33	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+34	a	a	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+35	>	>	SYM	SYM	_	_	_	_	NER=O
+36	and	and	CCONJ	CC	_	_	_	_	NER=O
+37	most	most	ADV	RBS	_	_	_	_	NER=O
+38	pervasive	pervasive	ADJ	JJ	_	_	_	_	NER=O
+39	embedded	embed	VERB	VBD	_	_	_	_	NER=O
+40	networking	networking	NOUN	NN	_	_	_	_	NER=O
+41	and	and	CCONJ	CC	_	_	_	_	NER=O
+42	storage	storage	NOUN	NN	_	_	_	_	NER=O
+43	devices	device	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+44	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = thunderbird-1777670 | ticket_type=bug category=localization component=Frontend severity=Minor confidence=high
+# paragraph = p5 section=TITLE
+# sent_id = localization-s8
+# text = TB 102 LTS - GUI not fully translated
+1	TB	TB	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+2	102	102	NUM	CD	_	_	_	_	NER=B-ENV
+3	LTS	LTS	PROPN	NNP	_	_	_	_	NER=I-ENV
+4	-	-	PUNCT	:	_	_	_	_	NER=O
+5	GUI	GUI	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+6	not	not	PART	RB	_	_	_	_	NER=B-SYMPTOM
+7	fully	fully	ADV	RB	_	_	_	_	NER=I-SYMPTOM
+8	translated	translate	VERB	VBN	_	_	_	_	NER=I-SYMPTOM
+
+# paragraph = p6 section=DESCRIPTION
+# sent_id = localization-s9
+# text = Hello!
+1	Hello	hello	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+2	!	!	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p7 section=DESCRIPTION
+# sent_id = localization-s10
+# text = Many parts of the GUI of the release aren't translated in the Portuguese (pt-PT) version.
+1	Many	many	ADJ	JJ	_	_	_	_	NER=O
+2	parts	part	NOUN	NNS	_	_	_	_	NER=O
+3	of	of	ADP	IN	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	GUI	GUI	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+6	of	of	ADP	IN	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	release	release	NOUN	NN	_	_	_	_	NER=O
+9	are	be	AUX	VBP	_	_	_	_	NER=O|SpaceAfter=No
+10	n't	not	PART	RB	_	_	_	_	NER=O
+11	translated	translate	VERB	VBN	_	_	_	_	NER=O
+12	in	in	ADP	IN	_	_	_	_	NER=O
+13	the	the	DET	DT	_	_	_	_	NER=O
+14	Portuguese	Portuguese	PROPN	NNP	_	_	_	_	NER=B-LOCALE|KB=dbr:Portuguese_language
+15	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+16	pt-PT	pt-PT	PROPN	NNP	_	_	_	_	NER=B-LOCALE|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+18	version	version	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p8 section=DESCRIPTION
+# sent_id = localization-s11
+# text = For example, the menu option “OpenPGP Key Manager” is in English.
+1	For	for	ADP	IN	_	_	_	_	NER=O
+2	example	example	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	,	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	menu	menu	NOUN	NN	_	_	_	_	NER=O
+6	option	option	NOUN	NN	_	_	_	_	NER=O
+7	“	“	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+8	OpenPGP	OpenPGP	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+9	Key	Key	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+10	Manager	Manager	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+11	”	”	PUNCT	.	_	_	_	_	NER=O
+12	is	be	AUX	VBZ	_	_	_	_	NER=O
+13	in	in	ADP	IN	_	_	_	_	NER=O
+14	English	English	PROPN	NNP	_	_	_	_	NER=B-LOCALE|SpaceAfter=No
+15	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p9 section=DESCRIPTION
+# sent_id = localization-s12
+# text = And the radio buttons in the import/export are also untranslated.
+1	And	and	CCONJ	CC	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	radio	radio	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+4	buttons	button	NOUN	NNS	_	_	_	_	NER=I-UI_ELEMENT
+5	in	in	ADP	IN	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	import	import	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+8	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+9	export	export	NOUN	NN	_	_	_	_	NER=O
+10	are	be	AUX	VBP	_	_	_	_	NER=O
+11	also	also	ADV	RB	_	_	_	_	NER=O
+12	untranslated	untranslated	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+13	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = firefox-1866316 | ticket_type=bug category=localization component=Frontend severity=Minor confidence=high
+# paragraph = p10 section=TITLE
+# sent_id = localization-s13
+# text = RTL - shopping sidebar container flickers on the right side when opening/closing the sidebar
+1	RTL	RTL	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Bidirectional_text
+2	-	-	PUNCT	:	_	_	_	_	NER=O
+3	shopping	shopping	NOUN	NN	_	_	_	_	NER=O
+4	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+5	container	container	NOUN	NN	_	_	_	_	NER=O
+6	flickers	flicker	NOUN	NNS	_	_	_	_	NER=B-SYMPTOM
+7	on	on	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	right	right	ADJ	JJ	_	_	_	_	NER=O
+10	side	side	NOUN	NN	_	_	_	_	NER=O
+11	when	when	ADV	WRB	_	_	_	_	NER=O
+12	opening	open	VERB	VBG	_	_	_	_	NER=O|SpaceAfter=No
+13	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+14	closing	close	VERB	VBG	_	_	_	_	NER=O
+15	the	the	DET	DT	_	_	_	_	NER=O
+16	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+
+# paragraph = p11 section=STEPS
+# sent_id = localization-s14
+# text = STR:
+1	STR	str	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = localization-s15
+# text = 1. Enable bidi mode in Browser Toolbox (alternatively: load Firefox in RTL language)
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Enable	enable	VERB	VB	_	_	_	_	NER=O
+4	bidi	bidi	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Bidirectional_text
+5	mode	mode	NOUN	NN	_	_	_	_	NER=O
+6	in	in	ADP	IN	_	_	_	_	NER=O
+7	Browser	Browser	PROPN	NNP	_	_	_	_	NER=B-PRODUCT
+8	Toolbox	Toolbox	PROPN	NNP	_	_	_	_	NER=I-PRODUCT
+9	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+10	alternatively	alternatively	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+11	:	:	PUNCT	:	_	_	_	_	NER=O
+12	load	load	NOUN	NN	_	_	_	_	NER=O
+13	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+14	in	in	ADP	IN	_	_	_	_	NER=O
+15	RTL	RTL	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Bidirectional_text
+16	language	language	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = localization-s16
+# text = 2. Make sure sidebar feature is enabled and profile is opted in
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Make	make	VERB	VB	_	_	_	_	NER=O
+4	sure	sure	ADJ	JJ	_	_	_	_	NER=O
+5	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+6	feature	feature	NOUN	NN	_	_	_	_	NER=O
+7	is	be	AUX	VBZ	_	_	_	_	NER=O
+8	enabled	enable	VERB	VBN	_	_	_	_	NER=O
+9	and	and	CCONJ	CC	_	_	_	_	NER=O
+10	profile	profile	NOUN	NN	_	_	_	_	NER=O
+11	is	be	AUX	VBZ	_	_	_	_	NER=O
+12	opted	opt	VERB	VBN	_	_	_	_	NER=O
+13	in	in	ADP	IN	_	_	_	_	NER=O
+
+# sent_id = localization-s17
+# text = 2. View product page ([example](https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/)) and ensure shopping sidebar is visible
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	View	view	VERB	VB	_	_	_	_	NER=O
+4	product	product	NOUN	NN	_	_	_	_	NER=O
+5	page	page	NOUN	NN	_	_	_	_	NER=O
+6	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+7	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+8	example	example	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+9	]	]	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+10	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+11	https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/	https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+12	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+13	)	)	PUNCT	)	_	_	_	_	NER=O
+14	and	and	CCONJ	CC	_	_	_	_	NER=O
+15	ensure	ensure	VERB	VB	_	_	_	_	NER=O
+16	shopping	shopping	NOUN	NN	_	_	_	_	NER=O
+17	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+18	is	be	AUX	VBZ	_	_	_	_	NER=O
+19	visible	visible	ADJ	JJ	_	_	_	_	NER=O
+
+# sent_id = localization-s18
+# text = 3. Close sidebar with urlbar shopping icon or the close button on the sidebar
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Close	close	VERB	VB	_	_	_	_	NER=O
+4	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+5	with	with	ADP	IN	_	_	_	_	NER=O
+6	urlbar	urlbar	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+7	shopping	shopping	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+8	icon	icon	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+9	or	or	CCONJ	CC	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	close	close	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+12	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+13	on	on	ADP	IN	_	_	_	_	NER=O
+14	the	the	DET	DT	_	_	_	_	NER=O
+15	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+
+# paragraph = p12 section=EXPECTED
+# sent_id = localization-s19
+# text = Expected:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = localization-s20
+# text = - there should be no sudden flicker on the right side of the page when closing/opening the sidebar in RTL mode
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	there	there	PRON	EX	_	_	_	_	NER=O
+3	should	should	AUX	MD	_	_	_	_	NER=O
+4	be	be	AUX	VB	_	_	_	_	NER=O
+5	no	no	DET	DT	_	_	_	_	NER=O
+6	sudden	sudden	ADJ	JJ	_	_	_	_	NER=O
+7	flicker	flicker	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+8	on	on	ADP	IN	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	right	right	ADJ	JJ	_	_	_	_	NER=O
+11	side	side	NOUN	NN	_	_	_	_	NER=O
+12	of	of	ADP	IN	_	_	_	_	NER=O
+13	the	the	DET	DT	_	_	_	_	NER=O
+14	page	page	NOUN	NN	_	_	_	_	NER=O
+15	when	when	ADV	WRB	_	_	_	_	NER=O
+16	closing	closing	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+17	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+18	opening	open	VERB	VBG	_	_	_	_	NER=O
+19	the	the	DET	DT	_	_	_	_	NER=O
+20	sidebar	sidebar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+21	in	in	ADP	IN	_	_	_	_	NER=O
+22	RTL	RTL	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Bidirectional_text
+23	mode	mode	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p13 section=ACTUAL
+# sent_id = localization-s21
+# text = Actual:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = localization-s22
+# text = - there is a slight flicker on the right side of the page, which is very distracting visually
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	there	there	PRON	EX	_	_	_	_	NER=O
+3	is	be	AUX	VBZ	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	slight	slight	ADJ	JJ	_	_	_	_	NER=O
+6	flicker	flicker	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+7	on	on	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	right	right	ADJ	JJ	_	_	_	_	NER=O
+10	side	side	NOUN	NN	_	_	_	_	NER=O
+11	of	of	ADP	IN	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	page	page	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+14	,	,	PUNCT	,	_	_	_	_	NER=O
+15	which	which	PRON	WDT	_	_	_	_	NER=O
+16	is	be	AUX	VBZ	_	_	_	_	NER=O
+17	very	very	ADV	RB	_	_	_	_	NER=O
+18	distracting	distract	VERB	VBG	_	_	_	_	NER=O
+19	visually	visually	ADV	RB	_	_	_	_	NER=O
+
+# paragraph = p14 section=NOTES
+# sent_id = localization-s23
+# text = Notes:
+1	Notes	note	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = localization-s24
+# text = - this issue probably existed for a while, but I believe that it will be way more obvious once [we show sidebar animations](bugzilla.mozilla.org/show_bug.cgi?id=1858762).
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	this	this	DET	DT	_	_	_	_	NER=O
+3	issue	issue	NOUN	NN	_	_	_	_	NER=O
+4	probably	probably	ADV	RB	_	_	_	_	NER=O
+5	existed	exist	VERB	VBD	_	_	_	_	NER=O
+6	for	for	ADP	IN	_	_	_	_	NER=O
+7	a	a	DET	DT	_	_	_	_	NER=O
+8	while	while	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+9	,	,	PUNCT	,	_	_	_	_	NER=O
+10	but	but	CCONJ	CC	_	_	_	_	NER=O
+11	I	i	PRON	PRP	_	_	_	_	NER=O
+12	believe	believe	VERB	VBP	_	_	_	_	NER=O
+13	that	that	SCONJ	IN	_	_	_	_	NER=O
+14	it	it	PRON	PRP	_	_	_	_	NER=O
+15	will	will	AUX	MD	_	_	_	_	NER=O
+16	be	be	AUX	VB	_	_	_	_	NER=O
+17	way	way	NOUN	NN	_	_	_	_	NER=O
+18	more	more	ADV	RBR	_	_	_	_	NER=O
+19	obvious	obvious	ADJ	JJ	_	_	_	_	NER=O
+20	once	once	ADV	RB	_	_	_	_	NER=O
+21	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+22	we	we	PRON	PRP	_	_	_	_	NER=O
+23	show	show	VERB	VBP	_	_	_	_	NER=O
+24	sidebar	sidebar	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT
+25	animations	animation	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+26	]	]	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+27	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+28	bugzilla.mozilla.org/show_bug.cgi	bugzilla.mozilla.org/show_bug.cgi	X	VB	_	_	_	_	NER=O|SpaceAfter=No
+29	?	?	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+30	id	id	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+31	=	=	SYM	$	_	_	_	_	NER=O|SpaceAfter=No
+32	1858762	1858762	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+33	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+34	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = localization-s25
+# text = - I tested this on MacOS and can't recall at the moment if it also occurs on other platforms
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	I	i	PRON	PRP	_	_	_	_	NER=O
+3	tested	test	VERB	VBD	_	_	_	_	NER=O
+4	this	this	DET	DT	_	_	_	_	NER=O
+5	on	on	ADP	IN	_	_	_	_	NER=O
+6	MacOS	MacOS	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+7	and	and	CCONJ	CC	_	_	_	_	NER=O
+8	ca	can	AUX	MD	_	_	_	_	NER=O|SpaceAfter=No
+9	n't	not	PART	RB	_	_	_	_	NER=O
+10	recall	recall	VERB	VB	_	_	_	_	NER=O
+11	at	at	ADP	IN	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	moment	moment	NOUN	NN	_	_	_	_	NER=O
+14	if	if	SCONJ	IN	_	_	_	_	NER=O
+15	it	it	PRON	PRP	_	_	_	_	NER=O
+16	also	also	ADV	RB	_	_	_	_	NER=O
+17	occurs	occur	VERB	VBZ	_	_	_	_	NER=O
+18	on	on	ADP	IN	_	_	_	_	NER=O
+19	other	other	ADJ	JJ	_	_	_	_	NER=O
+20	platforms	platform	NOUN	NNS	_	_	_	_	NER=O
+

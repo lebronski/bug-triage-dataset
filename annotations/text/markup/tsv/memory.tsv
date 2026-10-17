@@ -1,0 +1,470 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=webanno.custom.BugEntity|label|kind|normalized|affected|polarity|source|kb_uri
+#T_SP=webanno.custom.BugReport|report_id|ticket_type|category|component|severity|confidence
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=Huge memory leak even while sleeping
+1-1	0-4	Huge	huge	JJ	ADJ	SYMPTOM[25]	resource\_leak[25]	*[25]	*[25]	observed[25]	*[25]	*[25]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	TITLE[4]	_	_
+1-2	5-11	memory	memory	NN	NOUN	SYMPTOM[25]	resource\_leak[25]	*[25]	*[25]	observed[25]	*[25]	*[25]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	TITLE[4]	_	_
+1-3	12-16	leak	leak	NN	NOUN	SYMPTOM[25]	resource\_leak[25]	*[25]	*[25]	observed[25]	*[25]	*[25]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	TITLE[4]	_	_
+1-4	17-21	even	even	RB	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	TITLE[4]	_	_
+1-5	22-27	while	while	IN	SCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	TITLE[4]	_	_
+1-6	28-36	sleeping	sleep	VBG	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	TITLE[4]	_	_
+
+#Text=User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:75.0) Gecko/20100101 Firefox/75.0
+2-1	38-42	User	User	NNP	PROPN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-2	43-48	Agent	Agent	NNP	PROPN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-3	48-49	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-4	50-61	Mozilla/5.0	Mozilla/5.0	NNP	PROPN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-5	62-63	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-6	63-72	Macintosh	Macintosh	NNP	PROPN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-7	72-73	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-8	74-79	Intel	Intel	NNP	PROPN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-9	80-83	Mac	Mac	NNP	PROPN	ENV[26]	os[26]	Mac OS X 10.13[26]	yes[26]	*[26]	user\_agent[26]	http://dbpedia.org/resource/MacOS[26]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-10	84-86	OS	OS	NNP	PROPN	ENV[26]	os[26]	Mac OS X 10.13[26]	yes[26]	*[26]	user\_agent[26]	http://dbpedia.org/resource/MacOS[26]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-11	87-88	X	X	NNP	PROPN	ENV[26]	os[26]	Mac OS X 10.13[26]	yes[26]	*[26]	user\_agent[26]	http://dbpedia.org/resource/MacOS[26]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-12	89-94	10.13	10.13	CD	NUM	ENV[26]	os[26]	Mac OS X 10.13[26]	yes[26]	*[26]	user\_agent[26]	http://dbpedia.org/resource/MacOS[26]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-13	94-95	;	\;	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-14	96-98	rv	rv	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-15	98-99	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-16	99-103	75.0	75.0	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-17	103-104	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-18	105-119	Gecko/20100101	Gecko/20100101	NNP	PROPN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+2-19	120-132	Firefox/75.0	Firefox/75.0	NNP	PROPN	ENV[27]	browser[27]	Firefox/75.0[27]	yes[27]	*[27]	user\_agent[27]	*[27]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ENVIRONMENT[5]	_	_
+
+#Text=Steps to reproduce:
+3-1	134-139	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[6]	_	_
+3-2	140-142	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[6]	_	_
+3-3	143-152	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[6]	_	_
+3-4	152-153	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[6]	_	_
+
+#Text=Since Firefox 74, it's consuming a large about of memory and never release it on MacOS.
+4-1	155-160	Since	since	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-2	161-168	Firefox	Firefox	NNP	PROPN	ENV[28]	app\_version[28]	Firefox 74[28]	yes[28]	*[28]	*[28]	*[28]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	OBSERVED\_IN	14-7[35_28]
+4-3	169-171	74	74	CD	NUM	ENV[28]	app\_version[28]	Firefox 74[28]	yes[28]	*[28]	*[28]	*[28]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-4	171-172	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-5	173-175	it	it	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-6	175-177	's	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-7	178-187	consuming	consume	VBG	VERB	SYMPTOM[29]	resource\_leak[29]	*[29]	*[29]	observed[29]	*[29]	*[29]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-8	188-189	a	a	DT	DET	SYMPTOM[29]	resource\_leak[29]	*[29]	*[29]	observed[29]	*[29]	*[29]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-9	190-195	large	large	JJ	ADJ	SYMPTOM[29]	resource\_leak[29]	*[29]	*[29]	observed[29]	*[29]	*[29]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-10	196-201	about	about	IN	ADP	SYMPTOM[29]	resource\_leak[29]	*[29]	*[29]	observed[29]	*[29]	*[29]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-11	202-204	of	of	IN	ADP	SYMPTOM[29]	resource\_leak[29]	*[29]	*[29]	observed[29]	*[29]	*[29]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-12	205-211	memory	memory	NN	NOUN	SYMPTOM[29]	resource\_leak[29]	*[29]	*[29]	observed[29]	*[29]	*[29]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-13	212-215	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-14	216-221	never	never	RB	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-15	222-229	release	release	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-16	230-232	it	it	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-17	233-235	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-18	236-241	MacOS	MacOS	NNP	PROPN	ENV[30]	os[30]	MacOS[30]	yes[30]	*[30]	*[30]	http://dbpedia.org/resource/MacOS[30]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+4-19	241-242	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+
+#Text=With my usual browsing experience, before 74, I never had to restart Firefox because of its memory impact, but now I need to.
+5-1	243-247	With	with	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-2	248-250	my	my	PRP$	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-3	251-256	usual	usual	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-4	257-265	browsing	browsing	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-5	266-276	experience	experience	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-6	276-277	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-7	278-284	before	before	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-8	285-287	74	74	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-9	287-288	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-10	289-290	I	i	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-11	291-296	never	never	RB	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-12	297-300	had	have	VBD	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-13	301-303	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-14	304-311	restart	restart	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-15	312-319	Firefox	Firefox	NNP	PROPN	PRODUCT[31]	application[31]	Firefox[31]	*[31]	*[31]	*[31]	http://dbpedia.org/resource/Firefox[31]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	SYMPTOM\_OF|VERSION\_OF	4-7[29_31]|4-2[28_31]
+5-16	320-327	because	because	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-17	328-330	of	of	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-18	331-334	its	its	PRP$	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-19	335-341	memory	memory	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-20	342-348	impact	impact	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-21	348-349	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-22	350-353	but	but	CC	CCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-23	354-357	now	now	RB	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-24	358-359	I	i	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-25	360-364	need	need	VBP	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-26	365-367	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+5-27	367-368	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+
+#Text=As usual, with memory based report, there are so many factor that could cause this, it's hard to reproduce, so I simplified the test to the most simple case I could do, that is:
+6-1	369-371	As	as	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-2	372-377	usual	usual	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-3	377-378	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-4	379-383	with	with	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-5	384-390	memory	memory	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-6	391-396	based	base	VBN	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-7	397-403	report	report	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-8	403-404	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-9	405-410	there	there	EX	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-10	411-414	are	be	VBP	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-11	415-417	so	so	RB	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-12	418-422	many	many	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-13	423-429	factor	factor	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-14	430-434	that	that	WDT	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-15	435-440	could	could	MD	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-16	441-446	cause	cause	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-17	447-451	this	this	DT	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-18	451-452	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-19	453-455	it	it	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-20	455-457	's	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-21	458-462	hard	hard	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-22	463-465	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-23	466-475	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-24	475-476	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-25	477-479	so	so	RB	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-26	480-481	I	i	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-27	482-492	simplified	simplify	VBD	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-28	493-496	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-29	497-501	test	test	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-30	502-504	to	to	TO	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-31	505-508	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-32	509-513	most	most	RBS	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-33	514-520	simple	simple	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-34	521-525	case	case	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-35	526-527	I	i	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-36	528-533	could	could	MD	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-37	534-536	do	do	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-38	536-537	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-39	538-542	that	that	WDT	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-40	543-545	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+6-41	545-546	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[7]	_	_
+
+#Text=1. Started as safe mode without any extension
+7-1	549-550	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-2	550-551	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-3	552-559	Started	start	VBN	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-4	560-562	as	as	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-5	563-567	safe	safe	JJ	ADJ	FEATURE[32]	*[32]	Firefox Safe Mode[32]	*[32]	*[32]	*[32]	*[32]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-6	568-572	mode	mode	NN	NOUN	FEATURE[32]	*[32]	Firefox Safe Mode[32]	*[32]	*[32]	*[32]	*[32]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-7	573-580	without	without	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-8	581-584	any	any	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+7-9	585-594	extension	extension	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+
+#Text=2. Loaded a bunch of tabs (my previous browsing session)
+8-1	595-596	2	2	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-2	596-597	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-3	598-604	Loaded	load	VBD	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-4	605-606	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-5	607-612	bunch	bunch	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-6	613-615	of	of	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-7	616-620	tabs	tab	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-8	621-622	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-9	622-624	my	my	PRP$	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-10	625-633	previous	previous	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-11	634-642	browsing	browsing	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-12	643-650	session	session	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+8-13	650-651	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+
+#Text=3. Saved a memory report
+9-1	652-653	3	3	LS	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+9-2	653-654	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+9-3	655-660	Saved	save	VBD	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+9-4	661-662	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+9-5	663-669	memory	memory	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+9-6	670-676	report	report	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+
+#Text=4. Set the computer to sleep during the night by closing lid
+10-1	677-678	4	4	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-2	678-679	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-3	680-683	Set	set	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-4	684-687	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-5	688-696	computer	computer	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-6	697-699	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-7	700-705	sleep	sleep	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-8	706-712	during	during	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-9	713-716	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-10	717-722	night	night	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-11	723-725	by	by	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-12	726-733	closing	close	VBG	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+10-13	734-737	lid	lid	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+
+#Text=5. Wake up the computer
+11-1	738-739	5	5	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+11-2	739-740	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+11-3	741-745	Wake	wake	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+11-4	746-748	up	up	RP	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+11-5	749-752	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+11-6	753-761	computer	computer	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+
+#Text=6. Saved memory report, memory increased by a lot
+12-1	762-763	6	6	CD	NUM	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-2	763-764	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-3	765-770	Saved	save	VBD	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-4	771-777	memory	memory	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-5	778-784	report	report	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-6	784-785	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-7	786-792	memory	memory	NN	NOUN	SYMPTOM[33]	resource\_leak[33]	*[33]	*[33]	observed[33]	*[33]	*[33]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-8	793-802	increased	increase	VBN	VERB	SYMPTOM[33]	resource\_leak[33]	*[33]	*[33]	observed[33]	*[33]	*[33]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-9	803-805	by	by	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-10	806-807	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+12-11	808-811	lot	lot	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	STEPS[8]	_	_
+
+#Text=Actual results:
+13-1	813-819	Actual	actual	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[9]	_	_
+13-2	820-827	results	result	NNS	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[9]	_	_
+13-3	827-828	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[9]	_	_
+
+#Text=The memory increased by at least 300MB from the process manager.
+14-1	830-833	The	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-2	834-840	memory	memory	NN	NOUN	SYMPTOM[34]	resource\_leak[34]	*[34]	*[34]	observed[34]	*[34]	*[34]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-3	841-850	increased	increase	VBN	VERB	SYMPTOM[34]	resource\_leak[34]	*[34]	*[34]	observed[34]	*[34]	*[34]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-4	851-853	by	by	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-5	854-856	at	at	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-6	857-862	least	least	JJS	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-7	863-868	300MB	300MB	CD	NUM	METRIC[35]	memory[35]	300MB[35]	*[35]	*[35]	*[35]	*[35]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-8	869-873	from	from	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-9	874-877	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-10	878-885	process	process	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-11	886-893	manager	manager	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+14-12	893-894	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	ACTUAL[10]	_	_
+
+#Text=Expected results:
+15-1	896-904	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[11]	_	_
+15-2	905-912	results	result	NNS	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[11]	_	_
+15-3	912-913	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[11]	_	_
+
+#Text=The memory should more or less stay the same while time goes on.
+16-1	915-918	The	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-2	919-925	memory	memory	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-3	926-932	should	should	MD	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-4	933-937	more	more	RBR	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-5	938-940	or	or	CC	CCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-6	941-945	less	less	RBR	ADV	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-7	946-950	stay	stay	VBP	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-8	951-954	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-9	955-959	same	same	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-10	960-965	while	while	IN	SCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-11	966-970	time	time	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-12	971-975	goes	go	VBZ	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-13	976-978	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+16-14	978-979	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+
+#Text=Please notice that I've tried to minimize the memory usage (in about:memory) but it's useless ?
+17-1	980-986	Please	Please	NNP	INTJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-2	987-993	notice	notice	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-3	994-998	that	that	IN	SCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-4	999-1000	I	i	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-5	1000-1003	've	have	VBP	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-6	1004-1009	tried	try	VBN	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-7	1010-1012	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-8	1013-1021	minimize	minimize	VB	VERB	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-9	1022-1025	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-10	1026-1032	memory	memory	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-11	1033-1038	usage	usage	NN	NOUN	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-12	1039-1040	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-13	1040-1042	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-14	1043-1055	about:memory	about:memory	ADD	X	UI\_ELEMENT[36]	page[36]	*[36]	*[36]	*[36]	*[36]	*[36]	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-15	1055-1056	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-16	1057-1060	but	but	CC	CCONJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-17	1061-1063	it	it	PRP	PRON	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-18	1063-1065	's	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-19	1066-1073	useless	useless	JJ	ADJ	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+17-20	1074-1075	?	?	.	PUNCT	_	_	_	_	_	_	_	firefox-1635681[1]	bug[1]	memory[1]	Frontend[1]	Major[1]	high[1]	EXPECTED[12]	_	_
+
+#Text=Memory leak from thrift server hashMap
+18-1	1077-1083	Memory	memory	NN	NOUN	SYMPTOM[37]	resource\_leak[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	TITLE[13]	_	_
+18-2	1084-1088	leak	leak	NN	NOUN	SYMPTOM[37]	resource\_leak[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	TITLE[13]	_	_
+18-3	1089-1093	from	from	IN	ADP	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	TITLE[13]	_	_
+18-4	1094-1100	thrift	thrift	NNP	PROPN	TECHNOLOGY[38]	protocol[38]	Apache Thrift[38]	*[38]	*[38]	*[38]	http://dbpedia.org/resource/Apache\_Thrift[38]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	TITLE[13]	_	_
+18-5	1101-1107	server	server	NN	NOUN	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	TITLE[13]	_	_
+18-6	1108-1115	hashMap	hashMap	NNP	PROPN	CODE\_LOCATION[39]	variable[39]	*[39]	*[39]	*[39]	*[39]	*[39]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	TITLE[13]	SYMPTOM\_OF	18-1[37_39]
+
+#Text=I found when the scanner does not closed successfully, it remains forever in the hashMap that stores the state of the scanner.
+19-1	1117-1118	I	i	PRP	PRON	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-2	1119-1124	found	find	VBD	VERB	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-3	1125-1129	when	when	WRB	ADV	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-4	1130-1133	the	the	DT	DET	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-5	1134-1141	scanner	scanner	NN	NOUN	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-6	1142-1146	does	do	VBZ	AUX	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-7	1147-1150	not	not	RB	PART	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-8	1151-1157	closed	close	VBN	VERB	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-9	1158-1170	successfully	successfully	RB	ADV	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-10	1170-1171	,	,	,	PUNCT	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-11	1172-1174	it	it	PRP	PRON	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-12	1175-1182	remains	remain	VBZ	VERB	SYMPTOM[40]	resource\_leak[40]	*[40]	*[40]	negated[40]	*[40]	*[40]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-13	1183-1190	forever	forever	RB	ADV	SYMPTOM[40]	resource\_leak[40]	*[40]	*[40]	negated[40]	*[40]	*[40]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-14	1191-1193	in	in	IN	ADP	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-15	1194-1197	the	the	DT	DET	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-16	1198-1205	hashMap	hashMap	NNP	PROPN	CODE\_LOCATION[41]	variable[41]	*[41]	*[41]	*[41]	*[41]	*[41]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	SYMPTOM\_OF	19-12[40_41]
+19-17	1206-1210	that	that	WDT	PRON	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-18	1211-1217	stores	store	VBZ	VERB	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-19	1218-1221	the	the	DT	DET	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-20	1222-1227	state	state	NN	NOUN	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-21	1228-1230	of	of	IN	ADP	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-22	1231-1234	the	the	DT	DET	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-23	1235-1242	scanner	scanner	NN	NOUN	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+19-24	1242-1243	.	.	.	PUNCT	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[14]	_	_
+
+#Text=To resolve this problem, I make scannerMap to Guava Cache so that can be expired on set time.
+20-1	1245-1247	To	to	TO	PART	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-2	1248-1255	resolve	resolve	VB	VERB	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-3	1256-1260	this	this	DT	DET	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-4	1261-1268	problem	problem	NN	NOUN	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-5	1268-1269	,	,	,	PUNCT	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-6	1270-1271	I	i	PRP	PRON	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-7	1272-1276	make	make	VBP	VERB	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-8	1277-1287	scannerMap	scannerMap	NN	NOUN	CODE\_LOCATION[42]	variable[42]	*[42]	*[42]	*[42]	*[42]	*[42]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-9	1288-1290	to	to	TO	ADP	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-10	1291-1296	Guava	Guava	NNP	PROPN	PRODUCT[43]	library[43]	Guava[43]	*[43]	*[43]	*[43]	http://dbpedia.org/resource/Google\_Guava[43]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-11	1297-1302	Cache	Cache	NNP	PROPN	PRODUCT[43]	library[43]	Guava[43]	*[43]	*[43]	*[43]	http://dbpedia.org/resource/Google\_Guava[43]	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-12	1303-1305	so	so	IN	SCONJ	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-13	1306-1310	that	that	WDT	PRON	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-14	1311-1314	can	can	MD	AUX	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-15	1315-1317	be	be	VB	AUX	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-16	1318-1325	expired	expire	VBN	VERB	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-17	1326-1328	on	on	IN	ADP	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-18	1329-1332	set	set	JJ	ADJ	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-19	1333-1337	time	time	NN	NOUN	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+20-20	1337-1338	.	.	.	PUNCT	_	_	_	_	_	_	_	hbase-13375331[2]	bug[2]	memory[2]	Backend[2]	Minor[2]	high[2]	DESCRIPTION[15]	_	_
+
+#Text=Thunderbird Freezing/Crashing due to memory leak
+21-1	1340-1351	Thunderbird	Thunderbird	NNP	PROPN	PRODUCT[44]	application[44]	Thunderbird[44]	*[44]	*[44]	*[44]	http://dbpedia.org/resource/Mozilla\_Thunderbird[44]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	SYMPTOM\_OF|SYMPTOM\_OF|SYMPTOM\_OF	21-2[45_44]|21-4[46_44]|21-7[47_44]
+21-2	1352-1360	Freezing	freeze	VBG	VERB	SYMPTOM[45]	hang[45]	*[45]	*[45]	observed[45]	*[45]	*[45]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	_	_
+21-3	1360-1361	/	/	SYM	SYM	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	_	_
+21-4	1361-1369	Crashing	crash	VBG	VERB	SYMPTOM[46]	crash[46]	*[46]	*[46]	observed[46]	*[46]	*[46]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	_	_
+21-5	1370-1373	due	due	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	_	_
+21-6	1374-1376	to	to	TO	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	_	_
+21-7	1377-1383	memory	memory	NN	NOUN	SYMPTOM[47]	resource\_leak[47]	*[47]	*[47]	hypothetical[47]	*[47]	*[47]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	CAUSED\_BY	21-2[45_47]
+21-8	1384-1388	leak	leak	NN	NOUN	SYMPTOM[47]	resource\_leak[47]	*[47]	*[47]	hypothetical[47]	*[47]	*[47]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	TITLE[16]	_	_
+
+#Text=User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+22-1	1390-1394	User	User	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-2	1395-1400	Agent	Agent	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-3	1400-1401	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-4	1402-1413	Mozilla/5.0	Mozilla/5.0	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-5	1414-1415	(	(	(	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-6	1415-1422	Windows	Windows	NNP	PROPN	ENV[48]	os[48]	Windows 10[48]	unknown[48]	*[48]	user\_agent[48]	http://dbpedia.org/resource/Microsoft\_Windows[48]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-7	1423-1425	NT	NT	NNP	PROPN	ENV[48]	os[48]	Windows 10[48]	unknown[48]	*[48]	user\_agent[48]	http://dbpedia.org/resource/Microsoft\_Windows[48]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-8	1426-1430	10.0	10.0	CD	NUM	ENV[48]	os[48]	Windows 10[48]	unknown[48]	*[48]	user\_agent[48]	http://dbpedia.org/resource/Microsoft\_Windows[48]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-9	1430-1431	;	\;	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-10	1432-1437	Win64	Win64	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-11	1437-1438	;	\;	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-12	1439-1442	x64	x64	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-13	1442-1443	)	)	)	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-14	1444-1462	AppleWebKit/537.36	AppleWebKit/537.36	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-15	1463-1464	(	(	(	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-16	1464-1469	KHTML	KHTML	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-17	1469-1470	,	,	,	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-18	1471-1475	like	like	IN	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-19	1476-1481	Gecko	Gecko	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-20	1481-1482	)	)	)	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-21	1483-1502	Chrome/95.0.4638.54	Chrome/95.0.4638.54	NNP	PROPN	ENV[49]	browser[49]	Chrome/95.0.4638.54[49]	unknown[49]	*[49]	user\_agent[49]	*[49]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+22-22	1503-1516	Safari/537.36	Safari/537.36	NNP	PROPN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ENVIRONMENT[17]	_	_
+
+#Text=Steps to reproduce:
+23-1	1518-1523	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[18]	_	_
+23-2	1524-1526	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[18]	_	_
+23-3	1527-1536	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[18]	_	_
+23-4	1536-1537	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[18]	_	_
+
+#Text=1. Open Thunderbird
+24-1	1539-1540	1	1	CD	NUM	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+24-2	1540-1541	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+24-3	1542-1546	Open	open	VB	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+24-4	1547-1558	Thunderbird	Thunderbird	NNP	PROPN	PRODUCT[50]	application[50]	Thunderbird[50]	*[50]	*[50]	*[50]	http://dbpedia.org/resource/Mozilla\_Thunderbird[50]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	VERSION\_OF	28-4[54_50]
+
+#Text=2. Check email
+25-1	1559-1560	2	2	CD	NUM	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+25-2	1560-1561	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+25-3	1562-1567	Check	check	VB	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+25-4	1568-1573	email	email	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+
+#Text=3. Freezes due to a huge memory leak
+26-1	1574-1575	3	3	LS	NUM	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-2	1575-1576	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-3	1577-1584	Freezes	freeze	VBZ	VERB	SYMPTOM[51]	hang[51]	*[51]	*[51]	observed[51]	*[51]	*[51]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-4	1585-1588	due	due	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-5	1589-1591	to	to	TO	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-6	1592-1593	a	a	DT	DET	SYMPTOM[52]	resource\_leak[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	CAUSED\_BY	26-3[51_52]
+26-7	1594-1598	huge	huge	JJ	ADJ	SYMPTOM[52]	resource\_leak[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-8	1599-1605	memory	memory	NN	NOUN	SYMPTOM[52]	resource\_leak[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+26-9	1606-1610	leak	leak	NN	NOUN	SYMPTOM[52]	resource\_leak[52]	*[52]	*[52]	hypothetical[52]	*[52]	*[52]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+
+#Text=4. Crashes
+27-1	1611-1612	4	4	CD	NUM	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+27-2	1612-1613	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+27-3	1614-1621	Crashes	crash	VBZ	VERB	SYMPTOM[53]	crash[53]	*[53]	*[53]	observed[53]	*[53]	*[53]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[19]	_	_
+
+#Text=I use version 94.0b4 (64-bit) on Windows 11
+28-1	1623-1624	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-2	1625-1628	use	use	VBP	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-3	1629-1636	version	version	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-4	1637-1643	94.0b4	94.0b4	CD	NUM	ENV[54]	app\_version[54]	Thunderbird 94.0b4 (64-bit)[54]	yes[54]	*[54]	*[54]	*[54]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-5	1644-1645	(	(	(	PUNCT	ENV[54]	app\_version[54]	Thunderbird 94.0b4 (64-bit)[54]	yes[54]	*[54]	*[54]	*[54]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-6	1645-1651	64-bit	64-bit	CD	NUM	ENV[54]	app\_version[54]	Thunderbird 94.0b4 (64-bit)[54]	yes[54]	*[54]	*[54]	*[54]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-7	1651-1652	)	)	)	PUNCT	ENV[54]	app\_version[54]	Thunderbird 94.0b4 (64-bit)[54]	yes[54]	*[54]	*[54]	*[54]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-8	1653-1655	on	on	IN	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-9	1656-1663	Windows	Windows	NNP	PROPN	ENV[55]	os[55]	Windows 11[55]	yes[55]	*[55]	*[55]	http://dbpedia.org/resource/Microsoft\_Windows[55]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+28-10	1664-1666	11	11	CD	NUM	ENV[55]	os[55]	Windows 11[55]	yes[55]	*[55]	*[55]	http://dbpedia.org/resource/Microsoft\_Windows[55]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	STEPS[20]	_	_
+
+#Text=Actual results:
+29-1	1668-1674	Actual	actual	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[21]	_	_
+29-2	1675-1682	results	result	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[21]	_	_
+29-3	1682-1683	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[21]	_	_
+
+#Text=When I click on emails the whole client will freeze and then crash.
+30-1	1685-1689	When	when	WRB	ADV	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-2	1690-1691	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-3	1692-1697	click	click	VBP	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-4	1698-1700	on	on	IN	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-5	1701-1707	emails	email	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-6	1708-1711	the	the	DT	DET	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-7	1712-1717	whole	whole	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-8	1718-1724	client	client	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-9	1725-1729	will	will	MD	AUX	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-10	1730-1736	freeze	freeze	VB	VERB	SYMPTOM[56]	hang[56]	*[56]	*[56]	observed[56]	*[56]	*[56]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-11	1737-1740	and	and	CC	CCONJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-12	1741-1745	then	then	RB	ADV	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-13	1746-1751	crash	crash	VB	VERB	SYMPTOM[57]	crash[57]	*[57]	*[57]	observed[57]	*[57]	*[57]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+30-14	1751-1752	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	ACTUAL[22]	_	_
+
+#Text=Expected results:
+31-1	1754-1762	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[23]	_	_
+31-2	1763-1770	results	result	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[23]	_	_
+31-3	1770-1771	:	:	:	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[23]	_	_
+
+#Text=I should be able to check my emails without having to reopen Thunderbird multiple times just to get through the emails.
+32-1	1773-1774	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-2	1775-1781	should	should	MD	AUX	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-3	1782-1784	be	be	VB	AUX	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-4	1785-1789	able	able	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-5	1790-1792	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-6	1793-1798	check	check	VB	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-7	1799-1801	my	my	PRP$	PRON	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-8	1802-1808	emails	email	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-9	1809-1816	without	without	IN	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-10	1817-1823	having	have	VBG	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-11	1824-1826	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-12	1827-1833	reopen	reopen	VB	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-13	1834-1845	Thunderbird	Thunderbird	NNP	PROPN	PRODUCT[58]	application[58]	Thunderbird[58]	*[58]	*[58]	*[58]	http://dbpedia.org/resource/Mozilla\_Thunderbird[58]	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-14	1846-1854	multiple	multiple	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-15	1855-1860	times	time	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-16	1861-1865	just	just	RB	ADV	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-17	1866-1868	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-18	1869-1872	get	get	VB	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-19	1873-1880	through	through	IN	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-20	1881-1884	the	the	DT	DET	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-21	1885-1891	emails	email	NNS	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+32-22	1891-1892	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+
+#Text=I have resorted to checking email on the web due to this issue.
+33-1	1893-1894	I	i	PRP	PRON	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-2	1895-1899	have	have	VBP	AUX	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-3	1900-1908	resorted	resort	VBN	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-4	1909-1911	to	to	TO	PART	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-5	1912-1920	checking	check	VBG	VERB	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-6	1921-1926	email	email	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-7	1927-1929	on	on	IN	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-8	1930-1933	the	the	DT	DET	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-9	1934-1937	web	web	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-10	1938-1941	due	due	JJ	ADJ	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-11	1942-1944	to	to	TO	ADP	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-12	1945-1949	this	this	DT	DET	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-13	1950-1955	issue	issue	NN	NOUN	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_
+33-14	1955-1956	.	.	.	PUNCT	_	_	_	_	_	_	_	thunderbird-1737223[3]	bug[3]	memory[3]	Frontend[3]	Critical[3]	high[3]	EXPECTED[24]	_	_

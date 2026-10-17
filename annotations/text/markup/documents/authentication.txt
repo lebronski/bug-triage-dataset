@@ -1,0 +1,46 @@
+CardDAV does not fetch address book from Google Workspace and fails to use existing OAuth2 credentials
+
+User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0
+
+Steps to reproduce:
+
+1. Setup a new Google Workspace account using OAuth2. 
+   - Calendar and Addressbook permissions are sought by Thunderbird and granted by user
+   - Address book is not auto discovered
+2. Add a CardDav address book manually using the Location format specified in [Google Developer docs](https://developers.google.com/people/carddav)  `https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default` 
+3. OAuth2 Addressbook permissions sought again and approved 
+4. Address book seemingly added
+
+Actual results:
+
+1. Address book does not use existing OAuth2 credentials (and there's no way to choose credentials from a drop down in case multiple OAuth2 accounts exist) that were fetched during email setup
+2. Address book does not display any contact information in the compose window. Searching in the compose window address book pane yields nothing
+3. Cannot download the address book in the Address Book tab either
+
+Expected results:
+
+I should be able to search for and fill in addresses from the compose window
+
+I should be able to download all addresses for use offline and synchronise changes between Thunderbird and Google.
+
+Improve error reporting on non-standard kerberos names
+
+The kerberos RFC does not declare any restriction on
+characters used in kerberos names, though
+implementations MAY be more restrictive.
+
+If the kerberos controller supports use non-conventional
+user names *and the kerberos admin chooses to use them*
+this can confuse some of the parsing.
+
+The obvious solution is for the enterprise admins to "not do that"
+as a lot of things break, bits of hadoop included.
+
+Harden the hadoop code slightly so at least we fail more gracefully,
+so people can then get in touch with their sysadmin and tell them
+to stop it.
+
+Note: given the kerberos admin is implicitly a superuser, being
+able to create malformed principal names.
+doesn't give them any privileges, just offers a different way
+to stop the cluster working.

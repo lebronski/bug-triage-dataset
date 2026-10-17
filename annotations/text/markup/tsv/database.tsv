@@ -1,0 +1,529 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=webanno.custom.BugEntity|label|kind|normalized|affected|polarity|source|kb_uri
+#T_SP=webanno.custom.BugReport|report_id|ticket_type|category|component|severity|confidence
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors when opening the migration window for the first time, or after a Firefox restart
+1-1	0-8	Multiple	multiple	JJ	ADJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-2	9-10	`	`	``	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-3	10-15	Error	error	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-4	15-16	:	:	:	PUNCT	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-5	17-22	Error	error	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-6	22-23	(	(	(	PUNCT	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-7	23-24	s	s	PRP	PRON	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-8	24-25	)	)	)	PUNCT	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-9	26-37	encountered	encounter	VBD	VERB	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-10	38-44	during	during	IN	ADP	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-11	45-54	statement	statement	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-12	55-64	execution	execution	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-13	64-65	:	:	:	PUNCT	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-14	66-74	database	database	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-15	75-79	disk	disk	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-16	80-85	image	image	NN	NOUN	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-17	86-88	is	be	VBZ	AUX	ERROR\_MESSAGE[20]	*[20]	*[20]	*[20]	*[20]	*[20]	*[20]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-18	89-98	malformed	malformed	VBN	VERB	ERROR\_MESSAGE[20]|SYMPTOM[21]	*[20]|data\_corruption[21]	*[20]|*[21]	*[20]|*[21]	*[20]|observed[21]	*[20]|*[21]	*[20]|*[21]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-19	98-99	`	`	``	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-20	100-106	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-21	107-111	when	when	WRB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-22	112-119	opening	open	VBG	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-23	120-123	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-24	124-133	migration	migration	NN	NOUN	UI\_ELEMENT[22]	dialog[22]	*[22]	*[22]	*[22]	*[22]	*[22]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	SYMPTOM\_OF	1-18[21_22]
+1-25	134-140	window	window	NN	NOUN	UI\_ELEMENT[22]	dialog[22]	*[22]	*[22]	*[22]	*[22]	*[22]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-26	141-144	for	for	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-27	145-148	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-28	149-154	first	first	JJ	ADJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-29	155-159	time	time	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-30	159-160	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-31	161-163	or	or	CC	CCONJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-32	164-169	after	after	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-33	170-171	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-34	172-179	Firefox	Firefox	NNP	PROPN	PRODUCT[23]	application[23]	Firefox[23]	*[23]	*[23]	*[23]	http://dbpedia.org/resource/Firefox[23]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+1-35	180-187	restart	restart	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	TITLE[3]	_	_
+
+#Text=Filled on request [1840792#c12](https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12)
+2-1	189-195	Filled	fill	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-2	196-198	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-3	199-206	request	request	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-4	207-208	[	\[	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-5	208-215	1840792	1840792	CD	NUM	ISSUE\_REF[24]	*[24]	bug 1840792[24]	*[24]	*[24]	*[24]	*[24]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-6	215-216	#	#	#	SYM	ISSUE\_REF[24]	*[24]	bug 1840792[24]	*[24]	*[24]	*[24]	*[24]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-7	216-219	c12	c12	NN	NOUN	ISSUE\_REF[24]	*[24]	bug 1840792[24]	*[24]	*[24]	*[24]	*[24]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-8	219-220	]	\]	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-9	220-221	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-10	221-277	https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12	https://bugzilla.mozilla.org/show\_bug.cgi?id=1840792#c12	ADD	X	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+2-11	277-278	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	DESCRIPTION[4]	_	_
+
+#Text=**Found in**
+3-1	280-282	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+3-2	282-287	Found	Found	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+3-3	288-290	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+3-4	290-292	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+
+#Text=* 117.0a1 (2023-07-10)
+4-1	293-294	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+4-2	295-302	117.0a1	117.0a1	CD	NUM	ENV[25]	app\_version[25]	Firefox 117.0a1[25]	yes[25]	*[25]	*[25]	*[25]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+4-3	303-304	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+4-4	304-314	2023-07-10	2023-07-10	CD	NUM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+4-5	314-315	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[5]	_	_
+
+#Text=**Affected versions**
+5-1	317-319	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+5-2	319-327	Affected	Affected	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+5-3	328-336	versions	version	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+5-4	336-338	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+
+#Text=* 117.0a1 (2023-07-10)
+6-1	339-340	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+6-2	341-348	117.0a1	117.0a1	CD	NUM	ENV[26]	app\_version[26]	Firefox 117.0a1[26]	yes[26]	*[26]	*[26]	*[26]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+6-3	349-350	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+6-4	350-360	2023-07-10	2023-07-10	CD	NUM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+6-5	360-361	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[6]	_	_
+
+#Text=**Tested platforms**
+7-1	363-365	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+7-2	365-371	Tested	test	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+7-3	372-381	platforms	platform	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+7-4	381-383	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+
+#Text=* Affected platforms: Windows 10x64 (only on one station)
+8-1	384-385	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-2	386-394	Affected	affected	JJ	ADJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-3	395-404	platforms	platform	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-4	404-405	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-5	406-413	Windows	Windows	NNP	PROPN	ENV[27]	os[27]	Windows 10 x64[27]	yes[27]	*[27]	*[27]	http://dbpedia.org/resource/Microsoft\_Windows[27]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	OBSERVED\_IN	15-4[34_27]
+8-6	414-419	10x64	10x64	CD	NUM	ENV[27]	os[27]	Windows 10 x64[27]	yes[27]	*[27]	*[27]	http://dbpedia.org/resource/Microsoft\_Windows[27]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-7	420-421	(	(	(	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-8	421-425	only	only	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-9	426-428	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-10	429-432	one	one	CD	NUM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-11	433-440	station	station	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+8-12	440-441	)	)	)	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+
+#Text=* Unaffected platforms: Windows 11x64,Ubuntu 22.04, macOS 12
+9-1	442-443	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-2	444-454	Unaffected	unaffected	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-3	455-464	platforms	platform	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-4	464-465	:	:	:	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-5	466-473	Windows	Windows	NNP	PROPN	ENV[28]	os[28]	Windows 11 x64[28]	no[28]	*[28]	*[28]	http://dbpedia.org/resource/Microsoft\_Windows[28]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-6	474-479	11x64	11x64	CD	NUM	ENV[28]	os[28]	Windows 11 x64[28]	no[28]	*[28]	*[28]	http://dbpedia.org/resource/Microsoft\_Windows[28]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-7	479-480	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-8	480-486	Ubuntu	Ubuntu	NNP	PROPN	ENV[29]	os[29]	Ubuntu 22.04[29]	no[29]	*[29]	*[29]	http://dbpedia.org/resource/Ubuntu[29]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-9	487-492	22.04	22.04	CD	NUM	ENV[29]	os[29]	Ubuntu 22.04[29]	no[29]	*[29]	*[29]	http://dbpedia.org/resource/Ubuntu[29]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-10	492-493	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-11	494-499	macOS	macOS	NNP	PROPN	ENV[30]	os[30]	macOS 12[30]	no[30]	*[30]	*[30]	http://dbpedia.org/resource/MacOS[30]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+9-12	500-502	12	12	CD	NUM	ENV[30]	os[30]	macOS 12[30]	no[30]	*[30]	*[30]	http://dbpedia.org/resource/MacOS[30]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ENVIRONMENT[7]	_	_
+
+#Text=**Steps to reproduce**
+10-1	504-506	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+10-2	506-511	Steps	step	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+10-3	512-514	to	to	TO	PART	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+10-4	515-524	reproduce	reproduce	VB	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+10-5	524-526	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+
+#Text=1. Open the migration window and observe the browser console.
+11-1	527-528	1	1	CD	NUM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-2	528-529	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-3	530-534	Open	open	VB	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-4	535-538	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-5	539-548	migration	migration	NN	NOUN	UI\_ELEMENT[31]	dialog[31]	*[31]	*[31]	*[31]	*[31]	*[31]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-6	549-555	window	window	NN	NOUN	UI\_ELEMENT[31]	dialog[31]	*[31]	*[31]	*[31]	*[31]	*[31]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-7	556-559	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-8	560-567	observe	observe	VB	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-9	568-571	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-10	572-579	browser	browser	NN	NOUN	UI\_ELEMENT[32]	other[32]	*[32]	*[32]	*[32]	*[32]	*[32]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-11	580-587	console	console	NN	NOUN	UI\_ELEMENT[32]	other[32]	*[32]	*[32]	*[32]	*[32]	*[32]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+11-12	587-588	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	STEPS[8]	_	_
+
+#Text=**Expected result**
+12-1	590-592	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+12-2	592-600	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+12-3	601-607	result	result	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+12-4	607-609	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+
+#Text=* No errors are displayed and the migration window is opened almost instantly.
+13-1	611-612	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-2	613-615	No	no	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-3	616-622	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-4	623-626	are	be	VBP	AUX	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-5	627-636	displayed	display	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-6	637-640	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-7	641-644	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-8	645-654	migration	migration	NN	NOUN	UI\_ELEMENT[33]	dialog[33]	*[33]	*[33]	*[33]	*[33]	*[33]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-9	655-661	window	window	NN	NOUN	UI\_ELEMENT[33]	dialog[33]	*[33]	*[33]	*[33]	*[33]	*[33]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-10	662-664	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-11	665-671	opened	open	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-12	672-678	almost	almost	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-13	679-688	instantly	instantly	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+13-14	688-689	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	EXPECTED[9]	_	_
+
+#Text=**Actual result**
+14-1	691-693	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+14-2	693-699	Actual	Actual	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+14-3	700-706	result	result	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+14-4	706-708	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+
+#Text=* Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors and migration window takes some time to open.
+15-1	709-710	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-2	711-719	Multiple	Multiple	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-3	720-721	`	`	``	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-4	721-726	Error	error	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-5	726-727	:	:	:	PUNCT	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-6	728-733	Error	error	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-7	733-734	(	(	(	PUNCT	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-8	734-735	s	s	PRP	PRON	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-9	735-736	)	)	)	PUNCT	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-10	737-748	encountered	encounter	VBD	VERB	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-11	749-755	during	during	IN	ADP	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-12	756-765	statement	statement	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-13	766-775	execution	execution	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-14	775-776	:	:	:	PUNCT	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-15	777-785	database	database	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-16	786-790	disk	disk	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-17	791-796	image	image	NN	NOUN	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-18	797-799	is	be	VBZ	AUX	ERROR\_MESSAGE[34]	*[34]	*[34]	*[34]	*[34]	*[34]	*[34]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-19	800-809	malformed	malformed	VBN	VERB	ERROR\_MESSAGE[34]|SYMPTOM[35]	*[34]|data\_corruption[35]	*[34]|*[35]	*[34]|*[35]	*[34]|observed[35]	*[34]|*[35]	*[34]|*[35]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-20	809-810	`	`	``	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-21	811-817	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-22	818-821	and	and	CC	CCONJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-23	822-831	migration	migration	NN	NOUN	UI\_ELEMENT[36]	dialog[36]	*[36]	*[36]	*[36]	*[36]	*[36]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	SYMPTOM\_OF	15-25[37_36]
+15-24	832-838	window	window	NN	NOUN	UI\_ELEMENT[36]	dialog[36]	*[36]	*[36]	*[36]	*[36]	*[36]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-25	839-844	takes	take	VBZ	VERB	SYMPTOM[37]	slowness[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-26	845-849	some	some	DT	DET	SYMPTOM[37]	slowness[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-27	850-854	time	time	NN	NOUN	SYMPTOM[37]	slowness[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-28	855-857	to	to	TO	PART	SYMPTOM[37]	slowness[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-29	858-862	open	open	VB	VERB	SYMPTOM[37]	slowness[37]	*[37]	*[37]	observed[37]	*[37]	*[37]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+15-30	862-863	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	ACTUAL[10]	_	_
+
+#Text=**Regression range**
+16-1	865-867	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+16-2	867-877	Regression	Regression	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+16-3	878-883	range	range	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+16-4	883-885	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+
+#Text=* Not a regression.
+17-1	886-887	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+17-2	888-891	Not	not	RB	PART	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+17-3	892-893	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+17-4	894-904	regression	regression	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+17-5	904-905	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[11]	_	_
+
+#Text=**Additional notes**
+18-1	907-909	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+18-2	909-919	Additional	Additional	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+18-3	920-925	notes	note	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+18-4	925-927	**	\*\*	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+
+#Text=* Attached a screen recording.
+19-1	928-929	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+19-2	930-938	Attached	Attached	NNP	PROPN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+19-3	939-940	a	a	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+19-4	941-947	screen	screen	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+19-5	948-957	recording	record	VBG	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+19-6	957-958	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+
+#Text=* The errors are displayed only for the first time after the migration window is opened.
+20-1	959-960	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-2	961-964	The	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-3	965-971	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-4	972-975	are	be	VBP	AUX	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-5	976-985	displayed	display	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-6	986-990	only	only	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-7	991-994	for	for	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-8	995-998	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-9	999-1004	first	first	JJ	ADJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-10	1005-1009	time	time	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-11	1010-1015	after	after	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-12	1016-1019	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-13	1020-1029	migration	migration	NN	NOUN	UI\_ELEMENT[38]	dialog[38]	*[38]	*[38]	*[38]	*[38]	*[38]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-14	1030-1036	window	window	NN	NOUN	UI\_ELEMENT[38]	dialog[38]	*[38]	*[38]	*[38]	*[38]	*[38]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-15	1037-1039	is	be	VBZ	AUX	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-16	1040-1046	opened	open	VBN	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+20-17	1046-1047	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+
+#Text=Opening the migration window again in the same session will no longer display the errors.
+21-1	1048-1055	Opening	open	VBG	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-2	1056-1059	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-3	1060-1069	migration	migration	NN	NOUN	UI\_ELEMENT[39]	dialog[39]	*[39]	*[39]	*[39]	*[39]	*[39]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-4	1070-1076	window	window	NN	NOUN	UI\_ELEMENT[39]	dialog[39]	*[39]	*[39]	*[39]	*[39]	*[39]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-5	1077-1082	again	again	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-6	1083-1085	in	in	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-7	1086-1089	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-8	1090-1094	same	same	JJ	ADJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-9	1095-1102	session	session	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-10	1103-1107	will	will	MD	AUX	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-11	1108-1110	no	no	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-12	1111-1117	longer	longer	RBR	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-13	1118-1125	display	display	VB	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-14	1126-1129	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-15	1130-1136	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+21-16	1136-1137	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+
+#Text=However, restarting Firefox will display the errors again but only for the first time.
+22-1	1138-1145	However	however	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-2	1145-1146	,	,	,	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-3	1147-1157	restarting	restart	VBG	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-4	1158-1165	Firefox	Firefox	NNP	PROPN	PRODUCT[40]	application[40]	Firefox[40]	*[40]	*[40]	*[40]	http://dbpedia.org/resource/Firefox[40]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-5	1166-1170	will	will	MD	AUX	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-6	1171-1178	display	display	VB	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-7	1179-1182	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-8	1183-1189	errors	error	NNS	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-9	1190-1195	again	again	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-10	1196-1199	but	but	CC	CCONJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-11	1200-1204	only	only	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-12	1205-1208	for	for	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-13	1209-1212	the	the	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-14	1213-1218	first	first	JJ	ADJ	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-15	1219-1223	time	time	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+22-16	1223-1224	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+
+#Text=* Note this happens on only one Windows 10 machine.
+23-1	1225-1226	*	\*	SYM	SYM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-2	1227-1231	Note	note	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-3	1232-1236	this	this	DT	DET	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-4	1237-1244	happens	happen	VBZ	VERB	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-5	1245-1247	on	on	IN	ADP	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-6	1248-1252	only	only	RB	ADV	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-7	1253-1256	one	one	CD	NUM	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-8	1257-1264	Windows	Windows	NNP	PROPN	ENV[41]	os[41]	Windows 10[41]	yes[41]	*[41]	*[41]	http://dbpedia.org/resource/Microsoft\_Windows[41]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-9	1265-1267	10	10	CD	NUM	ENV[41]	os[41]	Windows 10[41]	yes[41]	*[41]	*[41]	http://dbpedia.org/resource/Microsoft\_Windows[41]	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-10	1268-1275	machine	machine	NN	NOUN	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+23-11	1275-1276	.	.	.	PUNCT	_	_	_	_	_	_	_	firefox-1842613[1]	bug[1]	database[1]	Database[1]	Major[1]	low[1]	NOTES[12]	_	_
+
+#Text=Cache Invalidation Issue with JDBC Table
+24-1	1278-1283	Cache	Cache	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	TITLE[13]	_	_
+24-2	1284-1296	Invalidation	Invalidation	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	TITLE[13]	_	_
+24-3	1297-1302	Issue	Issue	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	TITLE[13]	_	_
+24-4	1303-1307	with	with	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	TITLE[13]	_	_
+24-5	1308-1312	JDBC	JDBC	NNP	PROPN	TECHNOLOGY[42]	protocol[42]	JDBC[42]	*[42]	*[42]	*[42]	http://dbpedia.org/resource/Java\_Database\_Connectivity[42]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	TITLE[13]	_	_
+24-6	1313-1318	Table	Table	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	TITLE[13]	_	_
+
+#Text=We have identified a cache invalidation issue when caching JDBC tables in Spark SQL.
+25-1	1320-1322	We	we	PRP	PRON	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-2	1323-1327	have	have	VBP	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-3	1328-1338	identified	identify	VBN	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-4	1339-1340	a	a	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-5	1341-1346	cache	cache	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-6	1347-1359	invalidation	invalidation	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-7	1360-1365	issue	issue	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-8	1366-1370	when	when	WRB	ADV	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-9	1371-1378	caching	cache	VBG	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-10	1379-1383	JDBC	JDBC	NNP	PROPN	TECHNOLOGY[43]	protocol[43]	JDBC[43]	*[43]	*[43]	*[43]	http://dbpedia.org/resource/Java\_Database\_Connectivity[43]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-11	1384-1390	tables	table	NNS	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-12	1391-1393	in	in	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-13	1394-1399	Spark	Spark	NNP	PROPN	PRODUCT[44]	framework[44]	Spark SQL[44]	*[44]	*[44]	*[44]	http://dbpedia.org/resource/Apache\_Spark[44]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	SYMPTOM\_OF	26-6[45_44]
+25-14	1400-1403	SQL	SQL	NNP	PROPN	PRODUCT[44]	framework[44]	Spark SQL[44]	*[44]	*[44]	*[44]	http://dbpedia.org/resource/Apache\_Spark[44]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+25-15	1403-1404	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+
+#Text=The cached table is unexpectedly invalidated when queried, leading to a re-read from the JDBC table instead of retrieving data from the cache.
+26-1	1405-1408	The	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-2	1409-1415	cached	cached	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-3	1416-1421	table	table	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-4	1422-1424	is	be	VBZ	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-5	1425-1437	unexpectedly	unexpectedly	RB	ADV	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-6	1438-1449	invalidated	invalidate	VBN	VERB	SYMPTOM[45]	wrong\_output[45]	*[45]	*[45]	observed[45]	*[45]	*[45]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-7	1450-1454	when	when	WRB	ADV	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-8	1455-1462	queried	query	VBN	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-9	1462-1463	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-10	1464-1471	leading	lead	VBG	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-11	1472-1474	to	to	TO	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-12	1475-1476	a	a	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-13	1477-1484	re-read	re-read	NN	NOUN	SYMPTOM[46]	wrong\_output[46]	*[46]	*[46]	hypothetical[46]	*[46]	*[46]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-14	1485-1489	from	from	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-15	1490-1493	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-16	1494-1498	JDBC	JDBC	NNP	PROPN	TECHNOLOGY[47]	protocol[47]	JDBC[47]	*[47]	*[47]	*[47]	http://dbpedia.org/resource/Java\_Database\_Connectivity[47]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-17	1499-1504	table	table	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-18	1505-1512	instead	instead	RB	ADV	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-19	1513-1515	of	of	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-20	1516-1526	retrieving	retrieve	VBG	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-21	1527-1531	data	data	NNS	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-22	1532-1536	from	from	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-23	1537-1540	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-24	1541-1546	cache	cache	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+26-25	1546-1547	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+
+#Text=Example SQL:
+27-1	1548-1555	Example	example	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+27-2	1556-1559	SQL	SQL	NNP	PROPN	TECHNOLOGY[48]	language[48]	SQL[48]	*[48]	*[48]	*[48]	http://dbpedia.org/resource/SQL[48]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+27-3	1559-1560	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	DESCRIPTION[14]	_	_
+
+#Text={code:java}
+28-1	1562-1563	{	{	(	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+28-2	1563-1567	code	code	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+28-3	1567-1568	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+28-4	1568-1572	java	java	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+28-5	1572-1573	}	}	)	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+
+#Text=CACHE TABLE cache_t SELECT * FROM mysql.test.test1;
+29-1	1574-1579	CACHE	CACHE	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-2	1580-1585	TABLE	TABLE	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-3	1586-1593	cache_t	cache\_t	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-4	1594-1600	SELECT	SELECT	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-5	1601-1602	*	\*	SYM	SYM	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-6	1603-1607	FROM	FROM	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-7	1608-1624	mysql.test.test1	mysql.test.test1	NNP	X	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+29-8	1624-1625	;	\;	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+
+#Text=SELECT * FROM cache_t;
+30-1	1626-1632	SELECT	SELECT	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+30-2	1633-1634	*	\*	SYM	SYM	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+30-3	1635-1639	FROM	FROM	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+30-4	1640-1647	cache_t	cache\_t	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+30-5	1647-1648	;	\;	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+
+#Text={code}
+31-1	1649-1650	{	{	(	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+31-2	1650-1654	code	code	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+31-3	1654-1655	}	}	)	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	CODE[15]	_	_
+
+#Text=Expected Behavior:
+32-1	1657-1665	Expected	expect	VBN	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+32-2	1666-1674	Behavior	behavior	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+32-3	1674-1675	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+
+#Text=The expectation is that querying the cached table (cache_t) should retrieve the result from the cache without re-evaluating the execution plan.
+33-1	1676-1679	The	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-2	1680-1691	expectation	expectation	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-3	1692-1694	is	be	VBZ	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-4	1695-1699	that	that	IN	SCONJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-5	1700-1708	querying	query	VBG	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-6	1709-1712	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-7	1713-1719	cached	cache	VBN	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-8	1720-1725	table	table	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-9	1726-1727	(	(	(	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-10	1727-1734	cache_t	cache\_t	NN	NOUN	CODE\_LOCATION[49]	variable[49]	*[49]	*[49]	*[49]	*[49]	*[49]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-11	1734-1735	)	)	)	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-12	1736-1742	should	should	MD	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-13	1743-1751	retrieve	retrieve	VB	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-14	1752-1755	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-15	1756-1762	result	result	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-16	1763-1767	from	from	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-17	1768-1771	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-18	1772-1777	cache	cache	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-19	1778-1785	without	without	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-20	1786-1799	re-evaluating	re-evaluating	VBG	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-21	1800-1803	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-22	1804-1813	execution	execution	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-23	1814-1818	plan	plan	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+33-24	1818-1819	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	EXPECTED[16]	_	_
+
+#Text=Actual Behavior:
+34-1	1821-1827	Actual	actual	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+34-2	1828-1836	Behavior	Behavior	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+34-3	1836-1837	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+
+#Text=However, the cache is invalidated, and the content is re-read from the JDBC table.
+35-1	1838-1845	However	however	RB	ADV	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-2	1845-1846	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-3	1847-1850	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-4	1851-1856	cache	cache	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-5	1857-1859	is	be	VBZ	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-6	1860-1871	invalidated	invalidate	VBN	VERB	SYMPTOM[50]	wrong\_output[50]	*[50]	*[50]	observed[50]	*[50]	*[50]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-7	1871-1872	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-8	1873-1876	and	and	CC	CCONJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-9	1877-1880	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-10	1881-1888	content	content	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-11	1889-1891	is	be	VBZ	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-12	1892-1899	re-read	re-read	JJ	ADJ	SYMPTOM[51]	wrong\_output[51]	*[51]	*[51]	observed[51]	*[51]	*[51]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-13	1900-1904	from	from	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-14	1905-1908	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-15	1909-1913	JDBC	JDBC	NNP	PROPN	TECHNOLOGY[52]	protocol[52]	JDBC[52]	*[52]	*[52]	*[52]	http://dbpedia.org/resource/Java\_Database\_Connectivity[52]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-16	1914-1919	table	table	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+35-17	1919-1920	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	ACTUAL[17]	_	_
+
+#Text=Root Cause:
+36-1	1922-1926	Root	root	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+36-2	1927-1932	Cause	cause	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+36-3	1932-1933	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+
+#Text=The issue lies in the 'CacheData' class, where the comparison involves 'JDBCTable.'
+37-1	1934-1937	The	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-2	1938-1943	issue	issue	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-3	1944-1948	lies	lie	VBZ	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-4	1949-1951	in	in	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-5	1952-1955	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-6	1956-1957	'	'	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-7	1957-1966	CacheData	CacheData	NNP	PROPN	CODE\_LOCATION[53]	class[53]	*[53]	*[53]	*[53]	*[53]	*[53]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	CAUSED\_BY	35-6[50_53]
+37-8	1966-1967	'	'	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-9	1968-1973	class	class	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-10	1973-1974	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-11	1975-1980	where	where	WRB	ADV	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-12	1981-1984	the	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-13	1985-1995	comparison	comparison	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-14	1996-2004	involves	involve	VBZ	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-15	2005-2006	'	'	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-16	2006-2015	JDBCTable	JDBCTable	NNP	PROPN	CODE\_LOCATION[54]	class[54]	*[54]	*[54]	*[54]	*[54]	*[54]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-17	2015-2016	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+37-18	2016-2017	'	'	''	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+
+#Text=The 'JDBCTable' is a case class:
+38-1	2018-2021	The	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-2	2022-2023	'	'	''	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-3	2023-2032	JDBCTable	JDBCTable	NNP	PROPN	CODE\_LOCATION[55]	class[55]	*[55]	*[55]	*[55]	*[55]	*[55]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-4	2032-2033	'	'	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-5	2034-2036	is	be	VBZ	AUX	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-6	2037-2038	a	a	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-7	2039-2043	case	case	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-8	2044-2049	class	class	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+38-9	2049-2050	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+
+#Text={code:java}
+39-1	2051-2052	{	{	(	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+39-2	2052-2056	code	code	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+39-3	2056-2057	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+39-4	2057-2061	java	java	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+39-5	2061-2062	}	}	)	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+
+#Text=case class JDBCTable(ident: Identifier, schema: StructType, jdbcOptions: JDBCOptions)
+40-1	2063-2067	case	case	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-2	2068-2073	class	class	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-3	2074-2083	JDBCTable	JDBCTable	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-4	2083-2084	(	(	(	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-5	2084-2089	ident	ident	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-6	2089-2090	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-7	2091-2101	Identifier	Identifier	NNP	PROPN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-8	2101-2102	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-9	2103-2109	schema	schema	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-10	2109-2110	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-11	2111-2121	StructType	structtype	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-12	2121-2122	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-13	2123-2134	jdbcOptions	jdbcoptions	NNS	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-14	2134-2135	:	:	:	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-15	2136-2147	JDBCOptions	jdbcoptions	NNS	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+40-16	2147-2148	)	)	)	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+
+#Text={code}
+41-1	2149-2150	{	{	(	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+41-2	2150-2154	code	code	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+41-3	2154-2155	}	}	)	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[18]	_	_
+
+#Text=The comparison of non-case class components, such as 'jdbcOptions,' involves pointer comparison.
+42-1	2157-2160	The	the	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-2	2161-2171	comparison	comparison	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-3	2172-2174	of	of	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-4	2175-2183	non-case	non-case	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-5	2184-2189	class	class	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-6	2190-2200	components	component	NNS	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-7	2200-2201	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-8	2202-2206	such	such	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-9	2207-2209	as	as	IN	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-10	2210-2211	'	'	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-11	2211-2222	jdbcOptions	jdbcOptions	NNP	PROPN	CODE\_LOCATION[56]	variable[56]	*[56]	*[56]	*[56]	*[56]	*[56]	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-12	2222-2223	,	,	,	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-13	2223-2224	'	'	''	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-14	2225-2233	involves	involve	VBZ	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-15	2234-2241	pointer	pointer	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-16	2242-2252	comparison	comparison	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+42-17	2252-2253	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+
+#Text=This leads to unnecessary cache invalidation.
+43-1	2254-2258	This	this	DT	DET	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+43-2	2259-2264	leads	lead	VBZ	VERB	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+43-3	2265-2267	to	to	TO	ADP	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+43-4	2268-2279	unnecessary	unnecessary	JJ	ADJ	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+43-5	2280-2285	cache	cache	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+43-6	2286-2298	invalidation	invalidation	NN	NOUN	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_
+43-7	2298-2299	.	.	.	PUNCT	_	_	_	_	_	_	_	spark-13553213[2]	bug[2]	database[2]	Database[2]	Major[2]	high[2]	NOTES[19]	_	_

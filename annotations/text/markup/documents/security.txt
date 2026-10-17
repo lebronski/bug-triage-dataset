@@ -1,0 +1,51 @@
+CVE-2021-44521: Apache Cassandra: Remote code execution for scripted UDFs
+
+When running Apache Cassandra with the following configuration:
+
+enable_user_defined_functions: true
+enable_scripted_user_defined_functions: true
+enable_user_defined_functions_threads: false 
+
+it is possible for an attacker to execute arbitrary code on the host. The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this. Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.
+
+This issue is being tracked as CASSANDRA-17352
+
+Mitigation:
+
+Set `enable_user_defined_functions_threads: true` (this is default)
+or
+3.0 users should upgrade to 3.0.26
+3.11 users should upgrade to 3.11.12
+4.0 users should upgrade to 4.0.2
+
+Credit:
+
+This issue was discovered by Omer Kaspi of the JFrog Security vulnerability research team.
+
+update NodeJS dependencies by handle security issues.
+
+npm audit shows issues with browser/components/newtab.  Those need fixing.  Many will be simple enough to fix using 'npm audit fix'. That should be landed first and done here.
+
+The others can be done here or spun off to separate bugs depending on amount of work.
+
+Improve nodetool enable{audit,fullquery}log, CVE-2023-30601
+
+The {{--archive-command}} parameter to {code}nodetool enable{audit,fullquery}log{code} allows an attacker to execute arbitrary commands as the user running cassandra.
+
+Patch adds a configuration option which disallows using this parameter - for any existing users of --archive-command this can be re-enabled
+
+'about:certificate' should not display internal "distrust" certs
+
+User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0
+
+Steps to reproduce:
+
+Visit the pages associated to 'about:certificate' and 'about:preferences#privacy', then inspect their Servers tab in each.
+
+Actual results:
+
+The names present in the list that is reported In page associated to 'about:certificate', are missing from the list reported in page associated to 'about:preferences#privacy'.
+
+Expected results:
+
+Lists to be synchronized and therefore identical.

@@ -1,0 +1,651 @@
+{
+  "description": "ЛР3: по одному текстовому документу на каждый объект (категорию дефекта). Документ = баг-репорты категории, соединённые пустой строкой; текст репорта = summary + \\n\\n + description.",
+  "target_chars": [
+    1800,
+    2600
+  ],
+  "documents": [
+    {
+      "doc_id": "authentication",
+      "category": "authentication",
+      "file": "documents/authentication.txt",
+      "chars": 2177,
+      "words": 323,
+      "reports": [
+        {
+          "report_id": "thunderbird-1825223",
+          "start": 0,
+          "end": 1367,
+          "source_file": "data/text/bug_reports/authentication/thunderbird-1825223.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "authentication",
+            "component_hint": "Auth-service",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "authentication",
+            "component": "Auth-service",
+            "severity": "Major",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "hadoop-13513595",
+          "start": 1369,
+          "end": 2177,
+          "source_file": "data/text/bug_reports/authentication/hadoop-13513595.json",
+          "source_project": "hadoop",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "authentication",
+            "component_hint": "Auth-service",
+            "severity_prelabel": "Blocker"
+          },
+          "labels": {
+            "ticket_type": "feature_request",
+            "category": "authentication",
+            "component": "Auth-service",
+            "severity": null,
+            "confidence": "low"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "crash",
+      "category": "crash",
+      "file": "documents/crash.txt",
+      "chars": 2414,
+      "words": 234,
+      "reports": [
+        {
+          "report_id": "hadoop-13544320",
+          "start": 0,
+          "end": 1738,
+          "source_file": "data/text/bug_reports/crash/hadoop-13544320.json",
+          "source_project": "hadoop",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "crash",
+            "component_hint": "Backend",
+            "severity_prelabel": "Critical"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "crash",
+            "component": "Auth-service",
+            "severity": "Critical",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "vscode-198363",
+          "start": 1740,
+          "end": 2414,
+          "source_file": "data/text/bug_reports/crash/vscode-198363.json",
+          "source_project": "vscode",
+          "tracker": "GitHub Issues",
+          "prelabels": {
+            "category": "crash",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "crash",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "database",
+      "category": "database",
+      "file": "documents/database.txt",
+      "chars": 2299,
+      "words": 325,
+      "reports": [
+        {
+          "report_id": "firefox-1842613",
+          "start": 0,
+          "end": 1276,
+          "source_file": "data/text/bug_reports/database/firefox-1842613.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "database",
+            "component_hint": "Database",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "database",
+            "component": "Database",
+            "severity": "Major",
+            "confidence": "low"
+          }
+        },
+        {
+          "report_id": "spark-13553213",
+          "start": 1278,
+          "end": 2299,
+          "source_file": "data/text/bug_reports/database/spark-13553213.json",
+          "source_project": "spark",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "database",
+            "component_hint": "Database",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "database",
+            "component": "Database",
+            "severity": "Major",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "localization",
+      "category": "localization",
+      "file": "documents/localization.txt",
+      "chars": 2280,
+      "words": 323,
+      "reports": [
+        {
+          "report_id": "firefox-1946605",
+          "start": 0,
+          "end": 1026,
+          "source_file": "data/text/bug_reports/localization/firefox-1946605.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "localization",
+            "component_hint": "Frontend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "localization",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "thunderbird-1777670",
+          "start": 1028,
+          "end": 1298,
+          "source_file": "data/text/bug_reports/localization/thunderbird-1777670.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "localization",
+            "component_hint": "Frontend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "localization",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "firefox-1866316",
+          "start": 1300,
+          "end": 2280,
+          "source_file": "data/text/bug_reports/localization/firefox-1866316.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "localization",
+            "component_hint": "Frontend",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "localization",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "memory",
+      "category": "memory",
+      "file": "documents/memory.txt",
+      "chars": 1956,
+      "words": 331,
+      "reports": [
+        {
+          "report_id": "firefox-1635681",
+          "start": 0,
+          "end": 1075,
+          "source_file": "data/text/bug_reports/memory/firefox-1635681.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "memory",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "memory",
+            "component": "Frontend",
+            "severity": "Major",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "hbase-13375331",
+          "start": 1077,
+          "end": 1338,
+          "source_file": "data/text/bug_reports/memory/hbase-13375331.json",
+          "source_project": "hbase",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "memory",
+            "component_hint": "Backend",
+            "severity_prelabel": "Minor"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "memory",
+            "component": "Backend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "thunderbird-1737223",
+          "start": 1340,
+          "end": 1956,
+          "source_file": "data/text/bug_reports/memory/thunderbird-1737223.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "memory",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "memory",
+            "component": "Frontend",
+            "severity": "Critical",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "network",
+      "category": "network",
+      "file": "documents/network.txt",
+      "chars": 2048,
+      "words": 233,
+      "reports": [
+        {
+          "report_id": "vscode-20567",
+          "start": 0,
+          "end": 752,
+          "source_file": "data/text/bug_reports/network/vscode-20567.json",
+          "source_project": "vscode",
+          "tracker": "GitHub Issues",
+          "prelabels": {
+            "category": "network",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "network",
+            "component": "Backend",
+            "severity": "Critical",
+            "confidence": "low"
+          }
+        },
+        {
+          "report_id": "spark-13335362",
+          "start": 754,
+          "end": 1784,
+          "source_file": "data/text/bug_reports/network/spark-13335362.json",
+          "source_project": "spark",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "network",
+            "component_hint": "Backend",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "feature_request",
+            "category": "network",
+            "component": "Backend",
+            "severity": null,
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "thunderbird-1757761",
+          "start": 1786,
+          "end": 2048,
+          "source_file": "data/text/bug_reports/network/thunderbird-1757761.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "network",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "network",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "payment",
+      "category": "payment",
+      "file": "documents/payment.txt",
+      "chars": 2221,
+      "words": 296,
+      "reports": [
+        {
+          "report_id": "firefox-1851799",
+          "start": 0,
+          "end": 766,
+          "source_file": "data/text/bug_reports/payment/firefox-1851799.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "payment",
+            "component_hint": "Billing",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "payment",
+            "component": "Billing",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "firefox-1910229",
+          "start": 768,
+          "end": 1122,
+          "source_file": "data/text/bug_reports/payment/firefox-1910229.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "payment",
+            "component_hint": "Billing",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "payment",
+            "component": "Billing",
+            "severity": "Major",
+            "confidence": "low"
+          }
+        },
+        {
+          "report_id": "thunderbird-1803720",
+          "start": 1124,
+          "end": 2221,
+          "source_file": "data/text/bug_reports/payment/thunderbird-1803720.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "payment",
+            "component_hint": "Billing",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "payment",
+            "component": "Billing",
+            "severity": "Major",
+            "confidence": "low"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "performance",
+      "category": "performance",
+      "file": "documents/performance.txt",
+      "chars": 2185,
+      "words": 345,
+      "reports": [
+        {
+          "report_id": "thunderbird-1857818",
+          "start": 0,
+          "end": 619,
+          "source_file": "data/text/bug_reports/performance/thunderbird-1857818.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "performance",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "performance",
+            "component": "Frontend",
+            "severity": "Major",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "firefox-1715640",
+          "start": 621,
+          "end": 1196,
+          "source_file": "data/text/bug_reports/performance/firefox-1715640.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "performance",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "performance",
+            "component": "Frontend",
+            "severity": "Critical",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "thunderbird-1859093",
+          "start": 1198,
+          "end": 2185,
+          "source_file": "data/text/bug_reports/performance/thunderbird-1859093.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "performance",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "performance",
+            "component": "Frontend",
+            "severity": "Major",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "security",
+      "category": "security",
+      "file": "documents/security.txt",
+      "chars": 2170,
+      "words": 290,
+      "reports": [
+        {
+          "report_id": "cassandra-13426900",
+          "start": 0,
+          "end": 916,
+          "source_file": "data/text/bug_reports/security/cassandra-13426900.json",
+          "source_project": "cassandra",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "security",
+            "component_hint": "Backend",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "security",
+            "component": "Database",
+            "severity": "Blocker",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "firefox-1668045",
+          "start": 918,
+          "end": 1235,
+          "source_file": "data/text/bug_reports/security/firefox-1668045.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "security",
+            "component_hint": "Backend",
+            "severity_prelabel": "Critical"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "security",
+            "component": "Frontend",
+            "severity": "Major",
+            "confidence": "low"
+          }
+        },
+        {
+          "report_id": "cassandra-13537599",
+          "start": 1237,
+          "end": 1605,
+          "source_file": "data/text/bug_reports/security/cassandra-13537599.json",
+          "source_project": "cassandra",
+          "tracker": "Apache Jira",
+          "prelabels": {
+            "category": "security",
+            "component_hint": "Backend",
+            "severity_prelabel": "Major"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "security",
+            "component": "Database",
+            "severity": "Blocker",
+            "confidence": "high"
+          }
+        },
+        {
+          "report_id": "firefox-1737574",
+          "start": 1607,
+          "end": 2170,
+          "source_file": "data/text/bug_reports/security/firefox-1737574.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "security",
+            "component_hint": "Backend",
+            "severity_prelabel": null
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "security",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        }
+      ]
+    },
+    {
+      "doc_id": "ui_layout",
+      "category": "ui_layout",
+      "file": "documents/ui_layout.txt",
+      "chars": 2216,
+      "words": 294,
+      "reports": [
+        {
+          "report_id": "thunderbird-1736244",
+          "start": 0,
+          "end": 860,
+          "source_file": "data/text/bug_reports/ui_layout/thunderbird-1736244.json",
+          "source_project": "thunderbird",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "ui_layout",
+            "component_hint": "Frontend",
+            "severity_prelabel": "Critical"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "ui_layout",
+            "component": "Frontend",
+            "severity": "Major",
+            "confidence": "low"
+          }
+        },
+        {
+          "report_id": "firefox-1741198",
+          "start": 862,
+          "end": 2216,
+          "source_file": "data/text/bug_reports/network/firefox-1741198.json",
+          "source_project": "firefox",
+          "tracker": "Mozilla Bugzilla",
+          "prelabels": {
+            "category": "network",
+            "component_hint": "Backend",
+            "severity_prelabel": "Minor"
+          },
+          "labels": {
+            "ticket_type": "bug",
+            "category": "ui_layout",
+            "component": "Frontend",
+            "severity": "Minor",
+            "confidence": "high"
+          }
+        }
+      ]
+    }
+  ],
+  "rejected_on_selection": {
+    "firefox-1741198": "предразметка network ошибочна: дефект вёрстки кнопок панели Network Settings — перенесён в документ ui_layout",
+    "firefox-1625967": "предразметка security ошибочна: наложение ссылок в уведомлении — это ui_layout",
+    "firefox-1866677": "предразметка payment спорна: дефект вызван функцией перевода страницы (localization), PayPal лишь пострадавший сайт",
+    "firefox-1768671": "предразметка payment ошибочна: имя файла PDF при сохранении, к оплате не относится",
+    "thunderbird-1729485": "предразметка crash ошибочна: после сбоя ОС почта не загружается — скорее network",
+    "firefox-1831327": "предразметка ui_layout ошибочна: неверная подсказка кнопки, вёрстка не нарушена",
+    "thunderbird-1858445": "предразметка ui_layout спорна: ошибка разбора CSS в тесте, без видимого дефекта",
+    "thunderbird-1643899": "not_a_bug (эталон ЛР2)",
+    "firefox-1895114": "только номера кадров стека, связного текста почти нет",
+    "spark-13442742": "в основном код на Python, мало связного текста"
+  }
+}

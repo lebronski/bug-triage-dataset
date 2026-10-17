@@ -1,0 +1,478 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=webanno.custom.BugEntity|affected|kb_uri|kind|label|normalized|polarity|source
+#T_SP=webanno.custom.BugReport|category|component|confidence|report_id|severity|ticket_type
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=Poor translation quality with new lines in the text
+1-1	0-4	Poor	NNP	PROPN	Poor	*[1]	*[1]	wrong\_output[1]	SYMPTOM[1]	*[1]	observed[1]	*[1]	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-2	5-16	translation	NN	NOUN	translation	*[1]	*[1]	wrong\_output[1]	SYMPTOM[1]	*[1]	observed[1]	*[1]	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-3	17-24	quality	NN	NOUN	quality	*[1]	*[1]	wrong\_output[1]	SYMPTOM[1]	*[1]	observed[1]	*[1]	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-4	25-29	with	IN	ADP	with	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-5	30-33	new	JJ	ADJ	new	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-6	34-39	lines	NNS	NOUN	line	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-7	40-42	in	IN	ADP	in	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-8	43-46	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+1-9	47-51	text	NN	NOUN	text	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	TITLE[12]	_	_	
+
+#Text=When translating the first paragraph of this website https://www.freebsd.org/ from English to Russian it produces nonsense.
+2-1	53-57	When	WRB	ADV	when	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-2	58-69	translating	VBG	VERB	translate	*	*	*	FEATURE	Firefox Translations	*	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	SYMPTOM\_OF	1-1[1_0]	
+2-3	70-73	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-4	74-79	first	JJ	ADJ	first	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-5	80-89	paragraph	NN	NOUN	paragraph	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-6	90-92	of	IN	ADP	of	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-7	93-97	this	DT	DET	this	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-8	98-105	website	JJ	ADJ	website	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-9	106-130	https://www.freebsd.org/	ADD	X	https://www.freebsd.org/	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-10	131-135	from	IN	ADP	from	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-11	136-143	English	NNP	PROPN	English	*	http://dbpedia.org/resource/English\_language	language	LOCALE	en	*	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-12	144-146	to	TO	PART	to	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-13	147-154	Russian	NNP	PROPN	Russian	*	http://dbpedia.org/resource/Russian\_language	language	LOCALE	ru	*	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-14	155-157	it	PRP	PRON	it	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-15	158-166	produces	VBZ	VERB	produce	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-16	167-175	nonsense	NN	NOUN	nonsense	*	*	wrong\_output	SYMPTOM	*	observed	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+2-17	175-176	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+
+#Text=When I copy the text to about:translations it's perfect.
+3-1	177-181	When	WRB	ADV	when	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-2	182-183	I	PRP	PRON	i	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-3	184-188	copy	VBP	VERB	copy	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-4	189-192	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-5	193-197	text	NN	NOUN	text	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-6	198-200	to	TO	PART	to	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-7	201-219	about:translations	ADD	X	about:translations	*	*	page	UI\_ELEMENT	*	*	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-8	220-222	it	PRP	PRON	it	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-9	222-224	's	VBZ	AUX	be	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-10	225-232	perfect	JJ	ADJ	perfect	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+3-11	232-233	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+
+#Text=I edited the HTML to remove new lines from the text and the quality of translation became good.
+4-1	234-235	I	PRP	PRON	i	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-2	236-242	edited	VBD	VERB	edit	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-3	243-246	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-4	247-251	HTML	NNP	PROPN	HTML	*	http://dbpedia.org/resource/HTML	language	TECHNOLOGY	HTML	*	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-5	252-254	to	TO	PART	to	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-6	255-261	remove	VB	VERB	remove	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-7	262-265	new	JJ	ADJ	new	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-8	266-271	lines	NNS	NOUN	line	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-9	272-276	from	IN	ADP	from	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-10	277-280	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-11	281-285	text	NN	NOUN	text	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-12	286-289	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-13	290-293	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-14	294-301	quality	NN	NOUN	quality	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-15	302-304	of	IN	ADP	of	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-16	305-316	translation	NN	NOUN	translation	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-17	317-323	became	VBD	VERB	become	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-18	324-328	good	JJ	ADJ	good	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+4-19	328-329	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[13]	_	_	
+
+#Text=Does it make sense to remove new lines inside paragraphs before translating to prevent such cases?
+5-1	332-336	Does	VBZ	VERB	do	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-2	337-339	it	PRP	PRON	it	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-3	340-344	make	VB	VERB	make	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-4	345-350	sense	NN	NOUN	sense	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-5	351-353	to	TO	PART	to	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-6	354-360	remove	VB	VERB	remove	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-7	361-364	new	JJ	ADJ	new	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-8	365-370	lines	NNS	NOUN	line	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-9	371-377	inside	IN	ADP	inside	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-10	378-388	paragraphs	NN	NOUN	paragraph	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-11	389-395	before	IN	ADP	before	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-12	396-407	translating	VBG	VERB	translate	*	*	*	FEATURE	Firefox Translations	*	*	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-13	408-410	to	TO	PART	to	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-14	411-418	prevent	VB	VERB	prevent	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-15	419-423	such	JJ	ADJ	such	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-16	424-429	cases	NNS	NOUN	case	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+5-17	429-430	?	.	PUNCT	?	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	DESCRIPTION[14]	_	_	
+
+#Text=> FreeBSD is an operating system used to power modern servers,
+#Text=desktops, and embedded <a href="https://www.freebsd.org/platforms/">platforms.</a> A large
+#Text=<a href="https://docs.FreeBSD.org/en/articles/contributors/#staff-committers">
+#Text=community</a> has continually developed it for more than thirty
+#Text=years.
+6-1	432-433	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-2	434-441	FreeBSD	NNP	PROPN	FreeBSD	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-3	442-444	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-4	445-447	an	DT	DET	an	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-5	448-457	operating	NN	NOUN	operating	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-6	458-464	system	NN	NOUN	system	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-7	465-469	used	VBN	VERB	use	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-8	470-472	to	TO	ADP	to	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-9	473-478	power	NN	NOUN	power	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-10	479-485	modern	JJ	ADJ	modern	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-11	486-493	servers	NNS	NOUN	server	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-12	493-494	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-13	495-503	desktops	NNS	NOUN	desktop	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-14	503-504	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-15	505-508	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-16	509-517	embedded	VBD	VERB	embed	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-17	518-519	<	SYM	SYM	<	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-18	519-520	a	DT	DET	a	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-19	521-525	href	NN	NOUN	href	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-20	525-526	=	SYM	SYM	=	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-21	526-527	"	.	PUNCT	"	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-22	527-561	https://www.freebsd.org/platforms/	ADD	X	https://www.freebsd.org/platforms/	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-23	561-562	"	.	PUNCT	"	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-24	562-563	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-25	563-572	platforms	NNS	NOUN	platform	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-26	572-573	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-27	573-574	<	SYM	SYM	<	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-28	574-575	/	SYM	SYM	/	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-29	575-576	a	DT	DET	a	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-30	576-577	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-31	578-579	A	NNP	PROPN	A	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-32	580-585	large	JJ	ADJ	large	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-33	586-587	<	SYM	SYM	<	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-34	587-588	a	DT	DET	a	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-35	589-593	href	NN	NOUN	href	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-36	593-594	=	SYM	SYM	=	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-37	594-595	"	.	PUNCT	"	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-38	595-662	https://docs.FreeBSD.org/en/articles/contributors/#staff-committers	ADD	X	https://docs.FreeBSD.org/en/articles/contributors/#staff-committers	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-39	662-663	"	.	PUNCT	"	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-40	663-664	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-41	665-674	community	NN	NOUN	community	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-42	674-675	<	SYM	SYM	<	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-43	675-676	/	SYM	SYM	/	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-44	676-677	a	DT	DET	a	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-45	677-678	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-46	679-682	has	VBZ	AUX	have	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-47	683-694	continually	RB	ADV	continually	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-48	695-704	developed	VBN	VERB	develop	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-49	705-707	it	PRP	PRON	it	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-50	708-711	for	IN	ADP	for	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-51	712-716	more	JJR	ADJ	more	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-52	717-721	than	IN	ADP	than	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-53	722-728	thirty	CD	NUM	thirty	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-54	729-734	years	NNS	NOUN	year	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+6-55	734-735	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+
+#Text=Its advanced networking, security, and storage features have
+#Text=made FreeBSD the platform of choice for many of the <a href="https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users">
+#Text=busiest web sites</a> and most pervasive embedded networking and
+#Text=storage devices.
+7-1	736-739	Its	PRP$	PRON	its	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-2	740-748	advanced	JJ	ADJ	advanced	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-3	749-759	networking	NN	NOUN	networking	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-4	759-760	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-5	761-769	security	NN	NOUN	security	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-6	769-770	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-7	771-774	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-8	775-782	storage	NN	NOUN	storage	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-9	783-791	features	NNS	NOUN	feature	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-10	792-796	have	VBP	AUX	have	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-11	797-801	made	VBN	VERB	make	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-12	802-809	FreeBSD	NNP	PROPN	FreeBSD	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-13	810-813	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-14	814-822	platform	NN	NOUN	platform	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-15	823-825	of	IN	ADP	of	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-16	826-832	choice	NN	NOUN	choice	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-17	833-836	for	IN	ADP	for	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-18	837-841	many	JJ	ADJ	many	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-19	842-844	of	IN	ADP	of	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-20	845-848	the	DT	DET	the	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-21	849-850	<	SYM	SYM	<	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-22	850-851	a	DT	DET	a	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-23	852-856	href	NN	NOUN	href	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-24	856-857	=	SYM	SYM	=	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-25	857-858	"	.	PUNCT	"	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-26	858-942	https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users	ADD	X	https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-27	942-943	"	.	PUNCT	"	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-28	943-944	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-29	945-952	busiest	JJS	ADJ	busy	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-30	953-956	web	NN	NOUN	web	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-31	957-962	sites	NNS	NOUN	site	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-32	962-963	<	SYM	SYM	<	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-33	963-964	/	SYM	SYM	/	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-34	964-965	a	DT	DET	a	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-35	965-966	>	SYM	SYM	>	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-36	967-970	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-37	971-975	most	RBS	ADV	most	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-38	976-985	pervasive	JJ	ADJ	pervasive	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-39	986-994	embedded	VBD	VERB	embed	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-40	995-1005	networking	NN	NOUN	networking	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-41	1006-1009	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-42	1010-1017	storage	NN	NOUN	storage	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-43	1018-1025	devices	NNS	NOUN	device	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+7-44	1025-1026	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[9]	Frontend[9]	high[9]	firefox-1946605[9]	Minor[9]	bug[9]	NOTES[15]	_	_	
+
+#Text=TB 102 LTS - GUI not fully translated
+8-1	1028-1030	TB	NNP	PROPN	TB	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	VERSION\_OF	8-2[2_0]	
+8-2	1031-1034	102	CD	NUM	102	yes[2]	*[2]	app\_version[2]	ENV[2]	Thunderbird 102 LTS[2]	*[2]	*[2]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	_	_	
+8-3	1035-1038	LTS	NNP	PROPN	LTS	yes[2]	*[2]	app\_version[2]	ENV[2]	Thunderbird 102 LTS[2]	*[2]	*[2]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	_	_	
+8-4	1039-1040	-	:	PUNCT	-	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	_	_	
+8-5	1041-1044	GUI	NNP	PROPN	GUI	*	*	other	UI\_ELEMENT	*	*	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	SYMPTOM\_OF	8-6[3_0]	
+8-6	1045-1048	not	RB	PART	not	*[3]	*[3]	wrong\_output[3]	SYMPTOM[3]	*[3]	observed[3]	*[3]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	_	_	
+8-7	1049-1054	fully	RB	ADV	fully	*[3]	*[3]	wrong\_output[3]	SYMPTOM[3]	*[3]	observed[3]	*[3]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	_	_	
+8-8	1055-1065	translated	VBN	VERB	translate	*[3]	*[3]	wrong\_output[3]	SYMPTOM[3]	*[3]	observed[3]	*[3]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	TITLE[16]	_	_	
+
+#Text=Hello!
+9-1	1067-1072	Hello	NN	NOUN	hello	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[17]	_	_	
+9-2	1072-1073	!	.	PUNCT	!	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[17]	_	_	
+
+#Text=Many parts of the GUI of the release aren't translated in the Portuguese (pt-PT) version.
+10-1	1075-1079	Many	JJ	ADJ	many	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-2	1080-1085	parts	NNS	NOUN	part	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-3	1086-1088	of	IN	ADP	of	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-4	1089-1092	the	DT	DET	the	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-5	1093-1096	GUI	NNP	PROPN	GUI	*	*	other	UI\_ELEMENT	*	*	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-6	1097-1099	of	IN	ADP	of	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-7	1100-1103	the	DT	DET	the	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-8	1104-1111	release	NN	NOUN	release	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-9	1112-1115	are	VBP	AUX	be	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-10	1115-1118	n't	RB	PART	not	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-11	1119-1129	translated	VBN	VERB	translate	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-12	1130-1132	in	IN	ADP	in	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-13	1133-1136	the	DT	DET	the	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-14	1137-1147	Portuguese	NNP	PROPN	Portuguese	*	http://dbpedia.org/resource/Portuguese\_language	language	LOCALE	pt	*	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	OBSERVED\_IN	12-12	
+10-15	1148-1149	(	(	PUNCT	(	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-16	1149-1154	pt-PT	NNP	PROPN	pt-PT	*	*	language	LOCALE	pt-PT	*	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-17	1154-1155	)	)	PUNCT	)	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-18	1156-1163	version	NN	NOUN	version	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+10-19	1163-1164	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[18]	_	_	
+
+#Text=For example, the menu option “OpenPGP Key Manager” is in English.
+11-1	1166-1169	For	IN	ADP	for	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-2	1170-1177	example	NN	NOUN	example	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-3	1177-1178	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-4	1179-1182	the	DT	DET	the	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-5	1183-1187	menu	NN	NOUN	menu	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-6	1188-1194	option	NN	NOUN	option	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-7	1195-1196	“	.	PUNCT	“	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-8	1196-1203	OpenPGP	NNP	PROPN	OpenPGP	*[4]	*[4]	menu[4]	UI\_ELEMENT[4]	*[4]	*[4]	*[4]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-9	1204-1207	Key	NNP	PROPN	Key	*[4]	*[4]	menu[4]	UI\_ELEMENT[4]	*[4]	*[4]	*[4]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-10	1208-1215	Manager	NNP	PROPN	Manager	*[4]	*[4]	menu[4]	UI\_ELEMENT[4]	*[4]	*[4]	*[4]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-11	1215-1216	”	.	PUNCT	”	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-12	1217-1219	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-13	1220-1222	in	IN	ADP	in	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-14	1223-1230	English	NNP	PROPN	English	*	*	language	LOCALE	*	*	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+11-15	1230-1231	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[19]	_	_	
+
+#Text=And the radio buttons in the import/export are also untranslated.
+12-1	1233-1236	And	CC	CCONJ	and	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-2	1237-1240	the	DT	DET	the	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-3	1241-1246	radio	NN	NOUN	radio	*[5]	*[5]	button[5]	UI\_ELEMENT[5]	*[5]	*[5]	*[5]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	SYMPTOM\_OF	12-12[0_5]	
+12-4	1247-1254	buttons	NNS	NOUN	button	*[5]	*[5]	button[5]	UI\_ELEMENT[5]	*[5]	*[5]	*[5]	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-5	1255-1257	in	IN	ADP	in	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-6	1258-1261	the	DT	DET	the	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-7	1262-1268	import	NN	NOUN	import	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-8	1268-1269	/	SYM	SYM	/	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-9	1269-1275	export	NN	NOUN	export	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-10	1276-1279	are	VBP	AUX	be	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-11	1280-1284	also	RB	ADV	also	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-12	1285-1297	untranslated	JJ	ADJ	untranslated	*	*	wrong\_output	SYMPTOM	*	observed	*	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+12-13	1297-1298	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[10]	Frontend[10]	high[10]	thunderbird-1777670[10]	Minor[10]	bug[10]	DESCRIPTION[20]	_	_	
+
+#Text=RTL - shopping sidebar container flickers on the right side when opening/closing the sidebar
+13-1	1300-1303	RTL	NNP	PROPN	RTL	*	http://dbpedia.org/resource/Bidirectional\_text	standard	TECHNOLOGY	Bidirectional text (RTL)	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	CAUSED\_BY	13-6	
+13-2	1304-1305	-	:	PUNCT	-	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-3	1306-1314	shopping	NN	NOUN	shopping	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-4	1315-1322	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	SYMPTOM\_OF	13-6	
+13-5	1323-1332	container	NN	NOUN	container	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-6	1333-1341	flickers	NNS	NOUN	flicker	*	*	visual\_defect	SYMPTOM	*	observed	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-7	1342-1344	on	IN	ADP	on	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-8	1345-1348	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-9	1349-1354	right	JJ	ADJ	right	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-10	1355-1359	side	NN	NOUN	side	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-11	1360-1364	when	WRB	ADV	when	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-12	1365-1372	opening	VBG	VERB	open	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-13	1372-1373	/	SYM	SYM	/	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-14	1373-1380	closing	VBG	VERB	close	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-15	1381-1384	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+13-16	1385-1392	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	TITLE[21]	_	_	
+
+#Text=STR:
+14-1	1394-1397	STR	NN	NOUN	str	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+14-2	1397-1398	:	:	PUNCT	:	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+
+#Text=1. Enable bidi mode in Browser Toolbox (alternatively: load Firefox in RTL language)
+15-1	1399-1400	1	CD	NUM	1	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-2	1400-1401	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-3	1402-1408	Enable	VB	VERB	enable	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-4	1409-1413	bidi	NNP	PROPN	bidi	*	http://dbpedia.org/resource/Bidirectional\_text	standard	TECHNOLOGY	Bidirectional text (RTL)	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-5	1414-1418	mode	NN	NOUN	mode	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-6	1419-1421	in	IN	ADP	in	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-7	1422-1429	Browser	NNP	PROPN	Browser	*[6]	*[6]	tool[6]	PRODUCT[6]	Firefox Browser Toolbox[6]	*[6]	*[6]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-8	1430-1437	Toolbox	NNP	PROPN	Toolbox	*[6]	*[6]	tool[6]	PRODUCT[6]	Firefox Browser Toolbox[6]	*[6]	*[6]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-9	1438-1439	(	(	PUNCT	(	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-10	1439-1452	alternatively	RB	ADV	alternatively	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-11	1452-1453	:	:	PUNCT	:	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-12	1454-1458	load	NN	NOUN	load	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-13	1459-1466	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-14	1467-1469	in	IN	ADP	in	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-15	1470-1473	RTL	NNP	PROPN	RTL	*	http://dbpedia.org/resource/Bidirectional\_text	standard	TECHNOLOGY	Bidirectional text (RTL)	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-16	1474-1482	language	NN	NOUN	language	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+15-17	1482-1483	)	)	PUNCT	)	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+
+#Text=2. Make sure sidebar feature is enabled and profile is opted in
+16-1	1484-1485	2	CD	NUM	2	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-2	1485-1486	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-3	1487-1491	Make	VB	VERB	make	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-4	1492-1496	sure	JJ	ADJ	sure	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-5	1497-1504	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-6	1505-1512	feature	NN	NOUN	feature	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-7	1513-1515	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-8	1516-1523	enabled	VBN	VERB	enable	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-9	1524-1527	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-10	1528-1535	profile	NN	NOUN	profile	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-11	1536-1538	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-12	1539-1544	opted	VBN	VERB	opt	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+16-13	1545-1547	in	IN	ADP	in	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+
+#Text=2. View product page ([example](https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/)) and ensure shopping sidebar is visible
+17-1	1548-1549	2	CD	NUM	2	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-2	1549-1550	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-3	1551-1555	View	VB	VERB	view	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-4	1556-1563	product	NN	NOUN	product	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-5	1564-1568	page	NN	NOUN	page	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-6	1569-1570	(	(	PUNCT	(	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-7	1570-1571	[	.	PUNCT	\[	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-8	1571-1578	example	NN	NOUN	example	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-9	1578-1579	]	.	PUNCT	\]	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-10	1579-1580	(	(	PUNCT	(	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-11	1580-1664	https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/	ADD	X	https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-12	1664-1665	)	)	PUNCT	)	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-13	1665-1666	)	)	PUNCT	)	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-14	1667-1670	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-15	1671-1677	ensure	VB	VERB	ensure	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-16	1678-1686	shopping	NN	NOUN	shopping	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-17	1687-1694	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-18	1695-1697	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+17-19	1698-1705	visible	JJ	ADJ	visible	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+
+#Text=3. Close sidebar with urlbar shopping icon or the close button on the sidebar
+18-1	1706-1707	3	LS	NUM	3	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-2	1707-1708	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-3	1709-1714	Close	VB	VERB	close	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-4	1715-1722	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-5	1723-1727	with	IN	ADP	with	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-6	1728-1734	urlbar	JJ	ADJ	urlbar	*[7]	*[7]	other[7]	UI\_ELEMENT[7]	*[7]	*[7]	*[7]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-7	1735-1743	shopping	NN	NOUN	shopping	*[7]	*[7]	other[7]	UI\_ELEMENT[7]	*[7]	*[7]	*[7]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-8	1744-1748	icon	NN	NOUN	icon	*[7]	*[7]	other[7]	UI\_ELEMENT[7]	*[7]	*[7]	*[7]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-9	1749-1751	or	CC	CCONJ	or	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-10	1752-1755	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-11	1756-1761	close	JJ	ADJ	close	*[8]	*[8]	button[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-12	1762-1768	button	NN	NOUN	button	*[8]	*[8]	button[8]	UI\_ELEMENT[8]	*[8]	*[8]	*[8]	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-13	1769-1771	on	IN	ADP	on	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-14	1772-1775	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+18-15	1776-1783	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	STEPS[22]	_	_	
+
+#Text=Expected:
+19-1	1785-1793	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+19-2	1793-1794	:	:	PUNCT	:	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+
+#Text=- there should be no sudden flicker on the right side of the page when closing/opening the sidebar in RTL mode
+20-1	1795-1796	-	:	PUNCT	-	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-2	1797-1802	there	EX	PRON	there	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-3	1803-1809	should	MD	AUX	should	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-4	1810-1812	be	VB	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-5	1813-1815	no	DT	DET	no	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-6	1816-1822	sudden	JJ	ADJ	sudden	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-7	1823-1830	flicker	NN	NOUN	flicker	*	*	visual\_defect	SYMPTOM	*	negated	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-8	1831-1833	on	IN	ADP	on	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-9	1834-1837	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-10	1838-1843	right	JJ	ADJ	right	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-11	1844-1848	side	NN	NOUN	side	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-12	1849-1851	of	IN	ADP	of	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-13	1852-1855	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-14	1856-1860	page	NN	NOUN	page	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-15	1861-1865	when	WRB	ADV	when	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-16	1866-1873	closing	NN	NOUN	closing	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-17	1873-1874	/	SYM	SYM	/	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-18	1874-1881	opening	VBG	VERB	open	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-19	1882-1885	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-20	1886-1893	sidebar	NN	NOUN	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	SYMPTOM\_OF	20-7	
+20-21	1894-1896	in	IN	ADP	in	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-22	1897-1900	RTL	NNP	PROPN	RTL	*	http://dbpedia.org/resource/Bidirectional\_text	standard	TECHNOLOGY	Bidirectional text (RTL)	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+20-23	1901-1905	mode	NN	NOUN	mode	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	EXPECTED[23]	_	_	
+
+#Text=Actual:
+21-1	1907-1913	Actual	JJ	ADJ	actual	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+21-2	1913-1914	:	:	PUNCT	:	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+
+#Text=- there is a slight flicker on the right side of the page, which is very distracting visually
+22-1	1915-1916	-	:	PUNCT	-	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-2	1917-1922	there	EX	PRON	there	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-3	1923-1925	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-4	1926-1927	a	DT	DET	a	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-5	1928-1934	slight	JJ	ADJ	slight	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-6	1935-1942	flicker	NN	NOUN	flicker	*	*	visual\_defect	SYMPTOM	*	observed	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-7	1943-1945	on	IN	ADP	on	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-8	1946-1949	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-9	1950-1955	right	JJ	ADJ	right	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-10	1956-1960	side	NN	NOUN	side	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-11	1961-1963	of	IN	ADP	of	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-12	1964-1967	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-13	1968-1972	page	NN	NOUN	page	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-14	1972-1973	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-15	1974-1979	which	WDT	PRON	which	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-16	1980-1982	is	VBZ	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-17	1983-1987	very	RB	ADV	very	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-18	1988-1999	distracting	VBG	VERB	distract	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+22-19	2000-2008	visually	RB	ADV	visually	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	ACTUAL[24]	_	_	
+
+#Text=Notes:
+23-1	2010-2015	Notes	NNS	NOUN	note	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+23-2	2015-2016	:	:	PUNCT	:	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+
+#Text=- this issue probably existed for a while, but I believe that it will be way more obvious once [we show sidebar animations](bugzilla.mozilla.org/show_bug.cgi?id=1858762).
+24-1	2017-2018	-	:	PUNCT	-	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-2	2019-2023	this	DT	DET	this	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-3	2024-2029	issue	NN	NOUN	issue	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-4	2030-2038	probably	RB	ADV	probably	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-5	2039-2046	existed	VBD	VERB	exist	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-6	2047-2050	for	IN	ADP	for	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-7	2051-2052	a	DT	DET	a	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-8	2053-2058	while	NN	NOUN	while	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-9	2058-2059	,	,	PUNCT	,	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-10	2060-2063	but	CC	CCONJ	but	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-11	2064-2065	I	PRP	PRON	i	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-12	2066-2073	believe	VBP	VERB	believe	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-13	2074-2078	that	IN	SCONJ	that	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-14	2079-2081	it	PRP	PRON	it	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-15	2082-2086	will	MD	AUX	will	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-16	2087-2089	be	VB	AUX	be	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-17	2090-2093	way	NN	NOUN	way	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-18	2094-2098	more	RBR	ADV	more	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-19	2099-2106	obvious	JJ	ADJ	obvious	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-20	2107-2111	once	RB	ADV	once	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-21	2112-2113	[	.	PUNCT	\[	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-22	2113-2115	we	PRP	PRON	we	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-23	2116-2120	show	VBP	VERB	show	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-24	2121-2128	sidebar	JJ	ADJ	sidebar	*	*	other	UI\_ELEMENT	*	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-25	2129-2139	animations	NNS	NOUN	animation	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-26	2139-2140	]	.	PUNCT	\]	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-27	2140-2141	(	(	PUNCT	(	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-28	2141-2174	bugzilla.mozilla.org/show_bug.cgi	VB	X	bugzilla.mozilla.org/show\_bug.cgi	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-29	2174-2175	?	.	PUNCT	?	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-30	2175-2177	id	JJ	ADJ	id	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-31	2177-2178	=	$	SYM	=	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-32	2178-2185	1858762	CD	NUM	1858762	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-33	2185-2186	)	)	PUNCT	)	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+24-34	2186-2187	.	.	PUNCT	.	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+
+#Text=- I tested this on MacOS and can't recall at the moment if it also occurs on other platforms
+25-1	2188-2189	-	:	PUNCT	-	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-2	2190-2191	I	PRP	PRON	i	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-3	2192-2198	tested	VBD	VERB	test	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-4	2199-2203	this	DT	DET	this	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-5	2204-2206	on	IN	ADP	on	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-6	2207-2212	MacOS	NNP	PROPN	MacOS	yes	http://dbpedia.org/resource/MacOS	os	ENV	MacOS	*	*	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-7	2213-2216	and	CC	CCONJ	and	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-8	2217-2219	ca	MD	AUX	can	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-9	2219-2222	n't	RB	PART	not	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-10	2223-2229	recall	VB	VERB	recall	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-11	2230-2232	at	IN	ADP	at	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-12	2233-2236	the	DT	DET	the	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-13	2237-2243	moment	NN	NOUN	moment	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-14	2244-2246	if	IN	SCONJ	if	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-15	2247-2249	it	PRP	PRON	it	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-16	2250-2254	also	RB	ADV	also	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-17	2255-2261	occurs	VBZ	VERB	occur	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-18	2262-2264	on	IN	ADP	on	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-19	2265-2270	other	JJ	ADJ	other	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
+25-20	2271-2280	platforms	NNS	NOUN	platform	_	_	_	_	_	_	_	localization[11]	Frontend[11]	high[11]	firefox-1866316[11]	Minor[11]	bug[11]	NOTES[25]	_	_	
