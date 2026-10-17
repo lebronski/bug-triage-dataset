@@ -1,0 +1,568 @@
+# newdoc id = payment
+# object = payment
+# newpar report = firefox-1851799 | ticket_type=bug category=payment component=Billing severity=Minor confidence=high
+# paragraph = p1 section=TITLE
+# sent_id = payment-s1
+# text = Incorrect message appears after importing an invalid credit card number
+1	Incorrect	incorrect	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM
+2	message	message	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+3	appears	appear	VERB	VBZ	_	_	_	_	NER=O
+4	after	after	ADP	IN	_	_	_	_	NER=O
+5	importing	import	VERB	VBG	_	_	_	_	NER=O
+6	an	an	DET	DT	_	_	_	_	NER=O
+7	invalid	invalid	ADJ	JJ	_	_	_	_	NER=O
+8	credit	credit	NOUN	NN	_	_	_	_	NER=O
+9	card	card	NOUN	NN	_	_	_	_	NER=O
+10	number	number	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p2 section=ENVIRONMENT
+# sent_id = payment-s2
+# text = *Found in*
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Found	Found	PROPN	NNP	_	_	_	_	NER=O
+3	in	in	ADP	IN	_	_	_	_	NER=O|SpaceAfter=No
+4	*	*	SYM	SYM	_	_	_	_	NER=O
+
+# paragraph = p3 section=ENVIRONMENT
+# sent_id = payment-s3
+# text = 118.0b5
+1	118.0b5	118.0b5	NUM	CD	_	_	_	_	NER=B-ENV
+
+# paragraph = p4 section=ENVIRONMENT
+# sent_id = payment-s4
+# text = *Affected versions*
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Affected	Affected	PROPN	NNP	_	_	_	_	NER=O
+3	versions	version	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	*	*	SYM	SYM	_	_	_	_	NER=O
+
+# paragraph = p5 section=ENVIRONMENT
+# sent_id = payment-s5
+# text = 118.0b5
+1	118.0b5	118.0b5	NUM	CD	_	_	_	_	NER=B-ENV
+
+# paragraph = p6 section=ENVIRONMENT
+# sent_id = payment-s6
+# text = *Tested platforms*
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Tested	test	VERB	VBN	_	_	_	_	NER=O
+3	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	*	*	SYM	SYM	_	_	_	_	NER=O
+
+# paragraph = p7 section=ENVIRONMENT
+# sent_id = payment-s7
+# text = Affected platforms: macOS 13 Unaffected platforms:
+1	Affected	affected	ADJ	JJ	_	_	_	_	NER=O
+2	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	macOS	macOS	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+5	13	13	NUM	CD	_	_	_	_	NER=I-ENV
+6	Unaffected	unaffected	ADJ	JJ	_	_	_	_	NER=O
+7	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+8	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p8 section=STEPS
+# sent_id = payment-s8
+# text = *Preconditions*
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Preconditions	precondition	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	*	*	SYM	SYM	_	_	_	_	NER=O
+
+# paragraph = p9 section=STEPS
+# sent_id = payment-s9
+# text = 1 valid credit card and 1 invalid credit card saved in Chrome
+1	1	1	NUM	CD	_	_	_	_	NER=O
+2	valid	valid	ADJ	JJ	_	_	_	_	NER=O
+3	credit	credit	NOUN	NN	_	_	_	_	NER=O
+4	card	card	NOUN	NN	_	_	_	_	NER=O
+5	and	and	CCONJ	CC	_	_	_	_	NER=O
+6	1	1	NUM	CD	_	_	_	_	NER=O
+7	invalid	invalid	ADJ	JJ	_	_	_	_	NER=O
+8	credit	credit	NOUN	NN	_	_	_	_	NER=O
+9	card	card	NOUN	NN	_	_	_	_	NER=O
+10	saved	save	VERB	VBD	_	_	_	_	NER=O
+11	in	in	ADP	IN	_	_	_	_	NER=O
+12	Chrome	Chrome	PROPN	NNP	_	_	_	_	NER=B-PRODUCT
+
+# paragraph = p10 section=STEPS
+# sent_id = payment-s10
+# text = *Steps to reproduce*
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+3	to	to	PART	TO	_	_	_	_	NER=O
+4	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+5	*	*	SYM	SYM	_	_	_	_	NER=O
+
+# paragraph = p11 section=STEPS
+# sent_id = payment-s11
+# text = 1. Open Fx
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	Fx	Fx	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+
+# sent_id = payment-s12
+# text = 2. Click on  Import data button from about:preferences
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Click	click	VERB	VB	_	_	_	_	NER=O
+4	on	on	ADP	IN	_	_	_	_	NER=O
+5	Import	Import	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+6	data	data	NOUN	NNS	_	_	_	_	NER=I-UI_ELEMENT
+7	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+8	from	from	ADP	IN	_	_	_	_	NER=O
+9	about:preferences	about:preferences	X	ADD	_	_	_	_	NER=B-UI_ELEMENT
+
+# paragraph = p12 section=EXPECTED
+# sent_id = payment-s13
+# text = *Expected result* Only 1 credit card(the valid one) is imported, so after the import is done the message should appear for 1 credit card not two.
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+3	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	*	*	SYM	SYM	_	_	_	_	NER=O
+5	Only	only	ADV	RB	_	_	_	_	NER=O
+6	1	1	NUM	CD	_	_	_	_	NER=O
+7	credit	credit	NOUN	NN	_	_	_	_	NER=O
+8	card	card	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+9	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	valid	valid	ADJ	JJ	_	_	_	_	NER=O
+12	one	one	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+13	)	)	PUNCT	)	_	_	_	_	NER=O
+14	is	be	AUX	VBZ	_	_	_	_	NER=O
+15	imported	import	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+16	,	,	PUNCT	,	_	_	_	_	NER=O
+17	so	so	ADV	RB	_	_	_	_	NER=O
+18	after	after	ADP	IN	_	_	_	_	NER=O
+19	the	the	DET	DT	_	_	_	_	NER=O
+20	import	import	NOUN	NN	_	_	_	_	NER=B-FEATURE
+21	is	be	AUX	VBZ	_	_	_	_	NER=O
+22	done	do	VERB	VBN	_	_	_	_	NER=O
+23	the	the	DET	DT	_	_	_	_	NER=O
+24	message	message	NOUN	NN	_	_	_	_	NER=O
+25	should	should	AUX	MD	_	_	_	_	NER=O
+26	appear	appear	VERB	VB	_	_	_	_	NER=O
+27	for	for	ADP	IN	_	_	_	_	NER=O
+28	1	1	NUM	CD	_	_	_	_	NER=O
+29	credit	credit	NOUN	NN	_	_	_	_	NER=O
+30	card	card	NOUN	NN	_	_	_	_	NER=O
+31	not	not	PART	RB	_	_	_	_	NER=O
+32	two	two	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+33	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p13 section=ACTUAL
+# sent_id = payment-s14
+# text = *Actual result* After the import is done the message should appear for 1 credit card not two.
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Actual	Actual	PROPN	NNP	_	_	_	_	NER=O
+3	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	*	*	SYM	SYM	_	_	_	_	NER=O
+5	After	after	ADP	IN	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	import	import	NOUN	NN	_	_	_	_	NER=O
+8	is	be	AUX	VBZ	_	_	_	_	NER=O
+9	done	do	VERB	VBN	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	message	message	NOUN	NN	_	_	_	_	NER=O
+12	should	should	AUX	MD	_	_	_	_	NER=O
+13	appear	appear	VERB	VB	_	_	_	_	NER=O
+14	for	for	ADP	IN	_	_	_	_	NER=O
+15	1	1	NUM	CD	_	_	_	_	NER=O
+16	credit	credit	NOUN	NN	_	_	_	_	NER=O
+17	card	card	NOUN	NN	_	_	_	_	NER=O
+18	not	not	PART	RB	_	_	_	_	NER=O
+19	two	two	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+20	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p14 section=NOTES
+# sent_id = payment-s15
+# text = *Regression range*
+1	*	*	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+2	Regression	Regression	PROPN	NNP	_	_	_	_	NER=O
+3	range	range	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	*	*	SYM	SYM	_	_	_	_	NER=O
+
+# paragraph = p15 section=NOTES
+# sent_id = payment-s16
+# text = Not a regression.
+1	Not	not	PART	RB	_	_	_	_	NER=O
+2	a	a	DET	DT	_	_	_	_	NER=O
+3	regression	regression	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s17
+# text = Reproducible with bug 1826149 after Payment methods were implemented.
+1	Reproducible	reproducible	ADJ	JJ	_	_	_	_	NER=O
+2	with	with	ADP	IN	_	_	_	_	NER=O
+3	bug	bug	NOUN	NN	_	_	_	_	NER=B-ISSUE_REF
+4	1826149	1826149	NUM	CD	_	_	_	_	NER=I-ISSUE_REF
+5	after	after	ADP	IN	_	_	_	_	NER=O
+6	Payment	payment	ADJ	JJ	_	_	_	_	NER=B-FEATURE
+7	methods	method	NOUN	NNS	_	_	_	_	NER=I-FEATURE
+8	were	be	AUX	VBD	_	_	_	_	NER=O
+9	implemented	implement	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s18
+# text = Additional notes
+1	Additional	additional	ADJ	JJ	_	_	_	_	NER=O
+2	notes	note	NOUN	NNS	_	_	_	_	NER=O
+
+# paragraph = p16 section=NOTES
+# sent_id = payment-s19
+# text = Attached browser console errors.
+1	Attached	Attached	PROPN	NNP	_	_	_	_	NER=O
+2	browser	browser	NOUN	NN	_	_	_	_	NER=O
+3	console	console	NOUN	NN	_	_	_	_	NER=O
+4	errors	error	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+5	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = firefox-1910229 | ticket_type=bug category=payment component=Billing severity=Major confidence=low
+# paragraph = p17 section=TITLE
+# sent_id = payment-s20
+# text = PayPal sandbox Something went wrong.
+1	PayPal	PayPal	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:PayPal
+2	sandbox	sandbox	NOUN	NN	_	_	_	_	NER=O
+3	Something	Something	PROPN	NNP	_	_	_	_	NER=O|MSG=B
+4	went	go	VERB	VBD	_	_	_	_	NER=O|MSG=I
+5	wrong	wrong	ADJ	JJ	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+6	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = payment-s21
+# text = Contact the seller for help
+1	Contact	contact	VERB	VB	_	_	_	_	NER=O|MSG=I
+2	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+3	seller	seller	NOUN	NN	_	_	_	_	NER=O|MSG=I
+4	for	for	ADP	IN	_	_	_	_	NER=O|MSG=I
+5	help	help	NOUN	NN	_	_	_	_	NER=O|MSG=I
+
+# paragraph = p18 section=ENVIRONMENT
+# sent_id = payment-s22
+# text = User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+7	NT	NT	PROPN	NNP	_	_	_	_	NER=I-ENV
+8	10.0	10.0	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+9	;	;	PUNCT	:	_	_	_	_	NER=O
+10	Win64	Win64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+11	;	;	PUNCT	:	_	_	_	_	NER=O
+12	x64	x64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+13	;	;	PUNCT	:	_	_	_	_	NER=O
+14	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+15	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+16	128.0	128.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+18	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+19	Firefox/128.0	Firefox/128.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p19 section=STEPS
+# sent_id = payment-s23
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p20 section=STEPS
+# sent_id = payment-s24
+# text = Clicked on a PayPal 'Buy Now' link
+1	Clicked	click	VERB	VBN	_	_	_	_	NER=O
+2	on	on	ADP	IN	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	PayPal	PayPal	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:PayPal
+5	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+6	Buy	Buy	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+7	Now	now	ADV	RB	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+8	'	'	PUNCT	.	_	_	_	_	NER=O
+9	link	link	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p21 section=ACTUAL
+# sent_id = payment-s25
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p22 section=ACTUAL
+# sent_id = payment-s26
+# text = Something went wrong.
+1	Something	something	VERB	VBG	_	_	_	_	NER=O|MSG=B
+2	went	go	VERB	VBD	_	_	_	_	NER=O|MSG=I
+3	wrong	wrong	ADJ	JJ	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+4	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = payment-s27
+# text = Contact the seller for help message displayed
+1	Contact	contact	VERB	VB	_	_	_	_	NER=O|MSG=I
+2	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+3	seller	seller	NOUN	NN	_	_	_	_	NER=O|MSG=I
+4	for	for	ADP	IN	_	_	_	_	NER=O|MSG=I
+5	help	help	NOUN	NN	_	_	_	_	NER=O|MSG=I
+6	message	message	NOUN	NN	_	_	_	_	NER=O
+7	displayed	display	VERB	VBD	_	_	_	_	NER=O
+
+# paragraph = p23 section=EXPECTED
+# sent_id = payment-s28
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p24 section=EXPECTED
+# sent_id = payment-s29
+# text = Gone to PayPal to purchase goods
+1	Gone	gone	NOUN	NN	_	_	_	_	NER=O
+2	to	to	ADP	TO	_	_	_	_	NER=O
+3	PayPal	PayPal	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:PayPal
+4	to	to	PART	TO	_	_	_	_	NER=O
+5	purchase	purchase	VERB	VB	_	_	_	_	NER=O
+6	goods	good	NOUN	NNS	_	_	_	_	NER=O
+
+# newpar report = thunderbird-1803720 | ticket_type=bug category=payment component=Billing severity=Major confidence=low
+# paragraph = p25 section=TITLE
+# sent_id = payment-s30
+# text = can't donate to thunderbird using the paypal link, cross site error using firefox.
+1	ca	can	AUX	MD	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+2	n't	not	PART	RB	_	_	_	_	NER=I-SYMPTOM
+3	donate	donate	VERB	VB	_	_	_	_	NER=I-SYMPTOM
+4	to	to	PART	TO	_	_	_	_	NER=O
+5	thunderbird	thunderbird	VERB	VB	_	_	_	_	NER=O
+6	using	use	VERB	VBG	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	paypal	paypal	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:PayPal
+9	link	link	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	cross	cross	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+12	site	site	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+13	error	error	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+14	using	use	VERB	VBG	_	_	_	_	NER=O
+15	firefox	firefox	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+16	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p26 section=ENVIRONMENT
+# sent_id = payment-s31
+# text = User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+7	NT	NT	PROPN	NNP	_	_	_	_	NER=I-ENV
+8	10.0	10.0	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+9	;	;	PUNCT	:	_	_	_	_	NER=O
+10	Win64	Win64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+11	;	;	PUNCT	:	_	_	_	_	NER=O
+12	x64	x64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+13	;	;	PUNCT	:	_	_	_	_	NER=O
+14	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+15	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+16	107.0	107.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+18	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+19	Firefox/107.0	Firefox/107.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p27 section=STEPS
+# sent_id = payment-s32
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p28 section=STEPS
+# sent_id = payment-s33
+# text = - from here:
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	from	from	ADP	IN	_	_	_	_	NER=O
+3	here	here	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = payment-s34
+# text = https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/
+1	https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/	https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/	X	ADD	_	_	_	_	NER=O
+
+# sent_id = payment-s35
+# text = - I click donate.
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	I	i	PRON	PRP	_	_	_	_	NER=O
+3	click	click	VERB	VBP	_	_	_	_	NER=O
+4	donate	donate	NOUN	NN	_	_	_	_	NER=B-FEATURE|SpaceAfter=No
+5	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s36
+# text = Then from here:
+1	Then	then	ADV	RB	_	_	_	_	NER=O
+2	from	from	ADP	IN	_	_	_	_	NER=O
+3	here	here	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = payment-s37
+# text = https://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog
+1	https://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog	https://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog	X	ADD	_	_	_	_	NER=O
+
+# sent_id = payment-s38
+# text = - After the Paypal button appears I click it.
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	After	after	ADP	IN	_	_	_	_	NER=O
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	Paypal	Paypal	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+5	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+6	appears	appear	VERB	VBZ	_	_	_	_	NER=O
+7	I	i	PRON	PRP	_	_	_	_	NER=O
+8	click	click	VERB	VBP	_	_	_	_	NER=O
+9	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s39
+# text = Nothing happens.
+1	Nothing	nothing	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+2	happens	happens	NOUN	NNS	_	_	_	_	NER=I-SYMPTOM|SpaceAfter=No
+3	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s40
+# text = In the console is an error cross site error.
+1	In	in	ADP	IN	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	console	console	NOUN	NN	_	_	_	_	NER=O
+4	is	be	AUX	VBZ	_	_	_	_	NER=O
+5	an	an	DET	DT	_	_	_	_	NER=O
+6	error	error	NOUN	NN	_	_	_	_	NER=O
+7	cross	cross	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+8	site	site	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+9	error	error	NOUN	NN	_	_	_	_	NER=I-SYMPTOM|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p29 section=ACTUAL
+# sent_id = payment-s41
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p30 section=ACTUAL
+# sent_id = payment-s42
+# text = Content Security Policy: The page’s settings blocked the loading of a resource at https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd (“connect-src”).
+1	Content	Content	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|MSG=B|KB=dbr:Content_Security_Policy
+2	Security	Security	PROPN	NNP	_	_	_	_	NER=I-TECHNOLOGY|MSG=I
+3	Policy	Policy	PROPN	NNP	_	_	_	_	NER=I-TECHNOLOGY|MSG=I|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+5	The	the	DET	DT	_	_	_	_	NER=O|MSG=I
+6	page	page	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+7	’	’	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+8	s	s	NOUN	NN	_	_	_	_	NER=O|MSG=I
+9	settings	setting	NOUN	NNS	_	_	_	_	NER=O|MSG=I
+10	blocked	block	VERB	VBD	_	_	_	_	NER=O|MSG=I
+11	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+12	loading	loading	NOUN	NN	_	_	_	_	NER=O|MSG=I
+13	of	of	ADP	IN	_	_	_	_	NER=O|MSG=I
+14	a	a	DET	DT	_	_	_	_	NER=O|MSG=I
+15	resource	resource	NOUN	NN	_	_	_	_	NER=O|MSG=I
+16	at	at	ADP	IN	_	_	_	_	NER=O|MSG=I
+17	https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd	https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd	X	ADD	_	_	_	_	NER=O|MSG=I
+18	(	(	PUNCT	(	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+19	“	“	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+20	connect-src	connect-src	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+21	”	”	PUNCT	.	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+22	)	)	PUNCT	)	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+23	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s43
+# text = Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://www.paypal.com/xoplatform/logger/api/logger.
+1	Cross-Origin	Cross-Origin	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|MSG=B|KB=dbr:Cross-origin_resource_sharing
+2	Request	Request	PROPN	NNP	_	_	_	_	NER=O|MSG=I
+3	Blocked	Blocked	PROPN	NNPS	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+5	The	the	DET	DT	_	_	_	_	NER=O|MSG=I
+6	Same	Same	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|MSG=I|KB=dbr:Cross-origin_resource_sharing
+7	Origin	Origin	PROPN	NNP	_	_	_	_	NER=I-TECHNOLOGY|MSG=I
+8	Policy	Policy	PROPN	NNP	_	_	_	_	NER=I-TECHNOLOGY|MSG=I
+9	disallows	disallow	VERB	VBZ	_	_	_	_	NER=O|MSG=I
+10	reading	read	VERB	VBG	_	_	_	_	NER=O|MSG=I
+11	the	the	DET	DT	_	_	_	_	NER=O|MSG=I
+12	remote	remote	ADJ	JJ	_	_	_	_	NER=O|MSG=I
+13	resource	resource	NOUN	NN	_	_	_	_	NER=O|MSG=I
+14	at	at	ADP	IN	_	_	_	_	NER=O|MSG=I
+15	https://www.paypal.com/xoplatform/logger/api/logger	https://www.paypal.com/xoplatform/logger/api/logger	X	ADD	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+16	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = payment-s44
+# text = (Reason: CORS request did not succeed).
+1	(	(	PUNCT	(	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+2	Reason	reason	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+4	CORS	CORS	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|MSG=I|KB=dbr:Cross-origin_resource_sharing
+5	request	request	VERB	VBP	_	_	_	_	NER=O|MSG=I
+6	did	do	AUX	VBD	_	_	_	_	NER=O|MSG=I
+7	not	not	PART	RB	_	_	_	_	NER=O|MSG=I
+8	succeed	succeed	VERB	VB	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+9	)	)	PUNCT	)	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O|MSG=I
+
+# sent_id = payment-s45
+# text = Status code: (null).
+1	Status	Status	PROPN	NNP	_	_	_	_	NER=O|MSG=I
+2	code	code	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O|MSG=I
+4	(	(	PUNCT	(	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+5	null	null	NOUN	NN	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+6	)	)	PUNCT	)	_	_	_	_	NER=O|MSG=I|SpaceAfter=No
+7	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p31 section=EXPECTED
+# sent_id = payment-s46
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p32 section=EXPECTED
+# sent_id = payment-s47
+# text = I think a window or new paypal page should appear so I can give you my money.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	think	think	VERB	VBP	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	window	window	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+5	or	or	CCONJ	CC	_	_	_	_	NER=O
+6	new	new	ADJ	JJ	_	_	_	_	NER=O
+7	paypal	paypal	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:PayPal
+8	page	page	NOUN	NN	_	_	_	_	NER=O
+9	should	should	AUX	MD	_	_	_	_	NER=O
+10	appear	appear	VERB	VB	_	_	_	_	NER=O
+11	so	so	ADP	IN	_	_	_	_	NER=O
+12	I	i	PRON	PRP	_	_	_	_	NER=O
+13	can	can	AUX	MD	_	_	_	_	NER=O
+14	give	give	VERB	VB	_	_	_	_	NER=O
+15	you	you	PRON	PRP	_	_	_	_	NER=O
+16	my	my	PRON	PRP$	_	_	_	_	NER=O
+17	money	money	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p33 section=ENVIRONMENT
+# sent_id = payment-s48
+# text = Using FireFox version 107.0 (64-bit) Windows 10.
+1	Using	use	VERB	VBG	_	_	_	_	NER=O
+2	FireFox	FireFox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+3	version	version	NOUN	NN	_	_	_	_	NER=O
+4	107.0	107.0	NUM	CD	_	_	_	_	NER=B-ENV
+5	(	(	PUNCT	(	_	_	_	_	NER=I-ENV|SpaceAfter=No
+6	64-bit	64-bit	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+7	)	)	PUNCT	)	_	_	_	_	NER=I-ENV
+8	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+9	10	10	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = payment-s49
+# text = I also tried IE and Chrome.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	also	also	ADV	RB	_	_	_	_	NER=O
+3	tried	try	VERB	VBD	_	_	_	_	NER=O
+4	IE	IE	PROPN	NNP	_	_	_	_	NER=B-PRODUCT
+5	and	and	CCONJ	CC	_	_	_	_	NER=O
+6	Chrome	Chrome	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|SpaceAfter=No
+7	.	.	PUNCT	.	_	_	_	_	NER=O
+

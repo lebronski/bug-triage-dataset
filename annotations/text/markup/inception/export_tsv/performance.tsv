@@ -1,0 +1,553 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=webanno.custom.BugEntity|affected|kb_uri|kind|label|normalized|polarity|source
+#T_SP=webanno.custom.BugReport|category|component|confidence|report_id|severity|ticket_type
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=Quick filter working much slower after Supernova redesign
+1-1	0-5	Quick	NNP	PROPN	Quick	*[1]	*[1]	field[1]	UI\_ELEMENT[1]	*[1]	*[1]	*[1]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	SYMPTOM\_OF	1-4[2_1]	
+1-2	6-12	filter	NN	NOUN	filter	*[1]	*[1]	field[1]	UI\_ELEMENT[1]	*[1]	*[1]	*[1]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	_	_	
+1-3	13-20	working	VBG	VERB	work	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	_	_	
+1-4	21-25	much	JJ	ADJ	much	*[2]	*[2]	slowness[2]	SYMPTOM[2]	*[2]	observed[2]	*[2]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	_	_	
+1-5	26-32	slower	JJR	ADJ	slow	*[2]	*[2]	slowness[2]	SYMPTOM[2]	*[2]	observed[2]	*[2]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	_	_	
+1-6	33-38	after	IN	ADP	after	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	_	_	
+1-7	39-48	Supernova	NNP	PROPN	Supernova	*	*	release	PRODUCT	Thunderbird 115 Supernova	*	*	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	CAUSED\_BY	1-4[2_0]	
+1-8	49-57	redesign	NN	NOUN	redesign	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	TITLE[36]	_	_	
+
+#Text=User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0
+2-1	59-63	User	NNP	PROPN	User	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-2	64-69	Agent	NNP	PROPN	Agent	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-3	69-70	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-4	71-82	Mozilla/5.0	NNP	PROPN	Mozilla/5.0	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-5	83-84	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-6	84-87	X11	NNP	PROPN	X11	unknown	http://dbpedia.org/resource/X\_Window\_System	os	ENV	X11	*	user\_agent	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-7	87-88	;	:	PUNCT	\;	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-8	89-95	Ubuntu	NNP	PROPN	Ubuntu	unknown	http://dbpedia.org/resource/Ubuntu	os	ENV	Ubuntu	*	user\_agent	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-9	95-96	;	:	PUNCT	\;	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-10	97-102	Linux	NNP	PROPN	Linux	unknown[3]	http://dbpedia.org/resource/Linux[3]	os[3]	ENV[3]	Linux x86\_64[3]	*[3]	user\_agent[3]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-11	103-109	x86_64	NNP	PROPN	x86\_64	unknown[3]	http://dbpedia.org/resource/Linux[3]	os[3]	ENV[3]	Linux x86\_64[3]	*[3]	user\_agent[3]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-12	109-110	;	:	PUNCT	\;	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-13	111-113	rv	NN	NOUN	rv	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-14	113-114	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-15	114-119	109.0	CD	NUM	109.0	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-16	119-120	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-17	121-135	Gecko/20100101	NNP	PROPN	Gecko/20100101	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+2-18	136-149	Firefox/118.0	NNP	PROPN	Firefox/118.0	unknown	*	browser	ENV	Firefox/118.0	*	user\_agent	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ENVIRONMENT[37]	_	_	
+
+#Text=Steps to reproduce:
+3-1	151-156	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[38]	_	_	
+3-2	157-159	to	TO	PART	to	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[38]	_	_	
+3-3	160-169	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[38]	_	_	
+3-4	169-170	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[38]	_	_	
+
+#Text=Typing anything in Quick Filter
+4-1	172-178	Typing	VBG	VERB	type	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[39]	_	_	
+4-2	179-187	anything	NN	NOUN	anything	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[39]	_	_	
+4-3	188-190	in	IN	ADP	in	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[39]	_	_	
+4-4	191-196	Quick	NNP	PROPN	Quick	*[4]	*[4]	field[4]	UI\_ELEMENT[4]	*[4]	*[4]	*[4]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[39]	_	_	
+4-5	197-203	Filter	NNP	PROPN	Filter	*[4]	*[4]	field[4]	UI\_ELEMENT[4]	*[4]	*[4]	*[4]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	STEPS[39]	_	_	
+
+#Text=Actual results:
+5-1	205-211	Actual	JJ	ADJ	actual	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[40]	_	_	
+5-2	212-219	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[40]	_	_	
+5-3	219-220	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[40]	_	_	
+
+#Text=Nothing.
+6-1	222-229	Nothing	NN	NOUN	nothing	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+6-2	229-230	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+
+#Text=For 5-10 seconds, nothing happens.
+7-1	231-234	For	IN	ADP	for	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+7-2	235-239	5-10	JJ	ADJ	5-10	*[5]	*[5]	time[5]	METRIC[5]	5-10 seconds[5]	*[5]	*[5]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+7-3	240-247	seconds	NNS	NOUN	second	*[5]	*[5]	time[5]	METRIC[5]	5-10 seconds[5]	*[5]	*[5]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+7-4	247-248	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+7-5	249-256	nothing	NN	NOUN	nothing	*[6]	*[6]	failure[6]	SYMPTOM[6]	*[6]	observed[6]	*[6]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+7-6	257-264	happens	NNS	NOUN	happens	*[6]	*[6]	failure[6]	SYMPTOM[6]	*[6]	observed[6]	*[6]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+7-7	264-265	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+
+#Text=Only after that, the results are listed.
+8-1	266-270	Only	RB	ADV	only	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-2	271-276	after	IN	ADP	after	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-3	277-281	that	DT	DET	that	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-4	281-282	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-5	283-286	the	DT	DET	the	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-6	287-294	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-7	295-298	are	VBP	AUX	be	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-8	299-305	listed	VBN	VERB	list	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+8-9	305-306	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	ACTUAL[41]	_	_	
+
+#Text=Expected results:
+9-1	308-316	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[42]	_	_	
+9-2	317-324	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[42]	_	_	
+9-3	324-325	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[42]	_	_	
+
+#Text=Before Supernova redesign, the result were in less than 1 second.
+10-1	327-333	Before	IN	ADP	before	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-2	334-343	Supernova	NNP	PROPN	Supernova	*	*	release	PRODUCT	Thunderbird 115 Supernova	*	*	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-3	344-352	redesign	NN	NOUN	redesign	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-4	352-353	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-5	354-357	the	DT	DET	the	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-6	358-364	result	NN	NOUN	result	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-7	365-369	were	VBD	AUX	be	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-8	370-372	in	IN	ADP	in	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-9	373-377	less	JJR	ADJ	less	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-10	378-382	than	IN	ADP	than	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-11	383-384	1	CD	NUM	1	*[7]	*[7]	time[7]	METRIC[7]	1 second[7]	*[7]	*[7]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-12	385-391	second	JJ	ADJ	second	*[7]	*[7]	time[7]	METRIC[7]	1 second[7]	*[7]	*[7]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+10-13	391-392	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+
+#Text=And if I remember correctly, they updated gradually (some of then quickly, some later).
+11-1	393-396	And	CC	CCONJ	and	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-2	397-399	if	IN	SCONJ	if	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-3	400-401	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-4	402-410	remember	VBP	VERB	remember	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-5	411-420	correctly	RB	ADV	correctly	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-6	420-421	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-7	422-426	they	PRP	PRON	they	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-8	427-434	updated	VBD	VERB	update	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-9	435-444	gradually	RB	ADV	gradually	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-10	445-446	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-11	446-450	some	DT	DET	some	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-12	451-453	of	IN	ADP	of	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-13	454-458	then	RB	ADV	then	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-14	459-466	quickly	RB	ADV	quickly	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-15	466-467	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-16	468-472	some	DT	DET	some	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-17	473-478	later	RB	ADV	later	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-18	478-479	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+11-19	479-480	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+
+#Text=It should work like before.
+12-1	481-483	It	PRP	PRON	it	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+12-2	484-490	should	MD	AUX	should	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+12-3	491-495	work	VB	VERB	work	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+12-4	496-500	like	IN	ADP	like	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+12-5	501-507	before	RB	ADV	before	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+12-6	507-508	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+
+#Text=With the 5+ seconds wait it's unbearable.
+13-1	509-513	With	IN	ADP	with	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-2	514-517	the	DT	DET	the	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-3	518-519	5	CD	NUM	5	*[8]	*[8]	time[8]	METRIC[8]	5+ seconds[8]	*[8]	*[8]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-4	519-520	+	SYM	SYM	+	*[8]	*[8]	time[8]	METRIC[8]	5+ seconds[8]	*[8]	*[8]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-5	521-528	seconds	NNS	NOUN	second	*[8]	*[8]	time[8]	METRIC[8]	5+ seconds[8]	*[8]	*[8]	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-6	529-533	wait	VBP	VERB	wait	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-7	534-536	it	PRP	PRON	it	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-8	536-538	's	VBZ	AUX	be	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-9	539-549	unbearable	JJ	ADJ	unbearable	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+13-10	549-550	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+
+#Text=I use quick filters all the time...
+14-1	551-552	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-2	553-556	use	VBP	VERB	use	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-3	557-562	quick	JJ	ADJ	quick	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-4	563-570	filters	NNS	NOUN	filter	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-5	571-574	all	PDT	DET	all	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-6	575-578	the	DT	DET	the	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-7	579-583	time	NN	NOUN	time	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+14-8	583-586	...	:	PUNCT	...	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[43]	_	_	
+
+#Text=(visually, I like the redesign)
+15-1	588-589	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-2	589-597	visually	RB	ADV	visually	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-3	597-598	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-4	599-600	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-5	601-605	like	VBP	VERB	like	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-6	606-609	the	DT	DET	the	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-7	610-618	redesign	NN	NOUN	redesign	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+15-8	618-619	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[33]	Frontend[33]	high[33]	thunderbird-1857818[33]	Major[33]	bug[33]	EXPECTED[44]	_	_	
+
+#Text=FIrefox freezes while opening finder to upload files
+16-1	621-628	FIrefox	NNP	PROPN	FIrefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	SYMPTOM\_OF	16-2	
+16-2	629-636	freezes	VBZ	VERB	freeze	*	*	hang	SYMPTOM	*	observed	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	_	_	
+16-3	637-642	while	IN	SCONJ	while	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	_	_	
+16-4	643-650	opening	VBG	VERB	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	_	_	
+16-5	651-657	finder	NN	NOUN	finder	*	*	dialog	UI\_ELEMENT	*	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	CAUSED\_BY	16-2	
+16-6	658-660	to	TO	PART	to	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	_	_	
+16-7	661-667	upload	VB	VERB	upload	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	_	_	
+16-8	668-673	files	NNS	NOUN	file	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	TITLE[45]	_	_	
+
+#Text=User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0
+17-1	675-679	User	NNP	PROPN	User	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-2	680-685	Agent	NNP	PROPN	Agent	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-3	685-686	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-4	687-698	Mozilla/5.0	NNP	PROPN	Mozilla/5.0	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-5	699-700	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-6	700-709	Macintosh	NNP	PROPN	Macintosh	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-7	709-710	;	:	PUNCT	\;	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-8	711-716	Intel	NNP	PROPN	Intel	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-9	717-720	Mac	NNP	PROPN	Mac	yes[9]	http://dbpedia.org/resource/MacOS[9]	os[9]	ENV[9]	Mac OS X 10.15[9]	*[9]	user\_agent[9]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-10	721-723	OS	NNP	PROPN	OS	yes[9]	http://dbpedia.org/resource/MacOS[9]	os[9]	ENV[9]	Mac OS X 10.15[9]	*[9]	user\_agent[9]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-11	724-725	X	NNP	PROPN	X	yes[9]	http://dbpedia.org/resource/MacOS[9]	os[9]	ENV[9]	Mac OS X 10.15[9]	*[9]	user\_agent[9]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-12	726-731	10.15	CD	NUM	10.15	yes[9]	http://dbpedia.org/resource/MacOS[9]	os[9]	ENV[9]	Mac OS X 10.15[9]	*[9]	user\_agent[9]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-13	731-732	;	:	PUNCT	\;	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-14	733-735	rv	NN	NOUN	rv	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-15	735-736	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-16	736-740	89.0	CD	NUM	89.0	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-17	740-741	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-18	742-756	Gecko/20100101	NNP	PROPN	Gecko/20100101	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+17-19	757-769	Firefox/89.0	NNP	PROPN	Firefox/89.0	yes	*	browser	ENV	Firefox/89.0	*	user\_agent	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ENVIRONMENT[46]	_	_	
+
+#Text=Steps to reproduce:
+18-1	771-776	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[47]	_	_	
+18-2	777-779	to	TO	PART	to	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[47]	_	_	
+18-3	780-789	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[47]	_	_	
+18-4	789-790	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[47]	_	_	
+
+#Text=Two ways:
+19-1	792-795	Two	CD	NUM	Two	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+19-2	796-800	ways	NNS	NOUN	way	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+19-3	800-801	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+
+#Text=1. Open Google Drive, click upload file, Firefox freezes
+20-1	802-803	1	CD	NUM	1	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-2	803-804	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-3	805-809	Open	VB	VERB	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-4	810-816	Google	NNP	PROPN	Google	*[10]	http://dbpedia.org/resource/Google\_Drive[10]	service[10]	PRODUCT[10]	Google Drive[10]	*[10]	*[10]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-5	817-822	Drive	NNP	PROPN	Drive	*[10]	http://dbpedia.org/resource/Google\_Drive[10]	service[10]	PRODUCT[10]	Google Drive[10]	*[10]	*[10]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-6	822-823	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-7	824-829	click	JJ	ADJ	click	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-8	830-836	upload	NN	NOUN	upload	*[11]	*[11]	button[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-9	837-841	file	NN	NOUN	file	*[11]	*[11]	button[11]	UI\_ELEMENT[11]	*[11]	*[11]	*[11]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-10	841-842	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+20-11	843-850	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	SYMPTOM\_OF	20-12	
+20-12	851-858	freezes	VBZ	VERB	freeze	*	*	hang	SYMPTOM	*	observed	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+
+#Text=2. Open new tab, click open file, Firefox freezes
+21-1	859-860	2	CD	NUM	2	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-2	860-861	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-3	862-866	Open	VB	VERB	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-4	867-870	new	JJ	ADJ	new	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-5	871-874	tab	NN	NOUN	tab	*	*	page	UI\_ELEMENT	*	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-6	874-875	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-7	876-881	click	JJ	ADJ	click	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-8	882-886	open	JJ	ADJ	open	*[12]	*[12]	button[12]	UI\_ELEMENT[12]	*[12]	*[12]	*[12]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-9	887-891	file	NN	NOUN	file	*[12]	*[12]	button[12]	UI\_ELEMENT[12]	*[12]	*[12]	*[12]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-10	891-892	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+21-11	893-900	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	SYMPTOM\_OF	21-12	
+21-12	901-908	freezes	VBZ	VERB	freeze	*	*	hang	SYMPTOM	*	observed	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	STEPS[48]	_	_	
+
+#Text=Actual results:
+22-1	910-916	Actual	JJ	ADJ	actual	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[49]	_	_	
+22-2	917-924	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[49]	_	_	
+22-3	924-925	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[49]	_	_	
+
+#Text=Two ways:
+23-1	927-930	Two	CD	NUM	Two	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+23-2	931-935	ways	NNS	NOUN	way	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+23-3	935-936	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+
+#Text=1. Open Google Drive, click upload file, Firefox freezes
+24-1	937-938	1	CD	NUM	1	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-2	938-939	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-3	940-944	Open	JJ	ADJ	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-4	945-951	Google	NNP	PROPN	Google	*[13]	http://dbpedia.org/resource/Google\_Drive[13]	service[13]	PRODUCT[13]	Google Drive[13]	*[13]	*[13]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-5	952-957	Drive	NNP	PROPN	Drive	*[13]	http://dbpedia.org/resource/Google\_Drive[13]	service[13]	PRODUCT[13]	Google Drive[13]	*[13]	*[13]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-6	957-958	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-7	959-964	click	JJ	ADJ	click	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-8	965-971	upload	NN	NOUN	upload	*[14]	*[14]	button[14]	UI\_ELEMENT[14]	*[14]	*[14]	*[14]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-9	972-976	file	NN	NOUN	file	*[14]	*[14]	button[14]	UI\_ELEMENT[14]	*[14]	*[14]	*[14]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-10	976-977	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+24-11	978-985	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	SYMPTOM\_OF	24-12	
+24-12	986-993	freezes	VBZ	VERB	freeze	*	*	hang	SYMPTOM	*	observed	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+
+#Text=2. Open new tab, click open file, Firefox freezes
+25-1	994-995	2	CD	NUM	2	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-2	995-996	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-3	997-1001	Open	VB	VERB	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-4	1002-1005	new	JJ	ADJ	new	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-5	1006-1009	tab	NN	NOUN	tab	*	*	page	UI\_ELEMENT	*	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-6	1009-1010	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-7	1011-1016	click	JJ	ADJ	click	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-8	1017-1021	open	JJ	ADJ	open	*[15]	*[15]	button[15]	UI\_ELEMENT[15]	*[15]	*[15]	*[15]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-9	1022-1026	file	NN	NOUN	file	*[15]	*[15]	button[15]	UI\_ELEMENT[15]	*[15]	*[15]	*[15]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-10	1026-1027	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+25-11	1028-1035	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	SYMPTOM\_OF	25-12	
+25-12	1036-1043	freezes	VBZ	VERB	freeze	*	*	hang	SYMPTOM	*	observed	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	ACTUAL[50]	_	_	
+
+#Text=Expected results:
+26-1	1045-1053	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[51]	_	_	
+26-2	1054-1061	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[51]	_	_	
+26-3	1061-1062	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[51]	_	_	
+
+#Text=Two ways:
+27-1	1064-1067	Two	CD	NUM	Two	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+27-2	1068-1072	ways	NNS	NOUN	way	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+27-3	1072-1073	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+
+#Text=1. Open Google Drive, click upload file, Firefox does not freeze
+28-1	1074-1075	1	CD	NUM	1	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-2	1075-1076	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-3	1077-1081	Open	JJ	ADJ	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-4	1082-1088	Google	NNP	PROPN	Google	*[16]	http://dbpedia.org/resource/Google\_Drive[16]	service[16]	PRODUCT[16]	Google Drive[16]	*[16]	*[16]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-5	1089-1094	Drive	NNP	PROPN	Drive	*[16]	http://dbpedia.org/resource/Google\_Drive[16]	service[16]	PRODUCT[16]	Google Drive[16]	*[16]	*[16]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-6	1094-1095	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-7	1096-1101	click	JJ	ADJ	click	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-8	1102-1108	upload	NN	NOUN	upload	*[17]	*[17]	button[17]	UI\_ELEMENT[17]	*[17]	*[17]	*[17]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-9	1109-1113	file	NN	NOUN	file	*[17]	*[17]	button[17]	UI\_ELEMENT[17]	*[17]	*[17]	*[17]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-10	1113-1114	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-11	1115-1122	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	SYMPTOM\_OF	28-14	
+28-12	1123-1127	does	VBZ	AUX	do	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-13	1128-1131	not	RB	PART	not	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+28-14	1132-1138	freeze	VB	VERB	freeze	*	*	hang	SYMPTOM	*	negated	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+
+#Text=2. Open new tab, click open file, Firefox does not freeze
+29-1	1139-1140	2	CD	NUM	2	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-2	1140-1141	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-3	1142-1146	Open	VB	VERB	open	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-4	1147-1150	new	JJ	ADJ	new	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-5	1151-1154	tab	NN	NOUN	tab	*	*	page	UI\_ELEMENT	*	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-6	1154-1155	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-7	1156-1161	click	JJ	ADJ	click	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-8	1162-1166	open	JJ	ADJ	open	*[18]	*[18]	button[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-9	1167-1171	file	NN	NOUN	file	*[18]	*[18]	button[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-10	1171-1172	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-11	1173-1180	Firefox	NNP	PROPN	Firefox	*	http://dbpedia.org/resource/Firefox	application	PRODUCT	Firefox	*	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	SYMPTOM\_OF	29-14	
+29-12	1181-1185	does	VBZ	AUX	do	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-13	1186-1189	not	RB	PART	not	_	_	_	_	_	_	_	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+29-14	1190-1196	freeze	VB	VERB	freeze	*	*	hang	SYMPTOM	*	negated	*	performance[34]	Frontend[34]	high[34]	firefox-1715640[34]	Critical[34]	bug[34]	EXPECTED[52]	_	_	
+
+#Text=slow start
+30-1	1198-1202	slow	JJ	ADJ	slow	*[19]	*[19]	slowness[19]	SYMPTOM[19]	*[19]	observed[19]	*[19]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	TITLE[53]	_	_	
+30-2	1203-1208	start	NN	NOUN	start	*[19]	*[19]	slowness[19]	SYMPTOM[19]	*[19]	observed[19]	*[19]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	TITLE[53]	_	_	
+
+#Text=Steps to reproduce:
+31-1	1210-1215	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[54]	_	_	
+31-2	1216-1218	to	TO	PART	to	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[54]	_	_	
+31-3	1219-1228	reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[54]	_	_	
+31-4	1228-1229	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[54]	_	_	
+
+#Text=Starting Thunderbird is extremely slow!
+32-1	1231-1239	Starting	VBG	VERB	start	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+32-2	1240-1251	Thunderbird	NNP	PROPN	Thunderbird	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	SYMPTOM\_OF|VERSION\_OF	32-4[20_0]|33-7[21_0]	
+32-3	1252-1254	is	VBZ	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+32-4	1255-1264	extremely	RB	ADV	extremely	*[20]	*[20]	slowness[20]	SYMPTOM[20]	*[20]	observed[20]	*[20]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+32-5	1265-1269	slow	JJ	ADJ	slow	*[20]	*[20]	slowness[20]	SYMPTOM[20]	*[20]	observed[20]	*[20]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+32-6	1269-1270	!	.	PUNCT	!	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=I think the problem started with v119 Beta 3, before that, it worked relatively fast.
+33-1	1271-1272	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-2	1273-1278	think	VBP	VERB	think	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-3	1279-1282	the	DT	DET	the	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-4	1283-1290	problem	NN	NOUN	problem	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-5	1291-1298	started	VBD	VERB	start	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-6	1299-1303	with	IN	ADP	with	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-7	1304-1308	v119	CD	NUM	v119	yes[21]	*[21]	app\_version[21]	ENV[21]	Thunderbird 119 Beta 3[21]	*[21]	*[21]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	OBSERVED\_IN	44-6[29_21]	
+33-8	1309-1313	Beta	NNP	PROPN	Beta	yes[21]	*[21]	app\_version[21]	ENV[21]	Thunderbird 119 Beta 3[21]	*[21]	*[21]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-9	1314-1315	3	CD	NUM	3	yes[21]	*[21]	app\_version[21]	ENV[21]	Thunderbird 119 Beta 3[21]	*[21]	*[21]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-10	1315-1316	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-11	1317-1323	before	IN	ADP	before	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-12	1324-1328	that	DT	DET	that	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-13	1328-1329	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-14	1330-1332	it	PRP	PRON	it	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-15	1333-1339	worked	VBD	VERB	work	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-16	1340-1350	relatively	RB	ADV	relatively	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-17	1351-1355	fast	JJ	ADJ	fast	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+33-18	1355-1356	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=It takes up to 20 seconds until the program is usable (message selection is possible, displaying messages, etc.)
+34-1	1357-1359	It	PRP	PRON	it	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-2	1360-1365	takes	VBZ	VERB	take	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-3	1366-1368	up	IN	ADP	up	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-4	1369-1371	to	TO	ADP	to	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-5	1372-1374	20	CD	NUM	20	*[22]	*[22]	time[22]	METRIC[22]	20 seconds[22]	*[22]	*[22]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-6	1375-1382	seconds	NNS	NOUN	second	*[22]	*[22]	time[22]	METRIC[22]	20 seconds[22]	*[22]	*[22]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-7	1383-1388	until	IN	ADP	until	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-8	1389-1392	the	DT	DET	the	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-9	1393-1400	program	NN	NOUN	program	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-10	1401-1403	is	VBZ	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-11	1404-1410	usable	JJ	ADJ	usable	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-12	1411-1412	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-13	1412-1419	message	JJ	ADJ	message	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-14	1420-1429	selection	NN	NOUN	selection	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-15	1430-1432	is	VBZ	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-16	1433-1441	possible	JJ	ADJ	possible	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-17	1441-1442	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-18	1443-1453	displaying	VBG	VERB	display	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-19	1454-1462	messages	NNS	NOUN	message	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-20	1462-1463	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-21	1464-1467	etc	FW	X	etc	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-22	1467-1468	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+34-23	1468-1469	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=I tried creating a new profile - same result.
+35-1	1470-1471	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-2	1472-1477	tried	VBD	VERB	try	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-3	1478-1486	creating	VBG	VERB	create	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-4	1487-1488	a	DT	DET	a	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-5	1489-1492	new	JJ	ADJ	new	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-6	1493-1500	profile	NN	NOUN	profile	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-7	1501-1502	-	:	PUNCT	-	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-8	1503-1507	same	JJ	ADJ	same	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-9	1508-1514	result	NN	NOUN	result	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+35-10	1514-1515	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=I don't have any add-ons or extensions.
+36-1	1516-1517	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-2	1518-1520	do	VBP	AUX	do	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-3	1520-1523	n't	RB	PART	not	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-4	1524-1528	have	VB	VERB	have	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-5	1529-1532	any	DT	DET	any	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-6	1533-1540	add-ons	NNS	NOUN	add-on	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-7	1541-1543	or	CC	CCONJ	or	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-8	1544-1554	extensions	NNS	NOUN	extension	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+36-9	1554-1555	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=It's simply painfully slow to start!
+37-1	1556-1558	It	PRP	PRON	it	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-2	1558-1560	's	VBZ	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-3	1561-1567	simply	RB	ADV	simply	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-4	1568-1577	painfully	RB	ADV	painfully	*[23]	*[23]	slowness[23]	SYMPTOM[23]	*[23]	observed[23]	*[23]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-5	1578-1582	slow	JJ	ADJ	slow	*[23]	*[23]	slowness[23]	SYMPTOM[23]	*[23]	observed[23]	*[23]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-6	1583-1585	to	TO	PART	to	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-7	1586-1591	start	VB	VERB	start	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+37-8	1591-1592	!	.	PUNCT	!	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=Prior versions were much faster on the same system (Windows 11).
+38-1	1593-1598	Prior	JJ	ADJ	prior	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-2	1599-1607	versions	NNS	NOUN	version	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-3	1608-1612	were	VBD	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-4	1613-1617	much	JJ	ADJ	much	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-5	1618-1624	faster	RBR	ADV	faster	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-6	1625-1627	on	IN	ADP	on	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-7	1628-1631	the	DT	DET	the	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-8	1632-1636	same	JJ	ADJ	same	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-9	1637-1643	system	NN	NOUN	system	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-10	1644-1645	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-11	1645-1652	Windows	NNP	PROPN	Windows	yes[24]	http://dbpedia.org/resource/Microsoft\_Windows[24]	os[24]	ENV[24]	Windows 11[24]	*[24]	*[24]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-12	1653-1655	11	CD	NUM	11	yes[24]	http://dbpedia.org/resource/Microsoft\_Windows[24]	os[24]	ENV[24]	Windows 11[24]	*[24]	*[24]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-13	1655-1656	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+38-14	1656-1657	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[55]	_	_	
+
+#Text=Please fix this or at least add an option "Minimize on close" !
+39-1	1659-1665	Please	VB	INTJ	please	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-2	1666-1669	fix	VB	VERB	fix	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-3	1670-1674	this	DT	DET	this	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-4	1675-1677	or	CC	CCONJ	or	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-5	1678-1680	at	IN	ADP	at	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-6	1681-1686	least	JJS	ADJ	least	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-7	1687-1690	add	VB	VERB	add	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-8	1691-1693	an	DT	DET	an	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-9	1694-1700	option	NN	NOUN	option	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-10	1701-1702	"	.	PUNCT	"	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-11	1702-1710	Minimize	NNP	PROPN	Minimize	*[25]	*[25]	*[25]	FEATURE[25]	Minimize on close[25]	*[25]	*[25]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-12	1711-1713	on	IN	ADP	on	*[25]	*[25]	*[25]	FEATURE[25]	Minimize on close[25]	*[25]	*[25]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-13	1714-1719	close	JJ	ADJ	close	*[25]	*[25]	*[25]	FEATURE[25]	Minimize on close[25]	*[25]	*[25]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-14	1719-1720	"	.	PUNCT	"	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+39-15	1721-1722	!	.	PUNCT	!	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+
+#Text=!!!
+40-1	1722-1723	!	.	PUNCT	!	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+40-2	1723-1724	!	.	PUNCT	!	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+40-3	1724-1725	!	.	PUNCT	!	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+
+#Text=This would be so extremely helpful together with "Minimize to tray".
+41-1	1726-1730	This	DT	DET	this	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-2	1731-1736	would	MD	AUX	would	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-3	1737-1739	be	VB	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-4	1740-1742	so	RB	ADV	so	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-5	1743-1752	extremely	RB	ADV	extremely	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-6	1753-1760	helpful	JJ	ADJ	helpful	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-7	1761-1769	together	RB	ADV	together	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-8	1770-1774	with	IN	ADP	with	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-9	1775-1776	"	.	PUNCT	"	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-10	1776-1784	Minimize	NNP	PROPN	Minimize	*[26]	*[26]	*[26]	FEATURE[26]	Minimize to tray[26]	*[26]	*[26]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-11	1785-1787	to	TO	PART	to	*[26]	*[26]	*[26]	FEATURE[26]	Minimize to tray[26]	*[26]	*[26]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-12	1788-1792	tray	VB	VERB	tray	*[26]	*[26]	*[26]	FEATURE[26]	Minimize to tray[26]	*[26]	*[26]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-13	1792-1793	"	.	PUNCT	"	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+41-14	1793-1794	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+
+#Text=This way, I simply keep TB running in the background and it would be accessible instantly when restarting or restoring the main window.
+42-1	1795-1799	This	DT	DET	this	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-2	1800-1803	way	NN	NOUN	way	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-3	1803-1804	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-4	1805-1806	I	PRP	PRON	i	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-5	1807-1813	simply	RB	ADV	simply	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-6	1814-1818	keep	VB	VERB	keep	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-7	1819-1821	TB	NNP	PROPN	TB	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-8	1822-1829	running	VBG	VERB	run	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-9	1830-1832	in	IN	ADP	in	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-10	1833-1836	the	DT	DET	the	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-11	1837-1847	background	NN	NOUN	background	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-12	1848-1851	and	CC	CCONJ	and	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-13	1852-1854	it	PRP	PRON	it	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-14	1855-1860	would	MD	AUX	would	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-15	1861-1863	be	VB	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-16	1864-1874	accessible	JJ	ADJ	accessible	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-17	1875-1884	instantly	RB	ADV	instantly	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-18	1885-1889	when	WRB	ADV	when	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-19	1890-1900	restarting	VBG	VERB	restart	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-20	1901-1903	or	CC	CCONJ	or	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-21	1904-1913	restoring	VBG	VERB	restore	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-22	1914-1917	the	DT	DET	the	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-23	1918-1922	main	JJ	ADJ	main	*[27]	*[27]	dialog[27]	UI\_ELEMENT[27]	*[27]	*[27]	*[27]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-24	1923-1929	window	NN	NOUN	window	*[27]	*[27]	dialog[27]	UI\_ELEMENT[27]	*[27]	*[27]	*[27]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+42-25	1929-1930	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	STEPS[56]	_	_	
+
+#Text=Actual results:
+43-1	1933-1939	Actual	JJ	ADJ	actual	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[57]	_	_	
+43-2	1940-1947	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[57]	_	_	
+43-3	1947-1948	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[57]	_	_	
+
+#Text=TB starts extremely slowly (10 seconds or more).
+44-1	1950-1952	TB	NNP	PROPN	TB	*	http://dbpedia.org/resource/Mozilla\_Thunderbird	application	PRODUCT	Thunderbird	*	*	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	SYMPTOM\_OF	44-3[28_0]	
+44-2	1953-1959	starts	VBZ	VERB	start	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-3	1960-1969	extremely	RB	ADV	extremely	*[28]	*[28]	slowness[28]	SYMPTOM[28]	*[28]	observed[28]	*[28]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-4	1970-1976	slowly	RB	ADV	slowly	*[28]	*[28]	slowness[28]	SYMPTOM[28]	*[28]	observed[28]	*[28]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-5	1977-1978	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-6	1978-1980	10	CD	NUM	10	*[29]	*[29]	time[29]	METRIC[29]	10 seconds or more[29]	*[29]	*[29]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-7	1981-1988	seconds	NNS	NOUN	second	*[29]	*[29]	time[29]	METRIC[29]	10 seconds or more[29]	*[29]	*[29]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-8	1989-1991	or	CC	CCONJ	or	*[29]	*[29]	time[29]	METRIC[29]	10 seconds or more[29]	*[29]	*[29]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-9	1992-1996	more	JJR	ADJ	more	*[29]	*[29]	time[29]	METRIC[29]	10 seconds or more[29]	*[29]	*[29]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-10	1996-1997	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+44-11	1997-1998	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+
+#Text=UI is visible, but unusable, no messages are displayed, etc.
+45-1	1999-2001	UI	NNP	PROPN	UI	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-2	2002-2004	is	VBZ	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-3	2005-2012	visible	JJ	ADJ	visible	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-4	2012-2013	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-5	2014-2017	but	CC	CCONJ	but	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-6	2018-2026	unusable	JJ	ADJ	unusable	*	*	failure	SYMPTOM	*	observed	*	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-7	2026-2027	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-8	2028-2030	no	DT	DET	no	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-9	2031-2039	messages	NNS	NOUN	message	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-10	2040-2043	are	VBP	AUX	be	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-11	2044-2053	displayed	VBN	VERB	display	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-12	2053-2054	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-13	2055-2058	etc	FW	X	etc	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+45-14	2058-2059	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+
+#Text=After 10 to 20 seconds, everything works as intended.
+46-1	2060-2065	After	IN	ADP	after	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-2	2066-2068	10	CD	NUM	10	*[30]	*[30]	time[30]	METRIC[30]	10 to 20 seconds[30]	*[30]	*[30]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-3	2069-2071	to	TO	ADP	to	*[30]	*[30]	time[30]	METRIC[30]	10 to 20 seconds[30]	*[30]	*[30]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-4	2072-2074	20	CD	NUM	20	*[30]	*[30]	time[30]	METRIC[30]	10 to 20 seconds[30]	*[30]	*[30]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-5	2075-2082	seconds	NNS	NOUN	second	*[30]	*[30]	time[30]	METRIC[30]	10 to 20 seconds[30]	*[30]	*[30]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-6	2082-2083	,	,	PUNCT	,	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-7	2084-2094	everything	NN	NOUN	everything	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-8	2095-2100	works	NNS	NOUN	work	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-9	2101-2103	as	IN	ADP	as	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-10	2104-2112	intended	VBN	VERB	intend	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+46-11	2112-2113	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	ACTUAL[58]	_	_	
+
+#Text=Expected results:
+47-1	2115-2123	Expected	VBN	VERB	expect	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[59]	_	_	
+47-2	2124-2131	results	NNS	NOUN	result	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[59]	_	_	
+47-3	2131-2132	:	:	PUNCT	:	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[59]	_	_	
+
+#Text=Reasonably fast startup time (1-2 seconds at most).
+48-1	2134-2144	Reasonably	RB	ADV	reasonably	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-2	2145-2149	fast	RB	ADV	fast	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-3	2150-2157	startup	JJ	ADJ	startup	*[31]	*[31]	*[31]	FEATURE[31]	startup[31]	*[31]	*[31]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-4	2158-2162	time	NN	NOUN	time	*[31]	*[31]	*[31]	FEATURE[31]	startup[31]	*[31]	*[31]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-5	2163-2164	(	(	PUNCT	(	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-6	2164-2167	1-2	JJ	ADJ	1-2	*[32]	*[32]	time[32]	METRIC[32]	1-2 seconds at most[32]	*[32]	*[32]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-7	2168-2175	seconds	NNS	NOUN	second	*[32]	*[32]	time[32]	METRIC[32]	1-2 seconds at most[32]	*[32]	*[32]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-8	2176-2178	at	IN	ADP	at	*[32]	*[32]	time[32]	METRIC[32]	1-2 seconds at most[32]	*[32]	*[32]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-9	2179-2183	most	JJS	ADJ	most	*[32]	*[32]	time[32]	METRIC[32]	1-2 seconds at most[32]	*[32]	*[32]	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-10	2183-2184	)	)	PUNCT	)	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	
+48-11	2184-2185	.	.	PUNCT	.	_	_	_	_	_	_	_	performance[35]	Frontend[35]	high[35]	thunderbird-1859093[35]	Major[35]	bug[35]	EXPECTED[60]	_	_	

@@ -1,0 +1,389 @@
+#FORMAT=WebAnno TSV 3.3
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS|PosValue|coarseValue
+#T_SP=de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma|value
+#T_SP=webanno.custom.BugEntity|affected|kb_uri|kind|label|normalized|polarity|source
+#T_SP=webanno.custom.BugReport|category|component|confidence|report_id|severity|ticket_type
+#T_SP=webanno.custom.Section|label
+#T_RL=webanno.custom.EntityRelation|type|BT_webanno.custom.BugEntity
+
+
+#Text=Insiders 1.10.0 Marketplace returned 'ECONNREFUSED'.
+1-1	0-8	Insiders	NNP	PROPN	Insiders	*	http://dbpedia.org/resource/Visual\_Studio\_Code	application	PRODUCT	VS Code Insiders	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	VERSION\_OF	1-2	
+1-2	9-15	1.10.0	CD	NUM	1.10.0	yes	*	app\_version	ENV	VS Code 1.10.0	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	OBSERVED\_IN	1-6[3_0]	
+1-3	16-27	Marketplace	NNP	PROPN	Marketplace	*[1]|*[2]	*[1]|*[2]	*[1]|service[2]	ERROR\_MESSAGE[1]|PRODUCT[2]	*[1]|Visual Studio Marketplace[2]	*[1]|*[2]	*[1]|*[2]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	HAS\_MESSAGE	15-8[12_1]	
+1-4	28-36	returned	VBD	VERB	return	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+1-5	37-38	'	''	PUNCT	'	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+1-6	38-50	ECONNREFUSED	NNP	PROPN	ECONNREFUSED	*[1]|*[3]	*[1]|*[3]	*[1]|net\_error[3]	ERROR\_MESSAGE[1]|ERROR\_CODE[3]	*[1]|ECONNREFUSED[3]	*[1]|*[3]	*[1]|*[3]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+1-7	50-51	'	.	PUNCT	'	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+1-8	51-52	.	.	PUNCT	.	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+
+#Text=Please check the 'http.proxy' setting.
+2-1	53-59	Please	NNP	INTJ	Please	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-2	60-65	check	VB	VERB	check	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-3	66-69	the	DT	DET	the	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-4	70-71	'	''	PUNCT	'	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-5	71-81	http.proxy	NNP	X	http.proxy	*[1]|*[4]	*[1]|*[4]	*[1]|config[4]	ERROR\_MESSAGE[1]|CODE\_LOCATION[4]	*[1]|*[4]	*[1]|*[4]	*[1]|*[4]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-6	81-82	'	''	PUNCT	'	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-7	83-90	setting	NN	NOUN	setting	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+2-8	90-91	.	.	PUNCT	.	*[1]	*[1]	*[1]	ERROR\_MESSAGE[1]	*[1]	*[1]	*[1]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	TITLE[23]	_	_	
+
+#Text=Getting `Marketplace returned 'ECONNREFUSED'.
+3-1	93-100	Getting	VBG	VERB	get	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+3-2	101-102	`	``	PUNCT	`	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+3-3	102-113	Marketplace	NN	NOUN	marketplace	*[5]|*[6]	*[5]|*[6]	*[5]|service[6]	ERROR\_MESSAGE[5]|PRODUCT[6]	*[5]|Visual Studio Marketplace[6]	*[5]|*[6]	*[5]|*[6]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	HAS\_MESSAGE|SYMPTOM\_OF	1-6[3_5]|8-6[0_6]	
+3-4	114-122	returned	VBD	VERB	return	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+3-5	123-124	'	''	PUNCT	'	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+3-6	124-136	ECONNREFUSED	NNP	PROPN	ECONNREFUSED	*[5]|*[7]	*[5]|*[7]	*[5]|net\_error[7]	ERROR\_MESSAGE[5]|ERROR\_CODE[7]	*[5]|ECONNREFUSED[7]	*[5]|*[7]	*[5]|*[7]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+3-7	136-137	'	.	PUNCT	'	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+3-8	137-138	.	.	PUNCT	.	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+
+#Text=Please check the 'http.proxy' setting.` after most recent insiders update.
+4-1	139-145	Please	NNP	INTJ	Please	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-2	146-151	check	VB	VERB	check	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-3	152-155	the	DT	DET	the	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-4	156-157	'	''	PUNCT	'	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-5	157-167	http.proxy	NNP	X	http.proxy	*[5]|*[8]	*[5]|*[8]	*[5]|config[8]	ERROR\_MESSAGE[5]|CODE\_LOCATION[8]	*[5]|*[8]	*[5]|*[8]	*[5]|*[8]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-6	167-168	'	''	PUNCT	'	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-7	169-176	setting	VBG	VERB	set	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-8	176-177	.	.	PUNCT	.	*[5]	*[5]	*[5]	ERROR\_MESSAGE[5]	*[5]	*[5]	*[5]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-9	177-178	`	``	PUNCT	`	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-10	179-184	after	IN	ADP	after	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-11	185-189	most	JJS	ADJ	most	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-12	190-196	recent	JJ	ADJ	recent	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-13	197-205	insiders	NNS	NOUN	insider	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-14	206-212	update	VBP	VERB	update	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+4-15	212-213	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+
+#Text=Worked on Friday when I last opened it.
+5-1	215-221	Worked	VBN	VERB	work	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-2	222-224	on	IN	ADP	on	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-3	225-231	Friday	NNP	PROPN	Friday	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-4	232-236	when	WRB	ADV	when	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-5	237-238	I	PRP	PRON	i	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-6	239-243	last	JJ	ADJ	last	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-7	244-250	opened	VBD	VERB	open	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-8	251-253	it	PRP	PRON	it	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+5-9	253-254	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+
+#Text=Didn't change any settings.
+6-1	256-259	Did	NNP	PROPN	Did	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+6-2	259-262	n't	RB	PART	not	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+6-3	263-269	change	VB	VERB	change	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+6-4	270-273	any	DT	DET	any	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+6-5	274-282	settings	NNS	NOUN	setting	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+6-6	282-283	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+
+#Text=Not using a proxy.
+7-1	285-288	Not	RB	PART	not	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+7-2	289-294	using	VBG	VERB	use	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+7-3	295-296	a	DT	DET	a	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+7-4	297-302	proxy	NNP	PROPN	proxy	*	http://dbpedia.org/resource/Proxy\_server	mechanism	TECHNOLOGY	Proxy server	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+7-5	302-303	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+
+#Text=I'm assuming latest update broke it somehow since it started happening right after I updated this morning.
+8-1	305-306	I	PRP	PRON	i	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-2	306-308	'm	VBP	AUX	be	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-3	309-317	assuming	VBG	VERB	assume	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-4	318-324	latest	JJS	ADJ	late	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-5	325-331	update	JJ	ADJ	update	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-6	332-337	broke	VBD	VERB	break	*	*	failure	SYMPTOM	*	observed	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-7	338-340	it	PRP	PRON	it	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-8	341-348	somehow	RB	ADV	somehow	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-9	349-354	since	IN	ADP	since	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-10	355-357	it	PRP	PRON	it	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-11	358-365	started	VBD	VERB	start	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-12	366-375	happening	VBG	VERB	happen	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-13	376-381	right	RB	ADV	right	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-14	382-387	after	IN	ADP	after	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-15	388-389	I	PRP	PRON	i	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-16	390-397	updated	VBD	VERB	update	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-17	398-402	this	DT	DET	this	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-18	403-410	morning	NN	NOUN	morning	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+8-19	410-411	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	DESCRIPTION[24]	_	_	
+
+#Text=- VSCode Version: 1.10.0-insider 422d7ff1b78fcac514498921551c33a988c4ad34 2017-02-13T07:02:30.785Z
+9-1	413-414	-	:	PUNCT	-	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-2	415-421	VSCode	NNP	PROPN	VSCode	*	http://dbpedia.org/resource/Visual\_Studio\_Code	application	PRODUCT	Visual Studio Code	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	VERSION\_OF	9-5	
+9-3	422-429	Version	NN	NOUN	version	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-4	429-430	:	:	PUNCT	:	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-5	431-445	1.10.0-insider	CD	NUM	1.10.0-insider	yes	*	app\_version	ENV	VS Code 1.10.0-insider	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-6	446-486	422d7ff1b78fcac514498921551c33a988c4ad34	CD	NUM	422d7ff1b78fcac514498921551c33a988c4ad34	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-7	487-500	2017-02-13T07	JJ	ADJ	2017-02-13t07	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-8	500-501	:	:	PUNCT	:	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-9	501-503	02	CD	NUM	02	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-10	503-504	:	:	PUNCT	:	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-11	504-510	30.785	CD	NUM	30.785	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+9-12	510-511	Z	NN	NOUN	z	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+
+#Text=- OS Version: OSX 10.10.5 (14F2109)
+10-1	512-513	-	:	PUNCT	-	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-2	514-516	OS	NN	NOUN	o	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-3	517-524	Version	NN	NOUN	version	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-4	524-525	:	:	PUNCT	:	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-5	526-529	OSX	CC	CCONJ	osx	yes[9]	http://dbpedia.org/resource/MacOS[9]	os[9]	ENV[9]	macOS 10.10.5[9]	*[9]	*[9]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-6	530-537	10.10.5	CD	NUM	10.10.5	yes[9]	http://dbpedia.org/resource/MacOS[9]	os[9]	ENV[9]	macOS 10.10.5[9]	*[9]	*[9]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-7	538-539	(	(	PUNCT	(	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-8	539-546	14F2109	CD	NUM	14F2109	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+10-9	546-547	)	)	PUNCT	)	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	ENVIRONMENT[25]	_	_	
+
+#Text=Steps to Reproduce:
+11-1	549-554	Steps	NNS	NOUN	step	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[26]	_	_	
+11-2	555-557	to	TO	PART	to	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[26]	_	_	
+11-3	558-567	Reproduce	VB	VERB	reproduce	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[26]	_	_	
+11-4	567-568	:	:	PUNCT	:	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[26]	_	_	
+
+#Text=1. Download above vscode-insiders build
+12-1	570-571	1	CD	NUM	1	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+12-2	571-572	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+12-3	573-581	Download	VB	VERB	download	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+12-4	582-587	above	IN	ADP	above	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+12-5	588-603	vscode-insiders	NNP	PROPN	vscode-insiders	*	http://dbpedia.org/resource/Visual\_Studio\_Code	application	PRODUCT	Visual Studio Code	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+12-6	604-609	build	VBP	VERB	build	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+
+#Text=2. Restart vscode
+13-1	610-611	2	CD	NUM	2	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+13-2	611-612	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+13-3	613-620	Restart	VB	VERB	restart	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+13-4	621-627	vscode	NNP	PROPN	vscode	*	http://dbpedia.org/resource/Visual\_Studio\_Code	application	PRODUCT	Visual Studio Code	*	*	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+
+#Text=3. Open extensions
+14-1	628-629	3	LS	NUM	3	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+14-2	629-630	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+14-3	631-635	Open	VB	VERB	open	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+14-4	636-646	extensions	NNS	NOUN	extension	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+
+#Text=4. See "Marketplace returned 'ECONNREFUSED'.
+15-1	647-648	4	CD	NUM	4	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-2	648-649	.	.	PUNCT	.	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-3	650-653	See	VB	VERB	see	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-4	654-655	"	.	PUNCT	"	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-5	655-666	Marketplace	NNP	PROPN	Marketplace	*[10]|*[11]	*[10]|*[11]	*[10]|service[11]	ERROR\_MESSAGE[10]|PRODUCT[11]	*[10]|Visual Studio Marketplace[11]	*[10]|*[11]	*[10]|*[11]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	HAS\_MESSAGE	3-6[7_10]	
+15-6	667-675	returned	VBD	VERB	return	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-7	676-677	'	''	PUNCT	'	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-8	677-689	ECONNREFUSED	NNP	PROPN	ECONNREFUSED	*[10]|*[12]	*[10]|*[12]	*[10]|net\_error[12]	ERROR\_MESSAGE[10]|ERROR\_CODE[12]	*[10]|ECONNREFUSED[12]	*[10]|*[12]	*[10]|*[12]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-9	689-690	'	.	PUNCT	'	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+15-10	690-691	.	.	PUNCT	.	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+
+#Text=Please check the 'http.proxy' setting."
+16-1	692-698	Please	NNP	INTJ	Please	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-2	699-704	check	VB	VERB	check	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-3	705-708	the	DT	DET	the	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-4	709-710	'	''	PUNCT	'	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-5	710-720	http.proxy	NNP	X	http.proxy	*[10]|*[13]	*[10]|*[13]	*[10]|config[13]	ERROR\_MESSAGE[10]|CODE\_LOCATION[13]	*[10]|*[13]	*[10]|*[13]	*[10]|*[13]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-6	720-721	'	''	PUNCT	'	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-7	722-729	setting	VBG	VERB	set	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-8	729-730	.	.	PUNCT	.	*[10]	*[10]	*[10]	ERROR\_MESSAGE[10]	*[10]	*[10]	*[10]	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+16-9	730-731	"	.	PUNCT	"	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[27]	_	_	
+
+#Text=Need any more info?
+17-1	733-737	Need	VB	VERB	need	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[28]	_	_	
+17-2	738-741	any	DT	DET	any	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[28]	_	_	
+17-3	742-746	more	JJR	ADJ	more	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[28]	_	_	
+17-4	747-751	info	NNS	NOUN	info	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[28]	_	_	
+17-5	751-752	?	.	PUNCT	?	_	_	_	_	_	_	_	network[20]	Backend[20]	low[20]	vscode-20567[20]	Critical[20]	bug[20]	STEPS[28]	_	_	
+
+#Text=Make SocketAuthServer socket timeout configurable
+18-1	754-758	Make	NNP	PROPN	Make	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	TITLE[29]	_	_	
+18-2	759-775	SocketAuthServer	NNP	PROPN	SocketAuthServer	*	*	class	CODE\_LOCATION	*	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	TITLE[29]	SYMPTOM\_OF	22-10	
+18-3	776-782	socket	NN	NOUN	socket	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	TITLE[29]	_	_	
+18-4	783-790	timeout	NN	NOUN	timeout	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	TITLE[29]	_	_	
+18-5	791-803	configurable	JJ	ADJ	configurable	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	TITLE[29]	_	_	
+
+#Text=In SPARK-21551 the socket timeout for the Pyspark applications has been increased from 3 to 15 seconds.
+19-1	805-807	In	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-2	808-819	SPARK-21551	NNP	PROPN	SPARK-21551	*	*	*	ISSUE\_REF	SPARK-21551	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-3	820-823	the	DT	DET	the	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-4	824-830	socket	NN	NOUN	socket	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-5	831-838	timeout	NN	NOUN	timeout	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-6	839-842	for	IN	ADP	for	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-7	843-846	the	DT	DET	the	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-8	847-854	Pyspark	NNP	PROPN	Pyspark	*	http://dbpedia.org/resource/Apache\_Spark	framework	PRODUCT	Apache Spark	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-9	855-867	applications	NNS	NOUN	application	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-10	868-871	has	VBZ	AUX	have	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-11	872-876	been	VBN	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-12	877-886	increased	VBN	VERB	increase	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-13	887-891	from	IN	ADP	from	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-14	892-893	3	CD	NUM	3	*[14]	*[14]	time[14]	METRIC[14]	3 to 15 seconds[14]	*[14]	*[14]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-15	894-896	to	TO	ADP	to	*[14]	*[14]	time[14]	METRIC[14]	3 to 15 seconds[14]	*[14]	*[14]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-16	897-899	15	CD	NUM	15	*[14]	*[14]	time[14]	METRIC[14]	3 to 15 seconds[14]	*[14]	*[14]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-17	900-907	seconds	NNS	NOUN	second	*[14]	*[14]	time[14]	METRIC[14]	3 to 15 seconds[14]	*[14]	*[14]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+19-18	907-908	.	.	PUNCT	.	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+
+#Text=However it is still hardcoded.
+20-1	909-916	However	RB	ADV	however	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+20-2	917-919	it	PRP	PRON	it	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+20-3	920-922	is	VBZ	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+20-4	923-928	still	RB	ADV	still	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+20-5	929-938	hardcoded	VBN	VERB	hardcoded	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+20-6	938-939	.	.	PUNCT	.	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+
+#Text=In certain situations even the 15 seconds is not enough, so it should be made configurable.
+21-1	940-942	In	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-2	943-950	certain	JJ	ADJ	certain	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-3	951-961	situations	NNS	NOUN	situation	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-4	962-966	even	RB	ADV	even	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-5	967-970	the	DT	DET	the	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-6	971-973	15	CD	NUM	15	*[15]	*[15]	time[15]	METRIC[15]	15 seconds[15]	*[15]	*[15]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-7	974-981	seconds	NNS	NOUN	second	*[15]	*[15]	time[15]	METRIC[15]	15 seconds[15]	*[15]	*[15]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-8	982-984	is	VBZ	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-9	985-988	not	RB	PART	not	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-10	989-995	enough	RB	ADV	enough	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-11	995-996	,	,	PUNCT	,	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-12	997-999	so	IN	ADP	so	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-13	1000-1002	it	PRP	PRON	it	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-14	1003-1009	should	MD	AUX	should	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-15	1010-1012	be	VB	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-16	1013-1017	made	VBN	VERB	make	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-17	1018-1030	configurable	JJ	ADJ	configurable	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+21-18	1030-1031	.	.	PUNCT	.	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+
+#Text=This is requested after seeing it in real-life workload failures.
+22-1	1033-1037	This	DT	DET	this	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-2	1038-1040	is	VBZ	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-3	1041-1050	requested	VBN	VERB	request	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-4	1051-1056	after	IN	ADP	after	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-5	1057-1063	seeing	VBG	VERB	see	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-6	1064-1066	it	PRP	PRON	it	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-7	1067-1069	in	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-8	1070-1079	real-life	JJ	ADJ	real-life	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-9	1080-1088	workload	NN	NOUN	workload	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-10	1089-1097	failures	NNS	NOUN	failure	*	*	failure	SYMPTOM	*	observed	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+22-11	1097-1098	.	.	PUNCT	.	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+
+#Text=Also it has been suggested and requested in an earlier comment in [SPARK-18649|https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498]
+23-1	1099-1103	Also	RB	ADV	also	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-2	1104-1106	it	PRP	PRON	it	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-3	1107-1110	has	VBZ	AUX	have	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-4	1111-1115	been	VBN	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-5	1116-1125	suggested	VBN	VERB	suggest	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-6	1126-1129	and	CC	CCONJ	and	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-7	1130-1139	requested	VBN	VERB	request	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-8	1140-1142	in	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-9	1143-1145	an	DT	DET	an	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-10	1146-1153	earlier	JJR	ADJ	early	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-11	1154-1161	comment	NN	NOUN	comment	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-12	1162-1164	in	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-13	1165-1166	[	.	PUNCT	\[	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-14	1166-1177	SPARK-18649	NNP	PROPN	SPARK-18649	*	*	*	ISSUE\_REF	SPARK-18649	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-15	1177-1178	|	SYM	SYM	\|	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-16	1178-1342	https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498	ADD	X	https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+23-17	1342-1343	]	.	PUNCT	\]	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[30]	_	_	
+
+#Text=In 
+#Text=Spark 2.4 it is under
+24-1	1345-1347	In	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+24-2	1349-1354	Spark	NNP	PROPN	Spark	*	http://dbpedia.org/resource/Apache\_Spark	framework	PRODUCT	Apache Spark	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	VERSION\_OF	24-3	
+24-3	1355-1358	2.4	CD	NUM	2.4	yes	*	app\_version	ENV	Apache Spark 2.4	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+24-4	1359-1361	it	PRP	PRON	it	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+24-5	1362-1364	is	VBZ	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+24-6	1365-1370	under	IN	ADP	under	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text=[PythonRDD.scala|https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899]
+25-1	1371-1372	[	.	PUNCT	\[	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+25-2	1372-1387	PythonRDD.scala	NNP	X	PythonRDD.scala	*	*	file	CODE\_LOCATION	*	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+25-3	1387-1388	|	SYM	SYM	\|	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+25-4	1388-1504	https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899	ADD	X	https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+25-5	1504-1505	]	.	PUNCT	\]	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text=in Spark 3.x the code has been moved to
+26-1	1506-1508	in	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-2	1509-1514	Spark	NNP	PROPN	Spark	*	http://dbpedia.org/resource/Apache\_Spark	framework	PRODUCT	Apache Spark	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	VERSION\_OF	26-3[16_0]	
+26-3	1515-1516	3	CD	NUM	3	yes[16]	*[16]	app\_version[16]	ENV[16]	Apache Spark 3.x[16]	*[16]	*[16]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-4	1516-1517	.	.	PUNCT	.	yes[16]	*[16]	app\_version[16]	ENV[16]	Apache Spark 3.x[16]	*[16]	*[16]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-5	1517-1518	x	VB	VERB	x	yes[16]	*[16]	app\_version[16]	ENV[16]	Apache Spark 3.x[16]	*[16]	*[16]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-6	1519-1522	the	DT	DET	the	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-7	1523-1527	code	NN	NOUN	code	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-8	1528-1531	has	VBZ	AUX	have	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-9	1532-1536	been	VBN	AUX	be	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-10	1537-1542	moved	VBN	VERB	move	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+26-11	1543-1545	to	TO	PART	to	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text=[SocketAuthServer.scala|https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51]
+27-1	1546-1547	[	.	PUNCT	\[	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+27-2	1547-1569	SocketAuthServer.scala	NNP	X	SocketAuthServer.scala	*	*	file	CODE\_LOCATION	*	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+27-3	1569-1570	|	SYM	SYM	\|	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+27-4	1570-1686	https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51	ADD	X	https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+27-5	1686-1687	]	.	PUNCT	\]	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text={code}
+28-1	1688-1689	{	(	PUNCT	{	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+28-2	1689-1693	code	NN	NOUN	code	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+28-3	1693-1694	}	)	PUNCT	}	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text=serverSocket.setSoTimeout(15000)
+29-1	1695-1720	serverSocket.setSoTimeout	NNP	X	serverSocket.setSoTimeout	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+29-2	1720-1721	(	(	PUNCT	(	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+29-3	1721-1726	15000	CD	NUM	15000	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+29-4	1726-1727	)	)	PUNCT	)	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text={code}
+30-1	1728-1729	{	(	PUNCT	{	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+30-2	1729-1733	code	NN	NOUN	code	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+30-3	1733-1734	}	)	PUNCT	}	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text=Please include this in both 2.4 and 3.x branches.
+31-1	1735-1741	Please	NNP	INTJ	Please	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-2	1742-1749	include	VBP	VERB	include	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-3	1750-1754	this	DT	DET	this	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-4	1755-1757	in	IN	ADP	in	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-5	1758-1762	both	DT	DET	both	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-6	1763-1766	2.4	CD	NUM	2.4	yes	*	app\_version	ENV	Apache Spark 2.4	*	*	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-7	1767-1770	and	CC	CCONJ	and	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-8	1771-1772	3	CD	NUM	3	yes[17]	*[17]	app\_version[17]	ENV[17]	Apache Spark 3.x[17]	*[17]	*[17]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-9	1772-1773	.	.	PUNCT	.	yes[17]	*[17]	app\_version[17]	ENV[17]	Apache Spark 3.x[17]	*[17]	*[17]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-10	1773-1774	x	JJ	ADJ	x	yes[17]	*[17]	app\_version[17]	ENV[17]	Apache Spark 3.x[17]	*[17]	*[17]	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-11	1775-1783	branches	NNS	NOUN	branch	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+31-12	1783-1784	.	.	PUNCT	.	_	_	_	_	_	_	_	network[21]	Backend[21]	high[21]	spark-13335362[21]	*[21]	feature\_request[21]	DESCRIPTION[31]	_	_	
+
+#Text=List of DNS over HTTPS Providers is Blank
+32-1	1786-1790	List	NN	NOUN	list	*[18]	*[18]	list[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	SYMPTOM\_OF	32-8[0_18]	
+32-2	1791-1793	of	IN	ADP	of	*[18]	*[18]	list[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+32-3	1794-1797	DNS	NNP	PROPN	DNS	*[18]	*[18]	list[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+32-4	1798-1802	over	IN	ADP	over	*[18]	*[18]	list[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+32-5	1803-1808	HTTPS	NNP	PROPN	HTTPS	*[18]	*[18]	list[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+32-6	1809-1818	Providers	NNP	PROPN	Providers	*[18]	*[18]	list[18]	UI\_ELEMENT[18]	*[18]	*[18]	*[18]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+32-7	1819-1821	is	VBZ	AUX	be	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+32-8	1822-1827	Blank	VB	VERB	blank	*	*	wrong\_output	SYMPTOM	*	observed	*	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	TITLE[32]	_	_	
+
+#Text=No STR but noticed after a fresh install of 98.0b2/b3 (with a new profile) that the list of DNS over HTTPS providers is blank.
+33-1	1829-1831	No	DT	DET	no	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-2	1832-1835	STR	NNP	PROPN	STR	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-3	1836-1839	but	CC	CCONJ	but	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-4	1840-1847	noticed	VBD	VERB	notice	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-5	1848-1853	after	IN	ADP	after	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-6	1854-1855	a	DT	DET	a	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-7	1856-1861	fresh	JJ	ADJ	fresh	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-8	1862-1869	install	NN	NOUN	install	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-9	1870-1872	of	IN	ADP	of	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-10	1873-1879	98.0b2	CD	NUM	98.0b2	yes	*	app\_version	ENV	Thunderbird 98.0b2	*	*	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	OBSERVED\_IN	33-28	
+33-11	1879-1880	/	SYM	SYM	/	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-12	1880-1882	b3	NN	NOUN	b3	yes	*	app\_version	ENV	Thunderbird 98.0b3	*	*	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-13	1883-1884	(	(	PUNCT	(	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-14	1884-1888	with	IN	ADP	with	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-15	1889-1890	a	DT	DET	a	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-16	1891-1894	new	JJ	ADJ	new	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-17	1895-1902	profile	NN	NOUN	profile	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-18	1902-1903	)	)	PUNCT	)	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-19	1904-1908	that	IN	SCONJ	that	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-20	1909-1912	the	DT	DET	the	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-21	1913-1917	list	NN	NOUN	list	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-22	1918-1920	of	IN	ADP	of	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-23	1921-1924	DNS	NNP	PROPN	DNS	*[19]	http://dbpedia.org/resource/DNS\_over\_HTTPS[19]	protocol[19]	TECHNOLOGY[19]	DNS over HTTPS[19]	*[19]	*[19]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-24	1925-1929	over	IN	ADP	over	*[19]	http://dbpedia.org/resource/DNS\_over\_HTTPS[19]	protocol[19]	TECHNOLOGY[19]	DNS over HTTPS[19]	*[19]	*[19]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-25	1930-1935	HTTPS	NNP	PROPN	HTTPS	*[19]	http://dbpedia.org/resource/DNS\_over\_HTTPS[19]	protocol[19]	TECHNOLOGY[19]	DNS over HTTPS[19]	*[19]	*[19]	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-26	1936-1945	providers	NNS	NOUN	provider	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-27	1946-1948	is	VBZ	AUX	be	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-28	1949-1954	blank	JJ	ADJ	blank	*	*	wrong\_output	SYMPTOM	*	observed	*	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+33-29	1954-1955	.	.	PUNCT	.	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+
+#Text=This setting displays https://mozilla.cloudflare-dns.com/dns-query as a provider in 91.11.0.
+34-1	1956-1960	This	DT	DET	this	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-2	1961-1968	setting	NN	NOUN	setting	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-3	1969-1977	displays	VBZ	VERB	display	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-4	1978-2022	https://mozilla.cloudflare-dns.com/dns-query	ADD	X	https://mozilla.cloudflare-dns.com/dns-query	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-5	2023-2025	as	IN	ADP	as	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-6	2026-2027	a	DT	DET	a	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-7	2028-2036	provider	NN	NOUN	provider	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-8	2037-2039	in	IN	ADP	in	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-9	2040-2047	91.11.0	CD	NUM	91.11.0	no	*	app\_version	ENV	Thunderbird 91.11.0	*	*	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	
+34-10	2047-2048	.	.	PUNCT	.	_	_	_	_	_	_	_	network[22]	Frontend[22]	high[22]	thunderbird-1757761[22]	Minor[22]	bug[22]	DESCRIPTION[33]	_	_	

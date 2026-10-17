@@ -1,0 +1,57 @@
+Quick filter working much slower after Supernova redesign
+
+User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0
+
+Steps to reproduce:
+
+Typing anything in Quick Filter
+
+Actual results:
+
+Nothing. For 5-10 seconds, nothing happens.
+Only after that, the results are listed.
+
+Expected results:
+
+Before Supernova redesign, the result were in less than 1 second. And if I remember correctly, they updated gradually (some of then quickly, some later).
+It should work like before. With the 5+ seconds wait it's unbearable. I use quick filters all the time...
+
+(visually, I like the redesign)
+
+FIrefox freezes while opening finder to upload files
+
+User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0
+
+Steps to reproduce:
+
+Two ways:
+1. Open Google Drive, click upload file, Firefox freezes
+2. Open new tab, click open file, Firefox freezes
+
+Actual results:
+
+Two ways:
+1. Open Google Drive, click upload file, Firefox freezes
+2. Open new tab, click open file, Firefox freezes
+
+Expected results:
+
+Two ways:
+1. Open Google Drive, click upload file, Firefox does not freeze
+2. Open new tab, click open file, Firefox does not freeze
+
+slow start
+
+Steps to reproduce:
+
+Starting Thunderbird is extremely slow! I think the problem started with v119 Beta 3, before that, it worked relatively fast. It takes up to 20 seconds until the program is usable (message selection is possible, displaying messages, etc.) I tried creating a new profile - same result. I don't have any add-ons or extensions. It's simply painfully slow to start! Prior versions were much faster on the same system (Windows 11).
+
+Please fix this or at least add an option "Minimize on close" !!!! This would be so extremely helpful together with "Minimize to tray". This way, I simply keep TB running in the background and it would be accessible instantly when restarting or restoring the main window. 
+
+Actual results:
+
+TB starts extremely slowly (10 seconds or more). UI is visible, but unusable, no messages are displayed, etc. After 10 to 20 seconds, everything works as intended.
+
+Expected results:
+
+Reasonably fast startup time (1-2 seconds at most).

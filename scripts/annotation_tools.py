@@ -289,7 +289,8 @@ def validate_reports(ck, s):
             continue
         if f.parent.name != a["labels"].get("category"):
             ck.err(w, f"файл лежит в папке {f.parent.name}, а category={a['labels'].get('category')}")
-        if a.get("schema_version") != s["version"]:
+        # версии 1.x обратно совместимы: 1.1 только добавляет метки и атрибуты (ЛР3)
+        if str(a.get("schema_version", "")).split(".")[0] != str(s["version"]).split(".")[0]:
             ck.err(w, "версия схемы не совпадает")
         check_doc_labels(ck, w, s, a["labels"])
         # разделы: не пересекаются и покрывают весь непробельный текст

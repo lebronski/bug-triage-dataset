@@ -1,0 +1,504 @@
+# newdoc id = security
+# object = security
+# newpar report = cassandra-13426900 | ticket_type=bug category=security component=Database severity=Blocker confidence=high
+# paragraph = p1 section=TITLE
+# sent_id = security-s1
+# text = CVE-2021-44521: Apache Cassandra: Remote code execution for scripted UDFs
+1	CVE-2021-44521	CVE-2021-44521	PROPN	NNP	_	_	_	_	NER=B-ERROR_CODE|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+3	Apache	Apache	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Cassandra
+4	Cassandra	Cassandra	PROPN	NNP	_	_	_	_	NER=I-PRODUCT|SpaceAfter=No
+5	:	:	PUNCT	:	_	_	_	_	NER=O
+6	Remote	remote	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM
+7	code	code	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+8	execution	execution	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+9	for	for	ADP	IN	_	_	_	_	NER=O
+10	scripted	scripted	ADJ	JJ	_	_	_	_	NER=O
+11	UDFs	UDFs	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:User-defined_function
+
+# paragraph = p2 section=DESCRIPTION
+# sent_id = security-s2
+# text = When running Apache Cassandra with the following configuration:
+1	When	when	ADV	WRB	_	_	_	_	NER=O
+2	running	run	VERB	VBG	_	_	_	_	NER=O
+3	Apache	Apache	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Cassandra
+4	Cassandra	Cassandra	PROPN	NNP	_	_	_	_	NER=I-PRODUCT
+5	with	with	ADP	IN	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	following	following	ADJ	JJ	_	_	_	_	NER=O
+8	configuration	configuration	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+9	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p3 section=CODE
+# sent_id = security-s3
+# text = enable_user_defined_functions: true
+1	enable_user_defined_functions	enable_user_defined_functions	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+3	true	true	ADJ	JJ	_	_	_	_	NER=O
+
+# sent_id = security-s4
+# text = enable_scripted_user_defined_functions: true
+1	enable_scripted_user_defined_functions	enable_scripted_user_defined_functions	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+3	true	true	ADJ	JJ	_	_	_	_	NER=O
+
+# sent_id = security-s5
+# text = enable_user_defined_functions_threads: false
+1	enable_user_defined_functions_threads	enable_user_defined_functions_threads	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+3	false	false	ADJ	JJ	_	_	_	_	NER=O
+
+# paragraph = p4 section=DESCRIPTION
+# sent_id = security-s6
+# text = it is possible for an attacker to execute arbitrary code on the host.
+1	it	it	PRON	PRP	_	_	_	_	NER=O
+2	is	be	AUX	VBZ	_	_	_	_	NER=O
+3	possible	possible	ADJ	JJ	_	_	_	_	NER=O
+4	for	for	ADP	IN	_	_	_	_	NER=O
+5	an	an	DET	DT	_	_	_	_	NER=O
+6	attacker	attacker	NOUN	NN	_	_	_	_	NER=O
+7	to	to	PART	TO	_	_	_	_	NER=O
+8	execute	execute	VERB	VB	_	_	_	_	NER=B-SYMPTOM
+9	arbitrary	arbitrary	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+10	code	code	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+11	on	on	ADP	IN	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	host	host	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = security-s7
+# text = The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	attacker	attacker	NOUN	NN	_	_	_	_	NER=O
+3	would	would	AUX	MD	_	_	_	_	NER=O
+4	need	need	VERB	VB	_	_	_	_	NER=O
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	have	have	VERB	VB	_	_	_	_	NER=O
+7	enough	enough	ADJ	JJ	_	_	_	_	NER=O
+8	permissions	permission	NOUN	NNS	_	_	_	_	NER=O
+9	to	to	PART	TO	_	_	_	_	NER=O
+10	create	create	VERB	VB	_	_	_	_	NER=O
+11	user	user	NOUN	NN	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:User-defined_function
+12	defined	defined	ADJ	JJ	_	_	_	_	NER=I-TECHNOLOGY
+13	functions	function	NOUN	NNS	_	_	_	_	NER=I-TECHNOLOGY
+14	in	in	ADP	IN	_	_	_	_	NER=O
+15	the	the	DET	DT	_	_	_	_	NER=O
+16	cluster	cluster	NOUN	NN	_	_	_	_	NER=O
+17	to	to	PART	TO	_	_	_	_	NER=O
+18	be	be	AUX	VB	_	_	_	_	NER=O
+19	able	able	ADJ	JJ	_	_	_	_	NER=O
+20	to	to	PART	TO	_	_	_	_	NER=O
+21	exploit	exploit	VERB	VB	_	_	_	_	NER=O
+22	this	this	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+23	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = security-s8
+# text = Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.
+1	Note	note	NOUN	NN	_	_	_	_	NER=O
+2	that	that	SCONJ	IN	_	_	_	_	NER=O
+3	this	this	DET	DT	_	_	_	_	NER=O
+4	configuration	configuration	NOUN	NN	_	_	_	_	NER=O
+5	is	be	AUX	VBZ	_	_	_	_	NER=O
+6	documented	document	VERB	VBN	_	_	_	_	NER=O
+7	as	as	ADP	IN	_	_	_	_	NER=O
+8	unsafe	unsafe	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+9	,	,	PUNCT	,	_	_	_	_	NER=O
+10	and	and	CCONJ	CC	_	_	_	_	NER=O
+11	will	will	AUX	MD	_	_	_	_	NER=O
+12	continue	continue	VERB	VB	_	_	_	_	NER=O
+13	to	to	PART	TO	_	_	_	_	NER=O
+14	be	be	AUX	VB	_	_	_	_	NER=O
+15	considered	consider	VERB	VBN	_	_	_	_	NER=O
+16	unsafe	unsafe	ADJ	JJ	_	_	_	_	NER=O
+17	after	after	ADP	IN	_	_	_	_	NER=O
+18	this	this	DET	DT	_	_	_	_	NER=O
+19	CVE	CVE	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+20	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p5 section=DESCRIPTION
+# sent_id = security-s9
+# text = This issue is being tracked as CASSANDRA-17352
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	issue	issue	NOUN	NN	_	_	_	_	NER=O
+3	is	be	AUX	VBZ	_	_	_	_	NER=O
+4	being	be	AUX	VBG	_	_	_	_	NER=O
+5	tracked	track	VERB	VBN	_	_	_	_	NER=O
+6	as	as	ADP	IN	_	_	_	_	NER=O
+7	CASSANDRA-17352	CASSANDRA-17352	PROPN	NNP	_	_	_	_	NER=B-ISSUE_REF
+
+# paragraph = p6 section=NOTES
+# sent_id = security-s10
+# text = Mitigation:
+1	Mitigation	mitigation	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p7 section=NOTES
+# sent_id = security-s11
+# text = Set `enable_user_defined_functions_threads: true` (this is default) or
+1	Set	Set	PROPN	NNP	_	_	_	_	NER=O
+2	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+3	enable_user_defined_functions_threads	enable_user_defined_functions_threads	NOUN	NNS	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+5	true	true	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+6	`	`	PUNCT	``	_	_	_	_	NER=O
+7	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+8	this	this	DET	DT	_	_	_	_	NER=O
+9	is	be	AUX	VBZ	_	_	_	_	NER=O
+10	default	default	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+11	)	)	PUNCT	)	_	_	_	_	NER=O
+12	or	or	CCONJ	CC	_	_	_	_	NER=O
+
+# sent_id = security-s12
+# text = 3.0 users should upgrade to 3.0.26
+1	3.0	3.0	NUM	CD	_	_	_	_	NER=B-ENV
+2	users	user	NOUN	NNS	_	_	_	_	NER=O
+3	should	should	AUX	MD	_	_	_	_	NER=O
+4	upgrade	upgrade	VERB	VB	_	_	_	_	NER=O
+5	to	to	ADP	TO	_	_	_	_	NER=O
+6	3.0.26	3.0.26	NUM	CD	_	_	_	_	NER=B-ENV
+
+# sent_id = security-s13
+# text = 3.11 users should upgrade to 3.11.12
+1	3.11	3.11	NUM	CD	_	_	_	_	NER=B-ENV
+2	users	user	NOUN	NNS	_	_	_	_	NER=O
+3	should	should	AUX	MD	_	_	_	_	NER=O
+4	upgrade	upgrade	VERB	VB	_	_	_	_	NER=O
+5	to	to	ADP	TO	_	_	_	_	NER=O
+6	3.11.12	3.11.12	NUM	CD	_	_	_	_	NER=B-ENV
+
+# sent_id = security-s14
+# text = 4.0 users should upgrade to 4.0.2
+1	4.0	4.0	NUM	CD	_	_	_	_	NER=B-ENV
+2	users	user	NOUN	NNS	_	_	_	_	NER=O
+3	should	should	AUX	MD	_	_	_	_	NER=O
+4	upgrade	upgrade	VERB	VB	_	_	_	_	NER=O
+5	to	to	ADP	TO	_	_	_	_	NER=O
+6	4.0.2	4.0.2	NUM	CD	_	_	_	_	NER=B-ENV
+
+# paragraph = p8 section=NOTES
+# sent_id = security-s15
+# text = Credit:
+1	Credit	credit	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+2	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p9 section=NOTES
+# sent_id = security-s16
+# text = This issue was discovered by Omer Kaspi of the JFrog Security vulnerability research team.
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	issue	issue	NOUN	NN	_	_	_	_	NER=O
+3	was	be	AUX	VBD	_	_	_	_	NER=O
+4	discovered	discover	VERB	VBN	_	_	_	_	NER=O
+5	by	by	ADP	IN	_	_	_	_	NER=O
+6	Omer	Omer	PROPN	NNP	_	_	_	_	NER=B-PII
+7	Kaspi	Kaspi	PROPN	NNP	_	_	_	_	NER=I-PII
+8	of	of	ADP	IN	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	JFrog	JFrog	PROPN	NNP	_	_	_	_	NER=O
+11	Security	Security	PROPN	NNP	_	_	_	_	NER=O
+12	vulnerability	vulnerability	NOUN	NN	_	_	_	_	NER=O
+13	research	research	NOUN	NN	_	_	_	_	NER=O
+14	team	team	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+15	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = firefox-1668045 | ticket_type=bug category=security component=Frontend severity=Major confidence=low
+# paragraph = p10 section=TITLE
+# sent_id = security-s17
+# text = update NodeJS dependencies by handle security issues.
+1	update	update	ADJ	JJ	_	_	_	_	NER=O
+2	NodeJS	NodeJS	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Node.js
+3	dependencies	dependency	NOUN	NNS	_	_	_	_	NER=O
+4	by	by	ADP	IN	_	_	_	_	NER=O
+5	handle	handle	ADJ	JJ	_	_	_	_	NER=O
+6	security	security	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+7	issues	issue	NOUN	NNS	_	_	_	_	NER=I-SYMPTOM|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p11 section=DESCRIPTION
+# sent_id = security-s18
+# text = npm audit shows issues with browser/components/newtab.
+1	npm	npm	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Npm
+2	audit	audit	NOUN	NN	_	_	_	_	NER=O
+3	shows	show	NOUN	NNS	_	_	_	_	NER=O
+4	issues	issue	NOUN	NNS	_	_	_	_	NER=O
+5	with	with	ADP	IN	_	_	_	_	NER=O
+6	browser	browser	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+7	/	/	SYM	SYM	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+8	components	component	NOUN	NNS	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+9	/	/	SYM	SYM	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+10	newtab	newtab	NOUN	NNS	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+11	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = security-s19
+# text = Those need fixing.
+1	Those	those	DET	DT	_	_	_	_	NER=O
+2	need	need	ADJ	JJ	_	_	_	_	NER=O
+3	fixing	fixing	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = security-s20
+# text = Many will be simple enough to fix using 'npm audit fix'.
+1	Many	many	ADJ	JJ	_	_	_	_	NER=O
+2	will	will	AUX	MD	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	simple	simple	ADJ	JJ	_	_	_	_	NER=O
+5	enough	enough	ADV	RB	_	_	_	_	NER=O
+6	to	to	PART	TO	_	_	_	_	NER=O
+7	fix	fix	VERB	VB	_	_	_	_	NER=O
+8	using	use	VERB	VBG	_	_	_	_	NER=O
+9	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+10	npm	npm	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Npm
+11	audit	audit	NOUN	NN	_	_	_	_	NER=O
+12	fix	fix	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+13	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = security-s21
+# text = That should be landed first and done here.
+1	That	that	DET	DT	_	_	_	_	NER=O
+2	should	should	AUX	MD	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	landed	land	VERB	VBN	_	_	_	_	NER=O
+5	first	first	ADV	RB	_	_	_	_	NER=O
+6	and	and	CCONJ	CC	_	_	_	_	NER=O
+7	done	do	VERB	VBN	_	_	_	_	NER=O
+8	here	here	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p12 section=DESCRIPTION
+# sent_id = security-s22
+# text = The others can be done here or spun off to separate bugs depending on amount of work.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	others	others	NOUN	NNS	_	_	_	_	NER=O
+3	can	can	AUX	MD	_	_	_	_	NER=O
+4	be	be	AUX	VB	_	_	_	_	NER=O
+5	done	do	VERB	VBN	_	_	_	_	NER=O
+6	here	here	ADV	RB	_	_	_	_	NER=O
+7	or	or	CCONJ	CC	_	_	_	_	NER=O
+8	spun	spin	VERB	VB	_	_	_	_	NER=O
+9	off	off	ADP	RP	_	_	_	_	NER=O
+10	to	to	PART	TO	_	_	_	_	NER=O
+11	separate	separate	VERB	VB	_	_	_	_	NER=O
+12	bugs	bug	NOUN	NNS	_	_	_	_	NER=O
+13	depending	depend	VERB	VBG	_	_	_	_	NER=O
+14	on	on	ADP	IN	_	_	_	_	NER=O
+15	amount	amount	NOUN	NN	_	_	_	_	NER=O
+16	of	of	ADP	IN	_	_	_	_	NER=O
+17	work	work	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+18	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = cassandra-13537599 | ticket_type=bug category=security component=Database severity=Blocker confidence=high
+# paragraph = p13 section=TITLE
+# sent_id = security-s23
+# text = Improve nodetool enable{audit,fullquery}log, CVE-2023-30601
+1	Improve	Improve	PROPN	NNP	_	_	_	_	NER=O
+2	nodetool	nodetool	NOUN	NN	_	_	_	_	NER=B-PRODUCT
+3	enable	enable	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+4	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+5	audit	audit	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O|SpaceAfter=No
+7	fullquery	fullquery	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+8	}	}	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+9	log	log	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	CVE-2023-30601	CVE-2023-30601	PROPN	NNP	_	_	_	_	NER=B-ERROR_CODE
+
+# paragraph = p14 section=DESCRIPTION
+# sent_id = security-s24
+# text = The {{--archive-command}} parameter to {code}nodetool enable{audit,fullquery}log{code} allows an attacker to execute arbitrary commands as the user running cassandra.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+3	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+4	-	-	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+5	-	-	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+6	archive-command	archive-command	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+7	}	}	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+8	}	}	PUNCT	)	_	_	_	_	NER=O
+9	parameter	parameter	NOUN	NN	_	_	_	_	NER=O
+10	to	to	PART	TO	_	_	_	_	NER=O
+11	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+12	code	code	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+13	}	}	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+14	nodetool	nodetool	ADV	RB	_	_	_	_	NER=O
+15	enable	enable	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+16	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+17	audit	audit	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+18	,	,	PUNCT	,	_	_	_	_	NER=O|SpaceAfter=No
+19	fullquery	fullquery	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+20	}	}	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+21	log	log	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+22	{	{	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+23	code	code	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+24	}	}	PUNCT	)	_	_	_	_	NER=O
+25	allows	allow	VERB	VBZ	_	_	_	_	NER=O
+26	an	an	DET	DT	_	_	_	_	NER=O
+27	attacker	attacker	NOUN	NN	_	_	_	_	NER=O
+28	to	to	PART	TO	_	_	_	_	NER=O
+29	execute	execute	VERB	VB	_	_	_	_	NER=B-SYMPTOM
+30	arbitrary	arbitrary	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+31	commands	command	NOUN	NNS	_	_	_	_	NER=I-SYMPTOM
+32	as	as	ADP	IN	_	_	_	_	NER=O
+33	the	the	DET	DT	_	_	_	_	NER=O
+34	user	user	NOUN	NN	_	_	_	_	NER=O
+35	running	run	VERB	VBG	_	_	_	_	NER=O
+36	cassandra	cassandra	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Apache_Cassandra|SpaceAfter=No
+37	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p15 section=DESCRIPTION
+# sent_id = security-s25
+# text = Patch adds a configuration option which disallows using this parameter - for any existing users of --archive-command this can be re-enabled
+1	Patch	Patch	PROPN	NNP	_	_	_	_	NER=O
+2	adds	add	VERB	VBZ	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	configuration	configuration	NOUN	NN	_	_	_	_	NER=O
+5	option	option	NOUN	NN	_	_	_	_	NER=O
+6	which	which	PRON	WDT	_	_	_	_	NER=O
+7	disallows	disallow	VERB	VBZ	_	_	_	_	NER=O
+8	using	use	VERB	VBG	_	_	_	_	NER=O
+9	this	this	DET	DT	_	_	_	_	NER=O
+10	parameter	parameter	NOUN	NN	_	_	_	_	NER=O
+11	-	-	PUNCT	:	_	_	_	_	NER=O
+12	for	for	ADP	IN	_	_	_	_	NER=O
+13	any	any	DET	DT	_	_	_	_	NER=O
+14	existing	exist	VERB	VBG	_	_	_	_	NER=O
+15	users	user	NOUN	NNS	_	_	_	_	NER=O
+16	of	of	ADP	IN	_	_	_	_	NER=O
+17	-	-	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+18	-	-	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+19	archive-command	archive-command	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION
+20	this	this	DET	DT	_	_	_	_	NER=O
+21	can	can	AUX	MD	_	_	_	_	NER=O
+22	be	be	AUX	VB	_	_	_	_	NER=O
+23	re-enabled	re-enabled	ADJ	JJ	_	_	_	_	NER=O
+
+# newpar report = firefox-1737574 | ticket_type=bug category=security component=Frontend severity=Minor confidence=high
+# paragraph = p16 section=TITLE
+# sent_id = security-s26
+# text = 'about:certificate' should not display internal "distrust" certs
+1	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+2	about:certificate	about:certificate	X	ADD	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+3	'	'	PUNCT	''	_	_	_	_	NER=O
+4	should	should	AUX	MD	_	_	_	_	NER=O
+5	not	not	PART	RB	_	_	_	_	NER=O
+6	display	display	VERB	VB	_	_	_	_	NER=O
+7	internal	internal	ADJ	JJ	_	_	_	_	NER=O
+8	"	"	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+9	distrust	distrust	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+10	"	"	PUNCT	.	_	_	_	_	NER=O
+11	certs	certs	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Public_key_certificate
+
+# paragraph = p17 section=ENVIRONMENT
+# sent_id = security-s27
+# text = User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	X11	X11	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:X_Window_System|SpaceAfter=No
+7	;	;	PUNCT	:	_	_	_	_	NER=O
+8	Fedora	Fedora	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Fedora_Linux|SpaceAfter=No
+9	;	;	PUNCT	:	_	_	_	_	NER=O
+10	Linux	Linux	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Linux
+11	x86_64	x86_64	PROPN	NNP	_	_	_	_	NER=I-ENV|SpaceAfter=No
+12	;	;	PUNCT	:	_	_	_	_	NER=O
+13	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+14	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+15	93.0	93.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+16	)	)	PUNCT	)	_	_	_	_	NER=O
+17	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+18	Firefox/93.0	Firefox/93.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p18 section=STEPS
+# sent_id = security-s28
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p19 section=STEPS
+# sent_id = security-s29
+# text = Visit the pages associated to 'about:certificate' and 'about:preferences#privacy', then inspect their Servers tab in each.
+1	Visit	visit	VERB	VB	_	_	_	_	NER=O
+2	the	the	DET	DT	_	_	_	_	NER=O
+3	pages	page	NOUN	NNS	_	_	_	_	NER=O
+4	associated	associate	VERB	VBN	_	_	_	_	NER=O
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+7	about:certificate	about:certificate	X	ADD	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+8	'	'	PUNCT	''	_	_	_	_	NER=O
+9	and	and	CCONJ	CC	_	_	_	_	NER=O
+10	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+11	about:preferences#privacy	about:preferences#privacy	X	ADD	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+12	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+13	,	,	PUNCT	,	_	_	_	_	NER=O
+14	then	then	ADV	RB	_	_	_	_	NER=O
+15	inspect	inspect	VERB	VB	_	_	_	_	NER=O
+16	their	their	PRON	PRP$	_	_	_	_	NER=O
+17	Servers	server	NOUN	NNS	_	_	_	_	NER=B-UI_ELEMENT
+18	tab	tab	VERB	VBP	_	_	_	_	NER=I-UI_ELEMENT
+19	in	in	ADP	IN	_	_	_	_	NER=O
+20	each	each	DET	DT	_	_	_	_	NER=O|SpaceAfter=No
+21	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p20 section=ACTUAL
+# sent_id = security-s30
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p21 section=ACTUAL
+# sent_id = security-s31
+# text = The names present in the list that is reported In page associated to 'about:certificate', are missing from the list reported in page associated to 'about:preferences#privacy'.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	names	name	NOUN	NNS	_	_	_	_	NER=O
+3	present	present	ADJ	JJ	_	_	_	_	NER=O
+4	in	in	ADP	IN	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	list	list	NOUN	NN	_	_	_	_	NER=O
+7	that	that	PRON	WDT	_	_	_	_	NER=O
+8	is	be	AUX	VBZ	_	_	_	_	NER=O
+9	reported	report	VERB	VBN	_	_	_	_	NER=O
+10	In	in	ADP	IN	_	_	_	_	NER=O
+11	page	page	NOUN	NN	_	_	_	_	NER=O
+12	associated	associate	VERB	VBN	_	_	_	_	NER=O
+13	to	to	PART	TO	_	_	_	_	NER=O
+14	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+15	about:certificate	about:certificate	X	ADD	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+16	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+17	,	,	PUNCT	,	_	_	_	_	NER=O
+18	are	be	AUX	VBP	_	_	_	_	NER=O
+19	missing	miss	VERB	VBG	_	_	_	_	NER=B-SYMPTOM
+20	from	from	ADP	IN	_	_	_	_	NER=I-SYMPTOM
+21	the	the	DET	DT	_	_	_	_	NER=I-SYMPTOM
+22	list	list	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+23	reported	report	VERB	VBD	_	_	_	_	NER=O
+24	in	in	ADP	IN	_	_	_	_	NER=O
+25	page	page	NOUN	NN	_	_	_	_	NER=O
+26	associated	associate	VERB	VBN	_	_	_	_	NER=O
+27	to	to	PART	TO	_	_	_	_	NER=O
+28	'	'	PUNCT	''	_	_	_	_	NER=O|SpaceAfter=No
+29	about:preferences#privacy	about:preferences#privacy	X	ADD	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+30	'	'	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+31	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p22 section=EXPECTED
+# sent_id = security-s32
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p23 section=EXPECTED
+# sent_id = security-s33
+# text = Lists to be synchronized and therefore identical.
+1	Lists	list	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	synchronized	synchronize	VERB	VBN	_	_	_	_	NER=O
+5	and	and	CCONJ	CC	_	_	_	_	NER=O
+6	therefore	therefore	ADV	RB	_	_	_	_	NER=O
+7	identical	identical	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+8	.	.	PUNCT	.	_	_	_	_	NER=O
+

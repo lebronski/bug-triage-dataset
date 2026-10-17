@@ -1,0 +1,49 @@
+HTML message content rendering affected/hidden by messageBody.css styles: Rename our .main-header class to .moz-main-header, use custom attribute, or encapsulate
+
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0
+
+Steps to reproduce:
+
+I receive a newsletter as an HTML-formatted message with inline CSS styles, particularly some elements have the `.main-header` CSS class.
+
+Actual results:
+
+All HMTL elements bearing the CSS class `.main-header` are not rendered because Thunderbird's messageBody.css stylesheet sets `display: none;` for this class (it uses this class for hiding the message header).
+
+Expected results:
+
+All HTML content inside a message should be rendered according to the stylesheets defined in that message, not subject to Thunderbird's UI stylesheets.
+
+This was not a problem until a recent update.
+
+Buttons inside the Network Settings panel are misplaced with the scrollbar on display
+
+**Affected versions**
+- 94.0.1
+- 95.0b7
+- 96.0a1
+
+**Affected platforms**
+- Windows 10
+
+**Steps to reproduce**
+1. Open about:preferences#general
+2. Click the Settings button from the Network Settings section
+3. Observe the buttons at the bottom of the panel (reduce the width of the browser in order to trigger the scrollbar presence)
+
+**Expected result**
+- “OK”, “Cancel” and “Help” buttons are properly aligned in relation to the rest of the page elements 
+
+**Actual result**
+- The scrollbar is too close to the "Help" button
+- The "Help" button is not aligned with the scrollbar right margin
+
+**Regression range**
+- Last good revision: 8aa1b80a8c6b66cccc2e37080fbf6197eee8d801
+- First bad revision: 1716229005d8b97f305bd663b8bc8d3fec4a4f3a
+- Pushlog:
+https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a
+Regresor: [1700109](https://bugzilla.mozilla.org/show_bug.cgi?id=1700109) (Proton implementation)
+
+**Other notes**
+- On Mac and Ubuntu the visual image is not unpleasant, due to the fact that the "Help" button is placed to the left side of the panel and the scrollbar specific style, but the padding between the buttons and the scrollbar could be improved.

@@ -1,0 +1,1029 @@
+{
+ "layers": [
+  {
+   "name": "webanno.custom.BugReport",
+   "features": [
+    {
+     "name": "report_id",
+     "tag_set": null,
+     "uiName": "report_id",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "ticket_type",
+     "tag_set": {
+      "name": "Ticket type",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "bug",
+        "tag_description": "дефект: программа ведёт себя не так, как ожидается"
+       },
+       {
+        "tag_name": "feature_request",
+        "tag_description": "просьба о новой функции или улучшении"
+       },
+       {
+        "tag_name": "question",
+        "tag_description": "вопрос по использованию, не дефект"
+       },
+       {
+        "tag_name": "not_a_bug",
+        "tag_description": "поведение корректно, дубликат, не воспроизводится или ошибка пользователя"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "ticket_type",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "category",
+     "tag_set": {
+      "name": "Category",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "crash",
+        "tag_description": "Падения и необработанные исключения"
+       },
+       {
+        "tag_name": "ui_layout",
+        "tag_description": "Вёрстка и отображение интерфейса"
+       },
+       {
+        "tag_name": "authentication",
+        "tag_description": "Аутентификация и авторизация"
+       },
+       {
+        "tag_name": "payment",
+        "tag_description": "Ошибки оплаты и биллинга"
+       },
+       {
+        "tag_name": "database",
+        "tag_description": "Ошибки базы данных и транзакций"
+       },
+       {
+        "tag_name": "network",
+        "tag_description": "Сеть и соединения"
+       },
+       {
+        "tag_name": "performance",
+        "tag_description": "Производительность и зависания"
+       },
+       {
+        "tag_name": "memory",
+        "tag_description": "Утечки памяти и OutOfMemory"
+       },
+       {
+        "tag_name": "localization",
+        "tag_description": "Локализация и кодировки"
+       },
+       {
+        "tag_name": "security",
+        "tag_description": "Уязвимости и TLS/сертификаты"
+       },
+       {
+        "tag_name": "other",
+        "tag_description": "не подходит ни под одну категорию"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "category",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "component",
+     "tag_set": {
+      "name": "Component",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "Backend",
+        "tag_description": "серверная логика, сервисы, воркеры, API"
+       },
+       {
+        "tag_name": "Frontend",
+        "tag_description": "клиентский интерфейс: веб, десктоп, мобильный"
+       },
+       {
+        "tag_name": "Auth-service",
+        "tag_description": "вход, токены, роли, права доступа"
+       },
+       {
+        "tag_name": "Billing",
+        "tag_description": "платежи, счета, подписки, платёжные данные"
+       },
+       {
+        "tag_name": "Database",
+        "tag_description": "хранение данных, SQL, драйверы БД, миграции, транзакции"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "component",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "severity",
+     "tag_set": {
+      "name": "Severity",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "Blocker",
+        "tag_description": "ключевой сценарий (вход, оплата, сохранение данных) недоступен всем или большинству без обходного пути; потеря или порча данных; потеря денег; эксплуатируемая уязвимость"
+       },
+       {
+        "tag_name": "Critical",
+        "tag_description": "падение сервиса или функции, ошибка 5xx, ключевая функция не работает у части пользователей, обходной путь сложен"
+       },
+       {
+        "tag_name": "Major",
+        "tag_description": "функция работает неверно, но есть обходной путь; заметная деградация производительности; элемент интерфейса непригоден на части платформ"
+       },
+       {
+        "tag_name": "Minor",
+        "tag_description": "косметический дефект, опечатка, неточный перевод, вёрстка без блокировки действий, редкий пограничный случай"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "severity",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "confidence",
+     "tag_set": null,
+     "uiName": "confidence",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    }
+   ],
+   "uiName": "Bug report",
+   "type": "span",
+   "description": "Уровень 1: баг-репорт внутри документа объекта и его классы",
+   "enabled": true,
+   "built_in": false,
+   "readonly": false,
+   "attach_type": null,
+   "attach_feature": null,
+   "allow_stacking": true,
+   "cross_sentence": true,
+   "show_hover": true,
+   "anchoring_mode": "TOKENS",
+   "overlap_mode": "NO_OVERLAP",
+   "validation_mode": "ALWAYS",
+   "lock_to_token_offset": false,
+   "multiple_tokens": true,
+   "linked_list_behavior": false,
+   "on_click_javascript_action": null,
+   "traits": null
+  },
+  {
+   "name": "webanno.custom.Section",
+   "features": [
+    {
+     "name": "label",
+     "tag_set": {
+      "name": "Section labels",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "TITLE",
+        "tag_description": "заголовок тикета (summary)"
+       },
+       {
+        "tag_name": "DESCRIPTION",
+        "tag_description": "свободное описание проблемы"
+       },
+       {
+        "tag_name": "STEPS",
+        "tag_description": "шаги воспроизведения и предусловия"
+       },
+       {
+        "tag_name": "EXPECTED",
+        "tag_description": "ожидаемый результат"
+       },
+       {
+        "tag_name": "ACTUAL",
+        "tag_description": "фактический результат, текст ошибки"
+       },
+       {
+        "tag_name": "ENVIRONMENT",
+        "tag_description": "версии, платформы, устройства, User-Agent"
+       },
+       {
+        "tag_name": "STACK_TRACE",
+        "tag_description": "трассировка стека, дамп исключения"
+       },
+       {
+        "tag_name": "CODE",
+        "tag_description": "фрагмент кода, конфигурации или лога"
+       },
+       {
+        "tag_name": "NOTES",
+        "tag_description": "прочее: предложения по исправлению, ссылки, комментарии"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "label",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    }
+   ],
+   "uiName": "Section (paragraph)",
+   "type": "span",
+   "description": "Уровень 2: абзац и тип раздела",
+   "enabled": true,
+   "built_in": false,
+   "readonly": false,
+   "attach_type": null,
+   "attach_feature": null,
+   "allow_stacking": true,
+   "cross_sentence": true,
+   "show_hover": true,
+   "anchoring_mode": "TOKENS",
+   "overlap_mode": "NO_OVERLAP",
+   "validation_mode": "ALWAYS",
+   "lock_to_token_offset": false,
+   "multiple_tokens": true,
+   "linked_list_behavior": false,
+   "on_click_javascript_action": null,
+   "traits": null
+  },
+  {
+   "name": "webanno.custom.BugEntity",
+   "features": [
+    {
+     "name": "label",
+     "tag_set": {
+      "name": "BugEntity labels",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "EXCEPTION",
+        "tag_description": "тип исключения или ошибки: NullPointerException, sqlite3.OperationalError, TypeError"
+       },
+       {
+        "tag_name": "ERROR_MESSAGE",
+        "tag_description": "текст сообщения об ошибке, показанный программой"
+       },
+       {
+        "tag_name": "CODE_LOCATION",
+        "tag_description": "место в коде: класс, метод, файл, модуль, кадр стека, переменная"
+       },
+       {
+        "tag_name": "ERROR_CODE",
+        "tag_description": "код ошибки: HTTP-статус, сетевая ошибка, код выхода, SQLSTATE, CVE"
+       },
+       {
+        "tag_name": "ENV",
+        "tag_description": "окружение: ОС, браузер, устройство, среда выполнения, версия приложения, библиотека, СУБД"
+       },
+       {
+        "tag_name": "UI_ELEMENT",
+        "tag_description": "элемент интерфейса, с которым связан дефект"
+       },
+       {
+        "tag_name": "METRIC",
+        "tag_description": "числовое значение с единицей: время, память, нагрузка, количество"
+       },
+       {
+        "tag_name": "PRODUCT",
+        "tag_description": "программный продукт, сервис или библиотека, о которых идёт речь (Firefox, Thunderbird, Apache Spark, PayPal, Guava). Название с версией в окружении — ENV app_version"
+       },
+       {
+        "tag_name": "TECHNOLOGY",
+        "tag_description": "протокол, стандарт, формат, язык или механизм: OAuth2, Kerberos, JDBC, DNS, TLS, CORS, CSS, JSON"
+       },
+       {
+        "tag_name": "SYMPTOM",
+        "tag_description": "проявление дефекта словами автора: crashes, freezes, memory leak, flickers, not translated, nothing happens"
+       },
+       {
+        "tag_name": "FEATURE",
+        "tag_description": "функция или подсистема продукта, в которой проявляется дефект: Address Book, Payment methods, Firefox Translations, startup"
+       },
+       {
+        "tag_name": "LOCALE",
+        "tag_description": "язык или локаль интерфейса/контента: English, Russian, Portuguese (pt-PT)"
+       },
+       {
+        "tag_name": "ISSUE_REF",
+        "tag_description": "ссылка на другой тикет: bug 1826149, SPARK-21551, CASSANDRA-17352 (для связывания тикетов в графе знаний, ЛР6)"
+       },
+       {
+        "tag_name": "PII",
+        "tag_description": "персональные и чувствительные данные — подлежат маскированию перед публикацией"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "label",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "kind",
+     "tag_set": null,
+     "uiName": "kind",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "normalized",
+     "tag_set": null,
+     "uiName": "normalized",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "affected",
+     "tag_set": null,
+     "uiName": "affected",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "polarity",
+     "tag_set": {
+      "name": "Polarity",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "observed",
+        "tag_description": "наблюдается"
+       },
+       {
+        "tag_name": "negated",
+        "tag_description": "отрицается"
+       },
+       {
+        "tag_name": "hypothetical",
+        "tag_description": "желаемое/условное"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "polarity",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "source",
+     "tag_set": null,
+     "uiName": "source",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "kb_uri",
+     "tag_set": null,
+     "uiName": "DBpedia URI",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": false,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    }
+   ],
+   "uiName": "Bug entity",
+   "type": "span",
+   "description": "Уровень 4: именованные сущности баг-репорта",
+   "enabled": true,
+   "built_in": false,
+   "readonly": false,
+   "attach_type": null,
+   "attach_feature": null,
+   "allow_stacking": true,
+   "cross_sentence": false,
+   "show_hover": true,
+   "anchoring_mode": "TOKENS",
+   "overlap_mode": "ANY_OVERLAP",
+   "validation_mode": "ALWAYS",
+   "lock_to_token_offset": false,
+   "multiple_tokens": true,
+   "linked_list_behavior": false,
+   "on_click_javascript_action": null,
+   "traits": null
+  },
+  {
+   "name": "webanno.custom.EntityRelation",
+   "features": [
+    {
+     "name": "type",
+     "tag_set": {
+      "name": "Relation types",
+      "description": null,
+      "language": "en",
+      "tags": [
+       {
+        "tag_name": "HAS_MESSAGE",
+        "tag_description": "исключение/код и его текст"
+       },
+       {
+        "tag_name": "THROWN_AT",
+        "tag_description": "где в коде возникло исключение (верхний кадр)"
+       },
+       {
+        "tag_name": "OBSERVED_IN",
+        "tag_description": "в каком окружении (версии, ОС, локали) наблюдается проблема"
+       },
+       {
+        "tag_name": "SYMPTOM_OF",
+        "tag_description": "у какого объекта проявляется симптом"
+       },
+       {
+        "tag_name": "CAUSED_BY",
+        "tag_description": "чем, по словам автора, вызван симптом (memory leak -> freezing, messageBody.css -> not rendered)"
+       },
+       {
+        "tag_name": "VERSION_OF",
+        "tag_description": "версия (ENV app_version) относится к продукту"
+       }
+      ],
+      "create_tag": false
+     },
+     "uiName": "type",
+     "type": "uima.cas.String",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": true,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "Governor",
+     "tag_set": null,
+     "uiName": "Source",
+     "type": "rel-source:webanno.custom.BugEntity",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": false,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    },
+    {
+     "name": "Dependent",
+     "tag_set": null,
+     "uiName": "Target",
+     "type": "rel-target:webanno.custom.BugEntity",
+     "enabled": true,
+     "visible": true,
+     "include_in_hover": false,
+     "required": false,
+     "remember": false,
+     "hideUnconstraintFeature": false,
+     "description": null,
+     "multi_value_mode": "NONE",
+     "link_mode": "NONE",
+     "link_type_name": null,
+     "link_type_role_feature_name": null,
+     "link_type_target_feature_name": null,
+     "traits": null,
+     "curatable": true,
+     "rank": 0
+    }
+   ],
+   "uiName": "Entity relation",
+   "type": "relation",
+   "description": "Уровень 5: связи между сущностями",
+   "enabled": true,
+   "built_in": false,
+   "readonly": false,
+   "attach_type": {
+    "name": "webanno.custom.BugEntity"
+   },
+   "attach_feature": null,
+   "allow_stacking": false,
+   "cross_sentence": true,
+   "show_hover": true,
+   "anchoring_mode": "TOKENS",
+   "overlap_mode": "ANY_OVERLAP",
+   "validation_mode": "ALWAYS",
+   "lock_to_token_offset": false,
+   "multiple_tokens": true,
+   "linked_list_behavior": false,
+   "on_click_javascript_action": null,
+   "traits": null
+  }
+ ],
+ "tag_sets": [
+  {
+   "name": "BugEntity labels",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "EXCEPTION",
+     "tag_description": "тип исключения или ошибки: NullPointerException, sqlite3.OperationalError, TypeError"
+    },
+    {
+     "tag_name": "ERROR_MESSAGE",
+     "tag_description": "текст сообщения об ошибке, показанный программой"
+    },
+    {
+     "tag_name": "CODE_LOCATION",
+     "tag_description": "место в коде: класс, метод, файл, модуль, кадр стека, переменная"
+    },
+    {
+     "tag_name": "ERROR_CODE",
+     "tag_description": "код ошибки: HTTP-статус, сетевая ошибка, код выхода, SQLSTATE, CVE"
+    },
+    {
+     "tag_name": "ENV",
+     "tag_description": "окружение: ОС, браузер, устройство, среда выполнения, версия приложения, библиотека, СУБД"
+    },
+    {
+     "tag_name": "UI_ELEMENT",
+     "tag_description": "элемент интерфейса, с которым связан дефект"
+    },
+    {
+     "tag_name": "METRIC",
+     "tag_description": "числовое значение с единицей: время, память, нагрузка, количество"
+    },
+    {
+     "tag_name": "PRODUCT",
+     "tag_description": "программный продукт, сервис или библиотека, о которых идёт речь (Firefox, Thunderbird, Apache Spark, PayPal, Guava). Название с версией в окружении — ENV app_version"
+    },
+    {
+     "tag_name": "TECHNOLOGY",
+     "tag_description": "протокол, стандарт, формат, язык или механизм: OAuth2, Kerberos, JDBC, DNS, TLS, CORS, CSS, JSON"
+    },
+    {
+     "tag_name": "SYMPTOM",
+     "tag_description": "проявление дефекта словами автора: crashes, freezes, memory leak, flickers, not translated, nothing happens"
+    },
+    {
+     "tag_name": "FEATURE",
+     "tag_description": "функция или подсистема продукта, в которой проявляется дефект: Address Book, Payment methods, Firefox Translations, startup"
+    },
+    {
+     "tag_name": "LOCALE",
+     "tag_description": "язык или локаль интерфейса/контента: English, Russian, Portuguese (pt-PT)"
+    },
+    {
+     "tag_name": "ISSUE_REF",
+     "tag_description": "ссылка на другой тикет: bug 1826149, SPARK-21551, CASSANDRA-17352 (для связывания тикетов в графе знаний, ЛР6)"
+    },
+    {
+     "tag_name": "PII",
+     "tag_description": "персональные и чувствительные данные — подлежат маскированию перед публикацией"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Section labels",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "TITLE",
+     "tag_description": "заголовок тикета (summary)"
+    },
+    {
+     "tag_name": "DESCRIPTION",
+     "tag_description": "свободное описание проблемы"
+    },
+    {
+     "tag_name": "STEPS",
+     "tag_description": "шаги воспроизведения и предусловия"
+    },
+    {
+     "tag_name": "EXPECTED",
+     "tag_description": "ожидаемый результат"
+    },
+    {
+     "tag_name": "ACTUAL",
+     "tag_description": "фактический результат, текст ошибки"
+    },
+    {
+     "tag_name": "ENVIRONMENT",
+     "tag_description": "версии, платформы, устройства, User-Agent"
+    },
+    {
+     "tag_name": "STACK_TRACE",
+     "tag_description": "трассировка стека, дамп исключения"
+    },
+    {
+     "tag_name": "CODE",
+     "tag_description": "фрагмент кода, конфигурации или лога"
+    },
+    {
+     "tag_name": "NOTES",
+     "tag_description": "прочее: предложения по исправлению, ссылки, комментарии"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Relation types",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "HAS_MESSAGE",
+     "tag_description": "исключение/код и его текст"
+    },
+    {
+     "tag_name": "THROWN_AT",
+     "tag_description": "где в коде возникло исключение (верхний кадр)"
+    },
+    {
+     "tag_name": "OBSERVED_IN",
+     "tag_description": "в каком окружении (версии, ОС, локали) наблюдается проблема"
+    },
+    {
+     "tag_name": "SYMPTOM_OF",
+     "tag_description": "у какого объекта проявляется симптом"
+    },
+    {
+     "tag_name": "CAUSED_BY",
+     "tag_description": "чем, по словам автора, вызван симптом (memory leak -> freezing, messageBody.css -> not rendered)"
+    },
+    {
+     "tag_name": "VERSION_OF",
+     "tag_description": "версия (ENV app_version) относится к продукту"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Category",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "crash",
+     "tag_description": "Падения и необработанные исключения"
+    },
+    {
+     "tag_name": "ui_layout",
+     "tag_description": "Вёрстка и отображение интерфейса"
+    },
+    {
+     "tag_name": "authentication",
+     "tag_description": "Аутентификация и авторизация"
+    },
+    {
+     "tag_name": "payment",
+     "tag_description": "Ошибки оплаты и биллинга"
+    },
+    {
+     "tag_name": "database",
+     "tag_description": "Ошибки базы данных и транзакций"
+    },
+    {
+     "tag_name": "network",
+     "tag_description": "Сеть и соединения"
+    },
+    {
+     "tag_name": "performance",
+     "tag_description": "Производительность и зависания"
+    },
+    {
+     "tag_name": "memory",
+     "tag_description": "Утечки памяти и OutOfMemory"
+    },
+    {
+     "tag_name": "localization",
+     "tag_description": "Локализация и кодировки"
+    },
+    {
+     "tag_name": "security",
+     "tag_description": "Уязвимости и TLS/сертификаты"
+    },
+    {
+     "tag_name": "other",
+     "tag_description": "не подходит ни под одну категорию"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Component",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "Backend",
+     "tag_description": "серверная логика, сервисы, воркеры, API"
+    },
+    {
+     "tag_name": "Frontend",
+     "tag_description": "клиентский интерфейс: веб, десктоп, мобильный"
+    },
+    {
+     "tag_name": "Auth-service",
+     "tag_description": "вход, токены, роли, права доступа"
+    },
+    {
+     "tag_name": "Billing",
+     "tag_description": "платежи, счета, подписки, платёжные данные"
+    },
+    {
+     "tag_name": "Database",
+     "tag_description": "хранение данных, SQL, драйверы БД, миграции, транзакции"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Severity",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "Blocker",
+     "tag_description": "ключевой сценарий (вход, оплата, сохранение данных) недоступен всем или большинству без обходного пути; потеря или порча данных; потеря денег; эксплуатируемая уязвимость"
+    },
+    {
+     "tag_name": "Critical",
+     "tag_description": "падение сервиса или функции, ошибка 5xx, ключевая функция не работает у части пользователей, обходной путь сложен"
+    },
+    {
+     "tag_name": "Major",
+     "tag_description": "функция работает неверно, но есть обходной путь; заметная деградация производительности; элемент интерфейса непригоден на части платформ"
+    },
+    {
+     "tag_name": "Minor",
+     "tag_description": "косметический дефект, опечатка, неточный перевод, вёрстка без блокировки действий, редкий пограничный случай"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Ticket type",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "bug",
+     "tag_description": "дефект: программа ведёт себя не так, как ожидается"
+    },
+    {
+     "tag_name": "feature_request",
+     "tag_description": "просьба о новой функции или улучшении"
+    },
+    {
+     "tag_name": "question",
+     "tag_description": "вопрос по использованию, не дефект"
+    },
+    {
+     "tag_name": "not_a_bug",
+     "tag_description": "поведение корректно, дубликат, не воспроизводится или ошибка пользователя"
+    }
+   ],
+   "create_tag": false
+  },
+  {
+   "name": "Polarity",
+   "description": null,
+   "language": "en",
+   "tags": [
+    {
+     "tag_name": "observed",
+     "tag_description": "наблюдается"
+    },
+    {
+     "tag_name": "negated",
+     "tag_description": "отрицается"
+    },
+    {
+     "tag_name": "hypothetical",
+     "tag_description": "желаемое/условное"
+    }
+   ],
+   "create_tag": false
+  }
+ ]
+}

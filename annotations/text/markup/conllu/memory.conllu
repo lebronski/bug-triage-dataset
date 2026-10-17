@@ -1,0 +1,521 @@
+# newdoc id = memory
+# object = memory
+# newpar report = firefox-1635681 | ticket_type=bug category=memory component=Frontend severity=Major confidence=high
+# paragraph = p1 section=TITLE
+# sent_id = memory-s1
+# text = Huge memory leak even while sleeping
+1	Huge	huge	ADJ	JJ	_	_	_	_	NER=B-SYMPTOM
+2	memory	memory	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+3	leak	leak	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+4	even	even	ADV	RB	_	_	_	_	NER=O
+5	while	while	SCONJ	IN	_	_	_	_	NER=O
+6	sleeping	sleep	VERB	VBG	_	_	_	_	NER=O
+
+# paragraph = p2 section=ENVIRONMENT
+# sent_id = memory-s2
+# text = User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:75.0) Gecko/20100101 Firefox/75.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	Macintosh	Macintosh	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+7	;	;	PUNCT	:	_	_	_	_	NER=O
+8	Intel	Intel	PROPN	NNP	_	_	_	_	NER=O
+9	Mac	Mac	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+10	OS	OS	PROPN	NNP	_	_	_	_	NER=I-ENV
+11	X	X	PROPN	NNP	_	_	_	_	NER=I-ENV
+12	10.13	10.13	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+13	;	;	PUNCT	:	_	_	_	_	NER=O
+14	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+15	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+16	75.0	75.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+18	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+19	Firefox/75.0	Firefox/75.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p3 section=STEPS
+# sent_id = memory-s3
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p4 section=STEPS
+# sent_id = memory-s4
+# text = Since Firefox 74, it's consuming a large about of memory and never release it on MacOS.
+1	Since	since	ADP	IN	_	_	_	_	NER=O
+2	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-ENV
+3	74	74	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+4	,	,	PUNCT	,	_	_	_	_	NER=O
+5	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+6	's	be	AUX	VBZ	_	_	_	_	NER=O
+7	consuming	consume	VERB	VBG	_	_	_	_	NER=B-SYMPTOM
+8	a	a	DET	DT	_	_	_	_	NER=I-SYMPTOM
+9	large	large	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+10	about	about	ADP	IN	_	_	_	_	NER=I-SYMPTOM
+11	of	of	ADP	IN	_	_	_	_	NER=I-SYMPTOM
+12	memory	memory	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+13	and	and	CCONJ	CC	_	_	_	_	NER=O
+14	never	never	ADV	RB	_	_	_	_	NER=O
+15	release	release	VERB	VB	_	_	_	_	NER=O
+16	it	it	PRON	PRP	_	_	_	_	NER=O
+17	on	on	ADP	IN	_	_	_	_	NER=O
+18	MacOS	MacOS	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS|SpaceAfter=No
+19	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = memory-s5
+# text = With my usual browsing experience, before 74, I never had to restart Firefox because of its memory impact, but now I need to.
+1	With	with	ADP	IN	_	_	_	_	NER=O
+2	my	my	PRON	PRP$	_	_	_	_	NER=O
+3	usual	usual	ADJ	JJ	_	_	_	_	NER=O
+4	browsing	browsing	NOUN	NN	_	_	_	_	NER=O
+5	experience	experience	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	before	before	ADP	IN	_	_	_	_	NER=O
+8	74	74	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+9	,	,	PUNCT	,	_	_	_	_	NER=O
+10	I	i	PRON	PRP	_	_	_	_	NER=O
+11	never	never	ADV	RB	_	_	_	_	NER=O
+12	had	have	VERB	VBD	_	_	_	_	NER=O
+13	to	to	PART	TO	_	_	_	_	NER=O
+14	restart	restart	VERB	VB	_	_	_	_	NER=O
+15	Firefox	Firefox	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Firefox
+16	because	because	ADP	IN	_	_	_	_	NER=O
+17	of	of	ADP	IN	_	_	_	_	NER=O
+18	its	its	PRON	PRP$	_	_	_	_	NER=O
+19	memory	memory	NOUN	NN	_	_	_	_	NER=O
+20	impact	impact	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+21	,	,	PUNCT	,	_	_	_	_	NER=O
+22	but	but	CCONJ	CC	_	_	_	_	NER=O
+23	now	now	ADV	RB	_	_	_	_	NER=O
+24	I	i	PRON	PRP	_	_	_	_	NER=O
+25	need	need	VERB	VBP	_	_	_	_	NER=O
+26	to	to	PART	TO	_	_	_	_	NER=O|SpaceAfter=No
+27	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = memory-s6
+# text = As usual, with memory based report, there are so many factor that could cause this, it's hard to reproduce, so I simplified the test to the most simple case I could do, that is:
+1	As	as	ADP	IN	_	_	_	_	NER=O
+2	usual	usual	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+3	,	,	PUNCT	,	_	_	_	_	NER=O
+4	with	with	ADP	IN	_	_	_	_	NER=O
+5	memory	memory	NOUN	NN	_	_	_	_	NER=O
+6	based	base	VERB	VBN	_	_	_	_	NER=O
+7	report	report	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+8	,	,	PUNCT	,	_	_	_	_	NER=O
+9	there	there	PRON	EX	_	_	_	_	NER=O
+10	are	be	AUX	VBP	_	_	_	_	NER=O
+11	so	so	ADV	RB	_	_	_	_	NER=O
+12	many	many	ADJ	JJ	_	_	_	_	NER=O
+13	factor	factor	NOUN	NN	_	_	_	_	NER=O
+14	that	that	PRON	WDT	_	_	_	_	NER=O
+15	could	could	AUX	MD	_	_	_	_	NER=O
+16	cause	cause	VERB	VB	_	_	_	_	NER=O
+17	this	this	PRON	DT	_	_	_	_	NER=O|SpaceAfter=No
+18	,	,	PUNCT	,	_	_	_	_	NER=O
+19	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+20	's	be	AUX	VBZ	_	_	_	_	NER=O
+21	hard	hard	ADJ	JJ	_	_	_	_	NER=O
+22	to	to	PART	TO	_	_	_	_	NER=O
+23	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+24	,	,	PUNCT	,	_	_	_	_	NER=O
+25	so	so	ADV	RB	_	_	_	_	NER=O
+26	I	i	PRON	PRP	_	_	_	_	NER=O
+27	simplified	simplify	VERB	VBD	_	_	_	_	NER=O
+28	the	the	DET	DT	_	_	_	_	NER=O
+29	test	test	NOUN	NN	_	_	_	_	NER=O
+30	to	to	ADP	TO	_	_	_	_	NER=O
+31	the	the	DET	DT	_	_	_	_	NER=O
+32	most	most	ADV	RBS	_	_	_	_	NER=O
+33	simple	simple	ADJ	JJ	_	_	_	_	NER=O
+34	case	case	NOUN	NN	_	_	_	_	NER=O
+35	I	i	PRON	PRP	_	_	_	_	NER=O
+36	could	could	AUX	MD	_	_	_	_	NER=O
+37	do	do	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+38	,	,	PUNCT	,	_	_	_	_	NER=O
+39	that	that	PRON	WDT	_	_	_	_	NER=O
+40	is	be	AUX	VBZ	_	_	_	_	NER=O|SpaceAfter=No
+41	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p5 section=STEPS
+# sent_id = memory-s7
+# text = 1. Started as safe mode without any extension
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Started	start	VERB	VBN	_	_	_	_	NER=O
+4	as	as	ADP	IN	_	_	_	_	NER=O
+5	safe	safe	ADJ	JJ	_	_	_	_	NER=B-FEATURE
+6	mode	mode	NOUN	NN	_	_	_	_	NER=I-FEATURE
+7	without	without	ADP	IN	_	_	_	_	NER=O
+8	any	any	DET	DT	_	_	_	_	NER=O
+9	extension	extension	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = memory-s8
+# text = 2. Loaded a bunch of tabs (my previous browsing session)
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Loaded	load	VERB	VBD	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	bunch	bunch	NOUN	NN	_	_	_	_	NER=O
+6	of	of	ADP	IN	_	_	_	_	NER=O
+7	tabs	tab	NOUN	NN	_	_	_	_	NER=O
+8	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+9	my	my	PRON	PRP$	_	_	_	_	NER=O
+10	previous	previous	ADJ	JJ	_	_	_	_	NER=O
+11	browsing	browsing	NOUN	NN	_	_	_	_	NER=O
+12	session	session	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+13	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# sent_id = memory-s9
+# text = 3. Saved a memory report
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Saved	save	VERB	VBD	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	memory	memory	NOUN	NN	_	_	_	_	NER=O
+6	report	report	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = memory-s10
+# text = 4. Set the computer to sleep during the night by closing lid
+1	4	4	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Set	set	VERB	VB	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	computer	computer	NOUN	NN	_	_	_	_	NER=O
+6	to	to	PART	TO	_	_	_	_	NER=O
+7	sleep	sleep	VERB	VB	_	_	_	_	NER=O
+8	during	during	ADP	IN	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	night	night	NOUN	NN	_	_	_	_	NER=O
+11	by	by	ADP	IN	_	_	_	_	NER=O
+12	closing	close	VERB	VBG	_	_	_	_	NER=O
+13	lid	lid	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = memory-s11
+# text = 5. Wake up the computer
+1	5	5	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Wake	wake	VERB	VB	_	_	_	_	NER=O
+4	up	up	ADP	RP	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	computer	computer	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = memory-s12
+# text = 6. Saved memory report, memory increased by a lot
+1	6	6	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Saved	save	VERB	VBD	_	_	_	_	NER=O
+4	memory	memory	NOUN	NN	_	_	_	_	NER=O
+5	report	report	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+6	,	,	PUNCT	,	_	_	_	_	NER=O
+7	memory	memory	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+8	increased	increase	VERB	VBN	_	_	_	_	NER=I-SYMPTOM
+9	by	by	ADP	IN	_	_	_	_	NER=O
+10	a	a	DET	DT	_	_	_	_	NER=O
+11	lot	lot	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p6 section=ACTUAL
+# sent_id = memory-s13
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p7 section=ACTUAL
+# sent_id = memory-s14
+# text = The memory increased by at least 300MB from the process manager.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	memory	memory	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+3	increased	increase	VERB	VBN	_	_	_	_	NER=I-SYMPTOM
+4	by	by	ADP	IN	_	_	_	_	NER=O
+5	at	at	ADP	IN	_	_	_	_	NER=O
+6	least	least	ADJ	JJS	_	_	_	_	NER=O
+7	300MB	300MB	NUM	CD	_	_	_	_	NER=B-METRIC
+8	from	from	ADP	IN	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	process	process	NOUN	NN	_	_	_	_	NER=O
+11	manager	manager	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+12	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p8 section=EXPECTED
+# sent_id = memory-s15
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p9 section=EXPECTED
+# sent_id = memory-s16
+# text = The memory should more or less stay the same while time goes on.
+1	The	the	DET	DT	_	_	_	_	NER=O
+2	memory	memory	NOUN	NN	_	_	_	_	NER=O
+3	should	should	AUX	MD	_	_	_	_	NER=O
+4	more	more	ADV	RBR	_	_	_	_	NER=O
+5	or	or	CCONJ	CC	_	_	_	_	NER=O
+6	less	less	ADV	RBR	_	_	_	_	NER=O
+7	stay	stay	VERB	VBP	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	same	same	ADJ	JJ	_	_	_	_	NER=O
+10	while	while	SCONJ	IN	_	_	_	_	NER=O
+11	time	time	NOUN	NN	_	_	_	_	NER=O
+12	goes	go	VERB	VBZ	_	_	_	_	NER=O
+13	on	on	ADP	IN	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = memory-s17
+# text = Please notice that I've tried to minimize the memory usage (in about:memory) but it's useless ?
+1	Please	Please	INTJ	NNP	_	_	_	_	NER=O
+2	notice	notice	VERB	VB	_	_	_	_	NER=O
+3	that	that	SCONJ	IN	_	_	_	_	NER=O
+4	I	i	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+5	've	have	AUX	VBP	_	_	_	_	NER=O
+6	tried	try	VERB	VBN	_	_	_	_	NER=O
+7	to	to	PART	TO	_	_	_	_	NER=O
+8	minimize	minimize	VERB	VB	_	_	_	_	NER=O
+9	the	the	DET	DT	_	_	_	_	NER=O
+10	memory	memory	NOUN	NN	_	_	_	_	NER=O
+11	usage	usage	NOUN	NN	_	_	_	_	NER=O
+12	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+13	in	in	ADP	IN	_	_	_	_	NER=O
+14	about:memory	about:memory	X	ADD	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+15	)	)	PUNCT	)	_	_	_	_	NER=O
+16	but	but	CCONJ	CC	_	_	_	_	NER=O
+17	it	it	PRON	PRP	_	_	_	_	NER=O|SpaceAfter=No
+18	's	be	AUX	VBZ	_	_	_	_	NER=O
+19	useless	useless	ADJ	JJ	_	_	_	_	NER=O
+20	?	?	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = hbase-13375331 | ticket_type=bug category=memory component=Backend severity=Minor confidence=high
+# paragraph = p10 section=TITLE
+# sent_id = memory-s18
+# text = Memory leak from thrift server hashMap
+1	Memory	memory	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+2	leak	leak	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+3	from	from	ADP	IN	_	_	_	_	NER=O
+4	thrift	thrift	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:Apache_Thrift
+5	server	server	NOUN	NN	_	_	_	_	NER=O
+6	hashMap	hashMap	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION
+
+# paragraph = p11 section=DESCRIPTION
+# sent_id = memory-s19
+# text = I found when the scanner does not closed successfully, it remains forever in the hashMap that stores the state of the scanner.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	found	find	VERB	VBD	_	_	_	_	NER=O
+3	when	when	ADV	WRB	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	scanner	scanner	NOUN	NN	_	_	_	_	NER=O
+6	does	do	AUX	VBZ	_	_	_	_	NER=O
+7	not	not	PART	RB	_	_	_	_	NER=O
+8	closed	close	VERB	VBN	_	_	_	_	NER=O
+9	successfully	successfully	ADV	RB	_	_	_	_	NER=O|SpaceAfter=No
+10	,	,	PUNCT	,	_	_	_	_	NER=O
+11	it	it	PRON	PRP	_	_	_	_	NER=O
+12	remains	remain	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+13	forever	forever	ADV	RB	_	_	_	_	NER=I-SYMPTOM
+14	in	in	ADP	IN	_	_	_	_	NER=O
+15	the	the	DET	DT	_	_	_	_	NER=O
+16	hashMap	hashMap	PROPN	NNP	_	_	_	_	NER=B-CODE_LOCATION
+17	that	that	PRON	WDT	_	_	_	_	NER=O
+18	stores	store	VERB	VBZ	_	_	_	_	NER=O
+19	the	the	DET	DT	_	_	_	_	NER=O
+20	state	state	NOUN	NN	_	_	_	_	NER=O
+21	of	of	ADP	IN	_	_	_	_	NER=O
+22	the	the	DET	DT	_	_	_	_	NER=O
+23	scanner	scanner	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+24	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p12 section=DESCRIPTION
+# sent_id = memory-s20
+# text = To resolve this problem, I make scannerMap to Guava Cache so that can be expired on set time.
+1	To	to	PART	TO	_	_	_	_	NER=O
+2	resolve	resolve	VERB	VB	_	_	_	_	NER=O
+3	this	this	DET	DT	_	_	_	_	NER=O
+4	problem	problem	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	,	_	_	_	_	NER=O
+6	I	i	PRON	PRP	_	_	_	_	NER=O
+7	make	make	VERB	VBP	_	_	_	_	NER=O
+8	scannerMap	scannerMap	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION
+9	to	to	ADP	TO	_	_	_	_	NER=O
+10	Guava	Guava	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Google_Guava
+11	Cache	Cache	PROPN	NNP	_	_	_	_	NER=I-PRODUCT
+12	so	so	SCONJ	IN	_	_	_	_	NER=O
+13	that	that	PRON	WDT	_	_	_	_	NER=O
+14	can	can	AUX	MD	_	_	_	_	NER=O
+15	be	be	AUX	VB	_	_	_	_	NER=O
+16	expired	expire	VERB	VBN	_	_	_	_	NER=O
+17	on	on	ADP	IN	_	_	_	_	NER=O
+18	set	set	ADJ	JJ	_	_	_	_	NER=O
+19	time	time	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+20	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = thunderbird-1737223 | ticket_type=bug category=memory component=Frontend severity=Critical confidence=high
+# paragraph = p13 section=TITLE
+# sent_id = memory-s21
+# text = Thunderbird Freezing/Crashing due to memory leak
+1	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+2	Freezing	freeze	VERB	VBG	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+3	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+4	Crashing	crash	VERB	VBG	_	_	_	_	NER=B-SYMPTOM
+5	due	due	ADJ	JJ	_	_	_	_	NER=O
+6	to	to	ADP	TO	_	_	_	_	NER=O
+7	memory	memory	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+8	leak	leak	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+
+# paragraph = p14 section=ENVIRONMENT
+# sent_id = memory-s22
+# text = User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+7	NT	NT	PROPN	NNP	_	_	_	_	NER=I-ENV
+8	10.0	10.0	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+9	;	;	PUNCT	:	_	_	_	_	NER=O
+10	Win64	Win64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+11	;	;	PUNCT	:	_	_	_	_	NER=O
+12	x64	x64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+13	)	)	PUNCT	)	_	_	_	_	NER=O
+14	AppleWebKit/537.36	AppleWebKit/537.36	PROPN	NNP	_	_	_	_	NER=O
+15	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+16	KHTML	KHTML	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+17	,	,	PUNCT	,	_	_	_	_	NER=O
+18	like	like	ADP	IN	_	_	_	_	NER=O
+19	Gecko	Gecko	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+20	)	)	PUNCT	)	_	_	_	_	NER=O
+21	Chrome/95.0.4638.54	Chrome/95.0.4638.54	PROPN	NNP	_	_	_	_	NER=B-ENV
+22	Safari/537.36	Safari/537.36	PROPN	NNP	_	_	_	_	NER=O
+
+# paragraph = p15 section=STEPS
+# sent_id = memory-s23
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p16 section=STEPS
+# sent_id = memory-s24
+# text = 1. Open Thunderbird
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+
+# sent_id = memory-s25
+# text = 2. Check email
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Check	check	VERB	VB	_	_	_	_	NER=O
+4	email	email	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = memory-s26
+# text = 3. Freezes due to a huge memory leak
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Freezes	freeze	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+4	due	due	ADJ	JJ	_	_	_	_	NER=O
+5	to	to	ADP	TO	_	_	_	_	NER=O
+6	a	a	DET	DT	_	_	_	_	NER=B-SYMPTOM
+7	huge	huge	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+8	memory	memory	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+9	leak	leak	NOUN	NN	_	_	_	_	NER=I-SYMPTOM
+
+# sent_id = memory-s27
+# text = 4. Crashes
+1	4	4	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Crashes	crash	VERB	VBZ	_	_	_	_	NER=B-SYMPTOM
+
+# paragraph = p17 section=STEPS
+# sent_id = memory-s28
+# text = I use version 94.0b4 (64-bit) on Windows 11
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	use	use	VERB	VBP	_	_	_	_	NER=O
+3	version	version	NOUN	NN	_	_	_	_	NER=O
+4	94.0b4	94.0b4	NUM	CD	_	_	_	_	NER=B-ENV
+5	(	(	PUNCT	(	_	_	_	_	NER=I-ENV|SpaceAfter=No
+6	64-bit	64-bit	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+7	)	)	PUNCT	)	_	_	_	_	NER=I-ENV
+8	on	on	ADP	IN	_	_	_	_	NER=O
+9	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+10	11	11	NUM	CD	_	_	_	_	NER=I-ENV
+
+# paragraph = p18 section=ACTUAL
+# sent_id = memory-s29
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p19 section=ACTUAL
+# sent_id = memory-s30
+# text = When I click on emails the whole client will freeze and then crash.
+1	When	when	ADV	WRB	_	_	_	_	NER=O
+2	I	i	PRON	PRP	_	_	_	_	NER=O
+3	click	click	VERB	VBP	_	_	_	_	NER=O
+4	on	on	ADP	IN	_	_	_	_	NER=O
+5	emails	email	NOUN	NNS	_	_	_	_	NER=O
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	whole	whole	ADJ	JJ	_	_	_	_	NER=O
+8	client	client	NOUN	NN	_	_	_	_	NER=O
+9	will	will	AUX	MD	_	_	_	_	NER=O
+10	freeze	freeze	VERB	VB	_	_	_	_	NER=B-SYMPTOM
+11	and	and	CCONJ	CC	_	_	_	_	NER=O
+12	then	then	ADV	RB	_	_	_	_	NER=O
+13	crash	crash	VERB	VB	_	_	_	_	NER=B-SYMPTOM|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p20 section=EXPECTED
+# sent_id = memory-s31
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p21 section=EXPECTED
+# sent_id = memory-s32
+# text = I should be able to check my emails without having to reopen Thunderbird multiple times just to get through the emails.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	should	should	AUX	MD	_	_	_	_	NER=O
+3	be	be	AUX	VB	_	_	_	_	NER=O
+4	able	able	ADJ	JJ	_	_	_	_	NER=O
+5	to	to	PART	TO	_	_	_	_	NER=O
+6	check	check	VERB	VB	_	_	_	_	NER=O
+7	my	my	PRON	PRP$	_	_	_	_	NER=O
+8	emails	email	NOUN	NNS	_	_	_	_	NER=O
+9	without	without	ADP	IN	_	_	_	_	NER=O
+10	having	have	VERB	VBG	_	_	_	_	NER=O
+11	to	to	PART	TO	_	_	_	_	NER=O
+12	reopen	reopen	VERB	VB	_	_	_	_	NER=O
+13	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird
+14	multiple	multiple	ADJ	JJ	_	_	_	_	NER=O
+15	times	time	NOUN	NNS	_	_	_	_	NER=O
+16	just	just	ADV	RB	_	_	_	_	NER=O
+17	to	to	PART	TO	_	_	_	_	NER=O
+18	get	get	VERB	VB	_	_	_	_	NER=O
+19	through	through	ADP	IN	_	_	_	_	NER=O
+20	the	the	DET	DT	_	_	_	_	NER=O
+21	emails	email	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+22	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = memory-s33
+# text = I have resorted to checking email on the web due to this issue.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	have	have	AUX	VBP	_	_	_	_	NER=O
+3	resorted	resort	VERB	VBN	_	_	_	_	NER=O
+4	to	to	PART	TO	_	_	_	_	NER=O
+5	checking	check	VERB	VBG	_	_	_	_	NER=O
+6	email	email	NOUN	NN	_	_	_	_	NER=O
+7	on	on	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	web	web	NOUN	NN	_	_	_	_	NER=O
+10	due	due	ADJ	JJ	_	_	_	_	NER=O
+11	to	to	ADP	TO	_	_	_	_	NER=O
+12	this	this	DET	DT	_	_	_	_	NER=O
+13	issue	issue	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+14	.	.	PUNCT	.	_	_	_	_	NER=O
+

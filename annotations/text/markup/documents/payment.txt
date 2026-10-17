@@ -1,0 +1,77 @@
+Incorrect message appears after importing an invalid credit card number
+
+*Found in*
+
+118.0b5
+
+*Affected versions*
+
+118.0b5
+
+*Tested platforms*
+
+Affected platforms: macOS 13
+Unaffected platforms:
+
+*Preconditions*
+
+1 valid credit card and 1 invalid credit card saved in Chrome
+
+*Steps to reproduce*
+
+1. Open Fx 
+2. Click on  Import data button from about:preferences
+
+*Expected result*
+Only 1 credit card(the valid one) is imported, so after the import is done the message should appear for 1 credit card not two.
+
+*Actual result*
+After the import is done the message should appear for 1 credit card not two.
+
+*Regression range*
+
+Not a regression. Reproducible with bug 1826149 after Payment methods were implemented.
+Additional notes
+
+Attached browser console errors.
+
+PayPal sandbox Something went wrong. Contact the seller for help
+
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0
+
+Steps to reproduce:
+
+Clicked on a PayPal 'Buy Now' link
+
+Actual results:
+
+Something went wrong. Contact the seller for help message displayed
+
+Expected results:
+
+Gone to PayPal to purchase goods
+
+can't donate to thunderbird using the paypal link, cross site error using firefox.
+
+User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0
+
+Steps to reproduce:
+
+- from here:
+https://www.thunderbird.net/en-US/thunderbird/102.0/eoy/
+- I click donate. Then from here:
+https://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog
+- After the Paypal button appears I click it. Nothing happens.
+In the console is an error cross site error.
+
+Actual results:
+
+Content Security Policy: The page’s settings blocked the loading of a resource at https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd (“connect-src”).
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://www.paypal.com/xoplatform/logger/api/logger. (Reason: CORS request did not succeed). Status code: (null).
+
+Expected results:
+
+I think a window or new paypal page should appear so I can give you my money.
+
+Using FireFox version 107.0 (64-bit) Windows 10. 
+I also tried IE and Chrome.

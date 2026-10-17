@@ -1,0 +1,495 @@
+# newdoc id = ui_layout
+# object = ui_layout
+# newpar report = thunderbird-1736244 | ticket_type=bug category=ui_layout component=Frontend severity=Major confidence=low
+# paragraph = p1 section=TITLE
+# sent_id = ui_layout-s1
+# text = HTML message content rendering affected/hidden by messageBody.css styles: Rename our .main-header class to .moz-main-header, use custom attribute, or encapsulate
+1	HTML	HTML	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:HTML
+2	message	message	NOUN	NN	_	_	_	_	NER=O
+3	content	content	NOUN	NN	_	_	_	_	NER=O
+4	rendering	render	VERB	VBG	_	_	_	_	NER=O
+5	affected	affected	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+6	/	/	SYM	SYM	_	_	_	_	NER=O|SpaceAfter=No
+7	hidden	hidden	NOUN	NN	_	_	_	_	NER=B-SYMPTOM
+8	by	by	ADP	IN	_	_	_	_	NER=O
+9	messageBody.css	messageBody.css	X	NNP	_	_	_	_	NER=B-CODE_LOCATION
+10	styles	style	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+11	:	:	PUNCT	:	_	_	_	_	NER=O
+12	Rename	rename	VERB	VB	_	_	_	_	NER=O
+13	our	our	PRON	PRP$	_	_	_	_	NER=O
+14	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+15	main-header	main-header	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION
+16	class	class	NOUN	NN	_	_	_	_	NER=O
+17	to	to	PART	TO	_	_	_	_	NER=O
+18	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+19	moz-main-header	moz-main-header	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+20	,	,	PUNCT	,	_	_	_	_	NER=O
+21	use	use	NOUN	NN	_	_	_	_	NER=O
+22	custom	custom	NOUN	NN	_	_	_	_	NER=O
+23	attribute	attribute	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+24	,	,	PUNCT	,	_	_	_	_	NER=O
+25	or	or	CCONJ	CC	_	_	_	_	NER=O
+26	encapsulate	encapsulate	VERB	VB	_	_	_	_	NER=O
+
+# paragraph = p2 section=ENVIRONMENT
+# sent_id = ui_layout-s2
+# text = User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0
+1	User	User	PROPN	NNP	_	_	_	_	NER=O
+2	Agent	Agent	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	Mozilla/5.0	Mozilla/5.0	PROPN	NNP	_	_	_	_	NER=O
+5	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+6	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+7	NT	NT	PROPN	NNP	_	_	_	_	NER=I-ENV
+8	10.0	10.0	NUM	CD	_	_	_	_	NER=I-ENV|SpaceAfter=No
+9	;	;	PUNCT	:	_	_	_	_	NER=O
+10	Win64	Win64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+11	;	;	PUNCT	:	_	_	_	_	NER=O
+12	x64	x64	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+13	;	;	PUNCT	:	_	_	_	_	NER=O
+14	rv	rv	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+15	:	:	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+16	93.0	93.0	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+17	)	)	PUNCT	)	_	_	_	_	NER=O
+18	Gecko/20100101	Gecko/20100101	PROPN	NNP	_	_	_	_	NER=O
+19	Firefox/93.0	Firefox/93.0	PROPN	NNP	_	_	_	_	NER=B-ENV
+
+# paragraph = p3 section=STEPS
+# sent_id = ui_layout-s3
+# text = Steps to reproduce:
+1	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+2	to	to	PART	TO	_	_	_	_	NER=O
+3	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+4	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p4 section=STEPS
+# sent_id = ui_layout-s4
+# text = I receive a newsletter as an HTML-formatted message with inline CSS styles, particularly some elements have the `.main-header` CSS class.
+1	I	i	PRON	PRP	_	_	_	_	NER=O
+2	receive	receive	VERB	VBP	_	_	_	_	NER=O
+3	a	a	DET	DT	_	_	_	_	NER=O
+4	newsletter	newsletter	NOUN	NN	_	_	_	_	NER=O
+5	as	as	ADP	IN	_	_	_	_	NER=O
+6	an	an	DET	DT	_	_	_	_	NER=O
+7	HTML-formatted	html-formatted	ADJ	JJ	_	_	_	_	NER=O
+8	message	message	NOUN	NN	_	_	_	_	NER=O
+9	with	with	ADP	IN	_	_	_	_	NER=O
+10	inline	inline	ADJ	JJ	_	_	_	_	NER=O
+11	CSS	CSS	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:CSS
+12	styles	style	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+13	,	,	PUNCT	,	_	_	_	_	NER=O
+14	particularly	particularly	ADV	RB	_	_	_	_	NER=O
+15	some	some	DET	DT	_	_	_	_	NER=O
+16	elements	element	NOUN	NNS	_	_	_	_	NER=O
+17	have	have	VERB	VBP	_	_	_	_	NER=O
+18	the	the	DET	DT	_	_	_	_	NER=O
+19	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+20	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+21	main-header	main-header	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+22	`	`	PUNCT	``	_	_	_	_	NER=O
+23	CSS	CSS	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:CSS
+24	class	class	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+25	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p5 section=ACTUAL
+# sent_id = ui_layout-s5
+# text = Actual results:
+1	Actual	actual	ADJ	JJ	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p6 section=ACTUAL
+# sent_id = ui_layout-s6
+# text = All HMTL elements bearing the CSS class `.main-header` are not rendered because Thunderbird's messageBody.css stylesheet sets `display: none;` for this class (it uses this class for hiding the message header).
+1	All	all	DET	DT	_	_	_	_	NER=O
+2	HMTL	HMTL	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:HTML
+3	elements	element	NOUN	NNS	_	_	_	_	NER=O
+4	bearing	bear	VERB	VBG	_	_	_	_	NER=O
+5	the	the	DET	DT	_	_	_	_	NER=O
+6	CSS	CSS	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:CSS
+7	class	class	NOUN	NN	_	_	_	_	NER=O
+8	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+9	.	.	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+10	main-header	main-header	NOUN	NN	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+11	`	`	PUNCT	``	_	_	_	_	NER=O
+12	are	be	AUX	VBP	_	_	_	_	NER=O
+13	not	not	PART	RB	_	_	_	_	NER=B-SYMPTOM
+14	rendered	render	VERB	VBN	_	_	_	_	NER=I-SYMPTOM
+15	because	because	SCONJ	IN	_	_	_	_	NER=O
+16	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird|SpaceAfter=No
+17	's	's	PART	POS	_	_	_	_	NER=O
+18	messageBody.css	messageBody.css	X	JJ	_	_	_	_	NER=B-CODE_LOCATION
+19	stylesheet	stylesheet	NOUN	NN	_	_	_	_	NER=O
+20	sets	set	NOUN	NNS	_	_	_	_	NER=O
+21	`	`	PUNCT	``	_	_	_	_	NER=O|SpaceAfter=No
+22	display	display	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+23	:	:	PUNCT	:	_	_	_	_	NER=O
+24	none	none	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+25	;	;	PUNCT	:	_	_	_	_	NER=O|SpaceAfter=No
+26	`	`	PUNCT	``	_	_	_	_	NER=O
+27	for	for	ADP	IN	_	_	_	_	NER=O
+28	this	this	DET	DT	_	_	_	_	NER=O
+29	class	class	NOUN	NN	_	_	_	_	NER=O
+30	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+31	it	it	PRON	PRP	_	_	_	_	NER=O
+32	uses	use	VERB	VBZ	_	_	_	_	NER=O
+33	this	this	DET	DT	_	_	_	_	NER=O
+34	class	class	NOUN	NN	_	_	_	_	NER=O
+35	for	for	ADP	IN	_	_	_	_	NER=O
+36	hiding	hide	VERB	VBG	_	_	_	_	NER=O
+37	the	the	DET	DT	_	_	_	_	NER=O
+38	message	message	NOUN	NN	_	_	_	_	NER=O
+39	header	header	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+40	)	)	PUNCT	)	_	_	_	_	NER=O|SpaceAfter=No
+41	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p7 section=EXPECTED
+# sent_id = ui_layout-s7
+# text = Expected results:
+1	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+2	results	result	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# paragraph = p8 section=EXPECTED
+# sent_id = ui_layout-s8
+# text = All HTML content inside a message should be rendered according to the stylesheets defined in that message, not subject to Thunderbird's UI stylesheets.
+1	All	all	DET	DT	_	_	_	_	NER=O
+2	HTML	HTML	PROPN	NNP	_	_	_	_	NER=B-TECHNOLOGY|KB=dbr:HTML
+3	content	content	NOUN	NN	_	_	_	_	NER=O
+4	inside	inside	ADP	IN	_	_	_	_	NER=O
+5	a	a	DET	DT	_	_	_	_	NER=O
+6	message	message	NOUN	NN	_	_	_	_	NER=O
+7	should	should	AUX	MD	_	_	_	_	NER=O
+8	be	be	AUX	VB	_	_	_	_	NER=O
+9	rendered	render	VERB	VBN	_	_	_	_	NER=O
+10	according	accord	VERB	VBG	_	_	_	_	NER=O
+11	to	to	ADP	TO	_	_	_	_	NER=O
+12	the	the	DET	DT	_	_	_	_	NER=O
+13	stylesheets	stylesheets	NOUN	NNS	_	_	_	_	NER=O
+14	defined	define	VERB	VBN	_	_	_	_	NER=O
+15	in	in	ADP	IN	_	_	_	_	NER=O
+16	that	that	DET	DT	_	_	_	_	NER=O
+17	message	message	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+18	,	,	PUNCT	,	_	_	_	_	NER=O
+19	not	not	PART	RB	_	_	_	_	NER=O
+20	subject	subject	ADJ	JJ	_	_	_	_	NER=O
+21	to	to	ADP	TO	_	_	_	_	NER=O
+22	Thunderbird	Thunderbird	PROPN	NNP	_	_	_	_	NER=B-PRODUCT|KB=dbr:Mozilla_Thunderbird|SpaceAfter=No
+23	's	's	PART	POS	_	_	_	_	NER=O
+24	UI	UI	PROPN	NNP	_	_	_	_	NER=O
+25	stylesheets	stylesheets	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+26	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# paragraph = p9 section=NOTES
+# sent_id = ui_layout-s9
+# text = This was not a problem until a recent update.
+1	This	this	DET	DT	_	_	_	_	NER=O
+2	was	be	AUX	VBD	_	_	_	_	NER=O
+3	not	not	PART	RB	_	_	_	_	NER=O
+4	a	a	DET	DT	_	_	_	_	NER=O
+5	problem	problem	NOUN	NN	_	_	_	_	NER=O
+6	until	until	ADP	IN	_	_	_	_	NER=O
+7	a	a	DET	DT	_	_	_	_	NER=O
+8	recent	recent	ADJ	JJ	_	_	_	_	NER=O
+9	update	update	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+10	.	.	PUNCT	.	_	_	_	_	NER=O
+
+# newpar report = firefox-1741198 | ticket_type=bug category=ui_layout component=Frontend severity=Minor confidence=high
+# paragraph = p10 section=TITLE
+# sent_id = ui_layout-s10
+# text = Buttons inside the Network Settings panel are misplaced with the scrollbar on display
+1	Buttons	button	NOUN	NNS	_	_	_	_	NER=B-UI_ELEMENT
+2	inside	inside	ADP	IN	_	_	_	_	NER=O
+3	the	the	DET	DT	_	_	_	_	NER=O
+4	Network	Network	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+5	Settings	Settings	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT
+6	panel	panel	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+7	are	be	AUX	VBP	_	_	_	_	NER=O
+8	misplaced	misplace	VERB	VBN	_	_	_	_	NER=B-SYMPTOM
+9	with	with	ADP	IN	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	scrollbar	scrollbar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+12	on	on	ADP	IN	_	_	_	_	NER=O
+13	display	display	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p11 section=ENVIRONMENT
+# sent_id = ui_layout-s11
+# text = **Affected versions**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Affected	Affected	PROPN	NNP	_	_	_	_	NER=O
+3	versions	version	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s12
+# text = - 94.0.1
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	94.0.1	94.0.1	NUM	CD	_	_	_	_	NER=B-ENV
+
+# sent_id = ui_layout-s13
+# text = - 95.0b7
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	95.0b7	95.0b7	NUM	CD	_	_	_	_	NER=B-ENV
+
+# sent_id = ui_layout-s14
+# text = - 96.0a1
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	96.0a1	96.0a1	NUM	CD	_	_	_	_	NER=B-ENV
+
+# paragraph = p12 section=ENVIRONMENT
+# sent_id = ui_layout-s15
+# text = **Affected platforms**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Affected	affected	ADJ	JJ	_	_	_	_	NER=O
+3	platforms	platform	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s16
+# text = - Windows 10
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	Windows	Windows	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Microsoft_Windows
+3	10	10	NUM	CD	_	_	_	_	NER=I-ENV
+
+# paragraph = p13 section=STEPS
+# sent_id = ui_layout-s17
+# text = **Steps to reproduce**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Steps	step	NOUN	NNS	_	_	_	_	NER=O
+3	to	to	PART	TO	_	_	_	_	NER=O
+4	reproduce	reproduce	VERB	VB	_	_	_	_	NER=O|SpaceAfter=No
+5	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s18
+# text = 1. Open about:preferences#general
+1	1	1	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Open	open	VERB	VB	_	_	_	_	NER=O
+4	about:preferences#general	about:preferences#general	X	ADD	_	_	_	_	NER=B-UI_ELEMENT
+
+# sent_id = ui_layout-s19
+# text = 2. Click the Settings button from the Network Settings section
+1	2	2	NUM	CD	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Click	click	VERB	VB	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	Settings	Settings	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT
+6	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+7	from	from	ADP	IN	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	Network	Network	PROPN	NNP	_	_	_	_	NER=O
+10	Settings	Settings	PROPN	NNP	_	_	_	_	NER=O
+11	section	section	NOUN	NN	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s20
+# text = 3. Observe the buttons at the bottom of the panel (reduce the width of the browser in order to trigger the scrollbar presence)
+1	3	3	NUM	LS	_	_	_	_	NER=O|SpaceAfter=No
+2	.	.	PUNCT	.	_	_	_	_	NER=O
+3	Observe	observe	VERB	VB	_	_	_	_	NER=O
+4	the	the	DET	DT	_	_	_	_	NER=O
+5	buttons	button	NOUN	NNS	_	_	_	_	NER=B-UI_ELEMENT
+6	at	at	ADP	IN	_	_	_	_	NER=O
+7	the	the	DET	DT	_	_	_	_	NER=O
+8	bottom	bottom	NOUN	NN	_	_	_	_	NER=O
+9	of	of	ADP	IN	_	_	_	_	NER=O
+10	the	the	DET	DT	_	_	_	_	NER=O
+11	panel	panel	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+12	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+13	reduce	reduce	VERB	VB	_	_	_	_	NER=O
+14	the	the	DET	DT	_	_	_	_	NER=O
+15	width	width	NOUN	NN	_	_	_	_	NER=O
+16	of	of	ADP	IN	_	_	_	_	NER=O
+17	the	the	DET	DT	_	_	_	_	NER=O
+18	browser	browser	NOUN	NN	_	_	_	_	NER=O
+19	in	in	ADP	IN	_	_	_	_	NER=O
+20	order	order	NOUN	NN	_	_	_	_	NER=O
+21	to	to	PART	TO	_	_	_	_	NER=O
+22	trigger	trigger	VERB	VB	_	_	_	_	NER=O
+23	the	the	DET	DT	_	_	_	_	NER=O
+24	scrollbar	scrollbar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+25	presence	presence	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+26	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p14 section=EXPECTED
+# sent_id = ui_layout-s21
+# text = **Expected result**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Expected	expect	VERB	VBN	_	_	_	_	NER=O
+3	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s22
+# text = - “OK”, “Cancel” and “Help” buttons are properly aligned in relation to the rest of the page elements
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	“	“	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+3	OK	ok	ADJ	JJ	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+4	”	”	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+5	,	,	PUNCT	,	_	_	_	_	NER=O
+6	“	“	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+7	Cancel	Cancel	PROPN	NNP	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+8	”	”	PUNCT	.	_	_	_	_	NER=O
+9	and	and	CCONJ	CC	_	_	_	_	NER=O
+10	“	“	PUNCT	.	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+11	Help	Help	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+12	”	”	PUNCT	.	_	_	_	_	NER=I-UI_ELEMENT
+13	buttons	button	NOUN	NNS	_	_	_	_	NER=I-UI_ELEMENT
+14	are	be	AUX	VBP	_	_	_	_	NER=O
+15	properly	properly	ADV	RB	_	_	_	_	NER=O
+16	aligned	align	VERB	VBN	_	_	_	_	NER=O
+17	in	in	ADP	IN	_	_	_	_	NER=O
+18	relation	relation	NOUN	NN	_	_	_	_	NER=O
+19	to	to	ADP	TO	_	_	_	_	NER=O
+20	the	the	DET	DT	_	_	_	_	NER=O
+21	rest	rest	NOUN	NN	_	_	_	_	NER=O
+22	of	of	ADP	IN	_	_	_	_	NER=O
+23	the	the	DET	DT	_	_	_	_	NER=O
+24	page	page	NOUN	NN	_	_	_	_	NER=O
+25	elements	element	NOUN	NNS	_	_	_	_	NER=O
+
+# paragraph = p15 section=ACTUAL
+# sent_id = ui_layout-s23
+# text = **Actual result**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Actual	Actual	PROPN	NNP	_	_	_	_	NER=O
+3	result	result	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s24
+# text = - The scrollbar is too close to the "Help" button
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	The	the	DET	DT	_	_	_	_	NER=O
+3	scrollbar	scrollbar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+4	is	be	AUX	VBZ	_	_	_	_	NER=O
+5	too	too	ADV	RB	_	_	_	_	NER=B-SYMPTOM
+6	close	close	ADJ	JJ	_	_	_	_	NER=I-SYMPTOM
+7	to	to	ADP	TO	_	_	_	_	NER=O
+8	the	the	DET	DT	_	_	_	_	NER=O
+9	"	"	PUNCT	.	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+10	Help	Help	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+11	"	"	PUNCT	.	_	_	_	_	NER=I-UI_ELEMENT
+12	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+
+# sent_id = ui_layout-s25
+# text = - The "Help" button is not aligned with the scrollbar right margin
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	The	the	DET	DT	_	_	_	_	NER=O
+3	"	"	PUNCT	.	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+4	Help	Help	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+5	"	"	PUNCT	.	_	_	_	_	NER=I-UI_ELEMENT
+6	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+7	is	be	AUX	VBZ	_	_	_	_	NER=O
+8	not	not	PART	RB	_	_	_	_	NER=B-SYMPTOM
+9	aligned	align	VERB	VBN	_	_	_	_	NER=I-SYMPTOM
+10	with	with	ADP	IN	_	_	_	_	NER=O
+11	the	the	DET	DT	_	_	_	_	NER=O
+12	scrollbar	scrollbar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+13	right	right	ADV	RB	_	_	_	_	NER=O
+14	margin	margin	NOUN	NN	_	_	_	_	NER=O
+
+# paragraph = p16 section=NOTES
+# sent_id = ui_layout-s26
+# text = **Regression range**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Regression	Regression	PROPN	NNP	_	_	_	_	NER=O
+3	range	range	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s27
+# text = - Last good revision: 8aa1b80a8c6b66cccc2e37080fbf6197eee8d801
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	Last	last	ADJ	JJ	_	_	_	_	NER=O
+3	good	good	ADJ	JJ	_	_	_	_	NER=O
+4	revision	revision	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	:	:	PUNCT	:	_	_	_	_	NER=O
+6	8aa1b80a8c6b66cccc2e37080fbf6197eee8d801	8aa1b80a8c6b66cccc2e37080fbf6197eee8d801	NUM	CD	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s28
+# text = - First bad revision: 1716229005d8b97f305bd663b8bc8d3fec4a4f3a
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	First	first	ADV	RB	_	_	_	_	NER=O
+3	bad	bad	ADJ	JJ	_	_	_	_	NER=O
+4	revision	revision	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+5	:	:	PUNCT	:	_	_	_	_	NER=O
+6	1716229005d8b97f305bd663b8bc8d3fec4a4f3a	1716229005d8b97f305bd663b8bc8d3fec4a4f3a	NUM	CD	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s29
+# text = - Pushlog:
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	Pushlog	pushlog	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s30
+# text = https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a Regresor: [1700109](https://bugzilla.mozilla.org/show_bug.cgi?id=1700109) (Proton implementation)
+1	https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a	https://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a	X	ADD	_	_	_	_	NER=O
+2	Regresor	Regresor	PROPN	NNP	_	_	_	_	NER=O|SpaceAfter=No
+3	:	:	PUNCT	:	_	_	_	_	NER=O
+4	[	[	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+5	1700109	1700109	NUM	CD	_	_	_	_	NER=B-ISSUE_REF|SpaceAfter=No
+6	]	]	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+7	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+8	https://bugzilla.mozilla.org/show_bug.cgi?id=1700109	https://bugzilla.mozilla.org/show_bug.cgi?id=1700109	X	ADD	_	_	_	_	NER=O|SpaceAfter=No
+9	)	)	PUNCT	)	_	_	_	_	NER=O
+10	(	(	PUNCT	(	_	_	_	_	NER=O|SpaceAfter=No
+11	Proton	Proton	PROPN	NNP	_	_	_	_	NER=O
+12	implementation	implementation	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+13	)	)	PUNCT	)	_	_	_	_	NER=O
+
+# paragraph = p17 section=NOTES
+# sent_id = ui_layout-s31
+# text = **Other notes**
+1	**	**	PUNCT	.	_	_	_	_	NER=O|SpaceAfter=No
+2	Other	other	ADJ	JJ	_	_	_	_	NER=O
+3	notes	note	NOUN	NNS	_	_	_	_	NER=O|SpaceAfter=No
+4	**	**	PUNCT	.	_	_	_	_	NER=O
+
+# sent_id = ui_layout-s32
+# text = - On Mac and Ubuntu the visual image is not unpleasant, due to the fact that the "Help" button is placed to the left side of the panel and the scrollbar specific style, but the padding between the buttons and the scrollbar could be improved.
+1	-	-	PUNCT	:	_	_	_	_	NER=O
+2	On	on	ADP	IN	_	_	_	_	NER=O
+3	Mac	Mac	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:MacOS
+4	and	and	CCONJ	CC	_	_	_	_	NER=O
+5	Ubuntu	Ubuntu	PROPN	NNP	_	_	_	_	NER=B-ENV|KB=dbr:Ubuntu
+6	the	the	DET	DT	_	_	_	_	NER=O
+7	visual	visual	ADJ	JJ	_	_	_	_	NER=O
+8	image	image	NOUN	NN	_	_	_	_	NER=O
+9	is	be	AUX	VBZ	_	_	_	_	NER=O
+10	not	not	PART	RB	_	_	_	_	NER=O
+11	unpleasant	unpleasant	ADJ	JJ	_	_	_	_	NER=O|SpaceAfter=No
+12	,	,	PUNCT	,	_	_	_	_	NER=O
+13	due	due	ADJ	JJ	_	_	_	_	NER=O
+14	to	to	ADP	TO	_	_	_	_	NER=O
+15	the	the	DET	DT	_	_	_	_	NER=O
+16	fact	fact	NOUN	NN	_	_	_	_	NER=O
+17	that	that	SCONJ	IN	_	_	_	_	NER=O
+18	the	the	DET	DT	_	_	_	_	NER=O
+19	"	"	PUNCT	.	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+20	Help	Help	PROPN	NNP	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+21	"	"	PUNCT	.	_	_	_	_	NER=I-UI_ELEMENT
+22	button	button	NOUN	NN	_	_	_	_	NER=I-UI_ELEMENT
+23	is	be	AUX	VBZ	_	_	_	_	NER=O
+24	placed	place	VERB	VBN	_	_	_	_	NER=O
+25	to	to	ADP	TO	_	_	_	_	NER=O
+26	the	the	DET	DT	_	_	_	_	NER=O
+27	left	left	ADJ	JJ	_	_	_	_	NER=O
+28	side	side	NOUN	NN	_	_	_	_	NER=O
+29	of	of	ADP	IN	_	_	_	_	NER=O
+30	the	the	DET	DT	_	_	_	_	NER=O
+31	panel	panel	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+32	and	and	CCONJ	CC	_	_	_	_	NER=O
+33	the	the	DET	DT	_	_	_	_	NER=O
+34	scrollbar	scrollbar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+35	specific	specific	ADJ	JJ	_	_	_	_	NER=O
+36	style	style	NOUN	NN	_	_	_	_	NER=O|SpaceAfter=No
+37	,	,	PUNCT	,	_	_	_	_	NER=O
+38	but	but	CCONJ	CC	_	_	_	_	NER=O
+39	the	the	DET	DT	_	_	_	_	NER=O
+40	padding	padding	NOUN	NN	_	_	_	_	NER=O
+41	between	between	ADP	IN	_	_	_	_	NER=O
+42	the	the	DET	DT	_	_	_	_	NER=O
+43	buttons	button	NOUN	NNS	_	_	_	_	NER=B-UI_ELEMENT
+44	and	and	CCONJ	CC	_	_	_	_	NER=O
+45	the	the	DET	DT	_	_	_	_	NER=O
+46	scrollbar	scrollbar	NOUN	NN	_	_	_	_	NER=B-UI_ELEMENT
+47	could	could	AUX	MD	_	_	_	_	NER=O
+48	be	be	AUX	VB	_	_	_	_	NER=O
+49	improved	improve	VERB	VBN	_	_	_	_	NER=O|SpaceAfter=No
+50	.	.	PUNCT	.	_	_	_	_	NER=O
+

@@ -1,6 +1,6 @@
 # Аннотационная схема Bug Triage Dataset
 
-Версия 1.0 от 17.10.2026. Лабораторная работа №2 «Проектирование аннотационной схемы»
+Версия 1.1 от 17.10.2026 (1.0 — Лабораторная работа №2 «Проектирование аннотационной схемы»; 1.1 — дополнения ЛР3 «Разметка текстовых данных», [раздел 8](#8-многоуровневая-разметка-текста-лр3))
 (учебное пособие «Структурирование, разметка и обогащение данных», Муромцев Д.И., Шилин И.А., Исаев И.В.).
 
 Машиночитаемая версия схемы — [`annotation_schema/schema.json`](../annotation_schema/schema.json).
@@ -22,6 +22,7 @@
 5. [Форматы аннотаций](#5-форматы-аннотаций)
 6. [Верификация аннотаций](#6-верификация-аннотаций)
 7. [Размещение в репозитории](#7-размещение-в-репозитории)
+8. [Многоуровневая разметка текста (ЛР3)](#8-многоуровневая-разметка-текста-лр3)
 
 ---
 
@@ -439,11 +440,96 @@ annotations/
     └── <category>/<name>.TextGrid + <name>.json
 docs/
 ├── annotation_schema.md        ← этот документ
-└── annotation_validation_report.md
+├── annotation_validation_report.md
+└── text_markup_analysis.md     ← анализ разметки текста (ЛР3)
+annotations/text/markup/        ← многоуровневая разметка текста (ЛР3), см. раздел 8
 ```
+
+---
+
+## 8. Многоуровневая разметка текста (ЛР3)
+
+Добавлено в версии 1.1. Подробные результаты — [docs/text_markup_analysis.md](text_markup_analysis.md).
+
+### 8.1. Текстовый документ объекта
+
+Для каждого из 10 объектов (категорий дефектов) собран один текстовый документ из 2–4 баг-репортов этой
+категории, которые действительно её описывают (репорты прочитаны вручную, ошибочная предразметка категорий
+отброшена). Объём документов 1956–2414 символов (≈0,5–1 страница, отношение max/min = 1,23).
+Состав и причины отказа от кандидатов — `annotations/text/markup/corpus.json`.
+
+### 8.2. Уровни разметки
+
+| Уровень | Что размечается | Слой INCEpTION | Как получен |
+|---|---|---|---|
+| 1. Документ | документ объекта; внутри — баг-репорты с классами (report_id, ticket_type, category, component, severity, confidence) | `webanno.custom.BugReport` | вручную |
+| 2. Абзац | блок между пустыми строками (блок кода не разрывается) с типом раздела `TITLE…NOTES` | `webanno.custom.Section` | правила по заголовкам + ручная проверка |
+| 3. Предложение, токен | пункт списка, заголовок, строка кода — отдельные предложения; URL, путь, идентификатор, версия — один токен | Sentence, Token | NLTK punkt + свой токенизатор |
+| 3. Часть речи, лемма | UPOS (Universal Dependencies v2) и XPOS (Penn Treebank), лемма | POS, Lemma (встроенные) | NLTK perceptron + WordNet + межуровневые правила; документ `memory` проверен полностью |
+| 4. Сущности | 14 типов, атрибуты, ссылка DBpedia `kb_uri` | `webanno.custom.BugEntity` | словари и правила + ручная правка |
+| 5. Связи | 6 типов | `webanno.custom.EntityRelation` | правила + вручную |
+
+Пример уровней для заголовка `LdapGroupsMapping crashes with NullPointerException while going up the group hierarchy`:
+
+| Уровень | Разметка |
+|---|---|
+| документ / репорт | `crash` / `hadoop-13544320`: bug, crash, Auth-service, Critical |
+| абзац | `TITLE` |
+| токены и части речи | LdapGroupsMapping/PROPN crashes/VERB with/ADP NullPointerException/PROPN while/SCONJ going/VERB up/ADP the/DET group/NOUN hierarchy/NOUN |
+| сущности | `CODE_LOCATION` (class) LdapGroupsMapping, `SYMPTOM` (crash, observed) crashes, `EXCEPTION` NullPointerException |
+| связи | crashes `SYMPTOM_OF` LdapGroupsMapping; crashes `CAUSED_BY` NullPointerException |
+
+![Все уровни в INCEpTION](img/lr3_inception_all_levels.png)
+
+### 8.3. Новые сущности (шаг 4) и уточнения по результатам анализа (шаг 6)
+
+| Сущность / атрибут | Что размечается | Пример | Откуда |
+|---|---|---|---|
+| `PRODUCT` | продукт, сервис, библиотека как предмет обсуждения | Firefox, Apache Spark, PayPal, Guava | шаг 4: разбиение «окружения» на продукт и его версию |
+| `TECHNOLOGY` | протокол, стандарт, формат, язык, механизм | OAuth2, Kerberos, JDBC, CORS, CSS | шаг 4: характерный признак категории (authentication, network, security) |
+| `SYMPTOM` | проявление дефекта словами автора | crashes, freezes, memory leak, flickers | шаг 4: «описание» дефекта из примера пособия |
+| `FEATURE` | функция/подсистема продукта | Address Book, Payment methods | шаг 4 |
+| `ISSUE_REF` | ссылка на другой тикет | bug 1826149, SPARK-21551 | шаг 4, для графа знаний |
+| `LOCALE` | язык/локаль | Russian, Portuguese (pt-PT) | шаг 6 |
+| `SYMPTOM.polarity` | observed / negated / hypothetical | «does not freeze» → negated | шаг 6 |
+| `ENV.source` | text / user_agent | Firefox/112.0 в репорте Thunderbird | шаг 6 |
+| `kb_uri` | ресурс DBpedia | http://dbpedia.org/resource/Kerberos_(protocol) | шаг 5.2 |
+| `CODE_LOCATION.kind=config` | ключ конфигурации | hadoop.security.group…levels | шаг 6 |
+| связи `SYMPTOM_OF`, `CAUSED_BY`, `VERSION_OF` | симптом → объект, симптом → причина, версия → продукт | memory leak → Freezing | шаг 6 |
+
+Правила, введённые при разметке:
+
+* **PRODUCT или ENV.** PRODUCT — продукт как предмет обсуждения («restart Firefox»). ENV — конкретная версия или
+  платформа («Firefox 74», «Windows 11», `Firefox/112.0` в User-Agent).
+* **User-Agent.** Из строки размечаются только ОС и основной браузер (`source=user_agent`); `Mozilla/5.0`, `Gecko/…`,
+  `AppleWebKit/…`, `rv:` не размечаются. В репортах Thunderbird и SeaMonkey браузер из User-Agent получает `affected=unknown`.
+* **Код и цитаты.** Внутри блоков кода и цитат чужого контента размечаются только EXCEPTION, ERROR_MESSAGE, ERROR_CODE
+  и кадры стека.
+* **Вложение.** Сущности не пересекаются; исключение — сущности внутри ERROR_MESSAGE.
+* **Части речи.** URL, адреса `about:`, пути и составные идентификаторы — X. Имена классов в тексте — PROPN.
+  Первое слово пункта STEPS — VERB, симптом-глагол после подлежащего — VERB; `not` — PART, `be` — AUX.
+
+### 8.4. Инструмент и форматы
+
+Инструмент — **INCEpTION 38.4** (рекомендован пособием, шаг 2.1). Проект `lr3-bug-triage-text` собирается из схемы
+командой `python scripts/text_markup.py inception`. Слои и наборы тегов генерируются из `schema.json` и сохраняются
+в `annotations/text/markup/inception/project_layers.json`. Документы загружаются через Remote API
+в формате WebAnno TSV 3.3.
+
+| Формат | Файлы | Назначение |
+|---|---|---|
+| JSON со смещениями | `annotations/text/markup/json/<объект>.json` | основной, все уровни и метаданные разметки |
+| WebAnno TSV 3.3 | `annotations/text/markup/tsv/<объект>.tsv` | импорт в INCEpTION / WebAnno |
+| UIMA CAS XMI | `annotations/text/markup/inception/xmi/<объект>.zip` | экспорт из INCEpTION (DKPro, cassis) |
+| проект INCEpTION | `annotations/text/markup/inception/lr3-bug-triage-text.zip` | импорт проекта целиком |
+| CoNLL-U | `annotations/text/markup/conllu/<объект>.conllu` | LEMMA, UPOS, XPOS; в MISC — `NER` (BIO), `MSG`, `KB` |
+
+Разметка, выгруженная из INCEpTION, совпадает с исходной (`text_markup.py roundtrip`): 407 сущностей, 191 раздел,
+3915 тегов POS, 87 связей.
 
 ## Журнал изменений схемы
 
 | Версия | Дата | Изменения |
 |---|---|---|
 | 1.0 | 2026-10-17 | первая версия: 4 класса обращения, 9 разделов, 8 типов сущностей, 3 типа связей, разметка логов, 6 типов областей на изображениях, 7 типов сегментов аудио |
+| 1.1 | 2026-10-17 | ЛР3: сущности PRODUCT, TECHNOLOGY, SYMPTOM, FEATURE, ISSUE_REF, LOCALE; атрибуты `kb_uri`, `SYMPTOM.polarity`, `ENV.source`, `CODE_LOCATION.kind=config`; связи SYMPTOM_OF, CAUSED_BY, VERSION_OF, расширена OBSERVED_IN; вложение внутри ERROR_MESSAGE; уровни text_markup (абзац, предложение, токен, часть речи UD/Penn, лемма); слои INCEpTION. Обратно совместима с 1.0 |

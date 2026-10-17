@@ -1,6 +1,6 @@
 # Отчёт о проверке аннотаций
 
-Дата проверки: 2026-10-17 14:44. Скрипт: `scripts/annotation_tools.py validate`. Схема: `annotation_schema/schema.json`, версия 1.0.
+Дата проверки: 2026-10-17 16:00. Скрипт: `scripts/annotation_tools.py validate`. Схема: `annotation_schema/schema.json`, версия 1.1.
 
 | Что проверено | Количество |
 |---|---:|

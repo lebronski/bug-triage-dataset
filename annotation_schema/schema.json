@@ -1,8 +1,12 @@
 {
   "schema_name": "bug-triage-annotation-schema",
-  "version": "1.0",
+  "version": "1.1",
   "updated": "2026-10-17",
   "description": "Аннотационная схема набора Bug Triage Dataset: единые метки для текста (баг-репорты и логи), изображений (скриншоты) и аудио (голосовые обращения). Человекочитаемое описание — docs/annotation_schema.md.",
+  "changelog": {
+    "1.0": "ЛР2: исходная схема (классы обращения, разделы, 8 типов сущностей, 3 типа связей, логи, изображения, аудио)",
+    "1.1": "ЛР3 (разметка текстовых данных): шаг 4 — новые сущности PRODUCT, TECHNOLOGY, SYMPTOM, FEATURE, ISSUE_REF, атрибут kb_uri (ссылка DBpedia), CODE_LOCATION.kind=config; шаг 6 (по результатам анализа разметки) — LOCALE, SYMPTOM.polarity, ENV.source, связи SYMPTOM_OF, CAUSED_BY, VERSION_OF, OBSERVED_IN расширена, вложенные сущности внутри ERROR_MESSAGE, лингвистические уровни text_markup (абзац, предложение, токен, часть речи, лемма)"
+  },
   "text_construction": "Размечаемый текст баг-репорта = summary + \"\\n\\n\" + description. Смещения — индексы символов Unicode (как str в Python), начало включительно, конец исключительно.",
 
   "document_labels": {
@@ -110,7 +114,7 @@
     "CODE_LOCATION": {
       "description": "место в коде: класс, метод, файл, модуль, кадр стека, переменная",
       "attributes": {
-        "kind": {"type": "enum", "required": true, "values": ["class", "method", "file", "module", "frame", "variable"]},
+        "kind": {"type": "enum", "required": true, "values": ["class", "method", "file", "module", "frame", "variable", "config"]},
         "normalized": {"type": "string", "required": false, "hint": "для frame — Файл:строка, например JdbcUtils.scala:452"}
       }
     },
@@ -126,7 +130,10 @@
       "attributes": {
         "kind": {"type": "enum", "required": true, "values": ["os", "browser", "device", "runtime", "app_version", "library", "database"]},
         "normalized": {"type": "string", "required": false, "hint": "macOS 12, Firefox 68, 2.4.1, Android 14"},
-        "affected": {"type": "enum", "required": false, "values": ["yes", "no", "unknown"], "default": "unknown"}
+        "affected": {"type": "enum", "required": false, "values": ["yes", "no", "unknown"], "default": "unknown"},
+        "source": {"type": "enum", "required": false, "values": ["text", "user_agent"], "default": "text", "since": "1.1",
+                   "hint": "user_agent — значение взято из строки User-Agent; в репортах Thunderbird/SeaMonkey это браузер автора отчёта, а не окружение продукта"},
+        "kb_uri": {"type": "uri", "required": false, "since": "1.1", "hint": "ресурс DBpedia, напр. http://dbpedia.org/resource/Microsoft_Windows"}
       }
     },
     "UI_ELEMENT": {
@@ -142,6 +149,56 @@
         "normalized": {"type": "string", "required": false, "hint": "8 s, 48 MB"}
       }
     },
+    "PRODUCT": {
+      "since": "1.1",
+      "description": "программный продукт, сервис или библиотека, о которых идёт речь (Firefox, Thunderbird, Apache Spark, PayPal, Guava). Название с версией в окружении — ENV app_version",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["application", "service", "framework", "library", "tool", "release"]},
+        "normalized": {"type": "string", "required": false, "hint": "каноническое имя: Apache Cassandra, Visual Studio Code"},
+        "kb_uri": {"type": "uri", "required": false, "hint": "http://dbpedia.org/resource/Firefox"}
+      }
+    },
+    "TECHNOLOGY": {
+      "since": "1.1",
+      "description": "протокол, стандарт, формат, язык или механизм: OAuth2, Kerberos, JDBC, DNS, TLS, CORS, CSS, JSON",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["protocol", "standard", "format", "language", "mechanism"]},
+        "normalized": {"type": "string", "required": false},
+        "kb_uri": {"type": "uri", "required": false, "hint": "http://dbpedia.org/resource/OAuth"}
+      }
+    },
+    "SYMPTOM": {
+      "since": "1.1",
+      "description": "проявление дефекта словами автора: crashes, freezes, memory leak, flickers, not translated, nothing happens",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["crash", "hang", "slowness", "resource_leak", "visual_defect", "wrong_output", "data_corruption", "failure", "vulnerability"]},
+        "polarity": {"type": "enum", "required": true, "values": ["observed", "negated", "hypothetical"], "since": "1.1 (шаг 6)",
+                     "hint": "observed — наблюдается; negated — отрицается («no flicker», «does not freeze»); hypothetical — желаемое/условное (раздел EXPECTED, «should»)"}
+      }
+    },
+    "FEATURE": {
+      "since": "1.1",
+      "description": "функция или подсистема продукта, в которой проявляется дефект: Address Book, Payment methods, Firefox Translations, startup",
+      "attributes": {
+        "normalized": {"type": "string", "required": false}
+      }
+    },
+    "LOCALE": {
+      "since": "1.1 (шаг 6)",
+      "description": "язык или локаль интерфейса/контента: English, Russian, Portuguese (pt-PT)",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["language", "locale"]},
+        "normalized": {"type": "string", "required": false, "hint": "код BCP 47: ru, pt-PT"},
+        "kb_uri": {"type": "uri", "required": false}
+      }
+    },
+    "ISSUE_REF": {
+      "since": "1.1",
+      "description": "ссылка на другой тикет: bug 1826149, SPARK-21551, CASSANDRA-17352 (для связывания тикетов в графе знаний, ЛР6)",
+      "attributes": {
+        "normalized": {"type": "string", "required": false, "hint": "bug 1840792, SPARK-21551"}
+      }
+    },
     "PII": {
       "description": "персональные и чувствительные данные — подлежат маскированию перед публикацией",
       "attributes": {
@@ -153,7 +210,44 @@
   "relation_types": {
     "HAS_MESSAGE": {"from": ["EXCEPTION", "ERROR_CODE"], "to": ["ERROR_MESSAGE"], "description": "исключение/код и его текст"},
     "THROWN_AT": {"from": ["EXCEPTION"], "to": ["CODE_LOCATION"], "description": "где в коде возникло исключение (верхний кадр)"},
-    "OBSERVED_IN": {"from": ["EXCEPTION", "ERROR_CODE", "ERROR_MESSAGE", "UI_ELEMENT", "METRIC"], "to": ["ENV"], "description": "в каком окружении наблюдается проблема"}
+    "OBSERVED_IN": {"from": ["EXCEPTION", "ERROR_CODE", "ERROR_MESSAGE", "UI_ELEMENT", "METRIC", "SYMPTOM"], "to": ["ENV", "LOCALE"], "description": "в каком окружении (версии, ОС, локали) наблюдается проблема"},
+    "SYMPTOM_OF": {"since": "1.1", "from": ["SYMPTOM"], "to": ["PRODUCT", "UI_ELEMENT", "FEATURE", "CODE_LOCATION", "TECHNOLOGY"], "description": "у какого объекта проявляется симптом"},
+    "CAUSED_BY": {"since": "1.1 (шаг 6)", "from": ["SYMPTOM"], "to": ["EXCEPTION", "CODE_LOCATION", "TECHNOLOGY", "PRODUCT", "FEATURE", "UI_ELEMENT", "SYMPTOM"], "description": "чем, по словам автора, вызван симптом (memory leak -> freezing, messageBody.css -> not rendered)"},
+    "VERSION_OF": {"since": "1.1", "from": ["ENV"], "to": ["PRODUCT"], "description": "версия (ENV app_version) относится к продукту"}
+  },
+  "nesting": {
+    "since": "1.1",
+    "rule": "сущности не пересекаются, кроме вложения любых сущностей внутрь ERROR_MESSAGE (код ошибки, исключение, продукт внутри текста сообщения)"
+  },
+
+  "text_markup": {
+    "since": "1.1",
+    "description": "Многоуровневая лингвистическая разметка текстовых документов (ЛР3). Документ = все отобранные баг-репорты одного объекта (категории). Инструмент — INCEpTION; описание — docs/annotation_schema.md, раздел 8.",
+    "levels": {
+      "1_document": "текстовый документ об объекте (категории дефекта); внутри — баг-репорты (слой BugReport: report_id + классы обращения)",
+      "2_paragraph": "абзац (блок, разделённый пустой строкой; блок кода не разрывается) с типом раздела section_labels",
+      "3_sentence_token": "предложения (пункт списка, строка кода, заголовок — отдельное предложение) и токены (URL, путь, идентификатор кода, версия — один токен)",
+      "3_pos_lemma": "часть речи: UPOS (Universal Dependencies v2) + XPOS (Penn Treebank); лемма",
+      "4_entities": "именованные сущности entity_labels с атрибутами и ссылкой на DBpedia (kb_uri)",
+      "5_relations": "связи relation_types между сущностями"
+    },
+    "upos_tags": ["ADJ", "ADP", "ADV", "AUX", "CCONJ", "DET", "INTJ", "NOUN", "NUM", "PART", "PRON", "PROPN", "PUNCT", "SCONJ", "SYM", "VERB", "X"],
+    "rules": {
+      "pos_code_tokens": "URL, адрес about:, e-mail, путь и составной идентификатор кода — UPOS X (XPOS ADD для адресов); имя класса/исключения в тексте — PROPN",
+      "pos_imperative_in_steps": "первое слово пункта в разделе STEPS, если это глагол, — VERB (повелительное наклонение); теггер ошибочно даёт PROPN/ADJ",
+      "pos_symptom_verbs": "однословный SYMPTOM после подлежащего (Firefox crashes, Freezes) — VERB",
+      "no_entities_in_code_and_quotes": "внутри блоков кода и цитат чужого контента сущности не размечаются, кроме EXCEPTION, ERROR_MESSAGE, ERROR_CODE и кадров стека",
+      "user_agent": "из строки User-Agent размечаются только ОС и основной браузер (ENV, source=user_agent); Mozilla/5.0, Gecko, AppleWebKit, Safari, rv: — нет",
+      "product_vs_env": "PRODUCT — продукт как предмет обсуждения; ENV — конкретная версия/платформа (Firefox 74, Windows 11, Firefox/112.0 в User-Agent)"
+    },
+    "inception_layers": {
+      "webanno.custom.BugReport": "span: report_id, ticket_type, category, component, severity, confidence",
+      "webanno.custom.Section": "span: label (section_labels)",
+      "webanno.custom.BugEntity": "span: label, kind, normalized, affected, polarity, source, kb_uri",
+      "webanno.custom.EntityRelation": "relation над BugEntity: type (relation_types)",
+      "de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS": "встроенный: PosValue (XPOS), coarseValue (UPOS)",
+      "de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma": "встроенный: value"
+    }
   },
 
   "log_labels": {
@@ -260,6 +354,10 @@
     "text_conllu": "annotations/text/conllu/<report_id>.conllu — CoNLL-U, BIO-метки сущностей в столбце MISC (генерируется)",
     "logs": "annotations/text/logs/<category>/<log_name>.jsonl — одна строка JSON на строку лога",
     "images": "annotations/images/screenshots_coco.json — COCO JSON (импорт/экспорт CVAT и Label Studio)",
-    "audio": "annotations/audio/<category>/<name>.TextGrid (Praat) + <name>.json (классы записи и сущности)"
+    "audio": "annotations/audio/<category>/<name>.TextGrid (Praat) + <name>.json (классы записи и сущности)",
+    "text_markup_json": "annotations/text/markup/json/<category>.json — все уровни ЛР3 со смещениями (основной формат)",
+    "text_markup_tsv": "annotations/text/markup/tsv/<category>.tsv — WebAnno TSV 3.3 (импорт в INCEpTION/WebAnno)",
+    "text_markup_xmi": "annotations/text/markup/inception/xmi/<category>.xmi — UIMA CAS XMI, экспорт из INCEpTION",
+    "text_markup_conllu": "annotations/text/markup/conllu/<category>.conllu — CoNLL-U: LEMMA, UPOS, XPOS, NER (BIO) и KB в MISC"
   }
 }
