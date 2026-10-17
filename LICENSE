@@ -1,0 +1,39 @@
+Лицензии компонентов репозитория bug-triage-dataset
+====================================================
+
+1. Код (папка scripts/) — MIT License
+
+Copyright (c) 2026 lebowskiybig
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+2. data/text/bug_reports/ и data/text/bug_reports.csv — CC BY 4.0
+   Источник: GitBugs, https://github.com/av9ash/gitbugs
+   Patil A. GitBugs: Bug Reports for Duplicate Detection, Retrieval Augmented
+   Generation, Triage, and More. arXiv:2504.09651, 2025.
+   https://creativecommons.org/licenses/by/4.0/
+
+3. data/text/logs/ — фрагменты LogHub, https://github.com/logpai/loghub
+   Используются на условиях LogHub: свободно для исследовательских и учебных
+   целей при ссылке на Zhu J., He S., He P., Liu J., Lyu M.R. Loghub: A Large
+   Collection of System Log Datasets for AI-driven Log Analytics. ISSRE 2023.
+
+4. data/images/ и data/audio/ — CC BY 4.0, автор lebowskiybig.
+   Аудио синтезировано движком espeak-ng (GPLv3); лицензия движка не
+   распространяется на созданные им записи.

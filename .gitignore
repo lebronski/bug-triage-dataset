@@ -1,0 +1,7 @@
+# исходные датасеты скачиваются scripts/download_sources.sh и не хранятся в репозитории
+sources/
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+Thumbs.db
