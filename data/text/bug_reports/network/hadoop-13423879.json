@@ -1,0 +1,18 @@
+{
+  "report_id": "hadoop-13423879",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "hadoop",
+  "tracker": "Apache Jira",
+  "issue_id": "13423879",
+  "url": null,
+  "summary": "fix bugs when looking up record from upstream DNS servers.",
+  "description": "When query A record which is chained by CNAME, YARN Registry DNS Server does not properly respond. Some CNAME records are missing.\n\nFor example, \"repo.maven.apache.org\" is chaned as follows:\n\nrepo.maven.apache.org.\t21317\tIN\tCNAME\trepo.apache.maven.org.\nrepo.apache.maven.org.\t20114\tIN\tCNAME\tmaven.map.fastly.net.\nmaven.map.fastly.net.\t7\tIN\tA\t199.232.192.215\nmaven.map.fastly.net.\t7\tIN\tA\t199.232.196.215\n\nIf ask A record for \"repo.maven.apache.org\" using \"dig\" or \"nslookup\", YARN Registry DNS Server will give answers similar to this:\n(10.1.2.3, 10.8.8.8 IP is virtual)\n\n{code}\n$ nslookup repo.maven.apache.org 10.1.2.3\nServer:\t\t10.1.2.3\nAddress:\t10.1.2.3#53\n\nNon-authoritative answer:\nrepo.maven.apache.org\tcanonical name = repo.apache.maven.org.\nName:\tmaven.map.fastly.net\nAddress: 151.101.196.215\n** server can't find repo.apache.maven.org: NXDOMAIN\n{code}\n\nThe reason why you can see \"NXDOMAIN\", \"nslookup\" will query \"A\" & \"AAAA\" records.\nIf there is no answer from other dns server, \"answers == null\" but YARN Registry DNS Server has a bug. There is no null handling.\n\n{code:java}\n    // Forward lookup to primary DNS servers\n    Record[] answers = getRecords(name, type);\n    try {\n      for (Record r : answers) {\n        if (!response.findRecord(r)) {\n          if (r.getType() == Type.SOA) {\n            response.addRecord(r, Section.AUTHORITY);\n          } else {\n            response.addRecord(r, Section.ANSWER);\n          }\n        }\n        if (r.getType() == Type.CNAME) {\n          Name cname = r.getName();\n          if (iterations < 6) {\n            remoteLookup(response, cname, type, iterations + 1);\n          }\n        }\n      }\n    } catch (NullPointerException e) {\n      return Rcode.NXDOMAIN;\n    } catch (Throwable e) {\n      return Rcode.SERVFAIL;\n    }\n    return Rcode.NOERROR;\n{code}\n\nIt should be like this:\n\n{code}\nnslookup repo.maven.apache.org 10.8.8.8\nServer:\t\t10.8.8.8\nAddress:\t10.8.8.8#53\n\nNon-authoritative answer:\nrepo.maven.apache.org\tcanonical name = repo.apache.maven.org.\nrepo.apache.maven.org\tcanonical name = maven.map.fastly.net.\nName:\tmaven.map.fastly.net\nAddress: 151.101.196.215\n{code}\n\nI will make a pull request at https://github.com/apache/hadoop soon.",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Open",
+  "resolution": null,
+  "created": "21/Jan/22 01:16",
+  "affects_versions": "3.1.2",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

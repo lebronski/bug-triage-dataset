@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1715640",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1715640",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1715640",
+  "summary": "FIrefox freezes while opening finder to upload files",
+  "description": "User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0\n\nSteps to reproduce:\n\nTwo ways:\n1. Open Google Drive, click upload file, Firefox freezes\n2. Open new tab, click open file, Firefox freezes\n\nActual results:\n\nTwo ways:\n1. Open Google Drive, click upload file, Firefox freezes\n2. Open new tab, click open file, Firefox freezes\n\nExpected results:\n\nTwo ways:\n1. Open Google Drive, click upload file, Firefox does not freeze\n2. Open new tab, click open file, Firefox does not freeze",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2021-06-09 19:50:46+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

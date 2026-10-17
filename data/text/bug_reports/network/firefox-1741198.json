@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1741198",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1741198",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1741198",
+  "summary": "Buttons inside the Network Settings panel are misplaced with the scrollbar on display",
+  "description": "**Affected versions**\n- 94.0.1\n- 95.0b7\n- 96.0a1\n\n**Affected platforms**\n- Windows 10\n\n**Steps to reproduce**\n1. Open about:preferences#general\n2. Click the Settings button from the Network Settings section\n3. Observe the buttons at the bottom of the panel (reduce the width of the browser in order to trigger the scrollbar presence)\n\n**Expected result**\n- “OK”, “Cancel” and “Help” buttons are properly aligned in relation to the rest of the page elements \n\n**Actual result**\n- The scrollbar is too close to the \"Help\" button\n- The \"Help\" button is not aligned with the scrollbar right margin\n\n**Regression range**\n- Last good revision: 8aa1b80a8c6b66cccc2e37080fbf6197eee8d801\n- First bad revision: 1716229005d8b97f305bd663b8bc8d3fec4a4f3a\n- Pushlog:\nhttps://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a\nRegresor: [1700109](https://bugzilla.mozilla.org/show_bug.cgi?id=1700109) (Proton implementation)\n\n**Other notes**\n- On Mac and Ubuntu the visual image is not unpleasant, due to the fact that the \"Help\" button is placed to the left side of the panel and the scrollbar specific style, but the padding between the buttons and the scrollbar could be improved.",
+  "priority_original": "P5",
+  "severity_prelabel": "Minor",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2021-11-15 15:32:07+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

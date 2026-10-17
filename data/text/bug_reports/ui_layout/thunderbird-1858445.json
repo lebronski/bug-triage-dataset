@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1858445",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1858445",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1858445",
+  "summary": "comm/mail/test/static/browser_parsable_css.js | Got error message for chrome://messenger/skin/shared/message-bar.css: Ruleset ignored due to bad selector. -",
+  "description": "Something needs porting/fixing, not sure what\n\ncomm/mail/test/static/browser_parsable_css.js | Got error message for chrome://messenger/skin/shared/message-bar.css: Ruleset ignored due to bad selector. -",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2023-10-11 14:54:42+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

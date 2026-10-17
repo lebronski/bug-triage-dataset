@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-95451",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "95451",
+  "url": "https://github.com/microsoft/vscode/issues/95451",
+  "summary": "NPM Audit shows vulnerability in minimist when authoring extension",
+  "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- Please search existing issues to avoid creating duplicates. -->\n<!-- Also please test using the latest insiders build to make sure your issue has not already been fixed: https://code.visualstudio.com/insiders/ -->\n\n<!-- Use Help > Report Issue to prefill these. -->\n- VSCode Version:\nVersion: 1.44.1 (user setup)\nCommit: a9f8623ec050e5f0b44cc8ce8204a1455884749f\nDate: 2020-04-11T01:48:12.622Z\nElectron: 7.1.11\nChrome: 78.0.3904.130\nNode.js: 12.8.1\nV8: 7.8.279.23-electron.0\n\n- OS Version:\nOS: Windows_NT x64 10.0.18363\n\nSteps to Reproduce:\n\n1. Author an extension using VSCode as a dev dependency. Our package.json looks like this\n```\n    \"devDependencies\": {\n        \"@types/glob\": \"^7.1.1\",\n        \"@types/jquery\": \"^3.3.35\",\n        \"@types/markdown-it\": \"^10.0.0\",\n        \"@types/mocha\": \"^7.0.2\",\n        \"@types/node\": \"^13.11.1\",\n        \"@types/sarif\": \"^2.1.2\",\n        \"mocha\": \"^7.1.1\",\n        \"tslint-microsoft-contrib\": \"^6.0.0\",\n        \"tslint-no-unused-expression-chai\": \"^0.1.4\",\n        \"typescript\": \"^3.8.3\",\n        \"vscode\": \"^1.1.36\",\n        \"vscode-test\": \"^1.3.0\",\n        \"tslint\": \"^6.1.1\"\n    },\n```\nThese are all the latest packages. When running npm audit:\n\n                       === npm audit security report ===\n                                 Manual Review\n             Some vulnerabilities require your attention to resolve\n          Visit https://go.npm.me/audit-guide for additional guidance\n  Low             Prototype Pollution\n  Package         minimist\n  Patched in      >=0.2.1 <1.0.0 || >=1.2.3\n  Dependency of   vscode [dev]\n  Path            vscode > mocha > mkdirp > minimist\n  More info       https://npmjs.com/advisories/1179\nfound 1 low severity vulnerability in 453 scanned packages\n  1 vulnerability requires manual review. See the full report for details.\n\n<!-- Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2020-04-16 13:33:22+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

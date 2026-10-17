@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13334982",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13334982",
+  "url": null,
+  "summary": "ScalarSubquery should returns the first two rows to avoid Driver OOM",
+  "description": "{noformat}\nException in thread \"subquery-2871\" java.lang.OutOfMemoryError: Requested array size exceeds VM limit\n at scala.collection.mutable.ResizableArray$class.ensureSize(ResizableArray.scala:103)\n at scala.collection.mutable.ArrayBuffer.ensureSize(ArrayBuffer.scala:48)\n at scala.collection.mutable.ArrayBuffer.$plus$eq(ArrayBuffer.scala:84)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1$$anonfun$apply$2.apply(SparkPlan.scala:352)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1$$anonfun$apply$2.apply(SparkPlan.scala:352)\n at scala.collection.Iterator$class.foreach(Iterator.scala:893)\n at org.apache.spark.sql.execution.SparkPlan$$anon$1.foreach(SparkPlan.scala:330)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1.apply(SparkPlan.scala:352)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1.apply(SparkPlan.scala:351)\n at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)\n at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)\n at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:351)\n at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.executeCollect(AdaptiveSparkPlanExec.scala:274)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1$$anonfun$apply$3.apply(basicPhysicalOperators.scala:830)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1$$anonfun$apply$3.apply(basicPhysicalOperators.scala:827)\n at org.apache.spark.sql.execution.SQLExecution$$anonfun$withExecutionId$1.apply(SQLExecution.scala:132)\n at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:156)\n at org.apache.spark.sql.execution.SQLExecution$.withExecutionId(SQLExecution.scala:129)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1.apply(basicPhysicalOperators.scala:827)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1.apply(basicPhysicalOperators.scala:827)\n at scala.\n{noformat}",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "12/Oct/20 10:33",
+  "affects_versions": "3.1.0",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

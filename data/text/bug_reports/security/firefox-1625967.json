@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1625967",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1625967",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1625967",
+  "summary": "The “Learn more” and the “Go to <website_name>” links overlap with the elements from the “Vulnerable Password”/”Breached Website” notification when the browser is resized",
+  "description": "[Affected versions]:\n- Firefox Nightly 76.0a1 (Build ID: 20200330094747)\n\n[Affected Platforms]:\n- Windows 10 x64\n- Mac 10.14.6\n- Ubuntu 18.04 x64\n\n[Prerequisites]:\n- Have a profile with at least 3 saved logins in which one is vulnerable.\n\n[Steps to reproduce]:\n1. Open the Firefox browser with the profile from prerequisites.\n2. Select a vulnerable login.\n3. Resize the browser to less than 50% and observe the link from the “Vulnerable Password” notification.\n\n[Expected result]:\n- The “Learn more” and the “Go to <website_name>” links are correctly displayed and rendered.\n\n[Actual result]:\n- The “Learn more” and the “Go to <website_name>” links overlap with the elements from the notification.\n\n[Notes]:\n- Attached a screen recording with the issue.",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "VERIFIED",
+  "resolution": "FIXED",
+  "created": "2020-03-30 14:29:41+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

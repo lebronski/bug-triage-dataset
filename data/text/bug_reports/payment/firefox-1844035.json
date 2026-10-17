@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1844035",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1844035",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1844035",
+  "summary": "[macOS] Payment methods cannot be imported from Brave",
+  "description": "**Found in**\n* 117.0a1 (2023-07-17)\n\n**Affected versions**\n* 117.0a1 (2023-07-13)\n* 116.0b6\n* 115.0.2\n\n**Tested platforms**\n* Affected platforms: macOS 12\n* Unaffected platforms: Ubuntu 22, Windows 10x64\n\n**Preconditions**\n* credit cards saved in Brave\n\n**Steps to reproduce**\n1. Open the migration window and import Payment data.\n\n**Expected result** \n* Payment methods are imported.\n\n**Actual result**\n* Payment methods are not imported. \n\n**Regression range**\n* Not a regression. Reproducible with bug 1826149 after Payment methods were implemented.\n\n**Additional notes**\n* Attached browser console errors.",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2023-07-18 11:13:00+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-167015",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "167015",
+  "url": "https://github.com/microsoft/vscode/issues/167015",
+  "summary": "Disabling Proxy support does not disable proxy agent redirection",
+  "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: Latest\n- OS Version: Windows 11\n\nSteps to Reproduce:\n\n1. Set HTTP_PROXY env variable to garbage value.\n2. Start VS Code and set \"http.proxySupport\": \"off\" in settings.json\n3. Make an HTTP Request (in my case I tested authorization with azurecore provider (similar to microsoft authenticator provider) - from Azure Data Studio)\n4. Notice HTTP request will fail.\n\nExpected: Since http.proxysupport is OFF, authentication should not use proxy URL.\n\n#### Explanation\nVSCode should not send Proxy URL in request if proxy support is disabled. As there is no other way to override these settings and skip any injected HTTP_PROXY env variables if users don't want to use Proxy. The Proxy agent set in code despite this proxy support turned \"off\" causes authentication failures when proxy is not expected to play a role.\n\nI have also tried to use startup params from here, but they don't work either: https://code.visualstudio.com/docs/setup/network#_proxy-server-support\n\n#### Code Issue\nI believe this code is responsible to set Proxy Agent:\nhttps://github.com/microsoft/vscode/blob/3df5eeedfea64cef21627a4ff351db4c6e8fb559/src/vs/platform/request/node/requestService.ts#L83-L93\n\nI think all these 3 settings (agent, strictSSL, proxy headers) should be set only when proxy support is enabled.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": null,
+  "created": "2022-11-22 22:46:32+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

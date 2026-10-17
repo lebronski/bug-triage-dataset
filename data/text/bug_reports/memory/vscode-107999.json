@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-107999",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "107999",
+  "url": "https://github.com/microsoft/vscode/issues/107999",
+  "summary": "Memory leak",
+  "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- Please search existing issues to avoid creating duplicates. -->\n<!-- Also please test using the latest insiders build to make sure your issue has not already been fixed: https://code.visualstudio.com/insiders/ -->\n\nVersion: 1.50.0-insider\nCommit: 0ecb64a2c8945dd1193967019f0734af539ca9c3\nDate: 2020-10-02T13:37:26.948Z\nElectron: 9.2.1\nChrome: 83.0.4103.122\nNode.js: 12.14.1\nV8: 8.3.110.13-electron.0\nOS: Linux x64 5.8.13-arch1-1\n\nSteps to Reproduce:\n\n1. Prepare a large text file (Citylots.json is ~190MB):\n```shell\nwget \"https://github.com/zemirco/sf-city-lots-json/blob/master/citylots.json\"\ncp citylots.json evenlarger.json\ncat citylots.json >> evenlarger.json\ncat citylots.json >> evenlarger.json\n```\n\n2. Open `evenlarger.json` in vscode.\n3. Scroll around.\n4. Close the file.\n5. Observe the memory usage through \"Process Explorer\".\n\nEven after ~30 minutes, the memory usage is still high:\n\n![image](https://user-images.githubusercontent.com/5961244/94969753-96531480-0503-11eb-8314-17419ff4acf6.png)\n\nDoes this issue occur when all extensions are disabled?: Yes\n\nNote: This seems like a regression because I didn't had this issue before, however I don't know which insiders/stable release caused this.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2020-10-02 21:06:32+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

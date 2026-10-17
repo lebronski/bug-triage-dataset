@@ -1,0 +1,18 @@
+{
+  "report_id": "hadoop-13538585",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "hadoop",
+  "tracker": "Apache Jira",
+  "issue_id": "13538585",
+  "url": null,
+  "summary": "[ABFS][Backoff-Optimization] Have a Static retry policy for connection timeout failures",
+  "description": "Today when a request fails with connection timeout, it falls back into the loop for exponential retry. Unlike Azure Storage, there are no guarantees of success on exponentially retried request or recommendations for ideal retry policies for Azure network or any other general failures. Faster failure and retry might be more beneficial for such generic connection timeout failures. \n\nThis PR introduces a new Static Retry Policy which will currently be used only for Connection Timeout failures. It means all the requests failing with Connection Timeout errors will be retried after a constant retry(sleep) interval independent of how many times that request has failed. Max Retry Count check will still be in place.\n\nFollowing Configurations will be introduced in the change:\n # \"fs.azure.static.retry.for.connection.timeout.enabled\" - default: true, true: static retry will be used for CT, false: Exponential retry will be used.\n # \"fs.azure.static.retry.interval\" - default: 1000ms.\n\nThis also introduces a new field in x-ms-client-request-id only for the requests that are being retried after connection timeout failure. New filed will tell what retry policy was used to get the sleep interval before making this request.\nHeader \"x-ms-client-request-id \" right now has only the retryCount and retryReason this particular API call is. For ex:  :eb06d8f6-5693-461b-b63c-5858fa7655e6:29cb0d19-2b68-4409-bc35-cb7160b90dd8:::CF:1_CT.\n\nMoving ahead for retryReason \"CT\" it will have retry policy abbreviation as well.\nFor ex:  :eb06d8f6-5693-461b-b63c-5858fa7655e6:29cb0d19-2b68-4409-bc35-cb7160b90dd8:::CF:1_CT_E.",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "02/Jun/23 11:35",
+  "affects_versions": "3.3.4",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

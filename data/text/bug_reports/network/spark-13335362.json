@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13335362",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13335362",
+  "url": null,
+  "summary": "Make SocketAuthServer socket timeout configurable",
+  "description": "In SPARK-21551 the socket timeout for the Pyspark applications has been increased from 3 to 15 seconds. However it is still hardcoded.\nIn certain situations even the 15 seconds is not enough, so it should be made configurable. \nThis is requested after seeing it in real-life workload failures.\nAlso it has been suggested and requested in an earlier comment in [SPARK-18649|https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498]\n\nIn \nSpark 2.4 it is under\n[PythonRDD.scala|https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899]\nin Spark 3.x the code has been moved to\n[SocketAuthServer.scala|https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51]\n{code}\nserverSocket.setSoTimeout(15000)\n{code}\nPlease include this in both 2.4 and 3.x branches.",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "14/Oct/20 08:20",
+  "affects_versions": "2.4.7",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1737223",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1737223",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1737223",
+  "summary": "Thunderbird Freezing/Crashing due to memory leak",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\n\nSteps to reproduce:\n\n1. Open Thunderbird\n2. Check email\n3. Freezes due to a huge memory leak\n4. Crashes\n\nI use version 94.0b4 (64-bit) on Windows 11\n\nActual results:\n\nWhen I click on emails the whole client will freeze and then crash.\n\nExpected results:\n\nI should be able to check my emails without having to reopen Thunderbird multiple times just to get through the emails. I have resorted to checking email on the web due to this issue.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2021-10-22 07:27:45+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

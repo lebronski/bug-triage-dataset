@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13553213",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13553213",
+  "url": null,
+  "summary": "Cache Invalidation Issue with JDBC Table",
+  "description": "We have identified a cache invalidation issue when caching JDBC tables in Spark SQL. The cached table is unexpectedly invalidated when queried, leading to a re-read from the JDBC table instead of retrieving data from the cache.\nExample SQL:\n\n{code:java}\nCACHE TABLE cache_t SELECT * FROM mysql.test.test1;\nSELECT * FROM cache_t;\n{code}\n\nExpected Behavior:\nThe expectation is that querying the cached table (cache_t) should retrieve the result from the cache without re-evaluating the execution plan.\n\nActual Behavior:\nHowever, the cache is invalidated, and the content is re-read from the JDBC table.\n\nRoot Cause:\nThe issue lies in the 'CacheData' class, where the comparison involves 'JDBCTable.' The 'JDBCTable' is a case class:\n{code:java}\ncase class JDBCTable(ident: Identifier, schema: StructType, jdbcOptions: JDBCOptions)\n{code}\n\nThe comparison of non-case class components, such as 'jdbcOptions,' involves pointer comparison. This leads to unnecessary cache invalidation.",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "07/Oct/23 03:36",
+  "affects_versions": "3.5.0",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "cassandra-13324891",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "cassandra",
+  "tracker": "Apache Jira",
+  "issue_id": "13324891",
+  "url": null,
+  "summary": "Performance regression for queries accessing multiple rows",
+  "description": "This is spin off from CASSANDRA-16036.\n\nIn testing 4.0 relative to 3.0* I found that queries which accessed multiple rows to have a noticeable performance decrease; two queries were used in the test (more may be impacted, others might not): query partition (table has clustering keys) with LIMIT, and query clustering keys using IN clause.\n\nIn the below graphs the green line is 3.0 and the other lines are 4.0 (with and without chunk cache)\n\nPartition with LIMIT\n\n!https://issues.apache.org/jira/secure/attachment/13009751/clustering-slice_latency_selects_baseline.png!\n!https://issues.apache.org/jira/secure/attachment/13009750/clustering-slice_latency_under90_selects_baseline.png!\n\nCluster with IN clause\n\n!https://issues.apache.org/jira/secure/attachment/13009749/clustering-in-clause_latency_selects_baseline.png!\n!https://issues.apache.org/jira/secure/attachment/13009748/clustering-in-clause_latency_under90_selects_baseline.png!",
+  "priority_original": "Normal",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Cannot Reproduce",
+  "created": "27/Aug/20 18:28",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

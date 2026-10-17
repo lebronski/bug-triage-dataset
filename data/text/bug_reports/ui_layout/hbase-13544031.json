@@ -1,0 +1,18 @@
+{
+  "report_id": "hbase-13544031",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "hbase",
+  "tracker": "Apache Jira",
+  "issue_id": "13544031",
+  "url": null,
+  "summary": "Synchronous replication should check if the file system supports truncate API",
+  "description": "Ok. I missed this but I was just told that the synchronous replication leverages the truncate() FS API.\n\nhttps://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/master/replication/SyncReplicationReplayWALManager.java#L282\n\nOzone does not implement truncate so calling this method on the WAL FS will result in an exception. It would be a better user experience to alert user that this is not supported from the start.",
+  "priority_original": "Minor",
+  "severity_prelabel": "Minor",
+  "status": "Open",
+  "resolution": null,
+  "created": "18/Jul/23 21:03",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

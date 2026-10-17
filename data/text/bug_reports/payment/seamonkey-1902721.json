@@ -1,0 +1,18 @@
+{
+  "report_id": "seamonkey-1902721",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "seamonkey",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1902721",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1902721",
+  "summary": "www.yournextit.de - Menu (Laptop) does not work. When scrolling up, the menu is not on screen. Products are not displayed correctly. Nothing visible in the yellow block. No space between the payment methods and social media logos.",
+  "description": "Steps to reproduce:\n\nhttps://www.yournextit.de/\n\nSeaMonkey 2.53.18.2\nUseragent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0\nBuildnaam: 20240318103520\n\nActual results:\n\nMenu (Laptop) does not work. When scrolling up, the menu is not on screen. Products are not displayed correctly. Nothing visible in the yellow block. No space between the payment methods and social media logos.\n\nExpected results:\n\nComplete and normal working of the internetsite.\n\nTested with Firefox.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "UNCONFIRMED",
+  "resolution": null,
+  "created": "2024-06-14 17:54:46+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1733438",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1733438",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1733438",
+  "summary": "Password input field does not have focus in Chat Account Wizard (no visible default focus at all, also in 'Summary' step)",
+  "description": "+++ This bug was initially created as a clone of Bug #1729948 +++\n\nSTR\n\n1.  ≡ > New > Chat Account --> Chat Account Wizard\n2. Enter user name / server\n3. - Press Enter to reach password dialog\n   - Alternatively, use Next button\n\nActual\n- password input does not have focus\n- screen readers lost\n- If next button was used in step 3, focus remains on next button in password dialog\n\nExpected\n- Regardless of method used to reach password dialog:\n- Password field must have focus when this dialog is shown\n\nFrom bug 1729948, comment 0:\n\nIn the following screen, you’ll be asked for a password… Except that  \nthe password field doesn’t have the focus by default (the whole dialog  \nhas the focus actually). And so, if you’re relying only on audio output,  \nyou’ll have no idea as to what is currently being asked of you. (You need  \nto press Tab once to bring the focus into the password field.)\n\nIF you hadn’t hit Return in the previous screen but instead used the  \n“Next” button (either by Tabbing onto it or with Alt-N), then the Next  \nbutton would still have the focus in this new screen. Either way, that’s  \ndifferent from the previous behavior which had the Password field  \nfocused by default (as one would expect).",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "RESOLVED",
+  "resolution": "WORKSFORME",
+  "created": "2021-09-30 17:49:35+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

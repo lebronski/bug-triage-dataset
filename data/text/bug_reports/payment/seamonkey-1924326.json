@@ -1,0 +1,18 @@
+{
+  "report_id": "seamonkey-1924326",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "seamonkey",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1924326",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1924326",
+  "summary": "transaction.accepteasy.com - Black page. iDeal payment. The page was working in SeaMonkey 2.53.18.2.",
+  "description": "Steps to reproduce:\n\nhttps://transaction.accepteasy.com/\nhttps://transaction.accepteasy.com/nl-NL/\n\nSeaMonkey 2.53.19\nUseragent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0\nBuildnaam: 20240827170848\n\nActual results:\n\nBlack page. The page was working in SeaMonkey 2.53.18.2.\n\nExpected results:\n\nNo black page. Normal loading of the internetsite.\n\nTested with Firefox.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "UNCONFIRMED",
+  "resolution": null,
+  "created": "2024-10-12 19:45:57+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

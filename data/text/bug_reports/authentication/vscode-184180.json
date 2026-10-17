@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-184180",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "184180",
+  "url": "https://github.com/microsoft/vscode/issues/184180",
+  "summary": "GitHub Authentication extension running in both web worker extension host & remote extension host",
+  "description": "Steps to Reproduce:\n\n1. Enable Remote Tunnel Access in VS Code Insiders Desktop\n2. Copy the link and open it  in your browser (note, you may hit: https://github.com/microsoft/vscode/issues/183792#issuecomment-1573938109)\n3. If you open the Output pane and then the drop down, you'll see 🐛 2 `GitHub Authentication`s\n \n![image](https://github.com/microsoft/vscode/assets/2644648/bfefe802-d093-4074-90bf-19887aa9960a)\n\nIf you try to install the PR Pinger extension, and go through its auth flow, it will hang similar to https://github.com/microsoft/vscode/issues/183754\n\nMy suspicion is that since there are 2 GH Auth extensions running, the wrong one gets their UriHandler fired.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2023-06-02 15:38:05+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

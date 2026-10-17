@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1791719",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1791719",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1791719",
+  "summary": "Upgrade Issue from 102.2 to 102.3: NS_ERROR_ABORT: CertUtils.jsm: Certificate issuer is not built-in. Getting sslStatus failed.",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 OPR/91.0.4516.16\n\nSteps to reproduce:\n\nHelp About in my previous version was telling you are already update. But for the past couple of days getting a prompt that TB was not able to upgrade itself opening Thunderbird site. Then I downloaded the full installer to upgrade the same.\n\nActual results:\n\nAuto upgrade from 102.2.x to 102.3 is not happening\n\nExpected results:\n\nSeamless upgrade to 102.3 should happen.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INVALID",
+  "created": "2022-09-21 07:56:50+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

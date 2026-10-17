@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1942318",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1942318",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1942318",
+  "summary": "Startup crash in [@ core::result::unwrap_failed | ksni::service::TrayService<T>::spawn_without_dbus_name::{{closure}}]",
+  "description": "Crash report: https://crash-stats.mozilla.org/report/index/0ff84ead-aa83-4326-bde0-5a0d10250117\n\nMOZ_CRASH Reason:\n```\ncalled `Result::unwrap()` on an `Err` value: D-Bus error: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken. (org.freedesktop.DBus.Error.NoReply)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_Crash(char const*, int, char const*)  mfbt/Assertions.h:337\n0  libxul.so  RustMozCrash  mozglue/static/rust/wrappers.cpp:18\n1  libxul.so  mozglue_static::panic_hook  mozglue/static/rust/lib.rs:102\n1  libxul.so  core::ops::function::Fn::call  /builds/worker/fetches/rustc/lib/rustlib/src/rust/library/core/src/ops/function.rs:79\n2  libxul.so  <alloc::boxed::Box<F, A> as core::ops::function::Fn<Args>>::call  library/alloc/src/boxed.rs:1986\n2  libxul.so  std::panicking::rust_panic_with_hook  library/std/src/panicking.rs:809\n3  libxul.so  std::panicking::begin_panic_handler::{{closure}}  library/std/src/panicking.rs:674\n4  libxul.so  std::sys::backtrace::__rust_end_short_backtrace  library/std/src/sys/backtrace.rs:170\n5  libxul.so  rust_begin_unwind  library/std/src/panicking.rs:665\n6  libxul.so  core::panicking::panic_fmt  library/core/src/panicking.rs:76\n```\n\nI get this crash consistently every time I start up my computer, because I have Thunderbird running on startup. Probably the relevant dbus service is not up yet? It seems the tray service stuff shouldn't be crashing...\n\nni?ing based on blame information :)",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "NEW",
+  "resolution": null,
+  "created": "2025-01-17 15:06:48+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

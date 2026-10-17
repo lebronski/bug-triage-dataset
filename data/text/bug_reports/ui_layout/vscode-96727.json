@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-96727",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "96727",
+  "url": "https://github.com/microsoft/vscode/issues/96727",
+  "summary": "Don't show \"turn sync on\" button when sync disabled in CLI",
+  "description": "When disabling sync as in https://github.com/microsoft/vscode/issues/95532, the big blue button in the settings editor is still visible, but it doesn't do anything when clicked. It should not appear at all.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2020-04-30 18:41:35+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1815419",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1815419",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1815419",
+  "summary": "Remove unnecessary use of Services.locale.appLocalesAsBCP47 from address book files",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36\n\nSteps to reproduce:\n\nThe use is not necessary or even undesired, see bug 1758739.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2023-02-07 11:42:50+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

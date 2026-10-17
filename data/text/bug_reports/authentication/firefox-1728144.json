@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1728144",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1728144",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1728144",
+  "summary": "Password Reset Token Leakage",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36\n\nSteps to reproduce:\n\nStep 1 : Go To - https://accounts.firefox.com/reset_password\nStep 2 : Enter Registered Gmail\nStep 3 : Click Begin Reset Button \nStep 4 : Capture the Request\nStep 5 : See Response For That You Get the Password Token \n\nActual results:\n\nPassword Token is Being Leaked in Response itself\n\nSomething Looks Like , it's a Critical Bug\n\nResponse Received in My Burpsuite :\n\n{\"passwordForgotToken\":\"f0177f67bb0de0bd87076877cde2ea7be41af6fb6b75e5d36612afeecae58f5f\",\"ttl\":86400,\"codeLength\":32,\"tries\":3}\n\nThe Above is Received in My Response , Screen Shots Attached POC\n\nExpected results:\n\nShow Only \"Success\" or \"Check Email\" Message While Requesting Password Reset Option .\n\nBut here it's showing the token\n\nI've Attached TOKENS.zip file , which consists of Five Screenshots.\n\nTake a Look For More Clarity\n\nThanks & Regards\nRaghuram G\nBug Bounty Hunter\nraghuram.4.5.0.2@gmail.com",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2021-08-30 16:24:54+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

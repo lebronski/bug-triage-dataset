@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1729485",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1729485",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1729485",
+  "summary": "After crash Thunderbird will not download email",
+  "description": "User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36\n\nSteps to reproduce:\n\nMy computer froze up. After i rebooted I no longer receive email. When i click on get messages in Thunderbird It will say Downloading 1 of 20 then goes away and dont pull in any email.\nI am on a Mac OS 10.12\n\nActual results:\n\nNothing happens\n\nExpected results:\n\nShould have downloaded email from the mail server.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INVALID",
+  "created": "2021-09-07 16:25:22+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

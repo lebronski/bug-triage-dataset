@@ -1,0 +1,18 @@
+{
+  "report_id": "cassandra-13426900",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "cassandra",
+  "tracker": "Apache Jira",
+  "issue_id": "13426900",
+  "url": null,
+  "summary": "CVE-2021-44521: Apache Cassandra: Remote code execution for scripted UDFs",
+  "description": "When running Apache Cassandra with the following configuration:\n\nenable_user_defined_functions: true\nenable_scripted_user_defined_functions: true\nenable_user_defined_functions_threads: false \n\nit is possible for an attacker to execute arbitrary code on the host. The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this. Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.\n\nThis issue is being tracked as CASSANDRA-17352\n\nMitigation:\n\nSet `enable_user_defined_functions_threads: true` (this is default)\nor\n3.0 users should upgrade to 3.0.26\n3.11 users should upgrade to 3.11.12\n4.0 users should upgrade to 4.0.2\n\nCredit:\n\nThis issue was discovered by Omer Kaspi of the JFrog Security vulnerability research team.",
+  "priority_original": "Normal",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "07/Feb/22 11:45",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

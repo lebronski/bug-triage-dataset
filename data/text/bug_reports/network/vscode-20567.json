@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-20567",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "20567",
+  "url": "https://github.com/microsoft/vscode/issues/20567",
+  "summary": "Insiders 1.10.0 Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.",
+  "description": "Getting `Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.` after most recent insiders update.  Worked on Friday when I last opened it.  Didn't change any settings.  Not using a proxy.  I'm assuming latest update broke it somehow since it started happening right after I updated this morning.\n\n- VSCode Version: 1.10.0-insider 422d7ff1b78fcac514498921551c33a988c4ad34 2017-02-13T07:02:30.785Z\n- OS Version: OSX 10.10.5 (14F2109)\n\nSteps to Reproduce:\n\n1. Download above vscode-insiders build\n2. Restart vscode\n3. Open extensions\n4. See \"Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.\"\n\nNeed any more info?",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2017-02-13 22:58:33+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

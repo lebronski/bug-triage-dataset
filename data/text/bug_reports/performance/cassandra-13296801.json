@@ -1,0 +1,18 @@
+{
+  "report_id": "cassandra-13296801",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "cassandra",
+  "tracker": "Apache Jira",
+  "issue_id": "13296801",
+  "url": null,
+  "summary": "Performance regression on internode messaging",
+  "description": "Me and [~jasonstack] have been investigating a performance regression affecting 4.0 during a 3 nodes, RF 3 write throughput test with a timeseries like workload, as shown in this plot, where blue is 3.11 and orange is 4.0:\n\n!Oss40vsOss311.png|width=389,height=214!\n\n It's been a bit of a long investigation, but two clues ended up standing out:\n1) An abnormal number of expired messages on 4.0 (as shown in the attached  system log), while 3.11 has almost none.\n2) An abnormal GC activity (as shown in the attached gc log).\n\nTurns out the two are related, as the [on expired callback|https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/net/OutboundConnection.java#L462] creates a huge amount of strings in the {{id()}} call. The next question is what causes all those message expirations; we thoroughly reviewed the internode messaging code and the only issue we could find so far is related to the \"batch pruning\" calls [here|https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/net/OutboundMessageQueue.java#L81] and [here|https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/net/OutboundMessageQueue.java#L188]: it _seems_ too much time is spent on those, causing the event loop to fall behind in processing the rest of the messages, which will end up being expired. This is supported by the analysis of the collapsed stacks (after fixing the GC issue):\n{noformat}\n(tprint (top-aggregated-calls oss40nogc \"EventLoopDelivery:doRun\" 5))\norg/apache/cassandra/net/OutboundConnection$EventLoopDelivery:doRun 3456\norg/apache/cassandra/net/OutboundMessageQueue:access$600 1621\norg/apache/cassandra/net/PrunableArrayQueue:prune 1621\norg/apache/cassandra/net/OutboundMessageQueue$WithLock:close 1621\norg/apache/cassandra/net/OutboundMessageQueue:pruneInternalQueueWithLock 1620\n{noformat}\n\nThose are the top 5 sampled calls from {{EventLoopDelivery#doRun()}} which spends half of its time pruning. But only a tiny portion of such pruning time is spent actually expiring:\n{noformat}\n(tprint (top-aggregated-calls oss40nogc \"OutboundMessageQueue:pruneInternalQueueWithLock\" 5))\norg/apache/cassandra/net/OutboundMessageQueue:pruneInternalQueueWithLock 1900\norg/apache/cassandra/net/PrunableArrayQueue:prune 1894\norg/apache/cassandra/net/OutboundMessageQueue$1Pruner:onPruned 147\norg/apache/cassandra/net/OutboundConnection$$Lambda$444/740904487:accept 147\norg/apache/cassandra/net/OutboundConnection:onExpired 147\n{noformat}\n\nAnd indeed, the {{PrunableArrayQueue:prune()}} self time is dominant:\n{noformat}\n(tprint (top-self-calls oss40nogc \"PrunableArrayQueue:prune\" 5))\norg/apache/cassandra/net/PrunableArrayQueue:prune 1718\norg/apache/cassandra/net/OutboundConnection:releaseCapacity 27\njava/util/concurrent/ConcurrentHashMap:replaceNode 19\njava/util/concurrent/ConcurrentLinkedQueue:offer 16\njava/util/concurrent/LinkedBlockingQueue:offer 15\n{noformat}\n\nThat said, before proceeding with a PR to fix those issues, I'd like to understand: what's the reason to prune so often, rather than just when polling the message during delivery? If there's a reason I'm missing, let's talk about how to optimize pruning, otherwise let's get rid of that.",
+  "priority_original": "Normal",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "07/Apr/20 11:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

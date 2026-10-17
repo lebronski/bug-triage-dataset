@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1644756",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1644756",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1644756",
+  "summary": "browser hang issue dos",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36\n\nSteps to reproduce:\n\nopen crash.html in firefox\n\nand your browser should start hanging and if you click stop when a web page is slowing down your web browser message it still hangs\n\nActual results:\n\nit made the browser hang and unusable\n\nExpected results:\n\nit should not hang and be unusable",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2020-06-10 14:40:33+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

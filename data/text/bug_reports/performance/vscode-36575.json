@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-36575",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "36575",
+  "url": "https://github.com/microsoft/vscode/issues/36575",
+  "summary": "slow startup typing performance when explorer contributions are expanded",
+  "description": "Windows, Insiders build 1.18.0-insiders commit 4b0145 date 2017-10-19\n\nI noticed that on startup, there is a delay to typing.  The editor comes up, but when I start typing it takes a few seconds for the letters to appear.\n\nHere's all the extensions I have installed\n\narcticicestudio.nord-visual-studio-code@0.6.0\nbenjpas.close-all@1.0.2\nchrisdias.vscode-opennewinstance@0.0.4\nchristian-kohler.npm-intellisense@1.3.0\ncssho.vscode-svgviewer@1.4.3\nDotJoshJohnson.xml@1.9.2\neg2.vscode-npm-script@0.2.1\nevilz.vscode-reveal@1.0.0\nformulahendry.auto-close-tag@0.5.1\nms-azuretools.vscode-azureappservice@0.2.0\nms-azuretools.vscode-azurefunctions@0.1.0\nms-azuretools.vscode-cosmosdb@0.1.1\nms-vscode.azure-account@0.1.3\nms-vscode.azurecli@0.3.0\nms-vscode.PowerShell@1.4.3\nPeterJausovec.vscode-docker@0.0.20\n\nProfile with extensions:\n[CPU-20171019T092459.zip](https://github.com/Microsoft/vscode/files/1399225/CPU-20171019T092459.zip)\n\n[5c2a_main.cpuprofile.txt](https://github.com/Microsoft/vscode/files/1399203/5c2a_main.cpuprofile.txt)\n[5c2a_renderer.cpuprofile.txt](https://github.com/Microsoft/vscode/files/1399204/5c2a_renderer.cpuprofile.txt)\n\n- VSCode Version: <code>Code - Insiders 1.18.0-insider (4b01451cea60f32412098735709fddcac567b33d, 2017-10-19T08:29:07.096Z)</code>\n- OS Version: <code>Windows_NT x64 10.0.15063</code>\n- CPUs: <code>Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz (4 x 2494)</code>\n- Memory (System): <code>7.98GB (2.58GB free)</code>\n- Memory (Process): <code>232.49MB working set (234.23MB peak, 200.54MB private, 40.71MB shared)</code>\n- Load (avg): <code>0, 0, 0</code>\n- VM: <code>0%</code>\n- Initial Startup: <code>yes</code>\n- Screen Reader: <code>no</code>\n- Empty Workspace: <code>no</code>\n- Timings:\n\n|Component|Task|Time (ms)|\n|---|---|---|\n|main|start => app.isReady|37|\n|main|app.isReady => window.loadUrl()|292|\n|renderer|window.loadUrl() => begin to require(workbench.main.js)|442|\n|renderer|require(workbench.main.js)|731|\n|renderer|create extension host => extensions onReady()|612|\n|renderer|restore viewlet|492|\n|renderer|restore editor view state|1386|\n|renderer|overall workbench load|1560|\n|main + renderer|start => extensions ready|2271|\n|main + renderer|start => workbench ready|3178|\n\nHere is a profile without extensions loaded, where the performance is ok. So, it has to be an extension.\n\n[Profile-no-extensions.zip](https://github.com/Microsoft/vscode/files/1399261/Profile-no-extensions.zip)",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2017-10-19 16:42:51+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

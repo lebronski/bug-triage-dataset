@@ -1,0 +1,17 @@
+2015-07-29 23:44:28,903 - ERROR [CommitProcessor:1:NIOServerCnxn@180] - Unexpected Exception: 
+2015-08-20 17:14:11,414 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-07-29 19:03:35,413 - ERROR [LearnerHandler-/10.10.34.11:52225:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:03:54,584 - ERROR [LearnerHandler-/10.10.34.11:52241:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:04:30,989 - ERROR [LearnerHandler-/10.10.34.11:52265:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:04:40,999 - ERROR [LearnerHandler-/10.10.34.11:52273:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:15:16,204 - ERROR [LearnerHandler-/10.10.34.11:52419:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:16:26,447 - ERROR [LearnerHandler-/10.10.34.13:57354:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:17:36,507 - ERROR [LearnerHandler-/10.10.34.13:57438:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:20:16,690 - ERROR [LearnerHandler-/10.10.34.12:59455:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:20:36,704 - ERROR [LearnerHandler-/10.10.34.12:59480:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:20:46,814 - ERROR [LearnerHandler-/10.10.34.13:57617:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:20:56,605 - ERROR [LearnerHandler-/10.10.34.11:52814:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:21:26,625 - ERROR [LearnerHandler-/10.10.34.11:52855:LearnerHandler@562] - Unexpected exception causing shutdown while sock still open
+2015-07-29 19:37:27,222 - INFO  [ProcessThread(sid:2 cport:-1)::PrepRequestProcessor@627] - Got user-level KeeperException when processing sessionid:0x34ed93485090001 type:create cxid:0x55b8bb0f zxid:0x100000010 txntype:-1 reqpath:n/a Error Path:/home/curi/.zookeeper Error:KeeperErrorCode = NodeExists for /home/curi/.zookeeper
+2015-08-20 17:12:45,757 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running
+2015-08-20 17:13:51,524 - WARN  [NIOServerCxn.Factory:0.0.0.0/0.0.0.0:2181:NIOServerCnxn@354] - Exception causing close of session 0x0 due to java.io.IOException: ZooKeeperServer not running

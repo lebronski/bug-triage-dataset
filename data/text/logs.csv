@@ -1,0 +1,13 @@
+log_file,category,system,source_file,regex,lines,first_line_no,last_line_no
+logs/authentication/openssh_authentication.log,authentication,OpenSSH,loghub/OpenSSH/OpenSSH_2k.log,Failed password|Invalid user|authentication failure,40,2,68
+logs/authentication/linux_authentication.log,authentication,Linux,loghub/Linux/Linux_2k.log,authentication failure|FAILED LOGIN,40,1,91
+logs/security/openssh_security.log,security,OpenSSH,loghub/OpenSSH/OpenSSH_2k.log,POSSIBLE BREAK-IN ATTEMPT|Did not receive identification|Bad protocol,40,1,628
+logs/network/thunderbird_network.log,network,Thunderbird,loghub/Thunderbird/Thunderbird_2k.log,Connection refused|Connection reset|timed out|No route,10,99,1594
+logs/network/hadoop_network.log,network,Hadoop,loghub/Hadoop/Hadoop_2k.log,Connection refused|timed out|Retrying connect|NoRouteToHost|ConnectException,40,930,1214
+logs/memory/spark_memory.log,memory,Spark,loghub/Spark/Spark_2k.log,[Mm]emory|MB|spill,40,13,312
+logs/memory/hadoop_memory.log,memory,Hadoop,loghub/Hadoop/Hadoop_2k.log,[Mm]emory|OutOfMemory|heap,40,57,241
+logs/crash/zookeeper_crash.log,crash,Zookeeper,loghub/Zookeeper/Zookeeper_2k.log,Exception|ERROR|FATAL,17,506,1432
+logs/crash/hdfs_crash.log,crash,HDFS,loghub/HDFS/HDFS_2k.log,[Ee]xception|ERROR|WARN,40,78,341
+logs/performance/hadoop_performance.log,performance,Hadoop,loghub/Hadoop/Hadoop_2k.log,took|[Ss]low|elapsed|ms\b,40,112,263
+logs/performance/openstack_performance.log,performance,OpenStack,loghub/OpenStack/OpenStack_2k.log,took|time: [0-9.]+|len: \d+ time,40,1,83
+logs/ui_layout/android_ui_layout.log,ui_layout,Android,loghub/Android/Android_2k.log,WindowManager|SurfaceFlinger|ViewRootImpl|layout,40,1,1087

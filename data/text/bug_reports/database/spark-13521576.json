@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13521576",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13521576",
+  "url": null,
+  "summary": "dataframe API filter criteria throwing ParseException when reading a JDBC column name with special characters",
+  "description": "*On Spark 3.3.0,* when reading from a JDBC table(used SQLite to repro) using spark.read.jdbc command with sqlite-jdbc:3.34.0.jar on a table and column name containing special characters. Dataframe API filter criteria fails with parse Exception \n\n*[#Script:]*\n{code:java}\nfrom pyspark.sql import SparkSession\n\nspark = SparkSession \\\n    .builder \\\n    .appName(\"Databricks Support\") \\\n    .config(\"spark.jars.packages\", \"org.xerial:sqlite-jdbc:3.34.0\") \\\n    .getOrCreate()\n\ncolumns = [\"id\", \"/abc/column\", \"value\"]\ndata = [(1, 'A', 100), (2, 'B', 200), (3, 'B', 300)]\n\nrdd = spark.sparkContext.parallelize(data)\ndf = spark.createDataFrame(rdd).toDF(*columns)\n\noptions = {\"url\": \"jdbc:sqlite:/<local-path>/spark-3.3.1-bin-hadoop3/jars/test.db\", \"dbtable\": '\"/abc/table\"', \"driver\": \"org.sqlite.JDBC\"}\n\ndf.coalesce(1).write.format(\"jdbc\").options(**options).mode(\"append\").save()\n\ndf_1 = spark.read.format(\"jdbc\") \\\n    .option(\"url\", \"jdbc:sqlite:/<local-path>/spark-3.3.1-bin-hadoop3/jars/test.db\") \\\n    .option(\"dbtable\", '\"/abc/table\"') \\\n    .option(\"driver\", \"org.sqlite.JDBC\") \\\n    .load()\n\ndf_2 = df_1.filter(\"`/abc/column` = 'B'\")\n\ndf_2.show() {code}\nError:\n{code:java}\n``` Traceback (most recent call last):\n File \"<stdin>\", line 1, in <module>\n File \"/opt/homebrew/Cellar/apache-spark/3.3.1/libexec/python/pyspark/sql/dataframe.py\", line 606, in show\n  print(self._jdf.showString(n, 20, vertical))\n File \"/opt/homebrew/Cellar/apache-spark/3.3.1/libexec/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py\", line 1321, in __call__\n File \"/opt/homebrew/Cellar/apache-spark/3.3.1/libexec/python/pyspark/sql/utils.py\", line 196, in deco\n  raise converted from None\npyspark.sql.utils.ParseException: \nSyntax error at or near '/': extra input '/'(line 1, pos 0)\n\n== SQL ==\n/abc/column\n^^^```  {code}\nHowever, when using Spark 3.2.1, we are able to successfully apply dataframe.filter option\n{code:java}\n>>> df_2.show()\n+---+-----------+-----+\n| id|/abc/column|value|\n+---+-----------+-----+\n|  2|          B|  200|\n|  3|          B|  300|\n+---+-----------+-----+ {code}\n*Repro steps:*\n # Download [Spark 3.2.1 in local |https://archive.apache.org/dist/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz]\n # Download and Copy the sqlite-jdbc:3.34.0.jar into the jar folder present in the local spark download folder\n # Run the above [#script] by providing the jar path \n # This will create a */abc/table* with column */abc/column*  and returns result when applying filter criteria\n # Download spark ** [3.3.0 in local|https://www.apache.org/dyn/closer.lua/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz]\n # Repeat #2, #3 \n # Fails with parse exception. \n\ncould you please let us know how we can filter on the special characters column or escape them on spark version 3.3.0?",
+  "priority_original": "Minor",
+  "severity_prelabel": "Minor",
+  "status": "Resolved",
+  "resolution": "Cannot Reproduce",
+  "created": "26/Jan/23 02:29",
+  "affects_versions": "3.3.0",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

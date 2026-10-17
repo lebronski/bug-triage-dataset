@@ -1,0 +1,18 @@
+{
+  "report_id": "cassandra-13359699",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "cassandra",
+  "tracker": "Apache Jira",
+  "issue_id": "13359699",
+  "url": null,
+  "summary": "high and critical CVEs io.netty to 4.1.42.Final to fix critical and high vulnerabilities",
+  "description": "Repository | Tag | CVE ID | Severity | Packages | Source Package | Package Version | Fix Status\n-- | -- | -- | -- | -- | -- | -- | --\ndatastax/cassandra-mgmtapi-3_11_7 | v0.1.22 | CVE-2019-20445 | critical | io.netty_netty-all |   | 4.0.44.Final | fixed in 4.1.44\ndatastax/cassandra-mgmtapi-3_11_7 | v0.1.22 | CVE-2019-20444 | critical | io.netty_netty-all |   | 4.0.44.Final | fixed in 4.1.44\ndatastax/cassandra-mgmtapi-3_11_7 | v0.1.22 | CVE-2019-16869 | high | io.netty_netty-all |   | 4.0.44.Final | fixed in 4.1.42.Final",
+  "priority_original": "High",
+  "severity_prelabel": "Critical",
+  "status": "Resolved",
+  "resolution": "Invalid",
+  "created": "19/Feb/21 21:03",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-143463",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "143463",
+  "url": "https://github.com/microsoft/vscode/issues/143463",
+  "summary": "Insiders - Microsoft Authentication undefined identity guid",
+  "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes/No\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: 1.65.0-insiders\n- OS Version: windows 10 \n\nSteps to Reproduce:\n\n1. Have an extension that leverages microsoft authentication\n2) sign in through browser flow \n3) if you inspect the auth session that was created\n\nstable: \n```\n{\n    id: \"72f988bf-86f1-41af-91ab-2d7.../f934b166-8c65-428e-b8c8-a9.../901a1c79-80d9-411f-b17...\",\n    accessToken: <token>,\n    account: {\n      label: \"alias@microsoft.com\",\n      id: \"72f988bf-86f1.../f934b166-8c65-428e-b8c8-a9fb...\",\n    },\n    scopes: [\n      \"499b84ac-1321-427f-aa17-267ca6975798/.default\",\n      \"offline_access\",\n    ],\n  }\n```\n\ninsiders: \n```\n{\n    id: \"72f988bf-86f1-4..../undefined/c816eae4-e3c5-4718-a742-b....\",\n    accessToken: <token>,\n    idToken: \"eyJ0e\",\n    account: {\n      label: \"name@microsoft.com\",\n      id: \"72f988bf-86f1-41af-.../undefined\",\n    },\n    scopes: [\n      \"499b84ac-1321-427f-aa17-267ca6975798/.default\",\n      \"email\",\n      \"offline_access\",\n      \"openid\",\n    ],\n  }\n```\n\nBoth the id, and account.id properties now have /undefined/ within them",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2022-02-19 18:28:08+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

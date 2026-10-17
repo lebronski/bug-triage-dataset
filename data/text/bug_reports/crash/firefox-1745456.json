@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1745456",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1745456",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1745456",
+  "summary": "Firefox tab crashes, then requires restart after reopening",
+  "description": "User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0\n\nSteps to reproduce:\n\nOpen new tab\n\nActual results:\n\nTab crashes. Have to all instances of Firefox. After reopening, it then need to restart.\n\nExpected results:\n\nTab shouldn't crash every other day.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2021-12-10 16:13:50+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

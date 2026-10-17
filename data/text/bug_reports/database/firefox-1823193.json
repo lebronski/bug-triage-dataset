@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1823193",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1823193",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1823193",
+  "summary": "Firefox 111 freezes with my permissions.sqlite",
+  "description": "Steps to reproduce:\n\nUpdated to Firefox 111 (Windows 10).\n\nActual results:\n\nWhen starting Firefox, blank window opens and stays frozen indefinitely.  Problem is resolved by deleting permissions.sqlite in my profile.  Have reproduced on two different computers.\n\nExpected results:\n\nExpected program to start normally as it did with previous version.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2023-03-19 01:29:43+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

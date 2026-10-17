@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1668045",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1668045",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1668045",
+  "summary": "update NodeJS dependencies by handle security issues.",
+  "description": "npm audit shows issues with browser/components/newtab.  Those need fixing.  Many will be simple enough to fix using 'npm audit fix'. That should be landed first and done here.\n\nThe others can be done here or spun off to separate bugs depending on amount of work.",
+  "priority_original": "P2",
+  "severity_prelabel": "Critical",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2020-09-29 16:05:27+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1724940",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1724940",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1724940",
+  "summary": "Event handlers linger if Exchange credentials dialog is shown twice in one session",
+  "description": "The code to prompt the user to log in to their Exchange autodiscover server does not uninstall all, or in some cases, any, of its event handlers. This results in outdated event handlers lingering which might interfere with a potential reuse of the dialog in the same session. A typical reason why the dialog would be reused is if the autodiscover server needs the username in domain\\user format, in which case the initial login would fail and the user would be prompted to send the new credentials to the autodiscover server.",
+  "priority_original": "P2",
+  "severity_prelabel": "Critical",
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2021-08-10 13:58:18+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

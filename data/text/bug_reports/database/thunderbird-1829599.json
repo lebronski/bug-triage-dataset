@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1829599",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1829599",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1829599",
+  "summary": "Autoconfig - Multiple accounts - permissions.sqlite - prefs.js altered",
+  "description": "Steps to reproduce:\n\nI use autoconfig to get an automatically defined account (IMAP) for our users. Let's say ACC1@MY.DOMAIN. It then shows two entries: the one related to ACC1 (for thunderbird, this is account1), and the \"Local Folders\" (for thunderbird, this is account2).\n\nAfterwards, I add some other account (in the user pforile) for which the automatic definition is not relevant, let's say ACC2@MY.DOMAIN (for thunderbird, this is account3). \n\nThe configured result is a mix with some automatic config (default/preferences/somefile.js refering to .../thunderbird.cfg with defaultPref() entries) and another account added into the .thunderbird/blabla12345.default-beta/prefs.js. \n\nThunderbird shows first three entries correctly: an automatically defined account from some thunderbird.cfg, a locally defined account, and the local folders.\n\nThen play a while with the application.\n\nActual results:\n\nThrough usage, by exiting and restarting the application a few times, a corruption occurs after a while: \n- ACC1 (from the global autoconfig) is gone (from the interface, not from the profile)\n- Local folders vanished\n- Only the locally defined account ACC2 from the user's pref.js is visible.\n\nAs far as I can remember, I've had the problem with many releases, stable or beta, certainly since v 78. Last version tried: 112.0b3.\n\nExpected results:\n\nThunderbird should keep the three accounts correctly visible in the interface.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2023-04-24 09:34:40+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

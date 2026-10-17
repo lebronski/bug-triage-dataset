@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13324830",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13324830",
+  "url": null,
+  "summary": "Broadcast block pieces may memory leak",
+  "description": "We use Spark thrift-server as a long-running service. A bad query submitted a heavy BroadcastNestLoopJoin operation and made driver full GC. We killed the bad query but we found the driver's memory usage was still high and full GCs had very frequency. By investigating with GC dump and log, we found the broadcast may memory leak.\n\n2020-08-19T18:54:02.824-0700: [Full GC (Allocation Failure) 2020-08-19T18:54:02.824-0700: [Class Histogram (before full gc):\n116G->112G(170G), 184.9121920 secs]\n[Eden: 32.0M(7616.0M)->0.0B(8704.0M) Survivors: 1088.0M->0.0B Heap: 116.4G(170.0G)->112.9G(170.0G)], [Metaspace: 177285K->177270K(182272K)]\n\nnum #instances #bytes class name\n----------------------------------------------\n1: 676531691 72035438432 [B\n2: 676502528 32472121344 org.apache.spark.sql.catalyst.expressions.UnsafeRow\n3: 99551 12018117568 [Ljava.lang.Object;\n4: 26570 4349629040 [I\n5: 6 3264536688 [Lorg.apache.spark.sql.catalyst.InternalRow;\n6: 1708819 256299456 [C\n7: 2338 179615208 [J\n8: 1703669 54517408 java.lang.String\n9: 103860 34896960 org.apache.spark.status.TaskDataWrapper\n10: 177396 25545024 java.net.URI\n...",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "27/Aug/20 11:58",
+  "affects_versions": "2.4.6",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

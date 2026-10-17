@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1809160",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1809160",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1809160",
+  "summary": "When I logged into the Firefox account, such data as logins, passwords and bookmarks were not synchronized, and as a result, everything was gone.",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0\n\nSteps to reproduce:\n\nПосле переустановки Windows, я скачал браузер Firefox с официального сайта, установил его, и зашел в свой аккаунт Firefox.\n\nActual results:\n\nЯ успешно вошел в аккаунт, но такие данные как логины, пароли и закладки не синхронизировались, то есть не были добавлены в мой браузер.\n\nExpected results:\n\nОжидалось, что все пароли, логины и закладки будут синхронизированы и скачаны с предыдущей точки синхронизации.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2023-01-09 13:48:07+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

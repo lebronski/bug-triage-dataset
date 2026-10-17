@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13289561",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13289561",
+  "url": null,
+  "summary": "Unable to use vendor specific datatypes with JDBC (MSSQL)",
+  "description": "I'm trying to create a table in MSSQL with a time(7) type.\n\nFor this I'm using the createTableColumnTypes option like \"CallStartTime time(7)\", with driver \"{color:#212121}com.microsoft.sqlserver.jdbc.SQLServerDriver\"{color}\n\nI'm getting an error:  {color:#212121}org.apache.spark.sql.catalyst.parser.ParseException: DataType time(7) is not supported.(line 1, pos 43){color}\n\n{color:#212121}What is then the point of using this option?{color}",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Incomplete",
+  "created": "04/Mar/20 15:30",
+  "affects_versions": "2.4.5",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

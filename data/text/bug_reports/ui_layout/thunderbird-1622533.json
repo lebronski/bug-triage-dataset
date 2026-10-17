@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1622533",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1622533",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1622533",
+  "summary": "Archive button moves mail into yearly folders despite single folder setting",
+  "description": "User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36\n\nSteps to reproduce:\n\n- Via Account Settings / Folders / Archive Options, I selected that all messages shall be archived in one single folder.\n\n- Clicked the \"Archive\" button in the message window of a message in my Inbox.\n\nActual results:\n\nThe message got moved into a \"2020\" subfolder of my selected Archive folder.\n\nExpected results:\n\nThe message should have been moved into the Archive folder at top level due to my single folder setting.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INVALID",
+  "created": "2020-03-14 15:48:36+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

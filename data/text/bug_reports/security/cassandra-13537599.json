@@ -1,0 +1,18 @@
+{
+  "report_id": "cassandra-13537599",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "cassandra",
+  "tracker": "Apache Jira",
+  "issue_id": "13537599",
+  "url": null,
+  "summary": "Improve nodetool enable{audit,fullquery}log, CVE-2023-30601",
+  "description": "The {{--archive-command}} parameter to {code}nodetool enable{audit,fullquery}log{code} allows an attacker to execute arbitrary commands as the user running cassandra.\n\nPatch adds a configuration option which disallows using this parameter - for any existing users of --archive-command this can be re-enabled",
+  "priority_original": "Normal",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "25/May/23 06:38",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

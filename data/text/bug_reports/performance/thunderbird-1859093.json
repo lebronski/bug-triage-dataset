@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1859093",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1859093",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1859093",
+  "summary": "slow start",
+  "description": "Steps to reproduce:\n\nStarting Thunderbird is extremely slow! I think the problem started with v119 Beta 3, before that, it worked relatively fast. It takes up to 20 seconds until the program is usable (message selection is possible, displaying messages, etc.) I tried creating a new profile - same result. I don't have any add-ons or extensions. It's simply painfully slow to start! Prior versions were much faster on the same system (Windows 11).\n\nPlease fix this or at least add an option \"Minimize on close\" !!!! This would be so extremely helpful together with \"Minimize to tray\". This way, I simply keep TB running in the background and it would be accessible instantly when restarting or restoring the main window. \n\nActual results:\n\nTB starts extremely slowly (10 seconds or more). UI is visible, but unusable, no messages are displayed, etc. After 10 to 20 seconds, everything works as intended.\n\nExpected results:\n\nReasonably fast startup time (1-2 seconds at most).",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2023-10-14 08:50:08+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

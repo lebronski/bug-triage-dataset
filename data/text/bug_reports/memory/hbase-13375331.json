@@ -1,0 +1,18 @@
+{
+  "report_id": "hbase-13375331",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "hbase",
+  "tracker": "Apache Jira",
+  "issue_id": "13375331",
+  "url": null,
+  "summary": "Memory leak from thrift server hashMap",
+  "description": "I found when the scanner does not closed successfully, it remains forever in the hashMap that stores the state of the scanner.\n\nTo resolve this problem, I make scannerMap to Guava Cache so that can be expired on set time.",
+  "priority_original": "Minor",
+  "severity_prelabel": "Minor",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "27/Apr/21 12:24",
+  "affects_versions": "1.7.0",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

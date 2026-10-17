@@ -1,0 +1,18 @@
+{
+  "report_id": "hadoop-13544320",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "hadoop",
+  "tracker": "Apache Jira",
+  "issue_id": "13544320",
+  "url": null,
+  "summary": "LdapGroupsMapping crashes with NullPointerException while going up the group hierarchy",
+  "description": "h2. What happened:\n\nWhen set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to a value larger than 0, {{goUpGroupHierarchy}} in {{org/apache/hadoop/security/LdapGroupsMapping.java}} may return a null {{{}groupResults{}}}and use it without checking null.\nh2. Buggy code:\n{noformat}\n  void goUpGroupHierarchy(Set<String> groupDNs, int goUpHierarchy, Set<String> groups) throws NamingException {\n    if (goUpHierarchy <= 0 || groups.isEmpty()) {\n      return;\n    }\n    ...\n    NamingEnumeration<SearchResult> groupResults = context.search(groupbaseDN, filter.toString(), SEARCH_CONTROLS);\n    while (groupResults.hasMoreElements()) {          // <--- Here groupResults may be null\n    ...\n    }\n    ...\n  }{noformat}\nh2. How to reproduce:\n\n(1) Set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to 1\n(2) Run test {{org.apache.hadoop.security.TestLdapGroupsMapping#testGetGroupsWithConnectionClosed}}\nh2. Stack trace:\n{noformat}\njava.lang.NullPointerException\n        at org.apache.hadoop.security.LdapGroupsMapping.goUpGroupHierarchy(LdapGroupsMapping.java:612)\n        at org.apache.hadoop.security.LdapGroupsMapping.lookupGroup(LdapGroupsMapping.java:489)\n        at org.apache.hadoop.security.LdapGroupsMapping.doGetGroups(LdapGroupsMapping.java:552)\n        at org.apache.hadoop.security.LdapGroupsMapping.getGroups(LdapGroupsMapping.java:365){noformat}\nFor an easy reproduction, run the reproduce.sh in the attachment.\n\nWe also create a PR provides a fix by checking the groupResults is not Null before it is accessed, similar to what's done in `org.apache.hadoop.security.LdapGroupsMapping#lookupGroup`",
+  "priority_original": "Critical",
+  "severity_prelabel": "Critical",
+  "status": "Open",
+  "resolution": null,
+  "created": "20/Jul/23 16:36",
+  "affects_versions": "3.3.6",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

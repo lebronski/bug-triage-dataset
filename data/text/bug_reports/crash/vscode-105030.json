@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-105030",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "105030",
+  "url": "https://github.com/microsoft/vscode/issues/105030",
+  "summary": "Window crashes when python outputs too much in terminal",
+  "description": "### Version of VS Code\nVersion: 1.48.0 (user setup)\nCommit: db40434f562994116e5b21c24015a2e40b2504e6\nDate: 2020-08-13T07:50:42.600Z\nElectron: 7.3.2\nChrome: 78.0.3904.130\nNode.js: 12.8.1\nV8: 7.8.279.23-electron.0\nOS: Windows_NT x64 10.0.18363\n\n### Your operating system\nWindows 10 Enterprise, version 1909, build 18363.1016\n\n### List of extensions that you have installed\n```\ncg-cnu.vscode-path-tools\nGimly81.matlab\nkriegalex.vscode-cudacpp\nms-python.python\nms-vscode.hexeditor\nms-vscode.powershell\nnhoizey.gremlins\nstkb.rewrap\ntht13.html-preview-vscode\n```\n\nIt occurs even with all the extensions disabled\n### Reproducible steps (1... 2... 3...) that cause the issue\nYou need python installed (I don't know if it can be reproduced in other ways, but I know that there are no crashes in terminals different from VSCode's one, and that trying to output a huge file with `type` does not provoke the crash)\n\n1. Open the terminal\n2. Write `python` to open a python prompt\n```\ns=11000000*'5'\ns\n```\n3. Click or play a bit with the mouse in the upper section of the window (i.e. not on the terminal)\n### What you expected to see, versus what you actually saw\nI expect the printing of a very long series of '5''s\n\nWhat happens is that the window crashes after a while\n\n### Images, animations, or a link to a video showing the issue occurring\n[link to a video](https://streamable.com/f27585). \n\n### Errors from the Dev Tools Console (open from the menu: Help > Toggle Developer Tools)\n<s>No error there</s>\n\nEDIT: actually if the Dev Tools are open it pauses with the writing \"Paused before potential out-of-memory crash\"\n\nstack trace:\n```\n_event._event (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\ne (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nget (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\n_provideLinks (terminalProtocolLinkProvider.ts:40)\nprovideLinks (terminalBaseLinkProvider.ts:14)\n(anonymous) (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nt._askForLink (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nt._onHover (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nt._onMouseMove (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\n```",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2020-08-19 21:20:43+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

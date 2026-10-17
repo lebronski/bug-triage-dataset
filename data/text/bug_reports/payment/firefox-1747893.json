@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1747893",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1747893",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1747893",
+  "summary": "Sync error: CreditCards is not initialized",
+  "description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0\n\nSteps to reproduce:\n\nupdate my nightly from 20211214 to 20211226.\n\nActual results:\n\nFirefox Sync no longer works (last synced reports days ago and I no longer see new data from my other devices). In the error log I find:\n```\n1640788374167\tSync.Synchronizer\tDEBUG\tUpdating enabled engines failed: Error: CreditCards is not initialized. Please restart if you flip the pref manually.(resource://autofill/FormAutofillStorageBase.jsm:2008:21) JS Stack trace: get@FormAutofillStorageBase.jsm:2008:21\nget storage@FormAutofillSync.jsm:95:7\n_resetClient@FormAutofillSync.jsm:317:5\n```\n\nExpected results:\n\nFirefox Sync should continue to work, no matter if syncing credit cards is supported or not.\n\nI tried to disable syncing credit cards in Preferences but it still happened. I read the source code and changed `extensions.formautofill.creditCards.available` from `detect` to `on`, it finally started to work.\n\nMy nightly is the zh-CN variant and I'm in China.",
+  "priority_original": "P2",
+  "severity_prelabel": "Critical",
+  "status": "VERIFIED",
+  "resolution": "FIXED",
+  "created": "2021-12-29 14:53:40+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

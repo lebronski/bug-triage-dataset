@@ -1,0 +1,18 @@
+{
+  "report_id": "spark-13442742",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "spark",
+  "tracker": "Apache Jira",
+  "issue_id": "13442742",
+  "url": null,
+  "summary": "df.rdd.isEmpty() results in unexpected executor failure and JVM crash",
+  "description": "It was discovered that a particular data distribution in a DataFrame with groupBy clause could result in a JVM crash when calling {{{}df.rdd.isEmpty{}}}.\n\nFor example,\n{code:java}\ndata = []\nfor t in range(0, 10000):\n    id = str(uuid.uuid4())\n    if t == 0:\n        for i in range(0, 99):\n            data.append((id,))\n    elif t < 10:\n        for i in range(0, 75):\n            data.append((id,))\n    elif t < 100:\n        for i in range(0, 50):\n            data.append((id,))\n    elif t < 1000:\n        for i in range(0, 25):\n            data.append((id,))\n    else:\n        for i in range(0, 10):\n            data.append((id,))\n\ndf = self.spark.createDataFrame(data, [\"col\"])\ndf.coalesce(1).write.parquet(tmpPath)\n\nres = self.spark.read.parquet(tmpPath).groupBy(\"col\").count()\nprint(res.rdd.isEmpty()) # crashes JVM{code}\nReproducible 100% on this dataset.\n\nThe ticket is related to (can be thought of as a follow-up for) https://issues.apache.org/jira/browse/SPARK-33277. We need to patch one more place to make sure Python iterator is in sync with Java iterator and is terminated whenever the task is marked as completed.\n\nNote that all other operations appear to work fine: {{{}count{}}}, {{{}collect{}}}.",
+  "priority_original": "Major",
+  "severity_prelabel": "Major",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "02/May/22 05:38",
+  "affects_versions": "3.2.0",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

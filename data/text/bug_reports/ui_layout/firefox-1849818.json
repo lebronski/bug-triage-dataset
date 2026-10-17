@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1849818",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1849818",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1849818",
+  "summary": "The \"Show products recommended by Firefox\" radio button has no functionality",
+  "description": "**Found in**\n* Nightly 118.0a1 (2023-08-23)\n\n**Affected versions**\n* Nightly 118.0a1 (2023-08-23)\n\n**Affected platforms**\n* All\n\n**Preconditions:**\nSet the browser.shopping.experience2023.enabled - TRUE\nSet the browser.shopping.experience2023.optedIn - 1\n\n**Steps to reproduce**\n1. Reach https://www.amazon.com/WOKA-Electric-Standing-Adjustable-Controllers/dp/B09L1KY91X/ref=sr_1_2_sspa?crid=1I1N64FJG4GK7&keywords=standing%2Bdesk&qid=1692776724&sprefix=standing%2Bdes%2Caps%2C218&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1\n2. Expand the Settings card and Turn Off the \"Show products recommended by Firefox\".\n\n**Expected result**\n* The \"More to consider\" card should disappear.\n\n**Actual result**\n* The \"Show products recommended by Firefox\" radio button has no functionality.\n\n**Regression range**\nNot Applicable",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2023-08-23 08:59:37+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

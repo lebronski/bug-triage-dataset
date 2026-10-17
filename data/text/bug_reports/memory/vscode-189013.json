@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-189013",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "189013",
+  "url": "https://github.com/microsoft/vscode/issues/189013",
+  "summary": "Notebook cell text model memory leak",
+  "description": "<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes/No\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: Insiders\n- OS Version: macOS\n\nSteps to Reproduce:\n\n1. Open a notebook\n2. Close it\n3. Take a memory snapshot\n4. The cell text models are not released\n\n<img width=\"1648\" alt=\"image\" src=\"https://github.com/microsoft/vscode/assets/876920/6649ec08-29da-4be0-bf05-3af894e7a43e\">",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2023-07-27 01:49:55+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1857818",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1857818",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1857818",
+  "summary": "Quick filter working much slower after Supernova redesign",
+  "description": "User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0\n\nSteps to reproduce:\n\nTyping anything in Quick Filter\n\nActual results:\n\nNothing. For 5-10 seconds, nothing happens.\nOnly after that, the results are listed.\n\nExpected results:\n\nBefore Supernova redesign, the result were in less than 1 second. And if I remember correctly, they updated gradually (some of then quickly, some later).\nIt should work like before. With the 5+ seconds wait it's unbearable. I use quick filters all the time...\n\n(visually, I like the redesign)",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2023-10-08 18:47:42+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1919469",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1919469",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1919469",
+  "summary": "When setting up an account, failure to connect to a port because of a certificate error is not reported to the console",
+  "description": "During account set up, each failed attempt to connect to a port is reported on the console, e.g.:\n\n> test.test:110 socketType=0 pop3: [Exception... \"Connection to test.test:110 failed\"  nsresult: \"0x804b000d (NS_ERROR_CONNECTION_REFUSED)\"  location: \"JS frame :: resource:///modules/accountcreation/GuessConfig.sys.mjs :: onStopRequest :: line 1247\"  data: no]\n\nbut this isn't true where an attempt fails because of a TLS certificate error. In that case, we *do* [suggest the user can change a pref and ignore the bad certificate](https://searchfox.org/comm-central/rev/5e8e75f9c60ffee9c773850f1e31f5878df3f92b/mail/components/accountcreation/modules/GuessConfig.sys.mjs#1224-1226) but that's only an info-level message and not shown with the default log level setting. There should be an exception thrown at this point so that the error handler reports the failure.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2024-09-18 09:26:19+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

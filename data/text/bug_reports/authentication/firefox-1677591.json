@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1677591",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1677591",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1677591",
+  "summary": "Never Lose a Password Again is shown with disabled feature recommendations",
+  "description": "User Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0\n\nSteps to reproduce:\n\nSave a password\n\nActual results:\n\nThe Never Lose a Password Again recommendation was shown\n\nExpected results:\n\nThe Never Lose a Password Again recommendation should not be shown if you have the Recommend features as you browse setting disabled.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2020-11-16 21:02:42+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

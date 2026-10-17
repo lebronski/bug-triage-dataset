@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1737574",
+  "category": "security",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1737574",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1737574",
+  "summary": "'about:certificate' should not display internal \"distrust\" certs",
+  "description": "User Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\n\nSteps to reproduce:\n\nVisit the pages associated to 'about:certificate' and 'about:preferences#privacy', then inspect their Servers tab in each.\n\nActual results:\n\nThe names present in the list that is reported In page associated to 'about:certificate', are missing from the list reported in page associated to 'about:preferences#privacy'.\n\nExpected results:\n\nLists to be synchronized and therefore identical.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "NEW",
+  "resolution": null,
+  "created": "2021-10-25 12:26:31+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1851799",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1851799",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1851799",
+  "summary": "Incorrect message appears after importing an invalid credit card number",
+  "description": "*Found in*\n\n118.0b5\n\n*Affected versions*\n\n118.0b5\n\n*Tested platforms*\n\nAffected platforms: macOS 13\nUnaffected platforms:\n\n*Preconditions*\n\n1 valid credit card and 1 invalid credit card saved in Chrome\n\n*Steps to reproduce*\n\n1. Open Fx \n2. Click on  Import data button from about:preferences\n\n*Expected result*\nOnly 1 credit card(the valid one) is imported, so after the import is done the message should appear for 1 credit card not two.\n\n*Actual result*\nAfter the import is done the message should appear for 1 credit card not two.\n\n*Regression range*\n\nNot a regression. Reproducible with bug 1826149 after Payment methods were implemented.\nAdditional notes\n\nAttached browser console errors.",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2023-09-06 11:48:45+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

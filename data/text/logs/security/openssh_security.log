@@ -1,0 +1,40 @@
+Dec 10 06:55:46 LabSZ sshd[24200]: reverse mapping checking getaddrinfo for ns.marryaldkfaczcz.com [173.234.31.186] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 07:08:28 LabSZ sshd[24208]: reverse mapping checking getaddrinfo for ns.marryaldkfaczcz.com [173.234.31.186] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 07:34:33 LabSZ sshd[24301]: Did not receive identification string from 123.235.32.19
+Dec 10 07:35:15 LabSZ sshd[24303]: Did not receive identification string from 177.79.82.136
+Dec 10 07:48:00 LabSZ sshd[24321]: reverse mapping checking getaddrinfo for 191-210-223-172.user.vivozap.com.br [191.210.223.172] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 07:51:09 LabSZ sshd[24323]: Did not receive identification string from 195.154.37.122
+Dec 10 07:51:12 LabSZ sshd[24324]: reverse mapping checking getaddrinfo for 195-154-37-122.rev.poneytelecom.eu [195.154.37.122] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 07:51:17 LabSZ sshd[24326]: reverse mapping checking getaddrinfo for 195-154-37-122.rev.poneytelecom.eu [195.154.37.122] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 07:56:13 LabSZ sshd[24333]: Did not receive identification string from 103.207.39.165
+Dec 10 08:26:40 LabSZ sshd[24383]: Did not receive identification string from 5.188.10.180
+Dec 10 08:33:23 LabSZ sshd[24384]: Did not receive identification string from 103.207.39.212
+Dec 10 09:04:46 LabSZ sshd[24414]: Did not receive identification string from 188.132.244.89
+Dec 10 09:12:46 LabSZ sshd[24503]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:12:51 LabSZ sshd[24505]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:12:57 LabSZ sshd[24507]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:03 LabSZ sshd[24509]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:08 LabSZ sshd[24512]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:13 LabSZ sshd[24514]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:19 LabSZ sshd[24516]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:22 LabSZ sshd[24511]: Did not receive identification string from 185.190.58.151
+Dec 10 09:13:25 LabSZ sshd[24518]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:30 LabSZ sshd[24520]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:36 LabSZ sshd[24522]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:42 LabSZ sshd[24525]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:48 LabSZ sshd[24527]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:53 LabSZ sshd[24529]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:13:59 LabSZ sshd[24531]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:04 LabSZ sshd[24533]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:09 LabSZ sshd[24535]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:14 LabSZ sshd[24537]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:19 LabSZ sshd[24539]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:25 LabSZ sshd[24541]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:30 LabSZ sshd[24543]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:35 LabSZ sshd[24545]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:41 LabSZ sshd[24547]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:46 LabSZ sshd[24549]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:52 LabSZ sshd[24551]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:14:57 LabSZ sshd[24553]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:15:02 LabSZ sshd[24555]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!
+Dec 10 09:15:07 LabSZ sshd[24557]: reverse mapping checking getaddrinfo for customer-187-141-143-180-sta.uninet-ide.com.mx [187.141.143.180] failed - POSSIBLE BREAK-IN ATTEMPT!

@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1825223",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1825223",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1825223",
+  "summary": "CardDAV does not fetch address book from Google Workspace and fails to use existing OAuth2 credentials",
+  "description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0\n\nSteps to reproduce:\n\n1. Setup a new Google Workspace account using OAuth2. \n   - Calendar and Addressbook permissions are sought by Thunderbird and granted by user\n   - Address book is not auto discovered\n2. Add a CardDav address book manually using the Location format specified in [Google Developer docs](https://developers.google.com/people/carddav)  `https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default` \n3. OAuth2 Addressbook permissions sought again and approved \n4. Address book seemingly added\n\nActual results:\n\n1. Address book does not use existing OAuth2 credentials (and there's no way to choose credentials from a drop down in case multiple OAuth2 accounts exist) that were fetched during email setup\n2. Address book does not display any contact information in the compose window. Searching in the compose window address book pane yields nothing\n3. Cannot download the address book in the Address Book tab either\n\nExpected results:\n\nI should be able to search for and fill in addresses from the compose window\n\nI should be able to download all addresses for use offline and synchronise changes between Thunderbird and Google.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "WORKSFORME",
+  "created": "2023-03-29 09:30:00+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

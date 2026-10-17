@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-29274",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "29274",
+  "url": "https://github.com/microsoft/vscode/issues/29274",
+  "summary": "File will not be displayed because is it either binary, very large or an unsupported text encoding",
+  "description": "- VSCode Version: Code 1.13.1 (379d2efb5539b09112c793d3d9a413017d736f89, 2017-06-14T18:21:47.485Z)\n- OS Version: Windows_NT ia32 6.1.7601\n- Extensions: \n\n|Extension|Author|Version|\n|---|---|---|\n|language-x86-64-assembly|13xforever|2.2.11|\n|rainbow-brackets|2gua|0.0.6|\n|read-only-indicator|alefragnani|0.6.0|\n|alignment|annsk|0.3.0|\n|Doxygen|bbenoist|1.0.0|\n|vscode-astyle|chiehyu|0.6.2|\n|python|donjayamanne|0.6.5|\n|EditorConfig|EditorConfig|0.9.3|\n|matlab|Gimly81|0.5.0|\n|triggertaskonsave|Gruntfuggly|0.1.2|\n|status-bar-tasks|GuardRex|0.2.0|\n|vscode-dimmer|hoovercj|2.1.0|\n|docthis|joelday|0.4.5|\n|center-editor-window|kaiwood|2.0.2|\n|select-part-of-word|mlewand|1.0.1|\n|cpptools|ms-vscode|0.11.4|\n|indent-rainbow|oderwat|0.6.1|\n|vscode-clearcase|OpenNingia|1.9.2|\n|vscode-icons|robertohuertasm|7.9.0|\n|theme-cyanicpastels|SamuelLampa|0.0.9|\n|indenticator|SirTori|0.4.2|\n|vscode-hexdump|slevesque|1.3.0|\n|code-spell-checker|streetsidesoftware|1.2.0|\n|comment-snippets|Tobiah|0.2.0|\n|selectline-statusbar|tomoki1207|0.0.2|\n|dark-plus-material|vangware|1.0.3|\n|change-case|wmaurer|1.0.0|\n|highlight-trailing-white-spaces|ybaumes|0.0.2|;\n\n---\n\nSteps to Reproduce:\n\n1. Open attached file in VS code get error message.\n2. Open file in Notepad. No problem.\n\nI had edit the file to remove private information. When I edited it Notepad and saved it was converted to a readable format. When I edited it in SlickEdit, I could preserve the original formatting so it would load in Notepad but not in VS Code.\n[vs code.txt](https://github.com/Microsoft/vscode/files/1095430/vs.code.txt)",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2017-06-22 16:12:46+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

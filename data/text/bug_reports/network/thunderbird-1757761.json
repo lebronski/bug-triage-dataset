@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1757761",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1757761",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1757761",
+  "summary": "List of DNS over HTTPS Providers is Blank",
+  "description": "No STR but noticed after a fresh install of 98.0b2/b3 (with a new profile) that the list of DNS over HTTPS providers is blank. This setting displays https://mozilla.cloudflare-dns.com/dns-query as a provider in 91.11.0.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "NEW",
+  "resolution": null,
+  "created": "2022-03-02 15:51:38+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

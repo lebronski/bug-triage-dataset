@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1946605",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1946605",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1946605",
+  "summary": "Poor translation quality with new lines in the text",
+  "description": "When translating the first paragraph of this website https://www.freebsd.org/ from English to Russian it produces nonsense. When I copy the text to about:translations it's perfect. I edited the HTML to remove new lines from the text and the quality of translation became good. \n\nDoes it make sense to remove new lines inside paragraphs before translating to prevent such cases?\n\n> FreeBSD is an operating system used to power modern servers,\ndesktops, and embedded <a href=\"https://www.freebsd.org/platforms/\">platforms.</a> A large\n<a href=\"https://docs.FreeBSD.org/en/articles/contributors/#staff-committers\">\ncommunity</a> has continually developed it for more than thirty\nyears. Its advanced networking, security, and storage features have\nmade FreeBSD the platform of choice for many of the <a href=\"https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users\">\nbusiest web sites</a> and most pervasive embedded networking and\nstorage devices.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "NEW",
+  "resolution": null,
+  "created": "2025-02-07 01:13:05+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

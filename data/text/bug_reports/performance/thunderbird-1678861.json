@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1678861",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1678861",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1678861",
+  "summary": "Reply window freezes after attempting to modify text color",
+  "description": "User Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4321.0 Safari/537.36 Edg/88.0.702.0\n\nSteps to reproduce:\n\n1. From an open message window or the message preview pane, clicked \"Reply All\"\n2. In the reply window, selected text to highlight\n3(attempt a). Clicked on font color icon(?)\n3(attempt b). From menu, clicked Format > Text Color...\n\nActual results:\n\nReply window locks up, and everything in the window becomes completely unresponsive, including not being able to close the window, but the window can be moved on the screen.  From the color scheme, it appears that the window is stuck in Inactive mode. \n\nPressing ALT-F4 does not close the window, but does appear to change it to Active, after which it can be closed normally.  Attempting to change font color again locks it up again.\n\nMain Thunderbird window can still be closed normally.\n\nExpected results:\n\nClicking on anything to change colors should bring up color choice window.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "WORKSFORME",
+  "created": "2020-11-21 18:18:03+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

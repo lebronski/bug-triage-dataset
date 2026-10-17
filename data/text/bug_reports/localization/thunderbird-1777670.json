@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1777670",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1777670",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1777670",
+  "summary": "TB 102 LTS - GUI not fully translated",
+  "description": "Hello!\n\nMany parts of the GUI of the release aren't translated in the Portuguese (pt-PT) version.\n\nFor example, the menu option “OpenPGP Key Manager” is in English.\n\nAnd the radio buttons in the import/export are also untranslated.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2022-07-01 10:15:25+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-55748",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "55748",
+  "url": "https://github.com/microsoft/vscode/issues/55748",
+  "summary": "Debug strings stay localized in old locale",
+  "description": "I just noticed some of my debug world strings are localized. I might've experimented with the `de` locale some time ago... but my UI is now all in English except Debug:\n\n![image](https://user-images.githubusercontent.com/22350/43636980-e4242150-9713-11e8-9925-8e3c7b490f0c.png)",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2018-08-03 09:54:31+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

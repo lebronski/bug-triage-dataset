@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1938358",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1938358",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1938358",
+  "summary": "[Rollout] The chatbot CSAT Micosurvey title overlaps the \"X\" button on the Firefox \"de\" locale build",
+  "description": "**[Affected versions]:**\n- Firefox Beta 134.0b10 de locale - Build ID: 20241213091550\n\n**[Affected Platforms]:**\n- Windows 10\n- macOS 15.1.1\n- Ubuntu 24.04\n\n**[Prerequisites]:**\n- Have a Firefox Beta 134.0b10 \"de\" locale build installed.\n- Client is enrolled in the \"[Existing users: Sidebar + GenAI](https://experimenter.services.mozilla.com/nimbus/sidebar-vertical-tabs-layout-and-new-tools/summary)\" experiment.\n- Have a profile with the \"nimbus.debug\" pref set to true in the \"about:config\" page.\n  \n**[Steps to reproduce]:**\n1. Open the browser using the profile from the prerequisites.\n2. Navigate to the \"about:studies?optin_slug=microsurvey-chatbot-csat-and-productivity-left-position&optin_branch=control&optin_collection=nimbus-preview\" URL.\n3. Go to the bottom-left part of the screen and click the \"Open AI chatbot\" sidebar button.\n4. Click the \"X\" button from the top right part of the sidebar.\n5. Repeat steps 3 and 4 for two more times.\n6. Go to the bottom-left part of the screen and click the \"Open AI chatbot\" sidebar button.\n7. Observe the chatbot CSAT Micosurvey title.\n\n**[Expected result]:**\n- The title of the Chatbot CSAT Microsurvey is displayed correctly and does not overlap with the \"X\" button.\n    \n**[Actual result]:**\n- The chatbot CSAT Micosurvey title overlaps the \"X\" button\n\n**[Additional Notes]:**\n- This issue is reproducible on both screens of the chatbot CSAT Micosurvey.\n- The issue may be reproducible on other locales with long strings in the title.\n- Attached a screen recording of the issue.",
+  "priority_original": "P1",
+  "severity_prelabel": "Blocker",
+  "status": "VERIFIED",
+  "resolution": "FIXED",
+  "created": "2024-12-19 15:39:31+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

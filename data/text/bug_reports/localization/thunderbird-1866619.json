@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1866619",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1866619",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1866619",
+  "summary": "[ci bustage] [L10n-pre-S only] nov25: The \"mach\" site is not compatible with the installed system Python packages.",
+  "description": "**Filed by:** mkmelin [at] iki.fi\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=437634144&repo=comm-central\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/JEKzE0KjT82OSc4mxo0jBA/runs/0/artifacts/public/logs/live_backing.log\n\n---\n```\n\n```",
+  "priority_original": "P5",
+  "severity_prelabel": "Minor",
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2023-11-25 10:32:13+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

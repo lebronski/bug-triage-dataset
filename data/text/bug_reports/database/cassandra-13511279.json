@@ -1,0 +1,18 @@
+{
+  "report_id": "cassandra-13511279",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "cassandra",
+  "tracker": "Apache Jira",
+  "issue_id": "13511279",
+  "url": null,
+  "summary": "CEP-15: Multi-Partition Transaction CQL Support (Alpha -> v1)",
+  "description": "With CASSANDRA-17719 complete, basic/alpha CQL support for Accord is now available in the [cep-15-accord|https://github.com/apache/cassandra/commits/cep-15-accord] branch. There are, however, a number of features and enhancements that we would still like to add before we make it available to users. Here is a summary of those items, broadly categorized:\nh3. *High Priority*\n\n*Error Messages and UX*\n - Fix the element/field names in result metadata to match the user query\n - Better error messages\n -- Append/subtracting to/from frozen list\n -- attempts to use reference in WHERE clause\n -- LET using a reserved word\n\n*Testing*\n - Figure out the original intent of placeholder tests in {{AccordIntegrationTest}} (ex. {{{}acceptInvalidationTest(){}}})\n\n*Features*\n - Support for returning the result of an {{{}IF{}}}/condition\n - Constant terms on the RHS of LET\n - Support for having a reference on both LHS and RHS of {{IF}} predicates\n - Support for {{{}CONTAINS{}}}, {{{}CONTAINS KEY{}}}, and {{IN}} (important for CAS parity)\n - Mixed conditional and unconditional updates\n - Arithmetic operations on references in {{{}INSERT{}}}/{{{}UPDATE{}}} (ex. INSERT INTO ks.tbl1 (k, c, v) VALUES (0, 0, a.v + 1)\n - Support TTLs specified in txn updates.\n - Allow partition reads in SELECT (i.e. only limit to one row on the right-hand side of LET statements)\n- Aliased selectors in LET statements\n\n*Tooling*\n - Remove {{reateepochunsafe}} references in {{JMXGetterCheckTest}}\n\n *Documentation*\n - JavaDoc for all new statement classes\n\nh3. *Nice to Have*\n\n*Domain Object Cleanup*\n - Given {{Selector}} is serializable, attempt to reuse it in {{TxnReference}} rather than hard coding data conversion cases\n - Separate current current {{LET}} statement from {{{}SelectStatement{}}}, likely as a new {{LetStatement}} that names a {{SelectStatement}}\n - Explore unifying {{Operation}} and {{ReferenceOperation}}\n - Include non-Row items of {{FilteredPartition}} in {{TxnData#estimatedSizeOnHeap()}}\n - Explore possibility of making {{Bound}} serializable and using it directly in {{TxnCondition}}\n - Change internal representation of {{TxnDataName}} to avoid {{String}} -> {{ByteBuffer}} conversions\n - Have {{{}TxnCondition{}}}/{{{}TxnUpdate{}}} support {{slice()}} to full take advantage of partial state replication\n - Update serialization logic to reflect CASSANDRA-18099\n\n*Features*\n - Full JSON support\n - Nested UDT support\n\n *Documentation*\n - CQL language documentation and bump the CQL language specification version\n - JavaDoc for all new statement classes\n - Integrate {{demo.txt}} into broader documentation somewhere or remove",
+  "priority_original": "Normal",
+  "severity_prelabel": "Major",
+  "status": "Open",
+  "resolution": null,
+  "created": "09/Dec/22 19:49",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

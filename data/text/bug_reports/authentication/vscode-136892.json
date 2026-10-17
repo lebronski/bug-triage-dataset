@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-136892",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "136892",
+  "url": "https://github.com/microsoft/vscode/issues/136892",
+  "summary": "VS Code Doesn't show credentials prompt on Windows 11",
+  "description": "I've the latest version of Windows 11 KB5007215 and the latest version of VS Code 1.62.1.\nAfter the update KB5007215 for some reason when I need to push some commits on my git repository, the login prompt doesn't appear anymore.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2021-11-10 18:20:34+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

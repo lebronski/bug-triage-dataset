@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1803005",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1803005",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1803005",
+  "summary": "[Win][HCM] \"About Firefox\" dialog to provide semantic HCM styles for links and a button",
+  "description": "### Steps to reproduce:\n1. Ensure a system High Contrast Mode is enabled (`Settings` > `Accessibility` > `Contrast Themes` > (i.e. `Night Sky`) > `Apply`)\n1. Open Firefox\n1. Navigate to the main menu > `Help` > `About Firefox`\n1. Review visual styling of links (i.e. `Firefox Help` and `Privacy Policy`) and, if an upgrade is available, a `Restart to Update` button\n\n### Actual results:\n1. Links and a button do not respect semantic styling expected from the HCM theme, i.e. on `Night Sky`:\n    1. links and button are appearing to use `CanvasText` / white color that is used for static text\n\nSee the attached screenshots from the latest stable version of Firefox 107.0 and from the last week's Nightly 109.0a1 on Windows 11\n\n### Expected results:\n1. Links and a button do respect semantic styling expected from the HCM theme, i.e. on `Night Sky` :\n    1. links are appearing to use `MozNativehyperlinktext` tag / purple color that visually communicates these elements' role of link\n    1. `Restart to Update` button uses `ButtonText` / yellow and `ButtonFace` / dark gray color combination that tells a user that this element functions as a button",
+  "priority_original": "P5",
+  "severity_prelabel": "Minor",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2022-11-28 22:52:42+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

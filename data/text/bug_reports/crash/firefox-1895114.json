@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1895114",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1895114",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1895114",
+  "summary": "Crash in [@ nsIGlobalObject::IsDying]",
+  "description": "Crash report: https://crash-stats.mozilla.org/report/index/1c885e6b-29af-4217-a354-3b9460240426\n\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\n\nTop 10 frames:\n```\n0  xul.dll  nsIGlobalObject::IsDying() const  dom/base/nsIGlobalObject.h:103\n0  xul.dll  mozilla::dom::ServiceWorkerOp::ServiceWorkerOpRunnable::WorkerRun(JSContext*,...  dom/serviceworkers/ServiceWorkerOp.cpp:296\n1  xul.dll  mozilla::dom::WorkerRunnable::Run()  dom/workers/WorkerRunnable.cpp:342\n2  xul.dll  nsThread::ProcessNextEvent(bool, bool*)  xpcom/threads/nsThread.cpp:1193\n2  xul.dll  NS_ProcessNextEvent(nsIThread*, bool)  xpcom/threads/nsThreadUtils.cpp:480\n3  xul.dll  mozilla::dom::WorkerPrivate::DoRunLoop(JSContext*)  dom/workers/WorkerPrivate.cpp:3341\n4  xul.dll  mozilla::dom::workerinternals::(anonymous namespace)::WorkerThreadPrimaryRunn...  dom/workers/RuntimeService.cpp:2106\n5  xul.dll  nsThread::ProcessNextEvent(bool, bool*)  xpcom/threads/nsThread.cpp:1193\n5  xul.dll  NS_ProcessNextEvent(nsIThread*, bool)  xpcom/threads/nsThreadUtils.cpp:480\n6  xul.dll  mozilla::ipc::MessagePumpForNonMainThreads::Run(base::MessagePump::Delegate*)  ipc/glue/MessagePump.cpp:300\n```",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "DUPLICATE",
+  "created": "2024-05-05 02:21:04+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

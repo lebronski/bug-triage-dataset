@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1831327",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1831327",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1831327",
+  "summary": "The Address bar arrow button (go button) has a misleading tooltip pointing to a URL when it may be searching",
+  "description": "My machine(s) have DNS set up such that it would search for certain domains implicitly. This is done by  tailscale, so that instead of having to type `hostname.tailnet` I can type `hostname` and have it resolve to other nodes in the tailnet.\n\nOn firefox when I type just the `hostname` and press Enter, it will by default search for this in a search engine. I get it, its a heuristic, as `hostname` isn't sufficiently domain-like for firefox to attempt to resolve that name. This is fine.\n\nHowever, if I hover over an arrow that appears at the end of the address bar as I begin typing, the tooltip says: “Go to the address in the location bar”, but instead of navigating to `http(s)://hostname` it *still* searches for `hostname` on a search engine!\n\nThat sounds like a broken button to me!",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2023-05-04 13:41:07+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

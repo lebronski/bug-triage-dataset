@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1809140",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1809140",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1809140",
+  "summary": "Importing sqlite addressbook shows additional book 'tmp'",
+  "description": "Steps to reproduce:\n\nImport sqlite addressbook\n\nActual results:\n\nBesides the imported addressbook another addressbook 'tmp' is shown, which contains all cards from all books. This book vanishes when the addressbook tab is closed and reopened.\n\nExpected results:\n\nNo book 'tmp' should be shown",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "NEW",
+  "resolution": null,
+  "created": "2023-01-09 12:15:02+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

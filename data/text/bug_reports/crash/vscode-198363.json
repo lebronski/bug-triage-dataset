@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-198363",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "198363",
+  "url": "https://github.com/microsoft/vscode/issues/198363",
+  "summary": "JSON Sort Document crashes in certain cases",
+  "description": "Type: <b>Bug</b>\n\n1. Open a new view and paste\n```jsonc\n{\n    \"foo\": {\"a\": \"b\",}\n}\n```\n2. Trigger `JSON: Sort Document` from the Command Pallette\n\nTriggers an error dialog with `Request json/sort failed with message: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]`\n\nThe trailing comma seems to be causing this issue. But it doesn't have issues with trailing commas outside of this object like:\n\n```jsonc\n{\n    \"foo\": {\"a\": \"b\"},\n}\n```\n\nVS Code version: Code 1.84.2 (Universal) (1a5daa3a0231a0fbba4f14db7ec463cf99d7768e, 2023-11-09T10:52:33.687Z)\nOS version: Darwin arm64 23.1.0",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2023-11-15 21:25:35+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

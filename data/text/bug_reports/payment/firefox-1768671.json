@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1768671",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1768671",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1768671",
+  "summary": "PDF.js doesn't honour filenames without pdf file extension when saving the document locally (e.g. from fido's web billing portal)",
+  "description": "See earlier comments in bug 1767321.\n\nApparently this is still not fixed in Nightly 102.\n\nI'll try and find someone who uses FIDO, where I can debug what's going on when I'm (all being well) in the Toronto office next week.",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "VERIFIED",
+  "resolution": "FIXED",
+  "created": "2022-05-10 15:31:38+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-113917",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "113917",
+  "url": "https://github.com/microsoft/vscode/issues/113917",
+  "summary": "Failed to connect to the remote extension host server (Failed to construct 'WebSocket': Invalid URL)",
+  "description": "From @joaomoreno \n\n![image](https://user-images.githubusercontent.com/5047891/103784311-14124900-503a-11eb-8d5d-b9baf3d84176.png)\n\ncc @aeschli \n\nCan be reproduced locally via:\n* `.\\resources\\server\\bin-dev\\server.bat` \n* `.\\scripts\\code.bat --folder-uri=vscode-remote://::1:8000/C%3A/Alex/src/working_dir`",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2021-01-06 15:14:25+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

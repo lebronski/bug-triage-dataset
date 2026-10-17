@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1635681",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1635681",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1635681",
+  "summary": "Huge memory leak even while sleeping",
+  "description": "User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:75.0) Gecko/20100101 Firefox/75.0\n\nSteps to reproduce:\n\nSince Firefox 74, it's consuming a large about of memory and never release it on MacOS. With my usual browsing experience, before 74, I never had to restart Firefox because of its memory impact, but now I need to.\nAs usual, with memory based report, there are so many factor that could cause this, it's hard to reproduce, so I simplified the test to the most simple case I could do, that is: \n\n1. Started as safe mode without any extension\n2. Loaded a bunch of tabs (my previous browsing session)\n3. Saved a memory report\n4. Set the computer to sleep during the night by closing lid\n5. Wake up the computer\n6. Saved memory report, memory increased by a lot\n\nActual results:\n\nThe memory increased by at least 300MB from the process manager.\n\nExpected results:\n\nThe memory should more or less stay the same while time goes on. Please notice that I've tried to minimize the memory usage (in about:memory) but it's useless ?",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2020-05-06 06:56:04+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

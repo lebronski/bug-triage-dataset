@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1866677",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1866677",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1866677",
+  "summary": "Erroneous translations break paypal",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0\n\nSteps to reproduce:\n\nUsing paypal.de trying to download financial reports, unknowingly translate feature in firefox enabled.\n\nActual results:\n\nwebsite is translated from german into a horribly wrong version of german, site stops to function proper. By clicking \"Bericht\" button it was also possible to create errors like \"Node.removeChild: Der zu entfernende Knoten ist kein Kind dieses Knotens\". Why is it possible that the translation feature breaks paypal so hard that we get these kind of errors?\n\nExpected results:\n\nSite should never have been translated.\nAfter disable of the translation feature, site can be used normally.\n\nThe translation feature should never be enabled by default. If its enabled, there must be a very clear indication that the site is being translated by firefox.  It needs to be opt-in, as new user see the dialog of the new feature once, forget about it and then make some sites unusable.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INVALID",
+  "created": "2023-11-26 17:09:11+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1906917",
+  "category": "network",
+  "component_hint": "Backend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1906917",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1906917",
+  "summary": "Update NetworkPrediction policy after bug 1596935",
+  "description": "Bug 1596935 changed our network prediction prefs. From the bug:\n\n> We currently have an enterprise policy for NetworkPrediction:\n> https://mozilla.github.io/policy-templates/#networkprediction\n> It corresponds to this policy in Chrome:\n> https://chromeenterprise.google/policies/#NetworkPredictionOptions\n> It sets these prefs:\n>  setAndLockPref(\"network.dns.disablePrefetch\", !param);\n>  setAndLockPref(\"network.dns.disablePrefetchFromHTTPS\", !param);\nWhat additional things should be added to this policy as a result of this bug?\n\nIt's a bit nuanced.\nThe behaviour that I would categorize as \"Predictive\" is the dom action of prefetching DNS records for every anchor element in the document.\n\nAs a result of this bug, that is now controlled by these two prefs:\n\ndom.prefetch_dns_for_anchor_http_document (default: true)\ndom.prefetch_dns_for_anchor_https_document (default: false)\n\nhttps://searchfox.org/mozilla-central/rev/a67f92611070fcdba22a106ee140ab0059cc4611/modules/libpref/init/StaticPrefList.yaml#3345,3351\nSee: https://phabricator.services.mozilla.com/D205630\n\nI think both prefs should be disabled if the NetworkPrediction enterprise policy is enabled.\n\nAnd that leaves the existing prefs, which now control rel=dns-prefetch behaviour.\n\nnetwork.dns.disablePrefetch\nnetwork.dns.disablePrefetchFromHTTPS\n\nI wouldn't personally consider these to be \"predictive\", since they are following the spec by preemptively (but not predictively) performing the dns resolution.\nhttps://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch\n\nBut maybe for enterprise policies it's better to aim for a conservative approach (and fewer changes), and so these prefs should still be set?",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "RESOLVED",
+  "resolution": "WORKSFORME",
+  "created": "2024-07-09 16:27:04+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

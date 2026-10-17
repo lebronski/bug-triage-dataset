@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1803720",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1803720",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1803720",
+  "summary": "can't donate to thunderbird using the paypal link, cross site error using firefox.",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0\n\nSteps to reproduce:\n\n- from here:\nhttps://www.thunderbird.net/en-US/thunderbird/102.0/eoy/\n- I click donate. Then from here:\nhttps://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog\n- After the Paypal button appears I click it. Nothing happens.\nIn the console is an error cross site error.\n\nActual results:\n\nContent Security Policy: The page’s settings blocked the loading of a resource at https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd (“connect-src”).\nCross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://www.paypal.com/xoplatform/logger/api/logger. (Reason: CORS request did not succeed). Status code: (null).\n\nExpected results:\n\nI think a window or new paypal page should appear so I can give you my money.\n\nUsing FireFox version 107.0 (64-bit) Windows 10. \nI also tried IE and Chrome.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "WORKSFORME",
+  "created": "2022-12-02 04:01:36+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

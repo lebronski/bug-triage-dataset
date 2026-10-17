@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1915757",
+  "category": "memory",
+  "component_hint": "Backend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1915757",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1915757",
+  "summary": "Memory leak",
+  "description": "User Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0\n\nSteps to reproduce:\n\nRun Thunderbird for a few days.\n\nActual results:\n\nMemory consumption gradually increases from 0.5gb to 1.4gb.\n\nExpected results:\n\nMemory consumption should stay low.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2024-08-29 23:31:29+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

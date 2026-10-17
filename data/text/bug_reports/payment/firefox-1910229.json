@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1910229",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1910229",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1910229",
+  "summary": "PayPal sandbox Something went wrong. Contact the seller for help",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0\n\nSteps to reproduce:\n\nClicked on a PayPal 'Buy Now' link\n\nActual results:\n\nSomething went wrong. Contact the seller for help message displayed\n\nExpected results:\n\nGone to PayPal to purchase goods",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "WORKSFORME",
+  "created": "2024-07-27 11:17:35+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

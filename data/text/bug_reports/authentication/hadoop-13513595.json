@@ -1,0 +1,18 @@
+{
+  "report_id": "hadoop-13513595",
+  "category": "authentication",
+  "component_hint": "Auth-service",
+  "source_project": "hadoop",
+  "tracker": "Apache Jira",
+  "issue_id": "13513595",
+  "url": null,
+  "summary": "Improve error reporting on non-standard kerberos names",
+  "description": "The kerberos RFC does not declare any restriction on\ncharacters used in kerberos names, though\nimplementations MAY be more restrictive.\n\nIf the kerberos controller supports use non-conventional\nuser names *and the kerberos admin chooses to use them*\nthis can confuse some of the parsing.\n\nThe obvious solution is for the enterprise admins to \"not do that\"\nas a lot of things break, bits of hadoop included.\n\nHarden the hadoop code slightly so at least we fail more gracefully,\nso people can then get in touch with their sysadmin and tell them\nto stop it.\n\nNote: given the kerberos admin is implicitly a superuser, being\nable to create malformed principal names.\ndoesn't give them any privileges, just offers a different way\nto stop the cluster working.",
+  "priority_original": "Blocker",
+  "severity_prelabel": "Blocker",
+  "status": "Resolved",
+  "resolution": "Fixed",
+  "created": "14/Dec/22 12:18",
+  "affects_versions": "3.3.4",
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "seamonkey-1659080",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "seamonkey",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1659080",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1659080",
+  "summary": "Sorting of Folder pane in Messenger is not following systems locale in SeaMonkey 2.53.3",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Firefox/60.0 SeaMonkey/2.53.3\n\nSteps to reproduce:\n\nUsing Foldername with Danish character Å or Aa in Messenger for Folder names\n\nActual results:\n\nThe folders in the Folder Pane starting with Aa and Å is sorted before and after A.\n\nExpected results:\n\nThe folders starting with Å and Aa should be sorted last (after Z) according to Danish locale.\n\nSeaMonkey 2.49.5 did this correctly - see attached file.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "UNCONFIRMED",
+  "resolution": null,
+  "created": "2020-08-14 11:34:58+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

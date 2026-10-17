@@ -1,5 +1,5 @@
 # исходные датасеты скачиваются scripts/download_sources.sh и не хранятся в репозитории
-sources/
+sources
 __pycache__/
 *.pyc
 .venv/

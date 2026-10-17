@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-219559",
+  "category": "performance",
+  "component_hint": "Backend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "219559",
+  "url": "https://github.com/microsoft/vscode/issues/219559",
+  "summary": "Terminal resize freezes computer",
+  "description": "* having a lot of terminal output \n  * e.g. run `yarn test-browser`\n* scroll the terminal to the top\n* toggle side bar\n* 🐛 renderer freezes for multiple seconds in `xterm#resize`\n\n![Image](https://github.com/user-attachments/assets/d621c63d-b645-42ac-a340-43d58de65883)\n\n[Trace-20240701T175556.json.zip](https://github.com/user-attachments/files/16056137/Trace-20240701T175556.json.zip)",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2024-07-01 15:56:27+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

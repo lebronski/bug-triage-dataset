@@ -1,0 +1,18 @@
+{
+  "report_id": "vscode-43114",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "vscode",
+  "tracker": "GitHub Issues",
+  "issue_id": "43114",
+  "url": "https://github.com/microsoft/vscode/issues/43114",
+  "summary": "Quickpick input tooltips can become out of sync with its placeholder content",
+  "description": "<!-- Do you have a question? Please ask it on https://stackoverflow.com/questions/tagged/vscode. -->\n\n<!-- Use Help > Report Issue to prefill these. -->\n- VSCode Version: 1.19\n- OS Version: Windows 10\n\nThe tooltip over the input (for the placeholder), shows the wrong content (previous content) if the quickpick is replaced with a new one.\n\nFor example, in GitLens if you open file or branch history in a quickpick and see the tooltip over the input (it should be correct), but then pick one of the commits (which will open a new quickpick), and see that the tooltip over the input will still show the previous tooltip content, not the updated content.\n\n<!-- Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: No",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": null,
+  "resolution": "completed",
+  "created": "2018-02-07 17:15:26+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "seamonkey-1686837",
+  "category": "crash",
+  "component_hint": "Backend",
+  "source_project": "seamonkey",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1686837",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1686837",
+  "summary": "segfault at startup",
+  "description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0 SeaMonkey/2.53.6\n\nSteps to reproduce:\n\nGTK_IM_MODULE=gtk-im-context-simple /opt/seamonkey-released/seamonkey \"$*\"\n\nActual results:\n\nThis command segfaults and gives the standard(?) popup asking for details and permission to report. Selecting restart produces a viable instance of the browser.\n\nThis host is a Fedora Core 34 x86_64 (Rawhide) Linux system.\n\nExceptionHandler::GenerateDump cloned child 327868\nExceptionHandler::SendContinueSignalToChild sent continue signal to child\nExceptionHandler::WaitForContinueSignal waiting for continue signal...\nFailed to open curl lib from binary, use libcurl.so instead\n\nExpected results:\n\na viable instance of the browser.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INCOMPLETE",
+  "created": "2021-01-15 00:12:59+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1866316",
+  "category": "localization",
+  "component_hint": "Frontend",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1866316",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1866316",
+  "summary": "RTL - shopping sidebar container flickers on the right side when opening/closing the sidebar",
+  "description": "STR:\n1. Enable bidi mode in Browser Toolbox (alternatively: load Firefox in RTL language)\n2. Make sure sidebar feature is enabled and profile is opted in\n2. View product page ([example](https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/)) and ensure shopping sidebar is visible\n3. Close sidebar with urlbar shopping icon or the close button on the sidebar\n\nExpected:\n- there should be no sudden flicker on the right side of the page when closing/opening the sidebar in RTL mode\n\nActual:\n- there is a slight flicker on the right side of the page, which is very distracting visually\n\nNotes:\n- this issue probably existed for a while, but I believe that it will be way more obvious once [we show sidebar animations](bugzilla.mozilla.org/show_bug.cgi?id=1858762).\n- I tested this on MacOS and can't recall at the moment if it also occurs on other platforms",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2023-11-23 18:52:08+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

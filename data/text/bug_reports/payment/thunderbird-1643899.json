@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1643899",
+  "category": "payment",
+  "component_hint": "Billing",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1643899",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1643899",
+  "summary": "Mails from PayPal: \"Archive\" button missing",
+  "description": "User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0\n\nSteps to reproduce:\n\nTried to archive an email coming from PayPal using the \"Archive\" button in menu bar or \"Archive\" in context menu.\n\nActual results:\n\nBoth, \"Archive\" button and \"Archive\" entry in context menu are missing.\n\nExpected results:\n\nIt's possible to archive any other email. These \"Archive\" entries are only missing at emails from PayPal, as far as I noticed.",
+  "priority_original": null,
+  "severity_prelabel": null,
+  "status": "RESOLVED",
+  "resolution": "INVALID",
+  "created": "2020-06-06 10:38:09+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

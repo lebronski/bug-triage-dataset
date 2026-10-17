@@ -1,0 +1,18 @@
+{
+  "report_id": "firefox-1842613",
+  "category": "database",
+  "component_hint": "Database",
+  "source_project": "firefox",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1842613",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1842613",
+  "summary": "Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors when opening the migration window for the first time, or after a Firefox restart",
+  "description": "Filled on request [1840792#c12](https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12)\n\n**Found in**\n* 117.0a1 (2023-07-10)\n\n**Affected versions**\n* 117.0a1 (2023-07-10)\n\n**Tested platforms**\n* Affected platforms: Windows 10x64 (only on one station)\n* Unaffected platforms: Windows 11x64,Ubuntu 22.04, macOS 12\n\n**Steps to reproduce**\n1. Open the migration window and observe the browser console.\n\n**Expected result** \n* No errors are displayed and the migration window is opened almost instantly.\n\n**Actual result**\n* Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors and migration window takes some time to open.\n\n**Regression range**\n* Not a regression.\n\n**Additional notes**\n* Attached a screen recording.\n* The errors are displayed only for the first time after the migration window is opened. Opening the migration window again in the same session will no longer display the errors. However, restarting Firefox will display the errors again but only for the first time.\n* Note this happens on only one Windows 10 machine.",
+  "priority_original": "P3",
+  "severity_prelabel": "Major",
+  "status": "NEW",
+  "resolution": null,
+  "created": "2023-07-10 14:39:57+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}

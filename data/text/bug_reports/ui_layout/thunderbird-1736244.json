@@ -1,0 +1,18 @@
+{
+  "report_id": "thunderbird-1736244",
+  "category": "ui_layout",
+  "component_hint": "Frontend",
+  "source_project": "thunderbird",
+  "tracker": "Mozilla Bugzilla",
+  "issue_id": "1736244",
+  "url": "https://bugzilla.mozilla.org/show_bug.cgi?id=1736244",
+  "summary": "HTML message content rendering affected/hidden by messageBody.css styles: Rename our .main-header class to .moz-main-header, use custom attribute, or encapsulate",
+  "description": "User Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0\n\nSteps to reproduce:\n\nI receive a newsletter as an HTML-formatted message with inline CSS styles, particularly some elements have the `.main-header` CSS class.\n\nActual results:\n\nAll HMTL elements bearing the CSS class `.main-header` are not rendered because Thunderbird's messageBody.css stylesheet sets `display: none;` for this class (it uses this class for hiding the message header).\n\nExpected results:\n\nAll HTML content inside a message should be rendered according to the stylesheets defined in that message, not subject to Thunderbird's UI stylesheets.\n\nThis was not a problem until a recent update.",
+  "priority_original": "P2",
+  "severity_prelabel": "Critical",
+  "status": "RESOLVED",
+  "resolution": "FIXED",
+  "created": "2021-10-17 20:51:09+00:00",
+  "affects_versions": null,
+  "license": "CC BY 4.0 (GitBugs, Patil 2025)"
+}
