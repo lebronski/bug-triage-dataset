@@ -1,0 +1,152 @@
+# newdoc id = thunderbird-1643899
+# labels = ticket_type=not_a_bug category=other component=Frontend severity=None
+# sent_id = thunderbird-1643899-1
+# section = TITLE
+# text = Mails from PayPal: "Archive" button missing
+1	Mails	_	_	_	_	_	_	_	NER=O
+2	from	_	_	_	_	_	_	_	NER=O
+3	PayPal	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	:	_	_	_	_	_	_	_	NER=O
+5	"	_	_	_	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+6	Archive	_	_	_	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+7	"	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+8	button	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+9	missing	_	_	_	_	_	_	_	NER=O
+
+# sent_id = thunderbird-1643899-2
+# section = ENVIRONMENT
+# text = User Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0
+1	User	_	_	_	_	_	_	_	NER=O
+2	Agent	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	:	_	_	_	_	_	_	_	NER=O
+4	Mozilla	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+5	/	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+6	5	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+7	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+8	0	_	_	_	_	_	_	_	NER=I-ENV
+9	(	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+10	X11	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+11	;	_	_	_	_	_	_	_	NER=I-ENV
+12	Linux	_	_	_	_	_	_	_	NER=I-ENV
+13	x86_64	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+14	;	_	_	_	_	_	_	_	NER=I-ENV
+15	rv	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+16	:	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+17	68	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+18	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+19	0	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+20	)	_	_	_	_	_	_	_	NER=I-ENV
+21	Gecko	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+22	/	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+23	20100101	_	_	_	_	_	_	_	NER=I-ENV
+24	Firefox	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+25	/	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+26	68	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+27	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+28	0	_	_	_	_	_	_	_	NER=I-ENV
+
+# sent_id = thunderbird-1643899-3
+# section = STEPS
+# text = Steps to reproduce:
+1	Steps	_	_	_	_	_	_	_	NER=O
+2	to	_	_	_	_	_	_	_	NER=O
+3	reproduce	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	:	_	_	_	_	_	_	_	NER=O
+
+# sent_id = thunderbird-1643899-4
+# section = STEPS
+# text = Tried to archive an email coming from PayPal using the "Archive" button in menu bar or "Archive" in context menu.
+1	Tried	_	_	_	_	_	_	_	NER=O
+2	to	_	_	_	_	_	_	_	NER=O
+3	archive	_	_	_	_	_	_	_	NER=O
+4	an	_	_	_	_	_	_	_	NER=O
+5	email	_	_	_	_	_	_	_	NER=O
+6	coming	_	_	_	_	_	_	_	NER=O
+7	from	_	_	_	_	_	_	_	NER=O
+8	PayPal	_	_	_	_	_	_	_	NER=O
+9	using	_	_	_	_	_	_	_	NER=O
+10	the	_	_	_	_	_	_	_	NER=O
+11	"	_	_	_	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+12	Archive	_	_	_	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+13	"	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+14	button	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+15	in	_	_	_	_	_	_	_	NER=O
+16	menu	_	_	_	_	_	_	_	NER=B-UI_ELEMENT
+17	bar	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+18	or	_	_	_	_	_	_	_	NER=O
+19	"	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+20	Archive	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+21	"	_	_	_	_	_	_	_	NER=O
+22	in	_	_	_	_	_	_	_	NER=O
+23	context	_	_	_	_	_	_	_	NER=B-UI_ELEMENT
+24	menu	_	_	_	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+25	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = thunderbird-1643899-5
+# section = ACTUAL
+# text = Actual results:
+1	Actual	_	_	_	_	_	_	_	NER=O
+2	results	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	:	_	_	_	_	_	_	_	NER=O
+
+# sent_id = thunderbird-1643899-6
+# section = ACTUAL
+# text = Both, "Archive" button and "Archive" entry in context menu are missing.
+1	Both	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	,	_	_	_	_	_	_	_	NER=O
+3	"	_	_	_	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+4	Archive	_	_	_	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+5	"	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+6	button	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+7	and	_	_	_	_	_	_	_	NER=O
+8	"	_	_	_	_	_	_	_	NER=B-UI_ELEMENT|SpaceAfter=No
+9	Archive	_	_	_	_	_	_	_	NER=I-UI_ELEMENT|SpaceAfter=No
+10	"	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+11	entry	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+12	in	_	_	_	_	_	_	_	NER=O
+13	context	_	_	_	_	_	_	_	NER=B-UI_ELEMENT
+14	menu	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+15	are	_	_	_	_	_	_	_	NER=O
+16	missing	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+17	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = thunderbird-1643899-7
+# section = EXPECTED
+# text = Expected results:
+1	Expected	_	_	_	_	_	_	_	NER=O
+2	results	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	:	_	_	_	_	_	_	_	NER=O
+
+# sent_id = thunderbird-1643899-8
+# section = EXPECTED
+# text = It's possible to archive any other email. These "Archive" entries are only missing at emails from PayPal, as far as I noticed.
+1	It	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	'	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	s	_	_	_	_	_	_	_	NER=O
+4	possible	_	_	_	_	_	_	_	NER=O
+5	to	_	_	_	_	_	_	_	NER=O
+6	archive	_	_	_	_	_	_	_	NER=O
+7	any	_	_	_	_	_	_	_	NER=O
+8	other	_	_	_	_	_	_	_	NER=O
+9	email	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+10	.	_	_	_	_	_	_	_	NER=O
+11	These	_	_	_	_	_	_	_	NER=O
+12	"	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+13	Archive	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+14	"	_	_	_	_	_	_	_	NER=O
+15	entries	_	_	_	_	_	_	_	NER=O
+16	are	_	_	_	_	_	_	_	NER=O
+17	only	_	_	_	_	_	_	_	NER=O
+18	missing	_	_	_	_	_	_	_	NER=O
+19	at	_	_	_	_	_	_	_	NER=O
+20	emails	_	_	_	_	_	_	_	NER=O
+21	from	_	_	_	_	_	_	_	NER=O
+22	PayPal	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+23	,	_	_	_	_	_	_	_	NER=O
+24	as	_	_	_	_	_	_	_	NER=O
+25	far	_	_	_	_	_	_	_	NER=O
+26	as	_	_	_	_	_	_	_	NER=O
+27	I	_	_	_	_	_	_	_	NER=O
+28	noticed	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+29	.	_	_	_	_	_	_	_	NER=O
+

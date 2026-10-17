@@ -1,0 +1,99 @@
+{
+  "report_id": "hbase-13375331",
+  "source_file": "data/text/bug_reports/memory/hbase-13375331.json",
+  "schema_version": "1.0",
+  "meta": {
+    "annotator": "lebowskiybig",
+    "created": "2026-10-17",
+    "status": "gold",
+    "method": "ручная разметка эталона",
+    "notes": "Короткий репорт без трассировки. Предложение по исправлению вынесено в раздел NOTES."
+  },
+  "text_length": 261,
+  "prelabels": {
+    "category": "memory",
+    "component_hint": "Backend",
+    "severity_prelabel": "Minor"
+  },
+  "labels": {
+    "ticket_type": "bug",
+    "category": "memory",
+    "component": "Backend",
+    "severity": "Minor",
+    "confidence": "high"
+  },
+  "sections": [
+    {
+      "label": "TITLE",
+      "start": 0,
+      "end": 38
+    },
+    {
+      "label": "DESCRIPTION",
+      "start": 40,
+      "end": 166
+    },
+    {
+      "label": "NOTES",
+      "start": 168,
+      "end": 261
+    }
+  ],
+  "items": [],
+  "entities": [
+    {
+      "id": "e1",
+      "label": "CODE_LOCATION",
+      "start": 17,
+      "end": 30,
+      "text": "thrift server",
+      "attributes": {
+        "kind": "module",
+        "normalized": "HBase Thrift Server"
+      }
+    },
+    {
+      "id": "e2",
+      "label": "CODE_LOCATION",
+      "start": 31,
+      "end": 38,
+      "text": "hashMap",
+      "attributes": {
+        "kind": "variable"
+      }
+    },
+    {
+      "id": "e3",
+      "label": "CODE_LOCATION",
+      "start": 121,
+      "end": 128,
+      "text": "hashMap",
+      "attributes": {
+        "kind": "variable"
+      }
+    },
+    {
+      "id": "e4",
+      "label": "CODE_LOCATION",
+      "start": 200,
+      "end": 210,
+      "text": "scannerMap",
+      "attributes": {
+        "kind": "variable"
+      }
+    },
+    {
+      "id": "e5",
+      "label": "ENV",
+      "start": 214,
+      "end": 225,
+      "text": "Guava Cache",
+      "attributes": {
+        "kind": "library",
+        "normalized": "Guava Cache",
+        "affected": "unknown"
+      }
+    }
+  ],
+  "relations": []
+}

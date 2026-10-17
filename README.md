@@ -5,9 +5,16 @@
 (Backend, Frontend, Auth-service, Billing, Database), **критичность**
 (Blocker, Critical, Major, Minor) и команду-исполнителя.
 
-Репозиторий подготовлен в рамках Лабораторной работы №1 «Подготовка
-неструктурированных данных» (учебное пособие «Структурирование, разметка и
-обогащение данных», Муромцев Д.И., Шилин И.А., Исаев И.В.), шаги 3–4.
+Репозиторий ведётся в рамках лабораторных работ по учебному пособию
+«Структурирование, разметка и обогащение данных» (Муромцев Д.И., Шилин И.А.,
+Исаев И.В.):
+
+* **ЛР №1 «Подготовка неструктурированных данных»** — сбор данных трёх
+  модальностей (`data/`, `scripts/collect_*`, `docs/data_card.md`);
+* **ЛР №2 «Проектирование аннотационной схемы»** — аннотационная схема, её
+  документация, конфигурации разметки и эталонные аннотации
+  (`annotation_schema/`, `annotations/`, `docs/annotation_schema.md`) —
+  см. раздел [Аннотационная схема и аннотации](#аннотационная-схема-и-аннотации).
 
 Данные собраны в **трёх модальностях** для **10 объектов** — категорий
 программных дефектов:
@@ -54,16 +61,31 @@ bug-triage-dataset/
 │   │   ├── voice_reports/<категория>/<категория>_NN.wav
 │   │   └── audio.csv             ← длительность, голос, эталонная расшифровка
 │   └── checksums.sha256          ← контрольные суммы всех файлов данных
+├── annotation_schema/            ← АННОТАЦИОННАЯ СХЕМА (ЛР2)
+│   ├── schema.json               ← метки, атрибуты, уровни, форматы — единый источник
+│   └── label_studio/             ← конфигурации Label Studio (4 шт.) и задачи с предразметкой
+├── annotations/                  ← АННОТАЦИИ (по подпапке на модальность)
+│   ├── README.md                 ← что где лежит, эталонный набор, статусы
+│   ├── VERIFICATION.md           ← журнал верификации
+│   ├── text/reports/<категория>/<report_id>.json  ← баг-репорты: классы, разделы, сущности, связи
+│   ├── text/conllu/<report_id>.conllu             ← те же репорты в CoNLL-U (BIO)
+│   ├── text/logs/<категория>/<лог>.jsonl          ← логи: событие на каждую строку
+│   ├── images/screenshots_coco.json               ← скриншоты: области в формате COCO
+│   └── audio/<категория>/<имя>.TextGrid + .json   ← аудио: сегменты, расшифровка, сущности
 ├── scripts/                      ← КОД сбора и проверки данных
 │   ├── download_sources.sh       ← скачивание исходных датасетов (git clone)
 │   ├── categories.py             ← справочник 10 категорий и правила отнесения
 │   ├── collect_text.py           ← отбор баг-репортов и фрагментов логов
 │   ├── make_screenshots.py       ← тестовый стенд + съёмка скриншотов дефектов
 │   ├── synth_audio.py            ← синтез голосовых обращений
-│   └── validate_dataset.py       ← проверка корректности загрузки (шаг 4.3)
+│   ├── validate_dataset.py       ← проверка корректности загрузки (шаг 4.3)
+│   └── annotation_tools.py       ← конфигурации разметки, проверка аннотаций, CoNLL-U, согласованность
 └── docs/                         ← ДОКУМЕНТАЦИЯ
     ├── data_card.md              ← описание полей и особенностей данных
-    └── validation_report.md      ← результат последней проверки
+    ├── validation_report.md      ← результат последней проверки данных
+    ├── annotation_schema.md      ← аннотационная схема: требования, уровни, форматы, верификация
+    ├── annotation_validation_report.md ← результат последней проверки аннотаций
+    └── img/                      ← иллюстрации разметки
 ```
 
 Во всех модальностях используются одинаковые имена категорий, поэтому данные
@@ -116,6 +138,7 @@ bug-triage-dataset/
 | `scripts/make_screenshots.py` | поднимает локальные HTTP/HTTPS-серверы стенда, запускает ошибочный код, открывает страницы в Chromium и сохраняет 30 скриншотов + `images.csv` |
 | `scripts/synth_audio.py` | синтезирует 20 обращений (5 голосов, разный темп), приводит к WAV 16 кГц моно с полосой телефонного канала (200–3800 Гц), пишет `audio.csv` |
 | `scripts/validate_dataset.py` | проверяет корректность данных (см. ниже) и пишет `docs/validation_report.md` |
+| `scripts/annotation_tools.py` | ЛР2: генерирует конфигурации Label Studio из схемы (`configs`), задачи с предразметкой (`tasks`), проверяет аннотации (`validate`), выгружает CoNLL-U (`conllu`), считает согласованность разметчиков (`agree`) |
 
 ### Установка и запуск
 
@@ -137,6 +160,12 @@ python scripts/synth_audio.py --out data/audio/voice_reports
 # 4. Проверка
 python scripts/validate_dataset.py --update-checksums   # после пересборки данных
 python scripts/validate_dataset.py                      # проверка уже загруженных данных
+
+# 5. Аннотации (ЛР2; нужен только pillow)
+python scripts/annotation_tools.py configs    # конфигурации Label Studio из schema.json
+python scripts/annotation_tools.py tasks      # задачи Label Studio с предразметкой
+python scripts/annotation_tools.py validate   # проверка аннотаций -> docs/annotation_validation_report.md
+python scripts/annotation_tools.py conllu     # annotations/text/conllu/
 ```
 
 Скрипты проверялись на Python 3.13, Playwright 1.56 (Chromium 141), Node.js 22,
@@ -198,6 +227,75 @@ Dec 10 06:55:48 LabSZ sshd[24200]: Failed password for invalid user webmaster fr
 
 ---
 
+## Аннотационная схема и аннотации
+
+Аннотационная схема (ЛР2) определяет, что и как размечается в данных всех трёх
+модальностей. Полное описание — **[docs/annotation_schema.md](docs/annotation_schema.md)**,
+машиночитаемая версия — [annotation_schema/schema.json](annotation_schema/schema.json).
+
+**Состав.** Одни и те же метки используются во всех модальностях:
+
+| Группа | Метки |
+|---|---|
+| классы обращения | `ticket_type`, `category` (10 категорий + other), `component` (Backend, Frontend, Auth-service, Billing, Database), `severity` (Blocker, Critical, Major, Minor); команда-исполнитель вычисляется из компонента |
+| структура репорта | разделы `TITLE`, `DESCRIPTION`, `STEPS`, `EXPECTED`, `ACTUAL`, `ENVIRONMENT`, `STACK_TRACE`, `CODE`, `NOTES`; элементы `STEP`, `FRAME` |
+| сущности | `EXCEPTION`, `ERROR_MESSAGE`, `CODE_LOCATION`, `ERROR_CODE`, `ENV`, `UI_ELEMENT`, `METRIC`, `PII` (с атрибутами `kind`, `normalized`, `affected`) |
+| связи | `HAS_MESSAGE`, `THROWN_AT`, `OBSERVED_IN` |
+| изображения | области `ERROR_TEXT`, `STACK_TRACE`, `STATUS_INDICATOR`, `DEFECT_AREA`, `UI_ELEMENT`, `PII` + текст области |
+| аудио | сегменты `GREETING`, `PROBLEM`, `ERROR_DETAILS`, `STEPS`, `ENVIRONMENT`, `IMPACT`, `CLOSING` + транскрипция |
+
+**Уровни аннотаций:**
+
+| Модальность | Уровень 1 | Уровень 2 | Уровень 3 |
+|---|---|---|---|
+| Структура документа | Тикет (классы) | Раздел | Шаг / кадр стека |
+| Текст | Сущность | Атрибуты сущности | Связи |
+| Логи | Файл | Событие (строка) | Сущности в строке |
+| Изображения | Изображение (класс экрана) | Область | Текст и сущности в области |
+| Аудио | Запись (классы) | Сегмент речи | Сущность в транскрипции |
+
+**Форматы и размещение:**
+
+| Модальность | Формат | Папка |
+|---|---|---|
+| баг-репорты | JSON со смещениями (совместим с Label Studio) + CoNLL-U | `annotations/text/reports/`, `annotations/text/conllu/` |
+| логи | JSON Lines | `annotations/text/logs/` |
+| изображения | COCO JSON (CVAT, Label Studio) | `annotations/images/` |
+| аудио | Praat TextGrid + JSON | `annotations/audio/` |
+
+**Эталонный набор.** Сейчас в `annotations/` лежат эталоны: 5 баг-репортов,
+1 лог (40 строк), 2 скриншота (9 областей), 2 аудиозаписи — всего 122 сущности.
+Они служат образцами для разметчиков; остальные данные размечаются в ЛР 3–5.
+Список эталонов и что каждый показывает — в [annotations/README.md](annotations/README.md).
+
+| Разметка скриншота `database_01` | Разметка скриншота `payment_03` |
+|---|---|
+| ![](docs/img/annotation_example_database_01.png) | ![](docs/img/annotation_example_payment_03.png) |
+
+Пример — баг-репорт `spark-13289561` (фрагмент):
+
+```json
+{"labels": {"ticket_type": "bug", "category": "database", "component": "Database", "severity": "Major", "confidence": "low"},
+ "entities": [
+   {"id": "e5", "label": "EXCEPTION", "text": "org.apache.spark.sql.catalyst.parser.ParseException", "attributes": {"normalized": "ParseException"}},
+   {"id": "e6", "label": "ERROR_MESSAGE", "text": "DataType time(7) is not supported.(line 1, pos 43)"}],
+ "relations": [{"from": "e5", "to": "e6", "type": "HAS_MESSAGE"}]}
+```
+
+**Инструмент разметки** — Label Studio (выбран в задании 2): конфигурации
+`annotation_schema/label_studio/*.xml` генерируются из схемы, задачи
+`tasks_*.json` содержат предразметку (категория, компонент, критичность из полей
+трекера), которую разметчик только исправляет.
+
+**Верификация.** Автоматическая проверка каждой аннотации по схеме
+(`annotation_tools.py validate`, [последний отчёт](docs/annotation_validation_report.md)),
+перекрёстная разметка 20 % данных двумя разметчиками с порогами согласованности
+(каппа Коэна ≥ 0,8 для категории, F1 сущностей ≥ 0,8, IoU ≥ 0,7 для рамок,
+WER расшифровки ≤ 10 %), выборочная проверка каждого 5-го файла, журнал —
+[annotations/VERIFICATION.md](annotations/VERIFICATION.md).
+
+---
+
 ## Проверка корректности данных
 
 `scripts/validate_dataset.py` проверяет, что для каждой категории есть данные
@@ -218,6 +316,7 @@ SHA-256 всех 166 файлов данных совпадают с `data/check
   учебных целей, со ссылкой на Zhu J. et al. *Loghub: A Large Collection of
   System Log Datasets for AI-driven Log Analytics*, ISSRE 2023).
 * Скриншоты и аудиозаписи — CC BY 4.0.
+* Аннотации (`annotations/`) и аннотационная схема — CC BY 4.0.
 
 Подробнее — в [LICENSE](LICENSE).
 
@@ -228,5 +327,8 @@ SHA-256 всех 166 файлов данных совпадают с `data/check
 
 ## Презентация
 
-Презентация проекта готовится на шаге 5 лабораторной работы; ссылка будет
-добавлена сюда.
+* ЛР2 «Проектирование аннотационной схемы» (шаг 8) — слайды о процессе
+  проектирования схемы, требованиях, уровнях, форматах и верификации:
+  https://claude.ai/artifact/JoMBYZu6QejddLZwWBEyAt (экспорт в PPTX/PDF из меню
+  презентации).
+* Презентация ЛР1 (шаг 5) — ссылка будет добавлена сюда.

@@ -1,0 +1,144 @@
+{
+  "report_id": "thunderbird-1643899",
+  "source_file": "data/text/bug_reports/payment/thunderbird-1643899.json",
+  "schema_version": "1.0",
+  "meta": {
+    "annotator": "lebowskiybig",
+    "created": "2026-10-17",
+    "status": "gold",
+    "method": "ручная разметка эталона",
+    "notes": "Пример исправления предразметки: category=payment поставлена по слову PayPal в заголовке, но тикет не о платежах и закрыт RESOLVED INVALID -> ticket_type=not_a_bug, category=other, severity=null."
+  },
+  "text_length": 498,
+  "prelabels": {
+    "category": "payment",
+    "component_hint": "Billing",
+    "severity_prelabel": null
+  },
+  "labels": {
+    "ticket_type": "not_a_bug",
+    "category": "other",
+    "component": "Frontend",
+    "severity": null,
+    "confidence": "high"
+  },
+  "sections": [
+    {
+      "label": "TITLE",
+      "start": 0,
+      "end": 43
+    },
+    {
+      "label": "ENVIRONMENT",
+      "start": 45,
+      "end": 125
+    },
+    {
+      "label": "STEPS",
+      "start": 127,
+      "end": 261
+    },
+    {
+      "label": "ACTUAL",
+      "start": 263,
+      "end": 351
+    },
+    {
+      "label": "EXPECTED",
+      "start": 353,
+      "end": 498
+    }
+  ],
+  "items": [
+    {
+      "label": "STEP",
+      "start": 148,
+      "end": 261
+    }
+  ],
+  "entities": [
+    {
+      "id": "e1",
+      "label": "UI_ELEMENT",
+      "start": 19,
+      "end": 35,
+      "text": "\"Archive\" button",
+      "attributes": {
+        "kind": "button"
+      }
+    },
+    {
+      "id": "e2",
+      "label": "ENV",
+      "start": 57,
+      "end": 125,
+      "text": "Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0",
+      "attributes": {
+        "kind": "browser",
+        "normalized": "Firefox 68 (Linux x86_64)",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e3",
+      "label": "UI_ELEMENT",
+      "start": 203,
+      "end": 219,
+      "text": "\"Archive\" button",
+      "attributes": {
+        "kind": "button"
+      }
+    },
+    {
+      "id": "e4",
+      "label": "UI_ELEMENT",
+      "start": 223,
+      "end": 231,
+      "text": "menu bar",
+      "attributes": {
+        "kind": "menu"
+      }
+    },
+    {
+      "id": "e5",
+      "label": "UI_ELEMENT",
+      "start": 248,
+      "end": 260,
+      "text": "context menu",
+      "attributes": {
+        "kind": "menu"
+      }
+    },
+    {
+      "id": "e6",
+      "label": "UI_ELEMENT",
+      "start": 286,
+      "end": 302,
+      "text": "\"Archive\" button",
+      "attributes": {
+        "kind": "button"
+      }
+    },
+    {
+      "id": "e7",
+      "label": "UI_ELEMENT",
+      "start": 307,
+      "end": 322,
+      "text": "\"Archive\" entry",
+      "attributes": {
+        "kind": "menu"
+      }
+    },
+    {
+      "id": "e8",
+      "label": "UI_ELEMENT",
+      "start": 326,
+      "end": 338,
+      "text": "context menu",
+      "attributes": {
+        "kind": "menu"
+      }
+    }
+  ],
+  "relations": []
+}

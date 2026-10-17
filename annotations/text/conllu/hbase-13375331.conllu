@@ -1,0 +1,64 @@
+# newdoc id = hbase-13375331
+# labels = ticket_type=bug category=memory component=Backend severity=Minor
+# sent_id = hbase-13375331-1
+# section = TITLE
+# text = Memory leak from thrift server hashMap
+1	Memory	_	_	_	_	_	_	_	NER=O
+2	leak	_	_	_	_	_	_	_	NER=O
+3	from	_	_	_	_	_	_	_	NER=O
+4	thrift	_	_	_	_	_	_	_	NER=B-CODE_LOCATION
+5	server	_	_	_	_	_	_	_	NER=I-CODE_LOCATION
+6	hashMap	_	_	_	_	_	_	_	NER=B-CODE_LOCATION
+
+# sent_id = hbase-13375331-2
+# section = DESCRIPTION
+# text = I found when the scanner does not closed successfully, it remains forever in the hashMap that stores the state of the scanner.
+1	I	_	_	_	_	_	_	_	NER=O
+2	found	_	_	_	_	_	_	_	NER=O
+3	when	_	_	_	_	_	_	_	NER=O
+4	the	_	_	_	_	_	_	_	NER=O
+5	scanner	_	_	_	_	_	_	_	NER=O
+6	does	_	_	_	_	_	_	_	NER=O
+7	not	_	_	_	_	_	_	_	NER=O
+8	closed	_	_	_	_	_	_	_	NER=O
+9	successfully	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+10	,	_	_	_	_	_	_	_	NER=O
+11	it	_	_	_	_	_	_	_	NER=O
+12	remains	_	_	_	_	_	_	_	NER=O
+13	forever	_	_	_	_	_	_	_	NER=O
+14	in	_	_	_	_	_	_	_	NER=O
+15	the	_	_	_	_	_	_	_	NER=O
+16	hashMap	_	_	_	_	_	_	_	NER=B-CODE_LOCATION
+17	that	_	_	_	_	_	_	_	NER=O
+18	stores	_	_	_	_	_	_	_	NER=O
+19	the	_	_	_	_	_	_	_	NER=O
+20	state	_	_	_	_	_	_	_	NER=O
+21	of	_	_	_	_	_	_	_	NER=O
+22	the	_	_	_	_	_	_	_	NER=O
+23	scanner	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+24	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = hbase-13375331-3
+# section = NOTES
+# text = To resolve this problem, I make scannerMap to Guava Cache so that can be expired on set time.
+1	To	_	_	_	_	_	_	_	NER=O
+2	resolve	_	_	_	_	_	_	_	NER=O
+3	this	_	_	_	_	_	_	_	NER=O
+4	problem	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	,	_	_	_	_	_	_	_	NER=O
+6	I	_	_	_	_	_	_	_	NER=O
+7	make	_	_	_	_	_	_	_	NER=O
+8	scannerMap	_	_	_	_	_	_	_	NER=B-CODE_LOCATION
+9	to	_	_	_	_	_	_	_	NER=O
+10	Guava	_	_	_	_	_	_	_	NER=B-ENV
+11	Cache	_	_	_	_	_	_	_	NER=I-ENV
+12	so	_	_	_	_	_	_	_	NER=O
+13	that	_	_	_	_	_	_	_	NER=O
+14	can	_	_	_	_	_	_	_	NER=O
+15	be	_	_	_	_	_	_	_	NER=O
+16	expired	_	_	_	_	_	_	_	NER=O
+17	on	_	_	_	_	_	_	_	NER=O
+18	set	_	_	_	_	_	_	_	NER=O
+19	time	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+20	.	_	_	_	_	_	_	_	NER=O
+

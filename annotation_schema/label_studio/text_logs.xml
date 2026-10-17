@@ -1,0 +1,119 @@
+<View>
+  <Header value="$system — строка $line_no ($log_file)"/>
+  <Text name="line" value="$line"/>
+  <Choices name="level" toName="line" choice="single" showInline="true" required="true">
+    <Choice value="DEBUG" hint="DEBUG"/>
+    <Choice value="INFO" hint="INFO"/>
+    <Choice value="WARN" hint="WARN"/>
+    <Choice value="ERROR" hint="ERROR"/>
+    <Choice value="FATAL" hint="FATAL"/>
+    <Choice value="NONE" hint="NONE"/>
+  </Choices>
+  <Choices name="event_type" toName="line" choice="single" showInline="true" required="true">
+    <Choice value="auth_failure" hint="auth_failure"/>
+    <Choice value="invalid_user" hint="invalid_user"/>
+    <Choice value="break_in_attempt" hint="break_in_attempt"/>
+    <Choice value="connection_error" hint="connection_error"/>
+    <Choice value="timeout" hint="timeout"/>
+    <Choice value="exception" hint="exception"/>
+    <Choice value="resource" hint="resource"/>
+    <Choice value="slow_operation" hint="slow_operation"/>
+    <Choice value="ui_event" hint="ui_event"/>
+    <Choice value="other" hint="other"/>
+  </Choices>
+  <Choices name="is_anomaly" toName="line" choice="single" showInline="true" required="true">
+    <Choice value="true" hint="сбой или атака"/>
+    <Choice value="false" hint="штатная работа"/>
+  </Choices>
+  <Labels name="entity" toName="line">
+    <Label value="EXCEPTION" background="#e6194b" hint="тип исключения или ошибки: NullPointerException, sqlite3.OperationalError, TypeError"/>
+    <Label value="ERROR_MESSAGE" background="#3cb44b" hint="текст сообщения об ошибке, показанный программой"/>
+    <Label value="CODE_LOCATION" background="#4363d8" hint="место в коде: класс, метод, файл, модуль, кадр стека, переменная"/>
+    <Label value="ERROR_CODE" background="#f58231" hint="код ошибки: HTTP-статус, сетевая ошибка, код выхода, SQLSTATE, CVE"/>
+    <Label value="ENV" background="#911eb4" hint="окружение: ОС, браузер, устройство, среда выполнения, версия приложения, библиотека, СУБД"/>
+    <Label value="UI_ELEMENT" background="#46a0b0" hint="элемент интерфейса, с которым связан дефект"/>
+    <Label value="METRIC" background="#f032e6" hint="числовое значение с единицей: время, память, нагрузка, количество"/>
+    <Label value="PII" background="#9a6324" hint="персональные и чувствительные данные — подлежат маскированию перед публикацией"/>
+  </Labels>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="CODE_LOCATION">
+    <Header value="CODE_LOCATION: code_location_kind" size="6"/>
+  <Choices name="code_location_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="class" hint="class"/>
+    <Choice value="method" hint="method"/>
+    <Choice value="file" hint="file"/>
+    <Choice value="module" hint="module"/>
+    <Choice value="frame" hint="frame"/>
+    <Choice value="variable" hint="variable"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="ERROR_CODE">
+    <Header value="ERROR_CODE: error_code_kind" size="6"/>
+  <Choices name="error_code_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="http_status" hint="http_status"/>
+    <Choice value="net_error" hint="net_error"/>
+    <Choice value="exit_code" hint="exit_code"/>
+    <Choice value="sql_state" hint="sql_state"/>
+    <Choice value="app_code" hint="app_code"/>
+    <Choice value="cve" hint="cve"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="ENV">
+    <Header value="ENV: env_kind" size="6"/>
+  <Choices name="env_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="os" hint="os"/>
+    <Choice value="browser" hint="browser"/>
+    <Choice value="device" hint="device"/>
+    <Choice value="runtime" hint="runtime"/>
+    <Choice value="app_version" hint="app_version"/>
+    <Choice value="library" hint="library"/>
+    <Choice value="database" hint="database"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="ENV">
+    <Header value="ENV: env_affected" size="6"/>
+  <Choices name="env_affected" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="yes" hint="yes"/>
+    <Choice value="no" hint="no"/>
+    <Choice value="unknown" hint="unknown"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="UI_ELEMENT">
+    <Header value="UI_ELEMENT: ui_element_kind" size="6"/>
+  <Choices name="ui_element_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="button" hint="button"/>
+    <Choice value="field" hint="field"/>
+    <Choice value="dialog" hint="dialog"/>
+    <Choice value="menu" hint="menu"/>
+    <Choice value="page" hint="page"/>
+    <Choice value="link" hint="link"/>
+    <Choice value="list" hint="list"/>
+    <Choice value="other" hint="other"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="METRIC">
+    <Header value="METRIC: metric_kind" size="6"/>
+  <Choices name="metric_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="time" hint="time"/>
+    <Choice value="memory" hint="memory"/>
+    <Choice value="cpu" hint="cpu"/>
+    <Choice value="count" hint="count"/>
+    <Choice value="size" hint="size"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity" whenLabelValue="PII">
+    <Header value="PII: pii_kind" size="6"/>
+  <Choices name="pii_kind" toName="line" choice="single" showInline="true" perRegion="true">
+    <Choice value="person_name" hint="person_name"/>
+    <Choice value="email" hint="email"/>
+    <Choice value="ip" hint="ip"/>
+    <Choice value="host" hint="host"/>
+    <Choice value="username" hint="username"/>
+    <Choice value="card" hint="card"/>
+    <Choice value="token" hint="token"/>
+    <Choice value="phone" hint="phone"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="entity">
+    <TextArea name="normalized" toName="line" perRegion="true" editable="true" maxSubmissions="1" placeholder="normalized: каноническая запись (NullPointerException, macOS 12, 500)"/>
+  </View>
+</View>

@@ -1,0 +1,252 @@
+# newdoc id = firefox-1844035
+# labels = ticket_type=bug category=payment component=Billing severity=Major
+# sent_id = firefox-1844035-1
+# section = TITLE
+# text = [macOS] Payment methods cannot be imported from Brave
+1	[	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	macOS	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+3	]	_	_	_	_	_	_	_	NER=O
+4	Payment	_	_	_	_	_	_	_	NER=O
+5	methods	_	_	_	_	_	_	_	NER=O
+6	cannot	_	_	_	_	_	_	_	NER=O
+7	be	_	_	_	_	_	_	_	NER=O
+8	imported	_	_	_	_	_	_	_	NER=O
+9	from	_	_	_	_	_	_	_	NER=O
+10	Brave	_	_	_	_	_	_	_	NER=B-ENV
+
+# sent_id = firefox-1844035-2
+# section = ENVIRONMENT
+# text = **Found in**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Found	_	_	_	_	_	_	_	NER=O
+4	in	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-3
+# section = ENVIRONMENT
+# text = * 117.0a1 (2023-07-17)
+1	*	_	_	_	_	_	_	_	NER=O
+2	117	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+3	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+4	0a1	_	_	_	_	_	_	_	NER=I-ENV
+5	(	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	2023	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+7	-	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+8	07	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+9	-	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+10	17	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+11	)	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-4
+# section = ENVIRONMENT
+# text = **Affected versions**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Affected	_	_	_	_	_	_	_	NER=O
+4	versions	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-5
+# section = ENVIRONMENT
+# text = * 117.0a1 (2023-07-13)
+1	*	_	_	_	_	_	_	_	NER=O
+2	117	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+3	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+4	0a1	_	_	_	_	_	_	_	NER=I-ENV
+5	(	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	2023	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+7	-	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+8	07	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+9	-	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+10	13	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+11	)	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-6
+# section = ENVIRONMENT
+# text = * 116.0b6
+1	*	_	_	_	_	_	_	_	NER=O
+2	116	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+3	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+4	0b6	_	_	_	_	_	_	_	NER=I-ENV
+
+# sent_id = firefox-1844035-7
+# section = ENVIRONMENT
+# text = * 115.0.2
+1	*	_	_	_	_	_	_	_	NER=O
+2	115	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+3	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+4	0	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+5	.	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+6	2	_	_	_	_	_	_	_	NER=I-ENV
+
+# sent_id = firefox-1844035-8
+# section = ENVIRONMENT
+# text = **Tested platforms**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Tested	_	_	_	_	_	_	_	NER=O
+4	platforms	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-9
+# section = ENVIRONMENT
+# text = * Affected platforms: macOS 12
+1	*	_	_	_	_	_	_	_	NER=O
+2	Affected	_	_	_	_	_	_	_	NER=O
+3	platforms	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	:	_	_	_	_	_	_	_	NER=O
+5	macOS	_	_	_	_	_	_	_	NER=B-ENV
+6	12	_	_	_	_	_	_	_	NER=I-ENV
+
+# sent_id = firefox-1844035-10
+# section = ENVIRONMENT
+# text = * Unaffected platforms: Ubuntu 22, Windows 10x64
+1	*	_	_	_	_	_	_	_	NER=O
+2	Unaffected	_	_	_	_	_	_	_	NER=O
+3	platforms	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	:	_	_	_	_	_	_	_	NER=O
+5	Ubuntu	_	_	_	_	_	_	_	NER=B-ENV
+6	22	_	_	_	_	_	_	_	NER=I-ENV|SpaceAfter=No
+7	,	_	_	_	_	_	_	_	NER=O
+8	Windows	_	_	_	_	_	_	_	NER=B-ENV
+9	10x64	_	_	_	_	_	_	_	NER=I-ENV
+
+# sent_id = firefox-1844035-11
+# section = STEPS
+# text = **Preconditions**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Preconditions	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-12
+# section = STEPS
+# text = * credit cards saved in Brave
+1	*	_	_	_	_	_	_	_	NER=O
+2	credit	_	_	_	_	_	_	_	NER=O
+3	cards	_	_	_	_	_	_	_	NER=O
+4	saved	_	_	_	_	_	_	_	NER=O
+5	in	_	_	_	_	_	_	_	NER=O
+6	Brave	_	_	_	_	_	_	_	NER=B-ENV
+
+# sent_id = firefox-1844035-13
+# section = STEPS
+# text = **Steps to reproduce**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Steps	_	_	_	_	_	_	_	NER=O
+4	to	_	_	_	_	_	_	_	NER=O
+5	reproduce	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+7	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-14
+# section = STEPS
+# text = 1. Open the migration window and import Payment data.
+1	1	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	.	_	_	_	_	_	_	_	NER=O
+3	Open	_	_	_	_	_	_	_	NER=O
+4	the	_	_	_	_	_	_	_	NER=O
+5	migration	_	_	_	_	_	_	_	NER=B-UI_ELEMENT
+6	window	_	_	_	_	_	_	_	NER=I-UI_ELEMENT
+7	and	_	_	_	_	_	_	_	NER=O
+8	import	_	_	_	_	_	_	_	NER=O
+9	Payment	_	_	_	_	_	_	_	NER=O
+10	data	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+11	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-15
+# section = EXPECTED
+# text = **Expected result**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Expected	_	_	_	_	_	_	_	NER=O
+4	result	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-16
+# section = EXPECTED
+# text = * Payment methods are imported.
+1	*	_	_	_	_	_	_	_	NER=O
+2	Payment	_	_	_	_	_	_	_	NER=O
+3	methods	_	_	_	_	_	_	_	NER=O
+4	are	_	_	_	_	_	_	_	NER=O
+5	imported	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-17
+# section = ACTUAL
+# text = **Actual result**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Actual	_	_	_	_	_	_	_	NER=O
+4	result	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-18
+# section = ACTUAL
+# text = * Payment methods are not imported.
+1	*	_	_	_	_	_	_	_	NER=O
+2	Payment	_	_	_	_	_	_	_	NER=O
+3	methods	_	_	_	_	_	_	_	NER=O
+4	are	_	_	_	_	_	_	_	NER=O
+5	not	_	_	_	_	_	_	_	NER=O
+6	imported	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+7	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-19
+# section = NOTES
+# text = **Regression range**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Regression	_	_	_	_	_	_	_	NER=O
+4	range	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-20
+# section = NOTES
+# text = * Not a regression. Reproducible with bug 1826149 after Payment methods were implemented.
+1	*	_	_	_	_	_	_	_	NER=O
+2	Not	_	_	_	_	_	_	_	NER=O
+3	a	_	_	_	_	_	_	_	NER=O
+4	regression	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	.	_	_	_	_	_	_	_	NER=O
+6	Reproducible	_	_	_	_	_	_	_	NER=O
+7	with	_	_	_	_	_	_	_	NER=O
+8	bug	_	_	_	_	_	_	_	NER=O
+9	1826149	_	_	_	_	_	_	_	NER=O
+10	after	_	_	_	_	_	_	_	NER=O
+11	Payment	_	_	_	_	_	_	_	NER=O
+12	methods	_	_	_	_	_	_	_	NER=O
+13	were	_	_	_	_	_	_	_	NER=O
+14	implemented	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+15	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-21
+# section = NOTES
+# text = **Additional notes**
+1	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	Additional	_	_	_	_	_	_	_	NER=O
+4	notes	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	*	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	*	_	_	_	_	_	_	_	NER=O
+
+# sent_id = firefox-1844035-22
+# section = NOTES
+# text = * Attached browser console errors.
+1	*	_	_	_	_	_	_	_	NER=O
+2	Attached	_	_	_	_	_	_	_	NER=O
+3	browser	_	_	_	_	_	_	_	NER=O
+4	console	_	_	_	_	_	_	_	NER=O
+5	errors	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	.	_	_	_	_	_	_	_	NER=O
+

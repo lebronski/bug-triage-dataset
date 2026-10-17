@@ -1,0 +1,76 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 11.8630625
+tiers? <exists>
+size = 2
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "segment"
+        xmin = 0
+        xmax = 11.8630625
+        intervals: size = 7
+        intervals [1]:
+            xmin = 0
+            xmax = 0.5
+            text = ""
+        intervals [2]:
+            xmin = 0.5
+            xmax = 0.81
+            text = "GREETING"
+        intervals [3]:
+            xmin = 0.81
+            xmax = 1.145
+            text = ""
+        intervals [4]:
+            xmin = 1.145
+            xmax = 8.956
+            text = "PROBLEM"
+        intervals [5]:
+            xmin = 8.956
+            xmax = 9.354
+            text = ""
+        intervals [6]:
+            xmin = 9.354
+            xmax = 10.964
+            text = "ENVIRONMENT"
+        intervals [7]:
+            xmin = 10.964
+            xmax = 11.8630625
+            text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "transcript"
+        xmin = 0
+        xmax = 11.8630625
+        intervals: size = 7
+        intervals [1]:
+            xmin = 0
+            xmax = 0.5
+            text = ""
+        intervals [2]:
+            xmin = 0.5
+            xmax = 0.81
+            text = "Алло."
+        intervals [3]:
+            xmin = 0.81
+            xmax = 1.145
+            text = ""
+        intervals [4]:
+            xmin = 1.145
+            xmax = 8.956
+            text = "На телефоне кнопка отправить на согласование обрезана, текст вылезает за край карточки, и вторую кнопку почти не видно."
+        intervals [5]:
+            xmin = 8.956
+            xmax = 9.354
+            text = ""
+        intervals [6]:
+            xmin = 9.354
+            xmax = 10.964
+            text = "На компьютере всё нормально."
+        intervals [7]:
+            xmin = 10.964
+            xmax = 11.8630625
+            text = ""

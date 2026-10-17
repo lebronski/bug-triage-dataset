@@ -1,0 +1,54 @@
+<View>
+  <Header value="$file"/>
+  <Audio name="audio" value="$audio" hotkey="space"/>
+  <Header value="Уровень 2 — сегменты речи и транскрипция" size="5"/>
+  <Labels name="segment" toName="audio">
+    <Label value="GREETING" background="#e6194b" hint="приветствие, представление"/>
+    <Label value="PROBLEM" background="#3cb44b" hint="описание проблемы"/>
+    <Label value="ERROR_DETAILS" background="#4363d8" hint="технические детали: текст ошибки, код, имя класса"/>
+    <Label value="STEPS" background="#f58231" hint="шаги, воспроизводимость"/>
+    <Label value="ENVIRONMENT" background="#911eb4" hint="устройство, ОС, версия, на чём работает/не работает"/>
+    <Label value="IMPACT" background="#46a0b0" hint="последствия для пользователя или бизнеса"/>
+    <Label value="CLOSING" background="#f032e6" hint="прощание, просьба перезвонить"/>
+  </Labels>
+  <View visibleWhen="region-selected" whenTagName="segment">
+    <TextArea name="transcript" toName="audio" perRegion="true" editable="true" maxSubmissions="1" rows="2" placeholder="дословно, числа словами"/>
+  </View>
+  <Header value="Уровень 1 — запись" size="5"/>
+  <Choices name="category" toName="audio" choice="single" showInline="true" required="true">
+    <Choice value="crash" hint="Падения и необработанные исключения"/>
+    <Choice value="ui_layout" hint="Вёрстка и отображение интерфейса"/>
+    <Choice value="authentication" hint="Аутентификация и авторизация"/>
+    <Choice value="payment" hint="Ошибки оплаты и биллинга"/>
+    <Choice value="database" hint="Ошибки базы данных и транзакций"/>
+    <Choice value="network" hint="Сеть и соединения"/>
+    <Choice value="performance" hint="Производительность и зависания"/>
+    <Choice value="memory" hint="Утечки памяти и OutOfMemory"/>
+    <Choice value="localization" hint="Локализация и кодировки"/>
+    <Choice value="security" hint="Уязвимости и TLS/сертификаты"/>
+    <Choice value="other" hint="не подходит ни под одну категорию"/>
+  </Choices>
+  <Choices name="component" toName="audio" choice="single" showInline="true" required="true">
+    <Choice value="Backend" hint="серверная логика, сервисы, воркеры, API"/>
+    <Choice value="Frontend" hint="клиентский интерфейс: веб, десктоп, мобильный"/>
+    <Choice value="Auth-service" hint="вход, токены, роли, права доступа"/>
+    <Choice value="Billing" hint="платежи, счета, подписки, платёжные данные"/>
+    <Choice value="Database" hint="хранение данных, SQL, драйверы БД, миграции, транзакции"/>
+  </Choices>
+  <Choices name="severity" toName="audio" choice="single" showInline="true" required="true">
+    <Choice value="Blocker" hint="ключевой сценарий (вход, оплата, сохранение данных) недоступен всем или большинству без обходного пути; потеря или порча данных; потеря денег; эксплуатируемая уязвимость"/>
+    <Choice value="Critical" hint="падение сервиса или функции, ошибка 5xx, ключевая функция не работает у части пользователей, обходной путь сложен"/>
+    <Choice value="Major" hint="функция работает неверно, но есть обходной путь; заметная деградация производительности; элемент интерфейса непригоден на части платформ"/>
+    <Choice value="Minor" hint="косметический дефект, опечатка, неточный перевод, вёрстка без блокировки действий, редкий пограничный случай"/>
+  </Choices>
+  <Choices name="urgency" toName="audio" choice="single" showInline="true" required="true">
+    <Choice value="low" hint="low"/>
+    <Choice value="medium" hint="medium"/>
+    <Choice value="high" hint="high"/>
+  </Choices>
+  <Choices name="audio_quality" toName="audio" choice="single" showInline="true" required="true">
+    <Choice value="clean" hint="clean"/>
+    <Choice value="noisy" hint="noisy"/>
+    <Choice value="unintelligible" hint="unintelligible"/>
+  </Choices>
+</View>

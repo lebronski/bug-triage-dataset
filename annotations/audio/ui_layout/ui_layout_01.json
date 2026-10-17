@@ -1,0 +1,80 @@
+{
+  "file": "data/audio/voice_reports/ui_layout/ui_layout_01.wav",
+  "schema_version": "1.0",
+  "meta": {
+    "annotator": "lebowskiybig",
+    "created": "2026-10-17",
+    "status": "gold",
+    "method": "границы по паузам (ffmpeg silencedetect -35 dB) + ручная проверка",
+    "notes": "Пауза 0,28 с внутри PROBLEM (после «обрезана,») не выделяется: смысл сегмента не меняется."
+  },
+  "labels": {
+    "category": "ui_layout",
+    "component": "Frontend",
+    "severity": "Major",
+    "urgency": "medium",
+    "audio_quality": "clean",
+    "synthetic": true
+  },
+  "entities": [
+    {
+      "id": "e1",
+      "segment_index": 3,
+      "label": "ENV",
+      "start": 3,
+      "end": 11,
+      "text": "телефоне",
+      "attributes": {
+        "kind": "device",
+        "normalized": "mobile",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e2",
+      "segment_index": 3,
+      "label": "UI_ELEMENT",
+      "start": 12,
+      "end": 44,
+      "text": "кнопка отправить на согласование",
+      "attributes": {
+        "kind": "button"
+      }
+    },
+    {
+      "id": "e3",
+      "segment_index": 3,
+      "label": "UI_ELEMENT",
+      "start": 78,
+      "end": 86,
+      "text": "карточки",
+      "attributes": {
+        "kind": "other"
+      }
+    },
+    {
+      "id": "e4",
+      "segment_index": 3,
+      "label": "UI_ELEMENT",
+      "start": 90,
+      "end": 103,
+      "text": "вторую кнопку",
+      "attributes": {
+        "kind": "button"
+      }
+    },
+    {
+      "id": "e5",
+      "segment_index": 5,
+      "label": "ENV",
+      "start": 3,
+      "end": 13,
+      "text": "компьютере",
+      "attributes": {
+        "kind": "device",
+        "normalized": "desktop",
+        "affected": "no"
+      }
+    }
+  ]
+}

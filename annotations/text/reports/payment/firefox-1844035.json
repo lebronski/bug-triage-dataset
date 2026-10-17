@@ -1,0 +1,197 @@
+{
+  "report_id": "firefox-1844035",
+  "source_file": "data/text/bug_reports/payment/firefox-1844035.json",
+  "schema_version": "1.0",
+  "meta": {
+    "annotator": "lebowskiybig",
+    "created": "2026-10-17",
+    "status": "gold",
+    "method": "ручная разметка эталона",
+    "notes": "Пример раздела ENVIRONMENT: затронутые (affected=yes) и незатронутые (affected=no) платформы различаются атрибутом. Предразметка (payment, Billing, Major из P3) подтверждена."
+  },
+  "text_length": 664,
+  "prelabels": {
+    "category": "payment",
+    "component_hint": "Billing",
+    "severity_prelabel": "Major"
+  },
+  "labels": {
+    "ticket_type": "bug",
+    "category": "payment",
+    "component": "Billing",
+    "severity": "Major",
+    "confidence": "high"
+  },
+  "sections": [
+    {
+      "label": "TITLE",
+      "start": 0,
+      "end": 53
+    },
+    {
+      "label": "ENVIRONMENT",
+      "start": 55,
+      "end": 258
+    },
+    {
+      "label": "STEPS",
+      "start": 260,
+      "end": 385
+    },
+    {
+      "label": "EXPECTED",
+      "start": 387,
+      "end": 439
+    },
+    {
+      "label": "ACTUAL",
+      "start": 441,
+      "end": 494
+    },
+    {
+      "label": "NOTES",
+      "start": 497,
+      "end": 664
+    }
+  ],
+  "items": [
+    {
+      "label": "STEP",
+      "start": 332,
+      "end": 385
+    }
+  ],
+  "entities": [
+    {
+      "id": "e1",
+      "label": "ENV",
+      "start": 1,
+      "end": 6,
+      "text": "macOS",
+      "attributes": {
+        "kind": "os",
+        "normalized": "macOS",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e2",
+      "label": "ENV",
+      "start": 48,
+      "end": 53,
+      "text": "Brave",
+      "attributes": {
+        "kind": "browser",
+        "normalized": "Brave",
+        "affected": "unknown"
+      }
+    },
+    {
+      "id": "e3",
+      "label": "ENV",
+      "start": 70,
+      "end": 77,
+      "text": "117.0a1",
+      "attributes": {
+        "kind": "app_version",
+        "normalized": "Firefox 117.0a1",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e4",
+      "label": "ENV",
+      "start": 116,
+      "end": 123,
+      "text": "117.0a1",
+      "attributes": {
+        "kind": "app_version",
+        "normalized": "Firefox 117.0a1",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e5",
+      "label": "ENV",
+      "start": 139,
+      "end": 146,
+      "text": "116.0b6",
+      "attributes": {
+        "kind": "app_version",
+        "normalized": "Firefox 116.0b6",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e6",
+      "label": "ENV",
+      "start": 149,
+      "end": 156,
+      "text": "115.0.2",
+      "attributes": {
+        "kind": "app_version",
+        "normalized": "Firefox 115.0.2",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e7",
+      "label": "ENV",
+      "start": 201,
+      "end": 209,
+      "text": "macOS 12",
+      "attributes": {
+        "kind": "os",
+        "normalized": "macOS 12",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e8",
+      "label": "ENV",
+      "start": 234,
+      "end": 243,
+      "text": "Ubuntu 22",
+      "attributes": {
+        "kind": "os",
+        "normalized": "Ubuntu 22",
+        "affected": "no"
+      }
+    },
+    {
+      "id": "e9",
+      "label": "ENV",
+      "start": 245,
+      "end": 258,
+      "text": "Windows 10x64",
+      "attributes": {
+        "kind": "os",
+        "normalized": "Windows 10 x64",
+        "affected": "no"
+      }
+    },
+    {
+      "id": "e10",
+      "label": "ENV",
+      "start": 302,
+      "end": 307,
+      "text": "Brave",
+      "attributes": {
+        "kind": "browser",
+        "normalized": "Brave",
+        "affected": "unknown"
+      }
+    },
+    {
+      "id": "e11",
+      "label": "UI_ELEMENT",
+      "start": 344,
+      "end": 360,
+      "text": "migration window",
+      "attributes": {
+        "kind": "dialog"
+      }
+    }
+  ],
+  "relations": []
+}

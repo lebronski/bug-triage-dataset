@@ -1,0 +1,692 @@
+[
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/crash/crash_01_python_typeerror.png",
+   "file": "crash/crash_01_python_typeerror.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/crash/crash_02_node_typeerror.png",
+   "file": "crash/crash_02_node_typeerror.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/crash/crash_03_http500_debug.png",
+   "file": "crash/crash_03_http500_debug.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/ui_layout/ui_layout_01_button_overflow.png",
+   "file": "ui_layout/ui_layout_01_button_overflow.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/ui_layout/ui_layout_02_banner_overlap.png",
+   "file": "ui_layout/ui_layout_02_banner_overlap.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/ui_layout/ui_layout_03_modal_behind_overlay.png",
+   "file": "ui_layout/ui_layout_03_modal_behind_overlay.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/authentication/authentication_01_login_401.png",
+   "file": "authentication/authentication_01_login_401.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/authentication/authentication_02_api_token_expired.png",
+   "file": "authentication/authentication_02_api_token_expired.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/authentication/authentication_03_forbidden_403.png",
+   "file": "authentication/authentication_03_forbidden_403.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/payment/payment_01_card_declined_402.png",
+   "file": "payment/payment_01_card_declined_402.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/payment/payment_02_invoice_nan_total.png",
+   "file": "payment/payment_02_invoice_nan_total.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/payment/payment_03_double_charge.png",
+   "file": "payment/payment_03_double_charge.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/database/database_01_sqlite_database_locked.png",
+   "file": "database/database_01_sqlite_database_locked.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/database/database_02_unique_constraint.png",
+   "file": "database/database_02_unique_constraint.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/database/database_03_no_such_table.png",
+   "file": "database/database_03_no_such_table.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/network/network_01_dns_not_resolved.png",
+   "file": "network/network_01_dns_not_resolved.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/network/network_02_connection_refused.png",
+   "file": "network/network_02_connection_refused.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/network/network_03_fetch_failed_sync.png",
+   "file": "network/network_03_fetch_failed_sync.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/performance/performance_01_spinner_timeout.png",
+   "file": "performance/performance_01_spinner_timeout.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/performance/performance_02_search_latency.png",
+   "file": "performance/performance_02_search_latency.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/performance/performance_03_long_task_kanban.png",
+   "file": "performance/performance_03_long_task_kanban.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/memory/memory_01_node_heap_oom.png",
+   "file": "memory/memory_01_node_heap_oom.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/memory/memory_02_python_memoryerror.png",
+   "file": "memory/memory_02_python_memoryerror.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/memory/memory_03_js_heap_growth.png",
+   "file": "memory/memory_03_js_heap_growth.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/localization/localization_01_mojibake_cp1251.png",
+   "file": "localization/localization_01_mojibake_cp1251.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/localization/localization_02_missing_translation_keys.png",
+   "file": "localization/localization_02_missing_translation_keys.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/localization/localization_03_wrong_number_date_format.png",
+   "file": "localization/localization_03_wrong_number_date_format.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/security/security_01_cert_self_signed.png",
+   "file": "security/security_01_cert_self_signed.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/security/security_02_idor_foreign_invoice.png",
+   "file": "security/security_02_idor_foreign_invoice.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "image": "/data/local-files/?d=data/images/screenshots/security/security_03_reflected_xss.png",
+   "file": "security/security_03_reflected_xss.png"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (folder)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "image",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+]

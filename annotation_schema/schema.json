@@ -1,0 +1,265 @@
+{
+  "schema_name": "bug-triage-annotation-schema",
+  "version": "1.0",
+  "updated": "2026-10-17",
+  "description": "Аннотационная схема набора Bug Triage Dataset: единые метки для текста (баг-репорты и логи), изображений (скриншоты) и аудио (голосовые обращения). Человекочитаемое описание — docs/annotation_schema.md.",
+  "text_construction": "Размечаемый текст баг-репорта = summary + \"\\n\\n\" + description. Смещения — индексы символов Unicode (как str в Python), начало включительно, конец исключительно.",
+
+  "document_labels": {
+    "ticket_type": {
+      "required": true,
+      "values": {
+        "bug": "дефект: программа ведёт себя не так, как ожидается",
+        "feature_request": "просьба о новой функции или улучшении",
+        "question": "вопрос по использованию, не дефект",
+        "not_a_bug": "поведение корректно, дубликат, не воспроизводится или ошибка пользователя"
+      }
+    },
+    "category": {
+      "required": true,
+      "values": {
+        "crash": "Падения и необработанные исключения",
+        "ui_layout": "Вёрстка и отображение интерфейса",
+        "authentication": "Аутентификация и авторизация",
+        "payment": "Ошибки оплаты и биллинга",
+        "database": "Ошибки базы данных и транзакций",
+        "network": "Сеть и соединения",
+        "performance": "Производительность и зависания",
+        "memory": "Утечки памяти и OutOfMemory",
+        "localization": "Локализация и кодировки",
+        "security": "Уязвимости и TLS/сертификаты",
+        "other": "не подходит ни под одну категорию"
+      }
+    },
+    "component": {
+      "required": true,
+      "values": {
+        "Backend": "серверная логика, сервисы, воркеры, API",
+        "Frontend": "клиентский интерфейс: веб, десктоп, мобильный",
+        "Auth-service": "вход, токены, роли, права доступа",
+        "Billing": "платежи, счета, подписки, платёжные данные",
+        "Database": "хранение данных, SQL, драйверы БД, миграции, транзакции"
+      }
+    },
+    "severity": {
+      "required": "if ticket_type == bug, иначе null",
+      "values": {
+        "Blocker": "ключевой сценарий (вход, оплата, сохранение данных) недоступен всем или большинству без обходного пути; потеря или порча данных; потеря денег; эксплуатируемая уязвимость",
+        "Critical": "падение сервиса или функции, ошибка 5xx, ключевая функция не работает у части пользователей, обходной путь сложен",
+        "Major": "функция работает неверно, но есть обходной путь; заметная деградация производительности; элемент интерфейса непригоден на части платформ",
+        "Minor": "косметический дефект, опечатка, неточный перевод, вёрстка без блокировки действий, редкий пограничный случай"
+      }
+    },
+    "confidence": {
+      "required": true,
+      "values": {
+        "high": "разметчик уверен",
+        "low": "есть сомнения — тикет уходит на проверку второму разметчику"
+      }
+    }
+  },
+
+  "derived_labels": {
+    "team": {
+      "from": "component",
+      "map": {
+        "Backend": "team-core",
+        "Frontend": "team-web",
+        "Auth-service": "team-auth",
+        "Billing": "team-payments",
+        "Database": "team-data"
+      },
+      "note": "не размечается вручную, вычисляется из component"
+    }
+  },
+
+  "prelabel_mapping": {
+    "severity_prelabel": "Blocker/Urgent/P1 -> Blocker; Critical/High/P2 -> Critical; Major/Normal/P3 -> Major; Minor/Trivial/Low/P4/P5 -> Minor (scripts/collect_text.py)",
+    "category": "по ключевым словам заголовка (scripts/categories.py)",
+    "component_hint": "по категории (scripts/categories.py); разметчик может изменить"
+  },
+
+  "section_labels": {
+    "TITLE": "заголовок тикета (summary)",
+    "DESCRIPTION": "свободное описание проблемы",
+    "STEPS": "шаги воспроизведения и предусловия",
+    "EXPECTED": "ожидаемый результат",
+    "ACTUAL": "фактический результат, текст ошибки",
+    "ENVIRONMENT": "версии, платформы, устройства, User-Agent",
+    "STACK_TRACE": "трассировка стека, дамп исключения",
+    "CODE": "фрагмент кода, конфигурации или лога",
+    "NOTES": "прочее: предложения по исправлению, ссылки, комментарии"
+  },
+
+  "item_labels": {
+    "STEP": "один шаг воспроизведения (обычно строка списка)",
+    "FRAME": "один кадр трассировки стека (строка «at ...» или «File ..., line ...»)"
+  },
+
+  "entity_labels": {
+    "EXCEPTION": {
+      "description": "тип исключения или ошибки: NullPointerException, sqlite3.OperationalError, TypeError",
+      "attributes": {
+        "normalized": {"type": "string", "required": true, "hint": "короткое имя класса без пакета: NullPointerException"}
+      }
+    },
+    "ERROR_MESSAGE": {
+      "description": "текст сообщения об ошибке, показанный программой",
+      "attributes": {}
+    },
+    "CODE_LOCATION": {
+      "description": "место в коде: класс, метод, файл, модуль, кадр стека, переменная",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["class", "method", "file", "module", "frame", "variable"]},
+        "normalized": {"type": "string", "required": false, "hint": "для frame — Файл:строка, например JdbcUtils.scala:452"}
+      }
+    },
+    "ERROR_CODE": {
+      "description": "код ошибки: HTTP-статус, сетевая ошибка, код выхода, SQLSTATE, CVE",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["http_status", "net_error", "exit_code", "sql_state", "app_code", "cve"]},
+        "normalized": {"type": "string", "required": false, "hint": "500, ERR_CONNECTION_REFUSED, CVE-2021-44521"}
+      }
+    },
+    "ENV": {
+      "description": "окружение: ОС, браузер, устройство, среда выполнения, версия приложения, библиотека, СУБД",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["os", "browser", "device", "runtime", "app_version", "library", "database"]},
+        "normalized": {"type": "string", "required": false, "hint": "macOS 12, Firefox 68, 2.4.1, Android 14"},
+        "affected": {"type": "enum", "required": false, "values": ["yes", "no", "unknown"], "default": "unknown"}
+      }
+    },
+    "UI_ELEMENT": {
+      "description": "элемент интерфейса, с которым связан дефект",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["button", "field", "dialog", "menu", "page", "link", "list", "other"]}
+      }
+    },
+    "METRIC": {
+      "description": "числовое значение с единицей: время, память, нагрузка, количество",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["time", "memory", "cpu", "count", "size"]},
+        "normalized": {"type": "string", "required": false, "hint": "8 s, 48 MB"}
+      }
+    },
+    "PII": {
+      "description": "персональные и чувствительные данные — подлежат маскированию перед публикацией",
+      "attributes": {
+        "kind": {"type": "enum", "required": true, "values": ["person_name", "email", "ip", "host", "username", "card", "token", "phone"]}
+      }
+    }
+  },
+
+  "relation_types": {
+    "HAS_MESSAGE": {"from": ["EXCEPTION", "ERROR_CODE"], "to": ["ERROR_MESSAGE"], "description": "исключение/код и его текст"},
+    "THROWN_AT": {"from": ["EXCEPTION"], "to": ["CODE_LOCATION"], "description": "где в коде возникло исключение (верхний кадр)"},
+    "OBSERVED_IN": {"from": ["EXCEPTION", "ERROR_CODE", "ERROR_MESSAGE", "UI_ELEMENT", "METRIC"], "to": ["ENV"], "description": "в каком окружении наблюдается проблема"}
+  },
+
+  "log_labels": {
+    "file": {
+      "category": "см. document_labels.category",
+      "system": "OpenSSH, Linux, Hadoop, HDFS, Spark, Zookeeper, OpenStack, Android, Thunderbird"
+    },
+    "line": {
+      "level": {"values": ["DEBUG", "INFO", "WARN", "ERROR", "FATAL", "NONE"], "hint": "как написано в строке; NONE — если уровня в формате лога нет"},
+      "event_type": {"values": ["auth_failure", "invalid_user", "break_in_attempt", "connection_error", "timeout", "exception", "resource", "slow_operation", "ui_event", "other"]},
+      "is_anomaly": {"values": [true, false], "hint": "true — событие говорит о сбое или атаке, а не о штатной работе"}
+    }
+  },
+
+  "image_labels": {
+    "image": {
+      "category": "см. document_labels.category",
+      "component": "см. document_labels.component",
+      "screen_type": {
+        "values": {
+          "error_page": "страница ошибки приложения (500, 403 и т.п.)",
+          "browser_error": "служебная страница браузера (ERR_*, предупреждение о сертификате)",
+          "console": "терминал с выводом программы, трейсбек",
+          "api_response": "сырой ответ API (JSON) в браузере",
+          "ui_screen": "обычный экран приложения с дефектом"
+        }
+      }
+    },
+    "region_labels": {
+      "ERROR_TEXT": {"description": "сообщение об ошибке на экране", "ocr_text": "required"},
+      "STACK_TRACE": {"description": "блок трассировки стека или вывода программы", "ocr_text": "optional"},
+      "STATUS_INDICATOR": {"description": "код или статус: HTTP 500, индикатор загрузки, счётчик", "ocr_text": "required"},
+      "DEFECT_AREA": {"description": "место визуального или логического дефекта", "ocr_text": "optional",
+                      "attributes": {"defect_type": ["overflow", "overlap", "wrong_layer", "mojibake", "untranslated", "wrong_format", "wrong_value", "duplicate", "endless_loading", "other"]}},
+      "UI_ELEMENT": {"description": "элемент интерфейса, связанный с дефектом", "ocr_text": "optional",
+                     "attributes": {"kind": "см. entity_labels.UI_ELEMENT.kind"}},
+      "PII": {"description": "персональные данные на экране — замазываются при публикации", "ocr_text": "optional",
+              "attributes": {"kind": "см. entity_labels.PII.kind"}}
+    },
+    "region_entities": "сущности уровня 3 размечаются внутри ocr_text области теми же метками entity_labels"
+  },
+
+  "audio_labels": {
+    "file": {
+      "category": "см. document_labels.category",
+      "component": "см. document_labels.component",
+      "severity": "см. document_labels.severity",
+      "urgency": {"values": ["low", "medium", "high"], "hint": "насколько срочно звонящий просит помочь (по словам и интонации)"},
+      "audio_quality": {"values": ["clean", "noisy", "unintelligible"]},
+      "synthetic": {"values": [true, false]}
+    },
+    "tiers": {
+      "segment": {
+        "type": "IntervalTier",
+        "labels": {
+          "GREETING": "приветствие, представление",
+          "PROBLEM": "описание проблемы",
+          "ERROR_DETAILS": "технические детали: текст ошибки, код, имя класса",
+          "STEPS": "шаги, воспроизводимость",
+          "ENVIRONMENT": "устройство, ОС, версия, на чём работает/не работает",
+          "IMPACT": "последствия для пользователя или бизнеса",
+          "CLOSING": "прощание, просьба перезвонить",
+          "": "пауза или неречевой фрагмент (пустая метка)"
+        }
+      },
+      "transcript": {
+        "type": "IntervalTier",
+        "rule": "границы совпадают с tier segment; текст — дословно, как произнесено, числа словами"
+      }
+    },
+    "segment_entities": "сущности уровня 3 размечаются в тексте транскрипции сегмента теми же метками entity_labels, normalized — каноническая запись (пятьсот -> 500)"
+  },
+
+  "levels": {
+    "document_structure": ["Тикет (классы документа)", "Раздел", "Элемент раздела (шаг, кадр стека)"],
+    "text": ["Сущность", "Атрибуты сущности", "Связи между сущностями"],
+    "logs": ["Файл лога", "Событие (строка)", "Сущности в строке"],
+    "images": ["Изображение (класс экрана)", "Область (bbox)", "Деталь (текст и сущности в области)"],
+    "audio": ["Запись (классы обращения)", "Сегмент речи", "Сущность в транскрипции"]
+  },
+
+  "limits": {
+    "entity_max_chars": {"ERROR_MESSAGE": 300, "CODE_LOCATION": 200, "ENV": 120, "default": 100},
+    "entity_min_chars": 1,
+    "entity_single_line": true,
+    "bbox_min_side_px": 8,
+    "bbox_tolerance_px": 5,
+    "audio_min_segment_sec": 0.3,
+    "audio_boundary_tolerance_sec": 0.1,
+    "audio_max_gap_inside_segment_sec": 0.6
+  },
+
+  "quality_targets": {
+    "cohen_kappa": {"category": 0.8, "component": 0.75, "severity": 0.6, "ticket_type": 0.8},
+    "span_f1_exact": 0.8,
+    "bbox_iou_match": 0.7,
+    "bbox_f1": 0.85,
+    "audio_segment_boundary_agreement": 0.9,
+    "transcript_wer_max": 0.1
+  },
+
+  "file_formats": {
+    "text_reports": "annotations/text/reports/<category>/<report_id>.json — JSON со смещениями (совместим с Label Studio)",
+    "text_conllu": "annotations/text/conllu/<report_id>.conllu — CoNLL-U, BIO-метки сущностей в столбце MISC (генерируется)",
+    "logs": "annotations/text/logs/<category>/<log_name>.jsonl — одна строка JSON на строку лога",
+    "images": "annotations/images/screenshots_coco.json — COCO JSON (импорт/экспорт CVAT и Label Studio)",
+    "audio": "annotations/audio/<category>/<name>.TextGrid (Praat) + <name>.json (классы записи и сущности)"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "report_id": "spark-13289561",
+  "source_file": "data/text/bug_reports/database/spark-13289561.json",
+  "schema_version": "1.0",
+  "meta": {
+    "annotator": "lebowskiybig",
+    "created": "2026-10-17",
+    "status": "gold",
+    "method": "ручная разметка эталона",
+    "notes": "confidence=low: тикет закрыт как Incomplete, по сути это ограничение (неподдерживаемый тип), а не явный дефект — нужна вторая разметка. Теги {color:...} не входят в границы сущностей."
+  },
+  "text_length": 500,
+  "prelabels": {
+    "category": "database",
+    "component_hint": "Database",
+    "severity_prelabel": "Major"
+  },
+  "labels": {
+    "ticket_type": "bug",
+    "category": "database",
+    "component": "Database",
+    "severity": "Major",
+    "confidence": "low"
+  },
+  "sections": [
+    {
+      "label": "TITLE",
+      "start": 0,
+      "end": 57
+    },
+    {
+      "label": "DESCRIPTION",
+      "start": 59,
+      "end": 282
+    },
+    {
+      "label": "ACTUAL",
+      "start": 284,
+      "end": 432
+    },
+    {
+      "label": "NOTES",
+      "start": 434,
+      "end": 500
+    }
+  ],
+  "items": [],
+  "entities": [
+    {
+      "id": "e1",
+      "label": "ENV",
+      "start": 51,
+      "end": 56,
+      "text": "MSSQL",
+      "attributes": {
+        "kind": "database",
+        "normalized": "Microsoft SQL Server",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e2",
+      "label": "ENV",
+      "start": 91,
+      "end": 96,
+      "text": "MSSQL",
+      "attributes": {
+        "kind": "database",
+        "normalized": "Microsoft SQL Server",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e3",
+      "label": "CODE_LOCATION",
+      "start": 142,
+      "end": 164,
+      "text": "createTableColumnTypes",
+      "attributes": {
+        "kind": "variable"
+      }
+    },
+    {
+      "id": "e4",
+      "label": "CODE_LOCATION",
+      "start": 230,
+      "end": 274,
+      "text": "com.microsoft.sqlserver.jdbc.SQLServerDriver",
+      "attributes": {
+        "kind": "class",
+        "normalized": "SQLServerDriver"
+      }
+    },
+    {
+      "id": "e5",
+      "label": "EXCEPTION",
+      "start": 322,
+      "end": 373,
+      "text": "org.apache.spark.sql.catalyst.parser.ParseException",
+      "attributes": {
+        "normalized": "ParseException"
+      }
+    },
+    {
+      "id": "e6",
+      "label": "ERROR_MESSAGE",
+      "start": 375,
+      "end": 425,
+      "text": "DataType time(7) is not supported.(line 1, pos 43)",
+      "attributes": {}
+    }
+  ],
+  "relations": [
+    {
+      "from": "e5",
+      "to": "e6",
+      "type": "HAS_MESSAGE"
+    },
+    {
+      "from": "e5",
+      "to": "e2",
+      "type": "OBSERVED_IN"
+    }
+  ]
+}

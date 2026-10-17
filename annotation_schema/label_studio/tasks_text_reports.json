@@ -1,0 +1,3892 @@
+[
+ {
+  "data": {
+   "text": "Never Lose a Password Again is shown with disabled feature recommendations\n\nUser Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:82.0) Gecko/20100101 Firefox/82.0\n\nSteps to reproduce:\n\nSave a password\n\nActual results:\n\nThe Never Lose a Password Again recommendation was shown\n\nExpected results:\n\nThe Never Lose a Password Again recommendation should not be shown if you have the Recommend features as you browse setting disabled.",
+   "report_id": "firefox-1677591",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Password Reset Token Leakage\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36\n\nSteps to reproduce:\n\nStep 1 : Go To - https://accounts.firefox.com/reset_password\nStep 2 : Enter Registered Gmail\nStep 3 : Click Begin Reset Button \nStep 4 : Capture the Request\nStep 5 : See Response For That You Get the Password Token \n\nActual results:\n\nPassword Token is Being Leaked in Response itself\n\nSomething Looks Like , it's a Critical Bug\n\nResponse Received in My Burpsuite :\n\n{\"passwordForgotToken\":\"f0177f67bb0de0bd87076877cde2ea7be41af6fb6b75e5d36612afeecae58f5f\",\"ttl\":86400,\"codeLength\":32,\"tries\":3}\n\nThe Above is Received in My Response , Screen Shots Attached POC\n\nExpected results:\n\nShow Only \"Success\" or \"Check Email\" Message While Requesting Password Reset Option .\n\nBut here it's showing the token\n\nI've Attached TOKENS.zip file , which consists of Five Screenshots.\n\nTake a Look For More Clarity\n\nThanks & Regards\nRaghuram G\nBug Bounty Hunter\nraghuram.4.5.0.2@gmail.com",
+   "report_id": "firefox-1728144",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "When I logged into the Firefox account, such data as logins, passwords and bookmarks were not synchronized, and as a result, everything was gone.\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0\n\nSteps to reproduce:\n\nПосле переустановки Windows, я скачал браузер Firefox с официального сайта, установил его, и зашел в свой аккаунт Firefox.\n\nActual results:\n\nЯ успешно вошел в аккаунт, но такие данные как логины, пароли и закладки не синхронизировались, то есть не были добавлены в мой браузер.\n\nExpected results:\n\nОжидалось, что все пароли, логины и закладки будут синхронизированы и скачаны с предыдущей точки синхронизации.",
+   "report_id": "firefox-1809160",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Improve error reporting on non-standard kerberos names\n\nThe kerberos RFC does not declare any restriction on\ncharacters used in kerberos names, though\nimplementations MAY be more restrictive.\n\nIf the kerberos controller supports use non-conventional\nuser names *and the kerberos admin chooses to use them*\nthis can confuse some of the parsing.\n\nThe obvious solution is for the enterprise admins to \"not do that\"\nas a lot of things break, bits of hadoop included.\n\nHarden the hadoop code slightly so at least we fail more gracefully,\nso people can then get in touch with their sysadmin and tell them\nto stop it.\n\nNote: given the kerberos admin is implicitly a superuser, being\nable to create malformed principal names.\ndoesn't give them any privileges, just offers a different way\nto stop the cluster working.",
+   "report_id": "hadoop-13513595",
+   "source_project": "hadoop",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Blocker"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Event handlers linger if Exchange credentials dialog is shown twice in one session\n\nThe code to prompt the user to log in to their Exchange autodiscover server does not uninstall all, or in some cases, any, of its event handlers. This results in outdated event handlers lingering which might interfere with a potential reuse of the dialog in the same session. A typical reason why the dialog would be reused is if the autodiscover server needs the username in domain\\user format, in which case the initial login would fail and the user would be prompted to send the new credentials to the autodiscover server.",
+   "report_id": "thunderbird-1724940",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Critical"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Password input field does not have focus in Chat Account Wizard (no visible default focus at all, also in 'Summary' step)\n\n+++ This bug was initially created as a clone of Bug #1729948 +++\n\nSTR\n\n1.  ≡ > New > Chat Account --> Chat Account Wizard\n2. Enter user name / server\n3. - Press Enter to reach password dialog\n   - Alternatively, use Next button\n\nActual\n- password input does not have focus\n- screen readers lost\n- If next button was used in step 3, focus remains on next button in password dialog\n\nExpected\n- Regardless of method used to reach password dialog:\n- Password field must have focus when this dialog is shown\n\nFrom bug 1729948, comment 0:\n\nIn the following screen, you’ll be asked for a password… Except that  \nthe password field doesn’t have the focus by default (the whole dialog  \nhas the focus actually). And so, if you’re relying only on audio output,  \nyou’ll have no idea as to what is currently being asked of you. (You need  \nto press Tab once to bring the focus into the password field.)\n\nIF you hadn’t hit Return in the previous screen but instead used the  \n“Next” button (either by Tabbing onto it or with Alt-N), then the Next  \nbutton would still have the focus in this new screen. Either way, that’s  \ndifferent from the previous behavior which had the Password field  \nfocused by default (as one would expect).",
+   "report_id": "thunderbird-1733438",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "CardDAV does not fetch address book from Google Workspace and fails to use existing OAuth2 credentials\n\nUser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/112.0\n\nSteps to reproduce:\n\n1. Setup a new Google Workspace account using OAuth2. \n   - Calendar and Addressbook permissions are sought by Thunderbird and granted by user\n   - Address book is not auto discovered\n2. Add a CardDav address book manually using the Location format specified in [Google Developer docs](https://developers.google.com/people/carddav)  `https://www.googleapis.com/carddav/v1/principals/firstname.lastname@company.org/lists/default` \n3. OAuth2 Addressbook permissions sought again and approved \n4. Address book seemingly added\n\nActual results:\n\n1. Address book does not use existing OAuth2 credentials (and there's no way to choose credentials from a drop down in case multiple OAuth2 accounts exist) that were fetched during email setup\n2. Address book does not display any contact information in the compose window. Searching in the compose window address book pane yields nothing\n3. Cannot download the address book in the Address Book tab either\n\nExpected results:\n\nI should be able to search for and fill in addresses from the compose window\n\nI should be able to download all addresses for use offline and synchronise changes between Thunderbird and Google.",
+   "report_id": "thunderbird-1825223",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "VS Code Doesn't show credentials prompt on Windows 11\n\nI've the latest version of Windows 11 KB5007215 and the latest version of VS Code 1.62.1.\nAfter the update KB5007215 for some reason when I need to push some commits on my git repository, the login prompt doesn't appear anymore.",
+   "report_id": "vscode-136892",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Insiders - Microsoft Authentication undefined identity guid\n\n<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes/No\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: 1.65.0-insiders\n- OS Version: windows 10 \n\nSteps to Reproduce:\n\n1. Have an extension that leverages microsoft authentication\n2) sign in through browser flow \n3) if you inspect the auth session that was created\n\nstable: \n```\n{\n    id: \"72f988bf-86f1-41af-91ab-2d7.../f934b166-8c65-428e-b8c8-a9.../901a1c79-80d9-411f-b17...\",\n    accessToken: <token>,\n    account: {\n      label: \"alias@microsoft.com\",\n      id: \"72f988bf-86f1.../f934b166-8c65-428e-b8c8-a9fb...\",\n    },\n    scopes: [\n      \"499b84ac-1321-427f-aa17-267ca6975798/.default\",\n      \"offline_access\",\n    ],\n  }\n```\n\ninsiders: \n```\n{\n    id: \"72f988bf-86f1-4..../undefined/c816eae4-e3c5-4718-a742-b....\",\n    accessToken: <token>,\n    idToken: \"eyJ0e\",\n    account: {\n      label: \"name@microsoft.com\",\n      id: \"72f988bf-86f1-41af-.../undefined\",\n    },\n    scopes: [\n      \"499b84ac-1321-427f-aa17-267ca6975798/.default\",\n      \"email\",\n      \"offline_access\",\n      \"openid\",\n    ],\n  }\n```\n\nBoth the id, and account.id properties now have /undefined/ within them",
+   "report_id": "vscode-143463",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "GitHub Authentication extension running in both web worker extension host & remote extension host\n\nSteps to Reproduce:\n\n1. Enable Remote Tunnel Access in VS Code Insiders Desktop\n2. Copy the link and open it  in your browser (note, you may hit: https://github.com/microsoft/vscode/issues/183792#issuecomment-1573938109)\n3. If you open the Output pane and then the drop down, you'll see 🐛 2 `GitHub Authentication`s\n \n![image](https://github.com/microsoft/vscode/assets/2644648/bfefe802-d093-4074-90bf-19887aa9960a)\n\nIf you try to install the PR Pinger extension, and go through its auth flow, it will hang similar to https://github.com/microsoft/vscode/issues/183754\n\nMy suspicion is that since there are 2 GH Auth extensions running, the wrong one gets their UriHandler fired.",
+   "report_id": "vscode-184180",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "authentication"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Auth-service"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Firefox tab crashes, then requires restart after reopening\n\nUser Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:95.0) Gecko/20100101 Firefox/95.0\n\nSteps to reproduce:\n\nOpen new tab\n\nActual results:\n\nTab crashes. Have to all instances of Firefox. After reopening, it then need to restart.\n\nExpected results:\n\nTab shouldn't crash every other day.",
+   "report_id": "firefox-1745456",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Crash in [@ nsIGlobalObject::IsDying]\n\nCrash report: https://crash-stats.mozilla.org/report/index/1c885e6b-29af-4217-a354-3b9460240426\n\nReason: ```EXCEPTION_ACCESS_VIOLATION_READ```\n\nTop 10 frames:\n```\n0  xul.dll  nsIGlobalObject::IsDying() const  dom/base/nsIGlobalObject.h:103\n0  xul.dll  mozilla::dom::ServiceWorkerOp::ServiceWorkerOpRunnable::WorkerRun(JSContext*,...  dom/serviceworkers/ServiceWorkerOp.cpp:296\n1  xul.dll  mozilla::dom::WorkerRunnable::Run()  dom/workers/WorkerRunnable.cpp:342\n2  xul.dll  nsThread::ProcessNextEvent(bool, bool*)  xpcom/threads/nsThread.cpp:1193\n2  xul.dll  NS_ProcessNextEvent(nsIThread*, bool)  xpcom/threads/nsThreadUtils.cpp:480\n3  xul.dll  mozilla::dom::WorkerPrivate::DoRunLoop(JSContext*)  dom/workers/WorkerPrivate.cpp:3341\n4  xul.dll  mozilla::dom::workerinternals::(anonymous namespace)::WorkerThreadPrimaryRunn...  dom/workers/RuntimeService.cpp:2106\n5  xul.dll  nsThread::ProcessNextEvent(bool, bool*)  xpcom/threads/nsThread.cpp:1193\n5  xul.dll  NS_ProcessNextEvent(nsIThread*, bool)  xpcom/threads/nsThreadUtils.cpp:480\n6  xul.dll  mozilla::ipc::MessagePumpForNonMainThreads::Run(base::MessagePump::Delegate*)  ipc/glue/MessagePump.cpp:300\n```",
+   "report_id": "firefox-1895114",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "LdapGroupsMapping crashes with NullPointerException while going up the group hierarchy\n\nh2. What happened:\n\nWhen set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to a value larger than 0, {{goUpGroupHierarchy}} in {{org/apache/hadoop/security/LdapGroupsMapping.java}} may return a null {{{}groupResults{}}}and use it without checking null.\nh2. Buggy code:\n{noformat}\n  void goUpGroupHierarchy(Set<String> groupDNs, int goUpHierarchy, Set<String> groups) throws NamingException {\n    if (goUpHierarchy <= 0 || groups.isEmpty()) {\n      return;\n    }\n    ...\n    NamingEnumeration<SearchResult> groupResults = context.search(groupbaseDN, filter.toString(), SEARCH_CONTROLS);\n    while (groupResults.hasMoreElements()) {          // <--- Here groupResults may be null\n    ...\n    }\n    ...\n  }{noformat}\nh2. How to reproduce:\n\n(1) Set {{hadoop.security.group.mapping.ldap.search.group.hierarchy.levels}} to 1\n(2) Run test {{org.apache.hadoop.security.TestLdapGroupsMapping#testGetGroupsWithConnectionClosed}}\nh2. Stack trace:\n{noformat}\njava.lang.NullPointerException\n        at org.apache.hadoop.security.LdapGroupsMapping.goUpGroupHierarchy(LdapGroupsMapping.java:612)\n        at org.apache.hadoop.security.LdapGroupsMapping.lookupGroup(LdapGroupsMapping.java:489)\n        at org.apache.hadoop.security.LdapGroupsMapping.doGetGroups(LdapGroupsMapping.java:552)\n        at org.apache.hadoop.security.LdapGroupsMapping.getGroups(LdapGroupsMapping.java:365){noformat}\nFor an easy reproduction, run the reproduce.sh in the attachment.\n\nWe also create a PR provides a fix by checking the groupResults is not Null before it is accessed, similar to what's done in `org.apache.hadoop.security.LdapGroupsMapping#lookupGroup`",
+   "report_id": "hadoop-13544320",
+   "source_project": "hadoop",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Critical"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "segfault at startup\n\nUser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101 Firefox/60.0 SeaMonkey/2.53.6\n\nSteps to reproduce:\n\nGTK_IM_MODULE=gtk-im-context-simple /opt/seamonkey-released/seamonkey \"$*\"\n\nActual results:\n\nThis command segfaults and gives the standard(?) popup asking for details and permission to report. Selecting restart produces a viable instance of the browser.\n\nThis host is a Fedora Core 34 x86_64 (Rawhide) Linux system.\n\nExceptionHandler::GenerateDump cloned child 327868\nExceptionHandler::SendContinueSignalToChild sent continue signal to child\nExceptionHandler::WaitForContinueSignal waiting for continue signal...\nFailed to open curl lib from binary, use libcurl.so instead\n\nExpected results:\n\na viable instance of the browser.",
+   "report_id": "seamonkey-1686837",
+   "source_project": "seamonkey",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "df.rdd.isEmpty() results in unexpected executor failure and JVM crash\n\nIt was discovered that a particular data distribution in a DataFrame with groupBy clause could result in a JVM crash when calling {{{}df.rdd.isEmpty{}}}.\n\nFor example,\n{code:java}\ndata = []\nfor t in range(0, 10000):\n    id = str(uuid.uuid4())\n    if t == 0:\n        for i in range(0, 99):\n            data.append((id,))\n    elif t < 10:\n        for i in range(0, 75):\n            data.append((id,))\n    elif t < 100:\n        for i in range(0, 50):\n            data.append((id,))\n    elif t < 1000:\n        for i in range(0, 25):\n            data.append((id,))\n    else:\n        for i in range(0, 10):\n            data.append((id,))\n\ndf = self.spark.createDataFrame(data, [\"col\"])\ndf.coalesce(1).write.parquet(tmpPath)\n\nres = self.spark.read.parquet(tmpPath).groupBy(\"col\").count()\nprint(res.rdd.isEmpty()) # crashes JVM{code}\nReproducible 100% on this dataset.\n\nThe ticket is related to (can be thought of as a follow-up for) https://issues.apache.org/jira/browse/SPARK-33277. We need to patch one more place to make sure Python iterator is in sync with Java iterator and is terminated whenever the task is marked as completed.\n\nNote that all other operations appear to work fine: {{{}count{}}}, {{{}collect{}}}.",
+   "report_id": "spark-13442742",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "NullPointerException is thrown when column with ROWID type contains NULL values\n\nA row ID may be NULL in an Oracle table. When this is the case, the following exception is thrown:\n\n{{[info] Cause: java.lang.NullPointerException:}}\n{{{}[info] at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$makeGetter$12(JdbcUtils.scala:452){}}}{{{}[info] at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$makeGetter$12$adapted(JdbcUtils.scala:451){}}}\n{{{}[info] at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anon$1.getNext(JdbcUtils.scala:361){}}}{{{}[info] at org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anon$1.getNext(JdbcUtils.scala:343){}}}",
+   "report_id": "spark-13547998",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "After crash Thunderbird will not download email\n\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_12_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36\n\nSteps to reproduce:\n\nMy computer froze up. After i rebooted I no longer receive email. When i click on get messages in Thunderbird It will say Downloading 1 of 20 then goes away and dont pull in any email.\nI am on a Mac OS 10.12\n\nActual results:\n\nNothing happens\n\nExpected results:\n\nShould have downloaded email from the mail server.",
+   "report_id": "thunderbird-1729485",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Startup crash in [@ core::result::unwrap_failed | ksni::service::TrayService<T>::spawn_without_dbus_name::{{closure}}]\n\nCrash report: https://crash-stats.mozilla.org/report/index/0ff84ead-aa83-4326-bde0-5a0d10250117\n\nMOZ_CRASH Reason:\n```\ncalled `Result::unwrap()` on an `Err` value: D-Bus error: Did not receive a reply. Possible causes include: the remote application did not send a reply, the message bus security policy blocked the reply, the reply timeout expired, or the network connection was broken. (org.freedesktop.DBus.Error.NoReply)\n```\n\nTop 10 frames:\n```\n0  libxul.so  MOZ_Crash(char const*, int, char const*)  mfbt/Assertions.h:337\n0  libxul.so  RustMozCrash  mozglue/static/rust/wrappers.cpp:18\n1  libxul.so  mozglue_static::panic_hook  mozglue/static/rust/lib.rs:102\n1  libxul.so  core::ops::function::Fn::call  /builds/worker/fetches/rustc/lib/rustlib/src/rust/library/core/src/ops/function.rs:79\n2  libxul.so  <alloc::boxed::Box<F, A> as core::ops::function::Fn<Args>>::call  library/alloc/src/boxed.rs:1986\n2  libxul.so  std::panicking::rust_panic_with_hook  library/std/src/panicking.rs:809\n3  libxul.so  std::panicking::begin_panic_handler::{{closure}}  library/std/src/panicking.rs:674\n4  libxul.so  std::sys::backtrace::__rust_end_short_backtrace  library/std/src/sys/backtrace.rs:170\n5  libxul.so  rust_begin_unwind  library/std/src/panicking.rs:665\n6  libxul.so  core::panicking::panic_fmt  library/core/src/panicking.rs:76\n```\n\nI get this crash consistently every time I start up my computer, because I have Thunderbird running on startup. Probably the relevant dbus service is not up yet? It seems the tray service stuff shouldn't be crashing...\n\nni?ing based on blame information :)",
+   "report_id": "thunderbird-1942318",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Window crashes when python outputs too much in terminal\n\n### Version of VS Code\nVersion: 1.48.0 (user setup)\nCommit: db40434f562994116e5b21c24015a2e40b2504e6\nDate: 2020-08-13T07:50:42.600Z\nElectron: 7.3.2\nChrome: 78.0.3904.130\nNode.js: 12.8.1\nV8: 7.8.279.23-electron.0\nOS: Windows_NT x64 10.0.18363\n\n### Your operating system\nWindows 10 Enterprise, version 1909, build 18363.1016\n\n### List of extensions that you have installed\n```\ncg-cnu.vscode-path-tools\nGimly81.matlab\nkriegalex.vscode-cudacpp\nms-python.python\nms-vscode.hexeditor\nms-vscode.powershell\nnhoizey.gremlins\nstkb.rewrap\ntht13.html-preview-vscode\n```\n\nIt occurs even with all the extensions disabled\n### Reproducible steps (1... 2... 3...) that cause the issue\nYou need python installed (I don't know if it can be reproduced in other ways, but I know that there are no crashes in terminals different from VSCode's one, and that trying to output a huge file with `type` does not provoke the crash)\n\n1. Open the terminal\n2. Write `python` to open a python prompt\n```\ns=11000000*'5'\ns\n```\n3. Click or play a bit with the mouse in the upper section of the window (i.e. not on the terminal)\n### What you expected to see, versus what you actually saw\nI expect the printing of a very long series of '5''s\n\nWhat happens is that the window crashes after a while\n\n### Images, animations, or a link to a video showing the issue occurring\n[link to a video](https://streamable.com/f27585). \n\n### Errors from the Dev Tools Console (open from the menu: Help > Toggle Developer Tools)\n<s>No error there</s>\n\nEDIT: actually if the Dev Tools are open it pauses with the writing \"Paused before potential out-of-memory crash\"\n\nstack trace:\n```\n_event._event (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\ne (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nget (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\n_provideLinks (terminalProtocolLinkProvider.ts:40)\nprovideLinks (terminalBaseLinkProvider.ts:14)\n(anonymous) (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nt._askForLink (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nt._onHover (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\nt._onMouseMove (C:\\Users\\xxx\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\node_modules.asar\\xterm\\lib\\xterm.js:1)\n```",
+   "report_id": "vscode-105030",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "JSON Sort Document crashes in certain cases\n\nType: <b>Bug</b>\n\n1. Open a new view and paste\n```jsonc\n{\n    \"foo\": {\"a\": \"b\",}\n}\n```\n2. Trigger `JSON: Sort Document` from the Command Pallette\n\nTriggers an error dialog with `Request json/sort failed with message: Range#create called with invalid arguments[[object Object], [object Object], undefined, undefined]`\n\nThe trailing comma seems to be causing this issue. But it doesn't have issues with trailing commas outside of this object like:\n\n```jsonc\n{\n    \"foo\": {\"a\": \"b\"},\n}\n```\n\nVS Code version: Code 1.84.2 (Universal) (1a5daa3a0231a0fbba4f14db7ec463cf99d7768e, 2023-11-09T10:52:33.687Z)\nOS version: Darwin arm64 23.1.0",
+   "report_id": "vscode-198363",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "crash"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Lazy transaction log replica creation allows incorrect replica content divergence during compaction\n\nRecently encountered this around compaction/anticompaction:\n\n{noformat}\n2022-01-13 10:18:24,325 ERROR [main] org.apache.cassandra.db.lifecycle.LogTransaction - Unexpected disk state: failed to read transaction log [mf_txn_anticompactionafterrepair_2f826324-742c-11ec-b293-65cae21e111c.log in .../d1/data/.../files-c351f12917af3a5cbc57791cdf178a1f, .../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f]\nFiles and contents follow:\n.../d1/data/.../files-c351f12917af3a5cbc57791cdf178a1f/mf_txn_anticompactionafterrepair_2f826324-742c-11ec-b293-65cae21e111c.log\n\tADD:[.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350438-big,0,8][2380834168]\n\tREMOVE:[.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350435-big,1642049328006,8][2338829485]\n\tREMOVE:[.../d1/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350436-big,1642049366291,8][4248366924]\n\tCOMMIT:[,0,0][2613697770]\n.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/mf_txn_anticompactionafterrepair_2f826324-742c-11ec-b293-65cae21e111c.log\n\tADD:[.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350437-big,0,8][4051162457]\n\t\t***Does not match <ADD:[.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350438-big,0,8][2380834168]> in first replica file\n\tADD:[.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350438-big,0,8][2380834168]\n\tREMOVE:[.../d2/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350435-big,1642049328006,8][2338829485]\n\tREMOVE:[.../d1/data/.../files-c351f12917af3a5cbc57791cdf178a1f/prod_p203-files-mf-350436-big,1642049366291,8][4248366924]\n\tCOMMIT:[,0,0][2613697770]\n{noformat}\n\nWe have two data directories and two transaction log files, but one is missing an ADD entry when the contents of the two log replicas should be identical. One scenario that can cause this is the following:\n\n1. Start anticompaction on a single file, in directory {{/tmp/d0}}.\n\n2. Call {{trackNew()}} with 2 new files, both in a single directory, but in directory {{/tmp/d1}}. This initializes the log file in {{/tmp/d1}}, but there is still no log file in {{/tmp/d0}}.\n\n3. Anticompaction only writes to one of the files in {{/tmp/d1}} (say all other keys were outside the repaired range).\n\n4. When anticompaction is done, the empty writer is aborted and we call {{untrackNew()}}, which removes the added file from the registered log “records\" (BUT NOT FROM DISK in {{/tmp/d1}}).\n\n5. The REMOVE record is added. This references {{/tmp/d0}}. We lazily create the log file there by dumping all the records we have in memory to that file, which does not include the aborted SSTable above.\n\n6. Now the log files contain:\n\n{noformat}\n/tmp/d1/logfile.log:\nADD:[/tmp/d1/AntiCompactionTest/AntiCompactionTest-e4fdddf0746e11ecb73ad5a997381615/AntiCompactionTest-AntiCompactionTest-mf-2-big,0,8][3268492367]\nADD:[/tmp/d1/AntiCompactionTest/AntiCompactionTest-e4fdddf0746e11ecb73ad5a997381615/AntiCompactionTest-AntiCompactionTest-mf-3-big,0,8][2813724425]\nREMOVE:[/tmp/d0/AntiCompactionTest/AntiCompactionTest-e4fdddf0746e11ecb73ad5a997381615/AntiCompactionTest-AntiCompactionTest-mf-1-big,1642078019000,8][2401235379]\nCOMMIT:[,0,0][2613697770]\n** /tmp/d0/logfile.log:\nADD:[/tmp/d1/AntiCompactionTest/AntiCompactionTest-e4fdddf0746e11ecb73ad5a997381615/AntiCompactionTest-AntiCompactionTest-mf-3-big,0,8][2813724425]\nREMOVE:[/tmp/d0/AntiCompactionTest/AntiCompactionTest-e4fdddf0746e11ecb73ad5a997381615/AntiCompactionTest-AntiCompactionTest-mf-1-big,1642078019000,8][2401235379]\nCOMMIT:[,0,0][2613697770]\n{noformat}",
+   "report_id": "cassandra-13423867",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "CEP-15: Multi-Partition Transaction CQL Support (Alpha -> v1)\n\nWith CASSANDRA-17719 complete, basic/alpha CQL support for Accord is now available in the [cep-15-accord|https://github.com/apache/cassandra/commits/cep-15-accord] branch. There are, however, a number of features and enhancements that we would still like to add before we make it available to users. Here is a summary of those items, broadly categorized:\nh3. *High Priority*\n\n*Error Messages and UX*\n - Fix the element/field names in result metadata to match the user query\n - Better error messages\n -- Append/subtracting to/from frozen list\n -- attempts to use reference in WHERE clause\n -- LET using a reserved word\n\n*Testing*\n - Figure out the original intent of placeholder tests in {{AccordIntegrationTest}} (ex. {{{}acceptInvalidationTest(){}}})\n\n*Features*\n - Support for returning the result of an {{{}IF{}}}/condition\n - Constant terms on the RHS of LET\n - Support for having a reference on both LHS and RHS of {{IF}} predicates\n - Support for {{{}CONTAINS{}}}, {{{}CONTAINS KEY{}}}, and {{IN}} (important for CAS parity)\n - Mixed conditional and unconditional updates\n - Arithmetic operations on references in {{{}INSERT{}}}/{{{}UPDATE{}}} (ex. INSERT INTO ks.tbl1 (k, c, v) VALUES (0, 0, a.v + 1)\n - Support TTLs specified in txn updates.\n - Allow partition reads in SELECT (i.e. only limit to one row on the right-hand side of LET statements)\n- Aliased selectors in LET statements\n\n*Tooling*\n - Remove {{reateepochunsafe}} references in {{JMXGetterCheckTest}}\n\n *Documentation*\n - JavaDoc for all new statement classes\n\nh3. *Nice to Have*\n\n*Domain Object Cleanup*\n - Given {{Selector}} is serializable, attempt to reuse it in {{TxnReference}} rather than hard coding data conversion cases\n - Separate current current {{LET}} statement from {{{}SelectStatement{}}}, likely as a new {{LetStatement}} that names a {{SelectStatement}}\n - Explore unifying {{Operation}} and {{ReferenceOperation}}\n - Include non-Row items of {{FilteredPartition}} in {{TxnData#estimatedSizeOnHeap()}}\n - Explore possibility of making {{Bound}} serializable and using it directly in {{TxnCondition}}\n - Change internal representation of {{TxnDataName}} to avoid {{String}} -> {{ByteBuffer}} conversions\n - Have {{{}TxnCondition{}}}/{{{}TxnUpdate{}}} support {{slice()}} to full take advantage of partial state replication\n - Update serialization logic to reflect CASSANDRA-18099\n\n*Features*\n - Full JSON support\n - Nested UDT support\n\n *Documentation*\n - CQL language documentation and bump the CQL language specification version\n - JavaDoc for all new statement classes\n - Integrate {{demo.txt}} into broader documentation somewhere or remove",
+   "report_id": "cassandra-13511279",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Firefox 111 freezes with my permissions.sqlite\n\nSteps to reproduce:\n\nUpdated to Firefox 111 (Windows 10).\n\nActual results:\n\nWhen starting Firefox, blank window opens and stays frozen indefinitely.  Problem is resolved by deleting permissions.sqlite in my profile.  Have reproduced on two different computers.\n\nExpected results:\n\nExpected program to start normally as it did with previous version.",
+   "report_id": "firefox-1823193",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors when opening the migration window for the first time, or after a Firefox restart\n\nFilled on request [1840792#c12](https://bugzilla.mozilla.org/show_bug.cgi?id=1840792#c12)\n\n**Found in**\n* 117.0a1 (2023-07-10)\n\n**Affected versions**\n* 117.0a1 (2023-07-10)\n\n**Tested platforms**\n* Affected platforms: Windows 10x64 (only on one station)\n* Unaffected platforms: Windows 11x64,Ubuntu 22.04, macOS 12\n\n**Steps to reproduce**\n1. Open the migration window and observe the browser console.\n\n**Expected result** \n* No errors are displayed and the migration window is opened almost instantly.\n\n**Actual result**\n* Multiple `Error: Error(s) encountered during statement execution: database disk image is malformed` errors and migration window takes some time to open.\n\n**Regression range**\n* Not a regression.\n\n**Additional notes**\n* Attached a screen recording.\n* The errors are displayed only for the first time after the migration window is opened. Opening the migration window again in the same session will no longer display the errors. However, restarting Firefox will display the errors again but only for the first time.\n* Note this happens on only one Windows 10 machine.",
+   "report_id": "firefox-1842613",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Unable to use vendor specific datatypes with JDBC (MSSQL)\n\nI'm trying to create a table in MSSQL with a time(7) type.\n\nFor this I'm using the createTableColumnTypes option like \"CallStartTime time(7)\", with driver \"{color:#212121}com.microsoft.sqlserver.jdbc.SQLServerDriver\"{color}\n\nI'm getting an error:  {color:#212121}org.apache.spark.sql.catalyst.parser.ParseException: DataType time(7) is not supported.(line 1, pos 43){color}\n\n{color:#212121}What is then the point of using this option?{color}",
+   "report_id": "spark-13289561",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "dataframe API filter criteria throwing ParseException when reading a JDBC column name with special characters\n\n*On Spark 3.3.0,* when reading from a JDBC table(used SQLite to repro) using spark.read.jdbc command with sqlite-jdbc:3.34.0.jar on a table and column name containing special characters. Dataframe API filter criteria fails with parse Exception \n\n*[#Script:]*\n{code:java}\nfrom pyspark.sql import SparkSession\n\nspark = SparkSession \\\n    .builder \\\n    .appName(\"Databricks Support\") \\\n    .config(\"spark.jars.packages\", \"org.xerial:sqlite-jdbc:3.34.0\") \\\n    .getOrCreate()\n\ncolumns = [\"id\", \"/abc/column\", \"value\"]\ndata = [(1, 'A', 100), (2, 'B', 200), (3, 'B', 300)]\n\nrdd = spark.sparkContext.parallelize(data)\ndf = spark.createDataFrame(rdd).toDF(*columns)\n\noptions = {\"url\": \"jdbc:sqlite:/<local-path>/spark-3.3.1-bin-hadoop3/jars/test.db\", \"dbtable\": '\"/abc/table\"', \"driver\": \"org.sqlite.JDBC\"}\n\ndf.coalesce(1).write.format(\"jdbc\").options(**options).mode(\"append\").save()\n\ndf_1 = spark.read.format(\"jdbc\") \\\n    .option(\"url\", \"jdbc:sqlite:/<local-path>/spark-3.3.1-bin-hadoop3/jars/test.db\") \\\n    .option(\"dbtable\", '\"/abc/table\"') \\\n    .option(\"driver\", \"org.sqlite.JDBC\") \\\n    .load()\n\ndf_2 = df_1.filter(\"`/abc/column` = 'B'\")\n\ndf_2.show() {code}\nError:\n{code:java}\n``` Traceback (most recent call last):\n File \"<stdin>\", line 1, in <module>\n File \"/opt/homebrew/Cellar/apache-spark/3.3.1/libexec/python/pyspark/sql/dataframe.py\", line 606, in show\n  print(self._jdf.showString(n, 20, vertical))\n File \"/opt/homebrew/Cellar/apache-spark/3.3.1/libexec/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py\", line 1321, in __call__\n File \"/opt/homebrew/Cellar/apache-spark/3.3.1/libexec/python/pyspark/sql/utils.py\", line 196, in deco\n  raise converted from None\npyspark.sql.utils.ParseException: \nSyntax error at or near '/': extra input '/'(line 1, pos 0)\n\n== SQL ==\n/abc/column\n^^^```  {code}\nHowever, when using Spark 3.2.1, we are able to successfully apply dataframe.filter option\n{code:java}\n>>> df_2.show()\n+---+-----------+-----+\n| id|/abc/column|value|\n+---+-----------+-----+\n|  2|          B|  200|\n|  3|          B|  300|\n+---+-----------+-----+ {code}\n*Repro steps:*\n # Download [Spark 3.2.1 in local |https://archive.apache.org/dist/spark/spark-3.2.1/spark-3.2.1-bin-hadoop3.2.tgz]\n # Download and Copy the sqlite-jdbc:3.34.0.jar into the jar folder present in the local spark download folder\n # Run the above [#script] by providing the jar path \n # This will create a */abc/table* with column */abc/column*  and returns result when applying filter criteria\n # Download spark ** [3.3.0 in local|https://www.apache.org/dyn/closer.lua/spark/spark-3.3.1/spark-3.3.1-bin-hadoop3.tgz]\n # Repeat #2, #3 \n # Fails with parse exception. \n\ncould you please let us know how we can filter on the special characters column or escape them on spark version 3.3.0?",
+   "report_id": "spark-13521576",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Cache Invalidation Issue with JDBC Table\n\nWe have identified a cache invalidation issue when caching JDBC tables in Spark SQL. The cached table is unexpectedly invalidated when queried, leading to a re-read from the JDBC table instead of retrieving data from the cache.\nExample SQL:\n\n{code:java}\nCACHE TABLE cache_t SELECT * FROM mysql.test.test1;\nSELECT * FROM cache_t;\n{code}\n\nExpected Behavior:\nThe expectation is that querying the cached table (cache_t) should retrieve the result from the cache without re-evaluating the execution plan.\n\nActual Behavior:\nHowever, the cache is invalidated, and the content is re-read from the JDBC table.\n\nRoot Cause:\nThe issue lies in the 'CacheData' class, where the comparison involves 'JDBCTable.' The 'JDBCTable' is a case class:\n{code:java}\ncase class JDBCTable(ident: Identifier, schema: StructType, jdbcOptions: JDBCOptions)\n{code}\n\nThe comparison of non-case class components, such as 'jdbcOptions,' involves pointer comparison. This leads to unnecessary cache invalidation.",
+   "report_id": "spark-13553213",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Importing sqlite addressbook shows additional book 'tmp'\n\nSteps to reproduce:\n\nImport sqlite addressbook\n\nActual results:\n\nBesides the imported addressbook another addressbook 'tmp' is shown, which contains all cards from all books. This book vanishes when the addressbook tab is closed and reopened.\n\nExpected results:\n\nNo book 'tmp' should be shown",
+   "report_id": "thunderbird-1809140",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Autoconfig - Multiple accounts - permissions.sqlite - prefs.js altered\n\nSteps to reproduce:\n\nI use autoconfig to get an automatically defined account (IMAP) for our users. Let's say ACC1@MY.DOMAIN. It then shows two entries: the one related to ACC1 (for thunderbird, this is account1), and the \"Local Folders\" (for thunderbird, this is account2).\n\nAfterwards, I add some other account (in the user pforile) for which the automatic definition is not relevant, let's say ACC2@MY.DOMAIN (for thunderbird, this is account3). \n\nThe configured result is a mix with some automatic config (default/preferences/somefile.js refering to .../thunderbird.cfg with defaultPref() entries) and another account added into the .thunderbird/blabla12345.default-beta/prefs.js. \n\nThunderbird shows first three entries correctly: an automatically defined account from some thunderbird.cfg, a locally defined account, and the local folders.\n\nThen play a while with the application.\n\nActual results:\n\nThrough usage, by exiting and restarting the application a few times, a corruption occurs after a while: \n- ACC1 (from the global autoconfig) is gone (from the interface, not from the profile)\n- Local folders vanished\n- Only the locally defined account ACC2 from the user's pref.js is visible.\n\nAs far as I can remember, I've had the problem with many releases, stable or beta, certainly since v 78. Last version tried: 112.0b3.\n\nExpected results:\n\nThunderbird should keep the three accounts correctly visible in the interface.",
+   "report_id": "thunderbird-1829599",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "sending failure no error message if collected addresses address book (history.sqlite) MIA\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36\n\nSteps to reproduce:\n\nattempt to send or reply to emails, multiple destinations, multiple accounts with different smtp servers.\n \nAlso attempted in Troubleshoot mode, no difference.\n\nActual results:\n\nno error on sending mail, the send button clicks but new mail window remains open. when closing window am prompted to save into drafts.\n\nNS_ERROR_FAILURE: No directory for uri=jsaddrbook://history.sqlite AddrBookManager.sys.mjs:282\n    getDirectory resource:///modules/AddrBookManager.sys.mjs:282\n    collectSingleAddress resource:///modules/AddressCollector.sys.mjs:56\n    _collectAddressesToAddressBook resource:///modules/MessageSend.sys.mjs:1268\n    _deliverAsMail resource:///modules/MessageSend.sys.mjs:1176\n    _deliverMessage resource:///modules/MessageSend.sys.mjs:853\n    AsyncFunctionNext self-hosted:800\n    (Async: async)\n    createAndSendMessage resource:///modules/MessageSend.sys.mjs:165\n    AsyncFunctionNext self-hosted:800\n    (Async: async)\n    CompleteGenericSendMessage chrome://messenger/content/messengercompose/MsgComposeCommands.js:6445\n    GenericSendMessage chrome://messenger/content/messengercompose/MsgComposeCommands.js:6361\n    InterpretGeneratorResume self-hosted:1413\n    AsyncFunctionNext self-hosted:800\n    (Async: async)\n    SendMessage chrome://messenger/content/messengercompose/MsgComposeCommands.js:6973\n    AsyncFunctionNext self-hosted:800\n    (Async: async)\n    doCommand chrome://messenger/content/messengercompose/MsgComposeCommands.js:1084\n    doCommand chrome://messenger/content/messengercompose/MsgComposeCommands.js:1262\n    goDoCommand chrome://messenger/content/globalOverlay.js:99\n    oncommand chrome://messenger/content/messengercompose/messengercompose.xhtml:1\n\nGenericSendMessage FAILED: [Exception... \"No directory for uri=jsaddrbook://history.sqlite\"  nsresult: \"0x80004005 (NS_ERROR_FAILURE)\"  location: \"JS frame :: resource:///modules/AddrBookManager.sys.mjs :: getDirectory :: line 282\"  data: no]\n\nNS_ERROR_FAILURE: No directory for uri=jsaddrbook://history.sqlite\n    getDirectory resource:///modules/AddrBookManager.sys.mjs:282\n    collectSingleAddress resource:///modules/AddressCollector.sys.mjs:56\n    _collectAddressesToAddressBook resource:///modules/MessageSend.sys.mjs:1268\n    _deliverAsMail resource:///modules/MessageSend.sys.mjs:1176\n    _deliverMessage resource:///modules/MessageSend.sys.mjs:853\n    createAndSendMessage resource:///modules/MessageSend.sys.mjs:165\n    CompleteGenericSendMessage chrome://messenger/content/messengercompose/MsgComposeCommands.js:6445\n    GenericSendMessage chrome://messenger/content/messengercompose/MsgComposeCommands.js:6361\n    SendMessage chrome://messenger/content/messengercompose/MsgComposeCommands.js:6973\n    doCommand chrome://messenger/content/messengercompose/MsgComposeCommands.js:1084\n    doCommand chrome://messenger/content/messengercompose/MsgComposeCommands.js:1262\n    goDoCommand chrome://messenger/content/globalOverlay.js:99\n    oncommand chrome://messenger/content/messengercompose/messengercompose.xhtml:1\n\nExpected results:\n\non send failure, a dialog that notifys that send failed and some type of useful error message.",
+   "report_id": "thunderbird-1943639",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "database"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Database"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "RTL - shopping sidebar container flickers on the right side when opening/closing the sidebar\n\nSTR:\n1. Enable bidi mode in Browser Toolbox (alternatively: load Firefox in RTL language)\n2. Make sure sidebar feature is enabled and profile is opted in\n2. View product page ([example](https://www.amazon.com/SteelSeries-Arctis-Multi-System-Gaming-Headset/dp/B0B8Q4CR52/)) and ensure shopping sidebar is visible\n3. Close sidebar with urlbar shopping icon or the close button on the sidebar\n\nExpected:\n- there should be no sudden flicker on the right side of the page when closing/opening the sidebar in RTL mode\n\nActual:\n- there is a slight flicker on the right side of the page, which is very distracting visually\n\nNotes:\n- this issue probably existed for a while, but I believe that it will be way more obvious once [we show sidebar animations](bugzilla.mozilla.org/show_bug.cgi?id=1858762).\n- I tested this on MacOS and can't recall at the moment if it also occurs on other platforms",
+   "report_id": "firefox-1866316",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "[Rollout] The chatbot CSAT Micosurvey title overlaps the \"X\" button on the Firefox \"de\" locale build\n\n**[Affected versions]:**\n- Firefox Beta 134.0b10 de locale - Build ID: 20241213091550\n\n**[Affected Platforms]:**\n- Windows 10\n- macOS 15.1.1\n- Ubuntu 24.04\n\n**[Prerequisites]:**\n- Have a Firefox Beta 134.0b10 \"de\" locale build installed.\n- Client is enrolled in the \"[Existing users: Sidebar + GenAI](https://experimenter.services.mozilla.com/nimbus/sidebar-vertical-tabs-layout-and-new-tools/summary)\" experiment.\n- Have a profile with the \"nimbus.debug\" pref set to true in the \"about:config\" page.\n  \n**[Steps to reproduce]:**\n1. Open the browser using the profile from the prerequisites.\n2. Navigate to the \"about:studies?optin_slug=microsurvey-chatbot-csat-and-productivity-left-position&optin_branch=control&optin_collection=nimbus-preview\" URL.\n3. Go to the bottom-left part of the screen and click the \"Open AI chatbot\" sidebar button.\n4. Click the \"X\" button from the top right part of the sidebar.\n5. Repeat steps 3 and 4 for two more times.\n6. Go to the bottom-left part of the screen and click the \"Open AI chatbot\" sidebar button.\n7. Observe the chatbot CSAT Micosurvey title.\n\n**[Expected result]:**\n- The title of the Chatbot CSAT Microsurvey is displayed correctly and does not overlap with the \"X\" button.\n    \n**[Actual result]:**\n- The chatbot CSAT Micosurvey title overlaps the \"X\" button\n\n**[Additional Notes]:**\n- This issue is reproducible on both screens of the chatbot CSAT Micosurvey.\n- The issue may be reproducible on other locales with long strings in the title.\n- Attached a screen recording of the issue.",
+   "report_id": "firefox-1938358",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Blocker"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Poor translation quality with new lines in the text\n\nWhen translating the first paragraph of this website https://www.freebsd.org/ from English to Russian it produces nonsense. When I copy the text to about:translations it's perfect. I edited the HTML to remove new lines from the text and the quality of translation became good. \n\nDoes it make sense to remove new lines inside paragraphs before translating to prevent such cases?\n\n> FreeBSD is an operating system used to power modern servers,\ndesktops, and embedded <a href=\"https://www.freebsd.org/platforms/\">platforms.</a> A large\n<a href=\"https://docs.FreeBSD.org/en/articles/contributors/#staff-committers\">\ncommunity</a> has continually developed it for more than thirty\nyears. Its advanced networking, security, and storage features have\nmade FreeBSD the platform of choice for many of the <a href=\"https://docs.FreeBSD.org/en/books/handbook/introduction/#introduction-nutshell-users\">\nbusiest web sites</a> and most pervasive embedded networking and\nstorage devices.",
+   "report_id": "firefox-1946605",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Sorting of Folder pane in Messenger is not following systems locale in SeaMonkey 2.53.3\n\nUser Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:60.0) Gecko/20100101 Firefox/60.0 SeaMonkey/2.53.3\n\nSteps to reproduce:\n\nUsing Foldername with Danish character Å or Aa in Messenger for Folder names\n\nActual results:\n\nThe folders in the Folder Pane starting with Aa and Å is sorted before and after A.\n\nExpected results:\n\nThe folders starting with Å and Aa should be sorted last (after Z) according to Danish locale.\n\nSeaMonkey 2.49.5 did this correctly - see attached file.",
+   "report_id": "seamonkey-1659080",
+   "source_project": "seamonkey",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "TB 102 LTS - GUI not fully translated\n\nHello!\n\nMany parts of the GUI of the release aren't translated in the Portuguese (pt-PT) version.\n\nFor example, the menu option “OpenPGP Key Manager” is in English.\n\nAnd the radio buttons in the import/export are also untranslated.",
+   "report_id": "thunderbird-1777670",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Remove unnecessary use of Services.locale.appLocalesAsBCP47 from address book files\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36\n\nSteps to reproduce:\n\nThe use is not necessary or even undesired, see bug 1758739.",
+   "report_id": "thunderbird-1815419",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "[ci bustage] [L10n-pre-S only] nov25: The \"mach\" site is not compatible with the installed system Python packages.\n\n**Filed by:** mkmelin [at] iki.fi\n**Parsed log:** https://treeherder.mozilla.org/logviewer?job_id=437634144&repo=comm-central\n**Full log:** https://firefox-ci-tc.services.mozilla.com/api/queue/v1/task/JEKzE0KjT82OSc4mxo0jBA/runs/0/artifacts/public/logs/live_backing.log\n\n---\n```\n\n```",
+   "report_id": "thunderbird-1866619",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "\"More...\" link in \"Get started\" recent section not translated\n\nType: <b>Bug</b>\n\nThe \"More...\" link, located in the \"Recent\" section of \"Get started\" page, is not being translated to current interface language.\n\nVS Code version: Code 1.73.0 (8fa188b2b301d36553cbc9ce1b0a146ccb93351f, 2022-11-01T15:34:06.111Z)\nOS version: Windows_NT x64 10.0.19044\nModes:\nSandboxed: No\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|Intel(R) Core(TM) i5-1035G1 CPU @ 1.00GHz (8 x 1190)|\n|GPU Status|2d_canvas: enabled<br>canvas_oop_rasterization: disabled_off<br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_renderer: enabled_on<br>video_decode: enabled<br>video_encode: enabled<br>vulkan: disabled_off<br>webgl: enabled<br>webgl2: enabled<br>webgpu: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|7.71GB (0.99GB free)|\n|Process Argv|--crash-reporter-id c548831d-b439-4637-a484-8995ce28dff2 --crash-reporter-id c548831d-b439-4637-a484-8995ce28dff2|\n|Screen Reader|no|\n|VM|0%|\n</details><details><summary>Extensions (27)</summary>\n\nExtension|Author (truncated)|Version\n---|---|---\nvscode-laravel-goto|abs|4.7.0\nBookmarks|ale|13.3.1\nlaravel-extra-intellisense|ami|0.6.2\ngitstash|art|5.1.0\nlaravel-blade-spacer|aus|2.1.3\nvscode-intelephense-client|bme|1.8.2\nhtml-entities|chr|1.1.2\nlaravel-goto-view|cod|1.3.7\nsql-formatter|cym|1.0.2\nlines|Dan|0.0.6\ngithistory|don|0.6.19\nauto-close-tag|for|0.5.14\nreg|ion|1.1.0\nrainbow-csv|mec|3.2.0\nvscode-apache|mrm|1.2.0\nvscode-language-pack-es|MS-|1.73.11020955\nhexeditor|ms-|1.9.9\nvetur|oct|0.36.1\nlaravel-blade|one|1.32.0\nlaravel5-snippets|one|1.15.0\nlinesinfostatusbar|pet|0.0.7\nsearch-the-web|pet|0.3.3\nmaterial-icon-theme|PKi|4.21.0\nvscode-xml|red|0.22.0\ntext-marker|ryu|1.11.0\nopen-in-browser|tec|2.0.0\nlorem-ipsum|Tyr|1.3.1\n\n</details><details>\n<summary>A/B Experiments</summary>\n\n```\nvsliv368cf:30146710\nvsreu685:30147344\npython383:30185418\nvspor879:30202332\nvspor708:30202333\nvspor363:30204092\nvslsvsres303:30308271\npythonvspyl392:30443607\nvserr242cf:30382550\npythontb:30283811\nvsjup518:30340749\npythonptprofiler:30281270\nvshan820:30294714\nvstes263:30335439\nvscoreces:30445986\npythondataviewer:30285071\nvscod805cf:30301675\nbinariesv615:30325510\nbridge0708:30335490\nbridge0723:30353136\ncmake_vspar411:30581797\nvsaa593:30376534\npythonvs932:30410667\ncppdebug:30492333\nvsclangdf:30486550\nc4g48928:30535728\ndsvsc012:30540252\nazure-dev_surveyone:30548225\npyindex848:30577860\nnodejswelcome1cf:30587006\nfc301958:30595537\n282f8724:30602487\ngswce2:30602635\n3d0df643:30602300\n\n```\n\n</details>\n\n<!-- generated by issue reporter -->",
+   "report_id": "vscode-165480",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "File will not be displayed because is it either binary, very large or an unsupported text encoding\n\n- VSCode Version: Code 1.13.1 (379d2efb5539b09112c793d3d9a413017d736f89, 2017-06-14T18:21:47.485Z)\n- OS Version: Windows_NT ia32 6.1.7601\n- Extensions: \n\n|Extension|Author|Version|\n|---|---|---|\n|language-x86-64-assembly|13xforever|2.2.11|\n|rainbow-brackets|2gua|0.0.6|\n|read-only-indicator|alefragnani|0.6.0|\n|alignment|annsk|0.3.0|\n|Doxygen|bbenoist|1.0.0|\n|vscode-astyle|chiehyu|0.6.2|\n|python|donjayamanne|0.6.5|\n|EditorConfig|EditorConfig|0.9.3|\n|matlab|Gimly81|0.5.0|\n|triggertaskonsave|Gruntfuggly|0.1.2|\n|status-bar-tasks|GuardRex|0.2.0|\n|vscode-dimmer|hoovercj|2.1.0|\n|docthis|joelday|0.4.5|\n|center-editor-window|kaiwood|2.0.2|\n|select-part-of-word|mlewand|1.0.1|\n|cpptools|ms-vscode|0.11.4|\n|indent-rainbow|oderwat|0.6.1|\n|vscode-clearcase|OpenNingia|1.9.2|\n|vscode-icons|robertohuertasm|7.9.0|\n|theme-cyanicpastels|SamuelLampa|0.0.9|\n|indenticator|SirTori|0.4.2|\n|vscode-hexdump|slevesque|1.3.0|\n|code-spell-checker|streetsidesoftware|1.2.0|\n|comment-snippets|Tobiah|0.2.0|\n|selectline-statusbar|tomoki1207|0.0.2|\n|dark-plus-material|vangware|1.0.3|\n|change-case|wmaurer|1.0.0|\n|highlight-trailing-white-spaces|ybaumes|0.0.2|;\n\n---\n\nSteps to Reproduce:\n\n1. Open attached file in VS code get error message.\n2. Open file in Notepad. No problem.\n\nI had edit the file to remove private information. When I edited it Notepad and saved it was converted to a readable format. When I edited it in SlickEdit, I could preserve the original formatting so it would load in Notepad but not in VS Code.\n[vs code.txt](https://github.com/Microsoft/vscode/files/1095430/vs.code.txt)",
+   "report_id": "vscode-29274",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Debug strings stay localized in old locale\n\nI just noticed some of my debug world strings are localized. I might've experimented with the `de` locale some time ago... but my UI is now all in English except Debug:\n\n![image](https://user-images.githubusercontent.com/22350/43636980-e4242150-9713-11e8-9925-8e3c7b490f0c.png)",
+   "report_id": "vscode-55748",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "localization"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Huge memory leak even while sleeping\n\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.13; rv:75.0) Gecko/20100101 Firefox/75.0\n\nSteps to reproduce:\n\nSince Firefox 74, it's consuming a large about of memory and never release it on MacOS. With my usual browsing experience, before 74, I never had to restart Firefox because of its memory impact, but now I need to.\nAs usual, with memory based report, there are so many factor that could cause this, it's hard to reproduce, so I simplified the test to the most simple case I could do, that is: \n\n1. Started as safe mode without any extension\n2. Loaded a bunch of tabs (my previous browsing session)\n3. Saved a memory report\n4. Set the computer to sleep during the night by closing lid\n5. Wake up the computer\n6. Saved memory report, memory increased by a lot\n\nActual results:\n\nThe memory increased by at least 300MB from the process manager.\n\nExpected results:\n\nThe memory should more or less stay the same while time goes on. Please notice that I've tried to minimize the memory usage (in about:memory) but it's useless ?",
+   "report_id": "firefox-1635681",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Memory leak from thrift server hashMap\n\nI found when the scanner does not closed successfully, it remains forever in the hashMap that stores the state of the scanner.\n\nTo resolve this problem, I make scannerMap to Guava Cache so that can be expired on set time.",
+   "report_id": "hbase-13375331",
+   "source_project": "hbase",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Broadcast block pieces may memory leak\n\nWe use Spark thrift-server as a long-running service. A bad query submitted a heavy BroadcastNestLoopJoin operation and made driver full GC. We killed the bad query but we found the driver's memory usage was still high and full GCs had very frequency. By investigating with GC dump and log, we found the broadcast may memory leak.\n\n2020-08-19T18:54:02.824-0700: [Full GC (Allocation Failure) 2020-08-19T18:54:02.824-0700: [Class Histogram (before full gc):\n116G->112G(170G), 184.9121920 secs]\n[Eden: 32.0M(7616.0M)->0.0B(8704.0M) Survivors: 1088.0M->0.0B Heap: 116.4G(170.0G)->112.9G(170.0G)], [Metaspace: 177285K->177270K(182272K)]\n\nnum #instances #bytes class name\n----------------------------------------------\n1: 676531691 72035438432 [B\n2: 676502528 32472121344 org.apache.spark.sql.catalyst.expressions.UnsafeRow\n3: 99551 12018117568 [Ljava.lang.Object;\n4: 26570 4349629040 [I\n5: 6 3264536688 [Lorg.apache.spark.sql.catalyst.InternalRow;\n6: 1708819 256299456 [C\n7: 2338 179615208 [J\n8: 1703669 54517408 java.lang.String\n9: 103860 34896960 org.apache.spark.status.TaskDataWrapper\n10: 177396 25545024 java.net.URI\n...",
+   "report_id": "spark-13324830",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "ScalarSubquery should returns the first two rows to avoid Driver OOM\n\n{noformat}\nException in thread \"subquery-2871\" java.lang.OutOfMemoryError: Requested array size exceeds VM limit\n at scala.collection.mutable.ResizableArray$class.ensureSize(ResizableArray.scala:103)\n at scala.collection.mutable.ArrayBuffer.ensureSize(ArrayBuffer.scala:48)\n at scala.collection.mutable.ArrayBuffer.$plus$eq(ArrayBuffer.scala:84)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1$$anonfun$apply$2.apply(SparkPlan.scala:352)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1$$anonfun$apply$2.apply(SparkPlan.scala:352)\n at scala.collection.Iterator$class.foreach(Iterator.scala:893)\n at org.apache.spark.sql.execution.SparkPlan$$anon$1.foreach(SparkPlan.scala:330)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1.apply(SparkPlan.scala:352)\n at org.apache.spark.sql.execution.SparkPlan$$anonfun$executeCollect$1.apply(SparkPlan.scala:351)\n at scala.collection.IndexedSeqOptimized$class.foreach(IndexedSeqOptimized.scala:33)\n at scala.collection.mutable.ArrayOps$ofRef.foreach(ArrayOps.scala:186)\n at org.apache.spark.sql.execution.SparkPlan.executeCollect(SparkPlan.scala:351)\n at org.apache.spark.sql.execution.adaptive.AdaptiveSparkPlanExec.executeCollect(AdaptiveSparkPlanExec.scala:274)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1$$anonfun$apply$3.apply(basicPhysicalOperators.scala:830)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1$$anonfun$apply$3.apply(basicPhysicalOperators.scala:827)\n at org.apache.spark.sql.execution.SQLExecution$$anonfun$withExecutionId$1.apply(SQLExecution.scala:132)\n at org.apache.spark.sql.execution.SQLExecution$.withSQLConfPropagated(SQLExecution.scala:156)\n at org.apache.spark.sql.execution.SQLExecution$.withExecutionId(SQLExecution.scala:129)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1.apply(basicPhysicalOperators.scala:827)\n at org.apache.spark.sql.execution.SubqueryExec$$anonfun$relationFuture$1.apply(basicPhysicalOperators.scala:827)\n at scala.\n{noformat}",
+   "report_id": "spark-13334982",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Thunderbird Freezing/Crashing due to memory leak\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36\n\nSteps to reproduce:\n\n1. Open Thunderbird\n2. Check email\n3. Freezes due to a huge memory leak\n4. Crashes\n\nI use version 94.0b4 (64-bit) on Windows 11\n\nActual results:\n\nWhen I click on emails the whole client will freeze and then crash.\n\nExpected results:\n\nI should be able to check my emails without having to reopen Thunderbird multiple times just to get through the emails. I have resorted to checking email on the web due to this issue.",
+   "report_id": "thunderbird-1737223",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Memory leak\n\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:130.0) Gecko/20100101 Firefox/130.0\n\nSteps to reproduce:\n\nRun Thunderbird for a few days.\n\nActual results:\n\nMemory consumption gradually increases from 0.5gb to 1.4gb.\n\nExpected results:\n\nMemory consumption should stay low.",
+   "report_id": "thunderbird-1915757",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Crash in [@ stackoverflow | MaybePageAlloc].  OOM/Repair folder\n\nIn bug 1839850 I stated the signature was gone after 117.0b1.   But it is back, just Thunderbird, just for version 128.  Resumed around 121.0b5.   Perhaps there was another signature in the interim.\n\nLike bug 1930462, many crash comments cite `repair` [1].  Most others mention bulk archiving messages [2] or other bulk operations.\nOther OOM signatures https://crash-stats.mozilla.org/search/?proto_signature=~alloc%3A%3Aalloc%3A%3Aimpl&product=Thunderbird&date=%3E%3D2024-08-12T12%3A16%3A00.000Z&date=%3C2024-11-12T12%3A16%3A00.000Z&_facets=signature&_sort=user_comments&_sort=-date&_columns=signature&_columns=version&_columns=user_comments#facet-signature\n\n[1] Crash report: https://crash-stats.mozilla.org/report/index/c3553cbd-9874-4529-8bee-f817a0241024\n\nReason:\n```\nEXCEPTION_STACK_OVERFLOW\n```\n\nTop 10 frames:\n```\n0  mozglue.dll  MaybePageAlloc(mozilla::Maybe<unsigned long long> const&, unsigned long long,...  memory/build/PHC.cpp:1308\n1  mozglue.dll  PageMalloc(mozilla::Maybe<unsigned long long> const&, unsigned long long)  memory/build/PHC.cpp:1337\n1  mozglue.dll  MozJemallocPHC::malloc(unsigned long long)  memory/build/PHC.cpp:1346\n1  mozglue.dll  je_malloc(unsigned long long)  memory/build/malloc_decls.h:51\n2  xul.dll  mozglue_static::impl$2::alloc(mozglue_static::GeckoAlloc*, core::alloc::layou...  mozglue/static/rust/lib.rs:182\n2  xul.dll  mozglue_static::_::__rust_alloc(unsigned long long, unsigned long long)  mozglue/static/rust/lib.rs:232\n2  xul.dll  alloc::alloc::alloc(core::alloc::layout::Layout)  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/alloc.rs:100\n2  xul.dll  alloc::alloc::Global::alloc_impl(core::alloc::layout::Layout, bool)  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/alloc.rs:183\n2  xul.dll  alloc::alloc::impl$1::allocate(alloc::alloc::Global*, core::alloc::layout::La...  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/alloc.rs:243\n2  xul.dll  alloc::boxed::impl$1::try_new_uninit_in(alloc::alloc::Global)  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/boxed.rs:488\n```\n\n[2] Crash report: https://crash-stats.mozilla.org/report/index/c3553cbd-9874-4529-8bee-f817a0241024\n\nReason:\n```\nEXCEPTION_STACK_OVERFLOW\n```\n\nTop 10 frames:\n```\n0  mozglue.dll  MaybePageAlloc(mozilla::Maybe<unsigned long long> const&, unsigned long long,...  memory/build/PHC.cpp:1308\n1  mozglue.dll  PageMalloc(mozilla::Maybe<unsigned long long> const&, unsigned long long)  memory/build/PHC.cpp:1337\n1  mozglue.dll  MozJemallocPHC::malloc(unsigned long long)  memory/build/PHC.cpp:1346\n1  mozglue.dll  je_malloc(unsigned long long)  memory/build/malloc_decls.h:51\n2  xul.dll  mozglue_static::impl$2::alloc(mozglue_static::GeckoAlloc*, core::alloc::layou...  mozglue/static/rust/lib.rs:182\n2  xul.dll  mozglue_static::_::__rust_alloc(unsigned long long, unsigned long long)  mozglue/static/rust/lib.rs:232\n2  xul.dll  alloc::alloc::alloc(core::alloc::layout::Layout)  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/alloc.rs:100\n2  xul.dll  alloc::alloc::Global::alloc_impl(core::alloc::layout::Layout, bool)  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/alloc.rs:183\n2  xul.dll  alloc::alloc::impl$1::allocate(alloc::alloc::Global*, core::alloc::layout::La...  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/alloc.rs:243\n2  xul.dll  alloc::boxed::impl$1::try_new_uninit_in(alloc::alloc::Global)  /rustc/9b00956e56009bab2aa15d7bff10916599e3d6d6/library/alloc/src/boxed.rs:488\n```",
+   "report_id": "thunderbird-1930619",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Memory leak\n\n<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- Please search existing issues to avoid creating duplicates. -->\n<!-- Also please test using the latest insiders build to make sure your issue has not already been fixed: https://code.visualstudio.com/insiders/ -->\n\nVersion: 1.50.0-insider\nCommit: 0ecb64a2c8945dd1193967019f0734af539ca9c3\nDate: 2020-10-02T13:37:26.948Z\nElectron: 9.2.1\nChrome: 83.0.4103.122\nNode.js: 12.14.1\nV8: 8.3.110.13-electron.0\nOS: Linux x64 5.8.13-arch1-1\n\nSteps to Reproduce:\n\n1. Prepare a large text file (Citylots.json is ~190MB):\n```shell\nwget \"https://github.com/zemirco/sf-city-lots-json/blob/master/citylots.json\"\ncp citylots.json evenlarger.json\ncat citylots.json >> evenlarger.json\ncat citylots.json >> evenlarger.json\n```\n\n2. Open `evenlarger.json` in vscode.\n3. Scroll around.\n4. Close the file.\n5. Observe the memory usage through \"Process Explorer\".\n\nEven after ~30 minutes, the memory usage is still high:\n\n![image](https://user-images.githubusercontent.com/5961244/94969753-96531480-0503-11eb-8314-17419ff4acf6.png)\n\nDoes this issue occur when all extensions are disabled?: Yes\n\nNote: This seems like a regression because I didn't had this issue before, however I don't know which insiders/stable release caused this.",
+   "report_id": "vscode-107999",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Large jupyter cell output causes OOM crash\n\nType: <b>Performance Issue</b>\n\nWhen opening a specific notebook file, which has a cell with a lot of image output, vscode would use up a lot of memory in an attempt to display it, before crashing with an OOM error.\n\nThough oddly enough sometimes it recovers, and successfully renders the content of the cell but the probability of it happening is slim.\n\nThis happens on a clean installation of vscode and vscode insiders, both local and browser versions.\n\nThis doesn't seem to happen on the regular jupyter client.\n\n## Reproduction steps:\n1. Download notebook file: https://1drv.ms/u/s!Aubk29qavf4c1UXHhRwxZnmvqnJ5?e=vM0sLQ\n2. Open the notebook and scroll down to somewhere around the \"part 2\" or \"Part 3\" headers, if not lower\n\n### Results\nVscode will chew through all available system memory, before crashing.\n\n### Expectations\nVSCode doesn't crash\n\nVS Code version: Code 1.73.1 (6261075646f055b99068d3688932416f2346dd3b, 2022-11-09T04:27:29.066Z)\nOS version: Windows_NT x64 10.0.22623\nModes:\nSandboxed: No\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|AMD Ryzen 5 3500U with Radeon Vega Mobile Gfx   (8 x 2096)|\n|GPU Status|2d_canvas: enabled<br>canvas_oop_rasterization: disabled_off<br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>skia_renderer: enabled_on<br>video_decode: enabled<br>video_encode: enabled<br>vulkan: disabled_off<br>webgl: enabled<br>webgl2: enabled<br>webgpu: disabled_off|\n|Load (avg)|undefined|\n|Memory (System)|17.88GB (13.73GB free)|\n|Process Argv|--crash-reporter-id 4b2ec309-8248-4027-b776-d43c905f0cb8|\n|Screen Reader|no|\n|VM|0%|\n</details><details>\n<summary>Process Info</summary>\n\n```\nCPU %\tMem MB\t   PID\tProcess\n    0\t    92\t  9372\tcode main\n    0\t   191\t  1324\t   window (Visual Studio Code)\n    0\t   290\t  3772\t   extensionHost\n    0\t    76\t 16700\t     \"C:\\Users\\Derrick\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" --ms-enable-electron-run-as-node \"c:\\Users\\Derrick\\AppData\\Local\\Programs\\Microsoft VS Code\\resources\\app\\extensions\\json-language-features\\server\\dist\\node\\jsonServerMain\" --node-ipc --clientProcessId=3772\n    0\t    85\t  4908\t   issue-reporter\n    0\t    27\t  9548\t   crashpad-handler\n    0\t    39\t 10432\t   utility-network-service\n    1\t   117\t 14128\t   gpu-process\n    0\t   115\t 15344\t   shared-process\n    0\t    70\t  8524\t     ptyHost\n    0\t    73\t  8956\t     fileWatcher\n```\n\n</details>\n<details>\n<summary>Workspace Info</summary>\n\n```\n;\n```\n\n</details>\n<details><summary>Extensions (37)</summary>\n\nExtension|Author (truncated)|Version\n---|---|---\nbeardedicons|Bea|1.2.0\ncatppuccin-vsc|Cat|2.4.0\nvscode-markdownlint|Dav|0.48.1\ndotnet-test-explorer|for|0.7.8\ncodespaces|Git|1.13.2\ncopilot|Git|1.62.7527\nremotehub|Git|0.46.0\nvscode-pull-request-github|Git|0.54.1\nvscode-fix-checksums|leh|1.1.0\ngit-graph|mhu|1.30.0\nfluent-icons|mig|0.0.18\ncsharp|ms-|1.25.2\njupyter-keymap|ms-|1.0.0\njupyter-renderers|ms-|1.0.12\nremote-wsl|ms-|0.72.0\ncpptools|ms-|1.12.4\nhexeditor|ms-|1.9.9\npowershell|ms-|2022.11.0\nremote-repositories|ms-|0.24.0\ntest-adapter-converter|ms-|0.1.6\nvs-keybindings|ms-|0.2.1\nvsliveshare|ms-|1.0.5788\ngradle-language|nac|0.2.3\nindent-rainbow|ode|8.3.1\nresxpress|Pra|4.9.0\njava|red|1.13.0\nerrorlens|use|3.6.0\nintellicode-api-usage-examples|Vis|0.2.6\nvscodeintellicode|Vis|1.2.29\nvscode-gradle|vsc|3.12.6\nvscode-java-debug|vsc|0.47.0\nvscode-java-dependency|vsc|0.21.1\nvscode-java-pack|vsc|0.25.7\nvscode-java-test|vsc|0.37.1\nvscode-maven|vsc|0.40.1\nvscode-icons|vsc|12.0.1\nmarkdown-all-in-one|yzh|3.5.0\n\n</details>\n<!-- generated by issue reporter -->",
+   "report_id": "vscode-168142",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Notebook cell text model memory leak\n\n<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes/No\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: Insiders\n- OS Version: macOS\n\nSteps to Reproduce:\n\n1. Open a notebook\n2. Close it\n3. Take a memory snapshot\n4. The cell text models are not released\n\n<img width=\"1648\" alt=\"image\" src=\"https://github.com/microsoft/vscode/assets/876920/6649ec08-29da-4be0-bf05-3af894e7a43e\">",
+   "report_id": "vscode-189013",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "memory"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Buttons inside the Network Settings panel are misplaced with the scrollbar on display\n\n**Affected versions**\n- 94.0.1\n- 95.0b7\n- 96.0a1\n\n**Affected platforms**\n- Windows 10\n\n**Steps to reproduce**\n1. Open about:preferences#general\n2. Click the Settings button from the Network Settings section\n3. Observe the buttons at the bottom of the panel (reduce the width of the browser in order to trigger the scrollbar presence)\n\n**Expected result**\n- “OK”, “Cancel” and “Help” buttons are properly aligned in relation to the rest of the page elements \n\n**Actual result**\n- The scrollbar is too close to the \"Help\" button\n- The \"Help\" button is not aligned with the scrollbar right margin\n\n**Regression range**\n- Last good revision: 8aa1b80a8c6b66cccc2e37080fbf6197eee8d801\n- First bad revision: 1716229005d8b97f305bd663b8bc8d3fec4a4f3a\n- Pushlog:\nhttps://hg.mozilla.org/integration/autoland/pushloghtml?fromchange=8aa1b80a8c6b66cccc2e37080fbf6197eee8d801&tochange=1716229005d8b97f305bd663b8bc8d3fec4a4f3a\nRegresor: [1700109](https://bugzilla.mozilla.org/show_bug.cgi?id=1700109) (Proton implementation)\n\n**Other notes**\n- On Mac and Ubuntu the visual image is not unpleasant, due to the fact that the \"Help\" button is placed to the left side of the panel and the scrollbar specific style, but the padding between the buttons and the scrollbar could be improved.",
+   "report_id": "firefox-1741198",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Update NetworkPrediction policy after bug 1596935\n\nBug 1596935 changed our network prediction prefs. From the bug:\n\n> We currently have an enterprise policy for NetworkPrediction:\n> https://mozilla.github.io/policy-templates/#networkprediction\n> It corresponds to this policy in Chrome:\n> https://chromeenterprise.google/policies/#NetworkPredictionOptions\n> It sets these prefs:\n>  setAndLockPref(\"network.dns.disablePrefetch\", !param);\n>  setAndLockPref(\"network.dns.disablePrefetchFromHTTPS\", !param);\nWhat additional things should be added to this policy as a result of this bug?\n\nIt's a bit nuanced.\nThe behaviour that I would categorize as \"Predictive\" is the dom action of prefetching DNS records for every anchor element in the document.\n\nAs a result of this bug, that is now controlled by these two prefs:\n\ndom.prefetch_dns_for_anchor_http_document (default: true)\ndom.prefetch_dns_for_anchor_https_document (default: false)\n\nhttps://searchfox.org/mozilla-central/rev/a67f92611070fcdba22a106ee140ab0059cc4611/modules/libpref/init/StaticPrefList.yaml#3345,3351\nSee: https://phabricator.services.mozilla.com/D205630\n\nI think both prefs should be disabled if the NetworkPrediction enterprise policy is enabled.\n\nAnd that leaves the existing prefs, which now control rel=dns-prefetch behaviour.\n\nnetwork.dns.disablePrefetch\nnetwork.dns.disablePrefetchFromHTTPS\n\nI wouldn't personally consider these to be \"predictive\", since they are following the spec by preemptively (but not predictively) performing the dns resolution.\nhttps://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/dns-prefetch\n\nBut maybe for enterprise policies it's better to aim for a conservative approach (and fewer changes), and so these prefs should still be set?",
+   "report_id": "firefox-1906917",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "ABFS: delete call sets Socket timeout lesser than query timeout leading to failures\n\nABFS Driver sets Socket timeout to 30 seconds and query timeout to 90 seconds. The client  will fail with SocketTimeoutException when the delete path has huge number of dirs/files before the actual query timeout. The socket timeout has to be greater than query timeout value. And it is good to have this timeout configurable to avoid failures when delete call takes more than the hardcoded configuration.\n\n{code}\n21/03/26 09:24:00 DEBUG services.AbfsClient: First execution of REST operation - DeletePath\n.........\n21/03/26 09:24:30 DEBUG services.AbfsClient: HttpRequestFailure: 0,,cid=bf4e4d0b,rid=,sent=0,recv=0,DELETE,https://prabhuAbfs.dfs.core.windows.net/general/output/_temporary?timeout=90&recursive=true\njava.net.SocketTimeoutException: Read timed out\n        at java.net.SocketInputStream.socketRead0(Native Method)\n        at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)\n        at java.net.SocketInputStream.read(SocketInputStream.java:171)\n        at java.net.SocketInputStream.read(SocketInputStream.java:141)\n        at org.wildfly.openssl.OpenSSLSocket.read(OpenSSLSocket.java:423)\n        at org.wildfly.openssl.OpenSSLInputStream.read(OpenSSLInputStream.java:41)\n        at java.io.BufferedInputStream.fill(BufferedInputStream.java:246)\n        at java.io.BufferedInputStream.read1(BufferedInputStream.java:286)\n        at java.io.BufferedInputStream.read(BufferedInputStream.java:345)\n        at sun.net.www.http.HttpClient.parseHTTPHeader(HttpClient.java:743)\n        at sun.net.www.http.HttpClient.parseHTTP(HttpClient.java:678)\n        at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1593)\n        at sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1498)\n        at java.net.HttpURLConnection.getResponseCode(HttpURLConnection.java:480)\n        at sun.net.www.protocol.https.HttpsURLConnectionImpl.getResponseCode(HttpsURLConnectionImpl.java:352)\n        at org.apache.hadoop.fs.azurebfs.services.AbfsHttpOperation.processResponse(AbfsHttpOperation.java:303)\n        at org.apache.hadoop.fs.azurebfs.services.AbfsRestOperation.executeHttpOperation(AbfsRestOperation.java:192)\n        at org.apache.hadoop.fs.azurebfs.services.AbfsRestOperation.execute(AbfsRestOperation.java:134)\n        at org.apache.hadoop.fs.azurebfs.services.AbfsClient.deletePath(AbfsClient.java:462)\n        at org.apache.hadoop.fs.azurebfs.AzureBlobFileSystemStore.delete(AzureBlobFileSystemStore.java:558)\n        at org.apache.hadoop.fs.azurebfs.AzureBlobFileSystem.delete(AzureBlobFileSystem.java:339)\n        at org.apache.hadoop.fs.shell.Delete$Rm.processPath(Delete.java:121)\n        at org.apache.hadoop.fs.shell.Command.processPathInternal(Command.java:367)\n        at org.apache.hadoop.fs.shell.Command.processPaths(Command.java:331)\n        at org.apache.hadoop.fs.shell.Command.processPathArgument(Command.java:304)\n        at org.apache.hadoop.fs.shell.Command.processArgument(Command.java:286)\n        at org.apache.hadoop.fs.shell.Command.processArguments(Command.java:270)\n        at org.apache.hadoop.fs.shell.FsCommand.processRawArguments(FsCommand.java:120)\n        at org.apache.hadoop.fs.shell.Command.run(Command.java:177)\n        at org.apache.hadoop.fs.FsShell.run(FsShell.java:328)\n        at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:76)\n        at org.apache.hadoop.util.ToolRunner.run(ToolRunner.java:90)\n        at org.apache.hadoop.fs.FsShell.main(FsShell.java:391)\n{code}",
+   "report_id": "hadoop-13377439",
+   "source_project": "hadoop",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "fix bugs when looking up record from upstream DNS servers.\n\nWhen query A record which is chained by CNAME, YARN Registry DNS Server does not properly respond. Some CNAME records are missing.\n\nFor example, \"repo.maven.apache.org\" is chaned as follows:\n\nrepo.maven.apache.org.\t21317\tIN\tCNAME\trepo.apache.maven.org.\nrepo.apache.maven.org.\t20114\tIN\tCNAME\tmaven.map.fastly.net.\nmaven.map.fastly.net.\t7\tIN\tA\t199.232.192.215\nmaven.map.fastly.net.\t7\tIN\tA\t199.232.196.215\n\nIf ask A record for \"repo.maven.apache.org\" using \"dig\" or \"nslookup\", YARN Registry DNS Server will give answers similar to this:\n(10.1.2.3, 10.8.8.8 IP is virtual)\n\n{code}\n$ nslookup repo.maven.apache.org 10.1.2.3\nServer:\t\t10.1.2.3\nAddress:\t10.1.2.3#53\n\nNon-authoritative answer:\nrepo.maven.apache.org\tcanonical name = repo.apache.maven.org.\nName:\tmaven.map.fastly.net\nAddress: 151.101.196.215\n** server can't find repo.apache.maven.org: NXDOMAIN\n{code}\n\nThe reason why you can see \"NXDOMAIN\", \"nslookup\" will query \"A\" & \"AAAA\" records.\nIf there is no answer from other dns server, \"answers == null\" but YARN Registry DNS Server has a bug. There is no null handling.\n\n{code:java}\n    // Forward lookup to primary DNS servers\n    Record[] answers = getRecords(name, type);\n    try {\n      for (Record r : answers) {\n        if (!response.findRecord(r)) {\n          if (r.getType() == Type.SOA) {\n            response.addRecord(r, Section.AUTHORITY);\n          } else {\n            response.addRecord(r, Section.ANSWER);\n          }\n        }\n        if (r.getType() == Type.CNAME) {\n          Name cname = r.getName();\n          if (iterations < 6) {\n            remoteLookup(response, cname, type, iterations + 1);\n          }\n        }\n      }\n    } catch (NullPointerException e) {\n      return Rcode.NXDOMAIN;\n    } catch (Throwable e) {\n      return Rcode.SERVFAIL;\n    }\n    return Rcode.NOERROR;\n{code}\n\nIt should be like this:\n\n{code}\nnslookup repo.maven.apache.org 10.8.8.8\nServer:\t\t10.8.8.8\nAddress:\t10.8.8.8#53\n\nNon-authoritative answer:\nrepo.maven.apache.org\tcanonical name = repo.apache.maven.org.\nrepo.apache.maven.org\tcanonical name = maven.map.fastly.net.\nName:\tmaven.map.fastly.net\nAddress: 151.101.196.215\n{code}\n\nI will make a pull request at https://github.com/apache/hadoop soon.",
+   "report_id": "hadoop-13423879",
+   "source_project": "hadoop",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "[ABFS][Backoff-Optimization] Have a Static retry policy for connection timeout failures\n\nToday when a request fails with connection timeout, it falls back into the loop for exponential retry. Unlike Azure Storage, there are no guarantees of success on exponentially retried request or recommendations for ideal retry policies for Azure network or any other general failures. Faster failure and retry might be more beneficial for such generic connection timeout failures. \n\nThis PR introduces a new Static Retry Policy which will currently be used only for Connection Timeout failures. It means all the requests failing with Connection Timeout errors will be retried after a constant retry(sleep) interval independent of how many times that request has failed. Max Retry Count check will still be in place.\n\nFollowing Configurations will be introduced in the change:\n # \"fs.azure.static.retry.for.connection.timeout.enabled\" - default: true, true: static retry will be used for CT, false: Exponential retry will be used.\n # \"fs.azure.static.retry.interval\" - default: 1000ms.\n\nThis also introduces a new field in x-ms-client-request-id only for the requests that are being retried after connection timeout failure. New filed will tell what retry policy was used to get the sleep interval before making this request.\nHeader \"x-ms-client-request-id \" right now has only the retryCount and retryReason this particular API call is. For ex:  :eb06d8f6-5693-461b-b63c-5858fa7655e6:29cb0d19-2b68-4409-bc35-cb7160b90dd8:::CF:1_CT.\n\nMoving ahead for retryReason \"CT\" it will have retry policy abbreviation as well.\nFor ex:  :eb06d8f6-5693-461b-b63c-5858fa7655e6:29cb0d19-2b68-4409-bc35-cb7160b90dd8:::CF:1_CT_E.",
+   "report_id": "hadoop-13538585",
+   "source_project": "hadoop",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Make SocketAuthServer socket timeout configurable\n\nIn SPARK-21551 the socket timeout for the Pyspark applications has been increased from 3 to 15 seconds. However it is still hardcoded.\nIn certain situations even the 15 seconds is not enough, so it should be made configurable. \nThis is requested after seeing it in real-life workload failures.\nAlso it has been suggested and requested in an earlier comment in [SPARK-18649|https://issues.apache.org/jira/browse/SPARK-18649?focusedCommentId=16493498&page=com.atlassian.jira.plugin.system.issuetabpanels%3Acomment-tabpanel#comment-16493498]\n\nIn \nSpark 2.4 it is under\n[PythonRDD.scala|https://github.com/apache/spark/blob/branch-2.4/core/src/main/scala/org/apache/spark/api/python/PythonRDD.scala#L899]\nin Spark 3.x the code has been moved to\n[SocketAuthServer.scala|https://github.com/apache/spark/blob/master/core/src/main/scala/org/apache/spark/security/SocketAuthServer.scala#L51]\n{code}\nserverSocket.setSoTimeout(15000)\n{code}\nPlease include this in both 2.4 and 3.x branches.",
+   "report_id": "spark-13335362",
+   "source_project": "spark",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "List of DNS over HTTPS Providers is Blank\n\nNo STR but noticed after a fresh install of 98.0b2/b3 (with a new profile) that the list of DNS over HTTPS providers is blank. This setting displays https://mozilla.cloudflare-dns.com/dns-query as a provider in 91.11.0.",
+   "report_id": "thunderbird-1757761",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Failed to connect to the remote extension host server (Failed to construct 'WebSocket': Invalid URL)\n\nFrom @joaomoreno \n\n![image](https://user-images.githubusercontent.com/5047891/103784311-14124900-503a-11eb-8d5d-b9baf3d84176.png)\n\ncc @aeschli \n\nCan be reproduced locally via:\n* `.\\resources\\server\\bin-dev\\server.bat` \n* `.\\scripts\\code.bat --folder-uri=vscode-remote://::1:8000/C%3A/Alex/src/working_dir`",
+   "report_id": "vscode-113917",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Disabling Proxy support does not disable proxy agent redirection\n\n<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- 🕮 Read our guide about submitting issues: https://github.com/microsoft/vscode/wiki/Submitting-Bugs-and-Suggestions -->\n<!-- 🔎 Search existing issues to avoid creating duplicates. -->\n<!-- 🧪 Test using the latest Insiders build to see if your issue has already been fixed: https://code.visualstudio.com/insiders/ -->\n<!-- 💡 Instead of creating your report here, use 'Report Issue' from the 'Help' menu in VS Code to pre-fill useful information. -->\n<!-- 🔧 Launch with `code --disable-extensions` to check. -->\n\n<!-- 🪓 If you answered No above, use 'Help: Start Extension Bisect' from Command Palette to try to identify the cause. -->\n<!-- 📣 Issues caused by an extension need to be reported directly to the extension publisher. The 'Help > Report Issue' dialog can assist with this. -->\n- VS Code Version: Latest\n- OS Version: Windows 11\n\nSteps to Reproduce:\n\n1. Set HTTP_PROXY env variable to garbage value.\n2. Start VS Code and set \"http.proxySupport\": \"off\" in settings.json\n3. Make an HTTP Request (in my case I tested authorization with azurecore provider (similar to microsoft authenticator provider) - from Azure Data Studio)\n4. Notice HTTP request will fail.\n\nExpected: Since http.proxysupport is OFF, authentication should not use proxy URL.\n\n#### Explanation\nVSCode should not send Proxy URL in request if proxy support is disabled. As there is no other way to override these settings and skip any injected HTTP_PROXY env variables if users don't want to use Proxy. The Proxy agent set in code despite this proxy support turned \"off\" causes authentication failures when proxy is not expected to play a role.\n\nI have also tried to use startup params from here, but they don't work either: https://code.visualstudio.com/docs/setup/network#_proxy-server-support\n\n#### Code Issue\nI believe this code is responsible to set Proxy Agent:\nhttps://github.com/microsoft/vscode/blob/3df5eeedfea64cef21627a4ff351db4c6e8fb559/src/vs/platform/request/node/requestService.ts#L83-L93\n\nI think all these 3 settings (agent, strictSSL, proxy headers) should be set only when proxy support is enabled.",
+   "report_id": "vscode-167015",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Insiders 1.10.0 Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.\n\nGetting `Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.` after most recent insiders update.  Worked on Friday when I last opened it.  Didn't change any settings.  Not using a proxy.  I'm assuming latest update broke it somehow since it started happening right after I updated this morning.\n\n- VSCode Version: 1.10.0-insider 422d7ff1b78fcac514498921551c33a988c4ad34 2017-02-13T07:02:30.785Z\n- OS Version: OSX 10.10.5 (14F2109)\n\nSteps to Reproduce:\n\n1. Download above vscode-insiders build\n2. Restart vscode\n3. Open extensions\n4. See \"Marketplace returned 'ECONNREFUSED'. Please check the 'http.proxy' setting.\"\n\nNeed any more info?",
+   "report_id": "vscode-20567",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "network"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Sync error: CreditCards is not initialized\n\nUser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:97.0) Gecko/20100101 Firefox/97.0\n\nSteps to reproduce:\n\nupdate my nightly from 20211214 to 20211226.\n\nActual results:\n\nFirefox Sync no longer works (last synced reports days ago and I no longer see new data from my other devices). In the error log I find:\n```\n1640788374167\tSync.Synchronizer\tDEBUG\tUpdating enabled engines failed: Error: CreditCards is not initialized. Please restart if you flip the pref manually.(resource://autofill/FormAutofillStorageBase.jsm:2008:21) JS Stack trace: get@FormAutofillStorageBase.jsm:2008:21\nget storage@FormAutofillSync.jsm:95:7\n_resetClient@FormAutofillSync.jsm:317:5\n```\n\nExpected results:\n\nFirefox Sync should continue to work, no matter if syncing credit cards is supported or not.\n\nI tried to disable syncing credit cards in Preferences but it still happened. I read the source code and changed `extensions.formautofill.creditCards.available` from `detect` to `on`, it finally started to work.\n\nMy nightly is the zh-CN variant and I'm in China.",
+   "report_id": "firefox-1747893",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Critical"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "PDF.js doesn't honour filenames without pdf file extension when saving the document locally (e.g. from fido's web billing portal)\n\nSee earlier comments in bug 1767321.\n\nApparently this is still not fixed in Nightly 102.\n\nI'll try and find someone who uses FIDO, where I can debug what's going on when I'm (all being well) in the Toronto office next week.",
+   "report_id": "firefox-1768671",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "[macOS] Payment methods cannot be imported from Brave\n\n**Found in**\n* 117.0a1 (2023-07-17)\n\n**Affected versions**\n* 117.0a1 (2023-07-13)\n* 116.0b6\n* 115.0.2\n\n**Tested platforms**\n* Affected platforms: macOS 12\n* Unaffected platforms: Ubuntu 22, Windows 10x64\n\n**Preconditions**\n* credit cards saved in Brave\n\n**Steps to reproduce**\n1. Open the migration window and import Payment data.\n\n**Expected result** \n* Payment methods are imported.\n\n**Actual result**\n* Payment methods are not imported. \n\n**Regression range**\n* Not a regression. Reproducible with bug 1826149 after Payment methods were implemented.\n\n**Additional notes**\n* Attached browser console errors.",
+   "report_id": "firefox-1844035",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Incorrect message appears after importing an invalid credit card number\n\n*Found in*\n\n118.0b5\n\n*Affected versions*\n\n118.0b5\n\n*Tested platforms*\n\nAffected platforms: macOS 13\nUnaffected platforms:\n\n*Preconditions*\n\n1 valid credit card and 1 invalid credit card saved in Chrome\n\n*Steps to reproduce*\n\n1. Open Fx \n2. Click on  Import data button from about:preferences\n\n*Expected result*\nOnly 1 credit card(the valid one) is imported, so after the import is done the message should appear for 1 credit card not two.\n\n*Actual result*\nAfter the import is done the message should appear for 1 credit card not two.\n\n*Regression range*\n\nNot a regression. Reproducible with bug 1826149 after Payment methods were implemented.\nAdditional notes\n\nAttached browser console errors.",
+   "report_id": "firefox-1851799",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Erroneous translations break paypal\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/119.0\n\nSteps to reproduce:\n\nUsing paypal.de trying to download financial reports, unknowingly translate feature in firefox enabled.\n\nActual results:\n\nwebsite is translated from german into a horribly wrong version of german, site stops to function proper. By clicking \"Bericht\" button it was also possible to create errors like \"Node.removeChild: Der zu entfernende Knoten ist kein Kind dieses Knotens\". Why is it possible that the translation feature breaks paypal so hard that we get these kind of errors?\n\nExpected results:\n\nSite should never have been translated.\nAfter disable of the translation feature, site can be used normally.\n\nThe translation feature should never be enabled by default. If its enabled, there must be a very clear indication that the site is being translated by firefox.  It needs to be opt-in, as new user see the dialog of the new feature once, forget about it and then make some sites unusable.",
+   "report_id": "firefox-1866677",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "PayPal sandbox Something went wrong. Contact the seller for help\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:128.0) Gecko/20100101 Firefox/128.0\n\nSteps to reproduce:\n\nClicked on a PayPal 'Buy Now' link\n\nActual results:\n\nSomething went wrong. Contact the seller for help message displayed\n\nExpected results:\n\nGone to PayPal to purchase goods",
+   "report_id": "firefox-1910229",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "www.yournextit.de - Menu (Laptop) does not work. When scrolling up, the menu is not on screen. Products are not displayed correctly. Nothing visible in the yellow block. No space between the payment methods and social media logos.\n\nSteps to reproduce:\n\nhttps://www.yournextit.de/\n\nSeaMonkey 2.53.18.2\nUseragent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0\nBuildnaam: 20240318103520\n\nActual results:\n\nMenu (Laptop) does not work. When scrolling up, the menu is not on screen. Products are not displayed correctly. Nothing visible in the yellow block. No space between the payment methods and social media logos.\n\nExpected results:\n\nComplete and normal working of the internetsite.\n\nTested with Firefox.",
+   "report_id": "seamonkey-1902721",
+   "source_project": "seamonkey",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "transaction.accepteasy.com - Black page. iDeal payment. The page was working in SeaMonkey 2.53.18.2.\n\nSteps to reproduce:\n\nhttps://transaction.accepteasy.com/\nhttps://transaction.accepteasy.com/nl-NL/\n\nSeaMonkey 2.53.19\nUseragent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0\nBuildnaam: 20240827170848\n\nActual results:\n\nBlack page. The page was working in SeaMonkey 2.53.18.2.\n\nExpected results:\n\nNo black page. Normal loading of the internetsite.\n\nTested with Firefox.",
+   "report_id": "seamonkey-1924326",
+   "source_project": "seamonkey",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Mails from PayPal: \"Archive\" button missing\n\nUser Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101 Firefox/68.0\n\nSteps to reproduce:\n\nTried to archive an email coming from PayPal using the \"Archive\" button in menu bar or \"Archive\" in context menu.\n\nActual results:\n\nBoth, \"Archive\" button and \"Archive\" entry in context menu are missing.\n\nExpected results:\n\nIt's possible to archive any other email. These \"Archive\" entries are only missing at emails from PayPal, as far as I noticed.",
+   "report_id": "thunderbird-1643899",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "can't donate to thunderbird using the paypal link, cross site error using firefox.\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0\n\nSteps to reproduce:\n\n- from here:\nhttps://www.thunderbird.net/en-US/thunderbird/102.0/eoy/\n- I click donate. Then from here:\nhttps://give.thunderbird.net/en-US/?utm_source=thunderbird-client&utm_medium=referral&utm_content=about-dialog\n- After the Paypal button appears I click it. Nothing happens.\nIn the console is an error cross site error.\n\nActual results:\n\nContent Security Policy: The page’s settings blocked the loading of a resource at https://bpp.eset.com/en-US/Redirect-Switch?token=cccdfd7e637acc17d05fe4bd (“connect-src”).\nCross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://www.paypal.com/xoplatform/logger/api/logger. (Reason: CORS request did not succeed). Status code: (null).\n\nExpected results:\n\nI think a window or new paypal page should appear so I can give you my money.\n\nUsing FireFox version 107.0 (64-bit) Windows 10. \nI also tried IE and Chrome.",
+   "report_id": "thunderbird-1803720",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "payment"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Billing"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Performance regression on internode messaging\n\nMe and [~jasonstack] have been investigating a performance regression affecting 4.0 during a 3 nodes, RF 3 write throughput test with a timeseries like workload, as shown in this plot, where blue is 3.11 and orange is 4.0:\n\n!Oss40vsOss311.png|width=389,height=214!\n\n It's been a bit of a long investigation, but two clues ended up standing out:\n1) An abnormal number of expired messages on 4.0 (as shown in the attached  system log), while 3.11 has almost none.\n2) An abnormal GC activity (as shown in the attached gc log).\n\nTurns out the two are related, as the [on expired callback|https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/net/OutboundConnection.java#L462] creates a huge amount of strings in the {{id()}} call. The next question is what causes all those message expirations; we thoroughly reviewed the internode messaging code and the only issue we could find so far is related to the \"batch pruning\" calls [here|https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/net/OutboundMessageQueue.java#L81] and [here|https://github.com/apache/cassandra/blob/trunk/src/java/org/apache/cassandra/net/OutboundMessageQueue.java#L188]: it _seems_ too much time is spent on those, causing the event loop to fall behind in processing the rest of the messages, which will end up being expired. This is supported by the analysis of the collapsed stacks (after fixing the GC issue):\n{noformat}\n(tprint (top-aggregated-calls oss40nogc \"EventLoopDelivery:doRun\" 5))\norg/apache/cassandra/net/OutboundConnection$EventLoopDelivery:doRun 3456\norg/apache/cassandra/net/OutboundMessageQueue:access$600 1621\norg/apache/cassandra/net/PrunableArrayQueue:prune 1621\norg/apache/cassandra/net/OutboundMessageQueue$WithLock:close 1621\norg/apache/cassandra/net/OutboundMessageQueue:pruneInternalQueueWithLock 1620\n{noformat}\n\nThose are the top 5 sampled calls from {{EventLoopDelivery#doRun()}} which spends half of its time pruning. But only a tiny portion of such pruning time is spent actually expiring:\n{noformat}\n(tprint (top-aggregated-calls oss40nogc \"OutboundMessageQueue:pruneInternalQueueWithLock\" 5))\norg/apache/cassandra/net/OutboundMessageQueue:pruneInternalQueueWithLock 1900\norg/apache/cassandra/net/PrunableArrayQueue:prune 1894\norg/apache/cassandra/net/OutboundMessageQueue$1Pruner:onPruned 147\norg/apache/cassandra/net/OutboundConnection$$Lambda$444/740904487:accept 147\norg/apache/cassandra/net/OutboundConnection:onExpired 147\n{noformat}\n\nAnd indeed, the {{PrunableArrayQueue:prune()}} self time is dominant:\n{noformat}\n(tprint (top-self-calls oss40nogc \"PrunableArrayQueue:prune\" 5))\norg/apache/cassandra/net/PrunableArrayQueue:prune 1718\norg/apache/cassandra/net/OutboundConnection:releaseCapacity 27\njava/util/concurrent/ConcurrentHashMap:replaceNode 19\njava/util/concurrent/ConcurrentLinkedQueue:offer 16\njava/util/concurrent/LinkedBlockingQueue:offer 15\n{noformat}\n\nThat said, before proceeding with a PR to fix those issues, I'd like to understand: what's the reason to prune so often, rather than just when polling the message during delivery? If there's a reason I'm missing, let's talk about how to optimize pruning, otherwise let's get rid of that.",
+   "report_id": "cassandra-13296801",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Performance regression for queries accessing multiple rows\n\nThis is spin off from CASSANDRA-16036.\n\nIn testing 4.0 relative to 3.0* I found that queries which accessed multiple rows to have a noticeable performance decrease; two queries were used in the test (more may be impacted, others might not): query partition (table has clustering keys) with LIMIT, and query clustering keys using IN clause.\n\nIn the below graphs the green line is 3.0 and the other lines are 4.0 (with and without chunk cache)\n\nPartition with LIMIT\n\n!https://issues.apache.org/jira/secure/attachment/13009751/clustering-slice_latency_selects_baseline.png!\n!https://issues.apache.org/jira/secure/attachment/13009750/clustering-slice_latency_under90_selects_baseline.png!\n\nCluster with IN clause\n\n!https://issues.apache.org/jira/secure/attachment/13009749/clustering-in-clause_latency_selects_baseline.png!\n!https://issues.apache.org/jira/secure/attachment/13009748/clustering-in-clause_latency_under90_selects_baseline.png!",
+   "report_id": "cassandra-13324891",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "browser hang issue dos\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36\n\nSteps to reproduce:\n\nopen crash.html in firefox\n\nand your browser should start hanging and if you click stop when a web page is slowing down your web browser message it still hangs\n\nActual results:\n\nit made the browser hang and unusable\n\nExpected results:\n\nit should not hang and be unusable",
+   "report_id": "firefox-1644756",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "FIrefox freezes while opening finder to upload files\n\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:89.0) Gecko/20100101 Firefox/89.0\n\nSteps to reproduce:\n\nTwo ways:\n1. Open Google Drive, click upload file, Firefox freezes\n2. Open new tab, click open file, Firefox freezes\n\nActual results:\n\nTwo ways:\n1. Open Google Drive, click upload file, Firefox freezes\n2. Open new tab, click open file, Firefox freezes\n\nExpected results:\n\nTwo ways:\n1. Open Google Drive, click upload file, Firefox does not freeze\n2. Open new tab, click open file, Firefox does not freeze",
+   "report_id": "firefox-1715640",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Reply window freezes after attempting to modify text color\n\nUser Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/88.0.4321.0 Safari/537.36 Edg/88.0.702.0\n\nSteps to reproduce:\n\n1. From an open message window or the message preview pane, clicked \"Reply All\"\n2. In the reply window, selected text to highlight\n3(attempt a). Clicked on font color icon(?)\n3(attempt b). From menu, clicked Format > Text Color...\n\nActual results:\n\nReply window locks up, and everything in the window becomes completely unresponsive, including not being able to close the window, but the window can be moved on the screen.  From the color scheme, it appears that the window is stuck in Inactive mode. \n\nPressing ALT-F4 does not close the window, but does appear to change it to Active, after which it can be closed normally.  Attempting to change font color again locks it up again.\n\nMain Thunderbird window can still be closed normally.\n\nExpected results:\n\nClicking on anything to change colors should bring up color choice window.",
+   "report_id": "thunderbird-1678861",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Quick filter working much slower after Supernova redesign\n\nUser Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/118.0\n\nSteps to reproduce:\n\nTyping anything in Quick Filter\n\nActual results:\n\nNothing. For 5-10 seconds, nothing happens.\nOnly after that, the results are listed.\n\nExpected results:\n\nBefore Supernova redesign, the result were in less than 1 second. And if I remember correctly, they updated gradually (some of then quickly, some later).\nIt should work like before. With the 5+ seconds wait it's unbearable. I use quick filters all the time...\n\n(visually, I like the redesign)",
+   "report_id": "thunderbird-1857818",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "slow start\n\nSteps to reproduce:\n\nStarting Thunderbird is extremely slow! I think the problem started with v119 Beta 3, before that, it worked relatively fast. It takes up to 20 seconds until the program is usable (message selection is possible, displaying messages, etc.) I tried creating a new profile - same result. I don't have any add-ons or extensions. It's simply painfully slow to start! Prior versions were much faster on the same system (Windows 11).\n\nPlease fix this or at least add an option \"Minimize on close\" !!!! This would be so extremely helpful together with \"Minimize to tray\". This way, I simply keep TB running in the background and it would be accessible instantly when restarting or restoring the main window. \n\nActual results:\n\nTB starts extremely slowly (10 seconds or more). UI is visible, but unusable, no messages are displayed, etc. After 10 to 20 seconds, everything works as intended.\n\nExpected results:\n\nReasonably fast startup time (1-2 seconds at most).",
+   "report_id": "thunderbird-1859093",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Terminal resize freezes computer\n\n* having a lot of terminal output \n  * e.g. run `yarn test-browser`\n* scroll the terminal to the top\n* toggle side bar\n* 🐛 renderer freezes for multiple seconds in `xterm#resize`\n\n![Image](https://github.com/user-attachments/assets/d621c63d-b645-42ac-a340-43d58de65883)\n\n[Trace-20240701T175556.json.zip](https://github.com/user-attachments/files/16056137/Trace-20240701T175556.json.zip)",
+   "report_id": "vscode-219559",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "slow startup typing performance when explorer contributions are expanded\n\nWindows, Insiders build 1.18.0-insiders commit 4b0145 date 2017-10-19\n\nI noticed that on startup, there is a delay to typing.  The editor comes up, but when I start typing it takes a few seconds for the letters to appear.\n\nHere's all the extensions I have installed\n\narcticicestudio.nord-visual-studio-code@0.6.0\nbenjpas.close-all@1.0.2\nchrisdias.vscode-opennewinstance@0.0.4\nchristian-kohler.npm-intellisense@1.3.0\ncssho.vscode-svgviewer@1.4.3\nDotJoshJohnson.xml@1.9.2\neg2.vscode-npm-script@0.2.1\nevilz.vscode-reveal@1.0.0\nformulahendry.auto-close-tag@0.5.1\nms-azuretools.vscode-azureappservice@0.2.0\nms-azuretools.vscode-azurefunctions@0.1.0\nms-azuretools.vscode-cosmosdb@0.1.1\nms-vscode.azure-account@0.1.3\nms-vscode.azurecli@0.3.0\nms-vscode.PowerShell@1.4.3\nPeterJausovec.vscode-docker@0.0.20\n\nProfile with extensions:\n[CPU-20171019T092459.zip](https://github.com/Microsoft/vscode/files/1399225/CPU-20171019T092459.zip)\n\n[5c2a_main.cpuprofile.txt](https://github.com/Microsoft/vscode/files/1399203/5c2a_main.cpuprofile.txt)\n[5c2a_renderer.cpuprofile.txt](https://github.com/Microsoft/vscode/files/1399204/5c2a_renderer.cpuprofile.txt)\n\n- VSCode Version: <code>Code - Insiders 1.18.0-insider (4b01451cea60f32412098735709fddcac567b33d, 2017-10-19T08:29:07.096Z)</code>\n- OS Version: <code>Windows_NT x64 10.0.15063</code>\n- CPUs: <code>Intel(R) Core(TM) i5-2400S CPU @ 2.50GHz (4 x 2494)</code>\n- Memory (System): <code>7.98GB (2.58GB free)</code>\n- Memory (Process): <code>232.49MB working set (234.23MB peak, 200.54MB private, 40.71MB shared)</code>\n- Load (avg): <code>0, 0, 0</code>\n- VM: <code>0%</code>\n- Initial Startup: <code>yes</code>\n- Screen Reader: <code>no</code>\n- Empty Workspace: <code>no</code>\n- Timings:\n\n|Component|Task|Time (ms)|\n|---|---|---|\n|main|start => app.isReady|37|\n|main|app.isReady => window.loadUrl()|292|\n|renderer|window.loadUrl() => begin to require(workbench.main.js)|442|\n|renderer|require(workbench.main.js)|731|\n|renderer|create extension host => extensions onReady()|612|\n|renderer|restore viewlet|492|\n|renderer|restore editor view state|1386|\n|renderer|overall workbench load|1560|\n|main + renderer|start => extensions ready|2271|\n|main + renderer|start => workbench ready|3178|\n\nHere is a profile without extensions loaded, where the performance is ok. So, it has to be an extension.\n\n[Profile-no-extensions.zip](https://github.com/Microsoft/vscode/files/1399261/Profile-no-extensions.zip)",
+   "report_id": "vscode-36575",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Searching large projects is too slow\n\nUbuntu 12.04, vscode 0.10.1\n\nI have found Go to file's indexing against a full Chromium workspace to be very slow. It took ~40 seconds to find \"Tab.java\" whereas a simple `find` command took less than a second:\n\n```\n$ time find . -name \"Tab.java\"\n./chrome/android/java/src/org/chromium/chrome/browser/tab/Tab.java\n\nreal    0m0.559s\nuser    0m0.268s\nsys 0m0.284s\n```\n\nNote that the workspace is on an SSD.",
+   "report_id": "vscode-55",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "performance"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "high and critical CVEs io.netty to 4.1.42.Final to fix critical and high vulnerabilities\n\nRepository | Tag | CVE ID | Severity | Packages | Source Package | Package Version | Fix Status\n-- | -- | -- | -- | -- | -- | -- | --\ndatastax/cassandra-mgmtapi-3_11_7 | v0.1.22 | CVE-2019-20445 | critical | io.netty_netty-all |   | 4.0.44.Final | fixed in 4.1.44\ndatastax/cassandra-mgmtapi-3_11_7 | v0.1.22 | CVE-2019-20444 | critical | io.netty_netty-all |   | 4.0.44.Final | fixed in 4.1.44\ndatastax/cassandra-mgmtapi-3_11_7 | v0.1.22 | CVE-2019-16869 | high | io.netty_netty-all |   | 4.0.44.Final | fixed in 4.1.42.Final",
+   "report_id": "cassandra-13359699",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Critical"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "CVE-2021-44521: Apache Cassandra: Remote code execution for scripted UDFs\n\nWhen running Apache Cassandra with the following configuration:\n\nenable_user_defined_functions: true\nenable_scripted_user_defined_functions: true\nenable_user_defined_functions_threads: false \n\nit is possible for an attacker to execute arbitrary code on the host. The attacker would need to have enough permissions to create user defined functions in the cluster to be able to exploit this. Note that this configuration is documented as unsafe, and will continue to be considered unsafe after this CVE.\n\nThis issue is being tracked as CASSANDRA-17352\n\nMitigation:\n\nSet `enable_user_defined_functions_threads: true` (this is default)\nor\n3.0 users should upgrade to 3.0.26\n3.11 users should upgrade to 3.11.12\n4.0 users should upgrade to 4.0.2\n\nCredit:\n\nThis issue was discovered by Omer Kaspi of the JFrog Security vulnerability research team.",
+   "report_id": "cassandra-13426900",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Improve nodetool enable{audit,fullquery}log, CVE-2023-30601\n\nThe {{--archive-command}} parameter to {code}nodetool enable{audit,fullquery}log{code} allows an attacker to execute arbitrary commands as the user running cassandra.\n\nPatch adds a configuration option which disallows using this parameter - for any existing users of --archive-command this can be re-enabled",
+   "report_id": "cassandra-13537599",
+   "source_project": "cassandra",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "The “Learn more” and the “Go to <website_name>” links overlap with the elements from the “Vulnerable Password”/”Breached Website” notification when the browser is resized\n\n[Affected versions]:\n- Firefox Nightly 76.0a1 (Build ID: 20200330094747)\n\n[Affected Platforms]:\n- Windows 10 x64\n- Mac 10.14.6\n- Ubuntu 18.04 x64\n\n[Prerequisites]:\n- Have a profile with at least 3 saved logins in which one is vulnerable.\n\n[Steps to reproduce]:\n1. Open the Firefox browser with the profile from prerequisites.\n2. Select a vulnerable login.\n3. Resize the browser to less than 50% and observe the link from the “Vulnerable Password” notification.\n\n[Expected result]:\n- The “Learn more” and the “Go to <website_name>” links are correctly displayed and rendered.\n\n[Actual result]:\n- The “Learn more” and the “Go to <website_name>” links overlap with the elements from the notification.\n\n[Notes]:\n- Attached a screen recording with the issue.",
+   "report_id": "firefox-1625967",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "update NodeJS dependencies by handle security issues.\n\nnpm audit shows issues with browser/components/newtab.  Those need fixing.  Many will be simple enough to fix using 'npm audit fix'. That should be landed first and done here.\n\nThe others can be done here or spun off to separate bugs depending on amount of work.",
+   "report_id": "firefox-1668045",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Critical"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "'about:certificate' should not display internal \"distrust\" certs\n\nUser Agent: Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:93.0) Gecko/20100101 Firefox/93.0\n\nSteps to reproduce:\n\nVisit the pages associated to 'about:certificate' and 'about:preferences#privacy', then inspect their Servers tab in each.\n\nActual results:\n\nThe names present in the list that is reported In page associated to 'about:certificate', are missing from the list reported in page associated to 'about:preferences#privacy'.\n\nExpected results:\n\nLists to be synchronized and therefore identical.",
+   "report_id": "firefox-1737574",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Upgrade Issue from 102.2 to 102.3: NS_ERROR_ABORT: CertUtils.jsm: Certificate issuer is not built-in. Getting sslStatus failed.\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36 OPR/91.0.4516.16\n\nSteps to reproduce:\n\nHelp About in my previous version was telling you are already update. But for the past couple of days getting a prompt that TB was not able to upgrade itself opening Thunderbird site. Then I downloaded the full installer to upgrade the same.\n\nActual results:\n\nAuto upgrade from 102.2.x to 102.3 is not happening\n\nExpected results:\n\nSeamless upgrade to 102.3 should happen.",
+   "report_id": "thunderbird-1791719",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "When setting up an account, failure to connect to a port because of a certificate error is not reported to the console\n\nDuring account set up, each failed attempt to connect to a port is reported on the console, e.g.:\n\n> test.test:110 socketType=0 pop3: [Exception... \"Connection to test.test:110 failed\"  nsresult: \"0x804b000d (NS_ERROR_CONNECTION_REFUSED)\"  location: \"JS frame :: resource:///modules/accountcreation/GuessConfig.sys.mjs :: onStopRequest :: line 1247\"  data: no]\n\nbut this isn't true where an attempt fails because of a TLS certificate error. In that case, we *do* [suggest the user can change a pref and ignore the bad certificate](https://searchfox.org/comm-central/rev/5e8e75f9c60ffee9c773850f1e31f5878df3f92b/mail/components/accountcreation/modules/GuessConfig.sys.mjs#1224-1226) but that's only an info-level message and not shown with the default log level setting. There should be an exception thrown at this point so that the error handler reports the failure.",
+   "report_id": "thunderbird-1919469",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "json-language-features is attempting to use expired certificates when valid certificates are available\n\nType: <b>Bug</b>\n\nInside my corporate environment we have self-signed man-in-the-middle certificates protecting internet traffic.  The certificates are distributed to Windows clients via Group Policy.  A number of these certificates have expired, although valid certificates are also present.  No other software seems to care, but `vscode.json-language-features` complains `certificate has expired`.  It doesn't find the good certificates.\n\n* If I manually remove the expired certificates, no errors are logged.  But Group Policy pushes them back out periodically.\n* If I take a laptop which exhibits this issue out of the corporate environment, no errors are logged.\n\nPlease let me know if there is any extra information I can provide, or logs I can look for. \n\n```json\n{\n  \"$schema\": \"https://docs.renovatebot.com/renovate-schema.json\",\n  ...\n}\n```\n```\n[2022-10-06 11:17:44.461] [exthost] [trace] [DiagnosticCollection] change many (extension, owner, uris) \nvscode.json-language-features _generated_diagnostic_collection_name_#1 \n[\n  [\n    {\n      \"$mid\":1,\n      \"fsPath\":\"******\\\\default.json\",\n      \"_sep\":1,\n      \"external\":\"file:///******/default.json\",\n      \"path\":\"/******/default.json\",\n      \"scheme\":\"file\"\n    },\n    [\n      {\n        \"startLineNumber\":2,\n        \"startColumn\":14,\n        \"endLineNumber\":2,\n        \"endColumn\":65,\n        \"message\":\"Unable to load schema from 'https://docs.renovatebot.com/renovate-schema.json': certificate has expired.\",\n        \"code\":\"768\",\n        \"severity\":4\n      }\n    ]\n  ]\n]\n```\n\nVS Code version: Code 1.71.2 (74b1f979648cc44d385a2286793c226e611f59e7, 2022-09-14T21:03:37.738Z)\nOS version: Windows_NT x64 10.0.19042\nModes:\nSandboxed: No\n\nExtensions: none\n<!-- generated by issue reporter -->",
+   "report_id": "vscode-162828",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "NPM Audit shows vulnerability in minimist when authoring extension\n\n<!-- ⚠️⚠️ Do Not Delete This! bug_report_template ⚠️⚠️ -->\n<!-- Please read our Rules of Conduct: https://opensource.microsoft.com/codeofconduct/ -->\n<!-- Please search existing issues to avoid creating duplicates. -->\n<!-- Also please test using the latest insiders build to make sure your issue has not already been fixed: https://code.visualstudio.com/insiders/ -->\n\n<!-- Use Help > Report Issue to prefill these. -->\n- VSCode Version:\nVersion: 1.44.1 (user setup)\nCommit: a9f8623ec050e5f0b44cc8ce8204a1455884749f\nDate: 2020-04-11T01:48:12.622Z\nElectron: 7.1.11\nChrome: 78.0.3904.130\nNode.js: 12.8.1\nV8: 7.8.279.23-electron.0\n\n- OS Version:\nOS: Windows_NT x64 10.0.18363\n\nSteps to Reproduce:\n\n1. Author an extension using VSCode as a dev dependency. Our package.json looks like this\n```\n    \"devDependencies\": {\n        \"@types/glob\": \"^7.1.1\",\n        \"@types/jquery\": \"^3.3.35\",\n        \"@types/markdown-it\": \"^10.0.0\",\n        \"@types/mocha\": \"^7.0.2\",\n        \"@types/node\": \"^13.11.1\",\n        \"@types/sarif\": \"^2.1.2\",\n        \"mocha\": \"^7.1.1\",\n        \"tslint-microsoft-contrib\": \"^6.0.0\",\n        \"tslint-no-unused-expression-chai\": \"^0.1.4\",\n        \"typescript\": \"^3.8.3\",\n        \"vscode\": \"^1.1.36\",\n        \"vscode-test\": \"^1.3.0\",\n        \"tslint\": \"^6.1.1\"\n    },\n```\nThese are all the latest packages. When running npm audit:\n\n                       === npm audit security report ===\n                                 Manual Review\n             Some vulnerabilities require your attention to resolve\n          Visit https://go.npm.me/audit-guide for additional guidance\n  Low             Prototype Pollution\n  Package         minimist\n  Patched in      >=0.2.1 <1.0.0 || >=1.2.3\n  Dependency of   vscode [dev]\n  Path            vscode > mocha > mkdirp > minimist\n  More info       https://npmjs.com/advisories/1179\nfound 1 low severity vulnerability in 453 scanned packages\n  1 vulnerability requires manual review. See the full report for details.\n\n<!-- Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: Yes",
+   "report_id": "vscode-95451",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "security"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Backend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "[Win][HCM] \"About Firefox\" dialog to provide semantic HCM styles for links and a button\n\n### Steps to reproduce:\n1. Ensure a system High Contrast Mode is enabled (`Settings` > `Accessibility` > `Contrast Themes` > (i.e. `Night Sky`) > `Apply`)\n1. Open Firefox\n1. Navigate to the main menu > `Help` > `About Firefox`\n1. Review visual styling of links (i.e. `Firefox Help` and `Privacy Policy`) and, if an upgrade is available, a `Restart to Update` button\n\n### Actual results:\n1. Links and a button do not respect semantic styling expected from the HCM theme, i.e. on `Night Sky`:\n    1. links and button are appearing to use `CanvasText` / white color that is used for static text\n\nSee the attached screenshots from the latest stable version of Firefox 107.0 and from the last week's Nightly 109.0a1 on Windows 11\n\n### Expected results:\n1. Links and a button do respect semantic styling expected from the HCM theme, i.e. on `Night Sky` :\n    1. links are appearing to use `MozNativehyperlinktext` tag / purple color that visually communicates these elements' role of link\n    1. `Restart to Update` button uses `ButtonText` / yellow and `ButtonFace` / dark gray color combination that tells a user that this element functions as a button",
+   "report_id": "firefox-1803005",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "The Address bar arrow button (go button) has a misleading tooltip pointing to a URL when it may be searching\n\nMy machine(s) have DNS set up such that it would search for certain domains implicitly. This is done by  tailscale, so that instead of having to type `hostname.tailnet` I can type `hostname` and have it resolve to other nodes in the tailnet.\n\nOn firefox when I type just the `hostname` and press Enter, it will by default search for this in a search engine. I get it, its a heuristic, as `hostname` isn't sufficiently domain-like for firefox to attempt to resolve that name. This is fine.\n\nHowever, if I hover over an arrow that appears at the end of the address bar as I begin typing, the tooltip says: “Go to the address in the location bar”, but instead of navigating to `http(s)://hostname` it *still* searches for `hostname` on a search engine!\n\nThat sounds like a broken button to me!",
+   "report_id": "firefox-1831327",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Major"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "The \"Show products recommended by Firefox\" radio button has no functionality\n\n**Found in**\n* Nightly 118.0a1 (2023-08-23)\n\n**Affected versions**\n* Nightly 118.0a1 (2023-08-23)\n\n**Affected platforms**\n* All\n\n**Preconditions:**\nSet the browser.shopping.experience2023.enabled - TRUE\nSet the browser.shopping.experience2023.optedIn - 1\n\n**Steps to reproduce**\n1. Reach https://www.amazon.com/WOKA-Electric-Standing-Adjustable-Controllers/dp/B09L1KY91X/ref=sr_1_2_sspa?crid=1I1N64FJG4GK7&keywords=standing%2Bdesk&qid=1692776724&sprefix=standing%2Bdes%2Caps%2C218&sr=8-2-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&th=1\n2. Expand the Settings card and Turn Off the \"Show products recommended by Firefox\".\n\n**Expected result**\n* The \"More to consider\" card should disappear.\n\n**Actual result**\n* The \"Show products recommended by Firefox\" radio button has no functionality.\n\n**Regression range**\nNot Applicable",
+   "report_id": "firefox-1849818",
+   "source_project": "firefox",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Synchronous replication should check if the file system supports truncate API\n\nOk. I missed this but I was just told that the synchronous replication leverages the truncate() FS API.\n\nhttps://github.com/apache/hbase/blob/master/hbase-server/src/main/java/org/apache/hadoop/hbase/master/replication/SyncReplicationReplayWALManager.java#L282\n\nOzone does not implement truncate so calling this method on the WAL FS will result in an exception. It would be a better user experience to alert user that this is not supported from the start.",
+   "report_id": "hbase-13544031",
+   "source_project": "hbase",
+   "tracker": "Apache Jira"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Minor"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Archive button moves mail into yearly folders despite single folder setting\n\nUser Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.132 Safari/537.36\n\nSteps to reproduce:\n\n- Via Account Settings / Folders / Archive Options, I selected that all messages shall be archived in one single folder.\n\n- Clicked the \"Archive\" button in the message window of a message in my Inbox.\n\nActual results:\n\nThe message got moved into a \"2020\" subfolder of my selected Archive folder.\n\nExpected results:\n\nThe message should have been moved into the Archive folder at top level due to my single folder setting.",
+   "report_id": "thunderbird-1622533",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "HTML message content rendering affected/hidden by messageBody.css styles: Rename our .main-header class to .moz-main-header, use custom attribute, or encapsulate\n\nUser Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:93.0) Gecko/20100101 Firefox/93.0\n\nSteps to reproduce:\n\nI receive a newsletter as an HTML-formatted message with inline CSS styles, particularly some elements have the `.main-header` CSS class.\n\nActual results:\n\nAll HMTL elements bearing the CSS class `.main-header` are not rendered because Thunderbird's messageBody.css stylesheet sets `display: none;` for this class (it uses this class for hiding the message header).\n\nExpected results:\n\nAll HTML content inside a message should be rendered according to the stylesheets defined in that message, not subject to Thunderbird's UI stylesheets.\n\nThis was not a problem until a recent update.",
+   "report_id": "thunderbird-1736244",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     },
+     {
+      "from_name": "severity",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Critical"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "comm/mail/test/static/browser_parsable_css.js | Got error message for chrome://messenger/skin/shared/message-bar.css: Ruleset ignored due to bad selector. -\n\nSomething needs porting/fixing, not sure what\n\ncomm/mail/test/static/browser_parsable_css.js | Got error message for chrome://messenger/skin/shared/message-bar.css: Ruleset ignored due to bad selector. -",
+   "report_id": "thunderbird-1858445",
+   "source_project": "thunderbird",
+   "tracker": "Mozilla Bugzilla"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Toggle line comment doesn't work for multiple lines in CSS\n\nType: <b>Bug</b>\n\nToggle line comment in CSS creates a single comment block when multiple lines are selected. This creates an issue, aka corrupts the code, if the selected lines already contain comment(s).\n\nHighlight 2 lines:\n```css\n  /* flex-grow: 1; */\n  /* justify-self: center; */\n```\nPress CTRL + /\n\nThe result is currupted CSS:\n\n```css\n  flex-grow: 1; */\n  /* justify-self: center; \n```\n\nA possible fix is to process each line individually like it does in javascript.\n\nVS Code version: Code 1.79.0 (b380da4ef1ee00e224a15c1d4d9793e27c2b6302, 2023-06-07T14:26:35.552Z)\nOS version: Windows_NT x64 10.0.19045\nModes:\n\n<details>\n<summary>System Info</summary>\n\n|Item|Value|\n|---|---|\n|CPUs|Intel(R) Core(TM) i9-9900K CPU @ 3.60GHz (16 x 3600)|\n|GPU Status|2d_canvas: enabled<br>canvas_oop_rasterization: disabled_off<br>direct_rendering_display_compositor: disabled_off_ok<br>gpu_compositing: enabled<br>multiple_raster_threads: enabled_on<br>opengl: enabled_on<br>rasterization: enabled<br>raw_draw: disabled_off_ok<br>video_decode: enabled<br>video_encode: enabled<br>vulkan: disabled_off<br>webgl: enabled<br>webgl2: enabled<br>webgpu: enabled|\n|Load (avg)|undefined|\n|Memory (System)|63.67GB (22.43GB free)|\n|Process Argv|--verbose|\n|Screen Reader|no|\n|VM|50%|\n</details><details><summary>Extensions (89)</summary>\n\nExtension|Author (truncated)|Version\n---|---|---\nbetter-comments|aar|3.0.2\nvscode-userscript|adp|1.3.2\nBookmarks|ale|13.3.1\ntsl-problem-matcher|amo|0.6.2\nautolispext|Aut|1.6.2\nspellright|ban|3.0.116\nvscode-log-viewer|ber|0.12.2\nvscode-intelephense-client|bme|1.9.5\ngit-exclude|bou|0.3.1\nphpserver|bra|3.0.2\ninsert-unicode|bru|0.14.0\nturbo-console-log|Cha|2.9.3\nregex|chr|0.4.0\ndoxdocgen|csc|1.4.0\nautoit|Dam|1.0.11\ncopy-directory-path|dan|1.0.3\nvscode-eslint|dba|2.4.0\nxml|Dot|2.5.1\ngitlens|eam|13.6.0\nEditorConfig|Edi|0.16.4\nvscode-great-icons|emm|2.1.93\nprettier-vscode|esb|9.13.0\nvscode-macros|EXC|1.4.1\nvscode-highlight|fab|1.7.3\nvscode-firefox-debug|fir|2.9.8\nauto-rename-tag|for|0.1.10\nremotehub|Git|0.58.0\nvscode-pull-request-github|Git|0.66.0\nvscode-test-explorer|hbe|2.21.1\ncustomize-ui|ioc|0.1.65\nmonkey-patch|ioc|0.1.23\nreg|ion|1.1.0\nbetter-cpp-syntax|jef|1.17.2\nvscode-peacock|joh|4.2.2\nminifyall|jos|2.10.0\nnode-module-intellisense|lei|1.5.0\nLisp|mat|0.1.12\nrender-crlf|med|1.6.1\nvscode-language-babel|mgm|0.0.39\ngit-graph|mhu|1.30.0\nvscode-filesize|mkx|3.1.0\nvscode-apache|mrm|1.2.0\nvscode-edge-devtools|ms-|2.1.1\nisort|ms-|2022.8.0\npython|ms-|2023.10.0\nvscode-pylance|ms-|2023.6.10\nremote-containers|ms-|0.292.0\nremote-ssh|ms-|0.102.0\nremote-ssh-edit|ms-|0.86.0\nvscode-remote-extensionpack|ms-|0.24.0\nazure-repos|ms-|0.34.0\ncmake-tools|ms-|1.14.33\ncpptools|ms-|1.15.4\ncpptools-extension-pack|ms-|1.3.0\nhexeditor|ms-|1.9.11\nlive-server|ms-|0.4.8\nremote-explorer|ms-|0.4.0\nremote-repositories|ms-|0.36.0\nremote-server|ms-|1.2.1\ntest-adapter-converter|ms-|0.1.8\ndebugger-for-edge|msj|1.0.15\ncolor-highlight|nau|2.5.0\nmytestextension-profile-setting|nob|0.0.1\nvscode-auto-scroll|pej|1.1.0\nvscode-versionlens|pfl|1.5.0\nparse-tree|pok|0.26.4\nvscode-phpunit|rec|3.1.2\ntmlanguage-syntax-highlighter|Red|2.2.1\nvscode-xml|red|0.25.0\nformat-html-in-php|rif|1.7.0\ncolor-manager|roy|0.7.5\nrust-analyzer|rus|0.3.1541\nmulti-command|ryu|1.6.0\nvbsvscode|Ser|1.2.1\nswapdiff|sha|0.2.0\ncomment-divider|sta|0.4.0\ncode-spell-checker|str|2.20.4\ntabnine-vscode|Tab|3.6.53\ntauri-vscode|tau|0.2.6\ncmake|twx|0.0.17\nvscode-ltex|val|13.1.0\nintellicode-api-usage-examples|Vis|0.2.7\nvscodeintellicode|Vis|1.2.30\nvscode-wakatime|Wak|24.0.11\nvscode-backup|Wes|0.0.6\nphp-debug|xde|1.32.1\nlocal-history|xyz|1.8.1\njson-color-token|yec|1.3.2\nhtml-css-class-completion|Zig|1.20.0\n\n(2 theme extensions excluded)\n\n</details>\n<!-- generated by issue reporter -->",
+   "report_id": "vscode-184666",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Quickpick input tooltips can become out of sync with its placeholder content\n\n<!-- Do you have a question? Please ask it on https://stackoverflow.com/questions/tagged/vscode. -->\n\n<!-- Use Help > Report Issue to prefill these. -->\n- VSCode Version: 1.19\n- OS Version: Windows 10\n\nThe tooltip over the input (for the placeholder), shows the wrong content (previous content) if the quickpick is replaced with a new one.\n\nFor example, in GitLens if you open file or branch history in a quickpick and see the tooltip over the input (it should be correct), but then pick one of the commits (which will open a new quickpick), and see that the tooltip over the input will still show the previous tooltip content, not the updated content.\n\n<!-- Launch with `code --disable-extensions` to check. -->\nDoes this issue occur when all extensions are disabled?: No",
+   "report_id": "vscode-43114",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ {
+  "data": {
+   "text": "Don't show \"turn sync on\" button when sync disabled in CLI\n\nWhen disabling sync as in https://github.com/microsoft/vscode/issues/95532, the big blue button in the settings editor is still visible, but it doesn't do anything when clicked. It should not appear at all.",
+   "report_id": "vscode-96727",
+   "source_project": "vscode",
+   "tracker": "GitHub Issues"
+  },
+  "predictions": [
+   {
+    "model_version": "prelabel-v1 (keywords + tracker priority)",
+    "result": [
+     {
+      "from_name": "category",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "ui_layout"
+       ]
+      }
+     },
+     {
+      "from_name": "component",
+      "to_name": "text",
+      "type": "choices",
+      "value": {
+       "choices": [
+        "Frontend"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ }
+]

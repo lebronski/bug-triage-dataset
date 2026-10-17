@@ -37,3 +37,6 @@ SOFTWARE.
 4. data/images/ и data/audio/ — CC BY 4.0, автор lebowskiybig.
    Аудио синтезировано движком espeak-ng (GPLv3); лицензия движка не
    распространяется на созданные им записи.
+
+5. annotation_schema/ и annotations/ — CC BY 4.0, автор lebowskiybig.
+   Аннотации ссылаются на данные из п. 2–4 и наследуют условия их использования.

@@ -1,0 +1,92 @@
+File type = "ooTextFile"
+Object class = "TextGrid"
+
+xmin = 0
+xmax = 15.39475
+tiers? <exists>
+size = 2
+item []:
+    item [1]:
+        class = "IntervalTier"
+        name = "segment"
+        xmin = 0
+        xmax = 15.39475
+        intervals: size = 9
+        intervals [1]:
+            xmin = 0
+            xmax = 0.516
+            text = ""
+        intervals [2]:
+            xmin = 0.516
+            xmax = 3.229
+            text = "GREETING"
+        intervals [3]:
+            xmin = 3.229
+            xmax = 3.779
+            text = ""
+        intervals [4]:
+            xmin = 3.779
+            xmax = 7.739
+            text = "PROBLEM"
+        intervals [5]:
+            xmin = 7.739
+            xmax = 8.044
+            text = ""
+        intervals [6]:
+            xmin = 8.044
+            xmax = 12.084
+            text = "ERROR_DETAILS"
+        intervals [7]:
+            xmin = 12.084
+            xmax = 12.597
+            text = ""
+        intervals [8]:
+            xmin = 12.597
+            xmax = 14.404
+            text = "STEPS"
+        intervals [9]:
+            xmin = 14.404
+            xmax = 15.39475
+            text = ""
+    item [2]:
+        class = "IntervalTier"
+        name = "transcript"
+        xmin = 0
+        xmax = 15.39475
+        intervals: size = 9
+        intervals [1]:
+            xmin = 0
+            xmax = 0.516
+            text = ""
+        intervals [2]:
+            xmin = 0.516
+            xmax = 3.229
+            text = "Добрый день, это Олег из отдела продаж."
+        intervals [3]:
+            xmin = 3.229
+            xmax = 3.779
+            text = ""
+        intervals [4]:
+            xmin = 3.779
+            xmax = 7.739
+            text = "После обновления сервер отчётов падает с ошибкой пятьсот,"
+        intervals [5]:
+            xmin = 7.739
+            xmax = 8.044
+            text = ""
+        intervals [6]:
+            xmin = 8.044
+            xmax = 12.084
+            text = "в логе написано нулл пойнтер эксепшн в классе ордер контроллер."
+        intervals [7]:
+            xmin = 12.084
+            xmax = 12.597
+            text = ""
+        intervals [8]:
+            xmin = 12.597
+            xmax = 14.404
+            text = "Воспроизводится каждый раз."
+        intervals [9]:
+            xmin = 14.404
+            xmax = 15.39475
+            text = ""

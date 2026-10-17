@@ -1,0 +1,86 @@
+<View>
+  <Header value="$file"/>
+  <Image name="image" value="$image" zoom="true" zoomControl="true"/>
+  <Header value="Уровень 1 — изображение" size="5"/>
+  <Choices name="category" toName="image" choice="single" showInline="true" required="true">
+    <Choice value="crash" hint="Падения и необработанные исключения"/>
+    <Choice value="ui_layout" hint="Вёрстка и отображение интерфейса"/>
+    <Choice value="authentication" hint="Аутентификация и авторизация"/>
+    <Choice value="payment" hint="Ошибки оплаты и биллинга"/>
+    <Choice value="database" hint="Ошибки базы данных и транзакций"/>
+    <Choice value="network" hint="Сеть и соединения"/>
+    <Choice value="performance" hint="Производительность и зависания"/>
+    <Choice value="memory" hint="Утечки памяти и OutOfMemory"/>
+    <Choice value="localization" hint="Локализация и кодировки"/>
+    <Choice value="security" hint="Уязвимости и TLS/сертификаты"/>
+    <Choice value="other" hint="не подходит ни под одну категорию"/>
+  </Choices>
+  <Choices name="component" toName="image" choice="single" showInline="true" required="true">
+    <Choice value="Backend" hint="серверная логика, сервисы, воркеры, API"/>
+    <Choice value="Frontend" hint="клиентский интерфейс: веб, десктоп, мобильный"/>
+    <Choice value="Auth-service" hint="вход, токены, роли, права доступа"/>
+    <Choice value="Billing" hint="платежи, счета, подписки, платёжные данные"/>
+    <Choice value="Database" hint="хранение данных, SQL, драйверы БД, миграции, транзакции"/>
+  </Choices>
+  <Choices name="screen_type" toName="image" choice="single" showInline="true" required="true">
+    <Choice value="error_page" hint="страница ошибки приложения (500, 403 и т.п.)"/>
+    <Choice value="browser_error" hint="служебная страница браузера (ERR_*, предупреждение о сертификате)"/>
+    <Choice value="console" hint="терминал с выводом программы, трейсбек"/>
+    <Choice value="api_response" hint="сырой ответ API (JSON) в браузере"/>
+    <Choice value="ui_screen" hint="обычный экран приложения с дефектом"/>
+  </Choices>
+  <Header value="Уровень 2 — области" size="5"/>
+  <RectangleLabels name="region" toName="image">
+    <Label value="ERROR_TEXT" background="#e6194b" hint="сообщение об ошибке на экране"/>
+    <Label value="STACK_TRACE" background="#3cb44b" hint="блок трассировки стека или вывода программы"/>
+    <Label value="STATUS_INDICATOR" background="#4363d8" hint="код или статус: HTTP 500, индикатор загрузки, счётчик"/>
+    <Label value="DEFECT_AREA" background="#f58231" hint="место визуального или логического дефекта"/>
+    <Label value="UI_ELEMENT" background="#911eb4" hint="элемент интерфейса, связанный с дефектом"/>
+    <Label value="PII" background="#46a0b0" hint="персональные данные на экране — замазываются при публикации"/>
+  </RectangleLabels>
+  <View visibleWhen="region-selected" whenTagName="region">
+    <Header value="Уровень 3 — текст в области (дословно)" size="6"/>
+    <TextArea name="ocr_text" toName="image" perRegion="true" editable="true" maxSubmissions="1" rows="3"/>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="DEFECT_AREA">
+    <Header value="DEFECT_AREA: defect_type" size="6"/>
+  <Choices name="defect_type" toName="image" choice="single" showInline="true" perRegion="true">
+    <Choice value="overflow" hint="overflow"/>
+    <Choice value="overlap" hint="overlap"/>
+    <Choice value="wrong_layer" hint="wrong_layer"/>
+    <Choice value="mojibake" hint="mojibake"/>
+    <Choice value="untranslated" hint="untranslated"/>
+    <Choice value="wrong_format" hint="wrong_format"/>
+    <Choice value="wrong_value" hint="wrong_value"/>
+    <Choice value="duplicate" hint="duplicate"/>
+    <Choice value="endless_loading" hint="endless_loading"/>
+    <Choice value="other" hint="other"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="UI_ELEMENT">
+    <Header value="UI_ELEMENT: ui_kind" size="6"/>
+  <Choices name="ui_kind" toName="image" choice="single" showInline="true" perRegion="true">
+    <Choice value="button" hint="button"/>
+    <Choice value="field" hint="field"/>
+    <Choice value="dialog" hint="dialog"/>
+    <Choice value="menu" hint="menu"/>
+    <Choice value="page" hint="page"/>
+    <Choice value="link" hint="link"/>
+    <Choice value="list" hint="list"/>
+    <Choice value="other" hint="other"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="PII">
+    <Header value="PII: pii_kind" size="6"/>
+  <Choices name="pii_kind" toName="image" choice="single" showInline="true" perRegion="true">
+    <Choice value="person_name" hint="person_name"/>
+    <Choice value="email" hint="email"/>
+    <Choice value="ip" hint="ip"/>
+    <Choice value="host" hint="host"/>
+    <Choice value="username" hint="username"/>
+    <Choice value="card" hint="card"/>
+    <Choice value="token" hint="token"/>
+    <Choice value="phone" hint="phone"/>
+  </Choices>
+  </View>
+</View>

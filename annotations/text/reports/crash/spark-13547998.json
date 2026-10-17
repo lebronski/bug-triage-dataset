@@ -1,0 +1,154 @@
+{
+  "report_id": "spark-13547998",
+  "source_file": "data/text/bug_reports/crash/spark-13547998.json",
+  "schema_version": "1.0",
+  "meta": {
+    "annotator": "lebowskiybig",
+    "created": "2026-10-17",
+    "status": "gold",
+    "method": "ручная разметка эталона",
+    "notes": "Компонент изменён с Backend (подсказка по категории) на Database: сбой в JDBC-источнике при чтении NULL из столбца ROWID Oracle. Разметка Jira-вики ({{ }}) не входит в границы сущностей."
+  },
+  "text_length": 704,
+  "prelabels": {
+    "category": "crash",
+    "component_hint": "Backend",
+    "severity_prelabel": "Major"
+  },
+  "labels": {
+    "ticket_type": "bug",
+    "category": "crash",
+    "component": "Database",
+    "severity": "Major",
+    "confidence": "high"
+  },
+  "sections": [
+    {
+      "label": "TITLE",
+      "start": 0,
+      "end": 79
+    },
+    {
+      "label": "DESCRIPTION",
+      "start": 81,
+      "end": 179
+    },
+    {
+      "label": "STACK_TRACE",
+      "start": 181,
+      "end": 704
+    }
+  ],
+  "items": [
+    {
+      "label": "FRAME",
+      "start": 242,
+      "end": 347
+    },
+    {
+      "label": "FRAME",
+      "start": 362,
+      "end": 475
+    },
+    {
+      "label": "FRAME",
+      "start": 491,
+      "end": 588
+    },
+    {
+      "label": "FRAME",
+      "start": 603,
+      "end": 700
+    }
+  ],
+  "entities": [
+    {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 20,
+      "text": "NullPointerException",
+      "attributes": {
+        "normalized": "NullPointerException"
+      }
+    },
+    {
+      "id": "e2",
+      "label": "ENV",
+      "start": 108,
+      "end": 114,
+      "text": "Oracle",
+      "attributes": {
+        "kind": "database",
+        "normalized": "Oracle Database",
+        "affected": "yes"
+      }
+    },
+    {
+      "id": "e3",
+      "label": "EXCEPTION",
+      "start": 197,
+      "end": 227,
+      "text": "java.lang.NullPointerException",
+      "attributes": {
+        "normalized": "NullPointerException"
+      }
+    },
+    {
+      "id": "e4",
+      "label": "CODE_LOCATION",
+      "start": 245,
+      "end": 347,
+      "text": "org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$makeGetter$12(JdbcUtils.scala:452)",
+      "attributes": {
+        "kind": "frame",
+        "normalized": "JdbcUtils.scala:452"
+      }
+    },
+    {
+      "id": "e5",
+      "label": "CODE_LOCATION",
+      "start": 365,
+      "end": 475,
+      "text": "org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$.$anonfun$makeGetter$12$adapted(JdbcUtils.scala:451)",
+      "attributes": {
+        "kind": "frame",
+        "normalized": "JdbcUtils.scala:451"
+      }
+    },
+    {
+      "id": "e6",
+      "label": "CODE_LOCATION",
+      "start": 494,
+      "end": 588,
+      "text": "org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anon$1.getNext(JdbcUtils.scala:361)",
+      "attributes": {
+        "kind": "frame",
+        "normalized": "JdbcUtils.scala:361"
+      }
+    },
+    {
+      "id": "e7",
+      "label": "CODE_LOCATION",
+      "start": 606,
+      "end": 700,
+      "text": "org.apache.spark.sql.execution.datasources.jdbc.JdbcUtils$$anon$1.getNext(JdbcUtils.scala:343)",
+      "attributes": {
+        "kind": "frame",
+        "normalized": "JdbcUtils.scala:343"
+      }
+    }
+  ],
+  "relations": [
+    {
+      "from": "e3",
+      "to": "e4",
+      "type": "THROWN_AT"
+    },
+    {
+      "from": "e3",
+      "to": "e2",
+      "type": "OBSERVED_IN"
+    }
+  ]
+}

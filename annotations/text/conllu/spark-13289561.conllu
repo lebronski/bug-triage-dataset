@@ -1,0 +1,156 @@
+# newdoc id = spark-13289561
+# labels = ticket_type=bug category=database component=Database severity=Major
+# sent_id = spark-13289561-1
+# section = TITLE
+# text = Unable to use vendor specific datatypes with JDBC (MSSQL)
+1	Unable	_	_	_	_	_	_	_	NER=O
+2	to	_	_	_	_	_	_	_	NER=O
+3	use	_	_	_	_	_	_	_	NER=O
+4	vendor	_	_	_	_	_	_	_	NER=O
+5	specific	_	_	_	_	_	_	_	NER=O
+6	datatypes	_	_	_	_	_	_	_	NER=O
+7	with	_	_	_	_	_	_	_	NER=O
+8	JDBC	_	_	_	_	_	_	_	NER=O
+9	(	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+10	MSSQL	_	_	_	_	_	_	_	NER=B-ENV|SpaceAfter=No
+11	)	_	_	_	_	_	_	_	NER=O
+
+# sent_id = spark-13289561-2
+# section = DESCRIPTION
+# text = I'm trying to create a table in MSSQL with a time(7) type.
+1	I	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	'	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	m	_	_	_	_	_	_	_	NER=O
+4	trying	_	_	_	_	_	_	_	NER=O
+5	to	_	_	_	_	_	_	_	NER=O
+6	create	_	_	_	_	_	_	_	NER=O
+7	a	_	_	_	_	_	_	_	NER=O
+8	table	_	_	_	_	_	_	_	NER=O
+9	in	_	_	_	_	_	_	_	NER=O
+10	MSSQL	_	_	_	_	_	_	_	NER=B-ENV
+11	with	_	_	_	_	_	_	_	NER=O
+12	a	_	_	_	_	_	_	_	NER=O
+13	time	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+14	(	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+15	7	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+16	)	_	_	_	_	_	_	_	NER=O
+17	type	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+18	.	_	_	_	_	_	_	_	NER=O
+
+# sent_id = spark-13289561-3
+# section = DESCRIPTION
+# text = For this I'm using the createTableColumnTypes option like "CallStartTime time(7)", with driver "{color:#212121}com.microsoft.sqlserver.jdbc.SQLServerDriver"{color}
+1	For	_	_	_	_	_	_	_	NER=O
+2	this	_	_	_	_	_	_	_	NER=O
+3	I	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	'	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	m	_	_	_	_	_	_	_	NER=O
+6	using	_	_	_	_	_	_	_	NER=O
+7	the	_	_	_	_	_	_	_	NER=O
+8	createTableColumnTypes	_	_	_	_	_	_	_	NER=B-CODE_LOCATION
+9	option	_	_	_	_	_	_	_	NER=O
+10	like	_	_	_	_	_	_	_	NER=O
+11	"	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+12	CallStartTime	_	_	_	_	_	_	_	NER=O
+13	time	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+14	(	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+15	7	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+16	)	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+17	"	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+18	,	_	_	_	_	_	_	_	NER=O
+19	with	_	_	_	_	_	_	_	NER=O
+20	driver	_	_	_	_	_	_	_	NER=O
+21	"	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+22	{	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+23	color	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+24	:	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+25	#	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+26	212121	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+27	}	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+28	com	_	_	_	_	_	_	_	NER=B-CODE_LOCATION|SpaceAfter=No
+29	.	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+30	microsoft	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+31	.	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+32	sqlserver	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+33	.	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+34	jdbc	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+35	.	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+36	SQLServerDriver	_	_	_	_	_	_	_	NER=I-CODE_LOCATION|SpaceAfter=No
+37	"	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+38	{	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+39	color	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+40	}	_	_	_	_	_	_	_	NER=O
+
+# sent_id = spark-13289561-4
+# section = ACTUAL
+# text = I'm getting an error:  {color:#212121}org.apache.spark.sql.catalyst.parser.ParseException: DataType time(7) is not supported.(line 1, pos 43){color}
+1	I	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	'	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	m	_	_	_	_	_	_	_	NER=O
+4	getting	_	_	_	_	_	_	_	NER=O
+5	an	_	_	_	_	_	_	_	NER=O
+6	error	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+7	:	_	_	_	_	_	_	_	NER=O
+8	{	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+9	color	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+10	:	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+11	#	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+12	212121	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+13	}	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+14	org	_	_	_	_	_	_	_	NER=B-EXCEPTION|SpaceAfter=No
+15	.	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+16	apache	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+17	.	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+18	spark	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+19	.	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+20	sql	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+21	.	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+22	catalyst	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+23	.	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+24	parser	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+25	.	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+26	ParseException	_	_	_	_	_	_	_	NER=I-EXCEPTION|SpaceAfter=No
+27	:	_	_	_	_	_	_	_	NER=O
+28	DataType	_	_	_	_	_	_	_	NER=B-ERROR_MESSAGE
+29	time	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+30	(	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+31	7	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+32	)	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE
+33	is	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE
+34	not	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE
+35	supported	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+36	.	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+37	(	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+38	line	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE
+39	1	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+40	,	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE
+41	pos	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE
+42	43	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+43	)	_	_	_	_	_	_	_	NER=I-ERROR_MESSAGE|SpaceAfter=No
+44	{	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+45	color	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+46	}	_	_	_	_	_	_	_	NER=O
+
+# sent_id = spark-13289561-5
+# section = NOTES
+# text = {color:#212121}What is then the point of using this option?{color}
+1	{	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+2	color	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+3	:	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+4	#	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+5	212121	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+6	}	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+7	What	_	_	_	_	_	_	_	NER=O
+8	is	_	_	_	_	_	_	_	NER=O
+9	then	_	_	_	_	_	_	_	NER=O
+10	the	_	_	_	_	_	_	_	NER=O
+11	point	_	_	_	_	_	_	_	NER=O
+12	of	_	_	_	_	_	_	_	NER=O
+13	using	_	_	_	_	_	_	_	NER=O
+14	this	_	_	_	_	_	_	_	NER=O
+15	option	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+16	?	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+17	{	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+18	color	_	_	_	_	_	_	_	NER=O|SpaceAfter=No
+19	}	_	_	_	_	_	_	_	NER=O
+

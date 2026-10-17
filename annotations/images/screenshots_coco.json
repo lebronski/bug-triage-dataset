@@ -1,0 +1,313 @@
+{
+  "info": {
+    "description": "Bug Triage Dataset — эталонная разметка скриншотов (аннотационная схема v1.0)",
+    "version": "1.0",
+    "year": 2026,
+    "contributor": "lebowskiybig",
+    "date_created": "2026-10-17"
+  },
+  "licenses": [
+    {
+      "id": 1,
+      "name": "CC BY 4.0",
+      "url": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "file_name": "database/database_01_sqlite_database_locked.png",
+      "width": 1280,
+      "height": 800,
+      "license": 1,
+      "attributes": {
+        "category": "database",
+        "component": "Database",
+        "screen_type": "error_page",
+        "annotator": "lebowskiybig",
+        "created": "2026-10-17",
+        "status": "gold"
+      }
+    },
+    {
+      "id": 2,
+      "file_name": "payment/payment_03_double_charge.png",
+      "width": 1280,
+      "height": 800,
+      "license": 1,
+      "attributes": {
+        "category": "payment",
+        "component": "Billing",
+        "screen_type": "ui_screen",
+        "annotator": "lebowskiybig",
+        "created": "2026-10-17",
+        "status": "gold"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "ERROR_TEXT",
+      "supercategory": "screen_region"
+    },
+    {
+      "id": 2,
+      "name": "STACK_TRACE",
+      "supercategory": "screen_region"
+    },
+    {
+      "id": 3,
+      "name": "STATUS_INDICATOR",
+      "supercategory": "screen_region"
+    },
+    {
+      "id": 4,
+      "name": "DEFECT_AREA",
+      "supercategory": "screen_region"
+    },
+    {
+      "id": 5,
+      "name": "UI_ELEMENT",
+      "supercategory": "screen_region"
+    },
+    {
+      "id": 6,
+      "name": "PII",
+      "supercategory": "screen_region"
+    }
+  ],
+  "annotations": [
+    {
+      "id": 1,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        24,
+        16,
+        474,
+        34
+      ],
+      "area": 16116,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "OperationalError at /orders/42/pay",
+        "entities": [
+          {
+            "id": "e1",
+            "label": "EXCEPTION",
+            "start": 0,
+            "end": 16,
+            "text": "OperationalError",
+            "attributes": {
+              "normalized": "OperationalError"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "image_id": 1,
+      "category_id": 3,
+      "bbox": [
+        342,
+        50,
+        218,
+        20
+      ],
+      "area": 4360,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "Status: 500 Internal Server Error",
+        "entities": [
+          {
+            "id": "e1",
+            "label": "ERROR_CODE",
+            "start": 8,
+            "end": 11,
+            "text": "500",
+            "attributes": {
+              "kind": "http_status",
+              "normalized": "500"
+            }
+          },
+          {
+            "id": "e2",
+            "label": "ERROR_MESSAGE",
+            "start": 12,
+            "end": 33,
+            "text": "Internal Server Error",
+            "attributes": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        574,
+        50,
+        404,
+        20
+      ],
+      "area": 8080,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "Exception: sqlite3.OperationalError: database is locked",
+        "entities": [
+          {
+            "id": "e1",
+            "label": "EXCEPTION",
+            "start": 11,
+            "end": 35,
+            "text": "sqlite3.OperationalError",
+            "attributes": {
+              "normalized": "OperationalError"
+            }
+          },
+          {
+            "id": "e2",
+            "label": "ERROR_MESSAGE",
+            "start": 37,
+            "end": 55,
+            "text": "database is locked",
+            "attributes": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": 4,
+      "image_id": 1,
+      "category_id": 2,
+      "bbox": [
+        26,
+        106,
+        1228,
+        188
+      ],
+      "area": 230864,
+      "iscrowd": 0,
+      "attributes": {}
+    },
+    {
+      "id": 5,
+      "image_id": 1,
+      "category_id": 1,
+      "bbox": [
+        42,
+        258,
+        352,
+        22
+      ],
+      "area": 7744,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "sqlite3.OperationalError: database is locked",
+        "entities": [
+          {
+            "id": "e1",
+            "label": "EXCEPTION",
+            "start": 0,
+            "end": 24,
+            "text": "sqlite3.OperationalError",
+            "attributes": {
+              "normalized": "OperationalError"
+            }
+          },
+          {
+            "id": "e2",
+            "label": "ERROR_MESSAGE",
+            "start": 26,
+            "end": 44,
+            "text": "database is locked",
+            "attributes": {}
+          }
+        ]
+      }
+    },
+    {
+      "id": 6,
+      "image_id": 2,
+      "category_id": 5,
+      "bbox": [
+        194,
+        183,
+        107,
+        39
+      ],
+      "area": 4173,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "Оплатить",
+        "kind": "button"
+      }
+    },
+    {
+      "id": 7,
+      "image_id": 2,
+      "category_id": 1,
+      "bbox": [
+        194,
+        234,
+        572,
+        42
+      ],
+      "area": 24024,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "Подписка продлена, но с карты списано 2 раза",
+        "entities": [
+          {
+            "id": "e1",
+            "label": "METRIC",
+            "start": 38,
+            "end": 44,
+            "text": "2 раза",
+            "attributes": {
+              "kind": "count",
+              "normalized": "2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": 8,
+      "image_id": 2,
+      "category_id": 6,
+      "bbox": [
+        394,
+        298,
+        106,
+        22
+      ],
+      "area": 2332,
+      "iscrowd": 0,
+      "attributes": {
+        "ocr_text": "•••• 4242",
+        "kind": "card"
+      }
+    },
+    {
+      "id": 9,
+      "image_id": 2,
+      "category_id": 4,
+      "bbox": [
+        194,
+        332,
+        572,
+        102
+      ],
+      "area": 58344,
+      "iscrowd": 0,
+      "attributes": {
+        "defect_type": "duplicate",
+        "ocr_text": "ch_0001 1 299,00 ₽ 14:04:42.218\nch_0002 1 299,00 ₽ 14:04:42.219"
+      }
+    }
+  ]
+}
