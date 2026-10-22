@@ -1,0 +1,51 @@
+<annotation>
+  <folder>security</folder>
+  <filename>security_01_cert_self_signed.png</filename>
+  <path>data/images/screenshots/security/security_01_cert_self_signed.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>security</category>
+    <component>Billing</component>
+    <screen_type>browser_error</screen_type>
+    <severity>Critical</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>341</xmin><ymin>229</ymin><xmax>678</xmax><ymax>252</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Your connection is not private</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>340</xmin><ymin>275</ymin><xmax>894</xmax><ymax>315</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Attackers might be trying to steal your information from 127.0.0.1 (for example, passwords, messages, or credit cards). Learn more about this warning</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>341</xmin><ymin>337</ymin><xmax>556</xmax><ymax>347</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>NET::ERR_CERT_AUTHORITY_INVALID</ocr_text>
+      <kind>net_error</kind>
+    </attributes>
+  </object>
+</annotation>

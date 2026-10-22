@@ -1,11 +1,12 @@
 {
   "schema_name": "bug-triage-annotation-schema",
-  "version": "1.1",
-  "updated": "2026-10-17",
+  "version": "1.2",
+  "updated": "2026-10-22",
   "description": "Аннотационная схема набора Bug Triage Dataset: единые метки для текста (баг-репорты и логи), изображений (скриншоты) и аудио (голосовые обращения). Человекочитаемое описание — docs/annotation_schema.md.",
   "changelog": {
     "1.0": "ЛР2: исходная схема (классы обращения, разделы, 8 типов сущностей, 3 типа связей, логи, изображения, аудио)",
-    "1.1": "ЛР3 (разметка текстовых данных): шаг 4 — новые сущности PRODUCT, TECHNOLOGY, SYMPTOM, FEATURE, ISSUE_REF, атрибут kb_uri (ссылка DBpedia), CODE_LOCATION.kind=config; шаг 6 (по результатам анализа разметки) — LOCALE, SYMPTOM.polarity, ENV.source, связи SYMPTOM_OF, CAUSED_BY, VERSION_OF, OBSERVED_IN расширена, вложенные сущности внутри ERROR_MESSAGE, лингвистические уровни text_markup (абзац, предложение, токен, часть речи, лемма)"
+    "1.1": "ЛР3 (разметка текстовых данных): шаг 4 — новые сущности PRODUCT, TECHNOLOGY, SYMPTOM, FEATURE, ISSUE_REF, атрибут kb_uri (ссылка DBpedia), CODE_LOCATION.kind=config; шаг 6 (по результатам анализа разметки) — LOCALE, SYMPTOM.polarity, ENV.source, связи SYMPTOM_OF, CAUSED_BY, VERSION_OF, OBSERVED_IN расширена, вложенные сущности внутри ERROR_MESSAGE, лингвистические уровни text_markup (абзац, предложение, токен, часть речи, лемма)",
+    "1.2": "ЛР5 (разметка изображений): признаки уровня изображения severity, is_defect, device, theme; область CHART (chart_kind, trend); STATUS_INDICATOR.kind; DEFECT_AREA.defect_type += injected_content, data_exposure, threshold_exceeded; атрибут DEFECT_AREA.expected_text; PII.kind += address, organization; связи между областями изображения AFFECTS, EXPLAINS, CAUSED_BY; правила ocr_text (переносы строк, обрезанный текст, mojibake)"
   },
   "text_construction": "Размечаемый текст баг-репорта = summary + \"\\n\\n\" + description. Смещения — индексы символов Unicode (как str в Python), начало включительно, конец исключительно.",
 
@@ -202,7 +203,8 @@
     "PII": {
       "description": "персональные и чувствительные данные — подлежат маскированию перед публикацией",
       "attributes": {
-        "kind": {"type": "enum", "required": true, "values": ["person_name", "email", "ip", "host", "username", "card", "token", "phone"]}
+        "kind": {"type": "enum", "required": true, "values": ["person_name", "email", "ip", "host", "username", "card", "token", "phone", "address", "organization"],
+                 "since": {"address": "1.2", "organization": "1.2"}}
       }
     }
   },
@@ -265,7 +267,7 @@
   "image_labels": {
     "image": {
       "category": "см. document_labels.category",
-      "component": "см. document_labels.component",
+      "component": "см. document_labels.component (по месту дефекта, а не по категории)",
       "screen_type": {
         "values": {
           "error_page": "страница ошибки приложения (500, 403 и т.п.)",
@@ -274,20 +276,44 @@
           "api_response": "сырой ответ API (JSON) в браузере",
           "ui_screen": "обычный экран приложения с дефектом"
         }
-      }
+      },
+      "is_defect": {"since": "1.2", "values": {"yes": "на экране дефект", "no": "ожидаемое поведение системы: ошибка показана правильно (неверный пароль, отказ банка) — отрицательный пример"}},
+      "severity": {"since": "1.2", "values": "см. document_labels.severity", "required": "если is_defect = yes, иначе null"},
+      "device": {"since": "1.2", "values": {"desktop": "настольный браузер или терминал", "mobile": "мобильная ширина вьюпорта"}},
+      "theme": {"since": "1.2", "values": {"light": "светлый фон", "dark": "тёмный фон (терминал)"}}
     },
     "region_labels": {
       "ERROR_TEXT": {"description": "сообщение об ошибке на экране", "ocr_text": "required"},
       "STACK_TRACE": {"description": "блок трассировки стека или вывода программы", "ocr_text": "optional"},
-      "STATUS_INDICATOR": {"description": "код или статус: HTTP 500, индикатор загрузки, счётчик", "ocr_text": "required"},
+      "STATUS_INDICATOR": {"description": "код или статус: HTTP 500, индикатор загрузки, счётчик", "ocr_text": "required",
+                           "attributes": {"kind": ["http_status", "net_error", "exit_code", "loading", "counter", "timer"]},
+                           "since": {"kind": "1.2"}},
       "DEFECT_AREA": {"description": "место визуального или логического дефекта", "ocr_text": "optional",
-                      "attributes": {"defect_type": ["overflow", "overlap", "wrong_layer", "mojibake", "untranslated", "wrong_format", "wrong_value", "duplicate", "endless_loading", "other"]}},
+                      "attributes": {"defect_type": ["overflow", "overlap", "wrong_layer", "mojibake", "untranslated", "wrong_format", "wrong_value", "duplicate", "endless_loading", "injected_content", "data_exposure", "threshold_exceeded", "other"],
+                                     "expected_text": "необязательно: что должно быть на месте дефекта (исходный текст, перевод, верный формат или значение)"},
+                      "since": {"injected_content": "1.2", "data_exposure": "1.2", "threshold_exceeded": "1.2", "expected_text": "1.2"},
+                      "defect_type_hints": {"overflow": "текст или элемент не помещается в контейнер или экран, обрезан", "overlap": "один элемент перекрывает другой", "wrong_layer": "элемент не на своём слое (z-index) и недоступен", "mojibake": "неверная кодировка текста", "untranslated": "ключ локализации или текст на другом языке", "wrong_format": "неверный формат даты, числа, валюты", "wrong_value": "неверное значение (сумма, NaN)", "duplicate": "повтор операции или записи", "endless_loading": "бесконечная загрузка", "injected_content": "внедрённое содержимое (XSS)", "data_exposure": "показаны чужие или закрытые данные (IDOR)", "threshold_exceeded": "метрика превышает допустимое значение (SLA, лимит)"}},
       "UI_ELEMENT": {"description": "элемент интерфейса, связанный с дефектом", "ocr_text": "optional",
                      "attributes": {"kind": "см. entity_labels.UI_ELEMENT.kind"}},
       "PII": {"description": "персональные данные на экране — замазываются при публикации", "ocr_text": "optional",
-              "attributes": {"kind": "см. entity_labels.PII.kind"}}
+              "attributes": {"kind": "см. entity_labels.PII.kind"}},
+      "CHART": {"since": "1.2", "description": "график или диаграмма метрики (память, время ответа)", "ocr_text": "optional",
+                "attributes": {"chart_kind": ["line", "bar"], "trend": ["growth", "decline", "stable", "spike"]}}
     },
-    "region_entities": "сущности уровня 3 размечаются внутри ocr_text области теми же метками entity_labels"
+    "region_entities": "сущности уровня 3 размечаются внутри ocr_text области теми же метками entity_labels",
+    "relations": {
+      "since": "1.2",
+      "AFFECTS": {"from": ["DEFECT_AREA"], "to": ["UI_ELEMENT"], "description": "дефект затрагивает элемент интерфейса"},
+      "EXPLAINS": {"from": ["ERROR_TEXT", "STATUS_INDICATOR"], "to": ["ERROR_TEXT", "STATUS_INDICATOR", "DEFECT_AREA", "UI_ELEMENT", "CHART"], "description": "текст или статус объясняет другую область"},
+      "CAUSED_BY": {"from": ["DEFECT_AREA"], "to": ["UI_ELEMENT", "DEFECT_AREA"], "description": "дефект вызван действием с элементом или другим дефектом"}
+    },
+    "ocr_rules": {
+      "since": "1.2",
+      "rules": ["текст дословно, как на экране, включая регистр, пунктуацию и искажения (mojibake, ключи локализации)",
+                "перенос строки внутри абзаца заменяется пробелом; явные строки (строки таблицы, <br>, строки терминала) разделяются \\n",
+                "обрезанный текст записывается так, как виден; полный текст — в expected_text",
+                "у PII в ocr_text только значение (без ключа JSON и кавычек)"]
+    }
   },
 
   "audio_labels": {
@@ -344,6 +370,7 @@
     "cohen_kappa": {"category": 0.8, "component": 0.75, "severity": 0.6, "ticket_type": 0.8},
     "span_f1_exact": 0.8,
     "bbox_iou_match": 0.7,
+    "bbox_match_rule": "с версии 1.2: рамки совпадают, если IoU ≥ bbox_iou_match ИЛИ все стороны отличаются не более чем на limits.bbox_tolerance_px (для строк текста высотой 10–20 px IoU падает ниже 0,7 уже при отступе 3–4 px)",
     "bbox_f1": 0.85,
     "audio_segment_boundary_agreement": 0.9,
     "transcript_wer_max": 0.1

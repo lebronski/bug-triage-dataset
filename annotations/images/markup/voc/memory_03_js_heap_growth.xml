@@ -1,0 +1,41 @@
+<annotation>
+  <folder>memory</folder>
+  <filename>memory_03_js_heap_growth.png</filename>
+  <path>data/images/screenshots/memory/memory_03_js_heap_growth.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>memory</category>
+    <component>Frontend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Major</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>CHART</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>146</ymin><xmax>1094</xmax><ymax>446</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <chart_kind>line</chart_kind>
+      <trend>growth</trend>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>195</xmin><ymin>468</ymin><xmax>704</xmax><ymax>485</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Обновлений ленты: 31, used JS heap: 41.9 МБ (было 2.5 МБ)</ocr_text>
+      <kind>counter</kind>
+    </attributes>
+  </object>
+</annotation>

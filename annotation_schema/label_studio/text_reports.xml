@@ -207,6 +207,8 @@
     <Choice value="card" hint="card"/>
     <Choice value="token" hint="token"/>
     <Choice value="phone" hint="phone"/>
+    <Choice value="address" hint="address"/>
+    <Choice value="organization" hint="organization"/>
   </Choices>
   </View>
   <View visibleWhen="region-selected" whenTagName="entity">

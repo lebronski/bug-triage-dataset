@@ -1,0 +1,65 @@
+<annotation>
+  <folder>payment</folder>
+  <filename>payment_03_double_charge.png</filename>
+  <path>data/images/screenshots/payment/payment_03_double_charge.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>payment</category>
+    <component>Billing</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Blocker</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>UI_ELEMENT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>183</ymin><xmax>301</xmax><ymax>222</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Оплатить</ocr_text>
+      <kind>button</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>234</ymin><xmax>766</xmax><ymax>276</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Подписка продлена, но с карты списано 2 раза</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>397</xmin><ymin>301</ymin><xmax>496</xmax><ymax>315</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>•••• 4242</ocr_text>
+      <kind>card</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>364</ymin><xmax>766</xmax><ymax>434</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>ch_0001 1 299,00 ₽ 14:04:42.218
+ch_0002 1 299,00 ₽ 14:04:42.219</ocr_text>
+      <defect_type>duplicate</defect_type>
+    </attributes>
+  </object>
+</annotation>

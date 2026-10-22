@@ -1,0 +1,51 @@
+<annotation>
+  <folder>network</folder>
+  <filename>network_02_connection_refused.png</filename>
+  <path>data/images/screenshots/network/network_02_connection_refused.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>network</category>
+    <component>Backend</component>
+    <screen_type>browser_error</screen_type>
+    <severity>Critical</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>341</xmin><ymin>235</ymin><xmax>634</xmax><ymax>255</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>This site can’t be reached</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>340</xmin><ymin>282</ymin><xmax>543</xmax><ymax>295</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>127.0.0.1 refused to connect.</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>341</xmin><ymin>410</ymin><xmax>509</xmax><ymax>420</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>ERR_CONNECTION_REFUSED</ocr_text>
+      <kind>net_error</kind>
+    </attributes>
+  </object>
+</annotation>

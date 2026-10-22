@@ -1,0 +1,3370 @@
+{
+ "authentication/authentication_01_login_401.png": {
+  "labels": {
+   "category": "authentication",
+   "component": "Auth-service",
+   "screen_type": "ui_screen",
+   "severity": null,
+   "is_defect": "no",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     454,
+     158,
+     372,
+     90
+    ],
+    "attributes": {},
+    "ocr_text": "401 Unauthorized. Неверный логин или пароль. Осталось попыток: 2. После 3 неудачных попыток учётная запись будет заблокирована на 15 минут.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 0,
+      "end": 3,
+      "text": "401",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "401"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 4,
+      "end": 16,
+      "text": "Unauthorized",
+      "attributes": {}
+     },
+     {
+      "id": "e3",
+      "label": "ERROR_MESSAGE",
+      "start": 18,
+      "end": 43,
+      "text": "Неверный логин или пароль",
+      "attributes": {}
+     },
+     {
+      "id": "e4",
+      "label": "METRIC",
+      "start": 63,
+      "end": 64,
+      "text": "2",
+      "attributes": {
+       "kind": "count",
+       "normalized": "2"
+      }
+     },
+     {
+      "id": "e5",
+      "label": "METRIC",
+      "start": 130,
+      "end": 138,
+      "text": "15 минут",
+      "attributes": {
+       "kind": "time",
+       "normalized": "15 min"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     469,
+     173,
+     145,
+     12
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "401 Unauthorized.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 0,
+      "end": 3,
+      "text": "401",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "401"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 4,
+      "end": 16,
+      "text": "Unauthorized",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     454,
+     279,
+     372,
+     39
+    ],
+    "attributes": {
+     "kind": "field"
+    },
+    "ocr_text": "ivan.petrov"
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     466,
+     293,
+     72,
+     14
+    ],
+    "attributes": {
+     "kind": "username"
+    },
+    "ocr_text": "ivan.petrov"
+   },
+   {
+    "id": "r5",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     454,
+     349,
+     372,
+     39
+    ],
+    "attributes": {
+     "kind": "field"
+    },
+    "ocr_text": ""
+   },
+   {
+    "id": "r6",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     454,
+     407,
+     82,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Войти"
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r3",
+    "EXPLAINS"
+   ],
+   [
+    "r1",
+    "r5",
+    "EXPLAINS"
+   ]
+  ],
+  "note": "Ожидаемое поведение системы: введён неверный пароль. Пример экрана, который не является дефектом.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "authentication/authentication_02_api_token_expired.png": {
+  "labels": {
+   "category": "authentication",
+   "component": "Auth-service",
+   "screen_type": "api_response",
+   "severity": null,
+   "is_defect": "no",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     18,
+     50,
+     191,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "\"error\": \"invalid_token\",",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 10,
+      "end": 23,
+      "text": "invalid_token",
+      "attributes": {
+       "kind": "app_code",
+       "normalized": "invalid_token"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     18,
+     65,
+     558,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "\"error_description\": \"The access token expired at 2026-10-17T09:12:44Z\",",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_MESSAGE",
+      "start": 22,
+      "end": 70,
+      "text": "The access token expired at 2026-10-17T09:12:44Z",
+      "attributes": {}
+     }
+    ]
+   }
+  ],
+  "relations": [],
+  "note": "Ответ API корректен (токен истёк) — дефект возможен только в клиенте, который не обновил токен.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "authentication/authentication_03_forbidden_403.png": {
+  "labels": {
+   "category": "authentication",
+   "component": "Auth-service",
+   "screen_type": "error_page",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     195,
+     107,
+     193,
+     20
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "403 Forbidden",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 0,
+      "end": 3,
+      "text": "403",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "403"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 4,
+      "end": 13,
+      "text": "Forbidden",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     146,
+     892,
+     58
+    ],
+    "attributes": {},
+    "ocr_text": "У пользователя ivan.petrov (роль project_admin) нет права users:read. Роль была назначена 5 минут назад, но токен доступа ещё содержит старый набор прав (scope: tasks:read tasks:write).",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 90,
+      "end": 97,
+      "text": "5 минут",
+      "attributes": {
+       "kind": "time",
+       "normalized": "5 min"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "PII",
+    "bbox": [
+     329,
+     161,
+     90,
+     14
+    ],
+    "attributes": {
+     "kind": "username"
+    },
+    "ocr_text": "ivan.petrov"
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "crash/crash_01_python_typeerror.png": {
+  "labels": {
+   "category": "crash",
+   "component": "Backend",
+   "screen_type": "console",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "dark"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STACK_TRACE",
+    "bbox": [
+     18,
+     92,
+     606,
+     156
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     18,
+     234,
+     412,
+     14
+    ],
+    "attributes": {},
+    "ocr_text": "TypeError: 'NoneType' object is not subscriptable",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 9,
+      "text": "TypeError",
+      "attributes": {
+       "normalized": "TypeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 11,
+      "end": 49,
+      "text": "'NoneType' object is not subscriptable",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     21,
+     254,
+     104,
+     13
+    ],
+    "attributes": {
+     "kind": "exit_code"
+    },
+    "ocr_text": "[exit code 1]",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 11,
+      "end": 12,
+      "text": "1",
+      "attributes": {
+       "kind": "exit_code",
+       "normalized": "1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     81,
+     10,
+     127,
+     13
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     19,
+     51,
+     143,
+     15
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r6",
+    "label": "PII",
+    "bbox": [
+     19,
+     274,
+     142,
+     14
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1100,
+   640
+  ]
+ },
+ "crash/crash_02_node_typeerror.png": {
+  "labels": {
+   "category": "crash",
+   "component": "Backend",
+   "screen_type": "console",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "dark"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STACK_TRACE",
+    "bbox": [
+     18,
+     92,
+     748,
+     278
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     18,
+     173,
+     528,
+     14
+    ],
+    "attributes": {},
+    "ocr_text": "TypeError: Cannot read properties of undefined (reading 'name')",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 9,
+      "text": "TypeError",
+      "attributes": {
+       "normalized": "TypeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 11,
+      "end": 63,
+      "text": "Cannot read properties of undefined (reading 'name')",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     21,
+     416,
+     104,
+     13
+    ],
+    "attributes": {
+     "kind": "exit_code"
+    },
+    "ocr_text": "[exit code 1]",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 11,
+      "end": 12,
+      "text": "1",
+      "attributes": {
+       "kind": "exit_code",
+       "normalized": "1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     81,
+     10,
+     127,
+     13
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     19,
+     51,
+     143,
+     15
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r6",
+    "label": "PII",
+    "bbox": [
+     19,
+     437,
+     142,
+     14
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1100,
+   640
+  ]
+ },
+ "crash/crash_03_http500_debug.png": {
+  "labels": {
+   "category": "crash",
+   "component": "Backend",
+   "screen_type": "error_page",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     26,
+     21,
+     407,
+     24
+    ],
+    "attributes": {},
+    "ocr_text": "AttributeError at /profile/1001",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 14,
+      "text": "AttributeError",
+      "attributes": {
+       "normalized": "AttributeError"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     361,
+     54,
+     211,
+     11
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "Status: 500 Internal Server Error",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 8,
+      "end": 11,
+      "text": "500",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "500"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 12,
+      "end": 33,
+      "text": "Internal Server Error",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     594,
+     54,
+     497,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "Exception: AttributeError: 'NoneType' object has no attribute 'profile'",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 11,
+      "end": 25,
+      "text": "AttributeError",
+      "attributes": {
+       "normalized": "AttributeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 27,
+      "end": 71,
+      "text": "'NoneType' object has no attribute 'profile'",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "STACK_TRACE",
+    "bbox": [
+     26,
+     106,
+     1228,
+     188
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r5",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     46,
+     263,
+     467,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "AttributeError: 'NoneType' object has no attribute 'profile'",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 14,
+      "text": "AttributeError",
+      "attributes": {
+       "normalized": "AttributeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 16,
+      "end": 60,
+      "text": "'NoneType' object has no attribute 'profile'",
+      "attributes": {}
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r2",
+    "r3",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "database/database_01_sqlite_database_locked.png": {
+  "labels": {
+   "category": "database",
+   "component": "Database",
+   "screen_type": "error_page",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     27,
+     21,
+     467,
+     25
+    ],
+    "attributes": {},
+    "ocr_text": "OperationalError at /orders/42/pay",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 16,
+      "text": "OperationalError",
+      "attributes": {
+       "normalized": "OperationalError"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     345,
+     54,
+     212,
+     11
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "Status: 500 Internal Server Error",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 8,
+      "end": 11,
+      "text": "500",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "500"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 12,
+      "end": 33,
+      "text": "Internal Server Error",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     578,
+     54,
+     396,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "Exception: sqlite3.OperationalError: database is locked",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 11,
+      "end": 35,
+      "text": "sqlite3.OperationalError",
+      "attributes": {
+       "normalized": "OperationalError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 37,
+      "end": 55,
+      "text": "database is locked",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "STACK_TRACE",
+    "bbox": [
+     26,
+     106,
+     1228,
+     188
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r5",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     47,
+     263,
+     342,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "sqlite3.OperationalError: database is locked",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 24,
+      "text": "sqlite3.OperationalError",
+      "attributes": {
+       "normalized": "OperationalError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 26,
+      "end": 44,
+      "text": "database is locked",
+      "attributes": {}
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r2",
+    "r3",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "database/database_02_unique_constraint.png": {
+  "labels": {
+   "category": "database",
+   "component": "Database",
+   "screen_type": "error_page",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     28,
+     21,
+     328,
+     25
+    ],
+    "attributes": {},
+    "ocr_text": "IntegrityError at /signup",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 14,
+      "text": "IntegrityError",
+      "attributes": {
+       "normalized": "IntegrityError"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     348,
+     54,
+     211,
+     11
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "Status: 500 Internal Server Error",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 8,
+      "end": 11,
+      "text": "500",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "500"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 12,
+      "end": 33,
+      "text": "Internal Server Error",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     581,
+     54,
+     513,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "Exception: sqlite3.IntegrityError: UNIQUE constraint failed: users.email",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 11,
+      "end": 33,
+      "text": "sqlite3.IntegrityError",
+      "attributes": {
+       "normalized": "IntegrityError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 35,
+      "end": 72,
+      "text": "UNIQUE constraint failed: users.email",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "STACK_TRACE",
+    "bbox": [
+     26,
+     106,
+     1228,
+     188
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r5",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     47,
+     263,
+     475,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "sqlite3.IntegrityError: UNIQUE constraint failed: users.email",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 22,
+      "text": "sqlite3.IntegrityError",
+      "attributes": {
+       "normalized": "IntegrityError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 24,
+      "end": 61,
+      "text": "UNIQUE constraint failed: users.email",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r6",
+    "label": "PII",
+    "bbox": [
+     428,
+     224,
+     164,
+     13
+    ],
+    "attributes": {
+     "kind": "email"
+    },
+    "ocr_text": "ivan@taskflow.example"
+   }
+  ],
+  "relations": [
+   [
+    "r2",
+    "r3",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "database/database_03_no_such_table.png": {
+  "labels": {
+   "category": "database",
+   "component": "Database",
+   "screen_type": "error_page",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     27,
+     21,
+     483,
+     25
+    ],
+    "attributes": {},
+    "ocr_text": "OperationalError at /billing/invoices",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 16,
+      "text": "OperationalError",
+      "attributes": {
+       "normalized": "OperationalError"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     353,
+     54,
+     211,
+     11
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "Status: 500 Internal Server Error",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 8,
+      "end": 11,
+      "text": "500",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "500"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 12,
+      "end": 33,
+      "text": "Internal Server Error",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     586,
+     54,
+     428,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "Exception: sqlite3.OperationalError: no such table: invoices",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 11,
+      "end": 35,
+      "text": "sqlite3.OperationalError",
+      "attributes": {
+       "normalized": "OperationalError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 37,
+      "end": 60,
+      "text": "no such table: invoices",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "STACK_TRACE",
+    "bbox": [
+     26,
+     106,
+     1228,
+     188
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r5",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     47,
+     263,
+     382,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "sqlite3.OperationalError: no such table: invoices",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 24,
+      "text": "sqlite3.OperationalError",
+      "attributes": {
+       "normalized": "OperationalError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 26,
+      "end": 49,
+      "text": "no such table: invoices",
+      "attributes": {}
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r2",
+    "r3",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "localization/localization_01_mojibake_cp1251.png": {
+  "labels": {
+   "category": "localization",
+   "component": "Backend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     156,
+     21,
+     451,
+     14
+    ],
+    "attributes": {
+     "defect_type": "mojibake",
+     "expected_text": "Задачи Проекты Отчёты Тариф"
+    },
+    "ocr_text": "Р—Р°РґР°С‡Рё РџСЂРѕРµРєС‚С‹ РћС‚С‡С‘С‚С‹ РўР°СЂРёС„"
+   },
+   {
+    "id": "r2",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     195,
+     107,
+     798,
+     149
+    ],
+    "attributes": {
+     "defect_type": "mojibake",
+     "expected_text": "Уведомления\nЗадача «Исправить расчёт НДС» назначена на вас.\nСрок выполнения: 20 октября 2026 г.\nКомментарий от Анны Смирновой: «Проверьте, пожалуйста, отчёт за сентябрь»."
+    },
+    "ocr_text": "РЈРІРµРґРѕРјР»РµРЅРёСЏ\nР—Р°РґР°С‡Р° В«РСЃРїСЂР°РІРёС‚СЊ СЂР°СЃС‡С‘С‚ РќР”РЎВ» РЅР°Р·РЅР°С‡РµРЅР° РЅР° РІР°СЃ.\nРЎСЂРѕРє РІС‹РїРѕР»РЅРµРЅРёСЏ: 20 РѕРєС‚СЏР±СЂСЏ 2026 Рі.\nРљРѕРјРјРµРЅС‚Р°СЂРёР№ РѕС‚ РђРЅРЅС‹ РЎРјРёСЂРЅРѕРІРѕР№: В«РџСЂРѕРІРµСЂСЊС‚Рµ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РѕС‚С‡С‘С‚ Р·Р° СЃРµРЅС‚СЏР±СЂСЊВ»."
+   }
+  ],
+  "relations": [],
+  "note": "Сервер отдаёт страницу в UTF-8 с заголовком charset=windows-1251; текст области — дословно, как его показывает браузер.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "localization/localization_02_missing_translation_keys.png": {
+  "labels": {
+   "category": "localization",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Minor",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     194,
+     288,
+     116,
+     13
+    ],
+    "attributes": {
+     "defect_type": "untranslated"
+    },
+    "ocr_text": "settings.timezone"
+   },
+   {
+    "id": "r2",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     194,
+     358,
+     180,
+     13
+    ],
+    "attributes": {
+     "defect_type": "untranslated"
+    },
+    "ocr_text": "settings.notifications.digest"
+   },
+   {
+    "id": "r3",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     194,
+     428,
+     116,
+     13
+    ],
+    "attributes": {
+     "defect_type": "untranslated"
+    },
+    "ocr_text": "settings.language"
+   },
+   {
+    "id": "r4",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     194,
+     503,
+     185,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "common.actions.save"
+   },
+   {
+    "id": "r5",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     214,
+     517,
+     145,
+     12
+    ],
+    "attributes": {
+     "defect_type": "untranslated"
+    },
+    "ocr_text": "common.actions.save"
+   },
+   {
+    "id": "r6",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     384,
+     503,
+     197,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "common.actions.cancel"
+   },
+   {
+    "id": "r7",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     405,
+     517,
+     155,
+     12
+    ],
+    "attributes": {
+     "defect_type": "untranslated"
+    },
+    "ocr_text": "common.actions.cancel"
+   }
+  ],
+  "relations": [
+   [
+    "r5",
+    "r4",
+    "AFFECTS"
+   ],
+   [
+    "r7",
+    "r6",
+    "AFFECTS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "localization/localization_03_wrong_number_date_format.png": {
+  "labels": {
+   "category": "localization",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Minor",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     467,
+     192,
+     79,
+     13
+    ],
+    "attributes": {
+     "defect_type": "wrong_format",
+     "expected_text": "17.10.2026"
+    },
+    "ocr_text": "10/17/2026"
+   },
+   {
+    "id": "r2",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     467,
+     227,
+     77,
+     12
+    ],
+    "attributes": {
+     "defect_type": "wrong_format",
+     "expected_text": "14:05:00"
+    },
+    "ocr_text": "2:05:00 PM"
+   },
+   {
+    "id": "r3",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     467,
+     262,
+     101,
+     13
+    ],
+    "attributes": {
+     "defect_type": "wrong_format",
+     "expected_text": "1 234 567,89 ₽"
+    },
+    "ocr_text": "$1,234,567.89"
+   },
+   {
+    "id": "r4",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     467,
+     297,
+     43,
+     12
+    ],
+    "attributes": {
+     "defect_type": "wrong_format",
+     "expected_text": "15,3 %"
+    },
+    "ocr_text": "15.3%"
+   },
+   {
+    "id": "r5",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     467,
+     332,
+     49,
+     12
+    ],
+    "attributes": {
+     "defect_type": "untranslated",
+     "expected_text": "1 задача"
+    },
+    "ocr_text": "1 tasks"
+   },
+   {
+    "id": "r6",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     467,
+     367,
+     42,
+     12
+    ],
+    "attributes": {
+     "defect_type": "untranslated",
+     "expected_text": "5 задач"
+    },
+    "ocr_text": "5 task"
+   }
+  ],
+  "relations": [],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "memory/memory_01_node_heap_oom.png": {
+  "labels": {
+   "category": "memory",
+   "component": "Backend",
+   "screen_type": "console",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "dark"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STACK_TRACE",
+    "bbox": [
+     18,
+     92,
+     1045,
+     174
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     19,
+     295,
+     681,
+     14
+    ],
+    "attributes": {},
+    "ocr_text": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_MESSAGE",
+      "start": 13,
+      "end": 81,
+      "text": "Reached heap limit Allocation failed - JavaScript heap out of memory",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "STACK_TRACE",
+    "bbox": [
+     19,
+     315,
+     1025,
+     317
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     81,
+     10,
+     127,
+     13
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     19,
+     51,
+     143,
+     15
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   }
+  ],
+  "relations": [],
+  "note": "Кода выхода на экране нет: вывод обрезан терминалом на 34 строках.",
+  "size": [
+   1100,
+   640
+  ]
+ },
+ "memory/memory_02_python_memoryerror.png": {
+  "labels": {
+   "category": "memory",
+   "component": "Backend",
+   "screen_type": "console",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "dark"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STACK_TRACE",
+    "bbox": [
+     18,
+     92,
+     623,
+     156
+    ],
+    "attributes": {}
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     18,
+     234,
+     92,
+     14
+    ],
+    "attributes": {},
+    "ocr_text": "MemoryError",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 0,
+      "end": 11,
+      "text": "MemoryError",
+      "attributes": {
+       "normalized": "MemoryError"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     21,
+     254,
+     104,
+     13
+    ],
+    "attributes": {
+     "kind": "exit_code"
+    },
+    "ocr_text": "[exit code 1]",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 11,
+      "end": 12,
+      "text": "1",
+      "attributes": {
+       "kind": "exit_code",
+       "normalized": "1"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     81,
+     10,
+     127,
+     13
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     19,
+     51,
+     143,
+     15
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   },
+   {
+    "id": "r6",
+    "label": "PII",
+    "bbox": [
+     19,
+     274,
+     142,
+     14
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "qa@taskflow-stage"
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1100,
+   640
+  ]
+ },
+ "memory/memory_03_js_heap_growth.png": {
+  "labels": {
+   "category": "memory",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "CHART",
+    "bbox": [
+     194,
+     146,
+     900,
+     300
+    ],
+    "attributes": {
+     "chart_kind": "line",
+     "trend": "growth"
+    }
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     195,
+     468,
+     509,
+     17
+    ],
+    "attributes": {
+     "kind": "counter"
+    },
+    "ocr_text": "Обновлений ленты: 31, used JS heap: 41.9 МБ (было 2.5 МБ)",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 18,
+      "end": 20,
+      "text": "31",
+      "attributes": {
+       "kind": "count",
+       "normalized": "31"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "METRIC",
+      "start": 36,
+      "end": 43,
+      "text": "41.9 МБ",
+      "attributes": {
+       "kind": "memory",
+       "normalized": "41.9 MB"
+      }
+     },
+     {
+      "id": "e3",
+      "label": "METRIC",
+      "start": 50,
+      "end": 56,
+      "text": "2.5 МБ",
+      "attributes": {
+       "kind": "memory",
+       "normalized": "2.5 MB"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r2",
+    "r1",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "network/network_01_dns_not_resolved.png": {
+  "labels": {
+   "category": "network",
+   "component": "Backend",
+   "screen_type": "browser_error",
+   "severity": "Blocker",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     341,
+     235,
+     293,
+     20
+    ],
+    "attributes": {},
+    "ocr_text": "This site can’t be reached"
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     340,
+     282,
+     423,
+     15
+    ],
+    "attributes": {},
+    "ocr_text": "api.taskflow.invalid’s server IP address could not be found.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_MESSAGE",
+      "start": 23,
+      "end": 59,
+      "text": "server IP address could not be found",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "PII",
+    "bbox": [
+     340,
+     282,
+     153,
+     15
+    ],
+    "attributes": {
+     "kind": "host"
+    },
+    "ocr_text": "api.taskflow.invalid"
+   },
+   {
+    "id": "r4",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     341,
+     410,
+     161,
+     10
+    ],
+    "attributes": {
+     "kind": "net_error"
+    },
+    "ocr_text": "ERR_NAME_NOT_RESOLVED",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 0,
+      "end": 21,
+      "text": "ERR_NAME_NOT_RESOLVED",
+      "attributes": {
+       "kind": "net_error",
+       "normalized": "ERR_NAME_NOT_RESOLVED"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r4",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "network/network_02_connection_refused.png": {
+  "labels": {
+   "category": "network",
+   "component": "Backend",
+   "screen_type": "browser_error",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     341,
+     235,
+     293,
+     20
+    ],
+    "attributes": {},
+    "ocr_text": "This site can’t be reached"
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     340,
+     282,
+     203,
+     13
+    ],
+    "attributes": {},
+    "ocr_text": "127.0.0.1 refused to connect.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_MESSAGE",
+      "start": 10,
+      "end": 28,
+      "text": "refused to connect",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     341,
+     410,
+     168,
+     10
+    ],
+    "attributes": {
+     "kind": "net_error"
+    },
+    "ocr_text": "ERR_CONNECTION_REFUSED",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 0,
+      "end": 22,
+      "text": "ERR_CONNECTION_REFUSED",
+      "attributes": {
+       "kind": "net_error",
+       "normalized": "ERR_CONNECTION_REFUSED"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "network/network_03_fetch_failed_sync.png": {
+  "labels": {
+   "category": "network",
+   "component": "Backend",
+   "screen_type": "ui_screen",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     183,
+     892,
+     42
+    ],
+    "attributes": {},
+    "ocr_text": "Попытка 1/3: TypeError: Failed to fetch (15 мс)",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 13,
+      "end": 22,
+      "text": "TypeError",
+      "attributes": {
+       "normalized": "TypeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 24,
+      "end": 39,
+      "text": "Failed to fetch",
+      "attributes": {}
+     },
+     {
+      "id": "e3",
+      "label": "METRIC",
+      "start": 41,
+      "end": 46,
+      "text": "15 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "15 ms"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     237,
+     892,
+     42
+    ],
+    "attributes": {},
+    "ocr_text": "Попытка 2/3: TypeError: Failed to fetch (10 мс)",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 13,
+      "end": 22,
+      "text": "TypeError",
+      "attributes": {
+       "normalized": "TypeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 24,
+      "end": 39,
+      "text": "Failed to fetch",
+      "attributes": {}
+     },
+     {
+      "id": "e3",
+      "label": "METRIC",
+      "start": 41,
+      "end": 46,
+      "text": "10 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "10 ms"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     291,
+     892,
+     42
+    ],
+    "attributes": {},
+    "ocr_text": "Попытка 3/3: TypeError: Failed to fetch (6 мс)",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "EXCEPTION",
+      "start": 13,
+      "end": 22,
+      "text": "TypeError",
+      "attributes": {
+       "normalized": "TypeError"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_MESSAGE",
+      "start": 24,
+      "end": 39,
+      "text": "Failed to fetch",
+      "attributes": {}
+     },
+     {
+      "id": "e3",
+      "label": "METRIC",
+      "start": 41,
+      "end": 45,
+      "text": "6 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "6 ms"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r4",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     345,
+     892,
+     42
+    ],
+    "attributes": {},
+    "ocr_text": "Изменения не сохранены. Последняя успешная синхронизация: 2 часа назад.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 58,
+      "end": 64,
+      "text": "2 часа",
+      "attributes": {
+       "kind": "time",
+       "normalized": "2 h"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "payment/payment_01_card_declined_402.png": {
+  "labels": {
+   "category": "payment",
+   "component": "Billing",
+   "screen_type": "ui_screen",
+   "severity": null,
+   "is_defect": "no",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     381,
+     472,
+     74
+    ],
+    "attributes": {},
+    "ocr_text": "Платёж отклонён (402 card_declined)\ndecline_code: insufficient_funds\nYour card has insufficient funds.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 17,
+      "end": 20,
+      "text": "402",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "402"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_CODE",
+      "start": 21,
+      "end": 34,
+      "text": "card_declined",
+      "attributes": {
+       "kind": "app_code",
+       "normalized": "card_declined"
+      }
+     },
+     {
+      "id": "e3",
+      "label": "ERROR_CODE",
+      "start": 50,
+      "end": 68,
+      "text": "insufficient_funds",
+      "attributes": {
+       "kind": "app_code",
+       "normalized": "insufficient_funds"
+      }
+     },
+     {
+      "id": "e4",
+      "label": "ERROR_MESSAGE",
+      "start": 69,
+      "end": 101,
+      "text": "Your card has insufficient funds",
+      "attributes": {}
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     210,
+     396,
+     302,
+     15
+    ],
+    "attributes": {
+     "kind": "http_status"
+    },
+    "ocr_text": "Платёж отклонён (402 card_declined)",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 17,
+      "end": 20,
+      "text": "402",
+      "attributes": {
+       "kind": "http_status",
+       "normalized": "402"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "ERROR_CODE",
+      "start": 21,
+      "end": 34,
+      "text": "card_declined",
+      "attributes": {
+       "kind": "app_code",
+       "normalized": "card_declined"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     194,
+     202,
+     472,
+     39
+    ],
+    "attributes": {
+     "kind": "field"
+    },
+    "ocr_text": "4000 0000 0000 0002"
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     205,
+     216,
+     146,
+     12
+    ],
+    "attributes": {
+     "kind": "card"
+    },
+    "ocr_text": "4000 0000 0000 0002"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     206,
+     286,
+     64,
+     12
+    ],
+    "attributes": {
+     "kind": "card"
+    },
+    "ocr_text": "12/28   •••"
+   },
+   {
+    "id": "r6",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     194,
+     330,
+     107,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Оплатить"
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r6",
+    "EXPLAINS"
+   ]
+  ],
+  "note": "Ожидаемое поведение: платёжный шлюз отклонил тестовую карту с недостаточным балансом.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "payment/payment_02_invoice_nan_total.png": {
+  "labels": {
+   "category": "payment",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Blocker",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     939,
+     192,
+     43,
+     12
+    ],
+    "attributes": {
+     "defect_type": "wrong_value",
+     "expected_text": "6 495,00 ₽"
+    },
+    "ocr_text": "5.00 ₽"
+   },
+   {
+    "id": "r2",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     939,
+     227,
+     61,
+     12
+    ],
+    "attributes": {
+     "defect_type": "wrong_value",
+     "expected_text": "349,50 ₽"
+    },
+    "ocr_text": "349.00 ₽"
+   },
+   {
+    "id": "r3",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     939,
+     262,
+     43,
+     12
+    ],
+    "attributes": {
+     "defect_type": "wrong_format",
+     "expected_text": "0,00 ₽"
+    },
+    "ocr_text": "0.00 ₽"
+   },
+   {
+    "id": "r4",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     369,
+     310,
+     66,
+     16
+    ],
+    "attributes": {
+     "defect_type": "wrong_value",
+     "expected_text": "6 844,50 ₽"
+    },
+    "ocr_text": "NaN ₽"
+   }
+  ],
+  "relations": [],
+  "note": "Компонент Frontend: суммы считает JavaScript страницы (parseFloat('1 299,00') = 1), хотя категория — payment.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "payment/payment_03_double_charge.png": {
+  "labels": {
+   "category": "payment",
+   "component": "Billing",
+   "screen_type": "ui_screen",
+   "severity": "Blocker",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     194,
+     183,
+     107,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Оплатить"
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     234,
+     572,
+     42
+    ],
+    "attributes": {},
+    "ocr_text": "Подписка продлена, но с карты списано 2 раза",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 38,
+      "end": 44,
+      "text": "2 раза",
+      "attributes": {
+       "kind": "count",
+       "normalized": "2"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r3",
+    "label": "PII",
+    "bbox": [
+     397,
+     301,
+     99,
+     14
+    ],
+    "attributes": {
+     "kind": "card"
+    },
+    "ocr_text": "•••• 4242"
+   },
+   {
+    "id": "r4",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     194,
+     364,
+     572,
+     70
+    ],
+    "attributes": {
+     "defect_type": "duplicate"
+    },
+    "ocr_text": "ch_0001 1 299,00 ₽ 14:04:42.218\nch_0002 1 299,00 ₽ 14:04:42.219"
+   }
+  ],
+  "relations": [
+   [
+    "r2",
+    "r4",
+    "EXPLAINS"
+   ],
+   [
+    "r4",
+    "r1",
+    "CAUSED_BY"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "performance/performance_01_spinner_timeout.png": {
+  "labels": {
+   "category": "performance",
+   "component": "Backend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     194,
+     162,
+     326,
+     34
+    ],
+    "attributes": {
+     "kind": "loading"
+    },
+    "ocr_text": "Загрузка данных… прошло 8.2 с",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 24,
+      "end": 29,
+      "text": "8.2 с",
+      "attributes": {
+       "kind": "time",
+       "normalized": "8.2 s"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     194,
+     162,
+     35,
+     34
+    ],
+    "attributes": {
+     "defect_type": "endless_loading"
+    }
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     195,
+     228,
+     326,
+     17
+    ],
+    "attributes": {
+     "kind": "loading"
+    },
+    "ocr_text": "Запрос GET /api/slow ещё выполняется"
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "performance/performance_02_search_latency.png": {
+  "labels": {
+   "category": "performance",
+   "component": "Backend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "CHART",
+    "bbox": [
+     536,
+     192,
+     501,
+     187
+    ],
+    "attributes": {
+     "chart_kind": "bar",
+     "trend": "growth"
+    }
+   },
+   {
+    "id": "r2",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     194,
+     286,
+     892,
+     104
+    ],
+    "attributes": {
+     "defect_type": "threshold_exceeded",
+     "expected_text": "≤ 300 мс (SLA)"
+    },
+    "ocr_text": "2000 1006\n3000 2256\n4000 4004"
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     195,
+     409,
+     499,
+     17
+    ],
+    "attributes": {
+     "kind": "counter"
+    },
+    "ocr_text": "Измерено в браузере (fetch, performance.now). SLA: 300 мс.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 51,
+      "end": 57,
+      "text": "300 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "300 ms"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": null,
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "performance/performance_03_long_task_kanban.png": {
+  "labels": {
+   "category": "performance",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     195,
+     151,
+     382,
+     16
+    ],
+    "attributes": {
+     "kind": "timer"
+    },
+    "ocr_text": "Перерисовка 20000 карточек заняла 1101 мс",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 12,
+      "end": 17,
+      "text": "20000",
+      "attributes": {
+       "kind": "count",
+       "normalized": "20000"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "METRIC",
+      "start": 34,
+      "end": 41,
+      "text": "1101 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "1101 ms"
+      }
+     }
+    ]
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     194,
+     183,
+     892,
+     42
+    ],
+    "attributes": {},
+    "ocr_text": "Long Task: главный поток заблокирован на 1101 мс (startTime 114 мс). Интерфейс не отвечал на ввод.",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "METRIC",
+      "start": 41,
+      "end": 48,
+      "text": "1101 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "1101 ms"
+      }
+     },
+     {
+      "id": "e2",
+      "label": "METRIC",
+      "start": 60,
+      "end": 66,
+      "text": "114 мс",
+      "attributes": {
+       "kind": "time",
+       "normalized": "114 ms"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r2",
+    "EXPLAINS"
+   ]
+  ],
+  "note": "Компонент Frontend: главный поток браузера блокирует JavaScript страницы.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "security/security_01_cert_self_signed.png": {
+  "labels": {
+   "category": "security",
+   "component": "Billing",
+   "screen_type": "browser_error",
+   "severity": "Critical",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     341,
+     229,
+     337,
+     23
+    ],
+    "attributes": {},
+    "ocr_text": "Your connection is not private"
+   },
+   {
+    "id": "r2",
+    "label": "ERROR_TEXT",
+    "bbox": [
+     340,
+     275,
+     554,
+     40
+    ],
+    "attributes": {},
+    "ocr_text": "Attackers might be trying to steal your information from 127.0.0.1 (for example, passwords, messages, or credit cards). Learn more about this warning"
+   },
+   {
+    "id": "r3",
+    "label": "STATUS_INDICATOR",
+    "bbox": [
+     341,
+     337,
+     215,
+     10
+    ],
+    "attributes": {
+     "kind": "net_error"
+    },
+    "ocr_text": "NET::ERR_CERT_AUTHORITY_INVALID",
+    "entities": [
+     {
+      "id": "e1",
+      "label": "ERROR_CODE",
+      "start": 0,
+      "end": 31,
+      "text": "NET::ERR_CERT_AUTHORITY_INVALID",
+      "attributes": {
+       "kind": "net_error",
+       "normalized": "ERR_CERT_AUTHORITY_INVALID"
+      }
+     }
+    ]
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r1",
+    "EXPLAINS"
+   ]
+  ],
+  "note": "Компонент Billing: недоверенный сертификат у страницы оплаты (checkout) сервиса биллинга.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "security/security_02_idor_foreign_invoice.png": {
+  "labels": {
+   "category": "security",
+   "component": "Billing",
+   "screen_type": "api_response",
+   "severity": "Blocker",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     17,
+     110,
+     412,
+     133
+    ],
+    "attributes": {
+     "defect_type": "data_exposure",
+     "expected_text": "403 Forbidden: счёт 43 принадлежит customer_id 2002, а запрос сделан от session_user_id 1001"
+    }
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     172,
+     154,
+     155,
+     14
+    ],
+    "attributes": {
+     "kind": "organization"
+    },
+    "ocr_text": "ООО «Северный ветер»"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     110,
+     170,
+     201,
+     13
+    ],
+    "attributes": {
+     "kind": "email"
+    },
+    "ocr_text": "finance@north-wind.example"
+   },
+   {
+    "id": "r6",
+    "label": "PII",
+    "bbox": [
+     147,
+     200,
+     31,
+     13
+    ],
+    "attributes": {
+     "kind": "card"
+    },
+    "ocr_text": "8812"
+   },
+   {
+    "id": "r7",
+    "label": "PII",
+    "bbox": [
+     188,
+     215,
+     233,
+     13
+    ],
+    "attributes": {
+     "kind": "address"
+    },
+    "ocr_text": "г. Казань, ул. Примерная, д. 1"
+   }
+  ],
+  "relations": [],
+  "note": "IDOR: пользователь 1001 (session_user_id) получил счёт клиента 2002 (customer_id) с ответом 200 OK.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "security/security_03_reflected_xss.png": {
+  "labels": {
+   "category": "security",
+   "component": "Backend",
+   "screen_type": "ui_screen",
+   "severity": "Blocker",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     0,
+     0,
+     1280,
+     47
+    ],
+    "attributes": {
+     "defect_type": "injected_content"
+    },
+    "ocr_text": "XSS executed: document.cookie = session=8f2c1e9ab47d"
+   },
+   {
+    "id": "r2",
+    "label": "PII",
+    "bbox": [
+     399,
+     16,
+     115,
+     14
+    ],
+    "attributes": {
+     "kind": "token"
+    },
+    "ocr_text": "8f2c1e9ab47d"
+   },
+   {
+    "id": "r3",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     194,
+     193,
+     892,
+     39
+    ],
+    "attributes": {
+     "kind": "field"
+    },
+    "ocr_text": ""
+   },
+   {
+    "id": "r4",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     400,
+     248,
+     16,
+     16
+    ],
+    "attributes": {
+     "defect_type": "injected_content"
+    }
+   }
+  ],
+  "relations": [
+   [
+    "r4",
+    "r3",
+    "CAUSED_BY"
+   ],
+   [
+    "r1",
+    "r4",
+    "CAUSED_BY"
+   ]
+  ],
+  "note": "Поисковый запрос вставлен в страницу без экранирования: <img onerror> выполнил скрипт, который вывел cookie в красную плашку.",
+  "size": [
+   1280,
+   800
+  ]
+ },
+ "ui_layout/ui_layout_01_button_overflow.png": {
+  "labels": {
+   "category": "ui_layout",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Minor",
+   "is_defect": "yes",
+   "device": "mobile",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     88,
+     270,
+     280,
+     78
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Отправить на сог"
+   },
+   {
+    "id": "r2",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     384,
+     270,
+     280,
+     78
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Сохранить черновик"
+   },
+   {
+    "id": "r3",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     128,
+     296,
+     582,
+     28
+    ],
+    "attributes": {
+     "defect_type": "overflow",
+     "expected_text": "Отправить на согласование | Сохранить черновик"
+    },
+    "ocr_text": "Отправить на сог Сохранить черновик"
+   },
+   {
+    "id": "r4",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     89,
+     386,
+     592,
+     25
+    ],
+    "attributes": {
+     "defect_type": "overflow",
+     "expected_text": "Описание: Пользователь не может прикрепить файл размером больше 10 МБ к задаче"
+    },
+    "ocr_text": "Описание: Пользователь не может"
+   },
+   {
+    "id": "r5",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     762,
+     43,
+     18,
+     21
+    ],
+    "attributes": {
+     "defect_type": "overflow",
+     "expected_text": "Тариф"
+    },
+    "ocr_text": "Т"
+   },
+   {
+    "id": "r6",
+    "label": "PII",
+    "bbox": [
+     105,
+     507,
+     432,
+     108
+    ],
+    "attributes": {
+     "kind": "person_name"
+    },
+    "ocr_text": "Константинопольский-Великорецкий Александр Владимирович"
+   }
+  ],
+  "relations": [
+   [
+    "r3",
+    "r1",
+    "AFFECTS"
+   ],
+   [
+    "r3",
+    "r2",
+    "AFFECTS"
+   ]
+  ],
+  "note": "Мобильная ширина 390 px (скриншот 2x). Длинное ФИО переносится внутри рамки — дефекта у блока исполнителя на экране нет.",
+  "size": [
+   780,
+   1520
+  ]
+ },
+ "ui_layout/ui_layout_02_banner_overlap.png": {
+  "labels": {
+   "category": "ui_layout",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "mobile",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     40,
+     300,
+     660,
+     144
+    ],
+    "attributes": {
+     "defect_type": "overlap"
+    },
+    "ocr_text": "Cookie: мы используем файлы cookie для аналитики. ОК"
+   },
+   {
+    "id": "r2",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     88,
+     212,
+     560,
+     88
+    ],
+    "attributes": {
+     "kind": "other"
+    },
+    "ocr_text": "Проект «Мобильное приложение»"
+   },
+   {
+    "id": "r3",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     452,
+     358,
+     80,
+     62
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "ОК"
+   },
+   {
+    "id": "r4",
+    "label": "PII",
+    "bbox": [
+     487,
+     618,
+     81,
+     25
+    ],
+    "attributes": {
+     "kind": "person_name"
+    },
+    "ocr_text": "Анна"
+   },
+   {
+    "id": "r5",
+    "label": "PII",
+    "bbox": [
+     519,
+     656,
+     79,
+     25
+    ],
+    "attributes": {
+     "kind": "person_name"
+    },
+    "ocr_text": "Олег"
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r2",
+    "AFFECTS"
+   ]
+  ],
+  "note": "Плашка cookie закрывает вторую строку заголовка и строку «Прогресс: 64% · 128 задач · 9 участников» целиком.",
+  "size": [
+   780,
+   1520
+  ]
+ },
+ "ui_layout/ui_layout_03_modal_behind_overlay.png": {
+  "labels": {
+   "category": "ui_layout",
+   "component": "Frontend",
+   "screen_type": "ui_screen",
+   "severity": "Major",
+   "is_defect": "yes",
+   "device": "desktop",
+   "theme": "light"
+  },
+  "regions": [
+   {
+    "id": "r1",
+    "label": "DEFECT_AREA",
+    "bbox": [
+     430,
+     246,
+     420,
+     148
+    ],
+    "attributes": {
+     "defect_type": "wrong_layer"
+    }
+   },
+   {
+    "id": "r2",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     452,
+     333,
+     97,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Удалить"
+   },
+   {
+    "id": "r3",
+    "label": "UI_ELEMENT",
+    "bbox": [
+     554,
+     333,
+     94,
+     39
+    ],
+    "attributes": {
+     "kind": "button"
+    },
+    "ocr_text": "Отмена"
+   }
+  ],
+  "relations": [
+   [
+    "r1",
+    "r2",
+    "AFFECTS"
+   ],
+   [
+    "r1",
+    "r3",
+    "AFFECTS"
+   ]
+  ],
+  "note": "Диалог (z-index 5) оказался под затемнением (z-index 20) и частично под карточкой проекта (z-index 10).",
+  "size": [
+   1280,
+   800
+  ]
+ }
+}

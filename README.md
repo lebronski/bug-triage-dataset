@@ -19,7 +19,12 @@
   документов (по одному на объект) в INCEpTION: баг-репорт → абзац/раздел →
   предложение → токен → часть речи и лемма → сущности со ссылками DBpedia → связи;
   анализ разметки и схема 1.1 (`annotations/text/markup/`, `scripts/text_markup.py`,
-  `docs/text_markup_analysis.md`) — см. раздел [Разметка текстовых данных](#разметка-текстовых-данных-лр3).
+  `docs/text_markup_analysis.md`) — см. раздел [Разметка текстовых данных](#разметка-текстовых-данных-лр3);
+* **ЛР №5 «Разметка изображений»** — разметка всех 30 скриншотов в Label Studio: классы и признаки
+  изображения → области (рамки) с атрибутами и связями → дословный текст области и сущности в нём;
+  предразметка Tesseract OCR + правила, проверка, экспорт в COCO, Label Studio JSON, Pascal VOC, YOLO, CSV;
+  схема 1.2 (`annotations/images/`, `scripts/image_markup.py`, `docs/image_markup_analysis.md`) — см. раздел
+  [Разметка изображений](#разметка-изображений-лр5).
 
 Данные собраны в **трёх модальностях** для **10 объектов** — категорий
 программных дефектов:
@@ -80,7 +85,9 @@ bug-triage-dataset/
 │   │   ├── auto/ → manual_edits.json → json/      ← предразметка, ручные правки, итоговая разметка
 │   │   ├── tsv/, conllu/                          ← WebAnno TSV 3.3 (INCEpTION) и CoNLL-U
 │   │   └── inception/                             ← проект INCEpTION, слои, экспорт XMI
-│   ├── images/screenshots_coco.json               ← скриншоты: области в формате COCO
+│   ├── images/screenshots_coco.json               ← ЛР5: разметка 30 скриншотов в формате COCO (основной)
+│   ├── images/markup/                             ← ЛР5: manual.json (ручная разметка), auto/ (предразметка),
+│   │                                                labelstudio/, voc/, yolo/, regions.csv
 │   └── audio/<категория>/<имя>.TextGrid + .json   ← аудио: сегменты, расшифровка, сущности
 ├── scripts/                      ← КОД сбора и проверки данных
 │   ├── download_sources.sh       ← скачивание исходных датасетов (git clone)
@@ -90,13 +97,16 @@ bug-triage-dataset/
 │   ├── synth_audio.py            ← синтез голосовых обращений
 │   ├── validate_dataset.py       ← проверка корректности загрузки (шаг 4.3)
 │   ├── annotation_tools.py       ← конфигурации разметки, проверка аннотаций, CoNLL-U, согласованность
-│   └── text_markup.py            ← ЛР3: отбор текстов, предразметка, правки, экспорт, INCEpTION, анализ
+│   ├── text_markup.py            ← ЛР3: отбор текстов, предразметка, правки, экспорт, INCEpTION, анализ
+│   └── image_markup.py           ← ЛР5: предразметка OCR, итоговая разметка, экспорт, Label Studio, анализ
 └── docs/                         ← ДОКУМЕНТАЦИЯ
     ├── data_card.md              ← описание полей и особенностей данных
     ├── validation_report.md      ← результат последней проверки данных
     ├── annotation_schema.md      ← аннотационная схема: требования, уровни, форматы, верификация
     ├── annotation_validation_report.md ← результат последней проверки аннотаций
     ├── text_markup_analysis.md   ← ЛР3: анализ разметки текста, зависимости между уровнями
+    ├── image_markup_analysis.md  ← ЛР5: процесс, проверка и анализ разметки изображений
+    ├── image_markup_stats.md     ← ЛР5: статистика разметки и качества предразметки (генерируется)
     ├── img/                      ← иллюстрации разметки
     └── presentation/             ← презентации к лабораторным (PPTX)
 ```
@@ -152,6 +162,7 @@ bug-triage-dataset/
 | `scripts/synth_audio.py` | синтезирует 20 обращений (5 голосов, разный темп), приводит к WAV 16 кГц моно с полосой телефонного канала (200–3800 Гц), пишет `audio.csv` |
 | `scripts/validate_dataset.py` | проверяет корректность данных (см. ниже) и пишет `docs/validation_report.md` |
 | `scripts/text_markup.py` | ЛР3: собирает документы объектов (`corpus`), предразмечает все уровни (`auto`), применяет ручные правки (`final`), выгружает TSV 3.3 и CoNLL-U (`export`), создаёт проект INCEpTION и загружает разметку (`inception`), сверяет выгрузку INCEpTION с исходной (`roundtrip`), проверяет по схеме (`validate`), строит анализ (`analyze`) |
+| `scripts/image_markup.py` | ЛР5: предразметка скриншотов Tesseract OCR + правила (`auto`), итоговая разметка с подгонкой рамок к содержимому (`final`), экспорт в Label Studio JSON, Pascal VOC, YOLO, CSV (`export`), открытие задач в редакторе Label Studio и сверка выгрузки (`lsf`), наложение областей на изображения (`overlay`), сверка с эталонами (`agree`), анализ (`analyze`), загрузка в запущенный Label Studio (`ls-import`) |
 | `scripts/annotation_tools.py` | ЛР2: генерирует конфигурации Label Studio из схемы (`configs`), задачи с предразметкой (`tasks`), проверяет аннотации (`validate`), выгружает CoNLL-U (`conllu`), считает согласованность разметчиков (`agree`) |
 
 ### Установка и запуск
@@ -191,10 +202,20 @@ java -jar inception-app-webapp-38.4-standalone.jar   # INCEpTION на http://loc
 python scripts/text_markup.py inception --password <пароль admin>   # проект + документы
 python scripts/text_markup.py roundtrip --password <пароль admin>   # сверка выгрузки
 python scripts/text_markup.py analyze     # docs/text_markup_analysis.md + графики
+
+# 7. Разметка изображений (ЛР5; нужны tesseract-ocr с языками rus и eng, pytesseract, matplotlib)
+python scripts/image_markup.py auto --tessdata <папка с rus.traineddata и eng.traineddata>
+python scripts/image_markup.py final      # manual.json -> annotations/images/screenshots_coco.json
+python scripts/image_markup.py export     # Label Studio JSON, Pascal VOC, YOLO, CSV
+python scripts/annotation_tools.py validate
+python scripts/image_markup.py analyze    # docs/image_markup_stats.md + графики
+# Label Studio: проект и задачи с разметкой
+label-studio start   # с LABEL_STUDIO_LOCAL_FILES_SERVING_ENABLED=true и LABEL_STUDIO_LOCAL_FILES_DOCUMENT_ROOT=<корень репозитория>
+python scripts/image_markup.py ls-import --url http://localhost:8080 --token <токен>
 ```
 
 Скрипты проверялись на Python 3.13, Playwright 1.56 (Chromium 141), Node.js 22,
-espeak-ng 1.53.
+espeak-ng 1.53, Tesseract 5 (модели tessdata_best rus и eng), Label Studio Frontend 1.7.3.
 
 ---
 
@@ -266,7 +287,7 @@ Dec 10 06:55:48 LabSZ sshd[24200]: Failed password for invalid user webmaster fr
 | структура репорта | разделы `TITLE`, `DESCRIPTION`, `STEPS`, `EXPECTED`, `ACTUAL`, `ENVIRONMENT`, `STACK_TRACE`, `CODE`, `NOTES`; элементы `STEP`, `FRAME` |
 | сущности | `EXCEPTION`, `ERROR_MESSAGE`, `CODE_LOCATION`, `ERROR_CODE`, `ENV`, `UI_ELEMENT`, `METRIC`, `PII` (с атрибутами `kind`, `normalized`, `affected`) |
 | связи | `HAS_MESSAGE`, `THROWN_AT`, `OBSERVED_IN` |
-| изображения | области `ERROR_TEXT`, `STACK_TRACE`, `STATUS_INDICATOR`, `DEFECT_AREA`, `UI_ELEMENT`, `PII` + текст области |
+| изображения | области `ERROR_TEXT`, `STACK_TRACE`, `STATUS_INDICATOR`, `DEFECT_AREA`, `UI_ELEMENT`, `PII`, `CHART` (с 1.2) + текст области; связи `AFFECTS`, `EXPLAINS`, `CAUSED_BY` (с 1.2) |
 | аудио | сегменты `GREETING`, `PROBLEM`, `ERROR_DETAILS`, `STEPS`, `ENVIRONMENT`, `IMPACT`, `CLOSING` + транскрипция |
 
 **Уровни аннотаций:**
@@ -290,7 +311,8 @@ Dec 10 06:55:48 LabSZ sshd[24200]: Failed password for invalid user webmaster fr
 
 **Эталонный набор.** Сейчас в `annotations/` лежат эталоны: 5 баг-репортов,
 1 лог (40 строк), 2 скриншота (9 областей), 2 аудиозаписи — всего 122 сущности.
-Они служат образцами для разметчиков; остальные данные размечаются в ЛР 3–5.
+Они служат образцами для разметчиков; остальные данные размечаются в ЛР 3–5
+(в ЛР5 размечены все 30 скриншотов, два эталона сохранили статус `gold`).
 Список эталонов и что каждый показывает — в [annotations/README.md](annotations/README.md).
 
 | Разметка скриншота `database_01` | Разметка скриншота `payment_03` |
@@ -366,6 +388,57 @@ F1 = 0,88 относительно итоговой разметки. Разме
 
 ---
 
+## Разметка изображений (ЛР5)
+
+Подробно — **[docs/image_markup_analysis.md](docs/image_markup_analysis.md)**, статистика —
+[docs/image_markup_stats.md](docs/image_markup_stats.md).
+
+**Инструмент и данные (шаг 1).** Label Studio, конфигурация `annotation_schema/label_studio/images.xml`
+генерируется из схемы. Все 30 скриншотов размечены в редакторе разметки Label Studio; задачи для импорта
+с разметкой и предразметкой — `annotations/images/markup/labelstudio/tasks.json`
+(`image_markup.py ls-import` создаёт проект в запущенном Label Studio). Выгрузка из редактора совпадает
+с исходной разметкой во всех 30 задачах.
+
+**Классы и признаки (шаг 2):**
+
+| Уровень | Что | Объём |
+|---|---|---|
+| 1. Изображение | `category`, `component`, `screen_type` + новые признаки `is_defect`, `severity`, `device`, `theme` | 30 изображений (27 с дефектом, 3 — ожидаемое поведение) |
+| 2. Область | рамки `ERROR_TEXT` 33, `DEFECT_AREA` 28, `PII` 26, `STATUS_INDICATOR` 18, `UI_ELEMENT` 15, `STACK_TRACE` 9, `CHART` 2; связи между областями | 131 область, 29 связей |
+| 3. Деталь | дословный текст области, атрибуты (`defect_type`, `expected_text`, `kind`, `trend`…), сущности `ERROR_MESSAGE`, `ERROR_CODE`, `EXCEPTION`, `METRIC` | 114 текстов, 80 сущностей |
+
+**Предразметка (шаг 3).** Tesseract OCR 5 (LSTM, rus+eng) + правила: тип экрана, устройство и тема
+определены верно для всех 30 изображений, категория — для 29; области — точность 0,69, полнота 0,32
+(IoU ≥ 0,5), ошибки OCR в тексте — 2,5 %. Текстовые области предразметка находит, визуальные
+(элементы интерфейса, графики, перекрытия) — нет, их разметчик рисует сам.
+
+| Неверная сумма и NaN (`payment_02`) | IDOR: чужой счёт (`security_02`) | Переполнение на мобильном (`ui_layout_01`) |
+|---|---|---|
+| ![](docs/img/lr5_markup_payment_02_invoice_nan_total.png) | ![](docs/img/lr5_markup_security_02_idor_foreign_invoice.png) | ![](docs/img/lr5_markup_ui_layout_01_button_overflow.png) |
+
+**Проверка (шаг 5).** Проверка по схеме (`annotation_tools.py validate`) — без ошибок; каждое
+изображение проверено визуально с наложенными областями (`image_markup.py overlay`); эталоны ЛР2
+(`database_01`, `payment_03`) размечены заново вслепую: классы, метки и тексты совпали полностью,
+расхождения рамок разобраны в [журнале верификации](annotations/VERIFICATION.md).
+
+**Экспорт (шаг 6):** COCO JSON (основной, `annotations/images/screenshots_coco.json`), Label Studio JSON,
+Pascal VOC XML, YOLO, CSV (`annotations/images/markup/`).
+
+**Изменения аннотационной схемы — версия 1.2**
+([раздел 9 описания схемы](docs/annotation_schema.md#9-разметка-изображений-лр5)): признаки изображения
+`is_defect`, `severity`, `device`, `theme`; область `CHART`; `STATUS_INDICATOR.kind`; типы дефектов
+`injected_content`, `data_exposure`, `threshold_exceeded` и `expected_text`; `PII` `address`, `organization`;
+связи между областями `AFFECTS`, `EXPLAINS`, `CAUSED_BY`; правило совпадения рамок «IoU ≥ 0,7 или стороны
+±5 px». Главные выводы анализа: тип экрана определяет набор областей; компонент нельзя выводить из категории
+(6 из 30 изображений); три экрана с ошибкой — не дефекты.
+
+**Обновление данных.** Четыре скриншота страниц ошибки 500 (`crash_03`, `database_01`–`03`) пересняты тем
+же скриптом `make_screenshots.py`: в трейсбеке на экране был виден локальный путь к рабочей папке, теперь
+стенд запускается из нейтральной папки `/home/qa/bug-triage-dataset`. Остальное на скриншотах не изменилось,
+контрольные суммы обновлены.
+
+---
+
 ## Проверка корректности данных
 
 `scripts/validate_dataset.py` проверяет, что для каждой категории есть данные
@@ -403,3 +476,6 @@ SHA-256 всех 166 файлов данных совпадают с `data/check
 * ЛР3 «Разметка текстовых данных» (шаг 8) — презентация ЛР2, дополненная слайдами о процессе
   разметки текста, анализе результатов и изменениях схемы:
   [docs/presentation/LR3_text_markup.pptx](docs/presentation/LR3_text_markup.pptx).
+* ЛР5 «Разметка изображений» (шаг 8) — презентация ЛР3, дополненная слайдами о процессе разметки
+  изображений, анализе результатов и изменениях схемы 1.2:
+  [docs/presentation/LR5_image_markup.pptx](docs/presentation/LR5_image_markup.pptx).

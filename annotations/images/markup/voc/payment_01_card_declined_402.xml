@@ -1,0 +1,89 @@
+<annotation>
+  <folder>payment</folder>
+  <filename>payment_01_card_declined_402.png</filename>
+  <path>data/images/screenshots/payment/payment_01_card_declined_402.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>payment</category>
+    <component>Billing</component>
+    <screen_type>ui_screen</screen_type>
+    <is_defect>no</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>381</ymin><xmax>666</xmax><ymax>455</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Платёж отклонён (402 card_declined)
+decline_code: insufficient_funds
+Your card has insufficient funds.</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>210</xmin><ymin>396</ymin><xmax>512</xmax><ymax>411</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Платёж отклонён (402 card_declined)</ocr_text>
+      <kind>http_status</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>UI_ELEMENT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>202</ymin><xmax>666</xmax><ymax>241</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>4000 0000 0000 0002</ocr_text>
+      <kind>field</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>205</xmin><ymin>216</ymin><xmax>351</xmax><ymax>228</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>4000 0000 0000 0002</ocr_text>
+      <kind>card</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>206</xmin><ymin>286</ymin><xmax>270</xmax><ymax>298</ymax></bndbox>
+    <attributes>
+      <region_id>r5</region_id>
+      <ocr_text>12/28   •••</ocr_text>
+      <kind>card</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>UI_ELEMENT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>330</ymin><xmax>301</xmax><ymax>369</ymax></bndbox>
+    <attributes>
+      <region_id>r6</region_id>
+      <ocr_text>Оплатить</ocr_text>
+      <kind>button</kind>
+    </attributes>
+  </object>
+</annotation>

@@ -1,0 +1,6 @@
+# YOLO: пути к изображениям — data/images/screenshots/<категория>/<файл>.png, метки — labels/<файл>.txt
+path: ../../../..
+train: data/images/screenshots
+val: data/images/screenshots
+nc: 7
+names: ["ERROR_TEXT", "STACK_TRACE", "STATUS_INDICATOR", "DEFECT_AREA", "UI_ELEMENT", "PII", "CHART"]

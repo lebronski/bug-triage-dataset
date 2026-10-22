@@ -1,0 +1,95 @@
+<annotation>
+  <folder>localization</folder>
+  <filename>localization_03_wrong_number_date_format.png</filename>
+  <path>data/images/screenshots/localization/localization_03_wrong_number_date_format.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>localization</category>
+    <component>Frontend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Minor</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>467</xmin><ymin>192</ymin><xmax>546</xmax><ymax>205</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>10/17/2026</ocr_text>
+      <defect_type>wrong_format</defect_type>
+      <expected_text>17.10.2026</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>467</xmin><ymin>227</ymin><xmax>544</xmax><ymax>239</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>2:05:00 PM</ocr_text>
+      <defect_type>wrong_format</defect_type>
+      <expected_text>14:05:00</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>467</xmin><ymin>262</ymin><xmax>568</xmax><ymax>275</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>$1,234,567.89</ocr_text>
+      <defect_type>wrong_format</defect_type>
+      <expected_text>1 234 567,89 ₽</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>467</xmin><ymin>297</ymin><xmax>510</xmax><ymax>309</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>15.3%</ocr_text>
+      <defect_type>wrong_format</defect_type>
+      <expected_text>15,3 %</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>467</xmin><ymin>332</ymin><xmax>516</xmax><ymax>344</ymax></bndbox>
+    <attributes>
+      <region_id>r5</region_id>
+      <ocr_text>1 tasks</ocr_text>
+      <defect_type>untranslated</defect_type>
+      <expected_text>1 задача</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>467</xmin><ymin>367</ymin><xmax>509</xmax><ymax>379</ymax></bndbox>
+    <attributes>
+      <region_id>r6</region_id>
+      <ocr_text>5 task</ocr_text>
+      <defect_type>untranslated</defect_type>
+      <expected_text>5 задач</expected_text>
+    </attributes>
+  </object>
+</annotation>

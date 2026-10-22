@@ -1,0 +1,61 @@
+<annotation>
+  <folder>network</folder>
+  <filename>network_03_fetch_failed_sync.png</filename>
+  <path>data/images/screenshots/network/network_03_fetch_failed_sync.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>network</category>
+    <component>Backend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Critical</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>183</ymin><xmax>1086</xmax><ymax>225</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Попытка 1/3: TypeError: Failed to fetch (15 мс)</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>237</ymin><xmax>1086</xmax><ymax>279</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Попытка 2/3: TypeError: Failed to fetch (10 мс)</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>291</ymin><xmax>1086</xmax><ymax>333</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>Попытка 3/3: TypeError: Failed to fetch (6 мс)</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>345</ymin><xmax>1086</xmax><ymax>387</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>Изменения не сохранены. Последняя успешная синхронизация: 2 часа назад.</ocr_text>
+    </attributes>
+  </object>
+</annotation>

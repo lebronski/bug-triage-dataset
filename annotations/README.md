@@ -1,6 +1,6 @@
 # Аннотации
 
-Разметка данных из `data/` по аннотационной схеме v1.1 (эталоны ЛР2 размечены по v1.0, она совместима с v1.1)
+Разметка данных из `data/` по аннотационной схеме v1.2 (эталоны ЛР2 размечены по v1.0, разметка текста ЛР3 — по v1.1; версии совместимы)
 ([описание](../docs/annotation_schema.md), [schema.json](../annotation_schema/schema.json)).
 Для каждой модальности — своя папка; внутри папки повторяется деление на категории, как в `data/`.
 
@@ -9,7 +9,8 @@
 | `text/reports/<category>/` | баг-репорты | JSON со смещениями (уровни 1–3) | 5 эталонов |
 | `text/conllu/` | баг-репорты | CoNLL-U, BIO-метки в MISC — генерируется командой `conllu` | 5 файлов |
 | `text/logs/<category>/` | логи | JSON Lines, строка = событие | 1 эталон (40 строк) |
-| `images/` | скриншоты | COCO JSON (`screenshots_coco.json`) | 2 эталона, 9 областей |
+| `images/` | скриншоты (ЛР5) | COCO JSON (`screenshots_coco.json`) | все 30 скриншотов: 131 область, 80 сущностей, 29 связей (2 `gold`, 28 `draft`) |
+| `images/markup/` | скриншоты (ЛР5) | ручная разметка `manual.json`, предразметка `auto/`, Label Studio JSON, Pascal VOC, YOLO, CSV | см. [docs/image_markup_analysis.md](../docs/image_markup_analysis.md) |
 | `audio/<category>/` | голосовые обращения | Praat TextGrid + JSON | 2 эталона |
 | `text/markup/` | текстовые документы объектов (ЛР3) | JSON со смещениями, WebAnno TSV 3.3, UIMA CAS XMI, CoNLL-U | 10 документов: 27 репортов, 3915 токенов, 407 сущностей, 87 связей (`draft`) |
 
@@ -30,18 +31,19 @@
 | `text/reports/database/spark-13289561.json` | `EXCEPTION` + `ERROR_MESSAGE` + `HAS_MESSAGE`; разметка `{color}` вне границ; `confidence=low` |
 | `text/reports/other/thunderbird-1643899.json` | ошибочная предразметка `payment` → `not_a_bug`, `other`, `severity=null` |
 | `text/logs/authentication/openssh_authentication.jsonl` | события входа: `invalid_user`, `auth_failure`, `break_in_attempt`; PII (ip, host, username) |
-| `images/screenshots_coco.json`: `database_01` | страница ошибки 500: `ERROR_TEXT`, `STATUS_INDICATOR`, вложенная область в `STACK_TRACE` |
-| `images/screenshots_coco.json`: `payment_03` | логический дефект: `DEFECT_AREA` (duplicate), `UI_ELEMENT`, `PII` (карта) |
+| `images/screenshots_coco.json`: `database_01` | страница ошибки 500: `ERROR_TEXT`, `STATUS_INDICATOR`, вложенная область в `STACK_TRACE`; в ЛР5 размечен заново вслепую и сверен с эталоном |
+| `images/screenshots_coco.json`: `payment_03` | логический дефект: `DEFECT_AREA` (duplicate, только повторяющиеся строки — уточнено в ЛР5), `UI_ELEMENT`, `PII` (карта), связи `EXPLAINS`, `CAUSED_BY` |
 | `audio/crash/crash_02.*` | сегменты GREETING → PROBLEM → ERROR_DETAILS → STEPS; нормализация «пятьсот» → 500 |
 | `audio/ui_layout/ui_layout_01.*` | сегмент ENVIRONMENT; ENV `device` с `affected=no` |
 
-Наглядно — разметка скриншотов: [database_01](../docs/img/annotation_example_database_01.png),
-[payment_03](../docs/img/annotation_example_payment_03.png).
+Наглядно — эталоны ЛР2: [database_01](../docs/img/annotation_example_database_01.png),
+[payment_03](../docs/img/annotation_example_payment_03.png); разметка ЛР5 — в [docs/image_markup_analysis.md](../docs/image_markup_analysis.md#4-разметка-данных-шаг-4).
 
 ## Статусы
 
 `meta.status`: `draft` — размечено, не проверено; `reviewed` — проверено вторым участником;
-`gold` — эталон. Разметка остальных данных выполняется в лабораторных работах 3–5.
+`gold` — эталон. Разметка остальных данных выполняется в лабораторных работах 3–5. У COCO статус хранится
+в `images[].attributes.status`.
 
 ## Как добавлять разметку
 
@@ -53,6 +55,10 @@ python scripts/annotation_tools.py tasks
 # после разметки: проверка по схеме и выгрузка CoNLL-U
 python scripts/annotation_tools.py validate
 python scripts/annotation_tools.py conllu
+
+# разметка изображений (ЛР5)
+python scripts/image_markup.py auto --tessdata <папка с rus/eng.traineddata>   # предразметка
+python scripts/image_markup.py final && python scripts/image_markup.py export     # COCO + LS/VOC/YOLO/CSV
 
 # согласованность двух разметчиков
 python scripts/annotation_tools.py agree --a ../annotations_A --b ../annotations_B

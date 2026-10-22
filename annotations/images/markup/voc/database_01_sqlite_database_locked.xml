@@ -1,0 +1,72 @@
+<annotation>
+  <folder>database</folder>
+  <filename>database_01_sqlite_database_locked.png</filename>
+  <path>data/images/screenshots/database/database_01_sqlite_database_locked.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>database</category>
+    <component>Database</component>
+    <screen_type>error_page</screen_type>
+    <severity>Critical</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>27</xmin><ymin>21</ymin><xmax>494</xmax><ymax>46</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>OperationalError at /orders/42/pay</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>345</xmin><ymin>54</ymin><xmax>557</xmax><ymax>65</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Status: 500 Internal Server Error</ocr_text>
+      <kind>http_status</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>578</xmin><ymin>54</ymin><xmax>974</xmax><ymax>67</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>Exception: sqlite3.OperationalError: database is locked</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STACK_TRACE</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>26</xmin><ymin>106</ymin><xmax>1254</xmax><ymax>294</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>47</xmin><ymin>263</ymin><xmax>389</xmax><ymax>276</ymax></bndbox>
+    <attributes>
+      <region_id>r5</region_id>
+      <ocr_text>sqlite3.OperationalError: database is locked</ocr_text>
+    </attributes>
+  </object>
+</annotation>

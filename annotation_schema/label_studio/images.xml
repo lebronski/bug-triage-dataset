@@ -29,6 +29,24 @@
     <Choice value="api_response" hint="сырой ответ API (JSON) в браузере"/>
     <Choice value="ui_screen" hint="обычный экран приложения с дефектом"/>
   </Choices>
+  <Choices name="is_defect" toName="image" choice="single" showInline="true" required="true">
+    <Choice value="yes" hint="на экране дефект"/>
+    <Choice value="no" hint="ожидаемое поведение системы: ошибка показана правильно (неверный пароль, отказ банка) — отрицательный пример"/>
+  </Choices>
+  <Choices name="severity" toName="image" choice="single" showInline="true">
+    <Choice value="Blocker" hint="ключевой сценарий (вход, оплата, сохранение данных) недоступен всем или большинству без обходного пути; потеря или порча данных; потеря денег; эксплуатируемая уязвимость"/>
+    <Choice value="Critical" hint="падение сервиса или функции, ошибка 5xx, ключевая функция не работает у части пользователей, обходной путь сложен"/>
+    <Choice value="Major" hint="функция работает неверно, но есть обходной путь; заметная деградация производительности; элемент интерфейса непригоден на части платформ"/>
+    <Choice value="Minor" hint="косметический дефект, опечатка, неточный перевод, вёрстка без блокировки действий, редкий пограничный случай"/>
+  </Choices>
+  <Choices name="device" toName="image" choice="single" showInline="true" required="true">
+    <Choice value="desktop" hint="настольный браузер или терминал"/>
+    <Choice value="mobile" hint="мобильная ширина вьюпорта"/>
+  </Choices>
+  <Choices name="theme" toName="image" choice="single" showInline="true" required="true">
+    <Choice value="light" hint="светлый фон"/>
+    <Choice value="dark" hint="тёмный фон (терминал)"/>
+  </Choices>
   <Header value="Уровень 2 — области" size="5"/>
   <RectangleLabels name="region" toName="image">
     <Label value="ERROR_TEXT" background="#e6194b" hint="сообщение об ошибке на экране"/>
@@ -37,6 +55,7 @@
     <Label value="DEFECT_AREA" background="#f58231" hint="место визуального или логического дефекта"/>
     <Label value="UI_ELEMENT" background="#911eb4" hint="элемент интерфейса, связанный с дефектом"/>
     <Label value="PII" background="#46a0b0" hint="персональные данные на экране — замазываются при публикации"/>
+    <Label value="CHART" background="#f032e6" hint="график или диаграмма метрики (память, время ответа)"/>
   </RectangleLabels>
   <View visibleWhen="region-selected" whenTagName="region">
     <Header value="Уровень 3 — текст в области (дословно)" size="6"/>
@@ -54,6 +73,9 @@
     <Choice value="wrong_value" hint="wrong_value"/>
     <Choice value="duplicate" hint="duplicate"/>
     <Choice value="endless_loading" hint="endless_loading"/>
+    <Choice value="injected_content" hint="injected_content"/>
+    <Choice value="data_exposure" hint="data_exposure"/>
+    <Choice value="threshold_exceeded" hint="threshold_exceeded"/>
     <Choice value="other" hint="other"/>
   </Choices>
   </View>
@@ -81,6 +103,44 @@
     <Choice value="card" hint="card"/>
     <Choice value="token" hint="token"/>
     <Choice value="phone" hint="phone"/>
+    <Choice value="address" hint="address"/>
+    <Choice value="organization" hint="organization"/>
   </Choices>
   </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="STATUS_INDICATOR">
+    <Header value="STATUS_INDICATOR: status_kind" size="6"/>
+  <Choices name="status_kind" toName="image" choice="single" showInline="true" perRegion="true">
+    <Choice value="http_status" hint="http_status"/>
+    <Choice value="net_error" hint="net_error"/>
+    <Choice value="exit_code" hint="exit_code"/>
+    <Choice value="loading" hint="loading"/>
+    <Choice value="counter" hint="counter"/>
+    <Choice value="timer" hint="timer"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="CHART">
+    <Header value="CHART: chart_kind" size="6"/>
+  <Choices name="chart_kind" toName="image" choice="single" showInline="true" perRegion="true">
+    <Choice value="line" hint="line"/>
+    <Choice value="bar" hint="bar"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="CHART">
+    <Header value="CHART: trend" size="6"/>
+  <Choices name="trend" toName="image" choice="single" showInline="true" perRegion="true">
+    <Choice value="growth" hint="growth"/>
+    <Choice value="decline" hint="decline"/>
+    <Choice value="stable" hint="stable"/>
+    <Choice value="spike" hint="spike"/>
+  </Choices>
+  </View>
+  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="DEFECT_AREA">
+    <Header value="DEFECT_AREA: expected_text (что должно быть)" size="6"/>
+    <TextArea name="expected_text" toName="image" perRegion="true" editable="true" maxSubmissions="1" rows="2"/>
+  </View>
+  <Relations>
+    <Relation value="AFFECTS"/>
+    <Relation value="EXPLAINS"/>
+    <Relation value="CAUSED_BY"/>
+  </Relations>
 </View>

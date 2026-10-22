@@ -1,0 +1,52 @@
+<annotation>
+  <folder>authentication</folder>
+  <filename>authentication_03_forbidden_403.png</filename>
+  <path>data/images/screenshots/authentication/authentication_03_forbidden_403.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>authentication</category>
+    <component>Auth-service</component>
+    <screen_type>error_page</screen_type>
+    <severity>Major</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>195</xmin><ymin>107</ymin><xmax>388</xmax><ymax>127</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>403 Forbidden</ocr_text>
+      <kind>http_status</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>146</ymin><xmax>1086</xmax><ymax>204</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>У пользователя ivan.petrov (роль project_admin) нет права users:read. Роль была назначена 5 минут назад, но токен доступа ещё содержит старый набор прав (scope: tasks:read tasks:write).</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>329</xmin><ymin>161</ymin><xmax>419</xmax><ymax>175</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>ivan.petrov</ocr_text>
+      <kind>username</kind>
+    </attributes>
+  </object>
+</annotation>
