@@ -1,0 +1,77 @@
+<annotation>
+  <folder>security</folder>
+  <filename>security_02_idor_foreign_invoice.png</filename>
+  <path>data/images/screenshots/security/security_02_idor_foreign_invoice.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>security</category>
+    <component>Billing</component>
+    <screen_type>api_response</screen_type>
+    <severity>Blocker</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>17</xmin><ymin>110</ymin><xmax>429</xmax><ymax>243</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <defect_type>data_exposure</defect_type>
+      <expected_text>403 Forbidden: счёт 43 принадлежит customer_id 2002, а запрос сделан от session_user_id 1001</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>172</xmin><ymin>154</ymin><xmax>327</xmax><ymax>168</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>ООО «Северный ветер»</ocr_text>
+      <kind>organization</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>110</xmin><ymin>170</ymin><xmax>311</xmax><ymax>183</ymax></bndbox>
+    <attributes>
+      <region_id>r5</region_id>
+      <ocr_text>finance@north-wind.example</ocr_text>
+      <kind>email</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>147</xmin><ymin>200</ymin><xmax>178</xmax><ymax>213</ymax></bndbox>
+    <attributes>
+      <region_id>r6</region_id>
+      <ocr_text>8812</ocr_text>
+      <kind>card</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>188</xmin><ymin>215</ymin><xmax>421</xmax><ymax>228</ymax></bndbox>
+    <attributes>
+      <region_id>r7</region_id>
+      <ocr_text>г. Казань, ул. Примерная, д. 1</ocr_text>
+      <kind>address</kind>
+    </attributes>
+  </object>
+</annotation>

@@ -1,0 +1,40 @@
+<annotation>
+  <folder>performance</folder>
+  <filename>performance_03_long_task_kanban.png</filename>
+  <path>data/images/screenshots/performance/performance_03_long_task_kanban.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>performance</category>
+    <component>Frontend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Major</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>195</xmin><ymin>151</ymin><xmax>577</xmax><ymax>167</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Перерисовка 20000 карточек заняла 1101 мс</ocr_text>
+      <kind>timer</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>183</ymin><xmax>1086</xmax><ymax>225</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Long Task: главный поток заблокирован на 1101 мс (startTime 114 мс). Интерфейс не отвечал на ввод.</ocr_text>
+    </attributes>
+  </object>
+</annotation>

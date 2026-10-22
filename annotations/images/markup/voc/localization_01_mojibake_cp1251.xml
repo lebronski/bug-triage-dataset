@@ -1,0 +1,49 @@
+<annotation>
+  <folder>localization</folder>
+  <filename>localization_01_mojibake_cp1251.png</filename>
+  <path>data/images/screenshots/localization/localization_01_mojibake_cp1251.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>localization</category>
+    <component>Backend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Major</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>156</xmin><ymin>21</ymin><xmax>607</xmax><ymax>35</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Р—Р°РґР°С‡Рё РџСЂРѕРµРєС‚С‹ РћС‚С‡С‘С‚С‹ РўР°СЂРёС„</ocr_text>
+      <defect_type>mojibake</defect_type>
+      <expected_text>Задачи Проекты Отчёты Тариф</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>195</xmin><ymin>107</ymin><xmax>993</xmax><ymax>256</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>РЈРІРµРґРѕРјР»РµРЅРёСЏ
+Р—Р°РґР°С‡Р° В«РСЃРїСЂР°РІРёС‚СЊ СЂР°СЃС‡С‘С‚ РќР”РЎВ» РЅР°Р·РЅР°С‡РµРЅР° РЅР° РІР°СЃ.
+РЎСЂРѕРє РІС‹РїРѕР»РЅРµРЅРёСЏ: 20 РѕРєС‚СЏР±СЂСЏ 2026 Рі.
+РљРѕРјРјРµРЅС‚Р°СЂРёР№ РѕС‚ РђРЅРЅС‹ РЎРјРёСЂРЅРѕРІРѕР№: В«РџСЂРѕРІРµСЂСЊС‚Рµ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РѕС‚С‡С‘С‚ Р·Р° СЃРµРЅС‚СЏР±СЂСЊВ».</ocr_text>
+      <defect_type>mojibake</defect_type>
+      <expected_text>Уведомления
+Задача «Исправить расчёт НДС» назначена на вас.
+Срок выполнения: 20 октября 2026 г.
+Комментарий от Анны Смирновой: «Проверьте, пожалуйста, отчёт за сентябрь».</expected_text>
+    </attributes>
+  </object>
+</annotation>

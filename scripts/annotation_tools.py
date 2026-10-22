@@ -131,6 +131,11 @@ def build_image_config(s):
          _choices("category", "image", d["category"]["values"]),
          _choices("component", "image", d["component"]["values"]),
          _choices("screen_type", "image", il["image"]["screen_type"]["values"]),
+         # схема 1.2 (ЛР5): признаки уровня изображения
+         _choices("is_defect", "image", il["image"]["is_defect"]["values"]),
+         _choices("severity", "image", d["severity"]["values"], required=False),
+         _choices("device", "image", il["image"]["device"]["values"]),
+         _choices("theme", "image", il["image"]["theme"]["values"]),
          '  <Header value="Уровень 2 — области" size="5"/>',
          _labels("region", "image", regions, tag="RectangleLabels"),
          '  <View visibleWhen="region-selected" whenTagName="region">',
@@ -143,6 +148,19 @@ def build_image_config(s):
                          s["entity_labels"]["UI_ELEMENT"]["attributes"]["kind"]["values"]),
          _region_choices("pii_kind", "image", "region", "PII",
                          s["entity_labels"]["PII"]["attributes"]["kind"]["values"]),
+         _region_choices("status_kind", "image", "region", "STATUS_INDICATOR",
+                         il["region_labels"]["STATUS_INDICATOR"]["attributes"]["kind"]),
+         _region_choices("chart_kind", "image", "region", "CHART",
+                         il["region_labels"]["CHART"]["attributes"]["chart_kind"]),
+         _region_choices("trend", "image", "region", "CHART",
+                         il["region_labels"]["CHART"]["attributes"]["trend"]),
+         '  <View visibleWhen="region-selected" whenTagName="region" whenLabelValue="DEFECT_AREA">',
+         '    <Header value="DEFECT_AREA: expected_text (что должно быть)" size="6"/>',
+         '    <TextArea name="expected_text" toName="image" perRegion="true" editable="true" maxSubmissions="1" rows="2"/>',
+         '  </View>',
+         '  <Relations>',
+         *[f'    <Relation value="{r}"/>' for r in il["relations"] if r != "since"],
+         '  </Relations>',
          "</View>"]
     return "\n".join(p) + "\n"
 
@@ -383,6 +401,15 @@ def validate_images(ck, s):
         check_doc_labels(ck, f"{w} {im['file_name']}", s, at, keys=("category", "component"))
         if at.get("screen_type") not in il["image"]["screen_type"]["values"]:
             ck.err(w, f"{im['file_name']}: screen_type={at.get('screen_type')!r}")
+        if "is_defect" in at:  # признаки схемы 1.2 (эталоны ЛР2 их не содержат)
+            for k in ("is_defect", "device", "theme"):
+                if at.get(k) not in il["image"][k]["values"]:
+                    ck.err(w, f"{im['file_name']}: {k}={at.get(k)!r} вне словаря")
+            sev = at.get("severity")
+            if at.get("is_defect") == "yes" and sev not in s["document_labels"]["severity"]["values"]:
+                ck.err(w, f"{im['file_name']}: для дефекта нужна severity, получено {sev!r}")
+            if at.get("is_defect") == "no" and sev is not None:
+                ck.err(w, f"{im['file_name']}: severity должна быть null, если is_defect = no")
         imgs[im["id"]] = im
         ck.ok["images"] += 1
     mn = s["limits"]["bbox_min_side_px"]
@@ -406,18 +433,39 @@ def validate_images(ck, s):
         if spec["ocr_text"] == "required" and not ocr:
             ck.err(wa, f"{lab}: обязателен ocr_text")
         need = {"DEFECT_AREA": ("defect_type", spec.get("attributes", {}).get("defect_type")),
+                "CHART": ("chart_kind", spec.get("attributes", {}).get("chart_kind")),
                 "UI_ELEMENT": ("kind", s["entity_labels"]["UI_ELEMENT"]["attributes"]["kind"]["values"]),
                 "PII": ("kind", s["entity_labels"]["PII"]["attributes"]["kind"]["values"])}
         if lab in need:
             k, vals = need[lab]
             if at.get(k) not in vals:
                 ck.err(wa, f"{lab}: {k}={at.get(k)!r} вне словаря")
+        if lab == "STATUS_INDICATOR" and "kind" in at and at["kind"] not in spec["attributes"]["kind"]:
+            ck.err(wa, f"STATUS_INDICATOR: kind={at['kind']!r} вне словаря")
+        if lab == "CHART" and at.get("trend") not in spec["attributes"]["trend"]:
+            ck.err(wa, f"CHART: trend={at.get('trend')!r} вне словаря")
         if at.get("entities"):
             if not ocr:
                 ck.err(wa, "сущности без ocr_text")
             else:
                 check_entities(ck, wa, s, ocr, at["entities"])
         ck.ok["image_regions"] += 1
+    ann_by_id = {an["id"]: an for an in coco["annotations"]}
+    rel = il.get("relations", {})
+    for im in imgs.values():
+        for r in im.get("attributes", {}).get("relations", []):
+            wr = f"{w} {im['file_name']} relation {r}"
+            a, b = ann_by_id.get(r.get("from")), ann_by_id.get(r.get("to"))
+            if a is None or b is None or a["image_id"] != im["id"] or b["image_id"] != im["id"]:
+                ck.err(wr, "связь ссылается на область другого изображения или несуществующую")
+                continue
+            t = rel.get(r.get("type"))
+            if not isinstance(t, dict):
+                ck.err(wr, "тип связи вне словаря")
+            elif cats[a["category_id"]] not in t["from"] or cats[b["category_id"]] not in t["to"]:
+                ck.err(wr, f"{r['type']}: недопустимая пара {cats[a['category_id']]} → {cats[b['category_id']]}")
+            else:
+                ck.ok["image_relations"] = ck.ok.get("image_relations", 0) + 1
 
 
 def parse_textgrid(path):
@@ -512,7 +560,7 @@ def cmd_validate(args):
              f"Схема: `annotation_schema/schema.json`, версия {s['version']}.", "",
              "| Что проверено | Количество |", "|---|---:|"]
     names = {"text_reports": "баг-репортов (уровни 1–3)", "entities": "сущностей во всех модальностях",
-             "log_lines": "строк логов", "images": "изображений", "image_regions": "областей на изображениях",
+             "log_lines": "строк логов", "images": "изображений", "image_regions": "областей на изображениях", "image_relations": "связей между областями",
              "audio_files": "аудиозаписей", "audio_segments": "речевых сегментов"}
     for k, v in names.items():
         lines.append(f"| {v} | {ck.ok.get(k, 0)} |")
@@ -640,14 +688,20 @@ def cmd_agree(args):
         fa, fb = fn(ja), fn(jb)
         boxes = lambda j, nm, ff: [(ff[x["image_id"]], nm[x["category_id"]], x["bbox"]) for x in j["annotations"]]
         ba, bb = boxes(ja, na_, fa), boxes(jb, nb_, fb)
+        tol = s["limits"]["bbox_tolerance_px"]
+        dev = lambda b1, b2: max(abs(b1[0] - b2[0]), abs(b1[1] - b2[1]), abs(b1[0] + b1[2] - b2[0] - b2[2]),
+                                 abs(b1[1] + b1[3] - b2[1] - b2[3]))
         used, tp = set(), 0
         for f, l, b in ba:
             best = max(((iou(b, b2), k) for k, (f2, l2, b2) in enumerate(bb)
                         if f2 == f and l2 == l and k not in used), default=(0, None))
-            if best[0] >= q["bbox_iou_match"]:
+            # схема 1.2: рамки совпадают при IoU ≥ порога или если все стороны в пределах допуска
+            # (для тонких строк текста IoU слишком чувствителен к отступу в 3–4 px)
+            if best[1] is not None and (best[0] >= q["bbox_iou_match"] or dev(b, bb[best[1]][2]) <= tol):
                 used.add(best[1])
                 tp += 1
-        rows.append((f"F1 областей на изображениях (IoU ≥ {q['bbox_iou_match']})", f1(tp, len(ba), len(bb)), q["bbox_f1"]))
+        rows.append((f"F1 областей на изображениях (IoU ≥ {q['bbox_iou_match']} или стороны ±{tol} px)",
+                     f1(tp, len(ba), len(bb)), q["bbox_f1"]))
     tol = s["limits"]["audio_boundary_tolerance_sec"]
     hit = tot = 0
     for tg in (A / "audio").glob("*/*.TextGrid"):

@@ -1,0 +1,92 @@
+<annotation>
+  <folder>ui_layout</folder>
+  <filename>ui_layout_01_button_overflow.png</filename>
+  <path>data/images/screenshots/ui_layout/ui_layout_01_button_overflow.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>780</width><height>1520</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>ui_layout</category>
+    <component>Frontend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Minor</severity>
+    <is_defect>yes</is_defect>
+    <device>mobile</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>UI_ELEMENT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>88</xmin><ymin>270</ymin><xmax>368</xmax><ymax>348</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>Отправить на сог</ocr_text>
+      <kind>button</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>UI_ELEMENT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>384</xmin><ymin>270</ymin><xmax>664</xmax><ymax>348</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Сохранить черновик</ocr_text>
+      <kind>button</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>128</xmin><ymin>296</ymin><xmax>710</xmax><ymax>324</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>Отправить на сог Сохранить черновик</ocr_text>
+      <defect_type>overflow</defect_type>
+      <expected_text>Отправить на согласование | Сохранить черновик</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>89</xmin><ymin>386</ymin><xmax>681</xmax><ymax>411</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>Описание: Пользователь не может</ocr_text>
+      <defect_type>overflow</defect_type>
+      <expected_text>Описание: Пользователь не может прикрепить файл размером больше 10 МБ к задаче</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>762</xmin><ymin>43</ymin><xmax>780</xmax><ymax>64</ymax></bndbox>
+    <attributes>
+      <region_id>r5</region_id>
+      <ocr_text>Т</ocr_text>
+      <defect_type>overflow</defect_type>
+      <expected_text>Тариф</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>105</xmin><ymin>507</ymin><xmax>537</xmax><ymax>615</ymax></bndbox>
+    <attributes>
+      <region_id>r6</region_id>
+      <ocr_text>Константинопольский-Великорецкий Александр Владимирович</ocr_text>
+      <kind>person_name</kind>
+    </attributes>
+  </object>
+</annotation>

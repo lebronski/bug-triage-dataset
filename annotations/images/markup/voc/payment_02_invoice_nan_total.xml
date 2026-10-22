@@ -1,0 +1,69 @@
+<annotation>
+  <folder>payment</folder>
+  <filename>payment_02_invoice_nan_total.png</filename>
+  <path>data/images/screenshots/payment/payment_02_invoice_nan_total.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>payment</category>
+    <component>Frontend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Blocker</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>939</xmin><ymin>192</ymin><xmax>982</xmax><ymax>204</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>5.00 ₽</ocr_text>
+      <defect_type>wrong_value</defect_type>
+      <expected_text>6 495,00 ₽</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>939</xmin><ymin>227</ymin><xmax>1000</xmax><ymax>239</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>349.00 ₽</ocr_text>
+      <defect_type>wrong_value</defect_type>
+      <expected_text>349,50 ₽</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>939</xmin><ymin>262</ymin><xmax>982</xmax><ymax>274</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>0.00 ₽</ocr_text>
+      <defect_type>wrong_format</defect_type>
+      <expected_text>0,00 ₽</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>369</xmin><ymin>310</ymin><xmax>435</xmax><ymax>326</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>NaN ₽</ocr_text>
+      <defect_type>wrong_value</defect_type>
+      <expected_text>6 844,50 ₽</expected_text>
+    </attributes>
+  </object>
+</annotation>

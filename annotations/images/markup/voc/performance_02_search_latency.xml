@@ -1,0 +1,56 @@
+<annotation>
+  <folder>performance</folder>
+  <filename>performance_02_search_latency.png</filename>
+  <path>data/images/screenshots/performance/performance_02_search_latency.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>performance</category>
+    <component>Backend</component>
+    <screen_type>ui_screen</screen_type>
+    <severity>Major</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>CHART</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>536</xmin><ymin>192</ymin><xmax>1037</xmax><ymax>379</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <chart_kind>bar</chart_kind>
+      <trend>growth</trend>
+    </attributes>
+  </object>
+  <object>
+    <name>DEFECT_AREA</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>194</xmin><ymin>286</ymin><xmax>1086</xmax><ymax>390</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>2000 1006
+3000 2256
+4000 4004</ocr_text>
+      <defect_type>threshold_exceeded</defect_type>
+      <expected_text>≤ 300 мс (SLA)</expected_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>195</xmin><ymin>409</ymin><xmax>694</xmax><ymax>426</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>Измерено в браузере (fetch, performance.now). SLA: 300 мс.</ocr_text>
+      <kind>counter</kind>
+    </attributes>
+  </object>
+</annotation>

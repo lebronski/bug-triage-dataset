@@ -1,6 +1,6 @@
 # Аннотационная схема Bug Triage Dataset
 
-Версия 1.1 от 17.10.2026 (1.0 — Лабораторная работа №2 «Проектирование аннотационной схемы»; 1.1 — дополнения ЛР3 «Разметка текстовых данных», [раздел 8](#8-многоуровневая-разметка-текста-лр3))
+Версия 1.2 от 22.10.2026 (1.0 — Лабораторная работа №2 «Проектирование аннотационной схемы»; 1.1 — дополнения ЛР3 «Разметка текстовых данных», [раздел 8](#8-многоуровневая-разметка-текста-лр3); 1.2 — дополнения ЛР5 «Разметка изображений», [раздел 9](#9-разметка-изображений-лр5))
 (учебное пособие «Структурирование, разметка и обогащение данных», Муромцев Д.И., Шилин И.А., Исаев И.В.).
 
 Машиночитаемая версия схемы — [`annotation_schema/schema.json`](../annotation_schema/schema.json).
@@ -23,6 +23,7 @@
 6. [Верификация аннотаций](#6-верификация-аннотаций)
 7. [Размещение в репозитории](#7-размещение-в-репозитории)
 8. [Многоуровневая разметка текста (ЛР3)](#8-многоуровневая-разметка-текста-лр3)
+9. [Разметка изображений (ЛР5)](#9-разметка-изображений-лр5)
 
 ---
 
@@ -57,7 +58,7 @@
 |---|---|---|---|---|---|---|---|
 | **Текст: баг-репорт** | ticket_type, category, component, severity | разделы `TITLE…NOTES`, элементы `STEP`, `FRAME` | `EXCEPTION`, `ERROR_MESSAGE`, `CODE_LOCATION`, `ERROR_CODE` | `ENV` | `UI_ELEMENT` | `METRIC` | `PII` |
 | **Текст: лог** | category, system (файл) | строка = событие: level, event_type, is_anomaly | те же метки в строке | `ENV` | — | `METRIC` | `PII` (ip, host, username) |
-| **Изображение** | category, component, screen_type | области `ERROR_TEXT`, `STACK_TRACE`, `STATUS_INDICATOR` | сущности в тексте области (ocr_text) | — | области `UI_ELEMENT`, `DEFECT_AREA` | сущности в ocr_text | область `PII` |
+| **Изображение** | category, component, screen_type; с 1.2 — is_defect, severity, device, theme | области `ERROR_TEXT`, `STACK_TRACE`, `STATUS_INDICATOR` | сущности в тексте области (ocr_text) | — | области `UI_ELEMENT`, `DEFECT_AREA` | сущности в ocr_text; с 1.2 — область `CHART` | область `PII` |
 | **Аудио** | category, component, severity, urgency | сегменты `GREETING…CLOSING`, транскрипция | сущности в транскрипции | `ENV` в транскрипции | `UI_ELEMENT` в транскрипции | `METRIC` в транскрипции | `PII` (имя звонящего) |
 
 ---
@@ -125,17 +126,19 @@
 ### 2.4. Требования к изображениям
 
 - На уровне изображения: `category`, `component`, `screen_type` (`error_page`, `browser_error`,
-  `console`, `api_response`, `ui_screen`).
+  `console`, `api_response`, `ui_screen`); с версии 1.2 — `is_defect`, `severity`, `device`, `theme`
+  (см. [раздел 9](#9-разметка-изображений-лр5)).
 - Области (прямоугольные рамки):
 
 | Метка области | Что выделять | Обязательные атрибуты |
 |---|---|---|
 | `ERROR_TEXT` | сообщение об ошибке | `ocr_text` |
 | `STACK_TRACE` | блок трассировки или вывода программы | — |
-| `STATUS_INDICATOR` | HTTP-статус, индикатор загрузки, счётчик | `ocr_text` |
-| `DEFECT_AREA` | место визуального или логического дефекта | `defect_type`: overflow / overlap / wrong_layer / mojibake / untranslated / wrong_format / wrong_value / duplicate / endless_loading / other |
+| `STATUS_INDICATOR` | HTTP-статус, индикатор загрузки, счётчик | `ocr_text`; с 1.2 — `kind` |
+| `DEFECT_AREA` | место визуального или логического дефекта | `defect_type`: overflow / overlap / wrong_layer / mojibake / untranslated / wrong_format / wrong_value / duplicate / endless_loading / other; с 1.2 — injected_content / data_exposure / threshold_exceeded и необязательный `expected_text` |
 | `UI_ELEMENT` | элемент интерфейса, связанный с дефектом | `kind` |
 | `PII` | персональные данные на экране | `kind` |
+| `CHART` (с 1.2) | график или диаграмма метрики | `chart_kind`, `trend` |
 
 - Внутри `ocr_text` области размечаются сущности (`EXCEPTION`, `ERROR_CODE`, `ERROR_MESSAGE`, …)
   со смещениями относительно `ocr_text`.
@@ -223,6 +226,8 @@
 - Вложенные рамки допустимы (строка ошибки внутри блока `STACK_TRACE`).
 - `ocr_text` — дословно, как на экране, включая регистр и пунктуацию; строки таблицы — через перевод строки.
 - Маскированные данные (`•••• 4242`) всё равно размечаются как `PII`.
+- (1.2) Перенос строки внутри абзаца в `ocr_text` заменяется пробелом; обрезанный или искажённый текст
+  записывается так, как виден, а полный — в `expected_text`; у `PII` записывается только значение.
 
 **Аудио**
 
@@ -378,7 +383,7 @@ intervals [6]:
 | component | каппа Коэна | ≥ 0,75 |
 | severity | каппа Коэна (субъективный признак) | ≥ 0,6 |
 | сущности в тексте | F1 по точному совпадению (метка + границы) | ≥ 0,8 |
-| области на изображениях | F1 при IoU ≥ 0,7 и совпадении метки | ≥ 0,85 |
+| области на изображениях | F1 при совпадении метки и рамки: IoU ≥ 0,7 или все стороны в пределах 5 px (с 1.2) | ≥ 0,85 |
 | сегменты аудио | доля границ, совпавших в пределах ±0,1 с | ≥ 0,9 |
 | расшифровка | WER относительно эталонного текста `audio.csv` | ≤ 10 % |
 
@@ -435,13 +440,15 @@ annotations/
 │   ├── conllu/<report_id>.conllu
 │   └── logs/<category>/<log>.jsonl
 ├── images/
-│   └── screenshots_coco.json
+│   ├── screenshots_coco.json   ← итоговая разметка 30 скриншотов (ЛР5)
+│   └── markup/                 ← ЛР5: ручная разметка, предразметка, Label Studio, VOC, YOLO, CSV
 └── audio/
     └── <category>/<name>.TextGrid + <name>.json
 docs/
 ├── annotation_schema.md        ← этот документ
 ├── annotation_validation_report.md
-└── text_markup_analysis.md     ← анализ разметки текста (ЛР3)
+├── text_markup_analysis.md     ← анализ разметки текста (ЛР3)
+└── image_markup_analysis.md    ← процесс и анализ разметки изображений (ЛР5)
 annotations/text/markup/        ← многоуровневая разметка текста (ЛР3), см. раздел 8
 ```
 
@@ -527,9 +534,77 @@ annotations/text/markup/        ← многоуровневая разметк�
 Разметка, выгруженная из INCEpTION, совпадает с исходной (`text_markup.py roundtrip`): 407 сущностей, 191 раздел,
 3915 тегов POS, 87 связей.
 
+## 9. Разметка изображений (ЛР5)
+
+Добавлено в версии 1.2. Процесс, проверка и анализ — [docs/image_markup_analysis.md](image_markup_analysis.md),
+статистика — [docs/image_markup_stats.md](image_markup_stats.md).
+
+### 9.1. Уровни
+
+| Уровень | Что размечается | Элементы Label Studio |
+|---|---|---|
+| 1. Изображение | `category`, `component`, `screen_type`, `is_defect`, `severity`, `device`, `theme` | `Choices` |
+| 2. Область | рамка с меткой `ERROR_TEXT`, `STACK_TRACE`, `STATUS_INDICATOR`, `DEFECT_AREA`, `UI_ELEMENT`, `PII`, `CHART`; связи между областями | `RectangleLabels`, `Relations` |
+| 3. Деталь | дословный текст области, атрибуты метки, сущности в тексте (`EXCEPTION`, `ERROR_CODE`, `ERROR_MESSAGE`, `METRIC`) | `TextArea`, `Choices` для выбранной области (`perRegion`) |
+
+### 9.2. Новые признаки и метки
+
+| Признак / метка | Значения | Когда ставить |
+|---|---|---|
+| `is_defect` | yes / no | `no` — ошибка показана правильно: неверный пароль, истёкший токен, отказ банка. Такие экраны — отрицательные примеры |
+| `severity` | Blocker / Critical / Major / Minor | критерии раздела 2.1; `null`, если `is_defect = no` |
+| `device` | desktop / mobile | mobile — мобильная ширина вьюпорта |
+| `theme` | light / dark | dark — терминал |
+| `STATUS_INDICATOR.kind` | http_status, net_error, exit_code, loading, counter, timer | вид статуса: `500`, `ERR_NAME_NOT_RESOLVED`, `[exit code 1]`, «Загрузка… 8.2 с», «Обновлений ленты: 31», «заняла 1101 мс» |
+| `CHART` | `chart_kind`: line / bar; `trend`: growth / decline / stable / spike | график или диаграмма, по которым виден дефект (утечка памяти, время ответа) |
+| `DEFECT_AREA.defect_type` | + `injected_content`, `data_exposure`, `threshold_exceeded` | XSS; чужие данные (IDOR); метрика выше SLA или лимита |
+| `DEFECT_AREA.expected_text` | текст | что должно быть на месте дефекта: «17.10.2026» вместо «10/17/2026», исходный текст вместо mojibake |
+| `PII.kind` | + `address`, `organization` | адрес, название организации-клиента |
+
+### 9.3. Связи между областями
+
+| Связь | Откуда → куда | Пример |
+|---|---|---|
+| `AFFECTS` | `DEFECT_AREA` → `UI_ELEMENT` | текст не помещается → кнопка «Сохранить черновик» |
+| `EXPLAINS` | `ERROR_TEXT` / `STATUS_INDICATOR` → любая область | `Status: 500` → `Exception: sqlite3.OperationalError…` |
+| `CAUSED_BY` | `DEFECT_AREA` → `UI_ELEMENT` / `DEFECT_AREA` | повторные списания → незаблокированная кнопка «Оплатить» |
+
+В COCO связи хранятся в `images[].attributes.relations` (`from`, `to` — id областей), в Label Studio —
+как результаты типа `relation`.
+
+### 9.4. Правила разметки
+
+* Рамка вплотную к содержимому (допуск 5 px). Рамка элемента интерфейса — по его фону или границе, рамка
+  текста — по пикселям текста. Для `STACK_TRACE` на странице ошибки рамка — блок `<pre>` целиком.
+* Вложение допустимо: код внутри сообщения (`401 Unauthorized.`) — `STATUS_INDICATOR` внутри `ERROR_TEXT`;
+  последняя строка трейсбека — `ERROR_TEXT` внутри `STACK_TRACE`.
+* `ocr_text` — дословно, включая искажения (mojibake с символом U+0098, ключи `settings.timezone`).
+  Перенос внутри абзаца → пробел; строки таблицы, `<br>`, строки терминала → `\n`.
+* Обрезанный текст — как виден («Отправить на сог»), полный — в `expected_text`.
+* `PII` — только значение (без ключа JSON и кавычек). `user@host` в приглашении терминала — `PII host`.
+* `DEFECT_AREA` для повторяющихся записей — только повторяющиеся строки, без заголовка таблицы.
+* Компонент — по месту дефекта: суммы, посчитанные JavaScript страницы, — Frontend, даже если категория `payment`.
+* Совпадение рамок при проверке: IoU ≥ 0,7 **или** все стороны отличаются не больше чем на 5 px.
+
+### 9.5. Инструмент и форматы
+
+Инструмент — **Label Studio** (конфигурация `annotation_schema/label_studio/images.xml` генерируется из
+`schema.json`). Конвейер — `scripts/image_markup.py`: `auto` (предразметка Tesseract OCR + правила),
+`final` (итоговая разметка из `annotations/images/markup/manual.json`), `export`, `lsf` (редактор
+Label Studio и round-trip), `overlay`, `agree`, `analyze`, `ls-import`.
+
+| Формат | Файлы |
+|---|---|
+| COCO JSON (основной) | `annotations/images/screenshots_coco.json` |
+| Label Studio JSON | `annotations/images/markup/labelstudio/tasks.json` (разметка + предразметка), `export_from_editor.json` |
+| Pascal VOC XML | `annotations/images/markup/voc/<имя>.xml` |
+| YOLO | `annotations/images/markup/yolo/` (`labels/`, `classes.txt`, `dataset.yaml`) |
+| CSV | `annotations/images/markup/regions.csv` |
+
 ## Журнал изменений схемы
 
 | Версия | Дата | Изменения |
 |---|---|---|
 | 1.0 | 2026-10-17 | первая версия: 4 класса обращения, 9 разделов, 8 типов сущностей, 3 типа связей, разметка логов, 6 типов областей на изображениях, 7 типов сегментов аудио |
 | 1.1 | 2026-10-17 | ЛР3: сущности PRODUCT, TECHNOLOGY, SYMPTOM, FEATURE, ISSUE_REF, LOCALE; атрибуты `kb_uri`, `SYMPTOM.polarity`, `ENV.source`, `CODE_LOCATION.kind=config`; связи SYMPTOM_OF, CAUSED_BY, VERSION_OF, расширена OBSERVED_IN; вложение внутри ERROR_MESSAGE; уровни text_markup (абзац, предложение, токен, часть речи UD/Penn, лемма); слои INCEpTION. Обратно совместима с 1.0 |
+| 1.2 | 2026-10-22 | ЛР5: признаки изображения `is_defect`, `severity`, `device`, `theme`; область `CHART` (`chart_kind`, `trend`); `STATUS_INDICATOR.kind`; `DEFECT_AREA.defect_type` += injected_content, data_exposure, threshold_exceeded; `DEFECT_AREA.expected_text`; `PII.kind` += address, organization; связи между областями AFFECTS, EXPLAINS, CAUSED_BY; правила `ocr_text`; правило совпадения рамок (IoU ≥ 0,7 или стороны ±5 px). Обратно совместима с 1.0 и 1.1 |

@@ -1,0 +1,140 @@
+file,category,component,screen_type,is_defect,severity,region_id,label,x,y,width,height,attributes,ocr_text,entities
+authentication/authentication_01_login_401.png,authentication,Auth-service,ui_screen,no,,r1,ERROR_TEXT,454,158,372,90,{},401 Unauthorized. Неверный логин или пароль. Осталось попыток: 2. После 3 неудачных попыток учётная запись будет заблокирована на 15 минут.,ERROR_CODE:401; ERROR_MESSAGE:Unauthorized; ERROR_MESSAGE:Неверный логин или пароль; METRIC:2; METRIC:15 минут
+authentication/authentication_01_login_401.png,authentication,Auth-service,ui_screen,no,,r2,STATUS_INDICATOR,469,173,145,12,"{""kind"": ""http_status""}",401 Unauthorized.,ERROR_CODE:401; ERROR_MESSAGE:Unauthorized
+authentication/authentication_01_login_401.png,authentication,Auth-service,ui_screen,no,,r3,UI_ELEMENT,454,279,372,39,"{""kind"": ""field""}",ivan.petrov,
+authentication/authentication_01_login_401.png,authentication,Auth-service,ui_screen,no,,r4,PII,466,293,72,14,"{""kind"": ""username""}",ivan.petrov,
+authentication/authentication_01_login_401.png,authentication,Auth-service,ui_screen,no,,r5,UI_ELEMENT,454,349,372,39,"{""kind"": ""field""}",,
+authentication/authentication_01_login_401.png,authentication,Auth-service,ui_screen,no,,r6,UI_ELEMENT,454,407,82,39,"{""kind"": ""button""}",Войти,
+authentication/authentication_02_api_token_expired.png,authentication,Auth-service,api_response,no,,r1,ERROR_TEXT,18,50,191,13,{},"""error"": ""invalid_token"",",ERROR_CODE:invalid_token
+authentication/authentication_02_api_token_expired.png,authentication,Auth-service,api_response,no,,r2,ERROR_TEXT,18,65,558,13,{},"""error_description"": ""The access token expired at 2026-10-17T09:12:44Z"",",ERROR_MESSAGE:The access token expired at 2026-10-17T09:12:44Z
+authentication/authentication_03_forbidden_403.png,authentication,Auth-service,error_page,yes,Major,r1,STATUS_INDICATOR,195,107,193,20,"{""kind"": ""http_status""}",403 Forbidden,ERROR_CODE:403; ERROR_MESSAGE:Forbidden
+authentication/authentication_03_forbidden_403.png,authentication,Auth-service,error_page,yes,Major,r2,ERROR_TEXT,194,146,892,58,{},"У пользователя ivan.petrov (роль project_admin) нет права users:read. Роль была назначена 5 минут назад, но токен доступа ещё содержит старый набор прав (scope: tasks:read tasks:write).",METRIC:5 минут
+authentication/authentication_03_forbidden_403.png,authentication,Auth-service,error_page,yes,Major,r3,PII,329,161,90,14,"{""kind"": ""username""}",ivan.petrov,
+crash/crash_01_python_typeerror.png,crash,Backend,console,yes,Critical,r1,STACK_TRACE,18,92,606,156,{},,
+crash/crash_01_python_typeerror.png,crash,Backend,console,yes,Critical,r2,ERROR_TEXT,18,234,412,14,{},TypeError: 'NoneType' object is not subscriptable,EXCEPTION:TypeError; ERROR_MESSAGE:'NoneType' object is not subscriptable
+crash/crash_01_python_typeerror.png,crash,Backend,console,yes,Critical,r3,STATUS_INDICATOR,21,254,104,13,"{""kind"": ""exit_code""}",[exit code 1],ERROR_CODE:1
+crash/crash_01_python_typeerror.png,crash,Backend,console,yes,Critical,r4,PII,81,10,127,13,"{""kind"": ""host""}",qa@taskflow-stage,
+crash/crash_01_python_typeerror.png,crash,Backend,console,yes,Critical,r5,PII,19,51,143,15,"{""kind"": ""host""}",qa@taskflow-stage,
+crash/crash_01_python_typeerror.png,crash,Backend,console,yes,Critical,r6,PII,19,274,142,14,"{""kind"": ""host""}",qa@taskflow-stage,
+crash/crash_02_node_typeerror.png,crash,Backend,console,yes,Critical,r1,STACK_TRACE,18,92,748,278,{},,
+crash/crash_02_node_typeerror.png,crash,Backend,console,yes,Critical,r2,ERROR_TEXT,18,173,528,14,{},TypeError: Cannot read properties of undefined (reading 'name'),EXCEPTION:TypeError; ERROR_MESSAGE:Cannot read properties of undefined (reading 'name')
+crash/crash_02_node_typeerror.png,crash,Backend,console,yes,Critical,r3,STATUS_INDICATOR,21,416,104,13,"{""kind"": ""exit_code""}",[exit code 1],ERROR_CODE:1
+crash/crash_02_node_typeerror.png,crash,Backend,console,yes,Critical,r4,PII,81,10,127,13,"{""kind"": ""host""}",qa@taskflow-stage,
+crash/crash_02_node_typeerror.png,crash,Backend,console,yes,Critical,r5,PII,19,51,143,15,"{""kind"": ""host""}",qa@taskflow-stage,
+crash/crash_02_node_typeerror.png,crash,Backend,console,yes,Critical,r6,PII,19,437,142,14,"{""kind"": ""host""}",qa@taskflow-stage,
+crash/crash_03_http500_debug.png,crash,Backend,error_page,yes,Critical,r1,ERROR_TEXT,26,21,407,24,{},AttributeError at /profile/1001,EXCEPTION:AttributeError
+crash/crash_03_http500_debug.png,crash,Backend,error_page,yes,Critical,r2,STATUS_INDICATOR,361,54,211,11,"{""kind"": ""http_status""}",Status: 500 Internal Server Error,ERROR_CODE:500; ERROR_MESSAGE:Internal Server Error
+crash/crash_03_http500_debug.png,crash,Backend,error_page,yes,Critical,r3,ERROR_TEXT,594,54,497,13,{},Exception: AttributeError: 'NoneType' object has no attribute 'profile',EXCEPTION:AttributeError; ERROR_MESSAGE:'NoneType' object has no attribute 'profile'
+crash/crash_03_http500_debug.png,crash,Backend,error_page,yes,Critical,r4,STACK_TRACE,26,106,1228,188,{},,
+crash/crash_03_http500_debug.png,crash,Backend,error_page,yes,Critical,r5,ERROR_TEXT,46,263,467,13,{},AttributeError: 'NoneType' object has no attribute 'profile',EXCEPTION:AttributeError; ERROR_MESSAGE:'NoneType' object has no attribute 'profile'
+database/database_01_sqlite_database_locked.png,database,Database,error_page,yes,Critical,r1,ERROR_TEXT,27,21,467,25,{},OperationalError at /orders/42/pay,EXCEPTION:OperationalError
+database/database_01_sqlite_database_locked.png,database,Database,error_page,yes,Critical,r2,STATUS_INDICATOR,345,54,212,11,"{""kind"": ""http_status""}",Status: 500 Internal Server Error,ERROR_CODE:500; ERROR_MESSAGE:Internal Server Error
+database/database_01_sqlite_database_locked.png,database,Database,error_page,yes,Critical,r3,ERROR_TEXT,578,54,396,13,{},Exception: sqlite3.OperationalError: database is locked,EXCEPTION:sqlite3.OperationalError; ERROR_MESSAGE:database is locked
+database/database_01_sqlite_database_locked.png,database,Database,error_page,yes,Critical,r4,STACK_TRACE,26,106,1228,188,{},,
+database/database_01_sqlite_database_locked.png,database,Database,error_page,yes,Critical,r5,ERROR_TEXT,47,263,342,13,{},sqlite3.OperationalError: database is locked,EXCEPTION:sqlite3.OperationalError; ERROR_MESSAGE:database is locked
+database/database_02_unique_constraint.png,database,Database,error_page,yes,Major,r1,ERROR_TEXT,28,21,328,25,{},IntegrityError at /signup,EXCEPTION:IntegrityError
+database/database_02_unique_constraint.png,database,Database,error_page,yes,Major,r2,STATUS_INDICATOR,348,54,211,11,"{""kind"": ""http_status""}",Status: 500 Internal Server Error,ERROR_CODE:500; ERROR_MESSAGE:Internal Server Error
+database/database_02_unique_constraint.png,database,Database,error_page,yes,Major,r3,ERROR_TEXT,581,54,513,13,{},Exception: sqlite3.IntegrityError: UNIQUE constraint failed: users.email,EXCEPTION:sqlite3.IntegrityError; ERROR_MESSAGE:UNIQUE constraint failed: users.email
+database/database_02_unique_constraint.png,database,Database,error_page,yes,Major,r4,STACK_TRACE,26,106,1228,188,{},,
+database/database_02_unique_constraint.png,database,Database,error_page,yes,Major,r5,ERROR_TEXT,47,263,475,13,{},sqlite3.IntegrityError: UNIQUE constraint failed: users.email,EXCEPTION:sqlite3.IntegrityError; ERROR_MESSAGE:UNIQUE constraint failed: users.email
+database/database_02_unique_constraint.png,database,Database,error_page,yes,Major,r6,PII,428,224,164,13,"{""kind"": ""email""}",ivan@taskflow.example,
+database/database_03_no_such_table.png,database,Database,error_page,yes,Critical,r1,ERROR_TEXT,27,21,483,25,{},OperationalError at /billing/invoices,EXCEPTION:OperationalError
+database/database_03_no_such_table.png,database,Database,error_page,yes,Critical,r2,STATUS_INDICATOR,353,54,211,11,"{""kind"": ""http_status""}",Status: 500 Internal Server Error,ERROR_CODE:500; ERROR_MESSAGE:Internal Server Error
+database/database_03_no_such_table.png,database,Database,error_page,yes,Critical,r3,ERROR_TEXT,586,54,428,13,{},Exception: sqlite3.OperationalError: no such table: invoices,EXCEPTION:sqlite3.OperationalError; ERROR_MESSAGE:no such table: invoices
+database/database_03_no_such_table.png,database,Database,error_page,yes,Critical,r4,STACK_TRACE,26,106,1228,188,{},,
+database/database_03_no_such_table.png,database,Database,error_page,yes,Critical,r5,ERROR_TEXT,47,263,382,13,{},sqlite3.OperationalError: no such table: invoices,EXCEPTION:sqlite3.OperationalError; ERROR_MESSAGE:no such table: invoices
+localization/localization_01_mojibake_cp1251.png,localization,Backend,ui_screen,yes,Major,r1,DEFECT_AREA,156,21,451,14,"{""defect_type"": ""mojibake"", ""expected_text"": ""Задачи Проекты Отчёты Тариф""}",Р—Р°РґР°С‡Рё РџСЂРѕРµРєС‚С‹ РћС‚С‡С‘С‚С‹ РўР°СЂРёС„,
+localization/localization_01_mojibake_cp1251.png,localization,Backend,ui_screen,yes,Major,r2,DEFECT_AREA,195,107,798,149,"{""defect_type"": ""mojibake"", ""expected_text"": ""Уведомления\nЗадача «Исправить расчёт НДС» назначена на вас.\nСрок выполнения: 20 октября 2026 г.\nКомментарий от Анны Смирновой: «Проверьте, пожалуйста, отчёт за сентябрь».""}","РЈРІРµРґРѕРјР»РµРЅРёСЏ
+Р—Р°РґР°С‡Р° В«РСЃРїСЂР°РІРёС‚СЊ СЂР°СЃС‡С‘С‚ РќР”РЎВ» РЅР°Р·РЅР°С‡РµРЅР° РЅР° РІР°СЃ.
+РЎСЂРѕРє РІС‹РїРѕР»РЅРµРЅРёСЏ: 20 РѕРєС‚СЏР±СЂСЏ 2026 Рі.
+РљРѕРјРјРµРЅС‚Р°СЂРёР№ РѕС‚ РђРЅРЅС‹ РЎРјРёСЂРЅРѕРІРѕР№: В«РџСЂРѕРІРµСЂСЊС‚Рµ, РїРѕР¶Р°Р»СѓР№СЃС‚Р°, РѕС‚С‡С‘С‚ Р·Р° СЃРµРЅС‚СЏР±СЂСЊВ».",
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r1,DEFECT_AREA,194,288,116,13,"{""defect_type"": ""untranslated""}",settings.timezone,
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r2,DEFECT_AREA,194,358,180,13,"{""defect_type"": ""untranslated""}",settings.notifications.digest,
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r3,DEFECT_AREA,194,428,116,13,"{""defect_type"": ""untranslated""}",settings.language,
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r4,UI_ELEMENT,194,503,185,39,"{""kind"": ""button""}",common.actions.save,
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r5,DEFECT_AREA,214,517,145,12,"{""defect_type"": ""untranslated""}",common.actions.save,
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r6,UI_ELEMENT,384,503,197,39,"{""kind"": ""button""}",common.actions.cancel,
+localization/localization_02_missing_translation_keys.png,localization,Frontend,ui_screen,yes,Minor,r7,DEFECT_AREA,405,517,155,12,"{""defect_type"": ""untranslated""}",common.actions.cancel,
+localization/localization_03_wrong_number_date_format.png,localization,Frontend,ui_screen,yes,Minor,r1,DEFECT_AREA,467,192,79,13,"{""defect_type"": ""wrong_format"", ""expected_text"": ""17.10.2026""}",10/17/2026,
+localization/localization_03_wrong_number_date_format.png,localization,Frontend,ui_screen,yes,Minor,r2,DEFECT_AREA,467,227,77,12,"{""defect_type"": ""wrong_format"", ""expected_text"": ""14:05:00""}",2:05:00 PM,
+localization/localization_03_wrong_number_date_format.png,localization,Frontend,ui_screen,yes,Minor,r3,DEFECT_AREA,467,262,101,13,"{""defect_type"": ""wrong_format"", ""expected_text"": ""1 234 567,89 ₽""}","$1,234,567.89",
+localization/localization_03_wrong_number_date_format.png,localization,Frontend,ui_screen,yes,Minor,r4,DEFECT_AREA,467,297,43,12,"{""defect_type"": ""wrong_format"", ""expected_text"": ""15,3 %""}",15.3%,
+localization/localization_03_wrong_number_date_format.png,localization,Frontend,ui_screen,yes,Minor,r5,DEFECT_AREA,467,332,49,12,"{""defect_type"": ""untranslated"", ""expected_text"": ""1 задача""}",1 tasks,
+localization/localization_03_wrong_number_date_format.png,localization,Frontend,ui_screen,yes,Minor,r6,DEFECT_AREA,467,367,42,12,"{""defect_type"": ""untranslated"", ""expected_text"": ""5 задач""}",5 task,
+memory/memory_01_node_heap_oom.png,memory,Backend,console,yes,Critical,r1,STACK_TRACE,18,92,1045,174,{},,
+memory/memory_01_node_heap_oom.png,memory,Backend,console,yes,Critical,r2,ERROR_TEXT,19,295,681,14,{},FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory,ERROR_MESSAGE:Reached heap limit Allocation failed - JavaScript heap out of memory
+memory/memory_01_node_heap_oom.png,memory,Backend,console,yes,Critical,r3,STACK_TRACE,19,315,1025,317,{},,
+memory/memory_01_node_heap_oom.png,memory,Backend,console,yes,Critical,r4,PII,81,10,127,13,"{""kind"": ""host""}",qa@taskflow-stage,
+memory/memory_01_node_heap_oom.png,memory,Backend,console,yes,Critical,r5,PII,19,51,143,15,"{""kind"": ""host""}",qa@taskflow-stage,
+memory/memory_02_python_memoryerror.png,memory,Backend,console,yes,Critical,r1,STACK_TRACE,18,92,623,156,{},,
+memory/memory_02_python_memoryerror.png,memory,Backend,console,yes,Critical,r2,ERROR_TEXT,18,234,92,14,{},MemoryError,EXCEPTION:MemoryError
+memory/memory_02_python_memoryerror.png,memory,Backend,console,yes,Critical,r3,STATUS_INDICATOR,21,254,104,13,"{""kind"": ""exit_code""}",[exit code 1],ERROR_CODE:1
+memory/memory_02_python_memoryerror.png,memory,Backend,console,yes,Critical,r4,PII,81,10,127,13,"{""kind"": ""host""}",qa@taskflow-stage,
+memory/memory_02_python_memoryerror.png,memory,Backend,console,yes,Critical,r5,PII,19,51,143,15,"{""kind"": ""host""}",qa@taskflow-stage,
+memory/memory_02_python_memoryerror.png,memory,Backend,console,yes,Critical,r6,PII,19,274,142,14,"{""kind"": ""host""}",qa@taskflow-stage,
+memory/memory_03_js_heap_growth.png,memory,Frontend,ui_screen,yes,Major,r1,CHART,194,146,900,300,"{""chart_kind"": ""line"", ""trend"": ""growth""}",,
+memory/memory_03_js_heap_growth.png,memory,Frontend,ui_screen,yes,Major,r2,STATUS_INDICATOR,195,468,509,17,"{""kind"": ""counter""}","Обновлений ленты: 31, used JS heap: 41.9 МБ (было 2.5 МБ)",METRIC:31; METRIC:41.9 МБ; METRIC:2.5 МБ
+network/network_01_dns_not_resolved.png,network,Backend,browser_error,yes,Blocker,r1,ERROR_TEXT,341,235,293,20,{},This site can’t be reached,
+network/network_01_dns_not_resolved.png,network,Backend,browser_error,yes,Blocker,r2,ERROR_TEXT,340,282,423,15,{},api.taskflow.invalid’s server IP address could not be found.,ERROR_MESSAGE:server IP address could not be found
+network/network_01_dns_not_resolved.png,network,Backend,browser_error,yes,Blocker,r3,PII,340,282,153,15,"{""kind"": ""host""}",api.taskflow.invalid,
+network/network_01_dns_not_resolved.png,network,Backend,browser_error,yes,Blocker,r4,STATUS_INDICATOR,341,410,161,10,"{""kind"": ""net_error""}",ERR_NAME_NOT_RESOLVED,ERROR_CODE:ERR_NAME_NOT_RESOLVED
+network/network_02_connection_refused.png,network,Backend,browser_error,yes,Critical,r1,ERROR_TEXT,341,235,293,20,{},This site can’t be reached,
+network/network_02_connection_refused.png,network,Backend,browser_error,yes,Critical,r2,ERROR_TEXT,340,282,203,13,{},127.0.0.1 refused to connect.,ERROR_MESSAGE:refused to connect
+network/network_02_connection_refused.png,network,Backend,browser_error,yes,Critical,r3,STATUS_INDICATOR,341,410,168,10,"{""kind"": ""net_error""}",ERR_CONNECTION_REFUSED,ERROR_CODE:ERR_CONNECTION_REFUSED
+network/network_03_fetch_failed_sync.png,network,Backend,ui_screen,yes,Critical,r1,ERROR_TEXT,194,183,892,42,{},Попытка 1/3: TypeError: Failed to fetch (15 мс),EXCEPTION:TypeError; ERROR_MESSAGE:Failed to fetch; METRIC:15 мс
+network/network_03_fetch_failed_sync.png,network,Backend,ui_screen,yes,Critical,r2,ERROR_TEXT,194,237,892,42,{},Попытка 2/3: TypeError: Failed to fetch (10 мс),EXCEPTION:TypeError; ERROR_MESSAGE:Failed to fetch; METRIC:10 мс
+network/network_03_fetch_failed_sync.png,network,Backend,ui_screen,yes,Critical,r3,ERROR_TEXT,194,291,892,42,{},Попытка 3/3: TypeError: Failed to fetch (6 мс),EXCEPTION:TypeError; ERROR_MESSAGE:Failed to fetch; METRIC:6 мс
+network/network_03_fetch_failed_sync.png,network,Backend,ui_screen,yes,Critical,r4,ERROR_TEXT,194,345,892,42,{},Изменения не сохранены. Последняя успешная синхронизация: 2 часа назад.,METRIC:2 часа
+payment/payment_01_card_declined_402.png,payment,Billing,ui_screen,no,,r1,ERROR_TEXT,194,381,472,74,{},"Платёж отклонён (402 card_declined)
+decline_code: insufficient_funds
+Your card has insufficient funds.",ERROR_CODE:402; ERROR_CODE:card_declined; ERROR_CODE:insufficient_funds; ERROR_MESSAGE:Your card has insufficient funds
+payment/payment_01_card_declined_402.png,payment,Billing,ui_screen,no,,r2,STATUS_INDICATOR,210,396,302,15,"{""kind"": ""http_status""}",Платёж отклонён (402 card_declined),ERROR_CODE:402; ERROR_CODE:card_declined
+payment/payment_01_card_declined_402.png,payment,Billing,ui_screen,no,,r3,UI_ELEMENT,194,202,472,39,"{""kind"": ""field""}",4000 0000 0000 0002,
+payment/payment_01_card_declined_402.png,payment,Billing,ui_screen,no,,r4,PII,205,216,146,12,"{""kind"": ""card""}",4000 0000 0000 0002,
+payment/payment_01_card_declined_402.png,payment,Billing,ui_screen,no,,r5,PII,206,286,64,12,"{""kind"": ""card""}",12/28   •••,
+payment/payment_01_card_declined_402.png,payment,Billing,ui_screen,no,,r6,UI_ELEMENT,194,330,107,39,"{""kind"": ""button""}",Оплатить,
+payment/payment_02_invoice_nan_total.png,payment,Frontend,ui_screen,yes,Blocker,r1,DEFECT_AREA,939,192,43,12,"{""defect_type"": ""wrong_value"", ""expected_text"": ""6 495,00 ₽""}",5.00 ₽,
+payment/payment_02_invoice_nan_total.png,payment,Frontend,ui_screen,yes,Blocker,r2,DEFECT_AREA,939,227,61,12,"{""defect_type"": ""wrong_value"", ""expected_text"": ""349,50 ₽""}",349.00 ₽,
+payment/payment_02_invoice_nan_total.png,payment,Frontend,ui_screen,yes,Blocker,r3,DEFECT_AREA,939,262,43,12,"{""defect_type"": ""wrong_format"", ""expected_text"": ""0,00 ₽""}",0.00 ₽,
+payment/payment_02_invoice_nan_total.png,payment,Frontend,ui_screen,yes,Blocker,r4,DEFECT_AREA,369,310,66,16,"{""defect_type"": ""wrong_value"", ""expected_text"": ""6 844,50 ₽""}",NaN ₽,
+payment/payment_03_double_charge.png,payment,Billing,ui_screen,yes,Blocker,r1,UI_ELEMENT,194,183,107,39,"{""kind"": ""button""}",Оплатить,
+payment/payment_03_double_charge.png,payment,Billing,ui_screen,yes,Blocker,r2,ERROR_TEXT,194,234,572,42,{},"Подписка продлена, но с карты списано 2 раза",METRIC:2 раза
+payment/payment_03_double_charge.png,payment,Billing,ui_screen,yes,Blocker,r3,PII,397,301,99,14,"{""kind"": ""card""}",•••• 4242,
+payment/payment_03_double_charge.png,payment,Billing,ui_screen,yes,Blocker,r4,DEFECT_AREA,194,364,572,70,"{""defect_type"": ""duplicate""}","ch_0001 1 299,00 ₽ 14:04:42.218
+ch_0002 1 299,00 ₽ 14:04:42.219",
+performance/performance_01_spinner_timeout.png,performance,Backend,ui_screen,yes,Major,r1,STATUS_INDICATOR,194,162,326,34,"{""kind"": ""loading""}",Загрузка данных… прошло 8.2 с,METRIC:8.2 с
+performance/performance_01_spinner_timeout.png,performance,Backend,ui_screen,yes,Major,r2,DEFECT_AREA,194,162,35,34,"{""defect_type"": ""endless_loading""}",,
+performance/performance_01_spinner_timeout.png,performance,Backend,ui_screen,yes,Major,r3,STATUS_INDICATOR,195,228,326,17,"{""kind"": ""loading""}",Запрос GET /api/slow ещё выполняется,
+performance/performance_02_search_latency.png,performance,Backend,ui_screen,yes,Major,r1,CHART,536,192,501,187,"{""chart_kind"": ""bar"", ""trend"": ""growth""}",,
+performance/performance_02_search_latency.png,performance,Backend,ui_screen,yes,Major,r2,DEFECT_AREA,194,286,892,104,"{""defect_type"": ""threshold_exceeded"", ""expected_text"": ""≤ 300 мс (SLA)""}","2000 1006
+3000 2256
+4000 4004",
+performance/performance_02_search_latency.png,performance,Backend,ui_screen,yes,Major,r3,STATUS_INDICATOR,195,409,499,17,"{""kind"": ""counter""}","Измерено в браузере (fetch, performance.now). SLA: 300 мс.",METRIC:300 мс
+performance/performance_03_long_task_kanban.png,performance,Frontend,ui_screen,yes,Major,r1,STATUS_INDICATOR,195,151,382,16,"{""kind"": ""timer""}",Перерисовка 20000 карточек заняла 1101 мс,METRIC:20000; METRIC:1101 мс
+performance/performance_03_long_task_kanban.png,performance,Frontend,ui_screen,yes,Major,r2,ERROR_TEXT,194,183,892,42,{},Long Task: главный поток заблокирован на 1101 мс (startTime 114 мс). Интерфейс не отвечал на ввод.,METRIC:1101 мс; METRIC:114 мс
+security/security_01_cert_self_signed.png,security,Billing,browser_error,yes,Critical,r1,ERROR_TEXT,341,229,337,23,{},Your connection is not private,
+security/security_01_cert_self_signed.png,security,Billing,browser_error,yes,Critical,r2,ERROR_TEXT,340,275,554,40,{},"Attackers might be trying to steal your information from 127.0.0.1 (for example, passwords, messages, or credit cards). Learn more about this warning",
+security/security_01_cert_self_signed.png,security,Billing,browser_error,yes,Critical,r3,STATUS_INDICATOR,341,337,215,10,"{""kind"": ""net_error""}",NET::ERR_CERT_AUTHORITY_INVALID,ERROR_CODE:NET::ERR_CERT_AUTHORITY_INVALID
+security/security_02_idor_foreign_invoice.png,security,Billing,api_response,yes,Blocker,r1,DEFECT_AREA,17,110,412,133,"{""defect_type"": ""data_exposure"", ""expected_text"": ""403 Forbidden: счёт 43 принадлежит customer_id 2002, а запрос сделан от session_user_id 1001""}",,
+security/security_02_idor_foreign_invoice.png,security,Billing,api_response,yes,Blocker,r4,PII,172,154,155,14,"{""kind"": ""organization""}",ООО «Северный ветер»,
+security/security_02_idor_foreign_invoice.png,security,Billing,api_response,yes,Blocker,r5,PII,110,170,201,13,"{""kind"": ""email""}",finance@north-wind.example,
+security/security_02_idor_foreign_invoice.png,security,Billing,api_response,yes,Blocker,r6,PII,147,200,31,13,"{""kind"": ""card""}",8812,
+security/security_02_idor_foreign_invoice.png,security,Billing,api_response,yes,Blocker,r7,PII,188,215,233,13,"{""kind"": ""address""}","г. Казань, ул. Примерная, д. 1",
+security/security_03_reflected_xss.png,security,Backend,ui_screen,yes,Blocker,r1,DEFECT_AREA,0,0,1280,47,"{""defect_type"": ""injected_content""}",XSS executed: document.cookie = session=8f2c1e9ab47d,
+security/security_03_reflected_xss.png,security,Backend,ui_screen,yes,Blocker,r2,PII,399,16,115,14,"{""kind"": ""token""}",8f2c1e9ab47d,
+security/security_03_reflected_xss.png,security,Backend,ui_screen,yes,Blocker,r3,UI_ELEMENT,194,193,892,39,"{""kind"": ""field""}",,
+security/security_03_reflected_xss.png,security,Backend,ui_screen,yes,Blocker,r4,DEFECT_AREA,400,248,16,16,"{""defect_type"": ""injected_content""}",,
+ui_layout/ui_layout_01_button_overflow.png,ui_layout,Frontend,ui_screen,yes,Minor,r1,UI_ELEMENT,88,270,280,78,"{""kind"": ""button""}",Отправить на сог,
+ui_layout/ui_layout_01_button_overflow.png,ui_layout,Frontend,ui_screen,yes,Minor,r2,UI_ELEMENT,384,270,280,78,"{""kind"": ""button""}",Сохранить черновик,
+ui_layout/ui_layout_01_button_overflow.png,ui_layout,Frontend,ui_screen,yes,Minor,r3,DEFECT_AREA,128,296,582,28,"{""defect_type"": ""overflow"", ""expected_text"": ""Отправить на согласование | Сохранить черновик""}",Отправить на сог Сохранить черновик,
+ui_layout/ui_layout_01_button_overflow.png,ui_layout,Frontend,ui_screen,yes,Minor,r4,DEFECT_AREA,89,386,592,25,"{""defect_type"": ""overflow"", ""expected_text"": ""Описание: Пользователь не может прикрепить файл размером больше 10 МБ к задаче""}",Описание: Пользователь не может,
+ui_layout/ui_layout_01_button_overflow.png,ui_layout,Frontend,ui_screen,yes,Minor,r5,DEFECT_AREA,762,43,18,21,"{""defect_type"": ""overflow"", ""expected_text"": ""Тариф""}",Т,
+ui_layout/ui_layout_01_button_overflow.png,ui_layout,Frontend,ui_screen,yes,Minor,r6,PII,105,507,432,108,"{""kind"": ""person_name""}",Константинопольский-Великорецкий Александр Владимирович,
+ui_layout/ui_layout_02_banner_overlap.png,ui_layout,Frontend,ui_screen,yes,Major,r1,DEFECT_AREA,40,300,660,144,"{""defect_type"": ""overlap""}",Cookie: мы используем файлы cookie для аналитики. ОК,
+ui_layout/ui_layout_02_banner_overlap.png,ui_layout,Frontend,ui_screen,yes,Major,r2,UI_ELEMENT,88,212,560,88,"{""kind"": ""other""}",Проект «Мобильное приложение»,
+ui_layout/ui_layout_02_banner_overlap.png,ui_layout,Frontend,ui_screen,yes,Major,r3,UI_ELEMENT,452,358,80,62,"{""kind"": ""button""}",ОК,
+ui_layout/ui_layout_02_banner_overlap.png,ui_layout,Frontend,ui_screen,yes,Major,r4,PII,487,618,81,25,"{""kind"": ""person_name""}",Анна,
+ui_layout/ui_layout_02_banner_overlap.png,ui_layout,Frontend,ui_screen,yes,Major,r5,PII,519,656,79,25,"{""kind"": ""person_name""}",Олег,
+ui_layout/ui_layout_03_modal_behind_overlay.png,ui_layout,Frontend,ui_screen,yes,Major,r1,DEFECT_AREA,430,246,420,148,"{""defect_type"": ""wrong_layer""}",,
+ui_layout/ui_layout_03_modal_behind_overlay.png,ui_layout,Frontend,ui_screen,yes,Major,r2,UI_ELEMENT,452,333,97,39,"{""kind"": ""button""}",Удалить,
+ui_layout/ui_layout_03_modal_behind_overlay.png,ui_layout,Frontend,ui_screen,yes,Major,r3,UI_ELEMENT,554,333,94,39,"{""kind"": ""button""}",Отмена,

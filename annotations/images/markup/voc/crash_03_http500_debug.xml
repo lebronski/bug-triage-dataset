@@ -1,0 +1,72 @@
+<annotation>
+  <folder>crash</folder>
+  <filename>crash_03_http500_debug.png</filename>
+  <path>data/images/screenshots/crash/crash_03_http500_debug.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>crash</category>
+    <component>Backend</component>
+    <screen_type>error_page</screen_type>
+    <severity>Critical</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>26</xmin><ymin>21</ymin><xmax>433</xmax><ymax>45</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>AttributeError at /profile/1001</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>361</xmin><ymin>54</ymin><xmax>572</xmax><ymax>65</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>Status: 500 Internal Server Error</ocr_text>
+      <kind>http_status</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>594</xmin><ymin>54</ymin><xmax>1091</xmax><ymax>67</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>Exception: AttributeError: 'NoneType' object has no attribute 'profile'</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>STACK_TRACE</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>26</xmin><ymin>106</ymin><xmax>1254</xmax><ymax>294</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>46</xmin><ymin>263</ymin><xmax>513</xmax><ymax>276</ymax></bndbox>
+    <attributes>
+      <region_id>r5</region_id>
+      <ocr_text>AttributeError: 'NoneType' object has no attribute 'profile'</ocr_text>
+    </attributes>
+  </object>
+</annotation>

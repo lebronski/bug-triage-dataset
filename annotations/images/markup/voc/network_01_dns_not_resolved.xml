@@ -1,0 +1,63 @@
+<annotation>
+  <folder>network</folder>
+  <filename>network_01_dns_not_resolved.png</filename>
+  <path>data/images/screenshots/network/network_01_dns_not_resolved.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>network</category>
+    <component>Backend</component>
+    <screen_type>browser_error</screen_type>
+    <severity>Blocker</severity>
+    <is_defect>yes</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>341</xmin><ymin>235</ymin><xmax>634</xmax><ymax>255</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>This site can’t be reached</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>340</xmin><ymin>282</ymin><xmax>763</xmax><ymax>297</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>api.taskflow.invalid’s server IP address could not be found.</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>PII</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>340</xmin><ymin>282</ymin><xmax>493</xmax><ymax>297</ymax></bndbox>
+    <attributes>
+      <region_id>r3</region_id>
+      <ocr_text>api.taskflow.invalid</ocr_text>
+      <kind>host</kind>
+    </attributes>
+  </object>
+  <object>
+    <name>STATUS_INDICATOR</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>341</xmin><ymin>410</ymin><xmax>502</xmax><ymax>420</ymax></bndbox>
+    <attributes>
+      <region_id>r4</region_id>
+      <ocr_text>ERR_NAME_NOT_RESOLVED</ocr_text>
+      <kind>net_error</kind>
+    </attributes>
+  </object>
+</annotation>

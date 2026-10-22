@@ -1,0 +1,38 @@
+<annotation>
+  <folder>authentication</folder>
+  <filename>authentication_02_api_token_expired.png</filename>
+  <path>data/images/screenshots/authentication/authentication_02_api_token_expired.png</path>
+  <source><database>Bug Triage Dataset</database></source>
+  <size><width>1280</width><height>800</height><depth>3</depth></size>
+  <segmented>0</segmented>
+  <image_labels>
+    <category>authentication</category>
+    <component>Auth-service</component>
+    <screen_type>api_response</screen_type>
+    <is_defect>no</is_defect>
+    <device>desktop</device>
+    <theme>light</theme>
+  </image_labels>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>18</xmin><ymin>50</ymin><xmax>209</xmax><ymax>63</ymax></bndbox>
+    <attributes>
+      <region_id>r1</region_id>
+      <ocr_text>"error": "invalid_token",</ocr_text>
+    </attributes>
+  </object>
+  <object>
+    <name>ERROR_TEXT</name>
+    <pose>Unspecified</pose>
+    <truncated>0</truncated>
+    <difficult>0</difficult>
+    <bndbox><xmin>18</xmin><ymin>65</ymin><xmax>576</xmax><ymax>78</ymax></bndbox>
+    <attributes>
+      <region_id>r2</region_id>
+      <ocr_text>"error_description": "The access token expired at 2026-10-17T09:12:44Z",</ocr_text>
+    </attributes>
+  </object>
+</annotation>

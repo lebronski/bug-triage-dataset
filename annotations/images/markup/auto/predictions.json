@@ -1,0 +1,4287 @@
+{
+ "model_version": "tesseract-5-lstm-rus+eng + rules-1.0",
+ "images": {
+  "authentication/authentication_01_login_401.png": {
+   "labels": {
+    "category": "authentication",
+    "component": "Auth-service",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      469,
+      173,
+      302,
+      14
+     ],
+     "attributes": {
+      "kind": "http_status"
+     },
+     "ocr_text": "401 Unauthorized. Неверный логин или",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 0,
+       "end": 3,
+       "text": "401",
+       "attributes": {
+        "kind": "http_status",
+        "normalized": "401"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      470,
+      221,
+      208,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "заблокирована на 15 минут.",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "METRIC",
+       "start": 17,
+       "end": 25,
+       "text": "15 минут",
+       "attributes": {
+        "kind": "time",
+        "normalized": "15 минут"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "DEFECT_AREA",
+     "bbox": [
+      466,
+      293,
+      72,
+      14
+     ],
+     "attributes": {
+      "defect_type": "untranslated"
+     },
+     "ocr_text": "ivan.petrov",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Вход в TaskFlow",
+     "bbox": [
+      456,
+      119,
+      221,
+      22
+     ],
+     "conf": 90.33333333333333
+    },
+    {
+     "text": "401 Unauthorized. Неверный логин или",
+     "bbox": [
+      469,
+      173,
+      302,
+      14
+     ],
+     "conf": 94.4
+    },
+    {
+     "text": "пароль. Осталось попыток: 2. После 3",
+     "bbox": [
+      470,
+      189,
+      280,
+      14
+     ],
+     "conf": 95.16666666666667
+    },
+    {
+     "text": "неудачных попыток учётная запись будет",
+     "bbox": [
+      470,
+      205,
+      314,
+      14
+     ],
+     "conf": 94.8
+    },
+    {
+     "text": "заблокирована на 15 минут.",
+     "bbox": [
+      470,
+      221,
+      208,
+      14
+     ],
+     "conf": 95.5
+    },
+    {
+     "text": "Логин",
+     "bbox": [
+      455,
+      262,
+      39,
+      9
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "ivan.petrov",
+     "bbox": [
+      466,
+      293,
+      72,
+      14
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "Пароль",
+     "bbox": [
+      455,
+      332,
+      48,
+      12
+     ],
+     "conf": 96.0
+    }
+   ]
+  },
+  "authentication/authentication_02_api_token_expired.png": {
+   "labels": {
+    "category": "authentication",
+    "component": "Auth-service",
+    "screen_type": "api_response",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      17,
+      50,
+      191,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "\"error\": \"invalid token\",",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      17,
+      65,
+      559,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "“error description\": \"The access token expired at 2026-10-17T09:12:442Z\",",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "Pretty-print (J",
+     "bbox": [
+      1,
+      1,
+      111,
+      18
+     ],
+     "conf": 79.0
+    },
+    {
+     "text": "{",
+     "bbox": [
+      1,
+      35,
+      5,
+      12
+     ],
+     "conf": 93.0
+    },
+    {
+     "text": "\"error\": \"invalid token\",",
+     "bbox": [
+      17,
+      50,
+      191,
+      13
+     ],
+     "conf": 39.333333333333336
+    },
+    {
+     "text": "“error description\": \"The access token expired at 2026-10-17T09:12:442Z\",",
+     "bbox": [
+      17,
+      65,
+      559,
+      13
+     ],
+     "conf": 63.0
+    },
+    {
+     "text": "“request 10\": \"req 7f3a91c2\"",
+     "bbox": [
+      17,
+      80,
+      215,
+      13
+     ],
+     "conf": 58.25
+    }
+   ]
+  },
+  "authentication/authentication_03_forbidden_403.png": {
+   "labels": {
+    "category": "authentication",
+    "component": "Auth-service",
+    "screen_type": "error_page",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      195,
+      107,
+      192,
+      19
+     ],
+     "attributes": {
+      "kind": "http_status"
+     },
+     "ocr_text": "403 Forbidden",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 0,
+       "end": 3,
+       "text": "403",
+       "attributes": {
+        "kind": "http_status",
+        "normalized": "403"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "403 Forbidden",
+     "bbox": [
+      195,
+      107,
+      192,
+      19
+     ],
+     "conf": 95.5
+    },
+    {
+     "text": "У пользователя ivan.petrov (роль project admin) нет права users: read. Роль была назначена 5 минут назад, но",
+     "bbox": [
+      209,
+      161,
+      844,
+      14
+     ],
+     "conf": 83.41176470588235
+    },
+    {
+     "text": "токен доступа ещё содержит старый набор прав (scope: tasks:read tasks:write).",
+     "bbox": [
+      209,
+      177,
+      588,
+      14
+     ],
+     "conf": 94.0
+    },
+    {
+     "text": "Обратитесь к администратору организации.",
+     "bbox": [
+      195,
+      222,
+      376,
+      16
+     ],
+     "conf": 95.75
+    }
+   ]
+  },
+  "crash/crash_01_python_typeerror.png": {
+   "labels": {
+    "category": "crash",
+    "component": "Backend",
+    "screen_type": "console",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "dark"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      18,
+      92,
+      589,
+      56
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "PII",
+     "bbox": [
+      81,
+      10,
+      126,
+      13
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@Etaskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "PII",
+     "bbox": [
+      19,
+      51,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p4",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      18,
+      234,
+      412,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "TypeError: 'МопеТуре' object is not subscriptable",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 9,
+       "text": "TypeError",
+       "attributes": {
+        "normalized": "TypeError"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p5",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      21,
+      254,
+      104,
+      13
+     ],
+     "attributes": {
+      "kind": "exit_code"
+     },
+     "ocr_text": "[exit code 1]",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 11,
+       "end": 12,
+       "text": "1",
+       "attributes": {
+        "kind": "exit_code",
+        "normalized": "1"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p6",
+     "label": "PII",
+     "bbox": [
+      19,
+      274,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "® ® @ qa@Etaskflow-stage: ~/services",
+     "bbox": [
+      14,
+      10,
+      267,
+      13
+     ],
+     "conf": 76.6
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$ python3 order _service.py",
+     "bbox": [
+      19,
+      51,
+      453,
+      14
+     ],
+     "conf": 45.5
+    },
+    {
+     "text": "Заказ 41: 2",
+     "bbox": [
+      19,
+      71,
+      91,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Traceback (most recent call last):",
+     "bbox": [
+      18,
+      92,
+      283,
+      13
+     ],
+     "conf": 95.8
+    },
+    {
+     "text": "File \"/tmp/taskflow dplkmclj/order service.py\", line 12, in <module>",
+     "bbox": [
+      36,
+      112,
+      571,
+      14
+     ],
+     "conf": 91.25
+    },
+    {
+     "text": "рг1п® (\"Заказ 42:\", order total(42))",
+     "bbox": [
+      53,
+      130,
+      291,
+      18
+     ],
+     "conf": 72.8
+    },
+    {
+     "text": "File \"/tmp/taskflow dplkmclj/order service.py\", line 9, in order total",
+     "bbox": [
+      36,
+      173,
+      588,
+      14
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "return sum(i[\"qty\"] for i in order[\"items\"])",
+     "bbox": [
+      54,
+      193,
+      366,
+      14
+     ],
+     "conf": 90.33333333333333
+    },
+    {
+     "text": "AAAAAAAAA",
+     "bbox": [
+      339,
+      213,
+      74,
+      4
+     ],
+     "conf": 84.0
+    },
+    {
+     "text": "TypeError: 'МопеТуре' object is not subscriptable",
+     "bbox": [
+      18,
+      234,
+      412,
+      14
+     ],
+     "conf": 91.66666666666667
+    },
+    {
+     "text": "[exit code 1]",
+     "bbox": [
+      21,
+      254,
+      104,
+      13
+     ],
+     "conf": 95.33333333333333
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$",
+     "bbox": [
+      19,
+      274,
+      242,
+      14
+     ],
+     "conf": 80.0
+    }
+   ]
+  },
+  "crash/crash_02_node_typeerror.png": {
+   "labels": {
+    "category": "crash",
+    "component": "Backend",
+    "screen_type": "console",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "dark"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      18,
+      173,
+      747,
+      196
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "PII",
+     "bbox": [
+      81,
+      10,
+      126,
+      13
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@Etaskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "PII",
+     "bbox": [
+      19,
+      51,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p4",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      18,
+      173,
+      527,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "TypeError: Cannot read properties of undefined (reading 'name')",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 9,
+       "text": "TypeError",
+       "attributes": {
+        "normalized": "TypeError"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p5",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      21,
+      416,
+      104,
+      13
+     ],
+     "attributes": {
+      "kind": "exit_code"
+     },
+     "ocr_text": "[exit code 1]",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 11,
+       "end": 12,
+       "text": "1",
+       "attributes": {
+        "kind": "exit_code",
+        "normalized": "1"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p6",
+     "label": "PII",
+     "bbox": [
+      19,
+      437,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "® ® @ qa@Etaskflow-stage: ~/services",
+     "bbox": [
+      14,
+      10,
+      267,
+      13
+     ],
+     "conf": 76.6
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$ node sync_worker.js",
+     "bbox": [
+      19,
+      51,
+      411,
+      14
+     ],
+     "conf": 91.33333333333333
+    },
+    {
+     "text": "Задача 1: исполнитель Анна",
+     "bbox": [
+      19,
+      71,
+      217,
+      12
+     ],
+     "conf": 95.75
+    },
+    {
+     "text": "/tmp/taskflow dplkmclj/sync worker.js:3",
+     "bbox": [
+      19,
+      92,
+      326,
+      14
+     ],
+     "conf": 76.66666666666667
+    },
+    {
+     "text": "console. log( 3apava ${t.id}: исполнитель ${t.assignee.name}’);",
+     "bbox": [
+      36,
+      109,
+      518,
+      18
+     ],
+     "conf": 38.166666666666664
+    },
+    {
+     "text": "TypeError: Cannot read properties of undefined (reading 'name')",
+     "bbox": [
+      18,
+      173,
+      527,
+      14
+     ],
+     "conf": 91.125
+    },
+    {
+     "text": "at Object.<anonymous> (/tmp/taskflow dplkmclj/sync worker.js:3:57)",
+     "bbox": [
+      52,
+      193,
+      552,
+      14
+     ],
+     "conf": 72.8
+    },
+    {
+     "text": "at Module. compile (node:internal/modules/cjs/loader:1706:14)",
+     "bbox": [
+      52,
+      213,
+      510,
+      14
+     ],
+     "conf": 92.0
+    },
+    {
+     "text": "at Object..js (node:internal/modules/cjs/loader:1839:10)",
+     "bbox": [
+      52,
+      234,
+      468,
+      14
+     ],
+     "conf": 87.0
+    },
+    {
+     "text": "at Module.load (node:internal/modules/cjs/loader:1441:32)",
+     "bbox": [
+      52,
+      254,
+      477,
+      14
+     ],
+     "conf": 90.66666666666667
+    },
+    {
+     "text": "at Function. load (node:internal/modules/cjs/loader:1263:12)",
+     "bbox": [
+      52,
+      274,
+      503,
+      14
+     ],
+     "conf": 93.5
+    },
+    {
+     "text": "at TracingChannel.traceSync (node:diagnostics channel:328:14)",
+     "bbox": [
+      52,
+      295,
+      511,
+      14
+     ],
+     "conf": 84.25
+    },
+    {
+     "text": "at wrapModuleLoad (node:internal/modules/cjs/loader:237:24)",
+     "bbox": [
+      52,
+      315,
+      494,
+      14
+     ],
+     "conf": 84.0
+    },
+    {
+     "text": "at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)",
+     "bbox": [
+      52,
+      335,
+      713,
+      14
+     ],
+     "conf": 85.6
+    },
+    {
+     "text": "at node:internal/main/run_main module:36:49",
+     "bbox": [
+      52,
+      355,
+      361,
+      14
+     ],
+     "conf": 53.666666666666664
+    },
+    {
+     "text": "Node. js v22.22.0",
+     "bbox": [
+      19,
+      396,
+      133,
+      14
+     ],
+     "conf": 47.666666666666664
+    },
+    {
+     "text": "[exit code 1]",
+     "bbox": [
+      21,
+      416,
+      104,
+      13
+     ],
+     "conf": 95.33333333333333
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$",
+     "bbox": [
+      19,
+      437,
+      242,
+      14
+     ],
+     "conf": 80.0
+    }
+   ]
+  },
+  "crash/crash_03_http500_debug.png": {
+   "labels": {
+    "category": "crash",
+    "component": "Backend",
+    "screen_type": "error_page",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      45,
+      125,
+      720,
+      151
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      45,
+      262,
+      467,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "AttributeError: 'NoneType' object has no attribute ‘profile’",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 14,
+       "text": "AttributeError",
+       "attributes": {
+        "normalized": "AttributeError"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "Traceback (most recent call last):",
+     "bbox": [
+      46,
+      125,
+      263,
+      13
+     ],
+     "conf": 95.8
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make_screenshots.py\", line 248, in r crash",
+     "bbox": [
+      62,
+      145,
+      656,
+      14
+     ],
+     "conf": 75.42857142857143
+    },
+    {
+     "text": "handler _crash()",
+     "bbox": [
+      78,
+      164,
+      114,
+      14
+     ],
+     "conf": 40.0
+    },
+    {
+     "text": "^^",
+     "bbox": [
+      179,
+      185,
+      15,
+      4
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make_screenshots.py\", line 119, in handler crash",
+     "bbox": [
+      62,
+      203,
+      703,
+      14
+     ],
+     "conf": 70.14285714285714
+    },
+    {
+     "text": "return user.profile[\"display name\" ]",
+     "bbox": [
+      79,
+      221,
+      270,
+      18
+     ],
+     "conf": 44.0
+    },
+    {
+     "text": "AAAAAAAAAAAA",
+     "bbox": [
+      132,
+      243,
+      93,
+      4
+     ],
+     "conf": 65.0
+    },
+    {
+     "text": "AttributeError: 'NoneType' object has no attribute ‘profile’",
+     "bbox": [
+      45,
+      262,
+      467,
+      14
+     ],
+     "conf": 83.42857142857143
+    }
+   ]
+  },
+  "database/database_01_sqlite_database_locked.png": {
+   "labels": {
+    "category": "database",
+    "component": "Database",
+    "screen_type": "error_page",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      46,
+      125,
+      680,
+      151
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      46,
+      262,
+      343,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "sqlite3.OperationalError: database is locked",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 24,
+       "text": "sqlite3.OperationalError",
+       "attributes": {
+        "normalized": "OperationalError"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "Traceback (most recent call last):",
+     "bbox": [
+      46,
+      125,
+      263,
+      13
+     ],
+     "conf": 95.8
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make screenshots.py\", line 255, in №",
+     "bbox": [
+      62,
+      145,
+      609,
+      14
+     ],
+     "conf": 77.14285714285714
+    },
+    {
+     "text": "fn()",
+     "bbox": [
+      78,
+      164,
+      28,
+      13
+     ],
+     "conf": 84.0
+    },
+    {
+     "text": "^^",
+     "bbox": [
+      93,
+      185,
+      15,
+      4
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make_screenshots.py\", line 98, in 6 1осКеа",
+     "bbox": [
+      62,
+      203,
+      664,
+      14
+     ],
+     "conf": 76.57142857142857
+    },
+    {
+     "text": "b.execute (\"UPDATE orders SET status='paid' WHERE id=?\", (42,))",
+     "bbox": [
+      78,
+      223,
+      482,
+      14
+     ],
+     "conf": 67.75
+    },
+    {
+     "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "bbox": [
+      148,
+      243,
+      414,
+      4
+     ],
+     "conf": 41.0
+    },
+    {
+     "text": "sqlite3.OperationalError: database is locked",
+     "bbox": [
+      46,
+      262,
+      343,
+      14
+     ],
+     "conf": 85.5
+    }
+   ]
+  },
+  "database/database_02_unique_constraint.png": {
+   "labels": {
+    "category": "database",
+    "component": "Database",
+    "screen_type": "error_page",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      46,
+      125,
+      688,
+      151
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "PII",
+     "bbox": [
+      416,
+      223,
+      207,
+      14
+     ],
+     "attributes": {
+      "kind": "email"
+     },
+     "ocr_text": "ivan@taskflow.example",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      46,
+      262,
+      476,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "sqlite3.IntegrityError: UNIQUE constraint failed: users.email",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 22,
+       "text": "sqlite3.IntegrityError",
+       "attributes": {
+        "normalized": "IntegrityError"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "Traceback (most recent call last):",
+     "bbox": [
+      46,
+      125,
+      263,
+      13
+     ],
+     "conf": 95.8
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make screenshots.py\", line 255, in №",
+     "bbox": [
+      62,
+      145,
+      609,
+      14
+     ],
+     "conf": 77.14285714285714
+    },
+    {
+     "text": "fn()",
+     "bbox": [
+      78,
+      164,
+      28,
+      13
+     ],
+     "conf": 84.0
+    },
+    {
+     "text": "^^",
+     "bbox": [
+      93,
+      185,
+      15,
+      4
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make_screenshots.py\", line 107, in db_unique",
+     "bbox": [
+      62,
+      203,
+      672,
+      14
+     ],
+     "conf": 85.66666666666667
+    },
+    {
+     "text": "c.execute (\"INSERT INTO users(email) VALUES ('ivan@taskflow.example')\")",
+     "bbox": [
+      78,
+      223,
+      545,
+      14
+     ],
+     "conf": 59.333333333333336
+    },
+    {
+     "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "bbox": [
+      148,
+      243,
+      476,
+      4
+     ],
+     "conf": 21.0
+    },
+    {
+     "text": "sqlite3.IntegrityError: UNIQUE constraint failed: users.email",
+     "bbox": [
+      46,
+      262,
+      476,
+      14
+     ],
+     "conf": 92.8
+    }
+   ]
+  },
+  "database/database_03_no_such_table.png": {
+   "labels": {
+    "category": "database",
+    "component": "Database",
+    "screen_type": "error_page",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      46,
+      125,
+      695,
+      150
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      27,
+      21,
+      483,
+      24
+     ],
+     "attributes": {},
+     "ocr_text": "OperationalError at /billing/invoices",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 16,
+       "text": "OperationalError",
+       "attributes": {
+        "normalized": "OperationalError"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      27,
+      54,
+      987,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "Request URL: http://127.0.0.1:8765/db/missing | Status: 500 Internal Server Error | Exception: sqlite3.0perationalError: no such table: invoices",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 56,
+       "end": 59,
+       "text": "500",
+       "attributes": {
+        "kind": "http_status",
+        "normalized": "500"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p4",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      47,
+      262,
+      381,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "sqlite3.OperationalError: no such table: invoices",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 24,
+       "text": "sqlite3.OperationalError",
+       "attributes": {
+        "normalized": "OperationalError"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "OperationalError at /billing/invoices",
+     "bbox": [
+      27,
+      21,
+      483,
+      24
+     ],
+     "conf": 90.66666666666667
+    },
+    {
+     "text": "Request URL: http://127.0.0.1:8765/db/missing | Status: 500 Internal Server Error | Exception: sqlite3.0perationalError: no such table: invoices",
+     "bbox": [
+      27,
+      54,
+      987,
+      13
+     ],
+     "conf": 93.5
+    },
+    {
+     "text": "Traceback (most recent call last):",
+     "bbox": [
+      46,
+      125,
+      263,
+      13
+     ],
+     "conf": 95.8
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make _screenshots.py\", line 255, in h",
+     "bbox": [
+      63,
+      145,
+      608,
+      14
+     ],
+     "conf": 76.28571428571429
+    },
+    {
+     "text": "fn()",
+     "bbox": [
+      78,
+      165,
+      27,
+      12
+     ],
+     "conf": 85.0
+    },
+    {
+     "text": "AA",
+     "bbox": [
+      85,
+      185,
+      22,
+      7
+     ],
+     "conf": 74.0
+    },
+    {
+     "text": "File \"/home/qa/bug-triage-dataset/scripts/make_screenshots.py\", line 112, in db missing",
+     "bbox": [
+      63,
+      203,
+      678,
+      14
+     ],
+     "conf": 81.71428571428571
+    },
+    {
+     "text": "c.execute(\"SELECT id, total FROM invoices WHERE customer id = ?\", (7,)).fetchall()",
+     "bbox": [
+      78,
+      221,
+      638,
+      17
+     ],
+     "conf": 89.0
+    },
+    {
+     "text": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+     "bbox": [
+      148,
+      243,
+      484,
+      4
+     ],
+     "conf": 72.0
+    },
+    {
+     "text": "sqlite3.OperationalError: no such table: invoices",
+     "bbox": [
+      47,
+      262,
+      381,
+      13
+     ],
+     "conf": 85.8
+    }
+   ]
+  },
+  "localization/localization_01_mojibake_cp1251.png": {
+   "labels": {
+    "category": "localization",
+    "component": "Frontend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "DEFECT_AREA",
+     "bbox": [
+      195,
+      239,
+      526,
+      16
+     ],
+     "attributes": {
+      "defect_type": "mojibake"
+     },
+     "ocr_text": "Р1Р5РЯР°Р»СЕР№СГС,Р°, PsC,C$C‘C, P-P° CI'PUPSC,CLIP=CHCHB».",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow P—P°PrP°CiPé PLCHPsPuPeC,C< PhC,C+C'C,C< PYP°CRHPEC,",
+     "bbox": [
+      28,
+      17,
+      578,
+      17
+     ],
+     "conf": 57.0
+    },
+    {
+     "text": "PJPIPUPrPsPjP»PpuPSP&CL",
+     "bbox": [
+      196,
+      107,
+      347,
+      24
+     ],
+     "conf": 0.0
+    },
+    {
+     "text": "P—P°PrP°C4$P° B« [FPICRHP°PIPEC,CH CHP°CI'C+C'C, РКР\"РУВ» PSP°P-PSP°CPUPSP° PSP® Р1Р°СГ.",
+     "bbox": [
+      195,
+      148,
+      797,
+      18
+     ],
+     "conf": 36.75
+    },
+    {
+     "text": "PYCHPsPe PIC<PiPsP»PSPUPSPECL): 20 PsPeC,CLIP+=CRHCLI 2026 Pi.",
+     "bbox": [
+      195,
+      183,
+      519,
+      18
+     ],
+     "conf": 62.333333333333336
+    },
+    {
+     "text": "PrePsPjPjPUPSC,P°CHPEPNe PsC, PHPSPSC« PYPjP&CHPSPsPIPSPNe: B«PUCHPsPIPUCHCHC,Py,",
+     "bbox": [
+      195,
+      216,
+      730,
+      25
+     ],
+     "conf": 35.6
+    },
+    {
+     "text": "Р1Р5РЯР°Р»СЕР№СГС,Р°, PsC,C$C‘C, P-P° CI'PUPSC,CLIP=CHCHB».",
+     "bbox": [
+      195,
+      239,
+      526,
+      16
+     ],
+     "conf": 48.0
+    }
+   ]
+  },
+  "localization/localization_02_missing_translation_keys.png": {
+   "labels": {
+    "category": "localization",
+    "component": "Frontend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "DEFECT_AREA",
+     "bbox": [
+      195,
+      289,
+      114,
+      12
+     ],
+     "attributes": {
+      "defect_type": "untranslated"
+     },
+     "ocr_text": "settings.timezone",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "DEFECT_AREA",
+     "bbox": [
+      195,
+      358,
+      178,
+      13
+     ],
+     "attributes": {
+      "defect_type": "untranslated"
+     },
+     "ocr_text": "settings.notifications.digest",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "DEFECT_AREA",
+     "bbox": [
+      195,
+      428,
+      114,
+      12
+     ],
+     "attributes": {
+      "defect_type": "untranslated"
+     },
+     "ocr_text": "settings.language",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      18,
+      398,
+      17
+     ],
+     "conf": 84.2
+    },
+    {
+     "text": "Настройки профиля",
+     "bbox": [
+      196,
+      107,
+      276,
+      23
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Имя",
+     "bbox": [
+      195,
+      148,
+      25,
+      9
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "Электронная почта",
+     "bbox": [
+      195,
+      218,
+      131,
+      12
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "settings.timezone",
+     "bbox": [
+      195,
+      289,
+      114,
+      12
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "settings.notifications.digest",
+     "bbox": [
+      195,
+      358,
+      178,
+      13
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "settings.language",
+     "bbox": [
+      195,
+      428,
+      114,
+      12
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "common.actions.save common.actions.cancel",
+     "bbox": [
+      214,
+      517,
+      346,
+      11
+     ],
+     "conf": 90.5
+    }
+   ]
+  },
+  "localization/localization_03_wrong_number_date_format.png": {
+   "labels": {
+    "category": "localization",
+    "component": "Frontend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Финансовый отчёт (интерфейс: русский)",
+     "bbox": [
+      195,
+      107,
+      568,
+      24
+     ],
+     "conf": 95.75
+    },
+    {
+     "text": "Показатель Отображается Ожидается (ru-RU)",
+     "bbox": [
+      204,
+      157,
+      691,
+      14
+     ],
+     "conf": 93.75
+    },
+    {
+     "text": "Дата отчёта 10/17/2026 17.10.2026",
+     "bbox": [
+      203,
+      192,
+      619,
+      12
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Время 2:05:00 РМ 14:05:00",
+     "bbox": [
+      204,
+      227,
+      600,
+      13
+     ],
+     "conf": 95.5
+    },
+    {
+     "text": "Выручка $1,234,567.89 1 234 567,89 Р",
+     "bbox": [
+      204,
+      262,
+      645,
+      13
+     ],
+     "conf": 88.0
+    },
+    {
+     "text": "Доля 15.3% 15,3 %",
+     "bbox": [
+      203,
+      297,
+      588,
+      12
+     ],
+     "conf": 94.5
+    },
+    {
+     "text": "Задач закрыто 1 tasks 1 задача",
+     "bbox": [
+      204,
+      332,
+      602,
+      14
+     ],
+     "conf": 95.66666666666667
+    },
+    {
+     "text": "Задач открыто 5 task 5 задач",
+     "bbox": [
+      204,
+      367,
+      593,
+      14
+     ],
+     "conf": 95.83333333333333
+    }
+   ]
+  },
+  "memory/memory_01_node_heap_oom.png": {
+   "labels": {
+    "category": "memory",
+    "component": "Backend",
+    "screen_type": "console",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "dark"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "PII",
+     "bbox": [
+      81,
+      10,
+      126,
+      13
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@Etaskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "PII",
+     "bbox": [
+      19,
+      51,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      19,
+      295,
+      681,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+     "entities": []
+    },
+    {
+     "id": "p4",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      52,
+      355,
+      611,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "0xe40d24 node: :00MErrorHandler(char const*, v8::00MDetails const&) [node]",
+     "entities": []
+    },
+    {
+     "id": "p5",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      52,
+      396,
+      991,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "0x1216eb7 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::00MDetails const&) [node]",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "® ® @ qa@Etaskflow-stage: ~/services",
+     "bbox": [
+      14,
+      10,
+      267,
+      13
+     ],
+     "conf": 76.6
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$ node --max-old-space-size=48 export _worker.js",
+     "bbox": [
+      19,
+      51,
+      630,
+      14
+     ],
+     "conf": 80.2
+    },
+    {
+     "text": "<--- Last few GCs --->",
+     "bbox": [
+      18,
+      92,
+      185,
+      11
+     ],
+     "conf": 92.2
+    },
+    {
+     "text": "[4702:0x3acdd0o0] 256 ms: Mark-Compact 48.2 (69.1) -> 45.1 (80.2) MB, pooled: © MB, 20.12 / 0.00 ms (+ 45.0 ms in ©",
+     "bbox": [
+      21,
+      132,
+      1016,
+      14
+     ],
+     "conf": 87.04545454545455
+    },
+    {
+     "text": "steps since start of marking, biggest step 0.0 ms, walltime since start of marking 88 ms) (average mu = 0.624, current mu =",
+     "bbox": [
+      19,
+      152,
+      1035,
+      14
+     ],
+     "conf": 95.3913043478261
+    },
+    {
+     "text": "0.553) fi[4702:0x3acdde00] 424 ms: Mark-Compact 62.8 (82.1) -> 59.3 (93.6) MB, pooled: © MB, 161.91 / 0.00 ms (average",
+     "bbox": [
+      19,
+      173,
+      1043,
+      14
+     ],
+     "conf": 89.42105263157895
+    },
+    {
+     "text": "mu = 0.291, current mu = 0.040) allocation failure; scavenge might not succeed",
+     "bbox": [
+      18,
+      193,
+      656,
+      14
+     ],
+     "conf": 95.76923076923077
+    },
+    {
+     "text": "<--- JS stacktrace --->",
+     "bbox": [
+      18,
+      254,
+      193,
+      11
+     ],
+     "conf": 90.25
+    },
+    {
+     "text": "FATAL ERROR: Reached heap limit Allocation failed - JavaScript heap out of memory",
+     "bbox": [
+      19,
+      295,
+      681,
+      14
+     ],
+     "conf": 95.46153846153847
+    },
+    {
+     "text": "CEE Native stack trace -----",
+     "bbox": [
+      20,
+      315,
+      248,
+      11
+     ],
+     "conf": 80.2
+    },
+    {
+     "text": "0xe40d24 node: :00MErrorHandler(char const*, v8::00MDetails const&) [node]",
+     "bbox": [
+      52,
+      355,
+      611,
+      13
+     ],
+     "conf": 74.42857142857143
+    },
+    {
+     "text": "0x1216be® v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, v8::00MDetails const&) [node]",
+     "bbox": [
+      52,
+      376,
+      873,
+      14
+     ],
+     "conf": 80.42857142857143
+    },
+    {
+     "text": "0x1216eb7 v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, v8::00MDetails const&) [node]",
+     "bbox": [
+      52,
+      396,
+      991,
+      14
+     ],
+     "conf": 88.42857142857143
+    },
+    {
+     "text": "0x1444875 [node]",
+     "bbox": [
+      52,
+      416,
+      139,
+      13
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "0x145e109 v8::internal::Heap::CollectGarbage(v8::internal::AllocationSpace, v8::internal::GarbageCollectionReason,",
+     "bbox": [
+      52,
+      437,
+      957,
+      14
+     ],
+     "conf": 82.66666666666667
+    },
+    {
+     "text": "v8: :GCCallbackFlags) [node]",
+     "bbox": [
+      18,
+      457,
+      225,
+      14
+     ],
+     "conf": 70.66666666666667
+    },
+    {
+     "text": "6: 0x14327b8 v8::internal::HeapAllocator::AllocateRawWithLightRetrySlowPath(int, v8::internal::AllocationType,",
+     "bbox": [
+      27,
+      477,
+      923,
+      14
+     ],
+     "conf": 78.5
+    },
+    {
+     "text": "v8: :internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]",
+     "bbox": [
+      18,
+      498,
+      612,
+      14
+     ],
+     "conf": 60.0
+    },
+    {
+     "text": "7: 0x14336e5 v8::internal::HeapAllocator::AllocateRawWithRetryOrFailSlowPath (int, v8::internal::AllocationType,",
+     "bbox": [
+      27,
+      516,
+      932,
+      18
+     ],
+     "conf": 52.8
+    },
+    {
+     "text": "v8: :internal::AllocationOrigin, v8::internal::AllocationAlignment) [node]",
+     "bbox": [
+      18,
+      538,
+      612,
+      14
+     ],
+     "conf": 60.0
+    },
+    {
+     "text": "8: 0x140c3be v8::internal::Factory::NewFillerObject (int, v8::internal::AllocationAlignment, v8::internal::AllocationType,",
+     "bbox": [
+      27,
+      556,
+      1016,
+      18
+     ],
+     "conf": 53.0
+    },
+    {
+     "text": "v8::internal::AllocationOrigin) [node]",
+     "bbox": [
+      18,
+      579,
+      317,
+      14
+     ],
+     "conf": 86.0
+    },
+    {
+     "text": "9: 0x186dalc v8::internal::Runtime AllocateInYoungGeneration(int, unsigned long*, v8::internal::Isolate*) [node]",
+     "bbox": [
+      27,
+      599,
+      940,
+      14
+     ],
+     "conf": 85.875
+    },
+    {
+     "text": "10: 0x1dcb476 [node]",
+     "bbox": [
+      19,
+      619,
+      172,
+      13
+     ],
+     "conf": 87.66666666666667
+    },
+    {
+     "text": "о в WN =",
+     "bbox": [
+      24,
+      353,
+      14,
+      95
+     ],
+     "conf": 54.5
+    }
+   ]
+  },
+  "memory/memory_02_python_memoryerror.png": {
+   "labels": {
+    "category": "memory",
+    "component": "Backend",
+    "screen_type": "console",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "dark"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "STACK_TRACE",
+     "bbox": [
+      18,
+      92,
+      597,
+      56
+     ],
+     "attributes": {}
+    },
+    {
+     "id": "p2",
+     "label": "PII",
+     "bbox": [
+      81,
+      10,
+      126,
+      13
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@Etaskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "PII",
+     "bbox": [
+      19,
+      51,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    },
+    {
+     "id": "p4",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      18,
+      234,
+      91,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "MemoryError",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 0,
+       "end": 11,
+       "text": "MemoryError",
+       "attributes": {
+        "normalized": "MemoryError"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p5",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      21,
+      254,
+      104,
+      13
+     ],
+     "attributes": {
+      "kind": "exit_code"
+     },
+     "ocr_text": "[exit code 1]",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 11,
+       "end": 12,
+       "text": "1",
+       "attributes": {
+        "kind": "exit_code",
+        "normalized": "1"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p6",
+     "label": "PII",
+     "bbox": [
+      19,
+      274,
+      242,
+      14
+     ],
+     "attributes": {
+      "kind": "host"
+     },
+     "ocr_text": "qa@taskflow-stage",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "® ® @ qa@Etaskflow-stage: ~/services",
+     "bbox": [
+      14,
+      10,
+      267,
+      13
+     ],
+     "conf": 76.6
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$ python3 report_builder.py",
+     "bbox": [
+      19,
+      51,
+      461,
+      14
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "Строим отчёт за 2 ropa...",
+     "bbox": [
+      19,
+      71,
+      206,
+      14
+     ],
+     "conf": 95.4
+    },
+    {
+     "text": "Traceback (most recent call last):",
+     "bbox": [
+      18,
+      92,
+      283,
+      13
+     ],
+     "conf": 95.8
+    },
+    {
+     "text": "File \"/tmp/taskflow dplkmclj/report builder.py\", line 10, in <module>",
+     "bbox": [
+      36,
+      112,
+      579,
+      14
+     ],
+     "conf": 91.75
+    },
+    {
+     "text": "print(build report (50 000 000))",
+     "bbox": [
+      53,
+      130,
+      259,
+      18
+     ],
+     "conf": 55.4
+    },
+    {
+     "text": "File \"/tmp/taskflow dplkmclj/report builder.py\", line 6, in build report",
+     "bbox": [
+      36,
+      173,
+      604,
+      14
+     ],
+     "conf": 91.22222222222223
+    },
+    {
+     "text": "cache = [b\"event\"] * rows * 40",
+     "bbox": [
+      53,
+      193,
+      251,
+      13
+     ],
+     "conf": 93.57142857142857
+    },
+    {
+     "text": "MemoryError",
+     "bbox": [
+      18,
+      234,
+      91,
+      13
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "[exit code 1]",
+     "bbox": [
+      21,
+      254,
+      104,
+      13
+     ],
+     "conf": 95.33333333333333
+    },
+    {
+     "text": "qa@taskflow-stage:~/services$",
+     "bbox": [
+      19,
+      274,
+      242,
+      14
+     ],
+     "conf": 80.0
+    }
+   ]
+  },
+  "memory/memory_03_js_heap_growth.png": {
+   "labels": {
+    "category": "memory",
+    "component": "Backend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Размер ]}5-кучи вкладки «Лента активности»",
+     "bbox": [
+      196,
+      108,
+      620,
+      23
+     ],
+     "conf": 79.0
+    },
+    {
+     "text": "46 МБ",
+     "bbox": [
+      219,
+      157,
+      40,
+      10
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "0",
+     "bbox": [
+      219,
+      433,
+      7,
+      10
+     ],
+     "conf": 93.0
+    },
+    {
+     "text": "Обновлений ленты: 31, used JS heap: 41.9 МБ (было 2.5 МБ)",
+     "bbox": [
+      195,
+      468,
+      509,
+      16
+     ],
+     "conf": 94.0909090909091
+    }
+   ]
+  },
+  "network/network_01_dns_not_resolved.png": {
+   "labels": {
+    "category": "network",
+    "component": "Backend",
+    "screen_type": "browser_error",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      341,
+      235,
+      293,
+      19
+     ],
+     "attributes": {},
+     "ocr_text": "This site can't be reached",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      340,
+      282,
+      422,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "api.taskflow.invalid's server IP address could not be found.",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      341,
+      410,
+      161,
+      10
+     ],
+     "attributes": {
+      "kind": "net_error"
+     },
+     "ocr_text": "ERR_NAME_NOT_RESOLVED",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 0,
+       "end": 21,
+       "text": "ERR_NAME_NOT_RESOLVED",
+       "attributes": {
+        "kind": "net_error",
+        "normalized": "ERR_NAME_NOT_RESOLVED"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "В",
+     "bbox": [
+      340,
+      142,
+      33,
+      42
+     ],
+     "conf": 88.0
+    },
+    {
+     "text": "This site can't be reached",
+     "bbox": [
+      341,
+      235,
+      293,
+      19
+     ],
+     "conf": 94.6
+    },
+    {
+     "text": "api.taskflow.invalid's server IP address could not be found.",
+     "bbox": [
+      340,
+      282,
+      422,
+      14
+     ],
+     "conf": 90.375
+    },
+    {
+     "text": "Try:",
+     "bbox": [
+      340,
+      322,
+      26,
+      14
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "* Checking the connection",
+     "bbox": [
+      363,
+      346,
+      193,
+      14
+     ],
+     "conf": 81.5
+    },
+    {
+     "text": "® Checking the proxy, firewall, and DNS configuration",
+     "bbox": [
+      363,
+      369,
+      381,
+      15
+     ],
+     "conf": 88.375
+    },
+    {
+     "text": "ERR_NAME_NOT_RESOLVED",
+     "bbox": [
+      341,
+      410,
+      161,
+      10
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "( Details",
+     "bbox": [
+      341,
+      485,
+      55,
+      19
+     ],
+     "conf": 82.0
+    },
+    {
+     "text": "Reload",
+     "bbox": [
+      883,
+      488,
+      39,
+      9
+     ],
+     "conf": 96.0
+    }
+   ]
+  },
+  "network/network_02_connection_refused.png": {
+   "labels": {
+    "category": "network",
+    "component": "Backend",
+    "screen_type": "browser_error",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      341,
+      235,
+      293,
+      19
+     ],
+     "attributes": {},
+     "ocr_text": "This site can't be reached",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      340,
+      282,
+      203,
+      12
+     ],
+     "attributes": {},
+     "ocr_text": "127.0.0.1 refused to connect.",
+     "entities": []
+    },
+    {
+     "id": "p3",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      341,
+      410,
+      167,
+      10
+     ],
+     "attributes": {
+      "kind": "net_error"
+     },
+     "ocr_text": "ERR_CONNECTION_REFUSED",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 0,
+       "end": 22,
+       "text": "ERR_CONNECTION_REFUSED",
+       "attributes": {
+        "kind": "net_error",
+        "normalized": "ERR_CONNECTION_REFUSED"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "В",
+     "bbox": [
+      340,
+      142,
+      33,
+      42
+     ],
+     "conf": 88.0
+    },
+    {
+     "text": "This site can't be reached",
+     "bbox": [
+      341,
+      235,
+      293,
+      19
+     ],
+     "conf": 94.6
+    },
+    {
+     "text": "127.0.0.1 refused to connect.",
+     "bbox": [
+      340,
+      282,
+      203,
+      12
+     ],
+     "conf": 94.5
+    },
+    {
+     "text": "Try:",
+     "bbox": [
+      340,
+      322,
+      26,
+      14
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "* Checking the connection",
+     "bbox": [
+      363,
+      346,
+      193,
+      14
+     ],
+     "conf": 81.5
+    },
+    {
+     "text": "® Checking the proxy and the firewall",
+     "bbox": [
+      363,
+      369,
+      266,
+      15
+     ],
+     "conf": 87.57142857142857
+    },
+    {
+     "text": "ERR_CONNECTION_REFUSED",
+     "bbox": [
+      341,
+      410,
+      167,
+      10
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "( Details )",
+     "bbox": [
+      341,
+      485,
+      72,
+      19
+     ],
+     "conf": 93.66666666666667
+    }
+   ]
+  },
+  "network/network_03_fetch_failed_sync.png": {
+   "labels": {
+    "category": "network",
+    "component": "Backend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      210,
+      198,
+      355,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "Попытка 1/3: ТуреЁггог: Failed to fetch (15 mc)",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      210,
+      252,
+      355,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "Попытка 2/3: TypeError: Failed to fetch (10 mc)",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 13,
+       "end": 22,
+       "text": "TypeError",
+       "attributes": {
+        "normalized": "TypeError"
+       }
+      }
+     ]
+    },
+    {
+     "id": "p3",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      210,
+      306,
+      346,
+      13
+     ],
+     "attributes": {},
+     "ocr_text": "Попытка 3/3: TypeError: Failed to fetch (6 mc)",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "EXCEPTION",
+       "start": 13,
+       "end": 22,
+       "text": "TypeError",
+       "attributes": {
+        "normalized": "TypeError"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Синхронизация задач",
+     "bbox": [
+      195,
+      108,
+      300,
+      23
+     ],
+     "conf": 95.5
+    },
+    {
+     "text": "Сервис синхронизации: http: //127.0.0.1:59999/5упс",
+     "bbox": [
+      195,
+      151,
+      462,
+      15
+     ],
+     "conf": 55.25
+    },
+    {
+     "text": "Попытка 1/3: ТуреЁггог: Failed to fetch (15 mc)",
+     "bbox": [
+      210,
+      198,
+      355,
+      13
+     ],
+     "conf": 94.875
+    },
+    {
+     "text": "Попытка 2/3: TypeError: Failed to fetch (10 mc)",
+     "bbox": [
+      210,
+      252,
+      355,
+      13
+     ],
+     "conf": 94.625
+    },
+    {
+     "text": "Попытка 3/3: TypeError: Failed to fetch (6 mc)",
+     "bbox": [
+      210,
+      306,
+      346,
+      13
+     ],
+     "conf": 94.75
+    },
+    {
+     "text": "Изменения He сохранены. Последняя успешная синхронизация: 2 часа назад.",
+     "bbox": [
+      210,
+      360,
+      577,
+      14
+     ],
+     "conf": 94.0
+    }
+   ]
+  },
+  "payment/payment_01_card_declined_402.png": {
+   "labels": {
+    "category": "payment",
+    "component": "Billing",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "PII",
+     "bbox": [
+      205,
+      216,
+      145,
+      11
+     ],
+     "attributes": {
+      "kind": "card"
+     },
+     "ocr_text": "4000 0000 0000 0002",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      210,
+      396,
+      302,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "Платёж отклонён (402 card_declined)",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 17,
+       "end": 20,
+       "text": "402",
+       "attributes": {
+        "kind": "http_status",
+        "normalized": "402"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Оплата тарифа «Команда»",
+     "bbox": [
+      195,
+      107,
+      373,
+      23
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "К оплате: 1 299,00 ® / месяц",
+     "bbox": [
+      195,
+      151,
+      246,
+      14
+     ],
+     "conf": 87.28571428571429
+    },
+    {
+     "text": "Номер карты",
+     "bbox": [
+      195,
+      186,
+      87,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "4000 0000 0000 0002",
+     "bbox": [
+      205,
+      216,
+      145,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Срок / СУС",
+     "bbox": [
+      195,
+      255,
+      70,
+      12
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "12/28 eee",
+     "bbox": [
+      206,
+      286,
+      63,
+      11
+     ],
+     "conf": 76.0
+    },
+    {
+     "text": "Оплатить",
+     "bbox": [
+      214,
+      344,
+      65,
+      11
+     ],
+     "conf": 83.0
+    },
+    {
+     "text": "Платёж отклонён (402 card_declined)",
+     "bbox": [
+      210,
+      396,
+      302,
+      14
+     ],
+     "conf": 91.0
+    },
+    {
+     "text": "decline_code: insufficient_funds",
+     "bbox": [
+      209,
+      412,
+      222,
+      14
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "Your card has insufficient funds.",
+     "bbox": [
+      209,
+      428,
+      221,
+      11
+     ],
+     "conf": 96.0
+    }
+   ]
+  },
+  "payment/payment_02_invoice_nan_total.png": {
+   "labels": {
+    "category": "payment",
+    "component": "Billing",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "DEFECT_AREA",
+     "bbox": [
+      369,
+      310,
+      43,
+      14
+     ],
+     "attributes": {
+      "defect_type": "wrong_value"
+     },
+     "ocr_text": "NaN",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Счёт № INV-2026-0042",
+     "bbox": [
+      195,
+      107,
+      306,
+      19
+     ],
+     "conf": 93.33333333333333
+    },
+    {
+     "text": "Позиция Кол-во Цена Сумма",
+     "bbox": [
+      204,
+      157,
+      784,
+      13
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Тариф «Команда», 5 мест 5 1299,00 Р 5.00 Р",
+     "bbox": [
+      203,
+      192,
+      779,
+      13
+     ],
+     "conf": 92.11111111111111
+    },
+    {
+     "text": "Доп. хранилище 100 ГБ 1 349,50 Р 349.00 Р",
+     "bbox": [
+      203,
+      227,
+      797,
+      14
+     ],
+     "conf": 94.33333333333333
+    },
+    {
+     "text": "Интеграция с Jira 1 0,00 Р 0.00 Р",
+     "bbox": [
+      204,
+      262,
+      778,
+      13
+     ],
+     "conf": 86.125
+    },
+    {
+     "text": "Итого к оплате: NaN Р",
+     "bbox": [
+      196,
+      310,
+      239,
+      15
+     ],
+     "conf": 92.0
+    },
+    {
+     "text": "Цены приходят из АР! в формате локали ru-RU",
+     "bbox": [
+      195,
+      352,
+      293,
+      10
+     ],
+     "conf": 93.625
+    }
+   ]
+  },
+  "payment/payment_03_double_charge.png": {
+   "labels": {
+    "category": "payment",
+    "component": "Billing",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      210,
+      249,
+      350,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "Подписка продлена, но с карты списано 2 раза",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      18,
+      399,
+      17
+     ],
+     "conf": 81.2
+    },
+    {
+     "text": "Продление подписки",
+     "bbox": [
+      196,
+      108,
+      294,
+      22
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Сумма: 1 299,00 Р",
+     "bbox": [
+      195,
+      151,
+      158,
+      15
+     ],
+     "conf": 93.25
+    },
+    {
+     "text": "Оплатить",
+     "bbox": [
+      214,
+      197,
+      65,
+      11
+     ],
+     "conf": 83.0
+    },
+    {
+     "text": "Подписка продлена, но с карты списано 2 раза",
+     "bbox": [
+      210,
+      249,
+      350,
+      14
+     ],
+     "conf": 95.5
+    },
+    {
+     "text": "Списания по карте еее» 4242",
+     "bbox": [
+      195,
+      301,
+      301,
+      18
+     ],
+     "conf": 82.0
+    },
+    {
+     "text": "ID Сумма Время",
+     "bbox": [
+      204,
+      340,
+      393,
+      13
+     ],
+     "conf": 93.66666666666667
+    },
+    {
+     "text": "ch_0001 1 299,00 Р 14:04:42.218",
+     "bbox": [
+      203,
+      375,
+      438,
+      14
+     ],
+     "conf": 85.8
+    },
+    {
+     "text": "ch_0002 1299,00 Р 14:04:42.219",
+     "bbox": [
+      203,
+      410,
+      438,
+      14
+     ],
+     "conf": 86.75
+    }
+   ]
+  },
+  "performance/performance_01_spinner_timeout.png": {
+   "labels": {
+    "category": "performance",
+    "component": "Backend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Отчёт по задачам за квартал",
+     "bbox": [
+      195,
+      107,
+      404,
+      23
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": ") Загрузка данных... прошло 8.2 с",
+     "bbox": [
+      217,
+      164,
+      302,
+      24
+     ],
+     "conf": 94.16666666666667
+    },
+    {
+     "text": "Запрос СЕТ /api/slow ещё выполняется",
+     "bbox": [
+      195,
+      229,
+      325,
+      15
+     ],
+     "conf": 93.6
+    }
+   ]
+  },
+  "performance/performance_02_search_latency.png": {
+   "labels": {
+    "category": "performance",
+    "component": "Backend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow",
+     "bbox": [
+      28,
+      17,
+      102,
+      15
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "Задачи Проекты Отчёты",
+     "bbox": [
+      155,
+      21,
+      207,
+      14
+     ],
+     "conf": 73.66666666666667
+    },
+    {
+     "text": "Тариф",
+     "bbox": [
+      381,
+      22,
+      46,
+      13
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "Время ответа поиска в зависимости от числа задач",
+     "bbox": [
+      196,
+      108,
+      712,
+      22
+     ],
+     "conf": 94.5
+    },
+    {
+     "text": "Задач в проекте",
+     "bbox": [
+      204,
+      157,
+      132,
+      14
+     ],
+     "conf": 95.66666666666667
+    },
+    {
+     "text": "100",
+     "bbox": [
+      204,
+      192,
+      24,
+      10
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "500",
+     "bbox": [
+      204,
+      227,
+      25,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "1000",
+     "bbox": [
+      204,
+      262,
+      33,
+      10
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "2000",
+     "bbox": [
+      204,
+      297,
+      34,
+      10
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "3000",
+     "bbox": [
+      204,
+      332,
+      34,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "4000",
+     "bbox": [
+      203,
+      367,
+      34,
+      10
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Время ответа, мс",
+     "bbox": [
+      368,
+      155,
+      136,
+      17
+     ],
+     "conf": 95.66666666666667
+    },
+    {
+     "text": "13",
+     "bbox": [
+      368,
+      192,
+      15,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "70",
+     "bbox": [
+      368,
+      227,
+      16,
+      10
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "256",
+     "bbox": [
+      368,
+      262,
+      25,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "1006",
+     "bbox": [
+      368,
+      297,
+      33,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "2256",
+     "bbox": [
+      368,
+      332,
+      34,
+      11
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "4004",
+     "bbox": [
+      367,
+      367,
+      34,
+      10
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Измерено в браузере (fetch, performance.now). SLA: 300 мс.",
+     "bbox": [
+      196,
+      410,
+      497,
+      15
+     ],
+     "conf": 93.25
+    }
+   ]
+  },
+  "performance/performance_03_long_task_kanban.png": {
+   "labels": {
+    "category": "performance",
+    "component": "Backend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      210,
+      198,
+      762,
+      14
+     ],
+     "attributes": {},
+     "ocr_text": "Long Task: главный поток заблокирован на 1101 мс (startTime 114 мс). Интерфейс не отвечал на ввод.",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "METRIC",
+       "start": 41,
+       "end": 48,
+       "text": "1101 мс",
+       "attributes": {
+        "kind": "time",
+        "normalized": "1101 мс"
+       }
+      },
+      {
+       "id": "e2",
+       "label": "METRIC",
+       "start": 60,
+       "end": 66,
+       "text": "114 мс",
+       "attributes": {
+        "kind": "time",
+        "normalized": "114 мс"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      17,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Канбан-доска: перетаскивание карточки",
+     "bbox": [
+      196,
+      107,
+      571,
+      23
+     ],
+     "conf": 93.0
+    },
+    {
+     "text": "Перерисовка 20000 карточек заняла 1101 мс",
+     "bbox": [
+      195,
+      151,
+      381,
+      15
+     ],
+     "conf": 94.66666666666667
+    },
+    {
+     "text": "Long Task: главный поток заблокирован на 1101 мс (startTime 114 мс). Интерфейс не отвечал на ввод.",
+     "bbox": [
+      210,
+      198,
+      762,
+      14
+     ],
+     "conf": 94.6875
+    }
+   ]
+  },
+  "security/security_01_cert_self_signed.png": {
+   "labels": {
+    "category": "security",
+    "component": "Backend",
+    "screen_type": "browser_error",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "ERROR_TEXT",
+     "bbox": [
+      341,
+      229,
+      337,
+      23
+     ],
+     "attributes": {},
+     "ocr_text": "Your connection is not private",
+     "entities": []
+    },
+    {
+     "id": "p2",
+     "label": "STATUS_INDICATOR",
+     "bbox": [
+      341,
+      337,
+      215,
+      10
+     ],
+     "attributes": {
+      "kind": "net_error"
+     },
+     "ocr_text": "NET::ERR_CERT_AUTHORITY_INVALID",
+     "entities": [
+      {
+       "id": "e1",
+       "label": "ERROR_CODE",
+       "start": 0,
+       "end": 31,
+       "text": "NET::ERR_CERT_AUTHORITY_INVALID",
+       "attributes": {
+        "kind": "net_error",
+        "normalized": "ERR_CERT_AUTHORITY_INVALID"
+       }
+      }
+     ]
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "Your connection is not private",
+     "bbox": [
+      341,
+      229,
+      337,
+      23
+     ],
+     "conf": 95.6
+    },
+    {
+     "text": "Attackers might be trying to steal your information from 127.0.0.1 (for example,",
+     "bbox": [
+      340,
+      275,
+      553,
+      15
+     ],
+     "conf": 95.41666666666667
+    },
+    {
+     "text": "passwords, messages, or credit cards). Learn more about this warning",
+     "bbox": [
+      341,
+      299,
+      497,
+      15
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "NET::ERR_CERT_AUTHORITY_INVALID",
+     "bbox": [
+      341,
+      337,
+      215,
+      10
+     ],
+     "conf": 84.0
+    },
+    {
+     "text": "(Advanced ) Back to safety",
+     "bbox": [
+      340,
+      411,
+      583,
+      19
+     ],
+     "conf": 78.8
+    }
+   ]
+  },
+  "security/security_02_idor_foreign_invoice.png": {
+   "labels": {
+    "category": "ui_layout",
+    "component": "Frontend",
+    "screen_type": "api_response",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [
+    {
+     "id": "p1",
+     "label": "PII",
+     "bbox": [
+      103,
+      170,
+      222,
+      13
+     ],
+     "attributes": {
+      "kind": "email"
+     },
+     "ocr_text": "finance@north-wind.example",
+     "entities": []
+    }
+   ],
+   "ocr_lines": [
+    {
+     "text": "Pretty-print (J",
+     "bbox": [
+      1,
+      1,
+      111,
+      18
+     ],
+     "conf": 79.0
+    },
+    {
+     "text": "{",
+     "bbox": [
+      1,
+      35,
+      5,
+      12
+     ],
+     "conf": 93.0
+    },
+    {
+     "text": "\"request\": {",
+     "bbox": [
+      17,
+      50,
+      90,
+      12
+     ],
+     "conf": 86.5
+    },
+    {
+     "text": "“session user 10\": 1001,",
+     "bbox": [
+      33,
+      63,
+      182,
+      17
+     ],
+     "conf": 64.0
+    },
+    {
+     "text": "\"path\": \"/api/invoices/43\"",
+     "bbox": [
+      33,
+      80,
+      200,
+      13
+     ],
+     "conf": 45.5
+    },
+    {
+     "text": "\"invoice\": {",
+     "bbox": [
+      17,
+      110,
+      90,
+      12
+     ],
+     "conf": 71.0
+    },
+    {
+     "text": "\"id\": 43,",
+     "bbox": [
+      33,
+      125,
+      66,
+      12
+     ],
+     "conf": 75.5
+    },
+    {
+     "text": "“customer id\": 2002,",
+     "bbox": [
+      33,
+      140,
+      151,
+      13
+     ],
+     "conf": 37.333333333333336
+    },
+    {
+     "text": "“customer name\": \"000 «Северный Betep»\",",
+     "bbox": [
+      33,
+      155,
+      308,
+      13
+     ],
+     "conf": 57.4
+    },
+    {
+     "text": "\"email\": \"finance@north-wind.example\",",
+     "bbox": [
+      33,
+      170,
+      292,
+      13
+     ],
+     "conf": 68.5
+    },
+    {
+     "text": "“total”: \"48 900,00 Р\",",
+     "bbox": [
+      33,
+      185,
+      175,
+      12
+     ],
+     "conf": 75.0
+    },
+    {
+     "text": "“card last4\": \"8812\",",
+     "bbox": [
+      33,
+      200,
+      160,
+      13
+     ],
+     "conf": 75.66666666666667
+    },
+    {
+     "text": "“billing address\": “г. Казань, yn. Примерная, д. 1\"",
+     "bbox": [
+      33,
+      215,
+      395,
+      13
+     ],
+     "conf": 72.375
+    }
+   ]
+  },
+  "security/security_03_reflected_xss.png": {
+   "labels": {
+    "category": "security",
+    "component": "Backend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "XSS executed: document.cookie = session=8f2cle9ab47d",
+     "bbox": [
+      14,
+      17,
+      499,
+      12
+     ],
+     "conf": 86.6
+    },
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты Тариф",
+     "bbox": [
+      28,
+      64,
+      399,
+      18
+     ],
+     "conf": 78.0
+    },
+    {
+     "text": "Поиск задач",
+     "bbox": [
+      196,
+      155,
+      169,
+      20
+     ],
+     "conf": 95.5
+    },
+    {
+     "text": "Результаты по запросу: le.",
+     "bbox": [
+      195,
+      252,
+      220,
+      15
+     ],
+     "conf": 88.75
+    },
+    {
+     "text": "Ничего не найдено.",
+     "bbox": [
+      195,
+      287,
+      164,
+      14
+     ],
+     "conf": 96.0
+    }
+   ]
+  },
+  "ui_layout/ui_layout_01_button_overflow.png": {
+   "labels": {
+    "category": "ui_layout",
+    "component": "Frontend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "mobile",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты",
+     "bbox": [
+      56,
+      35,
+      668,
+      34
+     ],
+     "conf": 75.75
+    },
+    {
+     "text": "Задача ТЕ-1287",
+     "bbox": [
+      90,
+      213,
+      323,
+      32
+     ],
+     "conf": 90.5
+    },
+    {
+     "text": "Отправить на со Сохранить черновик",
+     "bbox": [
+      129,
+      297,
+      580,
+      27
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "Описание: Пользователь не может",
+     "bbox": [
+      90,
+      386,
+      591,
+      24
+     ],
+     "conf": 95.75
+    },
+    {
+     "text": "Исполнитель:",
+     "bbox": [
+      105,
+      470,
+      226,
+      24
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Константинопольский-",
+     "bbox": [
+      105,
+      507,
+      385,
+      25
+     ],
+     "conf": 89.0
+    },
+    {
+     "text": "Великорецкий Александр",
+     "bbox": [
+      105,
+      545,
+      432,
+      31
+     ],
+     "conf": 93.5
+    },
+    {
+     "text": "Владимирович",
+     "bbox": [
+      105,
+      584,
+      242,
+      30
+     ],
+     "conf": 96.0
+    }
+   ]
+  },
+  "ui_layout/ui_layout_02_banner_overlap.png": {
+   "labels": {
+    "category": "ui_layout",
+    "component": "Frontend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "mobile",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow Задачи Проекты Отчёты",
+     "bbox": [
+      56,
+      35,
+      668,
+      34
+     ],
+     "conf": 74.0
+    },
+    {
+     "text": "Проект «Мобильное",
+     "bbox": [
+      92,
+      214,
+      554,
+      48
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "; yp",
+     "bbox": [
+      452,
+      365,
+      79,
+      35
+     ],
+     "conf": 37.0
+    },
+    {
+     "text": "Новая Фильтры Экспорт",
+     "bbox": [
+      135,
+      485,
+      523,
+      47
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "задача Р Р",
+     "bbox": [
+      129,
+      510,
+      515,
+      40
+     ],
+     "conf": 88.33333333333333
+    },
+    {
+     "text": "Последние изменения: Анна",
+     "bbox": [
+      91,
+      618,
+      476,
+      28
+     ],
+     "conf": 95.66666666666667
+    },
+    {
+     "text": "закрыла задачу ТЕ-1290, Олег",
+     "bbox": [
+      90,
+      656,
+      508,
+      31
+     ],
+     "conf": 92.75
+    },
+    {
+     "text": "добавил комментарий к ТЕ-1288.",
+     "bbox": [
+      89,
+      693,
+      556,
+      31
+     ],
+     "conf": 93.5
+    }
+   ]
+  },
+  "ui_layout/ui_layout_03_modal_behind_overlay.png": {
+   "labels": {
+    "category": "ui_layout",
+    "component": "Frontend",
+    "screen_type": "ui_screen",
+    "is_defect": "yes",
+    "severity": null,
+    "device": "desktop",
+    "theme": "light"
+   },
+   "regions": [],
+   "ocr_lines": [
+    {
+     "text": "TaskFlow",
+     "bbox": [
+      28,
+      18,
+      102,
+      15
+     ],
+     "conf": 90.0
+    },
+    {
+     "text": "Задачи Проекты Отчёты",
+     "bbox": [
+      155,
+      21,
+      207,
+      14
+     ],
+     "conf": 73.0
+    },
+    {
+     "text": "Тариф",
+     "bbox": [
+      381,
+      22,
+      45,
+      13
+     ],
+     "conf": 95.0
+    },
+    {
+     "text": "Проект «Сайт компании»",
+     "bbox": [
+      196,
+      107,
+      344,
+      23
+     ],
+     "conf": 95.66666666666667
+    },
+    {
+     "text": "Нажмите «Удалить проект», чтобы удалить проект и все задачи.",
+     "bbox": [
+      195,
+      150,
+      552,
+      16
+     ],
+     "conf": 94.55555555555556
+    },
+    {
+     "text": "Удалить проект",
+     "bbox": [
+      215,
+      198,
+      106,
+      13
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Удалить проект?",
+     "bbox": [
+      452,
+      246,
+      176,
+      17
+     ],
+     "conf": 96.0
+    },
+    {
+     "text": "Это действие нельзя отменить. Будут",
+     "bbox": [
+      453,
+      282,
+      322,
+      15
+     ],
+     "conf": 95.6
+    },
+    {
+     "text": "удалены 214 задач.",
+     "bbox": [
+      452,
+      301,
+      166,
+      15
+     ],
+     "conf": 94.66666666666667
+    }
+   ]
+  }
+ }
+}
